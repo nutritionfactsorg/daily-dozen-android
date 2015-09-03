@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="window_background">#FFF5F5F5</color>
+    <color name="bkg_dialog_header">#7FC04C</color>
+    <color name="bkg_plus_minus_btn">#61A82A</color>
+    <color name="bkg_plus_minus_btn_selected">#538f24</color>
 </resources>

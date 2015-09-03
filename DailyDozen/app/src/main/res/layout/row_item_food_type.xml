@@ -28,21 +28,7 @@
         android:layout_weight="1" />
 
     <CheckBox
-        android:id="@+id/checkbox_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:focusable="false" />
-
-    <CheckBox
-        android:id="@+id/checkbox_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:focusable="false" />
-
-    <CheckBox
-        android:id="@+id/checkbox_3"
+        android:id="@+id/checkbox_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="false"
@@ -56,7 +42,21 @@
         android:focusable="false" />
 
     <CheckBox
-        android:id="@+id/checkbox_5"
+        android:id="@+id/checkbox_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <CheckBox
+        android:id="@+id/checkbox_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <CheckBox
+        android:id="@+id/checkbox_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="false"

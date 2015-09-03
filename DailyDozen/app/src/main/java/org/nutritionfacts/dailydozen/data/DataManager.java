@@ -2,6 +2,7 @@ package org.nutritionfacts.dailydozen.data;
 
 import android.content.Context;
 
+import org.nutritionfacts.dailydozen.db.DBConsumption;
 import org.nutritionfacts.dailydozen.db.DBDailyReport;
 import org.nutritionfacts.dailydozen.db.DBUser;
 import org.nutritionfacts.dailydozen.db.DaoSession;
@@ -64,5 +65,14 @@ public class DataManager {
         Date date = calendarDate.getTime();
 
         return DBDailyReport.getDailyReportForDate(getDaoSession(), date);
+    }
+
+    public void setServingCount(DBConsumption consumption, double servingCount) {
+        consumption.setConsumedServingCount(servingCount);
+        getDaoSession().update(consumption);
+    }
+
+    public DBConsumption getConsumption(long id) {
+        return DBConsumption.getConsumption(getDaoSession(), id);
     }
 }

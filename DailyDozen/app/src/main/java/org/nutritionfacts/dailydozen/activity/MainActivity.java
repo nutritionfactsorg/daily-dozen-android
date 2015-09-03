@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.activity;
 
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.data.DataManager;
 import org.nutritionfacts.dailydozen.db.DBConsumption;
 import org.nutritionfacts.dailydozen.db.DBDailyReport;
+import org.nutritionfacts.dailydozen.fragment.FoodTypeDetailFragment;
 import org.nutritionfacts.dailydozen.rowItem.FoodTypeRowItem;
 import org.nutritionfacts.dailydozen.user.UserManager;
 
@@ -28,7 +30,7 @@ import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements
-        QxRecyclerViewAdapter.OnRecyclerViewRowItemClickedListener {
+        QxRecyclerViewAdapter.OnRecyclerViewRowItemClickedListener, FoodTypeDetailFragment.OnConsumedServingChangedListener {
 
     private DrawerLayout mDrawerLayout;
 
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements
 
     protected QxRecyclerView listView;
     protected QxRecyclerViewAdapter adapter;
+    private List<FoodTypeRowItem> rowItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,10 +96,10 @@ public class MainActivity extends AppCompatActivity implements
 
         List<DBConsumption> consumptions = dailyReport.getConsumptions();
 
-        List<QxRecyclerViewRowItem> rowItems = new ArrayList<>(consumptions.size());
+        rowItems = new ArrayList<>(consumptions.size());
 
         for (DBConsumption consumption : consumptions) {
-            rowItems.add(new FoodTypeRowItem(consumption));
+            rowItems.add(new FoodTypeRowItem(consumption, this));
         }
 
         adapter.addSectionWithTitle("Test", rowItems);
@@ -141,5 +144,34 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onRecyclerViewRowItemClicked(QxRecyclerViewRowItem rowItem, QxRecyclerViewAdapter adapter, View view, int position) {
 
+        if (rowItem instanceof FoodTypeRowItem) {
+            DBConsumption consumption = ((FoodTypeRowItem) rowItem).consumption;
+
+            FoodTypeDetailFragment fragment = FoodTypeDetailFragment.newInstance(consumption.getId());
+            fragment.show(getSupportFragmentManager(), "dialog_fragment");
+        }
+    }
+
+    @Override
+    public void onConsumedServingChanged(long consumptionId) {
+
+        DBConsumption consumption = null;
+        FoodTypeRowItem changedRowItem = null;
+
+        for (FoodTypeRowItem rowItem : rowItems) {
+            if (rowItem.consumption.getId().equals(consumptionId)) {
+
+                changedRowItem = rowItem;
+                break;
+            }
+        }
+
+        if (changedRowItem != null) {
+            int position = adapter.getPositionForRowItem(changedRowItem);
+
+            if (position >= 0) {
+                adapter.notifyItemChanged(position);
+            }
+        }
     }
 }

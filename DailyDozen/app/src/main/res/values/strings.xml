@@ -47,6 +47,15 @@
     <string name="food_type_exercise_example"> Bicycling, canoeing, dancing, dodgeball, downhill skiing, fencing, hiking, housework, ice skating, in-line skating, juggling, jumping on a trampoline, paddle boating, playing Frisbee, roller-skating, shooting baskets, shoveling light snow, skateboarding, snorkeling, surfing, swimming recreationally, tennis (doubles), treading water, walking briskly (4 MPH), water aerobics, water skiing, yard work, and yoga</string>
     <string name="food_type_exercise_example_2">Backpacking, basketball, bicycling uphill, circuit weight training, cross-country skiing, football, hockey, jogging, jumping jacks, jumping rope, lacrosse, push-ups and pull-ups, racquetball, rock climbing, rugby, running, scuba diving, tennis (singles), soccer, speed skating, squash, step aerobics, swimming laps, walking briskly uphill, and water jogging</string>
 
+    <string name="dismiss">Dismiss</string>
+
+    <string name="recommendation">Recommendation:</string>
+    <string name="one_serving_title">1 Serving =</string>
+    <string name="todays_servings">Today\'s Servings</string>
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -6,4 +6,10 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
+
+    <style name="text_food_title" parent="text_food_title">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 </resources>

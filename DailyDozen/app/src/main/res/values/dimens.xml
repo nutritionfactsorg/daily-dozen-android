@@ -10,4 +10,8 @@
     <dimen name="list_view_margin_left">20dp</dimen>
     <dimen name="list_view_margin_right">15dp</dimen>
 
+    <dimen name="dialog_padding">26dp</dimen>
+    <dimen name="dialog_section_padding_vertical">15dp</dimen>
+
+    <dimen name="plus_minus_corner_radius">5dp</dimen>
 </resources>

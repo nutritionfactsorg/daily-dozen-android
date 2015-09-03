@@ -1,0 +1,178 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.nutritionfacts.dailydozen.fragment.FoodTypeDetailFragment">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        style="@style/text_food_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bkg_dialog_header"
+        android:paddingBottom="@dimen/dialog_section_padding_vertical"
+        android:paddingEnd="@dimen/dialog_padding"
+        android:paddingLeft="@dimen/dialog_padding"
+        android:paddingRight="@dimen/dialog_padding"
+        android:paddingStart="@dimen/dialog_padding"
+        android:paddingTop="@dimen/dialog_section_padding_vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/dialog_padding"
+        android:paddingLeft="@dimen/dialog_padding"
+        android:paddingRight="@dimen/dialog_padding"
+        android:paddingStart="@dimen/dialog_padding"
+        android:background="@color/bkg_dialog_header">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#23FFFFFF"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bkg_dialog_header"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dialog_section_padding_vertical"
+        android:paddingEnd="@dimen/dialog_padding"
+        android:paddingLeft="@dimen/dialog_padding"
+        android:paddingRight="@dimen/dialog_padding"
+        android:paddingStart="@dimen/dialog_padding"
+        android:paddingTop="@dimen/dialog_section_padding_vertical">
+
+        <TextView
+            android:id="@+id/servings_text_view"
+            style="@style/text_food_todays_servings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/todays_servings" />
+
+        <TextView
+            android:id="@+id/minus_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_minus_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:minWidth="45dp"
+            android:paddingBottom="3dp"
+            android:text="-"
+            android:textColor="@android:color/white"
+            android:textSize="32dp" />
+
+        <EditText
+            android:id="@+id/servings_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:digits="0123456789"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:minWidth="45dp"
+            android:selectAllOnFocus="true"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/plus_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_plus_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:minWidth="45dp"
+            android:paddingBottom="3dp"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="32dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/dialog_padding"
+                android:paddingLeft="@dimen/dialog_padding"
+                android:paddingRight="@dimen/dialog_padding"
+                android:paddingStart="@dimen/dialog_padding">
+
+                <TextView
+                    android:id="@+id/recommended_servings_text_view"
+                    style="@style/text_food_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dialog_section_padding_vertical"
+                    android:paddingTop="@dimen/dialog_section_padding_vertical" />
+
+                <TextView
+                    android:id="@+id/serving_example_text_view"
+                    style="@style/text_food_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dialog_section_padding_vertical"
+                    android:paddingTop="@dimen/dialog_section_padding_vertical" />
+
+                <TextView
+                    android:id="@+id/example_1_text_view"
+                    style="@style/text_food_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dialog_section_padding_vertical"
+                    android:paddingTop="@dimen/dialog_section_padding_vertical" />
+
+                <TextView
+                    android:id="@+id/example_2_text_view"
+                    style="@style/text_food_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dialog_section_padding_vertical"
+                    android:paddingTop="@dimen/dialog_section_padding_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/dismiss" />
+    </LinearLayout>
+
+</LinearLayout>

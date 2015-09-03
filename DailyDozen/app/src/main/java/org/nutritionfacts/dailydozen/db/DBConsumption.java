@@ -66,6 +66,14 @@ public class DBConsumption {
     }
 
     // KEEP METHODS - put your custom methods here
+
+    public static DBConsumption getConsumption(DaoSession session, long id) {
+
+        return session
+                .getDBConsumptionDao()
+                .queryBuilder()
+                .where(DBConsumptionDao.Properties.Id.eq(id)).unique();
+    }
     // KEEP METHODS END
 
 }

@@ -1,5 +1,7 @@
 package org.nutritionfacts.dailydozen.rowItem;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.view.View;
 import android.widget.CheckBox;
@@ -22,11 +24,13 @@ import java.util.List;
 public class FoodTypeRowItem extends QxRecyclerViewRowItem {
 
     public DBConsumption consumption;
+    private Drawable iconDrawable;
 
-    public FoodTypeRowItem(DBConsumption consumption) {
+    public FoodTypeRowItem(DBConsumption consumption, Context context) {
         super();
 
         this.consumption = consumption;
+        iconDrawable = context.getResources().getDrawable(consumption.foodType.iconResourceId);
     }
 
     @Override
@@ -44,12 +48,7 @@ public class FoodTypeRowItem extends QxRecyclerViewRowItem {
 
         FeaturedContentAdItemViewHolder mViewHolder = (FeaturedContentAdItemViewHolder) viewHolder;
 
-        if (consumption.foodType.icon != null) {
-            mViewHolder.imageView.setImageDrawable(consumption.foodType.icon);
-            mViewHolder.imageView.setVisibility(View.VISIBLE);
-        } else {
-            mViewHolder.imageView.setVisibility(View.GONE);
-        }
+        mViewHolder.imageView.setImageDrawable(iconDrawable);
 
         mViewHolder.textView.setText(consumption.foodType.name);
 
