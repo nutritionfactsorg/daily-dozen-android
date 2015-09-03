@@ -1,6 +1,52 @@
 <resources>
     <string name="app_name">Daily Dozen</string>
 
+    <string name="food_type_beans_name">Beans</string>
+    <string name="food_type_berries_name">Berries</string>
+    <string name="food_type_other_fruit_name">Other Fruit</string>
+    <string name="food_type_cruciferous_name">Cruciferous Vegetables</string>
+    <string name="food_type_greens_name">Greens</string>
+    <string name="food_type_other_vegetables_name">Other Vegetable</string>
+    <string name="food_type_flax_seeds_name">Flaxseeds</string>
+    <string name="food_type_nuts_name">Nuts</string>
+    <string name="food_type_spices_name">Spices</string>
+    <string name="food_type_whole_grains_name">Whole Grains</string>
+    <string name="food_type_beverages_name">Beverages</string>
+    <string name="food_type_exercise_name">Exercise</string>
+
+
+    <string name="food_type_beans_serving">1⁄4 cup of hummus or bean dip, or\n1⁄2 cup cooked beans, split peas, lentils, tofu, or tempeh, or\n1 cup of fresh peas or sprouted lentils</string>
+    <string name="food_type_berries_serving">1⁄2 cup fresh or frozen, or\n1⁄4 cup dried</string>
+    <string name="food_type_other_fruit_serving">1 medium-sized fruit, or\n1 cup cut-up fruit, or\n1⁄4 cup dried fruit</string>
+    <string name="food_type_cruciferous_serving">1⁄2 cup chopped, or\n1⁄4 cup brussels or broccoli sprouts, or\n1 tablespoon horseradish</string>
+    <string name="food_type_greens_serving">1 cup raw, or\n1⁄2 cup cooked</string>
+    <string name="food_type_other_vegetables_serving">1 cup raw leafy vegetables, or\n1⁄2 cup raw or cooked nonleafy vegetables, or\n1⁄2 cup vegetable juice, or\n1⁄4 cup dried mushrooms</string>
+    <string name="food_type_flax_seeds_serving">1 tablespoon ground</string>
+    <string name="food_type_nuts_serving">1⁄4 cup nuts or seeds, or\n2 tablespoons nut or seed butter</string>
+
+    <string name="food_type_whole_grains_serving">1⁄2 cup hot cereal or cooked grains, pasta, or corn kernels, or\n1 cup cold cereal, or\n1 tortilla or slice of bread, or\n1⁄2 a bagel or english muffin, or\n3 cups popped popcorn</string>
+    <string name="food_type_beverages_serving">One glass (12 ounces)</string>
+    <string name="food_type_exercise_serving">90 minutes of moderate-intensity activity, or\n40 minutes of vigorous activity</string>
+
+
+    <string name="my_favorites">Some of my favorites:</string>
+    <string name="examples_mod_activity">Examples of moderate-intensity activities:</string>
+    <string name="examples_vig_activity">Examples of vigorous activities:</string>
+
+    <string name="food_type_beans_example">Black beans, black-eyed peas, butter beans, cannellini beans, chickpeas (also known as garbanzo beans), edamame, english peas, great northern beans, kidney beans, lentils (beluga, french, and red varieties), miso, navy beans, pinto beans, small red beans, split peas (yellow or green), and tempeh</string>
+    <string name="food_type_berries_example">Açai berries, barberries, blackberries, blueberries, cherries (sweet or tart), concord grapes, cranberries, goji berries, kumquats, mulberries, raspberries (black or red), and strawberries</string>
+    <string name="food_type_other_fruit_example">Apples, dried apricots, avocados, bananas, cantaloupe, clementines, dates, dried figs, grapefruit, honeydew, kiwifruit, lemons, limes, lychees, mangos, nectarines, oranges, papaya, passion fruit, peaches, pears, pineapple, pomegranates, plums (especially black plums), pluots, prunes, tangerines, and watermelon</string>
+    <string name="food_type_cruciferous_example">Arugula, bok choy, broccoli, brussels sprouts, cabbage, cauliflower, collard greens, horseradish, kale (black, green, and red), mustard greens, radish, turnip greens, and watercress</string>
+    <string name="food_type_greens_example">Arugula, beet greens, collard greens, kale (black, green, and red), mesclun mix (assorted young salad greens), mustard greens, sorrel, spinach, swiss chard, and turnip greens</string>
+    <string name="food_type_other_vegetables_example">Artichokes, asparagus, beets, bell peppers, carrots, corn, garlic, mushrooms (button, oyster, portobello, and shiitake), okra, onions, purple potatoes, pumpkin, sea vegetables (arame, dulse, and nori), snap peas, squash (delicata, summer, and spaghetti squash varieties), sweet potatoes/yams, tomatoes, and zucchini</string>
+
+    <string name="food_type_nuts_example">Almonds, brazil nuts, cashews, chia seeds, hazelnuts/filberts, hemp seeds, macadamia nuts, pecans, pistachios, pumpkin seeds, sesame seeds, sunflower seeds, and walnuts</string>
+    <string name="food_type_spices_example">Allspice, barberries, basil, bay leaves, cardamom, chili powder, cilantro, cinnamon, cloves, coriander, cumin, curry powder, dill, fenugreek, garlic, ginger, horseradish, lemongrass, marjoram, mustard powder, nutmeg, oregano, smoked paprika, parsley, pepper, peppermint, rosemary, saffron, sage, thyme, turmeric, and vanilla</string>
+    <string name="food_type_whole_grains_example">Barley, brown rice, buckwheat, millet, oats, popcorn, quinoa, rye, teff, whole-wheat pasta, and wild rice</string>
+    <string name="food_type_beverages_example">Black tea, chai tea, vanilla chamomile tea, coffee, earl grey tea, green tea, hibiscus tea, hot chocolate, jasmine tea, lemon balm tea, matcha tea, almond blossom oolong tea, peppermint tea, rooibos tea, water, and white tea</string>
+    <string name="food_type_exercise_example"> Bicycling, canoeing, dancing, dodgeball, downhill skiing, fencing, hiking, housework, ice skating, in-line skating, juggling, jumping on a trampoline, paddle boating, playing Frisbee, roller-skating, shooting baskets, shoveling light snow, skateboarding, snorkeling, surfing, swimming recreationally, tennis (doubles), treading water, walking briskly (4 MPH), water aerobics, water skiing, yard work, and yoga</string>
+    <string name="food_type_exercise_example_2">Backpacking, basketball, bicycling uphill, circuit weight training, cross-country skiing, football, hockey, jogging, jumping jacks, jumping rope, lacrosse, push-ups and pull-ups, racquetball, rock climbing, rugby, running, scuba diving, tennis (singles), soccer, speed skating, squash, step aerobics, swimming laps, walking briskly uphill, and water jogging</string>
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>

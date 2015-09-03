@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bkg_selector_white"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/min_row_height"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/list_view_margin_bottom"
+    android:paddingEnd="@dimen/list_view_margin_right"
+    android:paddingLeft="@dimen/list_view_margin_left"
+    android:paddingRight="@dimen/list_view_margin_right"
+    android:paddingStart="@dimen/list_view_margin_left"
+    android:paddingTop="@dimen/list_view_margin_top">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/list_view_margin_left"
+        android:layout_marginRight="@dimen/list_view_margin_left" />
+
+    <TextView
+        android:id="@+id/text_view"
+        style="@style/text_food_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <CheckBox
+        android:id="@+id/checkbox_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <CheckBox
+        android:id="@+id/checkbox_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <CheckBox
+        android:id="@+id/checkbox_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <CheckBox
+        android:id="@+id/checkbox_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <CheckBox
+        android:id="@+id/checkbox_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false" />
+
+</LinearLayout>

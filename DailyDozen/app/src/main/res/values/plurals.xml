@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="daily_serving">
+        <item quantity="one">1 serving a day</item>
+        <item quantity="other">%d servings a day</item>
+    </plurals>
+</resources>
