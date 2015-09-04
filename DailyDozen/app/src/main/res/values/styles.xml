@@ -5,10 +5,14 @@
     </style>
 
     <style name="Base.Theme.DesignDemo" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">#7FC04C</item>
-        <item name="colorPrimaryDark">#70a943</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">#FFC107</item>
         <item name="android:windowBackground">@color/window_background</item>
+    </style>
+
+    <style name="ToolbarLight" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
 
     <style name="text_food_type">

@@ -167,12 +167,14 @@
         android:gravity="end">
 
         <Button
+            android:id="@+id/dismiss_button"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:text="@string/dismiss" />
+            android:text="@string/dismiss"
+            android:textColor="@color/primary_dark"/>
     </LinearLayout>
 
 </LinearLayout>

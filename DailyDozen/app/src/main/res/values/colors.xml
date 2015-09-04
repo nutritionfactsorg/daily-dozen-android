@@ -4,4 +4,8 @@
     <color name="bkg_dialog_header">#7FC04C</color>
     <color name="bkg_plus_minus_btn">#61A82A</color>
     <color name="bkg_plus_minus_btn_selected">#538f24</color>
+    <color name="primary">#7FC04C</color>
+    <color name="primary_dark">#70a943</color>
+
+    <color name="list_view_separator_color">#f2f2f2</color>
 </resources>

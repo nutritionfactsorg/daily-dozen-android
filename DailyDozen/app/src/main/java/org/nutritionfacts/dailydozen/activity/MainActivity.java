@@ -1,10 +1,12 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
@@ -12,6 +14,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.qxmd.qxrecyclerview.QxRecyclerView;
 import com.qxmd.qxrecyclerview.QxRecyclerViewAdapter;
@@ -23,6 +27,7 @@ import org.nutritionfacts.dailydozen.db.DBConsumption;
 import org.nutritionfacts.dailydozen.db.DBDailyReport;
 import org.nutritionfacts.dailydozen.fragment.FoodTypeDetailFragment;
 import org.nutritionfacts.dailydozen.rowItem.FoodTypeRowItem;
+import org.nutritionfacts.dailydozen.rowItem.InvisibleHeaderRowItem;
 import org.nutritionfacts.dailydozen.user.UserManager;
 
 import java.util.ArrayList;
@@ -33,10 +38,14 @@ public class MainActivity extends AppCompatActivity implements
         QxRecyclerViewAdapter.OnRecyclerViewRowItemClickedListener, FoodTypeDetailFragment.OnConsumedServingChangedListener {
 
     private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle drawerToggle;
 
     private boolean showWelcomeScreen;
 
     private DBDailyReport dailyReport;
+
+    private ProgressBar progressBar;
+    private TextView progressTextView;
 
     protected QxRecyclerView listView;
     protected QxRecyclerViewAdapter adapter;
@@ -52,8 +61,24 @@ public class MainActivity extends AppCompatActivity implements
 
         final ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setTitle(R.string.app_name_full);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.content_desc_drawer_open,
+                R.string.content_desc_drawer_close) {
+            @Override
+            public void onDrawerClosed(View view) {
+
+            }
+
+            @Override
+            public void onDrawerOpened(View view) {
+
+            }
+        };
+
+        mDrawerLayout.setDrawerListener(drawerToggle);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         if (navigationView != null) {
@@ -79,6 +104,15 @@ public class MainActivity extends AppCompatActivity implements
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         listView.setLayoutManager(layoutManager);
+
+        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        progressTextView = (TextView) findViewById(R.id.percent_progress_text_view);
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        drawerToggle.syncState();
     }
 
     @Override
@@ -88,6 +122,7 @@ public class MainActivity extends AppCompatActivity implements
         if (!adapter.getHasBeenInitialized()) {
             buildFoodList();
         }
+        updateProgressBar();
     }
 
     private void buildFoodList() {
@@ -102,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements
             rowItems.add(new FoodTypeRowItem(consumption, this));
         }
 
-        adapter.addSectionWithTitle("Test", rowItems);
+        adapter.addSectionWithHeaderItem(new InvisibleHeaderRowItem(), rowItems);
 
         adapter.notifyDataSetChanged();
     }
@@ -120,28 +155,6 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
     public void onRecyclerViewRowItemClicked(QxRecyclerViewRowItem rowItem, QxRecyclerViewAdapter adapter, View view, int position) {
 
         if (rowItem instanceof FoodTypeRowItem) {
@@ -154,6 +167,10 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onConsumedServingChanged(long consumptionId) {
+
+        if (rowItems == null) {
+            return;
+        }
 
         DBConsumption consumption = null;
         FoodTypeRowItem changedRowItem = null;
@@ -171,7 +188,32 @@ public class MainActivity extends AppCompatActivity implements
 
             if (position >= 0) {
                 adapter.notifyItemChanged(position);
+                updateProgressBar();
             }
         }
+    }
+
+    private void updateProgressBar() {
+
+        double totalServings = 0.0;
+        double consumedServings = 0.0;
+
+        List<DBConsumption> consumptions = dailyReport.getConsumptions();
+
+        for (DBConsumption consumption : consumptions) {
+
+            if (consumption.foodType.recommendedServingCount != null &&
+                    consumption.foodType.recommendedServingCount >= 0.0) {
+                totalServings += consumption.foodType.recommendedServingCount;
+
+                if (consumption.getConsumedServingCount() != null) {
+                    consumedServings += Math.min(consumption.getConsumedServingCount(), consumption.foodType.recommendedServingCount);
+                }
+            }
+        }
+
+        int percentProgress = (int)Math.round(consumedServings/totalServings*100);
+        progressBar.setProgress(percentProgress);
+        progressTextView.setText(percentProgress + " %");
     }
 }

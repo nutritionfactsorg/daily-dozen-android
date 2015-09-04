@@ -6,12 +6,16 @@ import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.text.Editable;
 import android.text.Html;
 import android.text.Spanned;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,6 +33,8 @@ public class FoodTypeDetailFragment extends DialogFragment {
     private OnConsumedServingChangedListener mListener;
     private DBConsumption consumption;
     private FoodType foodType;
+
+    private boolean isDismissing;
 
     public static FoodTypeDetailFragment newInstance(long consumptionId) {
         FoodTypeDetailFragment fragment = new FoodTypeDetailFragment();
@@ -52,7 +58,8 @@ public class FoodTypeDetailFragment extends DialogFragment {
         }
 
         if (consumption == null || foodType == null) {
-            getActivity().finish();
+            isDismissing = true;
+            dismiss();
         }
 
         setStyle(DialogFragment.STYLE_NO_TITLE, 0);
@@ -62,12 +69,11 @@ public class FoodTypeDetailFragment extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        /*
-    }
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        super.onCreateDialog(savedInstanceState);
-*/
         View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_food_type_detail, container, false);
+
+        if (isDismissing) {
+            return view;
+        }
 
         TextView textView = (TextView) view.findViewById(R.id.title_text_view);
         textView.setText(foodType.name);
@@ -77,6 +83,33 @@ public class FoodTypeDetailFragment extends DialogFragment {
 
         final EditText servingCountEditText = (EditText) view.findViewById(R.id.servings_edit_text);
         servingCountEditText.setText((String.valueOf(Math.round(consumption.getConsumedServingCount()))));
+        servingCountEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                String inputtedString = servingCountEditText.getText().toString();
+
+                int newServingCount = 0;
+                try {
+                    Double inputtedValue = Double.parseDouble(inputtedString);
+                    newServingCount = inputtedValue.intValue();
+                } catch (Exception e) {
+
+                }
+
+                DataManager.getInstance().setServingCount(consumption, newServingCount);
+                mListener.onConsumedServingChanged(consumption.getId());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
 
         Spanned spanned;
 
@@ -176,6 +209,13 @@ public class FoodTypeDetailFragment extends DialogFragment {
             }
         });
 
+        Button dismissButton = (Button) view.findViewById(R.id.dismiss_button);
+        dismissButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
         return view;
         /*
         Dialog dialog = new android.app.AlertDialog.Builder(getActivity())
