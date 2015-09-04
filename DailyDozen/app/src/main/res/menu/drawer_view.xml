@@ -3,25 +3,26 @@
 
     <group        >
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_video"
             android:icon="@drawable/ic_dashboard"
             android:title="@string/nav_drawer_video" />
         <item
-            android:id="@+id/nav_messages"
+            android:id="@+id/nav_donate"
             android:icon="@drawable/ic_event"
             android:title="@string/nav_drawer_donate" />
         <item
-            android:id="@+id/nav_friends"
+            android:id="@+id/nav_book"
             android:icon="@drawable/ic_headset"
             android:title="@string/nav_drawer_book" />
         <item
-            android:id="@+id/nav_discussion"
+            android:id="@+id/nav_subscribe"
             android:icon="@drawable/ic_forum"
             android:title="@string/nav_drawer_subscribe" />
     </group>
 
     <group android:id="@+id/extras">
             <item
+                android:id="@+id/nav_acknowledgements"
                 android:icon="@drawable/ic_dashboard"
                 android:title="Acknowledgements" />
         </group>

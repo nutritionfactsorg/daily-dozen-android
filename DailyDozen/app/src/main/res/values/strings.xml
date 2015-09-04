@@ -68,7 +68,10 @@
     <string name="nav_drawer_subscribe">Subscribe</string>
 
     <string name="welcome_title">Welcome to my Daily Dozen!</string>
-    <string name="welcome_body">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.\n\nTo learn about each category click on the icon for more information.\n\nTo add a serving throughout the day click on the checkboxes. It’s that easy!</string>
+    <string name="welcome_body">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.\n\nTo add a serving throughout the day, or to learn about each category tap on the row. It’s that easy!</string>
+
+    <string name="acknowledgements_title">Acknowledgements</string>
+    <string name="acknowledgements_body">Application designed by Allan Portera at\nhttp://www.DigitalBoro.com.\n\nDeveloped by Chan Kruse.\n\nPhotos by Jane Doe.</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

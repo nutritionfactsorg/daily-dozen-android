@@ -1,5 +1,7 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
@@ -13,6 +15,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -183,6 +190,58 @@ public class MainActivity extends AppCompatActivity implements
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         mDrawerLayout.closeDrawers();
+
+                        Intent browserIntent = null;
+
+                        switch (menuItem.getItemId()) {
+                            case R.id.nav_video: {
+
+                                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://nutritionfacts.org/"));
+
+                                break;
+                            }
+                            case R.id.nav_donate: {
+
+                                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://nutritionfacts.org/donate/"));
+                                break;
+                            }
+                            case R.id.nav_book: {
+
+                                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.nutritionfacts.org/book"));
+                                break;
+                            }
+                            case R.id.nav_subscribe: {
+
+                                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://nutritionfacts.org/subscribe/"));
+                                break;
+                            }
+                            case R.id.nav_acknowledgements: {
+
+                                SpannableString spanned = new SpannableString(getString(R.string.acknowledgements_body));
+                                Linkify.addLinks(spanned, Linkify.ALL);
+
+                                AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
+                                        .setTitle(R.string.acknowledgements_title)
+                                        .setMessage(spanned)
+                                        .setPositiveButton(R.string.dismiss, null)
+                                        .create();
+
+                                dialog.show();
+
+                                View textView = dialog.findViewById(android.R.id.message);
+
+                                if (textView != null && textView instanceof TextView) {
+                                    ((TextView)textView).setMovementMethod(LinkMovementMethod.getInstance());
+                                }
+
+                                return true;
+                            }
+                        }
+
+                        if (browserIntent != null) {
+                            startActivity(browserIntent);
+                        }
+
                         /*CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder(getSession());
 
                         String url = "https://paul.kinlan.me/";

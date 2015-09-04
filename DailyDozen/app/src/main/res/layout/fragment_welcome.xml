@@ -7,7 +7,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="90dp"
         android:padding="@dimen/dialog_padding"
         android:scaleType="fitCenter"
         android:src="@drawable/nutrition_facts_logo" />
