@@ -1,20 +1,18 @@
 package org.nutritionfacts.dailydozen.fragment;
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.text.Editable;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextWatcher;
-import android.util.Log;
+import android.view.ActionMode;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -82,40 +80,69 @@ public class FoodTypeDetailFragment extends DialogFragment {
         imageView.setImageDrawable(getResources().getDrawable(foodType.overviewImageResourceId));
 
         final EditText servingCountEditText = (EditText) view.findViewById(R.id.servings_edit_text);
-        servingCountEditText.setText((String.valueOf(Math.round(consumption.getConsumedServingCount()))));
-        servingCountEditText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        
+        if (!consumption.getFoodTypeIdentifier().equals(FoodType.K_IDENTIFIER_SPICES)) {
+            servingCountEditText.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
 
-            }
+                public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                    return false;
+                }
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                public void onDestroyActionMode(ActionMode mode) {
+                }
 
-                String inputtedString = servingCountEditText.getText().toString();
+                public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                    return false;
+                }
 
-                int newServingCount = 0;
-                try {
-                    Double inputtedValue = Double.parseDouble(inputtedString);
-                    newServingCount = inputtedValue.intValue();
-                } catch (Exception e) {
+                public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                    return false;
+                }
+            });
+            servingCountEditText.setText((String.valueOf(Math.round(consumption.getConsumedServingCount()))));
+            servingCountEditText.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
                 }
 
-                DataManager.getInstance().setServingCount(consumption, newServingCount);
-                mListener.onConsumedServingChanged(consumption.getId());
-            }
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-            @Override
-            public void afterTextChanged(Editable s) {
-            }
-        });
+                    String inputtedString = servingCountEditText.getText().toString();
+
+                    int newServingCount = 0;
+                    try {
+                        Double inputtedValue = Double.parseDouble(inputtedString);
+                        newServingCount = inputtedValue.intValue();
+                    } catch (Exception e) {
+
+                    }
+
+                    DataManager.getInstance().setServingCount(consumption, newServingCount);
+                    mListener.onConsumedServingChanged(consumption.getId());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                }
+            });
+        } else {
+            view.findViewById(R.id.todays_servings_container).setVisibility(View.GONE);
+        }
 
         Spanned spanned;
 
         textView = (TextView) view.findViewById(R.id.recommended_servings_text_view);
-        if (foodType.recommendedServingCount != null && foodType.recommendedServingCount >= 0.0) {
 
+        if (consumption.getFoodTypeIdentifier().equals(FoodType.K_IDENTIFIER_SPICES)) {
+
+            spanned = Html.fromHtml(
+                    "<b>" +
+                            getResources().getString(R.string.recommendation) +
+                            "</b> " +
+                            getResources().getString(R.string.food_type_spice_recommendation));
+        } else {
             spanned = Html.fromHtml(
                     "<b>" +
                             getResources().getString(R.string.recommendation) +
@@ -124,19 +151,23 @@ public class FoodTypeDetailFragment extends DialogFragment {
                                     R.plurals.daily_serving,
                                     (int) Math.round(foodType.recommendedServingCount),
                                     (int) Math.round(foodType.recommendedServingCount)));
-            textView.setText(spanned);
-        } else {
-            textView.setVisibility(View.GONE);
         }
+
+        textView.setText(spanned);
+
 
         textView = (TextView) view.findViewById(R.id.serving_example_text_view);
 
-        spanned = Html.fromHtml(
-                "<b>" +
-                        getResources().getString(R.string.one_serving_title) +
-                        "</b><br />" + foodType.servingExample.replace("\n", "<br />"));
-        textView.setText(spanned);
 
+        if (consumption.getFoodTypeIdentifier().equals(FoodType.K_IDENTIFIER_SPICES)) {
+            textView.setVisibility(View.GONE);
+        } else {
+            spanned = Html.fromHtml(
+                    "<b>" +
+                            getResources().getString(R.string.one_serving_title) +
+                            "</b><br />" + foodType.servingExample.replace("\n", "<br />"));
+            textView.setText(spanned);
+        }
 
         textView = (TextView) view.findViewById(R.id.example_1_text_view);
 

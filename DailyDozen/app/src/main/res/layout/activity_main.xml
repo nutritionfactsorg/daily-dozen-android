@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    style="@style/text_progress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -43,6 +44,7 @@
                     android:text="@string/daily_progress" />
 
                 <TextView
+                    style="@style/text_progress"
                     android:id="@+id/percent_progress_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

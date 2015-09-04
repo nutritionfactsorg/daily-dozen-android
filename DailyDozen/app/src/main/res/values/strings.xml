@@ -16,6 +16,8 @@
     <string name="food_type_exercise_name">Exercise</string>
 
 
+    <string name="food_type_spice_recommendation">1⁄4 teaspoon of turmeric, along with any other (salt-free) herbs and spices you enjoy</string>
+
     <string name="food_type_beans_serving">1⁄4 cup of hummus or bean dip, or\n1⁄2 cup cooked beans, split peas, lentils, tofu, or tempeh, or\n1 cup of fresh peas or sprouted lentils</string>
     <string name="food_type_berries_serving">1⁄2 cup fresh or frozen, or\n1⁄4 cup dried</string>
     <string name="food_type_other_fruit_serving">1 medium-sized fruit, or\n1 cup cut-up fruit, or\n1⁄4 cup dried fruit</string>
@@ -58,7 +60,7 @@
     <string name="content_desc_drawer_close">Tap to close the navigation drawer</string>
 
     <string name="daily_progress">Daily Progress</string>
-    
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
