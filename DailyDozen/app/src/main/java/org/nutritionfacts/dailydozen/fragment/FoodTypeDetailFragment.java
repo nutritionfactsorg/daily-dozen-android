@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.fragment;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.text.Editable;
@@ -80,7 +81,7 @@ public class FoodTypeDetailFragment extends DialogFragment {
         imageView.setImageDrawable(getResources().getDrawable(foodType.overviewImageResourceId));
 
         final EditText servingCountEditText = (EditText) view.findViewById(R.id.servings_edit_text);
-        
+
         if (!consumption.getFoodTypeIdentifier().equals(FoodType.K_IDENTIFIER_SPICES)) {
             servingCountEditText.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
 
@@ -271,6 +272,15 @@ public class FoodTypeDetailFragment extends DialogFragment {
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnConsumedServingChangedListener");
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Dialog dialog = getDialog();
+        if (dialog != null) {
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         }
     }
 

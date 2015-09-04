@@ -50,6 +50,7 @@
     <string name="food_type_exercise_example"> Bicycling, canoeing, dancing, dodgeball, downhill skiing, fencing, hiking, housework, ice skating, in-line skating, juggling, jumping on a trampoline, paddle boating, playing Frisbee, roller-skating, shooting baskets, shoveling light snow, skateboarding, snorkeling, surfing, swimming recreationally, tennis (doubles), treading water, walking briskly (4 MPH), water aerobics, water skiing, yard work, and yoga</string>
     <string name="food_type_exercise_example_2">Backpacking, basketball, bicycling uphill, circuit weight training, cross-country skiing, football, hockey, jogging, jumping jacks, jumping rope, lacrosse, push-ups and pull-ups, racquetball, rock climbing, rugby, running, scuba diving, tennis (singles), soccer, speed skating, squash, step aerobics, swimming laps, walking briskly uphill, and water jogging</string>
 
+    <string name="done">Done</string>
     <string name="dismiss">Dismiss</string>
 
     <string name="recommendation">Recommendation:</string>
@@ -60,6 +61,14 @@
     <string name="content_desc_drawer_close">Tap to close the navigation drawer</string>
 
     <string name="daily_progress">Daily Progress</string>
+
+    <string name="nav_drawer_video">Latest Video</string>
+    <string name="nav_drawer_donate">Donate</string>
+    <string name="nav_drawer_book">Book</string>
+    <string name="nav_drawer_subscribe">Subscribe</string>
+
+    <string name="welcome_title">Welcome to my Daily Dozen!</string>
+    <string name="welcome_body">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.\n\nTo learn about each category click on the icon for more information.\n\nTo add a serving throughout the day click on the checkboxes. It’s that easy!</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

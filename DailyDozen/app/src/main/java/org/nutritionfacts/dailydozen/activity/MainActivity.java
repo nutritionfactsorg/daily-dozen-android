@@ -1,8 +1,11 @@
 package org.nutritionfacts.dailydozen.activity;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.os.Bundle;
@@ -26,6 +29,7 @@ import org.nutritionfacts.dailydozen.data.DataManager;
 import org.nutritionfacts.dailydozen.db.DBConsumption;
 import org.nutritionfacts.dailydozen.db.DBDailyReport;
 import org.nutritionfacts.dailydozen.fragment.FoodTypeDetailFragment;
+import org.nutritionfacts.dailydozen.fragment.WelcomeFragment;
 import org.nutritionfacts.dailydozen.rowItem.FoodTypeRowItem;
 import org.nutritionfacts.dailydozen.rowItem.InvisibleHeaderRowItem;
 import org.nutritionfacts.dailydozen.user.UserManager;
@@ -36,6 +40,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements
         QxRecyclerViewAdapter.OnRecyclerViewRowItemClickedListener, FoodTypeDetailFragment.OnConsumedServingChangedListener {
+
+    private static final String EXTRA_CUSTOM_TABS_SESSION = "android.support.customtabs.extra.SESSION";
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle drawerToggle;
@@ -85,10 +91,10 @@ public class MainActivity extends AppCompatActivity implements
             setupDrawerContent(navigationView);
         }
 
-        if (!UserManager.getInstance().hasUserRegistered()) {
+        if (!UserManager.getInstance().hasUserRegistered() || true) {
             showWelcomeScreen = true;
 
-            UserManager.getInstance().createUser();
+//            UserManager.getInstance().createUser();
         }
         // else, UserManager DBUser will be initialized in DailyDozenApplication
 
@@ -110,6 +116,22 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == android.R.id.home) {
+            mDrawerLayout.openDrawer(GravityCompat.START);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         drawerToggle.syncState();
@@ -123,6 +145,19 @@ public class MainActivity extends AppCompatActivity implements
             buildFoodList();
         }
         updateProgressBar();
+
+        if (showWelcomeScreen) {
+            showWelcomeScreen = false;
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    WelcomeFragment fragment = WelcomeFragment.newInstance();
+                    fragment.show(getSupportFragmentManager(), "welcome_fragment");
+                }
+            }, 400);
+        }
     }
 
     private void buildFoodList() {
@@ -147,8 +182,18 @@ public class MainActivity extends AppCompatActivity implements
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        menuItem.setChecked(true);
                         mDrawerLayout.closeDrawers();
+                        /*CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder(getSession());
+
+                        String url = "https://paul.kinlan.me/";
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+
+                        Bundle extras = new Bundle;
+                        extras.putBinder(EXTRA_CUSTOM_TABS_SESSION,
+                                sessionICustomTabsCallback.asBinder() /* Set to null for no session */
+                        /*);
+                        intent.putExtras(extras);
+*/
                         return true;
                     }
                 });

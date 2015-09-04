@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.nutritionfacts.dailydozen.fragment.WelcomeFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:padding="@dimen/dialog_padding"
+        android:scaleType="fitCenter"
+        android:src="@drawable/nutrition_facts_logo" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/dr_greger" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/text_welcome_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/dialog_padding"
+                android:paddingLeft="@dimen/dialog_padding"
+                android:paddingRight="@dimen/dialog_padding"
+                android:paddingStart="@dimen/dialog_padding"
+                android:paddingTop="@dimen/dialog_section_padding_vertical"
+                android:text="@string/welcome_title" />
+
+            <TextView
+                style="@style/text_welcome_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dialog_section_padding_vertical"
+                android:paddingEnd="@dimen/dialog_padding"
+                android:paddingLeft="@dimen/dialog_padding"
+                android:paddingRight="@dimen/dialog_padding"
+                android:paddingStart="@dimen/dialog_padding"
+                android:paddingTop="@dimen/dialog_section_padding_vertical"
+                android:text="@string/welcome_body" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingBottom="5dp">
+
+        <Button
+            android:id="@+id/dismiss_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/dismiss"
+            android:textColor="@color/primary_dark" />
+    </LinearLayout>
+
+</LinearLayout>
