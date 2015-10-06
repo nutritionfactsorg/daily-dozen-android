@@ -42,6 +42,7 @@ import org.nutritionfacts.dailydozen.rowItem.InvisibleHeaderRowItem;
 import org.nutritionfacts.dailydozen.user.UserManager;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -63,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements
     protected QxRecyclerView listView;
     protected QxRecyclerViewAdapter adapter;
     private List<FoodTypeRowItem> rowItems;
+
+    private Date cachedDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements
             setupDrawerContent(navigationView);
         }
 
-        if (!UserManager.getInstance().hasUserRegistered() || true) {
+        if (!UserManager.getInstance().hasUserRegistered()) {
             showWelcomeScreen = true;
 
 //            UserManager.getInstance().createUser();
@@ -148,7 +151,15 @@ public class MainActivity extends AppCompatActivity implements
     public void onResume() {
         super.onResume();
 
-        if (!adapter.getHasBeenInitialized()) {
+        Date date = DataManager.getInstance().getTodaysDate();
+
+        boolean forceRebuildData = false;
+        if (cachedDate == null || cachedDate.compareTo(date) != 0) {
+            cachedDate = date;
+            forceRebuildData = true;
+        }
+
+        if (!adapter.getHasBeenInitialized() || forceRebuildData) {
             buildFoodList();
         }
         updateProgressBar();

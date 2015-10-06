@@ -55,14 +55,19 @@ public class DataManager {
         user.update();
     }
 
-    public DBDailyReport getReportForToday() {
+    public Date getTodaysDate() {
         Calendar calendarDate = Calendar.getInstance();
         calendarDate.set(Calendar.HOUR_OF_DAY, 0);
         calendarDate.set(Calendar.MINUTE, 0);
         calendarDate.set(Calendar.SECOND, 0);
         calendarDate.set(Calendar.MILLISECOND, 0);
 
-        Date date = calendarDate.getTime();
+        return calendarDate.getTime();
+    }
+
+    public DBDailyReport getReportForToday() {
+
+        Date date = getTodaysDate();
 
         return DBDailyReport.getDailyReportForDate(getDaoSession(), date);
     }

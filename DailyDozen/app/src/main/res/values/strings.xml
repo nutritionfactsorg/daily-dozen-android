@@ -47,7 +47,7 @@
     <string name="food_type_spices_example">Allspice, barberries, basil, bay leaves, cardamom, chili powder, cilantro, cinnamon, cloves, coriander, cumin, curry powder, dill, fenugreek, garlic, ginger, horseradish, lemongrass, marjoram, mustard powder, nutmeg, oregano, smoked paprika, parsley, pepper, peppermint, rosemary, saffron, sage, thyme, turmeric, and vanilla</string>
     <string name="food_type_whole_grains_example">Barley, brown rice, buckwheat, millet, oats, popcorn, quinoa, rye, teff, whole-wheat pasta, and wild rice</string>
     <string name="food_type_beverages_example">Black tea, chai tea, vanilla chamomile tea, coffee, earl grey tea, green tea, hibiscus tea, hot chocolate, jasmine tea, lemon balm tea, matcha tea, almond blossom oolong tea, peppermint tea, rooibos tea, water, and white tea</string>
-    <string name="food_type_exercise_example"> Bicycling, canoeing, dancing, dodgeball, downhill skiing, fencing, hiking, housework, ice skating, in-line skating, juggling, jumping on a trampoline, paddle boating, playing Frisbee, roller-skating, shooting baskets, shoveling light snow, skateboarding, snorkeling, surfing, swimming recreationally, tennis (doubles), treading water, walking briskly (4 MPH), water aerobics, water skiing, yard work, and yoga</string>
+    <string name="food_type_exercise_example">Bicycling, canoeing, dancing, dodgeball, downhill skiing, fencing, hiking, housework, ice skating, in-line skating, juggling, jumping on a trampoline, paddle boating, playing Frisbee, roller-skating, shooting baskets, shoveling light snow, skateboarding, snorkeling, surfing, swimming recreationally, tennis (doubles), treading water, walking briskly (4 MPH), water aerobics, water skiing, yard work, and yoga</string>
     <string name="food_type_exercise_example_2">Backpacking, basketball, bicycling uphill, circuit weight training, cross-country skiing, football, hockey, jogging, jumping jacks, jumping rope, lacrosse, push-ups and pull-ups, racquetball, rock climbing, rugby, running, scuba diving, tennis (singles), soccer, speed skating, squash, step aerobics, swimming laps, walking briskly uphill, and water jogging</string>
 
     <string name="done">Done</string>
@@ -71,7 +71,7 @@
     <string name="welcome_body">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.\n\nTo add a serving throughout the day, or to learn about each category tap on the row. It’s that easy!</string>
 
     <string name="acknowledgements_title">Acknowledgements</string>
-    <string name="acknowledgements_body">Application designed by Allan Portera at\nhttp://www.DigitalBoro.com.\n\nDeveloped by Chan Kruse.\n\nPhotos by Jane Doe.</string>
+    <string name="acknowledgements_body">Designed by Allan Portera at\nhttp://www.DigitalBoro.com.\n\nDeveloped by Chan Kruse.\n\nPhotos by Jane Doe.</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
