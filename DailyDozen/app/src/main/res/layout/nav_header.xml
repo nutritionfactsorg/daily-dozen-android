@@ -8,6 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="175dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/bkg_test"/>
+        android:src="@drawable/otherveg"/>
 
 </LinearLayout>

@@ -1,12 +1,10 @@
 package org.nutritionfacts.dailydozen.activity;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -15,13 +13,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.text.SpannableString;
-import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
-import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -104,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements
         if (!UserManager.getInstance().hasUserRegistered()) {
             showWelcomeScreen = true;
 
-//            UserManager.getInstance().createUser();
+            UserManager.getInstance().createUser();
         }
         // else, UserManager DBUser will be initialized in DailyDozenApplication
 
@@ -253,17 +247,6 @@ public class MainActivity extends AppCompatActivity implements
                             startActivity(browserIntent);
                         }
 
-                        /*CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder(getSession());
-
-                        String url = "https://paul.kinlan.me/";
-                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-
-                        Bundle extras = new Bundle;
-                        extras.putBinder(EXTRA_CUSTOM_TABS_SESSION,
-                                sessionICustomTabsCallback.asBinder() /* Set to null for no session */
-                        /*);
-                        intent.putExtras(extras);
-*/
                         return true;
                     }
                 });
