@@ -3,6 +3,7 @@ package com.johnslavick.dailydozen.widgets;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
@@ -14,6 +15,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class FoodItem extends LinearLayout {
+    private final static String TAG = FoodItem.class.getSimpleName();
+
     private String name;
     private int quantity;
 
@@ -28,7 +31,7 @@ public class FoodItem extends LinearLayout {
     }
 
     public FoodItem(Context context, String name, int quantity) {
-        this(context, null);
+        super(context);
 
         this.name = name;
         this.quantity = quantity;
@@ -55,10 +58,22 @@ public class FoodItem extends LinearLayout {
         inflate(context, R.layout.food_item, this);
         ButterKnife.bind(this);
 
+        Log.d(TAG, String.format("FoodItem: name [%s] quantity [%s]", name, quantity));
+
         tvName.setText(name);
+
+        final CheckBox checkBox = new CheckBox(context);
+        checkBox.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
+        final int checkboxWidth = checkBox.getMeasuredWidth();
 
         for (int i = 0; i < quantity; i++) {
             vgCheckboxes.addView(new CheckBox(context));
         }
+
+        // The maximum number of servings for any food is 5. Here we set all FoodItems to have the same width of
+        // checkboxes so they line up nicely.
+        final ViewGroup.LayoutParams params = vgCheckboxes.getLayoutParams();
+        params.width = checkboxWidth * 5;
+        vgCheckboxes.setLayoutParams(params);
     }
 }

@@ -9,6 +9,7 @@
         android:id="@+id/food_checkboxes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
         android:orientation="horizontal"/>
 
     <TextView
