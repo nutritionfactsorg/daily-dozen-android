@@ -14,46 +14,51 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class FoodItem extends LinearLayout {
+    private String name;
+    private int quantity;
+
     @Bind(R.id.food_checkboxes)
-    protected ViewGroup checkboxes;
+    protected ViewGroup vgCheckboxes;
 
     @Bind(R.id.food_name)
-    protected TextView name;
+    protected TextView tvName;
 
     public FoodItem(Context context) {
         this(context, null);
     }
 
+    public FoodItem(Context context, String name, int quantity) {
+        this(context, null);
+
+        this.name = name;
+        this.quantity = quantity;
+
+        init(context);
+    }
+
     public FoodItem(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context, attrs);
-    }
 
-    private void init(final Context context, final AttributeSet attrs) {
-        inflate(context, R.layout.food_item, this);
-        ButterKnife.bind(this);
-
-        applyLayoutAttributes(context, attrs);
-    }
-
-    private void applyLayoutAttributes(final Context context, final AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.FoodItem);
             if (array != null) {
-                final int numCheckboxes = array.getInt(R.styleable.FoodItem_numCheckboxes, 0);
-                final String foodName = array.getString(R.styleable.FoodItem_foodName);
-
-                createCheckboxes(context, numCheckboxes);
-                name.setText(foodName);
-
+                this.quantity = array.getInt(R.styleable.FoodItem_numCheckboxes, 0);
+                this.name = array.getString(R.styleable.FoodItem_foodName);
                 array.recycle();
             }
         }
+
+        init(context);
     }
 
-    private void createCheckboxes(final Context context, final int numCheckboxes) {
-        for (int i = 0; i < numCheckboxes; i++) {
-            checkboxes.addView(new CheckBox(context));
+    private void init(final Context context) {
+        inflate(context, R.layout.food_item, this);
+        ButterKnife.bind(this);
+
+        tvName.setText(name);
+
+        for (int i = 0; i < quantity; i++) {
+            vgCheckboxes.addView(new CheckBox(context));
         }
     }
 }
