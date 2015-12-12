@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="3"
+        app:foodName="@string/beans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="1"
+        app:foodName="@string/berries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="3"
+        app:foodName="@string/other_fruits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="1"
+        app:foodName="@string/cruciferous_vegetables"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="2"
+        app:foodName="@string/greens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="2"
+        app:foodName="@string/other_vegetables"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="1"
+        app:foodName="@string/flaxseeds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="1"
+        app:foodName="@string/nuts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="1"
+        app:foodName="@string/spices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="3"
+        app:foodName="@string/whole_grains"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="5"
+        app:foodName="@string/beverages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.johnslavick.dailydozen.widgets.FoodItem
+        app:numCheckboxes="1"
+        app:foodName="@string/exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

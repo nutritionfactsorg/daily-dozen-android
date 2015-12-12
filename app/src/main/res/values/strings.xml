@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Dr. Greger\'s Daily Dozen</string>
+    <string name="beans">Beans</string>
+    <string name="berries">Berries</string>
+    <string name="other_fruits">Other Fruits</string>
+    <string name="cruciferous_vegetables">Cruciferous Vegetables</string>
+    <string name="greens">Greens</string>
+    <string name="other_vegetables">Other Vegetables</string>
+    <string name="flaxseeds">Flaxseeds</string>
+    <string name="nuts">Nuts</string>
+    <string name="spices">Spices</string>
+    <string name="whole_grains">Whole Grains</string>
+    <string name="beverages">Beverages</string>
+    <string name="exercise">Exercise</string>
 </resources>
