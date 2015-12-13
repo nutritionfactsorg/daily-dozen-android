@@ -43,7 +43,7 @@ public class Food extends Model {
 
     @Override
     public String toString() {
-        return String.format("%s (recommended servings %s)", name, recommendedServings);
+        return name;
     }
 
     public static void ensureAllFoodsExistInDatabase(final String[] foodNames, final int[] recommendedServings) {

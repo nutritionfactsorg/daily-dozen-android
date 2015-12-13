@@ -13,6 +13,10 @@ import org.slavick.dailydozen.model.Date;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -47,28 +51,61 @@ public class FoodServings extends LinearLayout {
         inflate(context, R.layout.food_item, this);
         ButterKnife.bind(this);
 
-        Log.d(TAG, String.format("FoodServings: %s", food));
+        initFoodName();
+        initCheckboxes();
+    }
 
+    private void initFoodName() {
         tvName.setText(food.getName());
+    }
 
-        CheckBox checkBox = createCheckBox();
-        checkBox.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
-        final int checkboxWidth = checkBox.getMeasuredWidth();
+    private void initCheckboxes() {
+        int numExistingServings = getNumExistingServings();
+
+        final List<CheckBox> checkBoxes = new ArrayList<>();
 
         for (int i = 0; i < food.getRecommendedServings(); i++) {
-            vgCheckboxes.addView(createCheckBox());
+            final boolean isChecked = numExistingServings > 0;
+
+            checkBoxes.add(createCheckBox(isChecked));
+
+            numExistingServings--;
+        }
+
+        // Add the checkboxes in reverse order because they were checked from left to right. Reversing the order
+        // makes it so the checks appear right to left.
+        Collections.reverse(checkBoxes);
+        for (CheckBox checkBox : checkBoxes) {
+            vgCheckboxes.addView(checkBox);
         }
 
         // The maximum number of servings for any food is 5. Here we set all FoodServings to have the same width of
         // checkboxes so they line up nicely.
+        setWidthOfCheckBoxesToFiveWide();
+    }
+
+    private void setWidthOfCheckBoxesToFiveWide() {
+        final CheckBox checkBox = new CheckBox(getContext());
+        checkBox.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
+
         final ViewGroup.LayoutParams params = vgCheckboxes.getLayoutParams();
-        params.width = checkboxWidth * 5;
+        params.width = checkBox.getMeasuredWidth() * 5;
         vgCheckboxes.setLayoutParams(params);
     }
 
-    private CheckBox createCheckBox() {
-        CheckBox checkBox = new CheckBox(getContext());
+    private int getNumExistingServings() {
+        final Servings servings = Servings.getByDateAndFood(date, food);
+        return servings != null ? servings.getServings() : 0;
+    }
+
+    private CheckBox createCheckBox(final boolean isChecked) {
+        final CheckBox checkBox = new CheckBox(getContext());
+
+        // It is necessary to set the checked status before we set the onCheckedChangeListener
+        checkBox.setChecked(isChecked);
+
         checkBox.setOnCheckedChangeListener(getOnCheckedChangeListener());
+
         return checkBox;
     }
 
@@ -77,8 +114,6 @@ public class FoodServings extends LinearLayout {
             onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    Log.d(TAG, String.format("%s: %s", food.getName(), getNumServings()));
-
                     if (isChecked) {
                         handleServingChecked();
                     } else {
@@ -95,31 +130,25 @@ public class FoodServings extends LinearLayout {
         final Servings servings = Servings.createServingsIfDoesNotExist(date, food);
         servings.increaseServings();
         servings.save();
+
+        Log.d(TAG, String.format("Increased Servings for %s", servings));
     }
 
     private void handleServingUnchecked() {
+        // TODO: 12/13/15 weird to call createServings if we are handling an uncheck
         final Servings servings = Servings.createServingsIfDoesNotExist(date, food);
         servings.decreaseServings();
 
         if (servings.getServings() > 0) {
             servings.save();
+
+            Log.d(TAG, String.format("Decreased Servings for %s", servings));
         } else {
+            Log.d(TAG, String.format("Deleting %s", servings));
             servings.delete();
         }
 
         // TODO: 12/13/15
         // delete date if no other servings on that date
-    }
-
-    public int getNumServings() {
-        int numEaten = 0;
-
-        for (int i = 0; i < vgCheckboxes.getChildCount(); i++) {
-            if (((CheckBox) vgCheckboxes.getChildAt(i)).isChecked()) {
-                numEaten++;
-            }
-        }
-
-        return numEaten;
     }
 }
