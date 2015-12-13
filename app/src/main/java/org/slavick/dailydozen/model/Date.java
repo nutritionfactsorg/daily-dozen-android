@@ -3,6 +3,7 @@ package org.slavick.dailydozen.model;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
+import com.activeandroid.query.Select;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,6 +12,13 @@ import java.text.SimpleDateFormat;
 public class Date extends Model {
     @Column(name = "date", index = true)
     private String date;
+
+    public Date() {
+    }
+
+    public Date(String dateString) {
+        setDate(dateString);
+    }
 
     public String getDate() {
         return date;
@@ -36,5 +44,25 @@ public class Date extends Model {
 
     public void setDateToToday() {
         setDate(new SimpleDateFormat("yyyyMMdd").format(new java.util.Date()));
+    }
+
+    private static boolean exists(String dateString) {
+        return new Select().from(Date.class).where("date = ?", dateString).exists();
+    }
+
+    public static Date today() {
+        return createDateIfDoesNotExist(formatDateString(new java.util.Date()));
+    }
+
+    public static Date getByDate(String dateString) {
+        return new Select().from(Date.class).where("date = ?", dateString).executeSingle();
+    }
+
+    private static String formatDateString(java.util.Date date) {
+        return new SimpleDateFormat("yyyyMMdd").format(date);
+    }
+
+    public static Date createDateIfDoesNotExist(final String dateString) {
+        return !exists(dateString) ? new Date(dateString) : getByDate(dateString);
     }
 }

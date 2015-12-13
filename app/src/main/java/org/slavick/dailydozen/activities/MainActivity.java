@@ -6,9 +6,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import org.slavick.dailydozen.R;
-import org.slavick.dailydozen.helper.Dates;
-import org.slavick.dailydozen.helper.Foods;
 import org.slavick.dailydozen.model.Date;
+import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.widgets.FoodServings;
 
 import butterknife.Bind;
@@ -34,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
         final String[] names = getResources().getStringArray(R.array.food_names);
         final int[] quantities = getResources().getIntArray(R.array.food_quantities);
 
-        Foods.ensureAllFoodsExistInDatabase(names, quantities);
+        Food.ensureAllFoodsExistInDatabase(names, quantities);
 
-        final Date today = Dates.today();
+        final Date today = Date.today();
         date.setText(today.toString());
 
         for (String name : names) {
-            form.addView(new FoodServings(this, today, Foods.getFoodByName(name)));
+            form.addView(new FoodServings(this, today, Food.getByName(name)));
         }
     }
 }
