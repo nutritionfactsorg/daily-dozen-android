@@ -63,6 +63,15 @@ public class Date extends Model {
     }
 
     public static Date createDateIfDoesNotExist(final String dateString) {
-        return !exists(dateString) ? new Date(dateString) : getByDate(dateString);
+        Date date;
+
+        if (!exists(dateString)) {
+            date = new Date(dateString);
+            date.save();
+        } else {
+            date = getByDate(dateString);
+        }
+
+        return date;
     }
 }

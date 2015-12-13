@@ -11,6 +11,7 @@ import android.widget.TextView;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Date;
 import org.slavick.dailydozen.model.Food;
+import org.slavick.dailydozen.model.Servings;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -91,16 +92,22 @@ public class FoodServings extends LinearLayout {
     }
 
     private void handleServingChecked() {
-        // TODO: 12/13/15
-        // create date if it does not exist
-        // get food from database
-        // create or update servings
+        final Servings servings = Servings.createServingsIfDoesNotExist(date, food);
+        servings.increaseServings();
+        servings.save();
     }
 
     private void handleServingUnchecked() {
+        final Servings servings = Servings.createServingsIfDoesNotExist(date, food);
+        servings.decreaseServings();
+
+        if (servings.getServings() > 0) {
+            servings.save();
+        } else {
+            servings.delete();
+        }
+
         // TODO: 12/13/15
-        // load servings from database
-        // decrease value. if servings == 0, delete record
         // delete date if no other servings on that date
     }
 
