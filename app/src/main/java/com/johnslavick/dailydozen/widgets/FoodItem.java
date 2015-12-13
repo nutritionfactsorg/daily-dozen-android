@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,6 +20,8 @@ public class FoodItem extends LinearLayout {
 
     private String name;
     private int quantity;
+
+    private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
     @Bind(R.id.food_checkboxes)
     protected ViewGroup vgCheckboxes;
@@ -62,12 +65,12 @@ public class FoodItem extends LinearLayout {
 
         tvName.setText(name);
 
-        final CheckBox checkBox = new CheckBox(context);
+        CheckBox checkBox = createCheckBox();
         checkBox.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
         final int checkboxWidth = checkBox.getMeasuredWidth();
 
         for (int i = 0; i < quantity; i++) {
-            vgCheckboxes.addView(new CheckBox(context));
+            vgCheckboxes.addView(createCheckBox());
         }
 
         // The maximum number of servings for any food is 5. Here we set all FoodItems to have the same width of
@@ -75,5 +78,38 @@ public class FoodItem extends LinearLayout {
         final ViewGroup.LayoutParams params = vgCheckboxes.getLayoutParams();
         params.width = checkboxWidth * 5;
         vgCheckboxes.setLayoutParams(params);
+    }
+
+    private CheckBox createCheckBox() {
+        CheckBox checkBox = new CheckBox(getContext());
+        checkBox.setOnCheckedChangeListener(getOnCheckedChangeListener());
+        return checkBox;
+    }
+
+    private CompoundButton.OnCheckedChangeListener getOnCheckedChangeListener() {
+        if (onCheckedChangeListener == null) {
+            onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    Log.d(TAG, String.format("%s: %s", name, getNumServings()));
+
+                    // TODO: save updated amount to database
+                }
+            };
+        }
+
+        return onCheckedChangeListener;
+    }
+
+    public int getNumServings() {
+        int numEaten = 0;
+
+        for (int i = 0; i < vgCheckboxes.getChildCount(); i++) {
+            if (((CheckBox) vgCheckboxes.getChildAt(i)).isChecked()) {
+                numEaten++;
+            }
+        }
+
+        return numEaten;
     }
 }
