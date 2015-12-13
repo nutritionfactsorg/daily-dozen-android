@@ -1,4 +1,4 @@
-package com.johnslavick.dailydozen.widgets;
+package org.slavick.dailydozen.dailydozen.widgets;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,7 +10,7 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.johnslavick.dailydozen.R;
+import org.slavick.dailydozen.dailydozen.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

@@ -1,4 +1,4 @@
-<manifest package="com.johnslavick.dailydozen"
+<manifest package="org.slavick.dailydozen.dailydozen"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application

@@ -1,11 +1,11 @@
-package com.johnslavick.dailydozen.activities;
+package org.slavick.dailydozen.dailydozen.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 
-import com.johnslavick.dailydozen.R;
-import com.johnslavick.dailydozen.widgets.FoodItem;
+import org.slavick.dailydozen.dailydozen.R;
+import org.slavick.dailydozen.dailydozen.widgets.FoodItem;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
