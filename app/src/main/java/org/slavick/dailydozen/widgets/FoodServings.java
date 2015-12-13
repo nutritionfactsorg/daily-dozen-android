@@ -135,20 +135,18 @@ public class FoodServings extends LinearLayout {
     }
 
     private void handleServingUnchecked() {
-        // TODO: 12/13/15 weird to call createServings if we are handling an uncheck
-        final Servings servings = Servings.createServingsIfDoesNotExist(date, food);
-        servings.decreaseServings();
+        final Servings servings = Servings.getByDateAndFood(date, food);
+        if (servings != null) {
+            servings.decreaseServings();
 
-        if (servings.getServings() > 0) {
-            servings.save();
+            if (servings.getServings() > 0) {
+                servings.save();
 
-            Log.d(TAG, String.format("Decreased Servings for %s", servings));
-        } else {
-            Log.d(TAG, String.format("Deleting %s", servings));
-            servings.delete();
+                Log.d(TAG, String.format("Decreased Servings for %s", servings));
+            } else {
+                Log.d(TAG, String.format("Deleting %s", servings));
+                servings.delete();
+            }
         }
-
-        // TODO: 12/13/15
-        // delete date if no other servings on that date
     }
 }
