@@ -1,26 +1,25 @@
 package org.slavick.dailydozen.widgets;
 
 import android.content.Context;
-import android.content.res.TypedArray;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.model.Date;
+import org.slavick.dailydozen.model.Food;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class FoodItem extends LinearLayout {
-    private final static String TAG = FoodItem.class.getSimpleName();
+public class FoodServings extends LinearLayout {
+    private final static String TAG = FoodServings.class.getSimpleName();
 
-    private String name;
-    private int quantity;
+    private Date date;
+    private Food food;
 
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
@@ -30,30 +29,15 @@ public class FoodItem extends LinearLayout {
     @Bind(R.id.food_name)
     protected TextView tvName;
 
-    public FoodItem(Context context) {
-        this(context, null);
+    public FoodServings(Context context) {
+        super(context);
     }
 
-    public FoodItem(Context context, String name, int quantity) {
+    public FoodServings(Context context, Date date, Food food) {
         super(context);
 
-        this.name = name;
-        this.quantity = quantity;
-
-        init(context);
-    }
-
-    public FoodItem(Context context, AttributeSet attrs) {
-        super(context, attrs);
-
-        if (attrs != null) {
-            final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.FoodItem);
-            if (array != null) {
-                this.quantity = array.getInt(R.styleable.FoodItem_numCheckboxes, 0);
-                this.name = array.getString(R.styleable.FoodItem_foodName);
-                array.recycle();
-            }
-        }
+        this.date = date;
+        this.food = food;
 
         init(context);
     }
@@ -62,19 +46,19 @@ public class FoodItem extends LinearLayout {
         inflate(context, R.layout.food_item, this);
         ButterKnife.bind(this);
 
-        Log.d(TAG, String.format("FoodItem: name [%s] quantity [%s]", name, quantity));
+        Log.d(TAG, String.format("FoodServings: %s", food));
 
-        tvName.setText(name);
+        tvName.setText(food.getName());
 
         CheckBox checkBox = createCheckBox();
         checkBox.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
         final int checkboxWidth = checkBox.getMeasuredWidth();
 
-        for (int i = 0; i < quantity; i++) {
+        for (int i = 0; i < food.getRecommendedServings(); i++) {
             vgCheckboxes.addView(createCheckBox());
         }
 
-        // The maximum number of servings for any food is 5. Here we set all FoodItems to have the same width of
+        // The maximum number of servings for any food is 5. Here we set all FoodServings to have the same width of
         // checkboxes so they line up nicely.
         final ViewGroup.LayoutParams params = vgCheckboxes.getLayoutParams();
         params.width = checkboxWidth * 5;
@@ -92,7 +76,7 @@ public class FoodItem extends LinearLayout {
             onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    Log.d(TAG, String.format("%s: %s", name, getNumServings()));
+                    Log.d(TAG, String.format("%s: %s", food.getName(), getNumServings()));
 
                     if (isChecked) {
                         handleServingChecked();
@@ -107,11 +91,17 @@ public class FoodItem extends LinearLayout {
     }
 
     private void handleServingChecked() {
-        Toast.makeText(getContext(), "Not implemented yet", Toast.LENGTH_SHORT).show();
+        // TODO: 12/13/15
+        // create date if it does not exist
+        // get food from database
+        // create or update servings
     }
 
     private void handleServingUnchecked() {
-        Toast.makeText(getContext(), "Not implemented yet", Toast.LENGTH_SHORT).show();
+        // TODO: 12/13/15
+        // load servings from database
+        // decrease value. if servings == 0, delete record
+        // delete date if no other servings on that date
     }
 
     public int getNumServings() {
