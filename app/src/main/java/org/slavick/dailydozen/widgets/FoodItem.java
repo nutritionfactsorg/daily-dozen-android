@@ -1,4 +1,4 @@
-package org.slavick.dailydozen.dailydozen.widgets;
+package org.slavick.dailydozen.widgets;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,8 +9,9 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import org.slavick.dailydozen.dailydozen.R;
+import org.slavick.dailydozen.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -93,12 +94,24 @@ public class FoodItem extends LinearLayout {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     Log.d(TAG, String.format("%s: %s", name, getNumServings()));
 
-                    // TODO: save updated amount to database
+                    if (isChecked) {
+                        handleServingChecked();
+                    } else {
+                        handleServingUnchecked();
+                    }
                 }
             };
         }
 
         return onCheckedChangeListener;
+    }
+
+    private void handleServingChecked() {
+        Toast.makeText(getContext(), "Not implemented yet", Toast.LENGTH_SHORT).show();
+    }
+
+    private void handleServingUnchecked() {
+        Toast.makeText(getContext(), "Not implemented yet", Toast.LENGTH_SHORT).show();
     }
 
     public int getNumServings() {
