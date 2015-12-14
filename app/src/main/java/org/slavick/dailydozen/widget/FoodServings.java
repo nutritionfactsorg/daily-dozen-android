@@ -1,4 +1,4 @@
-package org.slavick.dailydozen.widgets;
+package org.slavick.dailydozen.widget;
 
 import android.content.Context;
 import android.util.Log;

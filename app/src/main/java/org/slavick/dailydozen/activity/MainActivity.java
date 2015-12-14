@@ -1,4 +1,4 @@
-package org.slavick.dailydozen.activities;
+package org.slavick.dailydozen.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Date;
 import org.slavick.dailydozen.model.Food;
-import org.slavick.dailydozen.widgets.FoodServings;
+import org.slavick.dailydozen.widget.FoodServings;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
