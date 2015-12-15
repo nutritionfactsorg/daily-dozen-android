@@ -19,8 +19,6 @@ import butterknife.ButterKnife;
 public class DateFragment extends Fragment {
     public final static String DATE_ARG = "date";
 
-    private Date date;
-
     @Bind(R.id.date_form)
     protected ViewGroup form;
 
@@ -33,29 +31,25 @@ public class DateFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_date, container, false);
         ButterKnife.bind(this, view);
 
-        getDateArgument();
-
-        createFoodServingsWidgets();
+        displayFormForDate();
 
         return view;
     }
 
-    private void getDateArgument() {
+    private void displayFormForDate() {
         if (getArguments() != null && getArguments().containsKey(DATE_ARG)) {
-            this.date = (Date) getArguments().getSerializable(DATE_ARG);
+            final Date date = (Date) getArguments().getSerializable(DATE_ARG);
+            if (date != null) {
+                createFoodServingsWidgets(date);
+            }
         }
     }
 
-    private void createFoodServingsWidgets() {
-        final String[] names = getResources().getStringArray(R.array.food_names);
-        final int[] quantities = getResources().getIntArray(R.array.food_quantities);
-
-        Food.ensureAllFoodsExistInDatabase(names, quantities);
-
+    private void createFoodServingsWidgets(final Date date) {
         tvDate.setText(date.toString());
 
-        for (String name : names) {
-            form.addView(new FoodServings(getContext(), date, Food.getByName(name)));
+        for (Food food : Food.getAllFoods()) {
+            form.addView(new FoodServings(getContext(), date, food));
         }
     }
 

@@ -7,6 +7,8 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
+import java.util.List;
+
 @Table(name = "foods")
 public class Food extends Model {
     private static final String TAG = Food.class.getSimpleName();
@@ -67,5 +69,9 @@ public class Food extends Model {
 
             Log.d(TAG, String.format("Created %s", food));
         }
+    }
+
+    public static List<Food> getAllFoods() {
+        return new Select().from(Food.class).execute();
     }
 }
