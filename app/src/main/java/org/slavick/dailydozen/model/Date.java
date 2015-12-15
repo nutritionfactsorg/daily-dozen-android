@@ -43,15 +43,11 @@ public class Date extends Model implements Serializable {
         return dateString;
     }
 
-    public void setDateToToday() {
-        setDate(new SimpleDateFormat("yyyyMMdd").format(new java.util.Date()));
-    }
-
     private static boolean exists(String dateString) {
         return new Select().from(Date.class).where("date = ?", dateString).exists();
     }
 
-    public static Date today() {
+    public static Date createToday() {
         return createDateIfDoesNotExist(formatDateString(new java.util.Date()));
     }
 
@@ -63,7 +59,7 @@ public class Date extends Model implements Serializable {
         return new SimpleDateFormat("yyyyMMdd").format(date);
     }
 
-    public static Date createDateIfDoesNotExist(final String dateString) {
+    private static Date createDateIfDoesNotExist(final String dateString) {
         Date date;
 
         if (!exists(dateString)) {

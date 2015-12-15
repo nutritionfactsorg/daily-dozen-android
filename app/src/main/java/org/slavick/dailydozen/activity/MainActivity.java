@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
+import org.slavick.dailydozen.model.Date;
 import org.slavick.dailydozen.model.Food;
 
 import butterknife.Bind;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         ensureAllFoodsExistInDatabase();
+        ensureTodayExistsInDatabase();
 
         initDatePager();
     }
@@ -34,5 +36,9 @@ public class MainActivity extends AppCompatActivity {
         Food.ensureAllFoodsExistInDatabase(
                 getResources().getStringArray(R.array.food_names),
                 getResources().getIntArray(R.array.food_quantities));
+    }
+
+    private void ensureTodayExistsInDatabase() {
+        Date.createToday();
     }
 }
