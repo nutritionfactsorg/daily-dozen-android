@@ -5,11 +5,12 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 @Table(name = "dates")
-public class Date extends Model {
+public class Date extends Model implements Serializable {
     @Column(name = "date", index = true)
     private String date;
 
@@ -73,5 +74,16 @@ public class Date extends Model {
         }
 
         return date;
+    }
+
+    public static int getNumDates() {
+        return new Select().from(Date.class).count();
+    }
+
+    public static Date getDateByOffsetFromToday(final int offset) {
+        return new Select().from(Date.class)
+                .orderBy("date DESC")
+                .offset(offset)
+                .executeSingle();
     }
 }
