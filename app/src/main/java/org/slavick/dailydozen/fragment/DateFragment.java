@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Date;
@@ -21,9 +20,6 @@ public class DateFragment extends Fragment {
 
     @Bind(R.id.date_form)
     protected ViewGroup form;
-
-    @Bind(R.id.date)
-    protected TextView tvDate;
 
     @Nullable
     @Override
@@ -46,8 +42,6 @@ public class DateFragment extends Fragment {
     }
 
     private void createFoodServingsWidgets(final Date date) {
-        tvDate.setText(date.toString());
-
         for (Food food : Food.getAllFoods()) {
             form.addView(new FoodServings(getContext(), date, food));
         }

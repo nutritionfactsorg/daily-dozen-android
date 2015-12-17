@@ -30,6 +30,12 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
     }
 
     @Override
+    public CharSequence getPageTitle(int position) {
+        final Date date = Date.getDateByOffsetFromBeginning(position);
+        return date != null ? date.toString() : "";
+    }
+
+    @Override
     public Object instantiateItem(ViewGroup container, int position) {
         return super.instantiateItem(container, position);
     }

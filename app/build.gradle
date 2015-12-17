@@ -29,4 +29,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    compile 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'
 }

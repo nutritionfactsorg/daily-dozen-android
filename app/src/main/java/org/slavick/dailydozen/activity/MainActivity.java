@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.viewpagerindicator.TitlePageIndicator;
+
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
 import org.slavick.dailydozen.model.Date;
@@ -13,6 +15,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
+    @Bind(R.id.date_pager_indicator)
+    protected TitlePageIndicator datePageIndicator;
+
     @Bind(R.id.date_pager)
     protected ViewPager datePager;
 
@@ -30,8 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDatePager() {
         final DatePagerAdapter datePagerAdapter = new DatePagerAdapter(getSupportFragmentManager());
+        final int indexOfLatestDate = datePagerAdapter.getIndexOfLastPage();
+
         datePager.setAdapter(datePagerAdapter);
-        datePager.setCurrentItem(datePagerAdapter.getIndexOfLastPage());
+        datePager.setCurrentItem(indexOfLatestDate);
+
+        datePageIndicator.setViewPager(datePager, indexOfLatestDate);
     }
 
     private void ensureAllFoodsExistInDatabase() {

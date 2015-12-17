@@ -35,7 +35,7 @@ public class Date extends Model implements Serializable {
 
         try {
             java.util.Date javaDate = new SimpleDateFormat("yyyyMMdd").parse(date);
-            dateString = new SimpleDateFormat("EEEE, MMMM d, yyyy").format(javaDate);
+            dateString = new SimpleDateFormat("EEE, MMM d").format(javaDate);
         } catch (ParseException e) {
             e.printStackTrace();
         }
