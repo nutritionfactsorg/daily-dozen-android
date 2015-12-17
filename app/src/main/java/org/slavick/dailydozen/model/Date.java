@@ -76,9 +76,8 @@ public class Date extends Model implements Serializable {
         return new Select().from(Date.class).count();
     }
 
-    public static Date getDateByOffsetFromToday(final int offset) {
+    public static Date getDateByOffsetFromBeginning(final int offset) {
         return new Select().from(Date.class)
-                .orderBy("date DESC")
                 .offset(offset)
                 .executeSingle();
     }

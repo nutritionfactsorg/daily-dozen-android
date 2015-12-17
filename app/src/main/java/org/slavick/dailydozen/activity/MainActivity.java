@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDatePager() {
-        datePager.setAdapter(new DatePagerAdapter(getSupportFragmentManager()));
+        final DatePagerAdapter datePagerAdapter = new DatePagerAdapter(getSupportFragmentManager());
+        datePager.setAdapter(datePagerAdapter);
+        datePager.setCurrentItem(datePagerAdapter.getIndexOfLastPage());
     }
 
     private void ensureAllFoodsExistInDatabase() {

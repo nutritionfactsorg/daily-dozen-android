@@ -16,8 +16,7 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        // position is used as "offset from today". 0 is today, 1 is yesterday, ...
-        final Date date = Date.getDateByOffsetFromToday(position);
+        final Date date = Date.getDateByOffsetFromBeginning(position);
         if (date != null) {
             final Bundle args = new Bundle();
             args.putSerializable(DateFragment.DATE_ARG, date);
@@ -38,5 +37,9 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount() {
         return Date.getNumDates();
+    }
+
+    public int getIndexOfLastPage() {
+        return getCount() - 1;
     }
 }
