@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dr. Greger\'s Daily Dozen</string>
+    <string name="app_name">Daily Dozen</string>
     <string name="beans">Beans</string>
     <string name="berries">Berries</string>
     <string name="other_fruits">Other Fruits</string>
