@@ -1,7 +1,9 @@
 package org.slavick.dailydozen.widget;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -9,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.activity.CalendarActivity;
 import org.slavick.dailydozen.model.Date;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
@@ -57,6 +60,14 @@ public class FoodServings extends LinearLayout {
 
     private void initFoodName() {
         tvName.setText(food.getName());
+
+        tvName.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Context context = getContext();
+                context.startActivity(new Intent(context, CalendarActivity.class));
+            }
+        });
     }
 
     private void initCheckboxes() {

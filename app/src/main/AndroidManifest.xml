@@ -27,6 +27,8 @@
 
         </activity>
 
+        <activity android:name=".activity.CalendarActivity" />
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="f46126d5b93b311983c776c93d5285dab1b678b3" />
