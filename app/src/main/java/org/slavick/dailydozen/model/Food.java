@@ -7,10 +7,11 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Table(name = "foods")
-public class Food extends Model {
+public class Food extends Model implements Serializable {
     private static final String TAG = Food.class.getSimpleName();
 
     @Column(name = "name", index = true)
@@ -23,16 +24,8 @@ public class Food extends Model {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getRecommendedServings() {
         return recommendedServings;
-    }
-
-    public void setRecommendedServings(int recommendedServings) {
-        this.recommendedServings = recommendedServings;
     }
 
     public Food() {

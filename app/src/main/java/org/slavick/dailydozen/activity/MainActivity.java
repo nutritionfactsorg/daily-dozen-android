@@ -10,7 +10,7 @@ import com.viewpagerindicator.TitlePageIndicator;
 
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
-import org.slavick.dailydozen.model.Date;
+import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 
 import butterknife.Bind;
@@ -75,6 +75,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ensureTodayExistsInDatabase() {
-        Date.createToday();
+        Day.createToday();
     }
 }

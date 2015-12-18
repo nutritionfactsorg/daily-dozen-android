@@ -7,8 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
-import org.slavick.dailydozen.model.Date;
+import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.widget.FoodServings;
 
@@ -16,7 +17,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class DateFragment extends Fragment {
-    public final static String DATE_ARG = "date";
 
     @Bind(R.id.date_form)
     protected ViewGroup form;
@@ -33,15 +33,15 @@ public class DateFragment extends Fragment {
     }
 
     private void displayFormForDate() {
-        if (getArguments() != null && getArguments().containsKey(DATE_ARG)) {
-            final Date date = (Date) getArguments().getSerializable(DATE_ARG);
+        if (getArguments() != null && getArguments().containsKey(Args.DATE_ARG)) {
+            final Day date = (Day) getArguments().getSerializable(Args.DATE_ARG);
             if (date != null) {
                 createFoodServingsWidgets(date);
             }
         }
     }
 
-    private void createFoodServingsWidgets(final Date date) {
+    private void createFoodServingsWidgets(final Day date) {
         for (Food food : Food.getAllFoods()) {
             form.addView(new FoodServings(getContext(), date, food));
         }

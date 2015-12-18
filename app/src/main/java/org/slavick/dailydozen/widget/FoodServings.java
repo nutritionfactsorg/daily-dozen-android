@@ -10,9 +10,10 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.activity.CalendarActivity;
-import org.slavick.dailydozen.model.Date;
+import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 
@@ -26,7 +27,7 @@ import butterknife.ButterKnife;
 public class FoodServings extends LinearLayout {
     private final static String TAG = FoodServings.class.getSimpleName();
 
-    private Date date;
+    private Day date;
     private Food food;
 
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
@@ -41,7 +42,7 @@ public class FoodServings extends LinearLayout {
         super(context);
     }
 
-    public FoodServings(Context context, Date date, Food food) {
+    public FoodServings(Context context, Day date, Food food) {
         super(context);
 
         this.date = date;
@@ -65,7 +66,11 @@ public class FoodServings extends LinearLayout {
             @Override
             public void onClick(View v) {
                 final Context context = getContext();
-                context.startActivity(new Intent(context, CalendarActivity.class));
+
+                final Intent intent = new Intent(context, CalendarActivity.class);
+                intent.putExtra(Args.FOOD_ARG, food);
+
+                context.startActivity(intent);
             }
         });
     }

@@ -8,7 +8,7 @@ import com.activeandroid.query.Select;
 @Table(name = "servings")
 public class Servings extends Model {
     @Column(name = "date_id")
-    private Date date;
+    private Day date;
 
     @Column(name = "food_id")
     private Food food;
@@ -19,7 +19,7 @@ public class Servings extends Model {
     public Servings() {
     }
 
-    public Servings(Date date, Food food) {
+    public Servings(Day date, Food food) {
         this.date = date;
         this.food = food;
     }
@@ -45,18 +45,18 @@ public class Servings extends Model {
         return String.format("[%s] [%s] [Servings %s]", food.toString(), date.toString(), servings);
     }
 
-    public static boolean exists(final Date date, final Food food) {
+    public static boolean exists(final Day date, final Food food) {
         return getByDateAndFood(date, food) != null;
     }
 
-    public static Servings getByDateAndFood(final Date date, final Food food) {
+    public static Servings getByDateAndFood(final Day date, final Food food) {
         return new Select().from(Servings.class)
                 .where("date_id = ?", date.getId())
                 .and("food_id = ?", food.getId())
                 .executeSingle();
     }
 
-    public static Servings createServingsIfDoesNotExist(final Date date, final Food food) {
+    public static Servings createServingsIfDoesNotExist(final Day date, final Food food) {
         Servings servings;
 
         if (!exists(date, food)) {

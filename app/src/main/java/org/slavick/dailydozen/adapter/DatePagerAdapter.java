@@ -6,8 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
+import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.fragment.DateFragment;
-import org.slavick.dailydozen.model.Date;
+import org.slavick.dailydozen.model.Day;
 
 public class DatePagerAdapter extends FragmentStatePagerAdapter {
     public DatePagerAdapter(FragmentManager fm) {
@@ -16,10 +17,10 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        final Date date = Date.getDateByOffsetFromBeginning(position);
+        final Day date = Day.getDateByOffsetFromBeginning(position);
         if (date != null) {
             final Bundle args = new Bundle();
-            args.putSerializable(DateFragment.DATE_ARG, date);
+            args.putSerializable(Args.DATE_ARG, date);
 
             final DateFragment dateFragment = new DateFragment();
             dateFragment.setArguments(args);
@@ -31,7 +32,7 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        final Date date = Date.getDateByOffsetFromBeginning(position);
+        final Day date = Day.getDateByOffsetFromBeginning(position);
         return date != null ? date.toString() : "";
     }
 
@@ -42,7 +43,7 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return Date.getNumDates();
+        return Day.getNumDates();
     }
 
     public int getIndexOfLastPage() {
