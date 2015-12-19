@@ -1,9 +1,16 @@
 package org.slavick.dailydozen.model;
 
+import android.text.TextUtils;
+
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 @Table(name = "servings")
 public class Servings extends Model {
@@ -22,6 +29,14 @@ public class Servings extends Model {
     public Servings(Day date, Food food) {
         this.date = date;
         this.food = food;
+    }
+
+    public Day getDate() {
+        return date;
+    }
+
+    public Food getFood() {
+        return food;
     }
 
     public int getServings() {
@@ -67,5 +82,34 @@ public class Servings extends Model {
         }
 
         return servings;
+    }
+
+    public static List<Servings> getServingsOfFoodInMonth(final long foodId, final Calendar calendar) {
+        final Day day = Day.getByDate(new Date(calendar.getTimeInMillis()));
+
+        List<Servings> servingsInMonth = new ArrayList<>();
+
+        if (day != null) {
+            List<Day> datesInMonth = new Select().from(Day.class)
+                    .where("year = ?", day.getYear())
+                    .and("month = ?", day.getMonth())
+                    .execute();
+
+            String[] placeholderArray = new String[datesInMonth.size()];
+            Long[] dateIds = new Long[datesInMonth.size()];
+            for (int i = 0; i < datesInMonth.size(); i++) {
+                placeholderArray[i] = "?";
+                dateIds[i] = datesInMonth.get(i).getId();
+            }
+
+            final String placeholders = TextUtils.join(",", placeholderArray);
+
+            servingsInMonth = new Select().from(Servings.class)
+                    .where("food_id = ?", foodId)
+                    .and(String.format("date_id IN (%s)", placeholders), dateIds)
+                    .execute();
+        }
+
+        return servingsInMonth;
     }
 }

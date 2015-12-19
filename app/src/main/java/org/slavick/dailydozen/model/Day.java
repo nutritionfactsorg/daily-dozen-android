@@ -42,6 +42,17 @@ public class Day extends Model implements Serializable {
         return Long.valueOf(new SimpleDateFormat("yyyyMMdd", Locale.US).format(date));
     }
 
+    public Date getDateObject() {
+        Date dateObject = null;
+        try {
+            dateObject = new SimpleDateFormat("yyyyMMdd", Locale.US).parse(String.valueOf(date));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return dateObject;
+    }
+
     private void setDate(Date date) {
         this.date = getDateAsLong(date);
 
