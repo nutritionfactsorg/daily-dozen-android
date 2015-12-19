@@ -22,8 +22,17 @@ public class CalendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
 
-        initCalendar();
-        displayDatesFoodEaten();
+        displayCalendarForFood();
+    }
+
+    private void displayCalendarForFood() {
+        final Intent intent = getIntent();
+        if (intent != null && intent.hasExtra(Args.FOOD_ARG)) {
+            final Food food = (Food) intent.getSerializableExtra(Args.FOOD_ARG);
+
+            initCalendar();
+            displayDatesFoodEaten(food);
+        }
     }
 
     private void initCalendar() {
@@ -39,17 +48,11 @@ public class CalendarActivity extends AppCompatActivity {
         t.commit();
     }
 
-    private void displayDatesFoodEaten() {
-        final Intent intent = getIntent();
+    private void displayDatesFoodEaten(Food food) {
+        if (food != null) {
+//            food.getEatenOnDaysInMonth()
 
-        if (intent != null && intent.hasExtra(Args.FOOD_ARG)) {
-            final Food food = (Food) intent.getSerializableExtra(Args.FOOD_ARG);
-
-            if (food != null) {
-//                food.getEatenOnDaysInMonth()
-
-                Toast.makeText(this, "Not implemented yet", Toast.LENGTH_SHORT).show();
-            }
+            Toast.makeText(this, "Not implemented yet", Toast.LENGTH_SHORT).show();
         }
     }
 }
