@@ -65,10 +65,14 @@ public class Servings extends Model {
     }
 
     public static Servings getByDateAndFood(final Day date, final Food food) {
-        return new Select().from(Servings.class)
-                .where("date_id = ?", date.getId())
-                .and("food_id = ?", food.getId())
-                .executeSingle();
+        if (date != null && date.getId() != null && food != null && food.getId() != null) {
+            return new Select().from(Servings.class)
+                    .where("date_id = ?", date.getId())
+                    .and("food_id = ?", food.getId())
+                    .executeSingle();
+        }
+
+        return null;
     }
 
     public static Servings createServingsIfDoesNotExist(final Day date, final Food food) {
