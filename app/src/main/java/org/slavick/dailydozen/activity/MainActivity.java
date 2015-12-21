@@ -8,7 +8,6 @@ import android.view.MenuItem;
 
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
-import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 
 import butterknife.Bind;
@@ -27,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         ensureAllFoodsExistInDatabase();
-        ensureTodayExistsInDatabase();
 
         initDatePager();
     }
@@ -57,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToToday() {
         if (datePagerAdapter != null) {
-            final int indexOfLatestDate = datePagerAdapter.getIndexOfLastPage();
-            datePager.setCurrentItem(indexOfLatestDate, false);
+            datePager.setCurrentItem(datePagerAdapter.getCount(), false);
         }
     }
 
@@ -66,9 +63,5 @@ public class MainActivity extends AppCompatActivity {
         Food.ensureAllFoodsExistInDatabase(
                 getResources().getStringArray(R.array.food_names),
                 getResources().getIntArray(R.array.food_quantities));
-    }
-
-    private void ensureTodayExistsInDatabase() {
-        Day.createToday();
     }
 }

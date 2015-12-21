@@ -31,6 +31,8 @@ public class Day extends Model implements Serializable {
     @Column(name = DAY)
     private long day;
 
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
+
     public Day() {
     }
 
@@ -39,13 +41,13 @@ public class Day extends Model implements Serializable {
     }
 
     public static long getDateAsLong(Date date) {
-        return Long.valueOf(new SimpleDateFormat("yyyyMMdd", Locale.US).format(date));
+        return Long.valueOf(dateFormat.format(date));
     }
 
     public Date getDateObject() {
         Date dateObject = null;
         try {
-            dateObject = new SimpleDateFormat("yyyyMMdd", Locale.US).parse(String.valueOf(date));
+            dateObject = dateFormat.parse(String.valueOf(date));
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -78,27 +80,14 @@ public class Day extends Model implements Serializable {
 
     @Override
     public String toString() {
-        String dateString = "";
-
-        try {
-            Date javaDate = new SimpleDateFormat("yyyyMMdd", Locale.US).parse(String.valueOf(date));
-            dateString = new SimpleDateFormat("EEE, MMM d", Locale.US).format(javaDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        return dateString;
+        return new SimpleDateFormat("EEE, MMM d", Locale.getDefault()).format(getDateObject());
     }
 
     public static Day getByDate(Date date) {
         return new Select().from(Day.class).where("date = ?", getDateAsLong(date)).executeSingle();
     }
 
-    public static Day createToday() {
-        return createDateIfDoesNotExist(new Date());
-    }
-
-    private static Day createDateIfDoesNotExist(final Date date) {
+    public static Day createDateIfDoesNotExist(final Date date) {
         Day day = getByDate(date);
 
         if (day == null) {
@@ -107,16 +96,5 @@ public class Day extends Model implements Serializable {
         }
 
         return day;
-    }
-
-    public static int getNumDates() {
-        return new Select().from(Day.class).count();
-    }
-
-    public static Day getDateByOffsetFromBeginning(final int offset) {
-        return new Select().from(Day.class)
-                .orderBy("date ASC")
-                .offset(offset)
-                .executeSingle();
     }
 }

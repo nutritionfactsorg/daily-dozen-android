@@ -13,12 +13,12 @@ import android.widget.TextView;
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.activity.CalendarActivity;
-import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import butterknife.Bind;
@@ -27,7 +27,7 @@ import butterknife.ButterKnife;
 public class FoodServings extends LinearLayout {
     private final static String TAG = FoodServings.class.getSimpleName();
 
-    private Day date;
+    private Date date;
     private Food food;
 
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
@@ -42,7 +42,7 @@ public class FoodServings extends LinearLayout {
         super(context);
     }
 
-    public FoodServings(Context context, Day date, Food food) {
+    public FoodServings(Context context, Date date, Food food) {
         super(context);
 
         this.date = date;
@@ -145,10 +145,12 @@ public class FoodServings extends LinearLayout {
 
     private void handleServingChecked() {
         final Servings servings = Servings.createServingsIfDoesNotExist(date, food);
-        servings.increaseServings();
-        servings.save();
+        if (servings != null) {
+            servings.increaseServings();
+            servings.save();
 
-        Log.d(TAG, String.format("Increased Servings for %s", servings));
+            Log.d(TAG, String.format("Increased Servings for %s", servings));
+        }
     }
 
     private void handleServingUnchecked() {

@@ -60,29 +60,27 @@ public class Servings extends Model {
         return String.format("[%s] [%s] [Servings %s]", food.toString(), date.toString(), servings);
     }
 
-    public static boolean exists(final Day date, final Food food) {
-        return getByDateAndFood(date, food) != null;
-    }
+    public static Servings getByDateAndFood(final Date date, final Food food) {
+        if (date != null) {
+            final Day day = Day.getByDate(date);
 
-    public static Servings getByDateAndFood(final Day date, final Food food) {
-        if (date != null && date.getId() != null && food != null && food.getId() != null) {
-            return new Select().from(Servings.class)
-                    .where("date_id = ?", date.getId())
-                    .and("food_id = ?", food.getId())
-                    .executeSingle();
+            if (day != null && day.getId() != null && food != null && food.getId() != null) {
+                return new Select().from(Servings.class)
+                        .where("date_id = ?", day.getId())
+                        .and("food_id = ?", food.getId())
+                        .executeSingle();
+            }
         }
 
         return null;
     }
 
-    public static Servings createServingsIfDoesNotExist(final Day date, final Food food) {
-        Servings servings;
+    public static Servings createServingsIfDoesNotExist(final Date date, final Food food) {
+        Servings servings = getByDateAndFood(date, food);
 
-        if (!exists(date, food)) {
-            servings = new Servings(date, food);
+        if (servings == null) {
+            servings = new Servings(Day.createDateIfDoesNotExist(date), food);
             servings.save();
-        } else {
-            servings = getByDateAndFood(date, food);
         }
 
         return servings;

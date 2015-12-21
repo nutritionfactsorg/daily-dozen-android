@@ -9,17 +9,26 @@ import android.view.ViewGroup;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
-import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.widget.FoodServings;
+
+import java.util.Date;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class DateFragment extends Fragment {
-
     @Bind(R.id.date_form)
     protected ViewGroup form;
+
+    public static DateFragment newInstance(final Date date) {
+        final Bundle args = new Bundle();
+        args.putSerializable(Args.DATE_ARG, date);
+
+        final DateFragment dateFragment = new DateFragment();
+        dateFragment.setArguments(args);
+        return dateFragment;
+    }
 
     @Nullable
     @Override
@@ -33,17 +42,18 @@ public class DateFragment extends Fragment {
     }
 
     private void displayFormForDate() {
-        if (getArguments() != null && getArguments().containsKey(Args.DATE_ARG)) {
-//            final Day date = (Day) getArguments().getSerializable(Args.DATE_ARG);
-//            if (date != null) {
-//                createFoodServingsWidgets(date);
-//            }
+        final Bundle args = getArguments();
+
+        if (args != null && args.containsKey(Args.DATE_ARG)) {
+            createFoodServingsControls((Date) args.getSerializable(Args.DATE_ARG));
         }
     }
 
-    private void createFoodServingsWidgets(final Day date) {
-        for (Food food : Food.getAllFoods()) {
-            form.addView(new FoodServings(getContext(), date, food));
+    private void createFoodServingsControls(final Date date) {
+        if (date != null) {
+            for (Food food : Food.getAllFoods()) {
+                form.addView(new FoodServings(getContext(), date, food));
+            }
         }
     }
 
