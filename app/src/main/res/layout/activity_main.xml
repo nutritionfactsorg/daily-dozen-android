@@ -5,16 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.viewpagerindicator.TitlePageIndicator
-        android:id="@+id/date_pager_indicator"
-        android:background="@color/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
     <android.support.v4.view.ViewPager
         android:id="@+id/date_pager"
-        android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/date_pager_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>

@@ -34,10 +34,10 @@ public class DateFragment extends Fragment {
 
     private void displayFormForDate() {
         if (getArguments() != null && getArguments().containsKey(Args.DATE_ARG)) {
-            final Day date = (Day) getArguments().getSerializable(Args.DATE_ARG);
-            if (date != null) {
-                createFoodServingsWidgets(date);
-            }
+//            final Day date = (Day) getArguments().getSerializable(Args.DATE_ARG);
+//            if (date != null) {
+//                createFoodServingsWidgets(date);
+//            }
         }
     }
 

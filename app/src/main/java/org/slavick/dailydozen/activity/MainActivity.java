@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.viewpagerindicator.TitlePageIndicator;
-
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
 import org.slavick.dailydozen.model.Day;
@@ -17,9 +15,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    @Bind(R.id.date_pager_indicator)
-    protected TitlePageIndicator datePageIndicator;
-
     @Bind(R.id.date_pager)
     protected ViewPager datePager;
 
@@ -63,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
     private void goToToday() {
         if (datePagerAdapter != null) {
             final int indexOfLatestDate = datePagerAdapter.getIndexOfLastPage();
-            datePager.setCurrentItem(indexOfLatestDate);
-            datePageIndicator.setViewPager(datePager, indexOfLatestDate);
+            datePager.setCurrentItem(indexOfLatestDate, false);
         }
     }
 
