@@ -47,6 +47,10 @@ public class Food extends Model implements Serializable {
         }
     }
 
+    public static Food getById(long foodId) {
+        return new Select().from(Food.class).where("Id = ?", foodId).executeSingle();
+    }
+
     public static Food getByName(final String foodName) {
         return new Select().from(Food.class).where("name = ?", foodName).executeSingle();
     }

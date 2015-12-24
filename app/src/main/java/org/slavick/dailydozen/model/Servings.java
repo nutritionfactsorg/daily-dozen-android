@@ -88,10 +88,11 @@ public class Servings extends Model {
 
     public static List<Servings> getServingsOfFoodInMonth(final long foodId, final Calendar calendar) {
         final Day day = Day.getByDate(new Date(calendar.getTimeInMillis()));
+        final Food food = Food.getById(foodId);
 
         List<Servings> servingsInMonth = new ArrayList<>();
 
-        if (day != null) {
+        if (day != null && food != null) {
             List<Day> datesInMonth = new Select().from(Day.class)
                     .where("year = ?", day.getYear())
                     .and("month = ?", day.getMonth())
@@ -109,6 +110,7 @@ public class Servings extends Model {
             servingsInMonth = new Select().from(Servings.class)
                     .where("food_id = ?", foodId)
                     .and(String.format("date_id IN (%s)", placeholders), dateIds)
+                    .and("servings = ?", food.getRecommendedServings())
                     .execute();
         }
 
