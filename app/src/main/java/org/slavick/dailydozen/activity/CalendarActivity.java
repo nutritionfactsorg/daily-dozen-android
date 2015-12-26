@@ -5,7 +5,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 
 import com.roomorama.caldroid.CaldroidFragment;
@@ -20,8 +19,6 @@ import java.util.Date;
 import java.util.HashMap;
 
 public class CalendarActivity extends AppCompatActivity {
-    private final static String TAG = CalendarActivity.class.getSimpleName();
-
     private CaldroidFragment calendar;
 
     private long foodId;
@@ -73,7 +70,6 @@ public class CalendarActivity extends AppCompatActivity {
             @Override
             public void onChangeMonth(int month, int year) {
                 super.onChangeMonth(month, year);
-                Log.d(TAG, String.format("onChangeMonth: month [%s] year [%s]", month, year));
 
                 Calendar cal = Calendar.getInstance();
                 cal.set(year, month - 1, 1); // The month property of Calendar starts at 0
