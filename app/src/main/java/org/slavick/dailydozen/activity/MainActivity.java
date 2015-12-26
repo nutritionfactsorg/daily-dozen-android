@@ -8,7 +8,6 @@ import android.view.MenuItem;
 
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
-import org.slavick.dailydozen.model.Food;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -24,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-        ensureAllFoodsExistInDatabase();
 
         initDatePager();
     }
@@ -57,11 +54,5 @@ public class MainActivity extends AppCompatActivity {
         if (datePagerAdapter != null) {
             datePager.setCurrentItem(datePagerAdapter.getCount(), false);
         }
-    }
-
-    private void ensureAllFoodsExistInDatabase() {
-        Food.ensureAllFoodsExistInDatabase(
-                getResources().getStringArray(R.array.food_names),
-                getResources().getIntArray(R.array.food_quantities));
     }
 }
