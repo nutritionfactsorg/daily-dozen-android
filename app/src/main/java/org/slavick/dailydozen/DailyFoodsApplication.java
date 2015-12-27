@@ -4,6 +4,7 @@ import com.activeandroid.app.Application;
 import com.crashlytics.android.Crashlytics;
 
 import org.slavick.dailydozen.model.Food;
+import org.slavick.dailydozen.model.FoodInfo;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -17,6 +18,8 @@ public class DailyFoodsApplication extends Application {
         }
 
         ensureAllFoodsExistInDatabase();
+
+        FoodInfo.init(this);
     }
 
     private void ensureAllFoodsExistInDatabase() {

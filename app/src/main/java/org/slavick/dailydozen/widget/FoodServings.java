@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
-import org.slavick.dailydozen.activity.CalendarActivity;
+import org.slavick.dailydozen.activity.FoodInfoActivity;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 
@@ -67,7 +67,8 @@ public class FoodServings extends LinearLayout {
             public void onClick(View v) {
                 final Context context = getContext();
 
-                final Intent intent = new Intent(context, CalendarActivity.class);
+//                final Intent intent = new Intent(context, CalendarActivity.class);
+                final Intent intent = new Intent(context, FoodInfoActivity.class);
                 intent.putExtra(Args.FOOD_ID, food.getId());
                 intent.putExtra(Args.FOOD_NAME, food.getName());
 
