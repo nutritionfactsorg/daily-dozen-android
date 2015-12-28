@@ -23,6 +23,8 @@
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         android:layout_gravity="start|center_vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:clickable="true"/>
 
 </LinearLayout>
