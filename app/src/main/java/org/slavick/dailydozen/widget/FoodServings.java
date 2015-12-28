@@ -40,20 +40,14 @@ public class FoodServings extends LinearLayout {
 
     public FoodServings(Context context) {
         super(context);
-    }
 
-    public FoodServings(Context context, Date date, Food food) {
-        super(context);
-
-        this.date = date;
-        this.food = food;
-
-        init(context);
-    }
-
-    private void init(final Context context) {
         inflate(context, R.layout.food_item, this);
         ButterKnife.bind(this);
+    }
+
+    public void setDateAndFood(final Date date, final Food food) {
+        this.date = date;
+        this.food = food;
 
         initFoodName();
         initCheckboxes();
@@ -89,6 +83,8 @@ public class FoodServings extends LinearLayout {
 
             numExistingServings--;
         }
+
+        vgCheckboxes.removeAllViews();
 
         // Add the checkboxes in reverse order because they were checked from left to right. Reversing the order
         // makes it so the checks appear right to left.

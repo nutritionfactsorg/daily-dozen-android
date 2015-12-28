@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<ListView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/date_food_servings"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <android.support.v7.widget.CardView
-        app:cardElevation="6dp"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:id="@+id/date_form"
-            style="@style/Widget.CardContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"/>
-
-    </android.support.v7.widget.CardView>
-
-</ScrollView>
+    android:layout_height="wrap_content"/>
