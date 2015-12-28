@@ -27,8 +27,6 @@
 
         </activity>
 
-        <activity android:name=".activity.CalendarActivity" />
-
         <activity android:name=".activity.FoodInfoActivity" />
 
         <meta-data

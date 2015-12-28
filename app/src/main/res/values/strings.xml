@@ -14,6 +14,9 @@
     <string name="whole_grains">Whole Grains</string>
     <string name="beverages">Beverages</string>
     <string name="exercise">Exercise</string>
+    <string name="serving_sizes">Serving Sizes</string>
+    <string name="types">Types</string>
+    <string name="history">History</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

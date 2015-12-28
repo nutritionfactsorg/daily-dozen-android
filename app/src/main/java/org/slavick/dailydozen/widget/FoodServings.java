@@ -61,7 +61,6 @@ public class FoodServings extends LinearLayout {
             public void onClick(View v) {
                 final Context context = getContext();
 
-//                final Intent intent = new Intent(context, CalendarActivity.class);
                 final Intent intent = new Intent(context, FoodInfoActivity.class);
                 intent.putExtra(Args.FOOD_ID, food.getId());
                 intent.putExtra(Args.FOOD_NAME, food.getName());
