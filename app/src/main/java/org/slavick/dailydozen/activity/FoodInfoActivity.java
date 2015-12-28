@@ -24,6 +24,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -141,8 +142,10 @@ public class FoodInfoActivity extends AppCompatActivity {
                 int i = 0;
                 cal.add(Calendar.MONTH, -2);
                 do {
-                    for (Servings servings : Servings.getServingsOfFoodInMonth(foodId, cal)) {
-                        datesWithEvents.put(servings.getDate().getDateObject(), R.color.caldroid_sky_blue);
+                    final Map<Date, Boolean> servingsOfFoodInMonth = Servings.getServingsOfFoodInMonth(foodId, cal);
+
+                    for (Map.Entry<Date, Boolean> serving : servingsOfFoodInMonth.entrySet()) {
+                        datesWithEvents.put(serving.getKey(), serving.getValue() ? R.color.green : R.color.green_faint);
                     }
 
                     cal.add(Calendar.MONTH, 1);
