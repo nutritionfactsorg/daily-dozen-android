@@ -21,9 +21,9 @@
     <TextView
         android:id="@+id/food_name"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
-        android:layout_gravity="start|center_vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:textColor="@color/blue"
         android:clickable="true"/>
 
