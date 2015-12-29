@@ -2,12 +2,12 @@ package org.slavick.dailydozen.widget;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.slavick.dailydozen.Args;
@@ -24,7 +24,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class FoodServings extends LinearLayout {
+public class FoodServings extends RecyclerView.ViewHolder {
     private final static String TAG = FoodServings.class.getSimpleName();
 
     private Date date;
@@ -38,11 +38,9 @@ public class FoodServings extends LinearLayout {
     @Bind(R.id.food_name)
     protected TextView tvName;
 
-    public FoodServings(Context context) {
-        super(context);
-
-        inflate(context, R.layout.food_item, this);
-        ButterKnife.bind(this);
+    public FoodServings(View itemView) {
+        super(itemView);
+        ButterKnife.bind(this, itemView);
     }
 
     public void setDateAndFood(final Date date, final Food food) {
@@ -56,10 +54,10 @@ public class FoodServings extends LinearLayout {
     private void initFoodName() {
         tvName.setText(food.getName());
 
-        tvName.setOnClickListener(new OnClickListener() {
+        tvName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Context context = getContext();
+                final Context context = itemView.getContext();
 
                 final Intent intent = new Intent(context, FoodInfoActivity.class);
                 intent.putExtra(Args.FOOD, food);
@@ -97,8 +95,8 @@ public class FoodServings extends LinearLayout {
     }
 
     private void setWidthOfCheckBoxesToFiveWide() {
-        final CheckBox checkBox = new CheckBox(getContext());
-        checkBox.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
+        final CheckBox checkBox = new CheckBox(itemView.getContext());
+        checkBox.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
 
         final ViewGroup.LayoutParams params = vgCheckboxes.getLayoutParams();
         params.width = checkBox.getMeasuredWidth() * 5;
@@ -111,7 +109,7 @@ public class FoodServings extends LinearLayout {
     }
 
     private CheckBox createCheckBox(final boolean isChecked) {
-        final CheckBox checkBox = new CheckBox(getContext());
+        final CheckBox checkBox = new CheckBox(itemView.getContext());
 
         // It is necessary to set the checked status before we set the onCheckedChangeListener
         checkBox.setChecked(isChecked);

@@ -3,13 +3,13 @@ package org.slavick.dailydozen.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import org.slavick.dailydozen.Args;
-import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.FoodServingsAdapter;
 
@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 
 public class DateFragment extends Fragment {
     @Bind(R.id.date_food_servings)
-    protected ListView lvFoodServings;
+    protected RecyclerView lvFoodServings;
 
     public static DateFragment newInstance(final Date date) {
         final Bundle args = new Bundle();
@@ -49,8 +49,8 @@ public class DateFragment extends Fragment {
             final Date date = (Date) args.getSerializable(Args.DATE);
 
             if (date != null) {
+                lvFoodServings.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
                 lvFoodServings.setAdapter(new FoodServingsAdapter(date));
-                Common.fullyExpandList(lvFoodServings);
             }
         }
     }
