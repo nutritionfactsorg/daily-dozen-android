@@ -3,8 +3,6 @@ package org.slavick.dailydozen.activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
@@ -39,32 +37,11 @@ public class MainActivity extends AppCompatActivity {
         datePagerAdapter.notifyDataSetChanged();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_go_to_today:
-                goToToday();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
     private void initDatePager() {
         datePagerAdapter = new DatePagerAdapter(getSupportFragmentManager());
         datePager.setAdapter(datePagerAdapter);
-        goToToday();
-    }
 
-    private void goToToday() {
-        if (datePagerAdapter != null) {
-            datePager.setCurrentItem(datePagerAdapter.getCount(), false);
-        }
+        // Go to today's date by default
+        datePager.setCurrentItem(datePagerAdapter.getCount(), false);
     }
 }
