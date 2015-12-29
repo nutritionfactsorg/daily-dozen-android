@@ -17,6 +17,8 @@
     <string name="serving_sizes">Serving Sizes</string>
     <string name="types">Types</string>
     <string name="history">History</string>
+    <string name="servings_some">Some servings</string>
+    <string name="servings_all">All servings</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
