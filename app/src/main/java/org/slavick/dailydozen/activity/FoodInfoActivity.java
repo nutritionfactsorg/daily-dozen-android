@@ -31,6 +31,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class FoodInfoActivity extends AppCompatActivity {
+    @Bind(R.id.calendar_legend)
+    protected ViewGroup vgLegend;
+
     @Bind(R.id.food_types)
     protected ListView lvFoodTypes;
 
@@ -98,6 +101,8 @@ public class FoodInfoActivity extends AppCompatActivity {
                 displayEntriesForVisibleMonths(cal, food);
             }
         });
+
+        vgLegend.setVisibility(food.getRecommendedServings() > 1 ? View.VISIBLE : View.GONE);
 
         final FragmentTransaction t = getSupportFragmentManager().beginTransaction();
         t.replace(R.id.calendar_fragment_container, calendar);
