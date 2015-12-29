@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import org.slavick.dailydozen.Args;
+import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.FoodServingsAdapter;
 
@@ -49,6 +50,7 @@ public class DateFragment extends Fragment {
 
             if (date != null) {
                 lvFoodServings.setAdapter(new FoodServingsAdapter(date));
+                Common.fullyExpandList(lvFoodServings);
             }
         }
     }

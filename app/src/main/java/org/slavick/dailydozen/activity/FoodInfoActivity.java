@@ -7,15 +7,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
 
 import org.slavick.dailydozen.Args;
+import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.FoodInfo;
@@ -111,27 +110,11 @@ public class FoodInfoActivity extends AppCompatActivity {
 
     private void initList(final ListView listView, final List<String> items) {
         listView.setAdapter(createAdapter(items));
-        fullyExpandList(listView);
+        Common.fullyExpandList(listView);
     }
 
     private ArrayAdapter<String> createAdapter(final List<String> items) {
         return new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
-    }
-
-    public void fullyExpandList(final ListView list) {
-        list.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, getListViewHeight(list)));
-    }
-
-    private int getListViewHeight(final ListView list) {
-        final Adapter adapter = list.getAdapter();
-        final int count = adapter.getCount();
-
-        list.measure(
-                View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED),
-                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-
-        // The (count - 1) hides the final list item divider
-        return list.getMeasuredHeight() * count + ((count - 1) * list.getDividerHeight());
     }
 
     private void displayEntriesForVisibleMonths(final Calendar cal, final Food food) {
