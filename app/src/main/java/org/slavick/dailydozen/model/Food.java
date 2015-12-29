@@ -14,11 +14,20 @@ import java.util.List;
 public class Food extends Model implements Serializable {
     private static final String TAG = Food.class.getSimpleName();
 
+    // This points to the Id column in the Model class. This is here so the serialized Food object will have its id
+    @Column(name = "Id")
+    private long id;
+
     @Column(name = "name", index = true)
     private String name;
 
     @Column(name = "recommended_servings")
     private int recommendedServings;
+
+    // Could not name this getId() as that clashes with a method in Model that is marked as final
+    public long getFoodId() {
+        return id;
+    }
 
     public String getName() {
         return name;

@@ -17,6 +17,7 @@ import com.roomorama.caldroid.CaldroidListener;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.FoodInfo;
 import org.slavick.dailydozen.model.Servings;
 
@@ -35,9 +36,6 @@ public class FoodInfoActivity extends AppCompatActivity {
 
     @Bind(R.id.food_serving_sizes)
     protected ListView lvFoodServingSizes;
-
-    private long foodId;
-    private String foodName;
 
     private CaldroidFragment calendar;
 
@@ -59,19 +57,20 @@ public class FoodInfoActivity extends AppCompatActivity {
 
     private void displayInfoForFood() {
         final Intent intent = getIntent();
-        if (intent != null && intent.hasExtra(Args.FOOD_ID) && intent.hasExtra(Args.FOOD_NAME)) {
-            foodId = intent.getLongExtra(Args.FOOD_ID, 0);
-            foodName = intent.getStringExtra(Args.FOOD_NAME);
+        if (intent != null && intent.hasExtra(Args.FOOD)) {
+            final Food food = (Food) intent.getSerializableExtra(Args.FOOD);
+
+            final String foodName = food.getName();
 
             setTitle(foodName);
 
-            initCalendar();
+            initCalendar(food);
             initList(lvFoodTypes, FoodInfo.getTypesOfFood(foodName));
             initList(lvFoodServingSizes, FoodInfo.getServingSizes(foodName));
         }
     }
 
-    private void initCalendar() {
+    private void initCalendar(final Food food) {
         final Calendar cal = Calendar.getInstance();
         calendar = new CaldroidFragment();
 
@@ -82,7 +81,7 @@ public class FoodInfoActivity extends AppCompatActivity {
         calendar.setArguments(args);
 
         datesWithEvents = new HashMap<>();
-        displayEntriesForVisibleMonths(cal);
+        displayEntriesForVisibleMonths(cal, food);
 
         calendar.setCaldroidListener(new CaldroidListener() {
             @Override
@@ -96,7 +95,7 @@ public class FoodInfoActivity extends AppCompatActivity {
                 Calendar cal = Calendar.getInstance();
                 cal.set(year, month - 1, 1); // The month property of Calendar starts at 0
 
-                displayEntriesForVisibleMonths(cal);
+                displayEntriesForVisibleMonths(cal, food);
             }
         });
 
@@ -130,7 +129,7 @@ public class FoodInfoActivity extends AppCompatActivity {
         return list.getMeasuredHeight() * count + ((count - 1) * list.getDividerHeight());
     }
 
-    private void displayEntriesForVisibleMonths(final Calendar cal) {
+    private void displayEntriesForVisibleMonths(final Calendar cal, final Food food) {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -142,10 +141,11 @@ public class FoodInfoActivity extends AppCompatActivity {
                 int i = 0;
                 cal.add(Calendar.MONTH, -2);
                 do {
-                    final Map<Date, Boolean> servingsOfFoodInMonth = Servings.getServingsOfFoodInMonth(foodId, cal);
+                    final Map<Date, Boolean> servings = Servings.getServingsOfFoodInMonth(food.getFoodId(), cal);
 
-                    for (Map.Entry<Date, Boolean> serving : servingsOfFoodInMonth.entrySet()) {
-                        datesWithEvents.put(serving.getKey(), serving.getValue() ? R.color.green : R.color.green_faint);
+                    for (Map.Entry<Date, Boolean> serving : servings.entrySet()) {
+                        datesWithEvents.put(serving.getKey(), serving.getValue() ?
+                                R.color.legend_recommended_servings : R.color.legend_less_than_recommended_servings);
                     }
 
                     cal.add(Calendar.MONTH, 1);

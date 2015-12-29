@@ -23,7 +23,7 @@ public class DateFragment extends Fragment {
 
     public static DateFragment newInstance(final Date date) {
         final Bundle args = new Bundle();
-        args.putSerializable(Args.DATE_ARG, date);
+        args.putSerializable(Args.DATE, date);
 
         final DateFragment dateFragment = new DateFragment();
         dateFragment.setArguments(args);
@@ -44,8 +44,8 @@ public class DateFragment extends Fragment {
     private void displayFormForDate() {
         final Bundle args = getArguments();
 
-        if (args != null && args.containsKey(Args.DATE_ARG)) {
-            final Date date = (Date) args.getSerializable(Args.DATE_ARG);
+        if (args != null && args.containsKey(Args.DATE)) {
+            final Date date = (Date) args.getSerializable(Args.DATE);
 
             if (date != null) {
                 lvFoodServings.setAdapter(new FoodServingsAdapter(date));
