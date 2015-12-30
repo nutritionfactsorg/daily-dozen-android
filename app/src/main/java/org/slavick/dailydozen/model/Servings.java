@@ -87,6 +87,24 @@ public class Servings extends Model {
         return servings;
     }
 
+    public static int getTotalServingsOnDate(final Date date) {
+        int numServings = 0;
+
+        final Day day = Day.getByDate(date);
+
+        if (day != null) {
+            final List<Servings> servings = new Select().from(Servings.class)
+                    .where("date_id = ?", day.getId())
+                    .execute();
+
+            for (Servings serving : servings) {
+                numServings += serving.getServings();
+            }
+        }
+
+        return numServings;
+    }
+
     // Any Dates in the return map indicate that at least one serving of the food was consumed on that date.
     // The Boolean for the date indicates whether the number of servings equals the recommended servings of the food.
     public static Map<Date, Boolean> getServingsOfFoodInMonth(final long foodId, final Calendar calendar) {

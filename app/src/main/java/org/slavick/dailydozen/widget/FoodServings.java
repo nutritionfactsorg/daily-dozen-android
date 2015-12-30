@@ -144,9 +144,7 @@ public class FoodServings extends RecyclerView.ViewHolder {
             servings.increaseServings();
             servings.save();
 
-            if (listener != null) {
-                listener.onServingChecked();
-            }
+            informListener();
 
             Log.d(TAG, String.format("Increased Servings for %s", servings));
         }
@@ -157,10 +155,6 @@ public class FoodServings extends RecyclerView.ViewHolder {
         if (servings != null) {
             servings.decreaseServings();
 
-            if (listener != null) {
-                listener.onServingUnchecked();
-            }
-
             if (servings.getServings() > 0) {
                 servings.save();
 
@@ -169,6 +163,14 @@ public class FoodServings extends RecyclerView.ViewHolder {
                 Log.d(TAG, String.format("Deleting %s", servings));
                 servings.delete();
             }
+
+            informListener();
+        }
+    }
+
+    private void informListener() {
+        if (listener != null) {
+            listener.onServingsChanged();
         }
     }
 
@@ -177,8 +179,6 @@ public class FoodServings extends RecyclerView.ViewHolder {
     }
 
     public interface ClickListener {
-        void onServingChecked();
-
-        void onServingUnchecked();
+        void onServingsChanged();
     }
 }

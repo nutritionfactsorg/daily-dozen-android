@@ -5,14 +5,15 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.FoodServingsAdapter;
+import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.widget.FoodServings;
 
 import java.util.Date;
@@ -22,6 +23,11 @@ import butterknife.ButterKnife;
 
 public class DateFragment extends Fragment implements FoodServings.ClickListener {
     private final static String TAG = DateFragment.class.getSimpleName();
+
+    private Date date;
+
+    @Bind(R.id.score)
+    protected TextView tvScore;
 
     @Bind(R.id.date_food_servings)
     protected RecyclerView lvFoodServings;
@@ -50,11 +56,13 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
         final Bundle args = getArguments();
 
         if (args != null && args.containsKey(Args.DATE)) {
-            final Date date = (Date) args.getSerializable(Args.DATE);
+            date = (Date) args.getSerializable(Args.DATE);
 
             if (date != null) {
                 lvFoodServings.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
                 lvFoodServings.setAdapter(new FoodServingsAdapter(this, date));
+
+                updateScore();
             }
         }
     }
@@ -66,12 +74,11 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
     }
 
     @Override
-    public void onServingChecked() {
-        Log.d(TAG, "onServingChecked: ");
+    public void onServingsChanged() {
+        updateScore();
     }
 
-    @Override
-    public void onServingUnchecked() {
-        Log.d(TAG, "onServingUnchecked: ");
+    private void updateScore() {
+        tvScore.setText(String.format("%s/24", Servings.getTotalServingsOnDate(date)));
     }
 }
