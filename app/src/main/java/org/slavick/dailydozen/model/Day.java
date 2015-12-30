@@ -5,7 +5,6 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
-import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -13,7 +12,7 @@ import java.util.Date;
 import java.util.Locale;
 
 @Table(name = "dates")
-public class Day extends Model implements Serializable {
+public class Day extends Model {
     public static final String DATE = "date";
     public static final String YEAR = "year";
     public static final String MONTH = "month";
