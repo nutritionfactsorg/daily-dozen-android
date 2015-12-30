@@ -20,7 +20,9 @@
         android:gravity="start|center_vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textColor="@color/blue"
+        android:drawableRight="@drawable/ic_info_outline_black_24dp"
+        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+        android:drawableTint="@color/blue"
         android:clickable="true"/>
 
 </LinearLayout>
