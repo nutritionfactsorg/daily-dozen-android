@@ -38,6 +38,8 @@ public class FoodServings extends RecyclerView.ViewHolder {
     @Bind(R.id.food_name)
     protected TextView tvName;
 
+    private ClickListener listener;
+
     public FoodServings(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);
@@ -142,6 +144,10 @@ public class FoodServings extends RecyclerView.ViewHolder {
             servings.increaseServings();
             servings.save();
 
+            if (listener != null) {
+                listener.onServingChecked();
+            }
+
             Log.d(TAG, String.format("Increased Servings for %s", servings));
         }
     }
@@ -150,6 +156,10 @@ public class FoodServings extends RecyclerView.ViewHolder {
         final Servings servings = Servings.getByDateAndFood(date, food);
         if (servings != null) {
             servings.decreaseServings();
+
+            if (listener != null) {
+                listener.onServingUnchecked();
+            }
 
             if (servings.getServings() > 0) {
                 servings.save();
@@ -160,5 +170,15 @@ public class FoodServings extends RecyclerView.ViewHolder {
                 servings.delete();
             }
         }
+    }
+
+    public void setListener(ClickListener listener) {
+        this.listener = listener;
+    }
+
+    public interface ClickListener {
+        void onServingChecked();
+
+        void onServingUnchecked();
     }
 }

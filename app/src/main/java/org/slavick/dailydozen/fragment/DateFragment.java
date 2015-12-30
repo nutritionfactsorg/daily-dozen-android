@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +13,16 @@ import android.view.ViewGroup;
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.FoodServingsAdapter;
+import org.slavick.dailydozen.widget.FoodServings;
 
 import java.util.Date;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class DateFragment extends Fragment {
+public class DateFragment extends Fragment implements FoodServings.ClickListener {
+    private final static String TAG = DateFragment.class.getSimpleName();
+
     @Bind(R.id.date_food_servings)
     protected RecyclerView lvFoodServings;
 
@@ -50,7 +54,7 @@ public class DateFragment extends Fragment {
 
             if (date != null) {
                 lvFoodServings.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-                lvFoodServings.setAdapter(new FoodServingsAdapter(date));
+                lvFoodServings.setAdapter(new FoodServingsAdapter(this, date));
             }
         }
     }
@@ -59,5 +63,15 @@ public class DateFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+    }
+
+    @Override
+    public void onServingChecked() {
+        Log.d(TAG, "onServingChecked: ");
+    }
+
+    @Override
+    public void onServingUnchecked() {
+        Log.d(TAG, "onServingUnchecked: ");
     }
 }
