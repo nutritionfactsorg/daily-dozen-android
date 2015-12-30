@@ -27,7 +27,13 @@
 
         </activity>
 
-        <activity android:name=".activity.FoodInfoActivity" />
+        <activity
+            android:name=".activity.FoodInfoActivity"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
 
         <meta-data
             android:name="io.fabric.ApiKey"
