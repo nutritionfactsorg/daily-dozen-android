@@ -29,6 +29,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
                 <TextView
@@ -36,7 +37,8 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:gravity="end|center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
 
             </LinearLayout>

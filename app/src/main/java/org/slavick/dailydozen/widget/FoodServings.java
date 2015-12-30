@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.slavick.dailydozen.Args;
@@ -38,6 +39,9 @@ public class FoodServings extends RecyclerView.ViewHolder {
     @Bind(R.id.food_name)
     protected TextView tvName;
 
+    @Bind(R.id.food_info)
+    protected ImageView ivFoodInfo;
+
     private ClickListener listener;
 
     public FoodServings(View itemView) {
@@ -51,12 +55,15 @@ public class FoodServings extends RecyclerView.ViewHolder {
 
         initFoodName();
         initCheckboxes();
+        initFoodInfo();
     }
 
     private void initFoodName() {
         tvName.setText(food.getName());
+    }
 
-        tvName.setOnClickListener(new View.OnClickListener() {
+    private void initFoodInfo() {
+        ivFoodInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Context context = itemView.getContext();
