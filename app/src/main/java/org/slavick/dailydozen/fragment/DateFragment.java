@@ -8,12 +8,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.FoodServingsAdapter;
 import org.slavick.dailydozen.model.Servings;
+import org.slavick.dailydozen.widget.CardViewHeader;
 import org.slavick.dailydozen.widget.FoodServings;
 
 import java.util.Date;
@@ -22,12 +22,10 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class DateFragment extends Fragment implements FoodServings.ClickListener {
-    private final static String TAG = DateFragment.class.getSimpleName();
-
     private Date date;
 
-    @Bind(R.id.score)
-    protected TextView tvScore;
+    @Bind(R.id.date_fragment_header)
+    protected CardViewHeader cvHeader;
 
     @Bind(R.id.date_food_servings)
     protected RecyclerView lvFoodServings;
@@ -59,10 +57,10 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
             date = (Date) args.getSerializable(Args.DATE);
 
             if (date != null) {
+                initHeader();
+
                 lvFoodServings.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
                 lvFoodServings.setAdapter(new FoodServingsAdapter(this, date));
-
-                updateScore();
             }
         }
     }
@@ -78,7 +76,12 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
         updateScore();
     }
 
+    private void initHeader() {
+        cvHeader.setHeader(getString(R.string.servings));
+        updateScore();
+    }
+
     private void updateScore() {
-        tvScore.setText(String.format("%s out of 24", Servings.getTotalServingsOnDate(date)));
+        cvHeader.setSubHeader(String.format("%s out of 24", Servings.getTotalServingsOnDate(date)));
     }
 }

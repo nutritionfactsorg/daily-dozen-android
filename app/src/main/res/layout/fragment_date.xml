@@ -18,30 +18,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:paddingBottom="5dp"
+            <org.slavick.dailydozen.widget.CardViewHeader
+                android:id="@+id/date_fragment_header"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:text="@string/servings"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
-
-                <TextView
-                    android:id="@+id/score"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="end"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
-
-            </LinearLayout>
+                android:layout_height="wrap_content" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/date_food_servings"

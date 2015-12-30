@@ -6,21 +6,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.widget.CardViewHeader;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class AboutActivity extends AppCompatActivity {
+    @Bind(R.id.about_header)
+    protected CardViewHeader cvHeader;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        ButterKnife.bind(this);
 
         initActionBar();
-    }
 
-    private void initActionBar() {
-        final ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        initHeader();
     }
 
     @Override
@@ -32,5 +35,17 @@ public class AboutActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void initActionBar() {
+        final ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    private void initHeader() {
+        cvHeader.setHeader(getString(R.string.app_name));
+        cvHeader.setSubHeader("release 1");
     }
 }
