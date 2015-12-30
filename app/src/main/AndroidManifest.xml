@@ -27,6 +27,9 @@
 
         </activity>
 
+        <activity android:name=".activity.AboutActivity"
+            android:label="@string/about"/>
+
         <activity
             android:name=".activity.FoodInfoActivity"
             android:parentActivityName=".activity.MainActivity">
