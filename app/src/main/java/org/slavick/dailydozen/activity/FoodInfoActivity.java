@@ -16,7 +16,6 @@ import com.roomorama.caldroid.CaldroidListener;
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
-import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.FoodInfo;
 import org.slavick.dailydozen.model.Servings;
 
@@ -59,20 +58,20 @@ public class FoodInfoActivity extends AppCompatActivity {
 
     private void displayInfoForFood() {
         final Intent intent = getIntent();
-        if (intent != null && intent.hasExtra(Args.FOOD)) {
-            final Food food = (Food) intent.getSerializableExtra(Args.FOOD);
-
-            final String foodName = food.getName();
+        if (intent != null) {
+            final long foodId = intent.getLongExtra(Args.FOOD_ID, -1);
+            final String foodName = intent.getStringExtra(Args.FOOD_NAME);
+            final int recommendedServings = intent.getIntExtra(Args.FOOD_RECOMMENDED_SERVINGS, 1);
 
             setTitle(foodName);
 
-            initCalendar(food);
+            initCalendar(foodId, recommendedServings);
             initList(lvFoodTypes, FoodInfo.getTypesOfFood(foodName));
             initList(lvFoodServingSizes, FoodInfo.getServingSizes(foodName));
         }
     }
 
-    private void initCalendar(final Food food) {
+    private void initCalendar(final long foodId, final int recommendedServings) {
         final Calendar cal = Calendar.getInstance();
         calendar = new CaldroidFragment();
 
@@ -83,7 +82,7 @@ public class FoodInfoActivity extends AppCompatActivity {
         calendar.setArguments(args);
 
         datesWithEvents = new HashMap<>();
-        displayEntriesForVisibleMonths(cal, food);
+        displayEntriesForVisibleMonths(cal, foodId);
 
         calendar.setCaldroidListener(new CaldroidListener() {
             @Override
@@ -97,11 +96,11 @@ public class FoodInfoActivity extends AppCompatActivity {
                 Calendar cal = Calendar.getInstance();
                 cal.set(year, month - 1, 1); // The month property of Calendar starts at 0
 
-                displayEntriesForVisibleMonths(cal, food);
+                displayEntriesForVisibleMonths(cal, foodId);
             }
         });
 
-        vgLegend.setVisibility(food.getRecommendedServings() > 1 ? View.VISIBLE : View.GONE);
+        vgLegend.setVisibility(recommendedServings > 1 ? View.VISIBLE : View.GONE);
 
         final FragmentTransaction t = getSupportFragmentManager().beginTransaction();
         t.replace(R.id.calendar_fragment_container, calendar);
@@ -117,7 +116,7 @@ public class FoodInfoActivity extends AppCompatActivity {
         return new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
     }
 
-    private void displayEntriesForVisibleMonths(final Calendar cal, final Food food) {
+    private void displayEntriesForVisibleMonths(final Calendar cal, final long foodId) {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -129,7 +128,7 @@ public class FoodInfoActivity extends AppCompatActivity {
                 int i = 0;
                 cal.add(Calendar.MONTH, -2);
                 do {
-                    final Map<Date, Boolean> servings = Servings.getServingsOfFoodInMonth(food.getFoodId(), cal);
+                    final Map<Date, Boolean> servings = Servings.getServingsOfFoodInMonth(foodId, cal);
 
                     for (Map.Entry<Date, Boolean> serving : servings.entrySet()) {
                         datesWithEvents.put(serving.getKey(), serving.getValue() ?

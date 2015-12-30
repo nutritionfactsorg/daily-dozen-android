@@ -62,7 +62,9 @@ public class FoodServings extends RecyclerView.ViewHolder {
                 final Context context = itemView.getContext();
 
                 final Intent intent = new Intent(context, FoodInfoActivity.class);
-                intent.putExtra(Args.FOOD, food);
+                intent.putExtra(Args.FOOD_ID, food.getId());
+                intent.putExtra(Args.FOOD_NAME, food.getName());
+                intent.putExtra(Args.FOOD_RECOMMENDED_SERVINGS, food.getRecommendedServings());
 
                 context.startActivity(intent);
             }
