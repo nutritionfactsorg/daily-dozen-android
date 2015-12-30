@@ -92,19 +92,6 @@ public class FoodServings extends RecyclerView.ViewHolder {
         for (CheckBox checkBox : checkBoxes) {
             vgCheckboxes.addView(checkBox);
         }
-
-        // The maximum number of servings for any food is 5. Here we set all FoodServings to have the same width of
-        // checkboxes so they line up nicely.
-        setWidthOfCheckBoxesToFiveWide();
-    }
-
-    private void setWidthOfCheckBoxesToFiveWide() {
-        final CheckBox checkBox = new CheckBox(itemView.getContext());
-        checkBox.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
-
-        final ViewGroup.LayoutParams params = vgCheckboxes.getLayoutParams();
-        params.width = checkBox.getMeasuredWidth() * 5;
-        vgCheckboxes.setLayoutParams(params);
     }
 
     private int getNumExistingServings() {
