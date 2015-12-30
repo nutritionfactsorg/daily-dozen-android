@@ -79,6 +79,6 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
     }
 
     private void updateScore() {
-        tvScore.setText(String.format("%s/24", Servings.getTotalServingsOnDate(date)));
+        tvScore.setText(String.format("Score: %s/24", Servings.getTotalServingsOnDate(date)));
     }
 }
