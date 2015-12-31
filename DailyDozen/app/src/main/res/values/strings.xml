@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Daily Dozen</string>
-    <string name="app_name_full">Dr. Gregor\'s Daily Dozen</string>
+    <string name="app_name_full">Dr. Greger\'s Daily Dozen</string>
 
     <string name="food_type_beans_name">Beans</string>
     <string name="food_type_berries_name">Berries</string>
