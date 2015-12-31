@@ -25,6 +25,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import butterknife.Bind;
@@ -94,7 +95,7 @@ public class FoodInfoActivity extends AppCompatActivity {
     }
 
     private void initCalendar(final long foodId, final int recommendedServings) {
-        final Calendar cal = Calendar.getInstance();
+        final Calendar cal = Calendar.getInstance(Locale.getDefault());
         calendar = new CaldroidFragment();
 
         final Bundle args = new Bundle();
@@ -104,7 +105,6 @@ public class FoodInfoActivity extends AppCompatActivity {
         calendar.setArguments(args);
 
         datesWithEvents = new HashMap<>();
-        displayEntriesForVisibleMonths(cal, foodId);
 
         calendar.setCaldroidListener(new CaldroidListener() {
             @Override
@@ -115,7 +115,7 @@ public class FoodInfoActivity extends AppCompatActivity {
             public void onChangeMonth(int month, int year) {
                 super.onChangeMonth(month, year);
 
-                Calendar cal = Calendar.getInstance();
+                Calendar cal = Calendar.getInstance(Locale.getDefault());
                 cal.set(year, month - 1, 1); // The month property of Calendar starts at 0
 
                 displayEntriesForVisibleMonths(cal, foodId);

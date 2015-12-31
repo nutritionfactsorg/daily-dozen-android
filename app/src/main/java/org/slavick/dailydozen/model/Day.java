@@ -57,7 +57,7 @@ public class Day extends Model {
     private void setDate(Date date) {
         this.date = getDateAsLong(date);
 
-        final Calendar cal = Calendar.getInstance();
+        final Calendar cal = Calendar.getInstance(Locale.getDefault());
         cal.setTime(date);
 
         this.year = cal.get(Calendar.YEAR);
