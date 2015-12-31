@@ -1,9 +1,16 @@
 package org.slavick.dailydozen.activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableStringBuilder;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.widget.CardViewHeader;
@@ -15,6 +22,9 @@ public class AboutActivity extends AppCompatActivity {
     @Bind(R.id.about_header)
     protected CardViewHeader cvHeader;
 
+    @Bind(R.id.about_text)
+    protected TextView tvAbout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +34,7 @@ public class AboutActivity extends AppCompatActivity {
         initActionBar();
 
         initHeader();
+        initLinksInText();
     }
 
     @Override
@@ -47,5 +58,35 @@ public class AboutActivity extends AppCompatActivity {
     private void initHeader() {
         cvHeader.setHeader(getString(R.string.app_name));
         cvHeader.setSubHeader("release 1");
+    }
+
+    private void initLinksInText() {
+        final String aboutText = getString(R.string.about_text);
+        final SpannableStringBuilder ssb = new SpannableStringBuilder(aboutText);
+
+        initLink(aboutText, ssb, R.string.book_title, R.string.url_book);
+        initLink(aboutText, ssb, R.string.my_name, R.string.url_my_website);
+        initLink(aboutText, ssb, R.string.library_activeandroid, R.string.url_activeandroid);
+        initLink(aboutText, ssb, R.string.library_butterknife, R.string.url_butterknife);
+        initLink(aboutText, ssb, R.string.library_caldroid, R.string.url_caldroid);
+
+        tvAbout.setMovementMethod(LinkMovementMethod.getInstance());
+        tvAbout.setText(ssb, TextView.BufferType.SPANNABLE);
+    }
+
+    private void initLink(final String textToSearch, final SpannableStringBuilder ssb, final int textToFindId, final int urlId) {
+        final String textToFind = getString(textToFindId);
+        final String url = getString(urlId);
+
+        final int startIndex = textToSearch.indexOf(textToFind);
+
+        if (startIndex >= 0) {
+            ssb.setSpan(new ClickableSpan() {
+                @Override
+                public void onClick(View widget) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                }
+            }, startIndex, startIndex + textToFind.length(), 0);
+        }
     }
 }

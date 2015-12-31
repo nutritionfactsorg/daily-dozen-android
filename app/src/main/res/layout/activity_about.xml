@@ -27,7 +27,7 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:text="@string/about_text"
+                    android:id="@+id/about_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>

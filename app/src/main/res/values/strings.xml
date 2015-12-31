@@ -21,7 +21,17 @@
     <string name="servings">Servings</string>
     <string name="about">About</string>
     <string name="about_this_app">About this app</string>
-    <string name="about_text">This app was inspired by the book How Not to Die by Dr. Michael Greger.\n\nIn the book, there is a chapter describing a checklist of the daily dozen foods you should eat for great health. Daily Dozen is that checklist as an Android app.</string>
+    <string name="about_text">This app was inspired by the book How Not to Die by Dr. Michael Greger.\n\nIn the book, there is a chapter describing a checklist of the daily dozen foods you should eat for great health. Daily Dozen is that checklist as an Android app.\n\nDaily Dozen was created by John Slavick.\n\nThe following open source libraries were used: ActiveAndroid, Butter Knife, and Caldroid.</string>
+    <string name="book_title">How Not to Die</string>
+    <string name="url_book">http://nutritionfacts.org/book/</string>
+    <string name="my_name">John Slavick</string>
+    <string name="url_my_website">http://johnslavick.com</string>
+    <string name="library_activeandroid">ActiveAndroid</string>
+    <string name="library_butterknife">Butter Knife</string>
+    <string name="library_caldroid">Caldroid</string>
+    <string name="url_activeandroid">https://github.com/pardom/ActiveAndroid</string>
+    <string name="url_butterknife">https://github.com/JakeWharton/butterknife</string>
+    <string name="url_caldroid">https://github.com/roomorama/Caldroid</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
