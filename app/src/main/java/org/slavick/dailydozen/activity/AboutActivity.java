@@ -15,21 +15,17 @@ import android.widget.TextView;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.widget.CardViewHeader;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 public class AboutActivity extends AppCompatActivity {
-    @Bind(R.id.about_header)
     protected CardViewHeader cvHeader;
-
-    @Bind(R.id.about_text)
     protected TextView tvAbout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        ButterKnife.bind(this);
+
+        cvHeader = (CardViewHeader) findViewById(R.id.about_header);
+        tvAbout = (TextView) findViewById(R.id.about_text);
 
         initActionBar();
 
@@ -67,7 +63,6 @@ public class AboutActivity extends AppCompatActivity {
         initLink(aboutText, ssb, R.string.book_title, R.string.url_book);
         initLink(aboutText, ssb, R.string.my_name, R.string.url_my_website);
         initLink(aboutText, ssb, R.string.library_activeandroid, R.string.url_activeandroid);
-        initLink(aboutText, ssb, R.string.library_butterknife, R.string.url_butterknife);
         initLink(aboutText, ssb, R.string.library_caldroid, R.string.url_caldroid);
 
         tvAbout.setMovementMethod(LinkMovementMethod.getInstance());

@@ -28,17 +28,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 public class FoodInfoActivity extends AppCompatActivity {
-    @Bind(R.id.calendar_legend)
     protected ViewGroup vgLegend;
-
-    @Bind(R.id.food_types)
     protected ListView lvFoodTypes;
-
-    @Bind(R.id.food_serving_sizes)
     protected ListView lvFoodServingSizes;
 
     private CaldroidFragment calendar;
@@ -49,7 +41,10 @@ public class FoodInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_info);
-        ButterKnife.bind(this);
+
+        vgLegend = (ViewGroup) findViewById(R.id.calendar_legend);
+        lvFoodTypes = (ListView) findViewById(R.id.food_types);
+        lvFoodServingSizes = (ListView) findViewById(R.id.food_serving_sizes);
 
         initActionBar();
 

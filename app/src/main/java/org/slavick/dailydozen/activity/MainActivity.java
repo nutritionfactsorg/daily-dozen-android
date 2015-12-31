@@ -10,11 +10,7 @@ import android.view.MenuItem;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 public class MainActivity extends AppCompatActivity {
-    @Bind(R.id.date_pager)
     protected ViewPager datePager;
 
     private DatePagerAdapter datePagerAdapter;
@@ -23,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+
+        datePager = (ViewPager) findViewById(R.id.date_pager);
 
         initDatePager();
     }

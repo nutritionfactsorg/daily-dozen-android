@@ -7,14 +7,8 @@ import android.widget.TextView;
 
 import org.slavick.dailydozen.R;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 public class CardViewHeader extends LinearLayout {
-    @Bind(R.id.header)
     protected TextView tvHeader;
-
-    @Bind(R.id.subheader)
     protected TextView tvSubHeader;
 
     public CardViewHeader(Context context) {
@@ -29,7 +23,8 @@ public class CardViewHeader extends LinearLayout {
 
     private void init(final Context context) {
         inflate(context, R.layout.card_view_header, this);
-        ButterKnife.bind(this);
+        tvHeader = (TextView) findViewById(R.id.header);
+        tvSubHeader = (TextView) findViewById(R.id.subheader);
     }
 
     public void setHeader(final String text) {

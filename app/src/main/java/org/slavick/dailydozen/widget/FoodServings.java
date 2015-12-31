@@ -22,9 +22,6 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 public class FoodServings extends RecyclerView.ViewHolder {
     private final static String TAG = FoodServings.class.getSimpleName();
 
@@ -33,20 +30,18 @@ public class FoodServings extends RecyclerView.ViewHolder {
 
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
-    @Bind(R.id.food_checkboxes)
     protected ViewGroup vgCheckboxes;
-
-    @Bind(R.id.food_name)
     protected TextView tvName;
-
-    @Bind(R.id.food_info)
     protected ImageView ivFoodInfo;
 
     private ClickListener listener;
 
     public FoodServings(View itemView) {
         super(itemView);
-        ButterKnife.bind(this, itemView);
+
+        vgCheckboxes = (ViewGroup) itemView.findViewById(R.id.food_checkboxes);
+        tvName = (TextView) itemView.findViewById(R.id.food_name);
+        ivFoodInfo = (ImageView) itemView.findViewById(R.id.food_info);
     }
 
     public void setDateAndFood(final Date date, final Food food) {

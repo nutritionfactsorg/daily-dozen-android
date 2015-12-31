@@ -18,16 +18,10 @@ import org.slavick.dailydozen.widget.FoodServings;
 
 import java.util.Date;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 public class DateFragment extends Fragment implements FoodServings.ClickListener {
     private Date date;
 
-    @Bind(R.id.date_fragment_header)
     protected CardViewHeader cvHeader;
-
-    @Bind(R.id.date_food_servings)
     protected RecyclerView lvFoodServings;
 
     public static DateFragment newInstance(final Date date) {
@@ -43,7 +37,9 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_date, container, false);
-        ButterKnife.bind(this, view);
+
+        cvHeader = (CardViewHeader) view.findViewById(R.id.date_fragment_header);
+        lvFoodServings = (RecyclerView) view.findViewById(R.id.date_food_servings);
 
         displayFormForDate();
 
@@ -68,7 +64,9 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+
+        cvHeader = null;
+        lvFoodServings = null;
     }
 
     @Override
