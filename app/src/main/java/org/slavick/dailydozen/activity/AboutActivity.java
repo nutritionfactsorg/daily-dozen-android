@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import org.slavick.dailydozen.BuildConfig;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.widget.CardViewHeader;
 
@@ -53,7 +54,7 @@ public class AboutActivity extends AppCompatActivity {
 
     private void initHeader() {
         cvHeader.setHeader(getString(R.string.app_name));
-        cvHeader.setSubHeader("release 1");
+        cvHeader.setSubHeader(String.format("version %s", BuildConfig.VERSION_NAME));
     }
 
     private void initLinksInText() {
