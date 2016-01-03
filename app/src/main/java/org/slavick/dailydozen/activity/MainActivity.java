@@ -7,13 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
     protected ViewPager datePager;
 
-    private DatePagerAdapter datePagerAdapter;
+    private int daysSinceEpoch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
         // called first. This is an attempt to fix that, but I am not sure that it works.
         // This bug was found by entering some data before bed and then bringing the app back to the foreground in the
         // morning to enter data. The app crashed immediately.
-        datePagerAdapter.notifyDataSetChanged();
+        // Solutions tried: datePagerAdapter.notifyDataSetChanged() did not work
+        if (daysSinceEpoch < Common.getDaysSinceEpoch()) {
+            initDatePager();
+        }
     }
 
     @Override
@@ -55,8 +59,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDatePager() {
-        datePagerAdapter = new DatePagerAdapter(getSupportFragmentManager());
+        final DatePagerAdapter datePagerAdapter = new DatePagerAdapter(getSupportFragmentManager());
         datePager.setAdapter(datePagerAdapter);
+
+        daysSinceEpoch = datePagerAdapter.getCount();
 
         // Go to today's date by default
         datePager.setCurrentItem(datePagerAdapter.getCount(), false);
