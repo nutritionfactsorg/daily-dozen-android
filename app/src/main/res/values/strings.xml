@@ -34,6 +34,8 @@
     <string name="url_caldroid">https://github.com/roomorama/Caldroid</string>
     <string name="backup_restore">Backup/Restore</string>
     <string name="backup">Backup</string>
+    <string name="not_implemented_yet">Not implemented yet</string>
+    <string name="permission_needed_to_write_storage">Can\'t backup without permission to write to storage</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

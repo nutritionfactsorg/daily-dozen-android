@@ -26,6 +26,10 @@ public class Common {
     }
 
     public static void showNotImplementedYet(final Context context) {
-        Toast.makeText(context, "Not implemented yet", Toast.LENGTH_SHORT).show();
+        showToast(context, context.getString(R.string.not_implemented_yet));
+    }
+
+    public static void showToast(final Context context, final String message) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 }

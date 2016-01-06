@@ -15,8 +15,6 @@ public class BackupController {
     private final static String TAG = BackupController.class.getSimpleName();
 
     public void backupToCsv() {
-        // TODO: 1/5/16 ask for permission to write
-
         final String headers = getHeadersLine();
         Log.d(TAG, "headers = " + headers);
 
