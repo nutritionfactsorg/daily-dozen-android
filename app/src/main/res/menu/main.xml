@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/menu_backup_restore"
+        android:title="@string/backup_restore"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/menu_about"
         android:title="@string/about"
         app:showAsAction="never"/>

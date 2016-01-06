@@ -1,10 +1,12 @@
 package org.slavick.dailydozen;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class Common {
     public static void fullyExpandList(final ListView list) {
@@ -21,5 +23,9 @@ public class Common {
 
         // The (count - 1) hides the final list item divider
         return list.getMeasuredHeight() * count + ((count - 1) * list.getDividerHeight());
+    }
+
+    public static void showNotImplementedYet(final Context context) {
+        Toast.makeText(context, "Not implemented yet", Toast.LENGTH_SHORT).show();
     }
 }

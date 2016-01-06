@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 @Table(name = "dates")
@@ -65,6 +66,10 @@ public class Day extends Model {
         this.day = cal.get(Calendar.DAY_OF_MONTH);
     }
 
+    public long getDate() {
+        return date;
+    }
+
     public long getYear() {
         return year;
     }
@@ -95,5 +100,11 @@ public class Day extends Model {
         }
 
         return day;
+    }
+
+    public static List<Day> getAllDays() {
+        return new Select().from(Day.class)
+                .orderBy("date ASC")
+                .execute();
     }
 }

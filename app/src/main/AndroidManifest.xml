@@ -27,8 +27,13 @@
 
         </activity>
 
-        <activity android:name=".activity.AboutActivity"
+        <activity
+            android:name=".activity.AboutActivity"
             android:label="@string/about_this_app"/>
+
+        <activity
+            android:name=".activity.BackupRestoreActivity"
+            android:label="@string/backup_restore"/>
 
         <activity
             android:name=".activity.FoodInfoActivity"

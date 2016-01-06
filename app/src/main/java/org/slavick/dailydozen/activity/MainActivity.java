@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_backup_restore:
+                startActivity(new Intent(this, BackupRestoreActivity.class));
+                return true;
             case R.id.menu_about:
                 startActivity(new Intent(this, AboutActivity.class));
                 return true;

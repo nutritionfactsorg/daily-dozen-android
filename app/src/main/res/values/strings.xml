@@ -32,6 +32,8 @@
     <string name="library_caldroid">Caldroid</string>
     <string name="url_activeandroid">https://github.com/pardom/ActiveAndroid</string>
     <string name="url_caldroid">https://github.com/roomorama/Caldroid</string>
+    <string name="backup_restore">Backup/Restore</string>
+    <string name="backup">Backup</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
