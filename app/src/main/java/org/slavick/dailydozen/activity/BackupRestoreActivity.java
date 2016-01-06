@@ -19,6 +19,7 @@ public class BackupRestoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_backup_restore);
 
         initBackupButton();
+        initRestoreButton();
     }
 
     @Override
@@ -48,7 +49,23 @@ public class BackupRestoreActivity extends AppCompatActivity {
     }
 
     private void backup() {
-        final BackupController backupController = new BackupController();
+        final BackupController backupController = new BackupController(this);
         backupController.backupToCsv();
+    }
+
+    private void initRestoreButton() {
+        final Button btnRestore = (Button) findViewById(R.id.restore);
+
+        btnRestore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                restore();
+            }
+        });
+    }
+
+    private void restore() {
+        final BackupController backupController = new BackupController(this);
+        backupController.restoreFromCsv();
     }
 }
