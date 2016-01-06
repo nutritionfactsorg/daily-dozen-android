@@ -37,6 +37,7 @@ public class FoodInfoActivity extends AppCompatActivity {
 
     private HashMap<Date, Integer> datesWithEvents;
 
+    @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,8 +111,9 @@ public class FoodInfoActivity extends AppCompatActivity {
             public void onChangeMonth(int month, int year) {
                 super.onChangeMonth(month, year);
 
-                Calendar cal = Calendar.getInstance(Locale.getDefault());
-                cal.set(year, month - 1, 1); // The month property of Calendar starts at 0
+                final Calendar cal = Calendar.getInstance(Locale.getDefault());
+                cal.set(Calendar.YEAR, year);
+                cal.set(Calendar.MONTH, month - 1); // The month property of Calendar starts at 0
 
                 displayEntriesForVisibleMonths(cal, foodId);
             }
