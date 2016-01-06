@@ -33,7 +33,7 @@ public class BackupController {
             headers.add(food.getName());
         }
 
-        return TextUtils.join(",", headers);
+        return convertListToCsv(headers);
     }
 
     private String getDayLine(Day day) {
@@ -49,6 +49,10 @@ public class BackupController {
             line.add(serving != null ? String.valueOf(serving.getServings()) : "0");
         }
 
-        return TextUtils.join(",", line);
+        return convertListToCsv(line);
+    }
+
+    private String convertListToCsv(final List<String> list) {
+        return TextUtils.join(",", list);
     }
 }
