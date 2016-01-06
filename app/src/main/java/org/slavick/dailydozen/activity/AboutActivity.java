@@ -62,6 +62,7 @@ public class AboutActivity extends AppCompatActivity {
         final SpannableStringBuilder ssb = new SpannableStringBuilder(aboutText);
 
         initLink(aboutText, ssb, R.string.book_title, R.string.url_book);
+        initLink(aboutText, ssb, R.string.nutritionfacts_title, R.string.url_nutritionfacts);
         initLink(aboutText, ssb, R.string.my_name, R.string.url_my_website);
         initLink(aboutText, ssb, R.string.library_activeandroid, R.string.url_activeandroid);
         initLink(aboutText, ssb, R.string.library_caldroid, R.string.url_caldroid);
