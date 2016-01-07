@@ -50,7 +50,11 @@ public class BackupRestoreActivity extends AppCompatActivity {
 
     private void backup() {
         final BackupController backupController = new BackupController(this);
-        backupController.backupToCsv();
+        final boolean backupSuccess = backupController.backupToCsv();
+
+        if (backupSuccess) {
+            // TODO: 1/6/16 open share dialog so user can send their file to a 3rd party app
+        }
     }
 
     private void initRestoreButton() {

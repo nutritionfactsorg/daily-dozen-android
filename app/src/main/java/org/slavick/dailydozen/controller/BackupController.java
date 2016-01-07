@@ -26,7 +26,7 @@ public class BackupController {
         this.context = context;
     }
 
-    public void backupToCsv() {
+    public boolean backupToCsv() {
         final String backupFilename = "backup.csv";
         Log.d(TAG, "backupFilename = " + backupFilename);
 
@@ -45,9 +45,13 @@ public class BackupController {
 
             Log.d(TAG, backupFilename + " successfully written");
             backupStream.close();
+
+            return true;
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        return false;
     }
 
     private String getHeadersLine() {
