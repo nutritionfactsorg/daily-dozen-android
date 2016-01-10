@@ -9,8 +9,9 @@ import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -26,25 +27,28 @@ public class BackupController {
         this.context = context;
     }
 
-    public boolean backupToCsv() {
-        final String backupFilename = "backup.csv";
-        Log.d(TAG, "backupFilename = " + backupFilename);
+    public File getBackupFile() {
+        return new File(context.getFilesDir(), "backup.csv");
+    }
 
+    public boolean backupToCsv() {
+        final File backupFile = getBackupFile();
+        Log.d(TAG, "backupFilename = " + backupFile.getName());
         try {
-            final FileOutputStream backupStream = context.openFileOutput(backupFilename, Context.MODE_PRIVATE);
+            final FileWriter fileWriter = new FileWriter(backupFile);
 
             final String headers = getHeadersLine() + getLineSeparator();
             Log.d(TAG, "headers = " + headers);
-            backupStream.write(headers.getBytes());
+            fileWriter.write(headers);
 
             for (Day day : Day.getAllDays()) {
                 final String dayLine = getDayLine(day) + getLineSeparator();
                 Log.d(TAG, "dayLine = " + dayLine);
-                backupStream.write(dayLine.getBytes());
+                fileWriter.write(dayLine);
             }
 
-            Log.d(TAG, backupFilename + " successfully written");
-            backupStream.close();
+            Log.d(TAG, backupFile.getAbsolutePath() + " successfully written");
+            fileWriter.close();
 
             return true;
         } catch (IOException e) {
@@ -91,11 +95,11 @@ public class BackupController {
     }
 
     public void restoreFromCsv() {
-        final String backupFilename = "backup.csv";
-        Log.d(TAG, "backupFilename = " + backupFilename);
+        final File backupFile = getBackupFile();
+        Log.d(TAG, "backupFilename = " + backupFile.getName());
 
         try {
-            final FileInputStream restoreStream = context.openFileInput(backupFilename);
+            final FileInputStream restoreStream = context.openFileInput(backupFile.getName());
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(restoreStream));
             String line = reader.readLine();
@@ -105,7 +109,7 @@ public class BackupController {
                 Log.d(TAG, "restore line = " + line);
             }
 
-            Log.d(TAG, backupFilename + " successfully read");
+            Log.d(TAG, backupFile.getAbsolutePath() + " successfully read");
             restoreStream.close();
         } catch (IOException e) {
             e.printStackTrace();
