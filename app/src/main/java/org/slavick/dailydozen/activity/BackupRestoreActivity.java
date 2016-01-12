@@ -1,10 +1,12 @@
 package org.slavick.dailydozen.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.content.FileProvider;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -90,8 +92,24 @@ public class BackupRestoreActivity extends AppCompatActivity {
             btnRestore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // TODO: 1/11/16 ask user if they are sure since this deletes their current data
-                    restore(restoreFileUri);
+                    new AlertDialog.Builder(BackupRestoreActivity.this)
+                            .setTitle("Confirm")
+                            .setMessage("All existing data will be deleted before restoring from backup. Do you wish to continue?")
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    restore(restoreFileUri);
+                                    dialog.dismiss();
+                                }
+                            })
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            })
+                            .create()
+                            .show();
                 }
             });
         } else {
@@ -104,6 +122,8 @@ public class BackupRestoreActivity extends AppCompatActivity {
         final boolean restoreSuccess = backupController.restoreFromCsv(restoreFileUri);
 
         if (restoreSuccess) {
+            // TODO: 1/11/16 this leaves an extra copy of Daily Dozen running or something. Restore a file and then
+            // press the multitasking button
             Common.showToast(this, getString(R.string.restore_success));
             startActivity(new Intent(this, MainActivity.class));
         } else {
