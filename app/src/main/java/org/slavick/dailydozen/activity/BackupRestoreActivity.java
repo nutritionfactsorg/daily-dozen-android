@@ -1,6 +1,7 @@
 package org.slavick.dailydozen.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.content.FileProvider;
@@ -13,15 +14,17 @@ import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.controller.BackupController;
 import org.slavick.dailydozen.controller.PermissionController;
 
-import java.util.TimeZone;
-
-import hirondelle.date4j.DateTime;
+import java.io.File;
 
 public class BackupRestoreActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_backup_restore);
+
+        // Set the title because the title is set to Daily Dozen in the manifest. That is done so that they open with
+        // dialog says "Open with Daily Dozen" instead of something else.
+        setTitle(R.string.backup_restore);
 
         initBackupButton();
         initRestoreButton();
@@ -58,19 +61,23 @@ public class BackupRestoreActivity extends AppCompatActivity {
         final boolean backupSuccess = backupController.backupToCsv();
 
         if (backupSuccess) {
-            final Intent shareIntent = new Intent(Intent.ACTION_SEND);
-
-            final DateTime now = DateTime.now(TimeZone.getDefault());
-
-            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "DailyDozen backup at " + now.format("YYYY-MM-DD hh:mm:ss"));
-            shareIntent.putExtra(Intent.EXTRA_TEXT, "To restore this backup file, 1. ensure DailyDozen is installed, 2. tap on the file");
-
-            shareIntent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(this,
-                    "org.slavick.dailydozen.fileprovider", backupController.getBackupFile()));
-            shareIntent.setType("message/rfc822");
-
-            startActivity(shareIntent);
+            shareBackupFile(backupController);
+        } else {
+            Common.showToast(this, getString(R.string.backup_failed));
         }
+    }
+
+    private void shareBackupFile(BackupController backupController) {
+        final File backupFile = backupController.getBackupFile();
+        final String backupInstructions = "To restore this backup file, 1. ensure DailyDozen is installed, 2. tap on the file";
+        final Uri backupFileUri = FileProvider.getUriForFile(this, "org.slavick.dailydozen.fileprovider", backupFile);
+
+        final Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, backupFile.getName());
+        shareIntent.putExtra(Intent.EXTRA_TEXT, backupInstructions);
+        shareIntent.putExtra(Intent.EXTRA_STREAM, backupFileUri);
+        shareIntent.setType("message/rfc822");
+        startActivity(shareIntent);
     }
 
     private void initRestoreButton() {

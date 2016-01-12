@@ -28,7 +28,7 @@ public class BackupController {
     }
 
     public File getBackupFile() {
-        return new File(context.getFilesDir(), "backup.csv");
+        return new File(context.getFilesDir(), "dailydozen_backup.csv");
     }
 
     public boolean backupToCsv() {
