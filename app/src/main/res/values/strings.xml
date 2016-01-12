@@ -38,6 +38,8 @@
     <string name="not_implemented_yet">Not implemented yet</string>
     <string name="permission_needed_to_write_storage">Can\'t backup without permission to write to storage</string>
     <string name="backup_failed">Backup failed</string>
+    <string name="restore_failed">Restore failed</string>
+    <string name="restore_success">Restore successful</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

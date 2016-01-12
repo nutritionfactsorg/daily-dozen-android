@@ -83,16 +83,31 @@ public class BackupRestoreActivity extends AppCompatActivity {
     private void initRestoreButton() {
         final Button btnRestore = (Button) findViewById(R.id.restore);
 
-        btnRestore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                restore();
-            }
-        });
+        final Uri restoreFileUri = getIntent().getData();
+
+        if (restoreFileUri != null) {
+            btnRestore.setEnabled(true);
+            btnRestore.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // TODO: 1/11/16 ask user if they are sure since this deletes their current data
+                    restore(restoreFileUri);
+                }
+            });
+        } else {
+            btnRestore.setEnabled(false);
+        }
     }
 
-    private void restore() {
+    private void restore(final Uri restoreFileUri) {
         final BackupController backupController = new BackupController(this);
-        backupController.restoreFromCsv();
+        final boolean restoreSuccess = backupController.restoreFromCsv(restoreFileUri);
+
+        if (restoreSuccess) {
+            Common.showToast(this, getString(R.string.restore_success));
+            startActivity(new Intent(this, MainActivity.class));
+        } else {
+            Common.showToast(this, getString(R.string.restore_failed));
+        }
     }
 }

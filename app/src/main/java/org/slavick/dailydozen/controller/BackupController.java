@@ -1,6 +1,7 @@
 package org.slavick.dailydozen.controller;
 
 import android.content.Context;
+import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -10,9 +11,9 @@ import org.slavick.dailydozen.model.Servings;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
@@ -94,25 +95,44 @@ public class BackupController {
         return System.getProperty("line.separator");
     }
 
-    public void restoreFromCsv() {
-        final File backupFile = getBackupFile();
-        Log.d(TAG, "backupFilename = " + backupFile.getName());
-
+    public boolean restoreFromCsv(final Uri restoreFileUri) {
         try {
-            final FileInputStream restoreStream = context.openFileInput(backupFile.getName());
+            final InputStream restoreInputStream = context.getContentResolver().openInputStream(restoreFileUri);
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(restoreStream));
-            String line = reader.readLine();
-            Log.d(TAG, "restore line = " + line);
-            while (line != null) {
-                line = reader.readLine();
+            if (restoreInputStream != null) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
+                String line = reader.readLine();
                 Log.d(TAG, "restore line = " + line);
-            }
 
-            Log.d(TAG, backupFile.getAbsolutePath() + " successfully read");
-            restoreStream.close();
+                String[] headers = line.split(",");
+
+                Day.deleteAllDays();
+
+                while (line != null) {
+                    line = reader.readLine();
+
+                    if (line != null) {
+                        Log.d(TAG, "restore line = " + line);
+
+                        final String[] values = line.split(",");
+                        final Day day = Day.createDateIfDoesNotExist(Long.valueOf(values[0]));
+                        final Date date = day.getDateObject();
+
+                        for (int i = 1; i < headers.length; i++) {
+                            Servings.createServingsIfDoesNotExist(date, Food.getByName(headers[i]), Integer.valueOf(values[i]));
+                        }
+                    }
+                }
+
+                restoreInputStream.close();
+
+                return true;
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+        return false;
     }
 }

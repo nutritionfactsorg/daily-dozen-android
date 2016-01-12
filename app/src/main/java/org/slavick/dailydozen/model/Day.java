@@ -1,5 +1,7 @@
 package org.slavick.dailydozen.model;
 
+import android.util.Log;
+
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
@@ -14,6 +16,8 @@ import java.util.Locale;
 
 @Table(name = "dates")
 public class Day extends Model {
+    private final static String TAG = Day.class.getSimpleName();
+
     public static final String DATE = "date";
     public static final String YEAR = "year";
     public static final String MONTH = "month";
@@ -36,6 +40,10 @@ public class Day extends Model {
     public Day() {
     }
 
+    public Day(long date) {
+        setDate(date);
+    }
+
     public Day(Date date) {
         setDate(date);
     }
@@ -55,15 +63,19 @@ public class Day extends Model {
         return dateObject;
     }
 
-    private void setDate(Date date) {
-        this.date = getDateAsLong(date);
+    private void setDate(long date) {
+        this.date = date;
 
         final Calendar cal = Calendar.getInstance(Locale.getDefault());
-        cal.setTime(date);
+        cal.setTime(getDateObject());
 
         this.year = cal.get(Calendar.YEAR);
         this.month = cal.get(Calendar.MONTH) + 1;
         this.day = cal.get(Calendar.DAY_OF_MONTH);
+    }
+
+    private void setDate(Date date) {
+        setDate(getDateAsLong(date));
     }
 
     public long getDate() {
@@ -87,11 +99,15 @@ public class Day extends Model {
         return new SimpleDateFormat("EEE, MMM d", Locale.getDefault()).format(getDateObject());
     }
 
-    public static Day getByDate(Date date) {
-        return new Select().from(Day.class).where("date = ?", getDateAsLong(date)).executeSingle();
+    public static Day getByDate(long date) {
+        return new Select().from(Day.class).where("date = ?", date).executeSingle();
     }
 
-    public static Day createDateIfDoesNotExist(final Date date) {
+    public static Day getByDate(Date date) {
+        return getByDate(getDateAsLong(date));
+    }
+
+    public static Day createDateIfDoesNotExist(final long date) {
         Day day = getByDate(date);
 
         if (day == null) {
@@ -102,9 +118,22 @@ public class Day extends Model {
         return day;
     }
 
+    public static Day createDateIfDoesNotExist(final Date date) {
+        return createDateIfDoesNotExist(getDateAsLong(date));
+    }
+
     public static List<Day> getAllDays() {
         return new Select().from(Day.class)
                 .orderBy("date ASC")
                 .execute();
+    }
+
+    public static void deleteAllDays() {
+        for (Day day : getAllDays()) {
+            Servings.deleteServingsOnDate(day);
+
+            Log.d(TAG, "Deleting " + day);
+            day.delete();
+        }
     }
 }

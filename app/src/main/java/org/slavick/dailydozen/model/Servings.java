@@ -2,12 +2,14 @@ package org.slavick.dailydozen.model;
 
 import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -15,6 +17,8 @@ import java.util.Map;
 
 @Table(name = "servings")
 public class Servings extends Model {
+    private final static String TAG = Servings.class.getSimpleName();
+
     @Column(name = "date_id")
     private Day date;
 
@@ -77,11 +81,28 @@ public class Servings extends Model {
     }
 
     public static Servings createServingsIfDoesNotExist(final Date date, final Food food) {
+        return createServingsIfDoesNotExist(date, food, 0);
+    }
+
+    public static Servings createServingsIfDoesNotExist(final Date date, final Food food, final int numServings) {
         Servings servings = getByDateAndFood(date, food);
 
         if (servings == null) {
             servings = new Servings(Day.createDateIfDoesNotExist(date), food);
+            servings.servings = numServings;
             servings.save();
+        }
+
+        return servings;
+    }
+
+    private static List<Servings> getAllServingsOnDate(Day day) {
+        List<Servings> servings = new ArrayList<>();
+
+        if (day != null) {
+            servings = new Select().from(Servings.class)
+                    .where("date_id = ?", day.getId())
+                    .execute();
         }
 
         return servings;
@@ -90,16 +111,8 @@ public class Servings extends Model {
     public static int getTotalServingsOnDate(final Date date) {
         int numServings = 0;
 
-        final Day day = Day.getByDate(date);
-
-        if (day != null) {
-            final List<Servings> servings = new Select().from(Servings.class)
-                    .where("date_id = ?", day.getId())
-                    .execute();
-
-            for (Servings serving : servings) {
-                numServings += serving.getServings();
-            }
+        for (Servings serving : getAllServingsOnDate(Day.getByDate(date))) {
+            numServings += serving.getServings();
         }
 
         return numServings;
@@ -140,5 +153,12 @@ public class Servings extends Model {
         }
 
         return servingsInMonth;
+    }
+
+    public static void deleteServingsOnDate(Day day) {
+        for (Servings servings : getAllServingsOnDate(day)) {
+            Log.d(TAG, "Deleting " + servings);
+            servings.delete();
+        }
     }
 }
