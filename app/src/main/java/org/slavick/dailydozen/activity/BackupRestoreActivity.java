@@ -19,6 +19,8 @@ import org.slavick.dailydozen.controller.PermissionController;
 import java.io.File;
 
 public class BackupRestoreActivity extends AppCompatActivity {
+    private static final String AUTHORITY = "org.slavick.dailydozen.fileprovider";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +65,7 @@ public class BackupRestoreActivity extends AppCompatActivity {
         final boolean backupSuccess = backupController.backupToCsv();
 
         if (backupSuccess) {
+            Common.showToast(this, getString(R.string.backup_success));
             shareBackupFile(backupController);
         } else {
             Common.showToast(this, getString(R.string.backup_failed));
@@ -71,14 +74,14 @@ public class BackupRestoreActivity extends AppCompatActivity {
 
     private void shareBackupFile(BackupController backupController) {
         final File backupFile = backupController.getBackupFile();
-        final String backupInstructions = "To restore this backup file, 1. ensure DailyDozen is installed, 2. tap on the file";
-        final Uri backupFileUri = FileProvider.getUriForFile(this, "org.slavick.dailydozen.fileprovider", backupFile);
+        final String backupInstructions = getString(R.string.backup_instructions);
+        final Uri backupFileUri = FileProvider.getUriForFile(this, AUTHORITY, backupFile);
 
         final Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.putExtra(Intent.EXTRA_SUBJECT, backupFile.getName());
         shareIntent.putExtra(Intent.EXTRA_TEXT, backupInstructions);
         shareIntent.putExtra(Intent.EXTRA_STREAM, backupFileUri);
-        shareIntent.setType("message/rfc822");
+        shareIntent.setType(getString(R.string.backup_mimetype));
         startActivity(shareIntent);
     }
 
@@ -93,16 +96,16 @@ public class BackupRestoreActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     new AlertDialog.Builder(BackupRestoreActivity.this)
-                            .setTitle("Confirm")
-                            .setMessage("All existing data will be deleted before restoring from backup. Do you wish to continue?")
-                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            .setTitle(getString(R.string.restore_confirm))
+                            .setMessage(getString(R.string.restore_confirm_message))
+                            .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     restore(restoreFileUri);
                                     dialog.dismiss();
                                 }
                             })
-                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            .setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.dismiss();
