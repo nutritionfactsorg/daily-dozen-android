@@ -119,7 +119,10 @@ public class BackupController {
                         final Date date = day.getDateObject();
 
                         for (int i = 1; i < headers.length; i++) {
-                            Servings.createServingsIfDoesNotExist(date, Food.getByName(headers[i]), Integer.valueOf(values[i]));
+                            final Integer numServings = Integer.valueOf(values[i]);
+                            if (numServings > 0) {
+                                Servings.createServingsIfDoesNotExist(date, Food.getByName(headers[i]), numServings);
+                            }
                         }
                     }
                 }
