@@ -1,11 +1,13 @@
 package org.slavick.dailydozen.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.content.FileProvider;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,14 +16,18 @@ import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
 import org.slavick.dailydozen.controller.PermissionController;
+import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.task.BackupTask;
+import org.slavick.dailydozen.task.RestoreTask;
 
 import java.io.File;
 
-public class MainActivity extends AppCompatActivity implements BackupTask.Listener {
+public class MainActivity extends AppCompatActivity implements BackupTask.Listener, RestoreTask.Listener {
     protected ViewPager datePager;
 
     private DatePagerAdapter datePagerAdapter;
+
+    private boolean alreadyHandledRestoreIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,15 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
         // This bug was found by entering some data before bed and then bringing the app back to the foreground in the
         // morning to enter data. The app crashed immediately.
         datePagerAdapter.notifyDataSetChanged();
+
+        checkIfOpenedForRestore(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        checkIfOpenedForRestore(intent);
     }
 
     @Override
@@ -54,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_backup_restore:
+            case R.id.menu_backup:
                 backup();
                 return true;
             case R.id.menu_about:
@@ -92,6 +107,45 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
         }
     }
 
+    private void checkIfOpenedForRestore(final Intent intent) {
+        if (intent == null || alreadyHandledRestoreIntent) {
+            return;
+        }
+
+        final Uri restoreFileUri = intent.getData();
+
+        if (restoreFileUri != null) {
+            alreadyHandledRestoreIntent = true;
+
+            if (Day.getCount() > 0) {
+                new AlertDialog.Builder(this)
+                        .setTitle(getString(R.string.restore_confirm_title))
+                        .setMessage(getString(R.string.restore_confirm_message))
+                        .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                restore(restoreFileUri);
+                                dialog.dismiss();
+                            }
+                        })
+                        .setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                        .create()
+                        .show();
+            } else {
+                restore(restoreFileUri);
+            }
+        }
+    }
+
+    private void restore(final Uri restoreFileUri) {
+        new RestoreTask(this, this).execute(restoreFileUri);
+    }
+
     public File getBackupFile() {
         return new File(getFilesDir(), "dailydozen_backup.csv");
     }
@@ -113,6 +167,14 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
     public void onBackupComplete(boolean success) {
         if (success) {
             shareBackupFile();
+        }
+    }
+
+    @Override
+    public void onRestoreComplete(boolean success) {
+        // TODO: 1/13/16 restoring is not refreshing properly
+        if (success) {
+            datePagerAdapter.notifyDataSetChanged();
         }
     }
 }

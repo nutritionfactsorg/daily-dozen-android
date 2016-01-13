@@ -34,8 +34,6 @@
     <string name="url_caldroid">https://github.com/roomorama/Caldroid</string>
     <string name="not_implemented_yet">Not implemented yet</string>
     <string name="permission_needed_to_write_storage">Can\'t backup without permission to write to storage</string>
-    <string name="backup_restore">Backup/Restore</string>
-    <string name="restore">Restore</string>
     <string name="backup_failed">Backup failed</string>
     <string name="restore_failed">Restore failed</string>
     <string name="backup_success">Backup successful</string>
@@ -46,6 +44,7 @@
     <string name="backup_mimetype">message/rfc822</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="backup">Backup</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
