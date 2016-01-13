@@ -33,6 +33,8 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
     @Override
     protected Boolean doInBackground(File... params) {
+        // TODO: 1/12/16 Clean up this code, it is pretty rough
+
         final File backupFile = params[0];
 
         Log.d(TAG, "backupFilename = " + backupFile.getName());
@@ -43,7 +45,12 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
             Log.d(TAG, "headers = " + headers);
             fileWriter.write(headers);
 
-            for (Day day : Day.getAllDays()) {
+            final List<Day> allDays = Day.getAllDays();
+            final int numDays = allDays.size();
+
+            for (int i = 0; i < numDays; i++) {
+                final Day day = allDays.get(i);
+
                 if (isCancelled()) {
                     break;
                 }
@@ -51,6 +58,8 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
                 final String dayLine = getDayLine(day) + getLineSeparator();
                 Log.d(TAG, "dayLine = " + dayLine);
                 fileWriter.write(dayLine);
+
+                publishProgress(i + 1, numDays);
             }
 
             Log.d(TAG, backupFile.getAbsolutePath() + " successfully written");
@@ -62,6 +71,16 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         }
 
         return false;
+    }
+
+    @Override
+    protected void onProgressUpdate(Integer... values) {
+        super.onProgressUpdate(values);
+
+        if (values.length == 2) {
+            progress.setProgress(values[0]);
+            progress.setMax(values[1]);
+        }
     }
 
     @Override

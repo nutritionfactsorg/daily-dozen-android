@@ -2,6 +2,7 @@ package org.slavick.dailydozen.task;
 
 import android.content.Context;
 import android.net.Uri;
+import android.text.TextUtils;
 import android.util.Log;
 
 import org.slavick.dailydozen.Common;
@@ -14,7 +15,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     private final static String TAG = RestoreTask.class.getSimpleName();
@@ -32,6 +35,8 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
     @Override
     protected Boolean doInBackground(Uri... params) {
+        // TODO: 1/12/16 Clean up this code, it is pretty rough
+
         try {
             final InputStream restoreInputStream = getContext().getContentResolver().openInputStream(params[0]);
 
@@ -44,6 +49,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
                 Day.deleteAllDays();
 
+                final List<String> lines = new ArrayList<>();
                 while (line != null) {
                     if (isCancelled()) {
                         break;
@@ -51,22 +57,33 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
                     line = reader.readLine();
 
-                    if (line != null) {
-                        Log.d(TAG, "restore line = " + line);
-
-                        final String[] values = line.split(",");
-                        final Day day = Day.createDateIfDoesNotExist(Long.valueOf(values[0]));
-                        final Date date = day.getDateObject();
-
-                        for (int i = 1; i < headers.length; i++) {
-                            final Integer numServings = Integer.valueOf(values[i]);
-                            if (numServings > 0) {
-                                Servings.createServingsIfDoesNotExist(date, Food.getByName(headers[i]), numServings);
-                            }
-                        }
+                    if (!TextUtils.isEmpty(line)) {
+                        lines.add(line);
                     }
                 }
 
+                final int numLines = lines.size();
+
+                for (int i = 0; i < numLines; i++) {
+                    line = lines.get(i);
+
+                    Log.d(TAG, "restore line = " + line);
+
+                    final String[] values = line.split(",");
+                    final Day day = Day.createDateIfDoesNotExist(Long.valueOf(values[0]));
+                    final Date date = day.getDateObject();
+
+                    for (int j = 1; j < headers.length; j++) {
+                        final Integer numServings = Integer.valueOf(values[j]);
+                        if (numServings > 0) {
+                            Servings.createServingsIfDoesNotExist(date, Food.getByName(headers[j]), numServings);
+                        }
+                    }
+
+                    publishProgress(i + 1, numLines);
+                }
+
+                reader.close();
                 restoreInputStream.close();
 
                 return true;
@@ -76,6 +93,16 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         }
 
         return false;
+    }
+
+    @Override
+    protected void onProgressUpdate(Integer... values) {
+        super.onProgressUpdate(values);
+
+        if (values.length == 2) {
+            progress.setProgress(values[0]);
+            progress.setMax(values[1]);
+        }
     }
 
     @Override
