@@ -1,16 +1,24 @@
 package org.slavick.dailydozen.activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.content.FileProvider;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
+import org.slavick.dailydozen.controller.PermissionController;
+import org.slavick.dailydozen.task.BackupTask;
 
-public class MainActivity extends AppCompatActivity {
+import java.io.File;
+
+public class MainActivity extends AppCompatActivity implements BackupTask.Listener {
     protected ViewPager datePager;
 
     private DatePagerAdapter datePagerAdapter;
@@ -47,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_backup_restore:
-                startActivity(new Intent(this, BackupRestoreActivity.class));
+                backup();
                 return true;
             case R.id.menu_about:
                 startActivity(new Intent(this, AboutActivity.class));
@@ -63,5 +71,48 @@ public class MainActivity extends AppCompatActivity {
 
         // Go to today's date by default
         datePager.setCurrentItem(datePagerAdapter.getCount(), false);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (PermissionController.grantedWriteExternalStorage(requestCode, permissions, grantResults)) {
+            backup();
+        } else {
+            Common.showToast(this, getString(R.string.permission_needed_to_write_storage));
+        }
+    }
+
+    private void backup() {
+        if (PermissionController.canWriteExternalStorage(this)) {
+            new BackupTask(this, this).execute(getBackupFile());
+        } else {
+            PermissionController.askForWriteExternalStorage(this);
+        }
+    }
+
+    public File getBackupFile() {
+        return new File(getFilesDir(), "dailydozen_backup.csv");
+    }
+
+    private void shareBackupFile() {
+        final File backupFile = getBackupFile();
+        final String backupInstructions = getString(R.string.backup_instructions);
+        final Uri backupFileUri = FileProvider.getUriForFile(this, Common.FILE_PROVIDER_AUTHORITY, backupFile);
+
+        final Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, backupFile.getName());
+        shareIntent.putExtra(Intent.EXTRA_TEXT, backupInstructions);
+        shareIntent.putExtra(Intent.EXTRA_STREAM, backupFileUri);
+        shareIntent.setType(getString(R.string.backup_mimetype));
+        startActivity(shareIntent);
+    }
+
+    @Override
+    public void onBackupComplete(boolean success) {
+        if (success) {
+            shareBackupFile();
+        }
     }
 }

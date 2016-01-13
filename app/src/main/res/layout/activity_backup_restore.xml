@@ -5,12 +5,6 @@
               android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/backup"
-        android:text="@string/backup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <Button
         android:id="@+id/restore"
         android:text="@string/restore"
         android:layout_width="match_parent"

@@ -9,6 +9,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class Common {
+    public static final String FILE_PROVIDER_AUTHORITY = "org.slavick.dailydozen.fileprovider";
+
     public static void fullyExpandList(final ListView list) {
         list.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, getListViewHeight(list)));
     }

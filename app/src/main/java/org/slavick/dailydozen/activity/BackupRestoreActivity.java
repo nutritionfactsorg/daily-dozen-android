@@ -4,24 +4,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
-import org.slavick.dailydozen.controller.PermissionController;
-import org.slavick.dailydozen.task.BackupTask;
 import org.slavick.dailydozen.task.RestoreTask;
 
-import java.io.File;
-
-public class BackupRestoreActivity extends AppCompatActivity implements BackupTask.Listener, RestoreTask.Listener {
-    private static final String AUTHORITY = "org.slavick.dailydozen.fileprovider";
-
+public class BackupRestoreActivity extends AppCompatActivity implements RestoreTask.Listener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,55 +22,7 @@ public class BackupRestoreActivity extends AppCompatActivity implements BackupTa
         // dialog says "Open with Daily Dozen" instead of something else.
         setTitle(R.string.backup_restore);
 
-        initBackupButton();
         initRestoreButton();
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (PermissionController.grantedWriteExternalStorage(requestCode, permissions, grantResults)) {
-            backup();
-        } else {
-            Common.showToast(this, getString(R.string.permission_needed_to_write_storage));
-        }
-    }
-
-    private void initBackupButton() {
-        final Button btnBackup = (Button) findViewById(R.id.backup);
-
-        btnBackup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (PermissionController.canWriteExternalStorage(BackupRestoreActivity.this)) {
-                    backup();
-                } else {
-                    PermissionController.askForWriteExternalStorage(BackupRestoreActivity.this);
-                }
-            }
-        });
-    }
-
-    public File getBackupFile() {
-        return new File(getFilesDir(), "dailydozen_backup.csv");
-    }
-
-    private void backup() {
-        new BackupTask(this, this).execute(getBackupFile());
-    }
-
-    private void shareBackupFile() {
-        final File backupFile = getBackupFile();
-        final String backupInstructions = getString(R.string.backup_instructions);
-        final Uri backupFileUri = FileProvider.getUriForFile(this, AUTHORITY, backupFile);
-
-        final Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.putExtra(Intent.EXTRA_SUBJECT, backupFile.getName());
-        shareIntent.putExtra(Intent.EXTRA_TEXT, backupInstructions);
-        shareIntent.putExtra(Intent.EXTRA_STREAM, backupFileUri);
-        shareIntent.setType(getString(R.string.backup_mimetype));
-        startActivity(shareIntent);
     }
 
     private void initRestoreButton() {
@@ -93,7 +36,7 @@ public class BackupRestoreActivity extends AppCompatActivity implements BackupTa
                 @Override
                 public void onClick(View v) {
                     new AlertDialog.Builder(BackupRestoreActivity.this)
-                            .setTitle(getString(R.string.restore_confirm))
+                            .setTitle(getString(R.string.restore_confirm_title))
                             .setMessage(getString(R.string.restore_confirm_message))
                             .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
                                 @Override
@@ -119,16 +62,6 @@ public class BackupRestoreActivity extends AppCompatActivity implements BackupTa
 
     private void restore(final Uri restoreFileUri) {
         new RestoreTask(this, this).execute(restoreFileUri);
-    }
-
-    @Override
-    public void onBackupComplete(boolean success) {
-        if (success) {
-            Common.showToast(this, getString(R.string.backup_success));
-            shareBackupFile();
-        } else {
-            Common.showToast(this, getString(R.string.backup_failed));
-        }
     }
 
     @Override
