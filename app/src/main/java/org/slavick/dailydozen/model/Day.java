@@ -136,4 +136,9 @@ public class Day extends Model {
             day.delete();
         }
     }
+
+    public static int getCount() {
+        return new Select().from(Day.class)
+                .count();
+    }
 }

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.task.RestoreTask;
 
 public class BackupRestoreActivity extends AppCompatActivity implements RestoreTask.Listener {
@@ -35,24 +36,28 @@ public class BackupRestoreActivity extends AppCompatActivity implements RestoreT
             btnRestore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    new AlertDialog.Builder(BackupRestoreActivity.this)
-                            .setTitle(getString(R.string.restore_confirm_title))
-                            .setMessage(getString(R.string.restore_confirm_message))
-                            .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    restore(restoreFileUri);
-                                    dialog.dismiss();
-                                }
-                            })
-                            .setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            })
-                            .create()
-                            .show();
+                    if (Day.getCount() > 0) {
+                        new AlertDialog.Builder(BackupRestoreActivity.this)
+                                .setTitle(getString(R.string.restore_confirm_title))
+                                .setMessage(getString(R.string.restore_confirm_message))
+                                .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        restore(restoreFileUri);
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .create()
+                                .show();
+                    } else {
+                        restore(restoreFileUri);
+                    }
                 }
             });
         } else {
