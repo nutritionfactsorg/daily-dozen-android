@@ -1,39 +1,40 @@
-package org.slavick.dailydozen.controller;
+package org.slavick.dailydozen.task;
 
 import android.content.Context;
-import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 
+import org.slavick.dailydozen.Common;
+import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class BackupController {
-    private final static String TAG = BackupController.class.getSimpleName();
+public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
+    private final static String TAG = BackupTask.class.getSimpleName();
 
-    private Context context;
+    private final Listener listener;
 
-    public BackupController(Context context) {
-        this.context = context;
+    public interface Listener {
+        void onBackupComplete(boolean success);
     }
 
-    public File getBackupFile() {
-        return new File(context.getFilesDir(), "dailydozen_backup.csv");
+    public BackupTask(Context context, Listener listener) {
+        super(context);
+        this.listener = listener;
     }
 
-    public boolean backupToCsv() {
-        final File backupFile = getBackupFile();
+    @Override
+    protected Boolean doInBackground(File... params) {
+        final File backupFile = params[0];
+
         Log.d(TAG, "backupFilename = " + backupFile.getName());
         try {
             final FileWriter fileWriter = new FileWriter(backupFile);
@@ -43,6 +44,10 @@ public class BackupController {
             fileWriter.write(headers);
 
             for (Day day : Day.getAllDays()) {
+                if (isCancelled()) {
+                    break;
+                }
+
                 final String dayLine = getDayLine(day) + getLineSeparator();
                 Log.d(TAG, "dayLine = " + dayLine);
                 fileWriter.write(dayLine);
@@ -57,6 +62,18 @@ public class BackupController {
         }
 
         return false;
+    }
+
+    @Override
+    protected void onPostExecute(Boolean success) {
+        super.onPostExecute(success);
+
+        final Context context = getContext();
+        Common.showToast(context, context.getString(success ? R.string.backup_success : R.string.backup_failed));
+
+        if (listener != null) {
+            listener.onBackupComplete(success);
+        }
     }
 
     private String getHeadersLine() {
@@ -93,49 +110,5 @@ public class BackupController {
 
     private String getLineSeparator() {
         return System.getProperty("line.separator");
-    }
-
-    public boolean restoreFromCsv(final Uri restoreFileUri) {
-        try {
-            final InputStream restoreInputStream = context.getContentResolver().openInputStream(restoreFileUri);
-
-            if (restoreInputStream != null) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
-                String line = reader.readLine();
-                Log.d(TAG, "restore line = " + line);
-
-                String[] headers = line.split(",");
-
-                Day.deleteAllDays();
-
-                while (line != null) {
-                    line = reader.readLine();
-
-                    if (line != null) {
-                        Log.d(TAG, "restore line = " + line);
-
-                        final String[] values = line.split(",");
-                        final Day day = Day.createDateIfDoesNotExist(Long.valueOf(values[0]));
-                        final Date date = day.getDateObject();
-
-                        for (int i = 1; i < headers.length; i++) {
-                            final Integer numServings = Integer.valueOf(values[i]);
-                            if (numServings > 0) {
-                                Servings.createServingsIfDoesNotExist(date, Food.getByName(headers[i]), numServings);
-                            }
-                        }
-                    }
-                }
-
-                restoreInputStream.close();
-
-                return true;
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-        return false;
     }
 }

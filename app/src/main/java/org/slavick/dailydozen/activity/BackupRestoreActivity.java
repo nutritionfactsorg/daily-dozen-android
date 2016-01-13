@@ -13,12 +13,13 @@ import android.widget.Button;
 
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
-import org.slavick.dailydozen.controller.BackupController;
 import org.slavick.dailydozen.controller.PermissionController;
+import org.slavick.dailydozen.task.BackupTask;
+import org.slavick.dailydozen.task.RestoreTask;
 
 import java.io.File;
 
-public class BackupRestoreActivity extends AppCompatActivity {
+public class BackupRestoreActivity extends AppCompatActivity implements BackupTask.Listener, RestoreTask.Listener {
     private static final String AUTHORITY = "org.slavick.dailydozen.fileprovider";
 
     @Override
@@ -60,20 +61,16 @@ public class BackupRestoreActivity extends AppCompatActivity {
         });
     }
 
-    private void backup() {
-        final BackupController backupController = new BackupController(this);
-        final boolean backupSuccess = backupController.backupToCsv();
-
-        if (backupSuccess) {
-            Common.showToast(this, getString(R.string.backup_success));
-            shareBackupFile(backupController);
-        } else {
-            Common.showToast(this, getString(R.string.backup_failed));
-        }
+    public File getBackupFile() {
+        return new File(getFilesDir(), "dailydozen_backup.csv");
     }
 
-    private void shareBackupFile(BackupController backupController) {
-        final File backupFile = backupController.getBackupFile();
+    private void backup() {
+        new BackupTask(this, this).execute(getBackupFile());
+    }
+
+    private void shareBackupFile() {
+        final File backupFile = getBackupFile();
         final String backupInstructions = getString(R.string.backup_instructions);
         final Uri backupFileUri = FileProvider.getUriForFile(this, AUTHORITY, backupFile);
 
@@ -121,16 +118,25 @@ public class BackupRestoreActivity extends AppCompatActivity {
     }
 
     private void restore(final Uri restoreFileUri) {
-        final BackupController backupController = new BackupController(this);
-        final boolean restoreSuccess = backupController.restoreFromCsv(restoreFileUri);
+        new RestoreTask(this, this).execute(restoreFileUri);
+    }
 
-        if (restoreSuccess) {
+    @Override
+    public void onBackupComplete(boolean success) {
+        if (success) {
+            Common.showToast(this, getString(R.string.backup_success));
+            shareBackupFile();
+        } else {
+            Common.showToast(this, getString(R.string.backup_failed));
+        }
+    }
+
+    @Override
+    public void onRestoreComplete(boolean success) {
+        if (success) {
             // TODO: 1/11/16 this leaves an extra copy of Daily Dozen running or something. Restore a file and then
             // press the multitasking button
-            Common.showToast(this, getString(R.string.restore_success));
             startActivity(new Intent(this, MainActivity.class));
-        } else {
-            Common.showToast(this, getString(R.string.restore_failed));
         }
     }
 }
