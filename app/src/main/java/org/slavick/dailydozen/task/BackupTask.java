@@ -42,12 +42,20 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         allFoods = Food.getAllFoods();
 
         if (isEmpty(allDays) || isEmpty(allFoods)) {
-            onCancelled();
+            final Context context = getContext();
+            Common.showToast(context, context.getString(R.string.backup_cancelled_database_empty));
+
+            progress.hide();
+            cancel(true);
         }
     }
 
     @Override
     protected Boolean doInBackground(File... params) {
+        if (isCancelled()) {
+            return false;
+        }
+
         final File backupFile = params[0];
         Log.d(TAG, "backupFilename = " + backupFile.getName());
 
@@ -59,7 +67,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
         for (int i = 0; i < numDays; i++) {
             if (isCancelled()) {
-                break;
+                return false;
             }
 
             csvLines.add(getDayLine(allDays.get(i)));

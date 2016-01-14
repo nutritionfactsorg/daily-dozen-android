@@ -2,8 +2,8 @@ package org.slavick.dailydozen.task;
 
 import android.content.Context;
 import android.net.Uri;
+import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
-import android.util.Log;
 
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
@@ -24,6 +24,8 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
     private final Listener listener;
 
+    private ArrayMap<String, Food> foodLookup;
+
     public interface Listener {
         void onRestoreComplete(boolean success);
     }
@@ -31,68 +33,87 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     public RestoreTask(Context context, Listener listener) {
         super(context);
         this.listener = listener;
+
+        foodLookup = new ArrayMap<>();
     }
 
     @Override
     protected Boolean doInBackground(Uri... params) {
-        // TODO: 1/12/16 Clean up this code, it is pretty rough
+        final List<String> lines = readBackupFileLines(params[0]);
+
+        if (!isEmpty(lines) && !isCancelled()) {
+            Day.deleteAllDays();
+
+            final String[] headers = lines.get(0).split(",");
+
+            final int numLines = lines.size();
+
+            // Start at 1 to skip the headers line
+            for (int i = 1; i < numLines; i++) {
+                if (isCancelled()) {
+                    return false;
+                }
+
+                restoreLine(headers, lines.get(i));
+
+                publishProgress(i + 1, numLines);
+            }
+
+            return true;
+        }
+
+        return false;
+    }
+
+    private List<String> readBackupFileLines(final Uri backupFileUri) {
+        final List<String> backupFileLines = new ArrayList<>();
 
         try {
-            final InputStream restoreInputStream = getContext().getContentResolver().openInputStream(params[0]);
+            final InputStream restoreInputStream = getContext().getContentResolver().openInputStream(backupFileUri);
 
             if (restoreInputStream != null) {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
-                String line = reader.readLine();
-                Log.d(TAG, "restore line = " + line);
 
-                String[] headers = line.split(",");
+                String line;
 
-                Day.deleteAllDays();
-
-                final List<String> lines = new ArrayList<>();
-                while (line != null) {
-                    if (isCancelled()) {
-                        break;
-                    }
-
+                do {
                     line = reader.readLine();
 
                     if (!TextUtils.isEmpty(line)) {
-                        lines.add(line);
+                        backupFileLines.add(line);
                     }
-                }
-
-                final int numLines = lines.size();
-
-                for (int i = 0; i < numLines; i++) {
-                    line = lines.get(i);
-
-                    Log.d(TAG, "restore line = " + line);
-
-                    final String[] values = line.split(",");
-                    final Day day = Day.createDateIfDoesNotExist(Long.valueOf(values[0]));
-                    final Date date = day.getDateObject();
-
-                    for (int j = 1; j < headers.length; j++) {
-                        final Integer numServings = Integer.valueOf(values[j]);
-                        if (numServings > 0) {
-                            Servings.createServingsIfDoesNotExist(date, Food.getByName(headers[j]), numServings);
-                        }
-                    }
-
-                    publishProgress(i + 1, numLines);
-                }
+                } while (line != null);
 
                 reader.close();
                 restoreInputStream.close();
-
-                return true;
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return false;
+        return backupFileLines;
+    }
+
+    private void restoreLine(String[] headers, String line) {
+        final String[] values = line.split(",");
+        final Day day = Day.createDateIfDoesNotExist(Long.valueOf(values[0]));
+        final Date date = day.getDateObject();
+
+        // Start at 1 to skip the first header column which is "Date" and not a food
+        for (int j = 1; j < headers.length; j++) {
+            final Integer numServings = Integer.valueOf(values[j]);
+            if (numServings > 0) {
+                Servings.createServingsIfDoesNotExist(date, getFoodByName(headers[j]), numServings);
+            }
+        }
+    }
+
+    private Food getFoodByName(String foodName) {
+        if (!foodLookup.containsKey(foodName)) {
+            foodLookup.put(foodName, Food.getByName(foodName));
+        }
+
+        return foodLookup.get(foodName);
     }
 
     @Override

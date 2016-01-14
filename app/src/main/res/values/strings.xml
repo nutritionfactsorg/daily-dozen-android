@@ -45,6 +45,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="backup">Backup</string>
+    <string name="backup_cancelled_database_empty">Backup cancelled, database is empty</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
