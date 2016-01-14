@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableStringBuilder;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.MenuItem;
@@ -58,7 +59,7 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     private void initLinksInText() {
-        final String aboutText = getString(R.string.about_text);
+        final String aboutText = TextUtils.join("\n", getResources().getStringArray(R.array.about_text_lines));
         final SpannableStringBuilder ssb = new SpannableStringBuilder(aboutText);
 
         initLink(aboutText, ssb, R.string.book_title, R.string.url_book);

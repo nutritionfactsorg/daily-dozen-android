@@ -9,6 +9,7 @@ import android.support.v4.content.FileProvider;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -152,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
 
     private void shareBackupFile() {
         final File backupFile = getBackupFile();
-        final String backupInstructions = getString(R.string.backup_instructions);
+        final String backupInstructions = TextUtils.join("\n", getResources().getStringArray(R.array.backup_instructions_lines));
         final Uri backupFileUri = FileProvider.getUriForFile(this, Common.FILE_PROVIDER_AUTHORITY, backupFile);
 
         final Intent shareIntent = new Intent(Intent.ACTION_SEND);

@@ -21,7 +21,6 @@
     <string name="servings">Servings</string>
     <string name="about">About</string>
     <string name="about_this_app">About this app</string>
-    <string name="about_text">This app was inspired by the book How Not to Die by Dr. Michael Greger. Please see his website nutritionfacts.org for a wealth of videos on nutrition.\n\nIn the book, there is a chapter describing a checklist of the daily dozen foods you should eat for great health. Daily Dozen is that checklist as an Android app.\n\nDaily Dozen was created by John Slavick.\n\nThe following open source libraries were used: ActiveAndroid and Caldroid.</string>
     <string name="book_title">How Not to Die</string>
     <string name="url_book">http://nutritionfacts.org/book/</string>
     <string name="nutritionfacts_title">nutritionfacts.org</string>
@@ -40,7 +39,6 @@
     <string name="restore_success">Restore successful</string>
     <string name="restore_confirm_title">Restore Backup</string>
     <string name="restore_confirm_message">Any existing data will be deleted before restoring from backup. Do you wish to continue?</string>
-    <string name="backup_instructions">To restore this backup file, 1. ensure DailyDozen is installed, 2. tap on the file</string>
     <string name="backup_mimetype">message/rfc822</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
@@ -76,4 +74,24 @@
         <item>5</item>
         <item>1</item>
     </integer-array>
+
+    <string-array name="about_text_lines">
+        <item>This app was inspired by the book How Not to Die by Dr. Michael Greger. Please see his website nutritionfacts.org for a wealth of videos on nutrition.</item>
+        <item />
+        <item>In the book, there is a chapter describing a checklist of the daily dozen foods you should eat for great health. Daily Dozen is that checklist as an Android app.</item>
+        <item />
+        <item>Daily Dozen was created by John Slavick.</item>
+        <item />
+        <item>The following open source libraries were used: ActiveAndroid and Caldroid.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>Follow these steps to restore this backup in the DailyDozen app</item>
+        <item />
+        <item>1. The DailyDozen app must be installed on your Android phone. You can download it here: https://play.google.com/store/apps/details?id=org.slavick.dailydozen</item>
+        <item />
+        <item>2. Tap on the backup file attached to this email.</item>
+        <item />
+        <item>3. Select Open with Daily Dozen</item>
+    </string-array>
 </resources>
