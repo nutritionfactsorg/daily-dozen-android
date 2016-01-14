@@ -172,9 +172,8 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
 
     @Override
     public void onRestoreComplete(boolean success) {
-        // TODO: 1/13/16 restoring is not refreshing properly
         if (success) {
-            datePagerAdapter.notifyDataSetChanged();
+            initDatePager();
         }
     }
 }
