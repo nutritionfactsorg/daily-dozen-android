@@ -22,6 +22,9 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
     private final Listener listener;
 
+    private List<Day> allDays;
+    private List<Food> allFoods;
+
     public interface Listener {
         void onBackupComplete(boolean success);
     }
@@ -32,38 +35,47 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     }
 
     @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+
+        allDays = Day.getAllDays();
+        allFoods = Food.getAllFoods();
+
+        if (isEmpty(allDays) || isEmpty(allFoods)) {
+            onCancelled();
+        }
+    }
+
+    @Override
     protected Boolean doInBackground(File... params) {
-        // TODO: 1/12/16 Clean up this code, it is pretty rough
-
         final File backupFile = params[0];
-
         Log.d(TAG, "backupFilename = " + backupFile.getName());
-        try {
-            final FileWriter fileWriter = new FileWriter(backupFile);
 
-            final String headers = getHeadersLine() + getLineSeparator();
-            Log.d(TAG, "headers = " + headers);
-            fileWriter.write(headers);
+        final int numDays = allDays.size();
 
-            final List<Day> allDays = Day.getAllDays();
-            final int numDays = allDays.size();
+        final List<String> csvLines = new ArrayList<>(numDays);
 
-            for (int i = 0; i < numDays; i++) {
-                final Day day = allDays.get(i);
+        csvLines.add(getHeadersLine());
 
-                if (isCancelled()) {
-                    break;
-                }
-
-                final String dayLine = getDayLine(day) + getLineSeparator();
-                Log.d(TAG, "dayLine = " + dayLine);
-                fileWriter.write(dayLine);
-
-                publishProgress(i + 1, numDays);
+        for (int i = 0; i < numDays; i++) {
+            if (isCancelled()) {
+                break;
             }
 
-            Log.d(TAG, backupFile.getAbsolutePath() + " successfully written");
+            csvLines.add(getDayLine(allDays.get(i)));
+
+            publishProgress(i + 1, numDays);
+        }
+
+        final String backupText = TextUtils.join(getLineSeparator(), csvLines);
+        Log.d(TAG, backupText);
+
+        try {
+            final FileWriter fileWriter = new FileWriter(backupFile);
+            fileWriter.write(backupText);
             fileWriter.close();
+
+            Log.d(TAG, backupFile.getAbsolutePath() + " successfully written");
 
             return true;
         } catch (IOException e) {
@@ -100,7 +112,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
         headers.add("Date");
 
-        for (Food food : Food.getAllFoods()) {
+        for (Food food : allFoods) {
             headers.add(food.getName());
         }
 
@@ -115,7 +127,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         final Date date = day.getDateObject();
 
         // TODO: 1/5/16 this is horribly inefficient, but good enough for now
-        for (Food food : Food.getAllFoods()) {
+        for (Food food : allFoods) {
             final Servings serving = Servings.getByDateAndFood(date, food);
             line.add(serving != null ? String.valueOf(serving.getServings()) : "0");
         }

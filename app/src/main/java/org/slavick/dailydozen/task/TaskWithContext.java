@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import java.util.List;
+
 public abstract class TaskWithContext<Params, Progress, Result> extends AsyncTask<Params, Progress, Result> {
     private Context context;
 
@@ -32,5 +34,9 @@ public abstract class TaskWithContext<Params, Progress, Result> extends AsyncTas
         super.onPostExecute(result);
 
         progress.hide();
+    }
+
+    protected boolean isEmpty(final List<?> list) {
+        return list == null || list.size() == 0;
     }
 }
