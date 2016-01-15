@@ -5,6 +5,8 @@ import android.net.Uri;
 import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
 
+import com.activeandroid.ActiveAndroid;
+
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Day;
@@ -19,11 +21,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import hugo.weaving.DebugLog;
+
 public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     private final static String TAG = RestoreTask.class.getSimpleName();
 
     private final Listener listener;
 
+    private String[] headers;
     private ArrayMap<String, Food> foodLookup;
 
     public interface Listener {
@@ -44,7 +49,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         if (!isEmpty(lines) && !isCancelled()) {
             Day.deleteAllDays();
 
-            final String[] headers = lines.get(0).split(",");
+            headers = lines.get(0).split(",");
 
             final int numLines = lines.size();
 
@@ -54,7 +59,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                     return false;
                 }
 
-                restoreLine(headers, lines.get(i));
+                restoreLine(lines.get(i));
 
                 publishProgress(i + 1, numLines);
             }
@@ -94,17 +99,26 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         return backupFileLines;
     }
 
-    private void restoreLine(String[] headers, String line) {
-        final String[] values = line.split(",");
-        final Day day = Day.createDateIfDoesNotExist(Long.valueOf(values[0]));
-        final Date date = day.getDateObject();
+    @DebugLog
+    private void restoreLine(String line) {
+        ActiveAndroid.beginTransaction();
 
-        // Start at 1 to skip the first header column which is "Date" and not a food
-        for (int j = 1; j < headers.length; j++) {
-            final Integer numServings = Integer.valueOf(values[j]);
-            if (numServings > 0) {
-                Servings.createServingsIfDoesNotExist(date, getFoodByName(headers[j]), numServings);
+        try {
+            final String[] values = line.split(",");
+            final Day day = Day.createDateIfDoesNotExist(Long.valueOf(values[0]));
+            final Date date = day.getDateObject();
+
+            // Start at 1 to skip the first header column which is "Date" and not a food
+            for (int j = 1; j < headers.length; j++) {
+                final Integer numServings = Integer.valueOf(values[j]);
+                if (numServings > 0) {
+                    Servings.createServingsIfDoesNotExist(date, getFoodByName(headers[j]), numServings);
+                }
             }
+
+            ActiveAndroid.setTransactionSuccessful();
+        } finally {
+            ActiveAndroid.endTransaction();
         }
     }
 

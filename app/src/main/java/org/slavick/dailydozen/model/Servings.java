@@ -4,6 +4,7 @@ import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.activeandroid.ActiveAndroid;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
@@ -14,6 +15,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+
+import hugo.weaving.DebugLog;
 
 @Table(name = "servings")
 public class Servings extends Model {
@@ -155,10 +158,18 @@ public class Servings extends Model {
         return servingsInMonth;
     }
 
+    @DebugLog
     public static void deleteServingsOnDate(Day day) {
-        for (Servings servings : getAllServingsOnDate(day)) {
-            Log.d(TAG, "Deleting " + servings);
-            servings.delete();
+        ActiveAndroid.beginTransaction();
+
+        try {
+            for (Servings servings : getAllServingsOnDate(day)) {
+                Log.d(TAG, "Deleting " + servings);
+                servings.delete();
+            }
+            ActiveAndroid.setTransactionSuccessful();
+        } finally {
+            ActiveAndroid.endTransaction();
         }
     }
 }

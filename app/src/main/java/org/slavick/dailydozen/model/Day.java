@@ -2,6 +2,7 @@ package org.slavick.dailydozen.model;
 
 import android.util.Log;
 
+import com.activeandroid.ActiveAndroid;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
@@ -13,6 +14,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+
+import hugo.weaving.DebugLog;
 
 @Table(name = "dates")
 public class Day extends Model {
@@ -128,12 +131,21 @@ public class Day extends Model {
                 .execute();
     }
 
+    @DebugLog
     public static void deleteAllDays() {
-        for (Day day : getAllDays()) {
-            Servings.deleteServingsOnDate(day);
+        ActiveAndroid.beginTransaction();
 
-            Log.d(TAG, "Deleting " + day);
-            day.delete();
+        try {
+            for (Day day : getAllDays()) {
+                Servings.deleteServingsOnDate(day);
+
+                Log.d(TAG, "Deleting " + day);
+                day.delete();
+            }
+
+            ActiveAndroid.setTransactionSuccessful();
+        } finally {
+            ActiveAndroid.endTransaction();
         }
     }
 
