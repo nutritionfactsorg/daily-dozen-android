@@ -2,12 +2,15 @@ package org.slavick.dailydozen.model;
 
 import android.util.Log;
 
+import com.activeandroid.ActiveAndroid;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
 import java.util.List;
+
+import hugo.weaving.DebugLog;
 
 @Table(name = "foods")
 public class Food extends Model {
@@ -40,9 +43,18 @@ public class Food extends Model {
         return name;
     }
 
+    @DebugLog
     public static void ensureAllFoodsExistInDatabase(final String[] foodNames, final int[] recommendedServings) {
-        for (int i = 0; i < foodNames.length; i++) {
-            createFoodIfDoesNotExist(foodNames[i], recommendedServings[i]);
+        ActiveAndroid.beginTransaction();
+
+        try {
+            for (int i = 0; i < foodNames.length; i++) {
+                createFoodIfDoesNotExist(foodNames[i], recommendedServings[i]);
+            }
+
+            ActiveAndroid.setTransactionSuccessful();
+        } finally {
+            ActiveAndroid.endTransaction();
         }
     }
 
