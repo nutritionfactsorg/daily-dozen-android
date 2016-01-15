@@ -8,7 +8,7 @@ import org.slavick.dailydozen.model.FoodInfo;
 
 import io.fabric.sdk.android.Fabric;
 
-public class DailyFoodsApplication extends Application {
+public class DailyDozenApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
