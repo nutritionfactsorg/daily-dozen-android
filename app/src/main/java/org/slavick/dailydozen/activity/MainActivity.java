@@ -24,6 +24,8 @@ import org.slavick.dailydozen.task.RestoreTask;
 import java.io.File;
 
 public class MainActivity extends AppCompatActivity implements BackupTask.Listener, RestoreTask.Listener {
+    private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
+
     protected ViewPager datePager;
 
     private DatePagerAdapter datePagerAdapter;
@@ -55,8 +57,22 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(ALREADY_HANDLED_RESTORE_INTENT, alreadyHandledRestoreIntent);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        alreadyHandledRestoreIntent = savedInstanceState.getBoolean(ALREADY_HANDLED_RESTORE_INTENT);
+    }
+
+    @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+
+        alreadyHandledRestoreIntent = false;
 
         checkIfOpenedForRestore(intent);
     }
