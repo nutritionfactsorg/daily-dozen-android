@@ -1,9 +1,5 @@
 package org.slavick.dailydozen.model;
 
-import android.util.Log;
-
-import com.activeandroid.ActiveAndroid;
-import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
@@ -15,10 +11,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import hugo.weaving.DebugLog;
-
 @Table(name = "dates")
-public class Day extends Model {
+public class Day extends TruncatableModel {
     private final static String TAG = Day.class.getSimpleName();
 
     public static final String DATE = "date";
@@ -129,24 +123,6 @@ public class Day extends Model {
         return new Select().from(Day.class)
                 .orderBy("date ASC")
                 .execute();
-    }
-
-    @DebugLog
-    public static void deleteAllDays() {
-        ActiveAndroid.beginTransaction();
-
-        try {
-            for (Day day : getAllDays()) {
-                Servings.deleteServingsOnDate(day);
-
-                Log.d(TAG, "Deleting " + day);
-                day.delete();
-            }
-
-            ActiveAndroid.setTransactionSuccessful();
-        } finally {
-            ActiveAndroid.endTransaction();
-        }
     }
 
     public static int getCount() {

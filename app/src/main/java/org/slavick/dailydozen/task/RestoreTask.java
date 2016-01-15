@@ -47,7 +47,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         final List<String> lines = readBackupFileLines(params[0]);
 
         if (!isEmpty(lines) && !isCancelled()) {
-            Day.deleteAllDays();
+            deleteAllExistingData();
 
             headers = lines.get(0).split(",");
 
@@ -68,6 +68,12 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         }
 
         return false;
+    }
+
+    @DebugLog
+    private void deleteAllExistingData() {
+        Servings.truncate(Servings.class);
+        Day.truncate(Day.class);
     }
 
     private List<String> readBackupFileLines(final Uri backupFileUri) {
