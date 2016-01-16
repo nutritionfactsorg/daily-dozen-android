@@ -13,7 +13,7 @@ import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.FoodServingsAdapter;
 import org.slavick.dailydozen.model.Servings;
-import org.slavick.dailydozen.widget.CardViewHeader;
+import org.slavick.dailydozen.widget.DateServings;
 import org.slavick.dailydozen.widget.FoodServings;
 
 import java.util.Date;
@@ -21,7 +21,7 @@ import java.util.Date;
 public class DateFragment extends Fragment implements FoodServings.ClickListener {
     private Date date;
 
-    protected CardViewHeader cvHeader;
+    protected DateServings dateServings;
     protected RecyclerView lvFoodServings;
 
     public static DateFragment newInstance(final Date date) {
@@ -38,7 +38,7 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_date, container, false);
 
-        cvHeader = (CardViewHeader) view.findViewById(R.id.date_fragment_header);
+        dateServings = (DateServings) view.findViewById(R.id.date_servings);
         lvFoodServings = (RecyclerView) view.findViewById(R.id.date_food_servings);
 
         displayFormForDate();
@@ -53,7 +53,7 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
             date = (Date) args.getSerializable(Args.DATE);
 
             if (date != null) {
-                initHeader();
+                updateServingsCount();
 
                 lvFoodServings.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
                 lvFoodServings.setAdapter(new FoodServingsAdapter(this, date));
@@ -65,21 +65,16 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
     public void onDestroyView() {
         super.onDestroyView();
 
-        cvHeader = null;
+        dateServings = null;
         lvFoodServings = null;
     }
 
     @Override
     public void onServingsChanged() {
-        updateScore();
+        updateServingsCount();
     }
 
-    private void initHeader() {
-        cvHeader.setHeader(getString(R.string.servings));
-        updateScore();
-    }
-
-    private void updateScore() {
-        cvHeader.setSubHeader(String.format("%s out of 24", Servings.getTotalServingsOnDate(date)));
+    private void updateServingsCount() {
+        dateServings.setServings(Servings.getTotalServingsOnDate(date));
     }
 }
