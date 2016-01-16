@@ -89,8 +89,6 @@ public class FoodServings extends RecyclerView.ViewHolder {
     private Intent createFoodIntent(final Class<? extends AppCompatActivity> klass, final Food food) {
         final Intent intent = new Intent(getContext(), klass);
         intent.putExtra(Args.FOOD_ID, food.getId());
-        intent.putExtra(Args.FOOD_NAME, food.getName());
-        intent.putExtra(Args.FOOD_RECOMMENDED_SERVINGS, food.getRecommendedServings());
         return intent;
     }
 

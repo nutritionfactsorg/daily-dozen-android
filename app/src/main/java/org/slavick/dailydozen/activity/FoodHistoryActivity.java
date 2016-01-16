@@ -1,12 +1,8 @@
 package org.slavick.dailydozen.activity;
 
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -15,6 +11,7 @@ import com.roomorama.caldroid.CaldroidListener;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 
 import java.util.Calendar;
@@ -23,7 +20,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-public class FoodHistoryActivity extends AppCompatActivity {
+public class FoodHistoryActivity extends FoodLoadingActivity {
     protected ViewGroup vgLegend;
 
     private CaldroidFragment calendar;
@@ -38,45 +35,17 @@ public class FoodHistoryActivity extends AppCompatActivity {
 
         vgLegend = (ViewGroup) findViewById(R.id.calendar_legend);
 
-        initActionBar();
-
         datesWithEvents = new HashMap<>();
         if (savedInstanceState != null) {
             datesWithEvents = (HashMap<Date, Integer>) savedInstanceState.getSerializable(Args.DATES_WITH_EVENTS);
         }
 
-        displayInfoForFood();
+        displayFoodHistory();
     }
 
-    private void initActionBar() {
-        final ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setHomeButtonEnabled(true);
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-    private void displayInfoForFood() {
-        final Intent intent = getIntent();
-        if (intent != null) {
-            final long foodId = intent.getLongExtra(Args.FOOD_ID, -1);
-            final String foodName = intent.getStringExtra(Args.FOOD_NAME);
-            final int recommendedServings = intent.getIntExtra(Args.FOOD_RECOMMENDED_SERVINGS, 1);
-
-            setTitle(foodName);
-
-            initCalendar(foodId, recommendedServings);
-        }
+    private void displayFoodHistory() {
+        final Food food = getFood();
+        initCalendar(food.getId(), food.getRecommendedServings());
     }
 
     private void initCalendar(final long foodId, final int recommendedServings) {

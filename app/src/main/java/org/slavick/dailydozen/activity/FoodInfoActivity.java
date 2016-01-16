@@ -1,21 +1,16 @@
 package org.slavick.dailydozen.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.FoodInfo;
 
 import java.util.List;
 
-public class FoodInfoActivity extends AppCompatActivity {
+public class FoodInfoActivity extends FoodLoadingActivity {
     protected ListView lvFoodTypes;
     protected ListView lvFoodServingSizes;
 
@@ -28,41 +23,14 @@ public class FoodInfoActivity extends AppCompatActivity {
         lvFoodTypes = (ListView) findViewById(R.id.food_types);
         lvFoodServingSizes = (ListView) findViewById(R.id.food_serving_sizes);
 
-        initActionBar();
-
-        displayInfoForFood();
+        displayFoodInfo();
     }
 
-    private void initActionBar() {
-        final ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setHomeButtonEnabled(true);
-        }
-    }
+    private void displayFoodInfo() {
+        final String foodName = getFood().getName();
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-    private void displayInfoForFood() {
-        final Intent intent = getIntent();
-        if (intent != null) {
-            final long foodId = intent.getLongExtra(Args.FOOD_ID, -1);
-            final String foodName = intent.getStringExtra(Args.FOOD_NAME);
-            final int recommendedServings = intent.getIntExtra(Args.FOOD_RECOMMENDED_SERVINGS, 1);
-
-            setTitle(foodName);
-
-            initList(lvFoodTypes, FoodInfo.getTypesOfFood(foodName));
-            initList(lvFoodServingSizes, FoodInfo.getServingSizes(foodName));
-        }
+        initList(lvFoodTypes, FoodInfo.getTypesOfFood(foodName));
+        initList(lvFoodServingSizes, FoodInfo.getServingSizes(foodName));
     }
 
     private void initList(final ListView listView, final List<String> items) {
