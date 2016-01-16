@@ -2,6 +2,7 @@ package org.slavick.dailydozen.widget;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.activity.FoodHistoryActivity;
 import org.slavick.dailydozen.activity.FoodInfoActivity;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
@@ -30,18 +32,24 @@ public class FoodServings extends RecyclerView.ViewHolder {
 
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
-    protected ViewGroup vgCheckboxes;
-    protected TextView tvName;
-    protected ImageView ivFoodInfo;
+    private TextView tvName;
+    private ImageView ivFoodInfo;
+    private ViewGroup vgCheckboxes;
+    private ImageView ivFoodHistory;
 
     private ClickListener listener;
 
     public FoodServings(View itemView) {
         super(itemView);
 
-        vgCheckboxes = (ViewGroup) itemView.findViewById(R.id.food_checkboxes);
         tvName = (TextView) itemView.findViewById(R.id.food_name);
         ivFoodInfo = (ImageView) itemView.findViewById(R.id.food_info);
+        vgCheckboxes = (ViewGroup) itemView.findViewById(R.id.food_checkboxes);
+        ivFoodHistory = (ImageView) itemView.findViewById(R.id.food_history);
+    }
+
+    private Context getContext() {
+        return itemView.getContext();
     }
 
     public void setDateAndFood(final Date date, final Food food) {
@@ -55,22 +63,35 @@ public class FoodServings extends RecyclerView.ViewHolder {
 
     private void initFoodName() {
         tvName.setText(food.getName());
+
+        tvName.setOnClickListener(getOnFoodNameClickListener());
+        ivFoodInfo.setOnClickListener(getOnFoodNameClickListener());
+    }
+
+    private View.OnClickListener getOnFoodNameClickListener() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getContext().startActivity(createFoodIntent(FoodInfoActivity.class, food));
+            }
+        };
     }
 
     private void initFoodInfo() {
-        ivFoodInfo.setOnClickListener(new View.OnClickListener() {
+        ivFoodHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Context context = itemView.getContext();
-
-                final Intent intent = new Intent(context, FoodInfoActivity.class);
-                intent.putExtra(Args.FOOD_ID, food.getId());
-                intent.putExtra(Args.FOOD_NAME, food.getName());
-                intent.putExtra(Args.FOOD_RECOMMENDED_SERVINGS, food.getRecommendedServings());
-
-                context.startActivity(intent);
+                getContext().startActivity(createFoodIntent(FoodHistoryActivity.class, food));
             }
         });
+    }
+
+    private Intent createFoodIntent(final Class<? extends AppCompatActivity> klass, final Food food) {
+        final Intent intent = new Intent(getContext(), klass);
+        intent.putExtra(Args.FOOD_ID, food.getId());
+        intent.putExtra(Args.FOOD_NAME, food.getName());
+        intent.putExtra(Args.FOOD_RECOMMENDED_SERVINGS, food.getRecommendedServings());
+        return intent;
     }
 
     private void initCheckboxes() {

@@ -44,6 +44,8 @@
     <string name="no">No</string>
     <string name="backup">Backup</string>
     <string name="backup_cancelled_database_empty">Backup cancelled, database is empty</string>
+    <string name="food_info">Food Info</string>
+    <string name="food_history">Food History</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

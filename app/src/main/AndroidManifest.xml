@@ -46,6 +46,14 @@
             android:label="@string/about_this_app"/>
 
         <activity
+            android:name=".activity.FoodHistoryActivity"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
+        <activity
             android:name=".activity.FoodInfoActivity"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
