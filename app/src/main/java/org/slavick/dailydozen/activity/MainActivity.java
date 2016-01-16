@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
 
     protected ViewPager datePager;
 
-    private DatePagerAdapter datePagerAdapter;
+    private int daysSinceEpoch;
 
     private boolean alreadyHandledRestoreIntent;
 
@@ -51,8 +51,11 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
         // called first. This is an attempt to fix that, but I am not sure that it works.
         // This bug was found by entering some data before bed and then bringing the app back to the foreground in the
         // morning to enter data. The app crashed immediately.
-        datePagerAdapter.notifyDataSetChanged();
-
+        // Solutions tried: datePagerAdapter.notifyDataSetChanged() did not work
+        if (daysSinceEpoch < Common.getDaysSinceEpoch()) {
+            initDatePager();
+        }
+        
         checkIfOpenedForRestore(getIntent());
     }
 
@@ -98,8 +101,10 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
     }
 
     private void initDatePager() {
-        datePagerAdapter = new DatePagerAdapter(getSupportFragmentManager());
+        final DatePagerAdapter datePagerAdapter = new DatePagerAdapter(getSupportFragmentManager());
         datePager.setAdapter(datePagerAdapter);
+
+        daysSinceEpoch = datePagerAdapter.getCount();
 
         // Go to today's date by default
         datePager.setCurrentItem(datePagerAdapter.getCount(), false);
