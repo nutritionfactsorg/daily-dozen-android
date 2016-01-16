@@ -36,7 +36,7 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
 
                 <data
-                    android:mimeType="text/csv"
+                    android:mimeType="text/*"
                     android:pathPattern="dailydozen_backup_\\.csv"/>
             </intent-filter>
         </activity>
