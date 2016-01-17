@@ -48,4 +48,5 @@ dependencies {
         transitive = true;
     }
     compile 'com.roomorama:caldroid:2.3.1'
+    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.1'
 }

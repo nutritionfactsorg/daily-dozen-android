@@ -16,17 +16,10 @@
         android:layout_height="match_parent"
         android:clickable="true"/>
 
-    <ImageView
+    <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/food_info"
-        android:src="@drawable/ic_info_outline_white_24dp"
-        android:background="@drawable/rounded_rectangle"
-        android:padding="1dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
-        android:contentDescription="@string/food_info"/>
+        android:text="@string/icon_info"
+        style="@style/Icon"/>
 
     <LinearLayout
         android:id="@+id/food_checkboxes"
@@ -37,14 +30,9 @@
         android:gravity="end"
         android:orientation="horizontal"/>
 
-    <ImageView
+    <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/food_history"
-        android:background="@drawable/rounded_rectangle"
-        android:src="@drawable/ic_date_range_white_24dp"
-        android:padding="1dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/food_history"/>
+        android:text="@string/icon_calendar"
+        style="@style/Icon"/>
 
 </LinearLayout>

@@ -9,8 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.joanzapata.iconify.widget.IconTextView;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
@@ -33,9 +34,9 @@ public class FoodServings extends RecyclerView.ViewHolder {
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
     private TextView tvName;
-    private ImageView ivFoodInfo;
+    private IconTextView ivFoodInfo;
     private ViewGroup vgCheckboxes;
-    private ImageView ivFoodHistory;
+    private IconTextView ivFoodHistory;
 
     private ClickListener listener;
 
@@ -43,9 +44,9 @@ public class FoodServings extends RecyclerView.ViewHolder {
         super(itemView);
 
         tvName = (TextView) itemView.findViewById(R.id.food_name);
-        ivFoodInfo = (ImageView) itemView.findViewById(R.id.food_info);
+        ivFoodInfo = (IconTextView) itemView.findViewById(R.id.food_info);
         vgCheckboxes = (ViewGroup) itemView.findViewById(R.id.food_checkboxes);
-        ivFoodHistory = (ImageView) itemView.findViewById(R.id.food_history);
+        ivFoodHistory = (IconTextView) itemView.findViewById(R.id.food_history);
     }
 
     private Context getContext() {

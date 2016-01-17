@@ -2,6 +2,8 @@ package org.slavick.dailydozen;
 
 import com.activeandroid.app.Application;
 import com.crashlytics.android.Crashlytics;
+import com.joanzapata.iconify.Iconify;
+import com.joanzapata.iconify.fonts.FontAwesomeModule;
 
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.FoodInfo;
@@ -12,6 +14,8 @@ public class DailyDozenApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        Iconify.with(new FontAwesomeModule());
 
         if (!BuildConfig.DEBUG) {
             Fabric.with(this, new Crashlytics());
