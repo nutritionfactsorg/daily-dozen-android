@@ -66,6 +66,7 @@ public class AboutActivity extends AppCompatActivity {
         initLink(aboutText, ssb, R.string.nutritionfacts_title, R.string.url_nutritionfacts);
         initLink(aboutText, ssb, R.string.my_name, R.string.url_my_website);
         initLink(aboutText, ssb, R.string.library_activeandroid, R.string.url_activeandroid);
+        initLink(aboutText, ssb, R.string.library_android_iconify, R.string.url_android_iconify);
         initLink(aboutText, ssb, R.string.library_caldroid, R.string.url_caldroid);
 
         tvAbout.setMovementMethod(LinkMovementMethod.getInstance());
