@@ -1,9 +1,12 @@
 package org.slavick.dailydozen.widget;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
+import android.view.View;
 
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.activity.ServingsHistoryActivity;
 
 public class DateServings extends CardViewHeader {
     public DateServings(Context context) {
@@ -21,6 +24,14 @@ public class DateServings extends CardViewHeader {
     }
 
     public void setServings(final int servingsOnDate) {
-        setSubHeader(String.format("%s out of 24", servingsOnDate));
+        setSubHeader(String.format("%s out of 24 {fa-bar-chart 18dp @color/gray}", servingsOnDate));
+
+        setSubHeaderOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Context context = getContext();
+                context.startActivity(new Intent(context, ServingsHistoryActivity.class));
+            }
+        });
     }
 }

@@ -34,4 +34,8 @@ public class CardViewHeader extends LinearLayout {
     public void setSubHeader(final String text) {
         tvSubHeader.setText(text);
     }
+
+    protected void setSubHeaderOnClickListener(OnClickListener onClickListener) {
+        tvSubHeader.setOnClickListener(onClickListener);
+    }
 }

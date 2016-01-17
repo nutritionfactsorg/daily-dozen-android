@@ -61,6 +61,14 @@
                 android:value=".activity.MainActivity"/>
         </activity>
 
+        <activity
+            android:name=".activity.ServingsHistoryActivity"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="f46126d5b93b311983c776c93d5285dab1b678b3" />

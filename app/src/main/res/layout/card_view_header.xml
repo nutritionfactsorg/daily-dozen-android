@@ -14,7 +14,7 @@
         android:layout_gravity="start|center_vertical"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
-    <TextView
+    <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/subheader"
         android:layout_weight="1"
         android:layout_width="0dp"
