@@ -106,14 +106,18 @@ public class Servings extends TruncatableModel {
         return servings;
     }
 
-    public static int getTotalServingsOnDate(final Date date) {
+    public static int getTotalServingsOnDate(final Day day) {
         int numServings = 0;
 
-        for (Servings serving : getAllServingsOnDate(Day.getByDate(date))) {
+        for (Servings serving : getAllServingsOnDate(day)) {
             numServings += serving.getServings();
         }
 
         return numServings;
+    }
+
+    public static int getTotalServingsOnDate(final Date date) {
+        return getTotalServingsOnDate(Day.getByDate(date));
     }
 
     // Any Dates in the return map indicate that at least one serving of the food was consumed on that date.
