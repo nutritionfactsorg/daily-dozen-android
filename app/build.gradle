@@ -17,6 +17,7 @@ repositories {
     mavenCentral()
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
 }
 
 android {
@@ -49,4 +50,5 @@ dependencies {
     }
     compile 'com.roomorama:caldroid:2.3.1'
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.1'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
 }
