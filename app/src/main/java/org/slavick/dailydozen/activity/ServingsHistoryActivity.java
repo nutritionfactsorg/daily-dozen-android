@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
@@ -32,6 +33,15 @@ public class ServingsHistoryActivity extends AppCompatActivity {
         dailyServingsChart.setData(getChartData());
         dailyServingsChart.setVisibleXRange(7, 7);
         dailyServingsChart.moveViewToX(dailyServingsChart.getXChartMax());
+        dailyServingsChart.setDescription("");
+
+        YAxis leftAxis = dailyServingsChart.getAxisLeft();
+        leftAxis.setAxisMaxValue(24);
+        leftAxis.setLabelCount(24, false);
+
+        dailyServingsChart.getAxisRight().setEnabled(false);
+
+        dailyServingsChart.getLegend().setEnabled(false);
 
         dailyServingsChart.setPinchZoom(false);
         dailyServingsChart.setDoubleTapToZoomEnabled(false);
@@ -42,12 +52,22 @@ public class ServingsHistoryActivity extends AppCompatActivity {
 
         final List<String> xVals = new ArrayList<>(allDays.size());
         final List<BarEntry> yVals = new ArrayList<>(allDays.size());
+        final int[] barColors = new int[allDays.size()];
 
         for (Day day : allDays) {
             xVals.add(day.getDayOfWeekInitial());
-            yVals.add(new BarEntry(Servings.getTotalServingsOnDate(day), yVals.size()));
+
+            final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
+            final int i = yVals.size();
+
+            yVals.add(new BarEntry(totalServingsOnDate, i));
+            barColors[i] = totalServingsOnDate < 24 ? R.color.green_faint : R.color.green;
         }
 
-        return new BarData(xVals, new BarDataSet(yVals, "Servings"));
+        final BarDataSet dataSet = new BarDataSet(yVals, "Servings");
+        dataSet.setColors(barColors, this);
+        dataSet.setDrawValues(false); // turns off the label at the top of each bar
+
+        return new BarData(xVals, dataSet);
     }
 }
