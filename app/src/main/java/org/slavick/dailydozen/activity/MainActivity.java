@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     protected ViewPager datePager;
+    protected PagerTabStrip datePagerIndicator;
 
     private int daysSinceEpoch;
 
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
         setContentView(R.layout.activity_main);
 
         datePager = (ViewPager) findViewById(R.id.date_pager);
+        datePagerIndicator = (PagerTabStrip) findViewById(R.id.date_pager_indicator);
 
         initDatePager();
     }
@@ -108,6 +112,15 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
 
         // Go to today's date by default
         datePager.setCurrentItem(datePagerAdapter.getCount(), false);
+
+        initDatePagerIndicator();
+    }
+
+    private void initDatePagerIndicator() {
+        datePagerIndicator.setTextColor(ContextCompat.getColor(this, android.R.color.white));
+        datePagerIndicator.setBackgroundResource(R.color.colorPrimary);
+        datePagerIndicator.setTabIndicatorColorResource(R.color.colorAccent);
+        datePagerIndicator.setDrawFullUnderline(false);
     }
 
     @Override
