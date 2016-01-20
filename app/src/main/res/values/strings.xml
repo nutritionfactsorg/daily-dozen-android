@@ -30,9 +30,11 @@
     <string name="library_activeandroid">ActiveAndroid</string>
     <string name="library_android_iconify">android-iconify</string>
     <string name="library_caldroid">Caldroid</string>
+    <string name="library_mpandroidchart">MPAndroidChart</string>
     <string name="url_activeandroid">https://github.com/pardom/ActiveAndroid</string>
     <string name="url_android_iconify">https://github.com/JoanZapata/android-iconify</string>
     <string name="url_caldroid">https://github.com/roomorama/Caldroid</string>
+    <string name="url_mpandroidchart">https://github.com/PhilJay/MPAndroidChart</string>
     <string name="not_implemented_yet">Not implemented yet</string>
     <string name="permission_needed_to_write_storage">Can\'t backup without permission to write to storage</string>
     <string name="backup_failed">Backup failed</string>
@@ -89,7 +91,7 @@
         <item />
         <item>Daily Dozen was created by John Slavick.</item>
         <item />
-        <item>The following open source libraries were used: ActiveAndroid, android-iconify, and Caldroid.</item>
+        <item>The following open source libraries were used: ActiveAndroid, android-iconify, Caldroid, and MPAndroidChart.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
