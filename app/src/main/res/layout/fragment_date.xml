@@ -14,7 +14,7 @@
         android:layout_height="wrap_content" />
 
     <View
-        android:background="@color/gray_light"
+        android:background="@color/colorDividerColor"
         android:layout_width="match_parent"
         android:layout_height="1dp"/>
 

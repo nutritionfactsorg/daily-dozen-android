@@ -7,18 +7,18 @@
 
     <TextView
         android:id="@+id/header"
+        style="@style/PrimaryText"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="start|center_vertical"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+        android:layout_gravity="start|center_vertical"/>
 
     <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/subheader"
+        style="@style/SecondaryText"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:gravity="end|bottom"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+        android:gravity="end|bottom"/>
 
 </LinearLayout>

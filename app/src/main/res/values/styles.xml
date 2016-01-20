@@ -23,10 +23,20 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_marginLeft">5dp</item>
         <item name="android:layout_marginStart">5dp</item>
-        <item name="android:textColor">@color/gray</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="PrimaryText">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
+    <style name="SecondaryText">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
     </style>
 
 </resources>
