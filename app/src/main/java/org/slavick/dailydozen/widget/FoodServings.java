@@ -34,7 +34,6 @@ public class FoodServings extends RecyclerView.ViewHolder {
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
     private TextView tvName;
-    private IconTextView ivFoodInfo;
     private ViewGroup vgCheckboxes;
     private IconTextView ivFoodHistory;
 
@@ -44,7 +43,6 @@ public class FoodServings extends RecyclerView.ViewHolder {
         super(itemView);
 
         tvName = (TextView) itemView.findViewById(R.id.food_name);
-        ivFoodInfo = (IconTextView) itemView.findViewById(R.id.food_info);
         vgCheckboxes = (ViewGroup) itemView.findViewById(R.id.food_checkboxes);
         ivFoodHistory = (IconTextView) itemView.findViewById(R.id.food_history);
     }
@@ -63,10 +61,9 @@ public class FoodServings extends RecyclerView.ViewHolder {
     }
 
     private void initFoodName() {
-        tvName.setText(food.getName());
+        tvName.setText(String.format("%s %s", food.getName(), getContext().getString(R.string.icon_info)));
 
         tvName.setOnClickListener(getOnFoodNameClickListener());
-        ivFoodInfo.setOnClickListener(getOnFoodNameClickListener());
     }
 
     private View.OnClickListener getOnFoodNameClickListener() {

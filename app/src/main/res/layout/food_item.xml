@@ -8,7 +8,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <TextView
+    <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/food_name"
         android:textColor="@color/colorPrimaryText"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
@@ -16,11 +16,6 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:clickable="true"/>
-
-    <com.joanzapata.iconify.widget.IconTextView
-        android:id="@+id/food_info"
-        android:text="@string/icon_info"
-        style="@style/Icon"/>
 
     <LinearLayout
         android:id="@+id/food_checkboxes"

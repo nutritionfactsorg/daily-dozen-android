@@ -50,7 +50,7 @@
     <string name="backup_cancelled_database_empty">Backup cancelled, database is empty</string>
     <string name="food_info">Food Info</string>
     <string name="food_history">Food History</string>
-    <string name="icon_info">{fa-info-circle}</string>
+    <string name="icon_info">{fa-info-circle 16dp @color/colorPrimary}</string>
     <string name="icon_calendar">{fa-calendar 18dp}</string>
     <string name="daily_servings_history">Daily Servings History</string>
 
