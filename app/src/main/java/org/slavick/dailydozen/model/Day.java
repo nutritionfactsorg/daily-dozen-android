@@ -96,8 +96,8 @@ public class Day extends TruncatableModel {
         return new SimpleDateFormat("EEE, MMM d", Locale.getDefault()).format(getDateObject());
     }
 
-    public String getDayOfWeekInitial() {
-        return new SimpleDateFormat("d", Locale.getDefault()).format(getDateObject());
+    public String getDayOfWeek() {
+        return new SimpleDateFormat("E", Locale.getDefault()).format(getDateObject());
     }
 
     public static Day getByDate(long date) {
