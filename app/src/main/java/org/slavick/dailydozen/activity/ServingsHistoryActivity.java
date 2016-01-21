@@ -14,7 +14,6 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
-import org.slavick.dailydozen.MovingAverage;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Servings;
@@ -74,7 +73,7 @@ public class ServingsHistoryActivity extends AppCompatActivity {
         final List<BarEntry> barEntries = new ArrayList<>(allDays.size());
         final List<Entry> lineEntries = new ArrayList<>(allDays.size());
 
-        final MovingAverage movingAverage = new MovingAverage(5);
+        float previousTrend = 0;
 
         for (Day day : allDays) {
             xVals.add(day.getDayOfWeek());
@@ -83,14 +82,22 @@ public class ServingsHistoryActivity extends AppCompatActivity {
 
             barEntries.add(new BarEntry(totalServingsOnDate, xVals.size()));
 
-            movingAverage.add(totalServingsOnDate);
-            lineEntries.add(new Entry(movingAverage.getAverage(), xVals.size()));
+            previousTrend = calculateTrend(previousTrend, totalServingsOnDate);
+            lineEntries.add(new Entry(previousTrend, xVals.size()));
         }
 
         CombinedData combinedData = new CombinedData(xVals);
         combinedData.setData(getBarData(xVals, barEntries));
         combinedData.setData(getLineData(xVals, lineEntries));
         return combinedData;
+    }
+
+    private float calculateTrend(float previousTrend, int currentValue) {
+        if (previousTrend == 0) {
+            return currentValue;
+        } else {
+            return previousTrend + 0.1f * (currentValue - previousTrend);
+        }
     }
 
     private BarData getBarData(List<String> xVals, List<BarEntry> barEntries) {
