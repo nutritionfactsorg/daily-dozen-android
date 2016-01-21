@@ -56,8 +56,6 @@ public class ServingsHistoryActivity extends AppCompatActivity {
 
         chart.getAxisRight().setEnabled(false);
 
-        chart.getLegend().setEnabled(false);
-
         // Disable all zooming and interacting with the chart
         chart.setScaleEnabled(false);
         chart.setPinchZoom(false);
@@ -90,14 +88,19 @@ public class ServingsHistoryActivity extends AppCompatActivity {
 
         CombinedData combinedData = new CombinedData(xVals);
         combinedData.setData(getBarData(xVals, barEntries));
-//        combinedData.setData(getLineData(xVals, lineEntries));
+        combinedData.setData(getLineData(xVals, lineEntries));
         return combinedData;
     }
 
+    // Calculates an exponentially smoothed moving average with 10% smoothing
     private float calculateTrend(float previousTrend, int currentValue) {
         if (previousTrend == 0) {
             return currentValue;
         } else {
+            // Tn = Tn-1 + 0.1 * (Vn - Tn-1)
+            // Tn is Trend for day n (today)
+            // Tn-1 is Trend for day n-1 (yesterday)
+            // Vn is Value for day n (total servings today)
             return previousTrend + 0.1f * (currentValue - previousTrend);
         }
     }
