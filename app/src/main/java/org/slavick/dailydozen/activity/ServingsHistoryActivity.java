@@ -76,19 +76,21 @@ public class ServingsHistoryActivity extends AppCompatActivity {
         float previousTrend = 0;
 
         for (Day day : allDays) {
+            int xIndex = xVals.size();
+
             xVals.add(day.getDayOfWeek());
 
             final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
 
-            barEntries.add(new BarEntry(totalServingsOnDate, xVals.size()));
+            barEntries.add(new BarEntry(totalServingsOnDate, xIndex));
 
             previousTrend = calculateTrend(previousTrend, totalServingsOnDate);
-            lineEntries.add(new Entry(previousTrend, xVals.size()));
+            lineEntries.add(new Entry(previousTrend, xIndex));
         }
 
         CombinedData combinedData = new CombinedData(xVals);
         combinedData.setData(getBarData(xVals, barEntries));
-        combinedData.setData(getLineData(xVals, lineEntries));
+//        combinedData.setData(getLineData(xVals, lineEntries));
         return combinedData;
     }
 
@@ -114,7 +116,7 @@ public class ServingsHistoryActivity extends AppCompatActivity {
     }
 
     private LineData getLineData(List<String> xVals, List<Entry> lineEntries) {
-        final LineDataSet dataSet = new LineDataSet(lineEntries, "7-day moving average");
+        final LineDataSet dataSet = new LineDataSet(lineEntries, "Moving Average");
 
         final int color = ContextCompat.getColor(this, R.color.colorAccent);
 
