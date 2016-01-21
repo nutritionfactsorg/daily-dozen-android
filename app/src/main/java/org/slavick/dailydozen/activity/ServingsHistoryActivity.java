@@ -4,13 +4,17 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
-import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
+import org.slavick.dailydozen.MovingAverage;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Servings;
@@ -20,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ServingsHistoryActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +33,14 @@ public class ServingsHistoryActivity extends AppCompatActivity {
     }
 
     private void initChart() {
-        final BarChart chart = (BarChart) findViewById(R.id.daily_servings_chart);
+        final CombinedChart chart = (CombinedChart) findViewById(R.id.daily_servings_chart);
 
         chart.setData(getChartData());
+
+        // Draw bars behind lines
+        chart.setDrawOrder(new CombinedChart.DrawOrder[]{
+                CombinedChart.DrawOrder.BAR, CombinedChart.DrawOrder.LINE
+        });
 
         // Only show 1 week at a time and start the chart with the latest day in view
         chart.setVisibleXRange(7, 7);
@@ -59,21 +67,36 @@ public class ServingsHistoryActivity extends AppCompatActivity {
         chart.setHighlightPerTapEnabled(false);
     }
 
-    private BarData getChartData() {
+    private CombinedData getChartData() {
         final List<Day> allDays = Day.getAllDays();
 
         final List<String> xVals = new ArrayList<>(allDays.size());
-        final List<BarEntry> yVals = new ArrayList<>(allDays.size());
+        final List<BarEntry> barEntries = new ArrayList<>(allDays.size());
+        final List<Entry> lineEntries = new ArrayList<>(allDays.size());
+
+        final MovingAverage movingAverage = new MovingAverage(5);
 
         for (Day day : allDays) {
             xVals.add(day.getDayOfWeek());
 
-            yVals.add(new BarEntry(Servings.getTotalServingsOnDate(day), yVals.size()));
+            final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
+
+            barEntries.add(new BarEntry(totalServingsOnDate, xVals.size()));
+
+            movingAverage.add(totalServingsOnDate);
+            lineEntries.add(new Entry(movingAverage.getAverage(), xVals.size()));
         }
 
-        final BarDataSet dataSet = new BarDataSet(yVals, "Servings");
+        CombinedData combinedData = new CombinedData(xVals);
+        combinedData.setData(getBarData(xVals, barEntries));
+        combinedData.setData(getLineData(xVals, lineEntries));
+        return combinedData;
+    }
 
-        dataSet.setColor(ContextCompat.getColor(this, R.color.green));
+    private BarData getBarData(List<String> xVals, List<BarEntry> barEntries) {
+        final BarDataSet dataSet = new BarDataSet(barEntries, "Servings");
+
+        dataSet.setColor(ContextCompat.getColor(this, R.color.colorPrimary));
         dataSet.setValueTextColor(ContextCompat.getColor(this, android.R.color.white));
         dataSet.setValueTextSize(14);
 
@@ -81,6 +104,23 @@ public class ServingsHistoryActivity extends AppCompatActivity {
         dataSet.setValueFormatter(new BarChartValueFormatter());
 
         return new BarData(xVals, dataSet);
+    }
+
+    private LineData getLineData(List<String> xVals, List<Entry> lineEntries) {
+        final LineDataSet dataSet = new LineDataSet(lineEntries, "7-day moving average");
+
+        final int color = ContextCompat.getColor(this, R.color.colorAccent);
+
+        dataSet.setColor(color);
+        dataSet.setLineWidth(2.5f);
+        dataSet.setCircleColor(color);
+        dataSet.setCircleRadius(5f);
+        dataSet.setFillColor(color);
+        dataSet.setDrawValues(true);
+        dataSet.setValueTextSize(12);
+        dataSet.setValueTextColor(color);
+
+        return new LineData(xVals, dataSet);
     }
 
     private class BarChartValueFormatter implements com.github.mikephil.charting.formatter.ValueFormatter {
