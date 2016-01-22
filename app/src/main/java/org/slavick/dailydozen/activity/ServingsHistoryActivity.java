@@ -135,7 +135,6 @@ public class ServingsHistoryActivity extends AppCompatActivity {
         dataSet.setColor(color);
         dataSet.setLineWidth(2.5f);
         dataSet.setCircleColor(color);
-        dataSet.setCircleRadius(5f);
         dataSet.setFillColor(color);
         dataSet.setDrawValues(true);
         dataSet.setValueTextSize(12);

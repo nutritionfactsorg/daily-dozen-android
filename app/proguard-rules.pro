@@ -17,3 +17,4 @@
 #}
 
 -keep class com.activeandroid.** { *; }
+-keep class com.github.mikephil.charting.** { *; }
