@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
         if (PermissionController.grantedWriteExternalStorage(requestCode, permissions, grantResults)) {
             backup();
         } else {
-            Common.showToast(this, getString(R.string.permission_needed_to_write_storage));
+            Common.showToast(this, R.string.permission_needed_to_write_storage);
         }
     }
 

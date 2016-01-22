@@ -151,7 +151,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         super.onPostExecute(success);
 
         final Context context = getContext();
-        Common.showToast(context, context.getString(success ? R.string.restore_success : R.string.restore_failed));
+        Common.showToast(context, success ? R.string.restore_success : R.string.restore_failed);
 
         if (listener != null) {
             listener.onRestoreComplete(success);

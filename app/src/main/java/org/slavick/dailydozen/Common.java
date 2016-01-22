@@ -41,6 +41,10 @@ public class Common {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
+    public static void showToast(final Context context, final int stringId) {
+        showToast(context, context.getString(stringId));
+    }
+
     // Calculates the number of days between epoch == 0 (Jan 1, 1970) and now
     public static int getDaysSinceEpoch() {
         return getEpoch().numDaysFrom(DateTime.forInstant(new Date().getTime(), TimeZone.getDefault())) + 1;

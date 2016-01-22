@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.View;
 
+import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.activity.ServingsHistoryActivity;
+import org.slavick.dailydozen.model.Servings;
 
 public class DateServings extends CardViewHeader {
     public DateServings(Context context) {
@@ -30,7 +32,12 @@ public class DateServings extends CardViewHeader {
             @Override
             public void onClick(View v) {
                 final Context context = getContext();
-                context.startActivity(new Intent(context, ServingsHistoryActivity.class));
+
+                if (Servings.getTotalServingsCount() > 0) {
+                    context.startActivity(new Intent(context, ServingsHistoryActivity.class));
+                } else {
+                    Common.showToast(context, R.string.no_servings_to_chart_toast);
+                }
             }
         });
     }

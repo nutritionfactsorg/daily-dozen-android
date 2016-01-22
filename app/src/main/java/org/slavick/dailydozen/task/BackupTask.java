@@ -43,7 +43,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
         if (isEmpty(allDays) || isEmpty(allFoods)) {
             final Context context = getContext();
-            Common.showToast(context, context.getString(R.string.backup_cancelled_database_empty));
+            Common.showToast(context, R.string.backup_cancelled_database_empty);
 
             progress.hide();
             cancel(true);
@@ -108,7 +108,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         super.onPostExecute(success);
 
         final Context context = getContext();
-        Common.showToast(context, context.getString(success ? R.string.backup_success : R.string.backup_failed));
+        Common.showToast(context, success ? R.string.backup_success : R.string.backup_failed);
 
         if (listener != null) {
             listener.onBackupComplete(success);

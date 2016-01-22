@@ -34,7 +34,12 @@ public class ServingsHistoryActivity extends AppCompatActivity {
     private void initChart() {
         final CombinedChart chart = (CombinedChart) findViewById(R.id.daily_servings_chart);
 
-        chart.setData(getChartData());
+        final CombinedData chartData = getChartData();
+        if (chartData == null) {
+            finish();
+        }
+
+        chart.setData(chartData);
 
         // Draw bars behind lines
         chart.setDrawOrder(new CombinedChart.DrawOrder[]{
@@ -66,6 +71,10 @@ public class ServingsHistoryActivity extends AppCompatActivity {
 
     private CombinedData getChartData() {
         final List<Day> allDays = Day.getAllDays();
+
+        if (allDays == null || allDays.isEmpty()) {
+            return null;
+        }
 
         final List<String> xVals = new ArrayList<>(allDays.size());
         final List<BarEntry> barEntries = new ArrayList<>(allDays.size());
