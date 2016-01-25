@@ -49,24 +49,25 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
                     }
 
                     Servings foodServingsOnDate = Servings.getByDateAndFood(day.getDateObject(), food);
+                    if (foodServingsOnDate != null) {
+                        if (foodServingsOnDate.getServings() == food.getRecommendedServings()) {
+                            currentStreak++;
+                        } else {
+                            currentStreak = 0;
+                        }
 
-                    if (foodServingsOnDate.getServings() == food.getRecommendedServings()) {
-                        currentStreak++;
-                    } else {
-                        currentStreak = 0;
+                        if (currentStreak > 0) {
+                            final ServingsStreak streak = new ServingsStreak(day, food, currentStreak);
+                            streak.save();
+                        }
+
+                        publishProgress(i + 1, numDays);
                     }
-
-                    if (currentStreak > 0) {
-                        final ServingsStreak streak = new ServingsStreak(day, food, currentStreak);
-                        streak.save();
-                    }
-
-                    publishProgress(i + 1, numDays);
                 }
             }
         }
 
-        return null;
+        return true;
     }
 
     @Override

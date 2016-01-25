@@ -16,4 +16,7 @@
 
     <color name="legend_less_than_recommended_servings">@color/green_faint</color>
     <color name="legend_recommended_servings">@color/green</color>
+    <color name="gold">#FFD700</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="bronze">#8C7853</color>
 </resources>

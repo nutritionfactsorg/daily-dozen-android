@@ -50,7 +50,9 @@ public class ServingsStreak extends TruncatableModel {
                         .and("food_id = ?", food.getId())
                         .executeSingle();
 
-                return streak.getStreak();
+                if (streak != null) {
+                    return streak.getStreak();
+                }
             }
         }
 

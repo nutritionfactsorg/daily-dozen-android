@@ -59,6 +59,7 @@ public class FoodServings extends RecyclerView.ViewHolder {
         this.food = food;
 
         initFoodName();
+        initFoodStreak();
         initCheckboxes();
         initFoodInfo();
     }
@@ -76,6 +77,10 @@ public class FoodServings extends RecyclerView.ViewHolder {
         tvName.setText(String.format("%s %s", food.getName(), getContext().getString(R.string.icon_info)));
 
         tvName.setOnClickListener(getOnFoodNameClickListener());
+    }
+
+    private void initFoodStreak() {
+        // TODO: 1/24/16 set text, set background, set visible
     }
 
     private View.OnClickListener getOnFoodNameClickListener() {
