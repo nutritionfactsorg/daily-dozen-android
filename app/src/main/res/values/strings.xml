@@ -54,6 +54,8 @@
     <string name="icon_calendar">{fa-calendar 18dp}</string>
     <string name="daily_servings_history">Daily Servings History</string>
     <string name="no_servings_to_chart_toast">You have not recorded any servings yet!</string>
+    <string name="calculate_streaks_success">Streaks calculation successful</string>
+    <string name="calculate_streaks_failed">Streaks calculation failed</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

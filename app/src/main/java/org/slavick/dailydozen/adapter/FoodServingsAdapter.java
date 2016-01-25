@@ -30,7 +30,11 @@ public class FoodServingsAdapter extends RecyclerView.Adapter<FoodServings> {
     @Override
     public void onBindViewHolder(FoodServings holder, int position) {
         holder.setListener(listener);
-        holder.setDateAndFood(date, foods.get(position));
+
+        final Food food = foods.get(position);
+
+        holder.setDateAndFood(date, food);
+        holder.setStreak(date, food);
     }
 
     @Override

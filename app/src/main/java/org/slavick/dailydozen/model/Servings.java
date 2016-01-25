@@ -63,19 +63,19 @@ public class Servings extends TruncatableModel {
         return String.format("[%s] [%s] [Servings %s]", food.toString(), date.toString(), servings);
     }
 
-    public static Servings getByDateAndFood(final Date date, final Food food) {
-        if (date != null) {
-            final Day day = Day.getByDate(date);
-
-            if (day != null && day.getId() != null && food != null && food.getId() != null) {
-                return new Select().from(Servings.class)
-                        .where("date_id = ?", day.getId())
-                        .and("food_id = ?", food.getId())
-                        .executeSingle();
-            }
+    public static Servings getByDateAndFood(final Day day, final Food food) {
+        if (day != null && day.getId() != null && food != null && food.getId() != null) {
+            return new Select().from(Servings.class)
+                    .where("date_id = ?", day.getId())
+                    .and("food_id = ?", food.getId())
+                    .executeSingle();
         }
 
         return null;
+    }
+
+    public static Servings getByDateAndFood(final Date date, final Food food) {
+        return date != null ? getByDateAndFood(Day.getByDate(date), food) : null;
     }
 
     public static Servings createServingsIfDoesNotExist(final Date date, final Food food) {

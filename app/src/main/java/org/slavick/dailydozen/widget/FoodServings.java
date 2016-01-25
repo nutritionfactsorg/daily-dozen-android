@@ -19,6 +19,7 @@ import org.slavick.dailydozen.activity.FoodHistoryActivity;
 import org.slavick.dailydozen.activity.FoodInfoActivity;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
+import org.slavick.dailydozen.model.ServingsStreak;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,6 +35,7 @@ public class FoodServings extends RecyclerView.ViewHolder {
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
     private TextView tvName;
+    private TextView tvStreak;
     private ViewGroup vgCheckboxes;
     private IconTextView ivFoodHistory;
 
@@ -43,6 +45,7 @@ public class FoodServings extends RecyclerView.ViewHolder {
         super(itemView);
 
         tvName = (TextView) itemView.findViewById(R.id.food_name);
+        tvStreak = (TextView) itemView.findViewById(R.id.food_streak);
         vgCheckboxes = (ViewGroup) itemView.findViewById(R.id.food_checkboxes);
         ivFoodHistory = (IconTextView) itemView.findViewById(R.id.food_history);
     }
@@ -58,6 +61,15 @@ public class FoodServings extends RecyclerView.ViewHolder {
         initFoodName();
         initCheckboxes();
         initFoodInfo();
+    }
+
+    public void setStreak(Date date, Food food) {
+        // TODO: 1/25/16 load streak from database
+
+        final int streak = ServingsStreak.getStreakOnDateForFood(date, food);
+        if (streak > 1) {
+            tvStreak.setText(String.format("%s days", streak));
+        }
     }
 
     private void initFoodName() {
@@ -154,6 +166,8 @@ public class FoodServings extends RecyclerView.ViewHolder {
 
             informListener();
 
+            // TODO: 1/25/16 recalculate streak
+
             Log.d(TAG, String.format("Increased Servings for %s", servings));
         }
     }
@@ -162,6 +176,8 @@ public class FoodServings extends RecyclerView.ViewHolder {
         final Servings servings = Servings.getByDateAndFood(date, food);
         if (servings != null) {
             servings.decreaseServings();
+
+            // TODO: 1/25/16 recalculate streak
 
             if (servings.getServings() > 0) {
                 servings.save();
