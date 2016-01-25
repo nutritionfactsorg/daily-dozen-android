@@ -69,7 +69,19 @@ public class FoodServings extends RecyclerView.ViewHolder {
 
         final int streak = ServingsStreak.getStreakOnDateForFood(date, food);
         if (streak > 1) {
-            tvStreak.setText(String.format("%s days", streak));
+            tvStreak.setVisibility(View.VISIBLE);
+
+            tvStreak.setText(String.format("{fa-trophy} %s days", streak));
+
+            if (streak > 1 && streak < 5) {
+                tvStreak.setBackgroundResource(R.drawable.rounded_rectangle_bronze);
+            } else if (streak >= 5 && streak < 7) {
+                tvStreak.setBackgroundResource(R.drawable.rounded_rectangle_silver);
+            } else if (streak >= 7) {
+                tvStreak.setBackgroundResource(R.drawable.rounded_rectangle_gold);
+            }
+        } else {
+            tvStreak.setVisibility(View.GONE);
         }
     }
 
