@@ -2,6 +2,8 @@ package org.slavick.dailydozen.task;
 
 import android.content.Context;
 
+import com.activeandroid.ActiveAndroid;
+
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Day;
@@ -16,6 +18,9 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
 
     private final Listener listener;
 
+    private List<Day> allDays;
+    private List<Food> allFoods;
+
     public interface Listener {
         void onComplete(boolean success);
     }
@@ -28,42 +33,54 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
+
+        allDays = Day.getAllDays();
+        allFoods = Food.getAllFoods();
+
+        if (isEmpty(allDays) || isEmpty(allFoods)) {
+            progress.hide();
+            cancel(true);
+        }
     }
 
     @Override
     protected Boolean doInBackground(Void... params) {
-        List<Day> allDays = Day.getAllDays();
-        List<Food> allFoods = Food.getAllFoods();
+        if (isCancelled()) {
+            return false;
+        }
 
-        if (!isEmpty(allDays)) {
-            final int numDays = allDays.size();
+        final int numDays = allDays.size();
 
-            for (Food food : allFoods) {
-                int currentStreak = 0;
+        for (Food food : allFoods) {
+            int currentStreak = 0;
 
+            ActiveAndroid.beginTransaction();
+
+            try {
                 for (int i = 0; i < numDays; i++) {
-                    final Day day = allDays.get(i);
-
                     if (isCancelled()) {
                         return false;
                     }
 
-                    Servings foodServingsOnDate = Servings.getByDateAndFood(day.getDateObject(), food);
-                    if (foodServingsOnDate != null) {
-                        if (foodServingsOnDate.getServings() == food.getRecommendedServings()) {
-                            currentStreak++;
-                        } else {
-                            currentStreak = 0;
-                        }
+                    final Day day = allDays.get(i);
 
-                        if (currentStreak > 0) {
-                            final ServingsStreak streak = new ServingsStreak(day, food, currentStreak);
-                            streak.save();
-                        }
+                    final Servings servingsOnDate = Servings.getByDateAndFood(day, food);
 
-                        publishProgress(i + 1, numDays);
+                    if (servingsOnDate != null && servingsOnDate.getServings() == food.getRecommendedServings()) {
+                        currentStreak++;
+
+                        final ServingsStreak streak = new ServingsStreak(day, food, currentStreak);
+                        streak.save();
+                    } else {
+                        currentStreak = 0;
                     }
+
+                    publishProgress(i + 1, numDays);
                 }
+
+                ActiveAndroid.setTransactionSuccessful();
+            } finally {
+                ActiveAndroid.endTransaction();
             }
         }
 

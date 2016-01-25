@@ -12,6 +12,7 @@ import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
+import org.slavick.dailydozen.model.ServingsStreak;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -72,6 +73,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
     @DebugLog
     private void deleteAllExistingData() {
+        ServingsStreak.truncate(ServingsStreak.class);
         Servings.truncate(Servings.class);
         Day.truncate(Day.class);
     }

@@ -58,4 +58,8 @@ public class ServingsStreak extends TruncatableModel {
 
         return 0;
     }
+
+    public static boolean isEmpty() {
+        return new Select().from(ServingsStreak.class).count() == 0;
+    }
 }

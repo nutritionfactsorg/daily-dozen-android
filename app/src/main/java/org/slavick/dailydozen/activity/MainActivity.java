@@ -20,6 +20,7 @@ import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
 import org.slavick.dailydozen.controller.PermissionController;
 import org.slavick.dailydozen.model.Day;
+import org.slavick.dailydozen.model.ServingsStreak;
 import org.slavick.dailydozen.task.BackupTask;
 import org.slavick.dailydozen.task.CalculateStreaksTask;
 import org.slavick.dailydozen.task.RestoreTask;
@@ -47,7 +48,10 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
         initDatePager();
 
         // TODO: 1/25/16 FOR TESTING ONLY
-        new CalculateStreaksTask(this, this).execute();
+
+        if (ServingsStreak.isEmpty()) {
+            new CalculateStreaksTask(this, this).execute();
+        }
     }
 
     @Override
