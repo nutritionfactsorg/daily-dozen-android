@@ -17,10 +17,9 @@
         android:layout_height="match_parent"
         android:clickable="true"/>
 
-    <com.joanzapata.iconify.widget.IconTextView
+    <org.slavick.dailydozen.widget.StreakWidget
         android:id="@+id/food_streak"
-        android:text="{fa-trophy} 2 days"
-        android:textSize="10dp"
+        android:textSize="10sp"
         android:layout_gravity="center"
         android:layout_marginLeft="5dp"
         android:layout_marginStart="5dp"

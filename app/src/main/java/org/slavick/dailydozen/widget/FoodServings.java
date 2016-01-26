@@ -19,7 +19,6 @@ import org.slavick.dailydozen.activity.FoodHistoryActivity;
 import org.slavick.dailydozen.activity.FoodInfoActivity;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
-import org.slavick.dailydozen.model.ServingsStreak;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -35,7 +34,7 @@ public class FoodServings extends RecyclerView.ViewHolder {
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
     private TextView tvName;
-    private TextView tvStreak;
+    private StreakWidget tvStreak;
     private ViewGroup vgCheckboxes;
     private IconTextView ivFoodHistory;
 
@@ -45,7 +44,7 @@ public class FoodServings extends RecyclerView.ViewHolder {
         super(itemView);
 
         tvName = (TextView) itemView.findViewById(R.id.food_name);
-        tvStreak = (TextView) itemView.findViewById(R.id.food_streak);
+        tvStreak = (StreakWidget) itemView.findViewById(R.id.food_streak);
         vgCheckboxes = (ViewGroup) itemView.findViewById(R.id.food_checkboxes);
         ivFoodHistory = (IconTextView) itemView.findViewById(R.id.food_history);
     }
@@ -65,24 +64,7 @@ public class FoodServings extends RecyclerView.ViewHolder {
     }
 
     public void setStreak(Date date, Food food) {
-        // TODO: 1/25/16 load streak from database
-
-        final int streak = ServingsStreak.getStreakOnDateForFood(date, food);
-        if (streak > 1) {
-            tvStreak.setVisibility(View.VISIBLE);
-
-            tvStreak.setText(String.format("{fa-trophy} %s days", streak));
-
-            if (streak > 1 && streak < 5) {
-                tvStreak.setBackgroundResource(R.drawable.rounded_rectangle_bronze);
-            } else if (streak >= 5 && streak < 7) {
-                tvStreak.setBackgroundResource(R.drawable.rounded_rectangle_silver);
-            } else if (streak >= 7) {
-                tvStreak.setBackgroundResource(R.drawable.rounded_rectangle_gold);
-            }
-        } else {
-            tvStreak.setVisibility(View.GONE);
-        }
+        tvStreak.setDateAndFood(date, food);
     }
 
     private void initFoodName() {
@@ -92,7 +74,7 @@ public class FoodServings extends RecyclerView.ViewHolder {
     }
 
     private void initFoodStreak() {
-        // TODO: 1/24/16 set text, set background, set visible
+        setStreak(date, food);
     }
 
     private View.OnClickListener getOnFoodNameClickListener() {
