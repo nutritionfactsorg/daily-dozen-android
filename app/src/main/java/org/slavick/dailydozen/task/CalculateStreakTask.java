@@ -28,6 +28,12 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
     }
 
     @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        progress.hide();
+    }
+
+    @Override
     protected Boolean doInBackground(StreakTaskInput... params) {
         final StreakTaskInput input = params[0];
         if (input == null) {
