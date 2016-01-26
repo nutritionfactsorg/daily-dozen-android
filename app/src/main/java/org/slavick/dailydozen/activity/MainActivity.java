@@ -20,14 +20,12 @@ import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
 import org.slavick.dailydozen.controller.PermissionController;
 import org.slavick.dailydozen.model.Day;
-import org.slavick.dailydozen.model.ServingsStreak;
 import org.slavick.dailydozen.task.BackupTask;
-import org.slavick.dailydozen.task.CalculateStreaksTask;
 import org.slavick.dailydozen.task.RestoreTask;
 
 import java.io.File;
 
-public class MainActivity extends AppCompatActivity implements BackupTask.Listener, RestoreTask.Listener, CalculateStreaksTask.Listener {
+public class MainActivity extends AppCompatActivity implements BackupTask.Listener, RestoreTask.Listener {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     protected ViewPager datePager;
@@ -46,12 +44,6 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
         datePagerIndicator = (PagerTabStrip) findViewById(R.id.date_pager_indicator);
 
         initDatePager();
-
-        // TODO: 1/25/16 FOR TESTING ONLY
-
-        if (ServingsStreak.isEmpty()) {
-            new CalculateStreaksTask(this, this).execute();
-        }
     }
 
     @Override
@@ -215,13 +207,6 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
 
     @Override
     public void onRestoreComplete(boolean success) {
-        if (success) {
-            new CalculateStreaksTask(this, this).execute();
-        }
-    }
-
-    @Override
-    public void onCalculateStreaksComplete(boolean success) {
         if (success) {
             initDatePager();
         }

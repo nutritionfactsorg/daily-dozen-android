@@ -8,7 +8,7 @@ import com.joanzapata.iconify.widget.IconTextView;
 
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Food;
-import org.slavick.dailydozen.model.ServingsStreak;
+import org.slavick.dailydozen.model.Servings;
 
 import java.util.Date;
 
@@ -26,9 +26,9 @@ public class StreakWidget extends IconTextView {
     }
 
     public void setDateAndFood(final Date date, final Food food) {
-        final ServingsStreak servingsStreak = ServingsStreak.getStreakOnDateForFood(date, food);
-        if (servingsStreak != null && servingsStreak.getStreak() > 1) {
-            final int streak = servingsStreak.getStreak();
+        final Servings servings = Servings.getByDateAndFood(date, food);
+        if (servings != null && servings.getStreak() > 1) {
+            final int streak = servings.getStreak();
 
             setVisibility(View.VISIBLE);
 

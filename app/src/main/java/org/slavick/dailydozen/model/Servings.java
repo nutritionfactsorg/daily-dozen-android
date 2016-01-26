@@ -12,6 +12,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.TimeZone;
+
+import hirondelle.date4j.DateTime;
 
 @Table(name = "servings")
 public class Servings extends TruncatableModel {
@@ -25,6 +28,9 @@ public class Servings extends TruncatableModel {
 
     @Column(name = "servings")
     private int servings;
+
+    @Column(name = "streak")
+    private int streak;
 
     public Servings() {
     }
@@ -46,21 +52,53 @@ public class Servings extends TruncatableModel {
         return servings;
     }
 
+    private void setServings(int servings) {
+        this.servings = servings;
+
+        recalculateStreak();
+    }
+
+    public void recalculateStreak() {
+        if (servings == food.getRecommendedServings()) {
+            streak = getStreakFromYesterday() + 1;
+        } else if (servings < food.getRecommendedServings()) {
+            streak = 0;
+        }
+    }
+
+    private int getStreakFromYesterday() {
+        final TimeZone timeZone = TimeZone.getDefault();
+        final Date dateBefore = new Date(DateTime.forInstant(date.getDateObject().getTime(), timeZone)
+                .minusDays(1)
+                .getMilliseconds(timeZone));
+
+        final Servings servings = Servings.getByDateAndFood(dateBefore, food);
+        return servings != null ? servings.getStreak() : 0;
+    }
+
+    public int getStreak() {
+        return streak;
+    }
+
     public void increaseServings() {
+        final int servings = getServings();
+
         if (servings < food.getRecommendedServings()) {
-            servings++;
+            setServings(servings + 1);
         }
     }
 
     public void decreaseServings() {
+        final int servings = getServings();
+
         if (servings > 0) {
-            servings--;
+            setServings(servings - 1);
         }
     }
 
     @Override
     public String toString() {
-        return String.format("[%s] [%s] [Servings %s]", food.toString(), date.toString(), servings);
+        return String.format("[%s] [%s] [Servings %s]", food.toString(), date.toString(), getServings());
     }
 
     public static Servings getByDateAndFood(final Day day, final Food food) {
@@ -87,7 +125,7 @@ public class Servings extends TruncatableModel {
 
         if (servings == null) {
             servings = new Servings(Day.createDateIfDoesNotExist(date), food);
-            servings.servings = numServings;
+            servings.setServings(numServings);
             servings.save();
         }
 

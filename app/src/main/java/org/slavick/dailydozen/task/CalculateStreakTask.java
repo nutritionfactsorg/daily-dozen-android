@@ -7,13 +7,9 @@ import com.activeandroid.ActiveAndroid;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
-import org.slavick.dailydozen.model.ServingsStreak;
 
 import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
-
-import hirondelle.date4j.DateTime;
 
 public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Integer, Boolean> {
     private final Listener listener;
@@ -46,8 +42,6 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
         final List<Day> daysToCalculate = Day.getDaysAfter(startingDate);
         final int numDays = daysToCalculate.size();
 
-        int currentStreak = getCurrentStreak(startingDate, food);
-
         ActiveAndroid.beginTransaction();
 
         try {
@@ -59,14 +53,10 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
                 final Day day = daysToCalculate.get(i);
 
                 final Servings servingsOnDate = Servings.getByDateAndFood(day, food);
-
-                if (servingsOnDate != null && servingsOnDate.getServings() == food.getRecommendedServings()) {
-                    currentStreak++;
-                } else {
-                    currentStreak = 0;
+                if (servingsOnDate != null) {
+                    servingsOnDate.recalculateStreak();
+                    servingsOnDate.save();
                 }
-
-                ServingsStreak.setStreakOnDateForFood(day, food, currentStreak);
             }
 
             ActiveAndroid.setTransactionSuccessful();
@@ -75,14 +65,6 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
         }
 
         return true;
-    }
-
-    private int getCurrentStreak(Date startingDate, Food food) {
-        final TimeZone timeZone = TimeZone.getDefault();
-        final Date dateBefore = new Date(DateTime.forInstant(startingDate.getTime(), timeZone).minusDays(1).getMilliseconds(timeZone));
-
-        final ServingsStreak streak = ServingsStreak.getStreakOnDateForFood(dateBefore, food);
-        return streak != null ? streak.getStreak() : 0;
     }
 
     @Override
