@@ -26,8 +26,10 @@ public class StreakWidget extends IconTextView {
     }
 
     public void setDateAndFood(final Date date, final Food food) {
-        final int streak = ServingsStreak.getStreakOnDateForFood(date, food);
-        if (streak > 1) {
+        final ServingsStreak servingsStreak = ServingsStreak.getStreakOnDateForFood(date, food);
+        if (servingsStreak != null && servingsStreak.getStreak() > 1) {
+            final int streak = servingsStreak.getStreak();
+
             setVisibility(View.VISIBLE);
 
             setText(String.format("{fa-trophy} %s days", streak));

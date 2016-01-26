@@ -22,7 +22,7 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
     private List<Food> allFoods;
 
     public interface Listener {
-        void onComplete(boolean success);
+        void onCalculateStreaksComplete(boolean success);
     }
 
     public CalculateStreaksTask(Context context, Listener listener) {
@@ -106,7 +106,7 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
         Common.showToast(context, success ? R.string.calculate_streaks_success : R.string.calculate_streaks_failed);
 
         if (listener != null) {
-            listener.onComplete(success);
+            listener.onCalculateStreaksComplete(success);
         }
     }
 }

@@ -133,4 +133,11 @@ public class Day extends TruncatableModel {
         return new Select().from(Day.class)
                 .count();
     }
+
+    public static List<Day> getDaysAfter(final Date date) {
+        return new Select().from(Day.class)
+                .where("date >= ?", getDateAsLong(date))
+                .orderBy("date ASC")
+                .execute();
+    }
 }

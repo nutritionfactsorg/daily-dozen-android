@@ -19,13 +19,15 @@ import org.slavick.dailydozen.activity.FoodHistoryActivity;
 import org.slavick.dailydozen.activity.FoodInfoActivity;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
+import org.slavick.dailydozen.task.CalculateStreakTask;
+import org.slavick.dailydozen.task.StreakTaskInput;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-public class FoodServings extends RecyclerView.ViewHolder {
+public class FoodServings extends RecyclerView.ViewHolder implements CalculateStreakTask.Listener {
     private final static String TAG = FoodServings.class.getSimpleName();
 
     private Date date;
@@ -163,9 +165,7 @@ public class FoodServings extends RecyclerView.ViewHolder {
             servings.increaseServings();
             servings.save();
 
-            informListener();
-
-            // TODO: 1/25/16 recalculate streak
+            onServingsChanged();
 
             Log.d(TAG, String.format("Increased Servings for %s", servings));
         }
@@ -176,8 +176,6 @@ public class FoodServings extends RecyclerView.ViewHolder {
         if (servings != null) {
             servings.decreaseServings();
 
-            // TODO: 1/25/16 recalculate streak
-
             if (servings.getServings() > 0) {
                 servings.save();
 
@@ -187,11 +185,13 @@ public class FoodServings extends RecyclerView.ViewHolder {
                 servings.delete();
             }
 
-            informListener();
+            onServingsChanged();
         }
     }
 
-    private void informListener() {
+    private void onServingsChanged() {
+        new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(date, food));
+
         if (listener != null) {
             listener.onServingsChanged();
         }
@@ -199,6 +199,11 @@ public class FoodServings extends RecyclerView.ViewHolder {
 
     public void setListener(ClickListener listener) {
         this.listener = listener;
+    }
+
+    @Override
+    public void onCalculateStreakComplete(boolean success) {
+        initFoodStreak();
     }
 
     public interface ClickListener {

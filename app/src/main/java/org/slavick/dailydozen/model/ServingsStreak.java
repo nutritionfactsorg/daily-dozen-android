@@ -40,26 +40,42 @@ public class ServingsStreak extends TruncatableModel {
         return streak;
     }
 
-    public static int getStreakOnDateForFood(Date date, Food food) {
-        if (date != null) {
-            final Day day = Day.getByDate(date);
+    public void setStreak(int streak) {
+        this.streak = streak;
+    }
 
-            if (day != null && day.getId() != null && food != null && food.getId() != null) {
-                final ServingsStreak streak = new Select().from(ServingsStreak.class)
-                        .where("date_id = ?", day.getId())
-                        .and("food_id = ?", food.getId())
-                        .executeSingle();
+    public static ServingsStreak getStreakOnDateForFood(Date date, Food food) {
+        return date != null ? getStreakOnDateForFood(Day.getByDate(date), food) : null;
 
-                if (streak != null) {
-                    return streak.getStreak();
-                }
+    }
+
+    public static ServingsStreak getStreakOnDateForFood(Day day, Food food) {
+        if (day != null && day.getId() != null && food != null && food.getId() != null) {
+            final ServingsStreak streak = new Select().from(ServingsStreak.class)
+                    .where("date_id = ?", day.getId())
+                    .and("food_id = ?", food.getId())
+                    .executeSingle();
+
+            if (streak != null) {
+                return streak;
             }
         }
 
-        return 0;
+        return null;
     }
 
     public static boolean isEmpty() {
         return new Select().from(ServingsStreak.class).count() == 0;
+    }
+
+    public static void setStreakOnDateForFood(Day day, Food food, int currentStreak) {
+        ServingsStreak servingsStreak = getStreakOnDateForFood(day, food);
+
+        if (servingsStreak == null) {
+            servingsStreak = new ServingsStreak(day, food, currentStreak);
+        }
+
+        servingsStreak.setStreak(currentStreak);
+        servingsStreak.save();
     }
 }

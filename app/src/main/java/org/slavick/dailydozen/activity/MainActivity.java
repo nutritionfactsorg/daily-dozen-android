@@ -216,14 +216,14 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
     @Override
     public void onRestoreComplete(boolean success) {
         if (success) {
-            initDatePager();
+            new CalculateStreaksTask(this, this).execute();
         }
     }
 
     @Override
-    public void onComplete(boolean success) {
+    public void onCalculateStreaksComplete(boolean success) {
         if (success) {
-            Common.showToast(this, "YAY");
+            initDatePager();
         }
     }
 }
