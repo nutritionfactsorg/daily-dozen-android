@@ -44,8 +44,6 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     private ViewGroup vgCheckboxes;
     private IconTextView ivFoodHistory;
 
-    private ClickListener listener;
-
     public FoodServings(Context context) {
         super(context);
         init(context);
@@ -80,6 +78,10 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         final Servings servings = getServings();
         initCheckboxes(servings);
         initFoodStreak(servings);
+    }
+
+    private Servings getServings() {
+        return Servings.getByDateAndFood(date, food);
     }
 
     private void initFoodName() {
@@ -199,29 +201,11 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
 
     private void onServingsChanged() {
         new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(date, food));
-
-        if (listener != null) {
-            listener.onServingsChanged();
-        }
-
-        Bus.foodServingsChangedEvent(food);
-    }
-
-    public void setListener(ClickListener listener) {
-        this.listener = listener;
-    }
-
-    private Servings getServings() {
-        return Servings.getByDateAndFood(date, food);
     }
 
     @Override
     public void onCalculateStreakComplete(boolean success) {
-        initFoodStreak(getServings());
-    }
-
-    public interface ClickListener {
-        void onServingsChanged();
+        Bus.foodServingsChangedEvent(food);
     }
 
     public void onEvent(FoodServingsChangedEvent event) {

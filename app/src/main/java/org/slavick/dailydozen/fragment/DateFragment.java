@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.controller.Bus;
+import org.slavick.dailydozen.event.FoodServingsChangedEvent;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.widget.DateServings;
@@ -17,7 +18,7 @@ import org.slavick.dailydozen.widget.FoodServings;
 
 import java.util.Date;
 
-public class DateFragment extends Fragment implements FoodServings.ClickListener {
+public class DateFragment extends Fragment {
     private Date date;
 
     protected DateServings dateServings;
@@ -42,6 +43,8 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
 
         displayFormForDate();
 
+        Bus.register(this);
+
         return view;
     }
 
@@ -56,7 +59,6 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
 
                 for (Food food : Food.getAllFoods()) {
                     final FoodServings foodServings = new FoodServings(getContext());
-                    foodServings.setListener(this);
                     foodServings.setDateAndFood(date, food);
                     lvFoodServings.addView(foodServings);
 
@@ -70,6 +72,8 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
     public void onDestroyView() {
         super.onDestroyView();
 
+        Bus.unregister(this);
+
         for (int i = 0; i < lvFoodServings.getChildCount(); i++) {
             Bus.unregister(lvFoodServings.getChildAt(i));
         }
@@ -77,8 +81,7 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
         dateServings = null;
     }
 
-    @Override
-    public void onServingsChanged() {
+    public void onEvent(FoodServingsChangedEvent event) {
         updateServingsCount();
     }
 
