@@ -1,6 +1,7 @@
 package org.slavick.dailydozen.widget;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -25,13 +26,16 @@ public class StreakWidget extends IconTextView {
         if (streak > 1) {
             setVisibility(View.VISIBLE);
 
-            setText(String.format("{fa-trophy} %s days", streak));
+            setText(String.format("%s days", streak));
 
             if (streak > 1 && streak < 5) {
+                setTextColor(ContextCompat.getColor(getContext(), android.R.color.white));
                 setBackgroundResource(R.drawable.rounded_rectangle_bronze);
             } else if (streak >= 5 && streak < 7) {
+                setTextColor(ContextCompat.getColor(getContext(), android.R.color.black));
                 setBackgroundResource(R.drawable.rounded_rectangle_silver);
             } else if (streak >= 7) {
+                setTextColor(ContextCompat.getColor(getContext(), android.R.color.black));
                 setBackgroundResource(R.drawable.rounded_rectangle_gold);
             }
         } else {
