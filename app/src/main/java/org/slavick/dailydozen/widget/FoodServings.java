@@ -60,13 +60,11 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
         this.food = food;
 
         initFoodName();
-        initFoodStreak();
-        initCheckboxes();
-        initFoodInfo();
-    }
+        initFoodHistory();
 
-    public void setStreak(Date date, Food food) {
-        tvStreak.setDateAndFood(date, food);
+        final Servings servings = getServings();
+        initCheckboxes(servings);
+        initFoodStreak(servings);
     }
 
     private void initFoodName() {
@@ -75,8 +73,8 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
         tvName.setOnClickListener(getOnFoodNameClickListener());
     }
 
-    private void initFoodStreak() {
-        setStreak(date, food);
+    private void initFoodStreak(Servings servings) {
+        tvStreak.setStreak(servings != null ? servings.getStreak() : 0);
     }
 
     private View.OnClickListener getOnFoodNameClickListener() {
@@ -88,7 +86,7 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
         };
     }
 
-    private void initFoodInfo() {
+    private void initFoodHistory() {
         ivFoodHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,8 +101,8 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
         return intent;
     }
 
-    private void initCheckboxes() {
-        int numExistingServings = getNumExistingServings();
+    private void initCheckboxes(Servings servings) {
+        int numExistingServings = servings != null ? servings.getServings() : 0;
 
         final List<CheckBox> checkBoxes = new ArrayList<>();
 
@@ -124,11 +122,6 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
         for (CheckBox checkBox : checkBoxes) {
             vgCheckboxes.addView(checkBox);
         }
-    }
-
-    private int getNumExistingServings() {
-        final Servings servings = Servings.getByDateAndFood(date, food);
-        return servings != null ? servings.getServings() : 0;
     }
 
     private CheckBox createCheckBox(final boolean isChecked) {
@@ -172,7 +165,7 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
     }
 
     private void handleServingUnchecked() {
-        final Servings servings = Servings.getByDateAndFood(date, food);
+        final Servings servings = getServings();
         if (servings != null) {
             servings.decreaseServings();
 
@@ -201,9 +194,13 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
         this.listener = listener;
     }
 
+    private Servings getServings() {
+        return Servings.getByDateAndFood(date, food);
+    }
+
     @Override
     public void onCalculateStreakComplete(boolean success) {
-        initFoodStreak();
+        initFoodStreak(getServings());
     }
 
     public interface ClickListener {

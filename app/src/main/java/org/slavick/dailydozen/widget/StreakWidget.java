@@ -7,10 +7,6 @@ import android.view.View;
 import com.joanzapata.iconify.widget.IconTextView;
 
 import org.slavick.dailydozen.R;
-import org.slavick.dailydozen.model.Food;
-import org.slavick.dailydozen.model.Servings;
-
-import java.util.Date;
 
 public class StreakWidget extends IconTextView {
     public StreakWidget(Context context) {
@@ -25,11 +21,8 @@ public class StreakWidget extends IconTextView {
         super(context, attrs, defStyle);
     }
 
-    public void setDateAndFood(final Date date, final Food food) {
-        final Servings servings = Servings.getByDateAndFood(date, food);
-        if (servings != null && servings.getStreak() > 1) {
-            final int streak = servings.getStreak();
-
+    public void setStreak(int streak) {
+        if (streak > 1) {
             setVisibility(View.VISIBLE);
 
             setText(String.format("{fa-trophy} %s days", streak));
