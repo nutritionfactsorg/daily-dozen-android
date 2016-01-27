@@ -205,7 +205,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
 
     @Override
     public void onCalculateStreakComplete(boolean success) {
-        Bus.foodServingsChangedEvent(food);
+        Bus.foodServingsChangedEvent(date, food);
     }
 
     public void onEvent(FoodServingsChangedEvent event) {

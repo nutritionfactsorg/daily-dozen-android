@@ -4,6 +4,8 @@ import org.slavick.dailydozen.event.BaseEvent;
 import org.slavick.dailydozen.event.FoodServingsChangedEvent;
 import org.slavick.dailydozen.model.Food;
 
+import java.util.Date;
+
 import de.greenrobot.event.EventBus;
 
 public class Bus {
@@ -19,7 +21,7 @@ public class Bus {
         EventBus.getDefault().post(event);
     }
 
-    public static void foodServingsChangedEvent(Food food) {
-        post(new FoodServingsChangedEvent(food));
+    public static void foodServingsChangedEvent(Date date, Food food) {
+        post(new FoodServingsChangedEvent(date, food));
     }
 }
