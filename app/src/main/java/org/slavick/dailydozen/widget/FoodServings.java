@@ -3,12 +3,14 @@ package org.slavick.dailydozen.widget;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
+import android.util.AttributeSet;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.joanzapata.iconify.widget.IconTextView;
@@ -17,6 +19,8 @@ import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.activity.FoodHistoryActivity;
 import org.slavick.dailydozen.activity.FoodInfoActivity;
+import org.slavick.dailydozen.controller.Bus;
+import org.slavick.dailydozen.event.FoodServingsChangedEvent;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.task.CalculateStreakTask;
@@ -27,7 +31,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-public class FoodServings extends RecyclerView.ViewHolder implements CalculateStreakTask.Listener {
+public class FoodServings extends LinearLayout implements CalculateStreakTask.Listener {
     private final static String TAG = FoodServings.class.getSimpleName();
 
     private Date date;
@@ -42,17 +46,28 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
 
     private ClickListener listener;
 
-    public FoodServings(View itemView) {
-        super(itemView);
-
-        tvName = (TextView) itemView.findViewById(R.id.food_name);
-        tvStreak = (StreakWidget) itemView.findViewById(R.id.food_streak);
-        vgCheckboxes = (ViewGroup) itemView.findViewById(R.id.food_checkboxes);
-        ivFoodHistory = (IconTextView) itemView.findViewById(R.id.food_history);
+    public FoodServings(Context context) {
+        super(context);
+        init(context);
     }
 
-    private Context getContext() {
-        return itemView.getContext();
+    public FoodServings(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context);
+    }
+
+    public FoodServings(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context);
+    }
+
+    private void init(final Context context) {
+        LayoutInflater.from(context).inflate(R.layout.food_item, this);
+
+        tvName = (TextView) findViewById(R.id.food_name);
+        tvStreak = (StreakWidget) findViewById(R.id.food_streak);
+        vgCheckboxes = (ViewGroup) findViewById(R.id.food_checkboxes);
+        ivFoodHistory = (IconTextView) findViewById(R.id.food_history);
     }
 
     public void setDateAndFood(final Date date, final Food food) {
@@ -125,7 +140,7 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
     }
 
     private CheckBox createCheckBox(final boolean isChecked) {
-        final CheckBox checkBox = new CheckBox(itemView.getContext());
+        final CheckBox checkBox = new CheckBox(getContext());
 
         // It is necessary to set the checked status before we set the onCheckedChangeListener
         checkBox.setChecked(isChecked);
@@ -188,6 +203,8 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
         if (listener != null) {
             listener.onServingsChanged();
         }
+
+        Bus.foodServingsChangedEvent(food);
     }
 
     public void setListener(ClickListener listener) {
@@ -205,5 +222,11 @@ public class FoodServings extends RecyclerView.ViewHolder implements CalculateSt
 
     public interface ClickListener {
         void onServingsChanged();
+    }
+
+    public void onEvent(FoodServingsChangedEvent event) {
+        if (event.getFood().getName().equals(food.getName())) {
+            initFoodStreak(getServings());
+        }
     }
 }

@@ -3,15 +3,14 @@ package org.slavick.dailydozen.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
-import org.slavick.dailydozen.adapter.FoodServingsAdapter;
+import org.slavick.dailydozen.controller.Bus;
+import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.widget.DateServings;
 import org.slavick.dailydozen.widget.FoodServings;
@@ -22,7 +21,7 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
     private Date date;
 
     protected DateServings dateServings;
-    protected RecyclerView lvFoodServings;
+    protected ViewGroup lvFoodServings;
 
     public static DateFragment newInstance(final Date date) {
         final Bundle args = new Bundle();
@@ -39,7 +38,7 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
         final View view = inflater.inflate(R.layout.fragment_date, container, false);
 
         dateServings = (DateServings) view.findViewById(R.id.date_servings);
-        lvFoodServings = (RecyclerView) view.findViewById(R.id.date_food_servings);
+        lvFoodServings = (ViewGroup) view.findViewById(R.id.date_food_servings);
 
         displayFormForDate();
 
@@ -55,8 +54,14 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
             if (date != null) {
                 updateServingsCount();
 
-                lvFoodServings.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-                lvFoodServings.setAdapter(new FoodServingsAdapter(this, date));
+                for (Food food : Food.getAllFoods()) {
+                    final FoodServings foodServings = new FoodServings(getContext());
+                    foodServings.setListener(this);
+                    foodServings.setDateAndFood(date, food);
+                    lvFoodServings.addView(foodServings);
+
+                    Bus.register(foodServings);
+                }
             }
         }
     }
@@ -65,8 +70,11 @@ public class DateFragment extends Fragment implements FoodServings.ClickListener
     public void onDestroyView() {
         super.onDestroyView();
 
+        for (int i = 0; i < lvFoodServings.getChildCount(); i++) {
+            Bus.unregister(lvFoodServings.getChildAt(i));
+        }
+
         dateServings = null;
-        lvFoodServings = null;
     }
 
     @Override
