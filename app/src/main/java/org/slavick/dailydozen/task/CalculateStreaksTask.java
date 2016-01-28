@@ -18,8 +18,15 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
     private List<Day> allDays;
     private List<Food> allFoods;
 
-    public CalculateStreaksTask(Context context) {
+    private final Listener listener;
+
+    public interface Listener {
+        void onCalculateStreaksComplete(boolean success);
+    }
+
+    public CalculateStreaksTask(Context context, Listener listener) {
         super(context);
+        this.listener = listener;
     }
 
     @Override
@@ -85,5 +92,9 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
         // TODO: 1/25/16 make these sound better
         final Context context = getContext();
         Common.showToast(context, success ? R.string.calculate_streaks_success : R.string.calculate_streaks_failed);
+
+        if (listener != null) {
+            listener.onCalculateStreaksComplete(success);
+        }
     }
 }

@@ -16,6 +16,7 @@ import hirondelle.date4j.DateTime;
 
 public class Common {
     public static final String FILE_PROVIDER_AUTHORITY = "org.slavick.dailydozen.fileprovider";
+    public static final String PREFERENCES_FILE = "org.slavick.dailydozen.preferences";
 
     public static void fullyExpandList(final ListView list) {
         list.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, getListViewHeight(list)));
