@@ -47,6 +47,9 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
             progress.hide();
             cancel(true);
+        } else {
+            progress.setTitle(R.string.task_backup_title);
+            progress.show();
         }
     }
 

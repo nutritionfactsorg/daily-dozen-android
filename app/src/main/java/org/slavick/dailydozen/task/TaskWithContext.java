@@ -26,7 +26,6 @@ public abstract class TaskWithContext<Params, Progress, Result> extends AsyncTas
         progress = new ProgressDialog(getContext());
         progress.setIndeterminate(false);
         progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progress.show();
     }
 
     @Override

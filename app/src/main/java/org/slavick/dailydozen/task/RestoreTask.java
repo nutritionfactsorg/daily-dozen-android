@@ -43,6 +43,14 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     }
 
     @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+
+        progress.setTitle(R.string.task_restore_title);
+        progress.show();
+    }
+
+    @Override
     protected Boolean doInBackground(Uri... params) {
         final List<String> lines = readBackupFileLines(params[0]);
 

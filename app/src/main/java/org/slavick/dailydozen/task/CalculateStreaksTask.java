@@ -39,6 +39,9 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
         if (isEmpty(allDays) || isEmpty(allFoods)) {
             progress.hide();
             cancel(true);
+        } else {
+            progress.setTitle(R.string.task_calculating_streaks_title);
+            progress.show();
         }
     }
 
@@ -60,8 +63,10 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
                     }
 
                     final Servings servingsOnDate = Servings.getByDateAndFood(allDays.get(i), food);
-                    servingsOnDate.recalculateStreak();
-                    servingsOnDate.save();
+                    if (servingsOnDate != null) {
+                        servingsOnDate.recalculateStreak();
+                        servingsOnDate.save();
+                    }
 
                     publishProgress(i + 1, numDays);
                 }

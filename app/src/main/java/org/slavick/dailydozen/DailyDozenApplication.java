@@ -8,11 +8,10 @@ import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import org.slavick.dailydozen.controller.Prefs;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.FoodInfo;
-import org.slavick.dailydozen.task.CalculateStreaksTask;
 
 import io.fabric.sdk.android.Fabric;
 
-public class DailyDozenApplication extends Application implements CalculateStreaksTask.Listener {
+public class DailyDozenApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
@@ -23,15 +22,9 @@ public class DailyDozenApplication extends Application implements CalculateStrea
             Fabric.with(this, new Crashlytics());
         }
 
-        executeOneTimeTasks();
-
-        FoodInfo.init(this);
-    }
-
-    private void executeOneTimeTasks() {
         ensureAllFoodsExistInDatabase();
 
-        calculateStreaksAfterDatabaseUpgradeToV2();
+        FoodInfo.init(this);
     }
 
     private void ensureAllFoodsExistInDatabase() {
@@ -42,19 +35,6 @@ public class DailyDozenApplication extends Application implements CalculateStrea
                     getResources().getIntArray(R.array.food_quantities));
 
             prefs.setFoodsHaveBeenCreated();
-        }
-    }
-
-    private void calculateStreaksAfterDatabaseUpgradeToV2() {
-        if (!Prefs.getInstance(this).streaksHaveBeenCalculatedAfterDatabaseUpgradeToV2()) {
-            new CalculateStreaksTask(this, this).execute();
-        }
-    }
-
-    @Override
-    public void onCalculateStreaksComplete(boolean success) {
-        if (success) {
-            Prefs.getInstance(this).setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2();
         }
     }
 }
