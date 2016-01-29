@@ -15,9 +15,6 @@ import java.util.List;
 public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean> {
     private final static String TAG = CalculateStreaksTask.class.getSimpleName();
 
-    private List<Day> allDays;
-    private List<Food> allFoods;
-
     private final Listener listener;
 
     public interface Listener {
@@ -33,10 +30,7 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
     protected void onPreExecute() {
         super.onPreExecute();
 
-        allDays = Day.getAllDays();
-        allFoods = Food.getAllFoods();
-
-        if (isEmpty(allDays) || isEmpty(allFoods)) {
+        if (Day.isEmpty() || Food.isEmpty()) {
             progress.hide();
             cancel(true);
         } else {
@@ -51,9 +45,11 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
             return false;
         }
 
+        final List<Day> allDays = Day.getAllDays();
+
         final int numDays = allDays.size();
 
-        for (Food food : allFoods) {
+        for (Food food : Food.getAllFoods()) {
             ActiveAndroid.beginTransaction();
 
             try {

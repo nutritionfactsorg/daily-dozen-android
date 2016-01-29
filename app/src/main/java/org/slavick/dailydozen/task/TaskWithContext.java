@@ -32,7 +32,7 @@ public abstract class TaskWithContext<Params, Progress, Result> extends AsyncTas
     protected void onPostExecute(Result result) {
         super.onPostExecute(result);
 
-        progress.hide();
+        progress.dismiss();
     }
 
     protected boolean isEmpty(final List<?> list) {
