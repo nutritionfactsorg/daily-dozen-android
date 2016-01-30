@@ -11,6 +11,7 @@ import com.roomorama.caldroid.CaldroidListener;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 
@@ -20,8 +21,6 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
-
-import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends FoodLoadingActivity {
     protected ViewGroup vgLegend;
@@ -99,11 +98,11 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                 int i = 0;
                 cal.add(Calendar.MONTH, -2);
                 do {
-                    final Map<DateTime, Boolean> servings = Servings.getServingsOfFoodInMonth(foodId, cal);
+                    final Map<Day, Boolean> servings = Servings.getServingsOfFoodInMonth(foodId, cal);
 
-                    for (Map.Entry<DateTime, Boolean> serving : servings.entrySet()) {
+                    for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
                         datesWithEvents.put(
-                                new Date(serving.getKey().getMilliseconds(TimeZone.getDefault())),
+                                new Date(serving.getKey().getDateTime().getMilliseconds(TimeZone.getDefault())),
                                 serving.getValue() ?
                                         R.color.legend_recommended_servings : R.color.legend_less_than_recommended_servings);
                     }

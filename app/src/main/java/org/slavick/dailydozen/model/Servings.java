@@ -151,14 +151,10 @@ public class Servings extends TruncatableModel {
         return numServings;
     }
 
-    public static int getTotalServingsOnDate(final DateTime date) {
-        return getTotalServingsOnDate(Day.getByDate(date));
-    }
-
     // Any Dates in the return map indicate that at least one serving of the food was consumed on that date.
     // The Boolean for the date indicates whether the number of servings equals the recommended servings of the food.
-    public static Map<DateTime, Boolean> getServingsOfFoodInMonth(final long foodId, final Calendar calendar) {
-        final Map<DateTime, Boolean> servingsInMonth = new ArrayMap<>();
+    public static Map<Day, Boolean> getServingsOfFoodInMonth(final long foodId, final Calendar calendar) {
+        final Map<Day, Boolean> servingsInMonth = new ArrayMap<>();
 
         final Food food = Food.getById(foodId);
 
@@ -184,7 +180,7 @@ public class Servings extends TruncatableModel {
 
             for (Servings serving : servings) {
                 servingsInMonth.put(
-                        serving.getDate().getDateTime(),
+                        serving.getDate(),
                         serving.getServings() == food.getRecommendedServings());
             }
         }
