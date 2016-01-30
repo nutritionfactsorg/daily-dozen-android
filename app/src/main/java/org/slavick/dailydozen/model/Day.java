@@ -10,6 +10,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.TimeZone;
+
+import hirondelle.date4j.DateTime;
 
 @Table(name = "dates")
 public class Day extends TruncatableModel {
@@ -143,5 +146,18 @@ public class Day extends TruncatableModel {
                 .where("date >= ?", getDateAsLong(date))
                 .orderBy("date ASC")
                 .execute();
+    }
+
+    public static Date yesterday(final Day day) {
+        final TimeZone timeZone = TimeZone.getDefault();
+        return new Date(DateTime.forInstant(day.getDateObject().getTime(), timeZone)
+                .minusDays(1)
+                .getMilliseconds(timeZone));
+    }
+
+    public static boolean isToday(final Date date) {
+        // TODO: 1/29/16
+//        return date.equals(new Day(date).getDateObject());
+        return false;
     }
 }

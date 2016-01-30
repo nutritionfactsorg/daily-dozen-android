@@ -21,6 +21,7 @@ import org.slavick.dailydozen.activity.FoodHistoryActivity;
 import org.slavick.dailydozen.activity.FoodInfoActivity;
 import org.slavick.dailydozen.controller.Bus;
 import org.slavick.dailydozen.event.FoodServingsChangedEvent;
+import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.task.CalculateStreakTask;
@@ -200,7 +201,10 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void onServingsChanged() {
-        new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(date, food));
+        // TODO: 1/29/16 this should not be called when date is today
+        if (!Day.isToday(date)) {
+            new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(date, food));
+        }
     }
 
     @Override

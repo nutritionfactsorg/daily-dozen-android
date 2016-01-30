@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.TimeZone;
 
 import hirondelle.date4j.DateTime;
+import hugo.weaving.DebugLog;
 
 @Table(name = "servings")
 public class Servings extends TruncatableModel {
@@ -58,6 +59,7 @@ public class Servings extends TruncatableModel {
         recalculateStreak();
     }
 
+    @DebugLog
     public void recalculateStreak() {
         if (servings == food.getRecommendedServings()) {
             streak = getStreakFromYesterday() + 1;
@@ -68,11 +70,11 @@ public class Servings extends TruncatableModel {
 
     private int getStreakFromYesterday() {
         final TimeZone timeZone = TimeZone.getDefault();
-        final Date dateBefore = new Date(DateTime.forInstant(date.getDateObject().getTime(), timeZone)
+        final Date yesterday = new Date(DateTime.forInstant(date.getDateObject().getTime(), timeZone)
                 .minusDays(1)
                 .getMilliseconds(timeZone));
 
-        final Servings servings = Servings.getByDateAndFood(dateBefore, food);
+        final Servings servings = Servings.getByDateAndFood(yesterday, food);
         return servings != null ? servings.getStreak() : 0;
     }
 
@@ -125,7 +127,11 @@ public class Servings extends TruncatableModel {
 
         if (servings == null) {
             servings = new Servings(Day.createDateIfDoesNotExist(date), food);
-            servings.setServings(numServings);
+
+            if (numServings > 0) {
+                servings.setServings(numServings);
+            }
+
             servings.save();
         }
 
