@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.Date;
 import java.util.TimeZone;
 
 import hirondelle.date4j.DateTime;
@@ -48,7 +47,7 @@ public class Common {
 
     // Calculates the number of days between epoch == 0 (Jan 1, 1970) and now
     public static int getDaysSinceEpoch() {
-        return getEpoch().numDaysFrom(DateTime.forInstant(new Date().getTime(), TimeZone.getDefault())) + 1;
+        return getEpoch().numDaysFrom(DateTime.today(TimeZone.getDefault())) + 1;
     }
 
     @NonNull
