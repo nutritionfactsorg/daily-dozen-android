@@ -1,17 +1,12 @@
 package org.slavick.dailydozen;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import java.util.TimeZone;
-
-import hirondelle.date4j.DateTime;
 
 public class Common {
     public static final String FILE_PROVIDER_AUTHORITY = "org.slavick.dailydozen.fileprovider";
@@ -43,15 +38,5 @@ public class Common {
 
     public static void showToast(final Context context, final int stringId) {
         showToast(context, context.getString(stringId));
-    }
-
-    // Calculates the number of days between epoch == 0 (Jan 1, 1970) and now
-    public static int getDaysSinceEpoch() {
-        return getEpoch().numDaysFrom(DateTime.today(TimeZone.getDefault())) + 1;
-    }
-
-    @NonNull
-    public static DateTime getEpoch() {
-        return DateTime.forInstant(0, TimeZone.getDefault());
     }
 }

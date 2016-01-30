@@ -8,6 +8,7 @@ import com.activeandroid.query.Select;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.TimeZone;
 
 import hirondelle.date4j.DateTime;
 
@@ -41,6 +42,15 @@ public class Day extends TruncatableModel {
 
     private static String getDateAsQueryString(DateTime dateTime) {
         return dateTime.format("YYYYMMDD");
+    }
+
+    // Calculates the number of days between epoch == 0 (Jan 1, 1970) and now
+    public static int getNumDaysSinceEpoch() {
+        return getEpoch().numDaysFrom(DateTime.today(TimeZone.getDefault())) + 1;
+    }
+
+    public static DateTime getEpoch() {
+        return DateTime.forInstant(0, TimeZone.getDefault());
     }
 
     public DateTime getDateTime() {

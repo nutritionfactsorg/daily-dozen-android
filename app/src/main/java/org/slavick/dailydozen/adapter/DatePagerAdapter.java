@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.fragment.DateFragment;
+import org.slavick.dailydozen.model.Day;
 
 import java.util.Locale;
 
@@ -28,10 +28,10 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return Common.getDaysSinceEpoch();
+        return Day.getNumDaysSinceEpoch();
     }
 
     private DateTime getDateByOffsetFromEpoch(int position) {
-        return Common.getEpoch().plusDays(position);
+        return Day.getEpoch().plusDays(position);
     }
 }

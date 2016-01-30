@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
         // This bug was found by entering some data before bed and then bringing the app back to the foreground in the
         // morning to enter data. The app crashed immediately.
         // Solutions tried: datePagerAdapter.notifyDataSetChanged() did not work
-        if (daysSinceEpoch < Common.getDaysSinceEpoch()) {
+        if (daysSinceEpoch < Day.getNumDaysSinceEpoch()) {
             initDatePager();
         }
         
