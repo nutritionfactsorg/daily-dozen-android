@@ -160,4 +160,11 @@ public class Day extends TruncatableModel {
 //        return date.equals(new Day(date).getDateObject());
         return false;
     }
+
+    public static Day getEarliestDay() {
+        return new Select().from(Day.class)
+                .orderBy("date ASC")
+                .limit(1)
+                .executeSingle();
+    }
 }
