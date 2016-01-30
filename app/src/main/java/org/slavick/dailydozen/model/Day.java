@@ -40,7 +40,11 @@ public class Day extends TruncatableModel {
         setDate(date);
     }
 
-    private static String getDateAsQueryString(DateTime dateTime) {
+    public String getDateString() {
+        return getDateString(getDateTime());
+    }
+
+    public String getDateString(final DateTime dateTime) {
         return dateTime.format("YYYYMMDD");
     }
 
@@ -58,7 +62,7 @@ public class Day extends TruncatableModel {
     }
 
     private void setDate(DateTime dateTime) {
-        this.date = Long.valueOf(getDateAsQueryString(dateTime));
+        this.date = Long.valueOf(getDateString(dateTime));
 
         this.year = dateTime.getYear();
         this.month = dateTime.getMonth();
@@ -84,26 +88,11 @@ public class Day extends TruncatableModel {
                 .executeSingle();
     }
 
-    public static Day getByDate(DateTime date) {
-        return getByDate(getDateAsQueryString(date));
-    }
-
     public static Day createDateIfDoesNotExist(final String dateString) {
         Day day = getByDate(dateString);
 
         if (day == null) {
             day = new Day(fromDateString(dateString));
-            day.save();
-        }
-
-        return day;
-    }
-
-    public static Day createDateIfDoesNotExist(final DateTime date) {
-        Day day = getByDate(date);
-
-        if (day == null) {
-            day = new Day(date);
             day.save();
         }
 
@@ -132,8 +121,8 @@ public class Day extends TruncatableModel {
                 .executeSingle();
     }
 
-    public DateTime getDayBefore() {
-        return getDateTime().minusDays(1);
+    public Day getDayBefore() {
+        return new Day(getDateTime().minusDays(1));
     }
 
     private static DateTime fromDateString(String dateString) {
@@ -149,8 +138,16 @@ public class Day extends TruncatableModel {
 
     public List<Day> getDaysAfter() {
         return new Select().from(Day.class)
-                .where("date >= ?", getDateAsQueryString(getDateTime()))
+                .where("date >= ?", getDateString(getDateTime()))
                 .orderBy("date ASC")
                 .execute();
+    }
+
+    public static Day getByOffsetFromEpoch(int daysSinceEpoch) {
+        return new Day(getEpoch().plusDays(daysSinceEpoch));
+    }
+
+    public static String getTabTitleForDay(int daysSinceEpoch) {
+        return getEpoch().plusDays(daysSinceEpoch).format("WWW, MMM D", Locale.getDefault());
     }
 }

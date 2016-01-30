@@ -17,17 +17,15 @@ import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.widget.DateServings;
 import org.slavick.dailydozen.widget.FoodServings;
 
-import hirondelle.date4j.DateTime;
-
 public class DateFragment extends Fragment {
     private Day day;
 
     protected DateServings dateServings;
     protected ViewGroup lvFoodServings;
 
-    public static DateFragment newInstance(final DateTime dateTime) {
+    public static DateFragment newInstance(final Day day) {
         final Bundle args = new Bundle();
-        args.putString(Args.DATE, dateTime.format("YYYYMMDD"));
+        args.putString(Args.DATE, day.getDateString());
 
         final DateFragment dateFragment = new DateFragment();
         dateFragment.setArguments(args);

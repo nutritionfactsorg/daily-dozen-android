@@ -7,10 +7,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import org.slavick.dailydozen.fragment.DateFragment;
 import org.slavick.dailydozen.model.Day;
 
-import java.util.Locale;
-
-import hirondelle.date4j.DateTime;
-
 public class DatePagerAdapter extends FragmentStatePagerAdapter {
     public DatePagerAdapter(FragmentManager fm) {
         super(fm);
@@ -18,20 +14,16 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return DateFragment.newInstance(getDateByOffsetFromEpoch(position));
+        return DateFragment.newInstance(Day.getByOffsetFromEpoch(position));
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return getDateByOffsetFromEpoch(position).format("WWW, MMM D", Locale.getDefault());
+        return Day.getTabTitleForDay(position);
     }
 
     @Override
     public int getCount() {
         return Day.getNumDaysSinceEpoch();
-    }
-
-    private DateTime getDateByOffsetFromEpoch(int position) {
-        return Day.getEpoch().plusDays(position);
     }
 }

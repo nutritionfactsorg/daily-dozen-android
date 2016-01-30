@@ -12,8 +12,6 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 
-import hirondelle.date4j.DateTime;
-
 @Table(name = "servings")
 public class Servings extends TruncatableModel {
     private final static String TAG = Servings.class.getSimpleName();
@@ -105,15 +103,13 @@ public class Servings extends TruncatableModel {
         return null;
     }
 
-    public static Servings getByDateAndFood(final DateTime date, final Food food) {
-        return date != null ? getByDateAndFood(Day.getByDate(date), food) : null;
-    }
-
     public static Servings createServingsIfDoesNotExist(final Day day, final Food food) {
         return createServingsIfDoesNotExist(day, food, 0);
     }
 
     public static Servings createServingsIfDoesNotExist(final Day day, final Food food, final int numServings) {
+        // TODO: 1/30/16 handle null days
+
         Servings servings = getByDateAndFood(day, food);
 
         if (servings == null) {

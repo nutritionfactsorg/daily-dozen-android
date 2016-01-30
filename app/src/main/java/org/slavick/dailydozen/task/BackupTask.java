@@ -16,8 +16,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import hirondelle.date4j.DateTime;
-
 public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     private final static String TAG = BackupTask.class.getSimpleName();
 
@@ -136,11 +134,9 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
         line.add(String.valueOf(day.getDate()));
 
-        final DateTime dateTime = day.getDateTime();
-
         // TODO: 1/5/16 this is horribly inefficient, but good enough for now
         for (Food food : allFoods) {
-            final Servings serving = Servings.getByDateAndFood(dateTime, food);
+            final Servings serving = Servings.getByDateAndFood(day, food);
             line.add(serving != null ? String.valueOf(serving.getServings()) : "0");
         }
 
