@@ -9,10 +9,8 @@ import com.activeandroid.query.Select;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.TimeZone;
 
 import hirondelle.date4j.DateTime;
 import hugo.weaving.DebugLog;
@@ -62,19 +60,14 @@ public class Servings extends TruncatableModel {
     @DebugLog
     public void recalculateStreak() {
         if (servings == food.getRecommendedServings()) {
-            streak = getStreakFromYesterday() + 1;
+            streak = getStreakFromDayBefore() + 1;
         } else if (servings < food.getRecommendedServings()) {
             streak = 0;
         }
     }
 
-    private int getStreakFromYesterday() {
-        final TimeZone timeZone = TimeZone.getDefault();
-        final Date yesterday = new Date(DateTime.forInstant(date.getDateObject().getTime(), timeZone)
-                .minusDays(1)
-                .getMilliseconds(timeZone));
-
-        final Servings servings = Servings.getByDateAndFood(yesterday, food);
+    private int getStreakFromDayBefore() {
+        final Servings servings = Servings.getByDateAndFood(date.getDayBefore(), food);
         return servings != null ? servings.getStreak() : 0;
     }
 
@@ -114,15 +107,15 @@ public class Servings extends TruncatableModel {
         return null;
     }
 
-    public static Servings getByDateAndFood(final Date date, final Food food) {
+    public static Servings getByDateAndFood(final DateTime date, final Food food) {
         return date != null ? getByDateAndFood(Day.getByDate(date), food) : null;
     }
 
-    public static Servings createServingsIfDoesNotExist(final Date date, final Food food) {
+    public static Servings createServingsIfDoesNotExist(final DateTime date, final Food food) {
         return createServingsIfDoesNotExist(date, food, 0);
     }
 
-    public static Servings createServingsIfDoesNotExist(final Date date, final Food food, final int numServings) {
+    public static Servings createServingsIfDoesNotExist(final DateTime date, final Food food, final int numServings) {
         Servings servings = getByDateAndFood(date, food);
 
         if (servings == null) {
@@ -160,14 +153,14 @@ public class Servings extends TruncatableModel {
         return numServings;
     }
 
-    public static int getTotalServingsOnDate(final Date date) {
+    public static int getTotalServingsOnDate(final DateTime date) {
         return getTotalServingsOnDate(Day.getByDate(date));
     }
 
     // Any Dates in the return map indicate that at least one serving of the food was consumed on that date.
     // The Boolean for the date indicates whether the number of servings equals the recommended servings of the food.
-    public static Map<Date, Boolean> getServingsOfFoodInMonth(final long foodId, final Calendar calendar) {
-        final Map<Date, Boolean> servingsInMonth = new ArrayMap<>();
+    public static Map<DateTime, Boolean> getServingsOfFoodInMonth(final long foodId, final Calendar calendar) {
+        final Map<DateTime, Boolean> servingsInMonth = new ArrayMap<>();
 
         final Food food = Food.getById(foodId);
 

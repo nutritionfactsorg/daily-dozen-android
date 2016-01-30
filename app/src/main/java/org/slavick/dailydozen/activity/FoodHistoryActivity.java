@@ -19,6 +19,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.TimeZone;
+
+import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends FoodLoadingActivity {
     protected ViewGroup vgLegend;
@@ -96,11 +99,13 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                 int i = 0;
                 cal.add(Calendar.MONTH, -2);
                 do {
-                    final Map<Date, Boolean> servings = Servings.getServingsOfFoodInMonth(foodId, cal);
+                    final Map<DateTime, Boolean> servings = Servings.getServingsOfFoodInMonth(foodId, cal);
 
-                    for (Map.Entry<Date, Boolean> serving : servings.entrySet()) {
-                        datesWithEvents.put(serving.getKey(), serving.getValue() ?
-                                R.color.legend_recommended_servings : R.color.legend_less_than_recommended_servings);
+                    for (Map.Entry<DateTime, Boolean> serving : servings.entrySet()) {
+                        datesWithEvents.put(
+                                new Date(serving.getKey().getMilliseconds(TimeZone.getDefault())),
+                                serving.getValue() ?
+                                        R.color.legend_recommended_servings : R.color.legend_less_than_recommended_servings);
                     }
 
                     cal.add(Calendar.MONTH, 1);

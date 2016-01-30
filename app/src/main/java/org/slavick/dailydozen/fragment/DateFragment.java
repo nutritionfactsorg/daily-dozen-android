@@ -16,17 +16,17 @@ import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.widget.DateServings;
 import org.slavick.dailydozen.widget.FoodServings;
 
-import java.util.Date;
+import hirondelle.date4j.DateTime;
 
 public class DateFragment extends Fragment {
-    private Date date;
+    private DateTime dateTime;
 
     protected DateServings dateServings;
     protected ViewGroup lvFoodServings;
 
-    public static DateFragment newInstance(final Date date) {
+    public static DateFragment newInstance(final DateTime dateTime) {
         final Bundle args = new Bundle();
-        args.putSerializable(Args.DATE, date);
+        args.putSerializable(Args.DATE, dateTime);
 
         final DateFragment dateFragment = new DateFragment();
         dateFragment.setArguments(args);
@@ -52,14 +52,14 @@ public class DateFragment extends Fragment {
         final Bundle args = getArguments();
 
         if (args != null && args.containsKey(Args.DATE)) {
-            date = (Date) args.getSerializable(Args.DATE);
+            dateTime = (DateTime) args.getSerializable(Args.DATE);
 
-            if (date != null) {
+            if (dateTime != null) {
                 updateServingsCount();
 
                 for (Food food : Food.getAllFoods()) {
                     final FoodServings foodServings = new FoodServings(getContext());
-                    foodServings.setDateAndFood(date, food);
+                    foodServings.setDateAndFood(dateTime, food);
                     lvFoodServings.addView(foodServings);
 
                     Bus.register(foodServings);
@@ -82,12 +82,12 @@ public class DateFragment extends Fragment {
     }
 
     public void onEvent(FoodServingsChangedEvent event) {
-        if (event.getDate().equals(date)) {
+        if (event.getDate().equals(dateTime)) {
             updateServingsCount();
         }
     }
 
     private void updateServingsCount() {
-        dateServings.setServings(Servings.getTotalServingsOnDate(date));
+        dateServings.setServings(Servings.getTotalServingsOnDate(dateTime));
     }
 }

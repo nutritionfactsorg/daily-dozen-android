@@ -21,7 +21,6 @@ import org.slavick.dailydozen.activity.FoodHistoryActivity;
 import org.slavick.dailydozen.activity.FoodInfoActivity;
 import org.slavick.dailydozen.controller.Bus;
 import org.slavick.dailydozen.event.FoodServingsChangedEvent;
-import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.task.CalculateStreakTask;
@@ -29,13 +28,15 @@ import org.slavick.dailydozen.task.StreakTaskInput;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
+
+import hirondelle.date4j.DateTime;
 
 public class FoodServings extends LinearLayout implements CalculateStreakTask.Listener {
     private final static String TAG = FoodServings.class.getSimpleName();
 
-    private Date date;
+    private DateTime dateTime;
     private Food food;
 
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
@@ -69,8 +70,8 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         ivFoodHistory = (IconTextView) findViewById(R.id.food_history);
     }
 
-    public void setDateAndFood(final Date date, final Food food) {
-        this.date = date;
+    public void setDateAndFood(final DateTime dateTime, final Food food) {
+        this.dateTime = dateTime;
         this.food = food;
 
         initFoodName();
@@ -82,7 +83,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private Servings getServings() {
-        return Servings.getByDateAndFood(date, food);
+        return Servings.getByDateAndFood(dateTime, food);
     }
 
     private void initFoodName() {
@@ -171,7 +172,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void handleServingChecked() {
-        final Servings servings = Servings.createServingsIfDoesNotExist(date, food);
+        final Servings servings = Servings.createServingsIfDoesNotExist(dateTime, food);
         if (servings != null) {
             servings.increaseServings();
             servings.save();
@@ -201,15 +202,15 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void onServingsChanged() {
-        // TODO: 1/29/16 this should not be called when date is today
-        if (!Day.isToday(date)) {
-            new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(date, food));
+        // No need to recalculate streaks if today's servings are changed
+        if (DateTime.today(TimeZone.getDefault()).equals(dateTime)) {
+        new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(dateTime, food));
         }
     }
 
     @Override
     public void onCalculateStreakComplete(boolean success) {
-        Bus.foodServingsChangedEvent(date, food);
+        Bus.foodServingsChangedEvent(dateTime, food);
     }
 
     public void onEvent(FoodServingsChangedEvent event) {

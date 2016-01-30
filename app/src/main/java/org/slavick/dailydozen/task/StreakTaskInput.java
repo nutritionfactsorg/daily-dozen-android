@@ -2,18 +2,18 @@ package org.slavick.dailydozen.task;
 
 import org.slavick.dailydozen.model.Food;
 
-import java.util.Date;
+import hirondelle.date4j.DateTime;
 
 public class StreakTaskInput {
-    private final Date startingDate;
+    private final DateTime startingDate;
     private final Food food;
 
-    public StreakTaskInput(final Date startingDate, final Food food) {
+    public StreakTaskInput(final DateTime startingDate, final Food food) {
         this.startingDate = startingDate;
         this.food = food;
     }
 
-    public Date getStartingDate() {
+    public DateTime getStartingDate() {
         return startingDate;
     }
 

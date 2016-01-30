@@ -8,8 +8,9 @@ import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
 
-import java.util.Date;
 import java.util.List;
+
+import hirondelle.date4j.DateTime;
 
 public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Integer, Boolean> {
     private final Listener listener;
@@ -36,7 +37,7 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
             return false;
         }
 
-        final Date startingDate = input.getStartingDate();
+        final DateTime startingDate = input.getStartingDate();
         final Food food = input.getFood();
 
         final List<Day> daysToCalculate = Day.getDaysAfter(startingDate);

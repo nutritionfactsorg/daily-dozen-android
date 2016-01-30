@@ -18,9 +18,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
+import hirondelle.date4j.DateTime;
 import hugo.weaving.DebugLog;
 
 public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
@@ -119,8 +119,8 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
         try {
             final String[] values = line.split(",");
-            final Day day = Day.createDateIfDoesNotExist(Long.valueOf(values[0]));
-            final Date date = day.getDateObject();
+            final Day day = Day.createDateIfDoesNotExist(Day.fromDateString(values[0]));
+            final DateTime date = day.getDateObject();
 
             // Start at 1 to skip the first header column which is "Date" and not a food
             for (int j = 1; j < headers.length; j++) {

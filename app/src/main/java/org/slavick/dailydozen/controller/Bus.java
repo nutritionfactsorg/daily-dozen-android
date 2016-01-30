@@ -4,9 +4,8 @@ import org.slavick.dailydozen.event.BaseEvent;
 import org.slavick.dailydozen.event.FoodServingsChangedEvent;
 import org.slavick.dailydozen.model.Food;
 
-import java.util.Date;
-
 import de.greenrobot.event.EventBus;
+import hirondelle.date4j.DateTime;
 
 public class Bus {
     public static void register(Object object) {
@@ -21,7 +20,7 @@ public class Bus {
         EventBus.getDefault().post(event);
     }
 
-    public static void foodServingsChangedEvent(Date date, Food food) {
-        post(new FoodServingsChangedEvent(date, food));
+    public static void foodServingsChangedEvent(DateTime dateTime, Food food) {
+        post(new FoodServingsChangedEvent(dateTime, food));
     }
 }

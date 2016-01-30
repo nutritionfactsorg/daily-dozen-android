@@ -7,29 +7,23 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.fragment.DateFragment;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
-import java.util.TimeZone;
+
+import hirondelle.date4j.DateTime;
 
 public class DatePagerAdapter extends FragmentStatePagerAdapter {
-    private DateFormat tabTitleFormatter;
-
     public DatePagerAdapter(FragmentManager fm) {
         super(fm);
-
-        tabTitleFormatter = new SimpleDateFormat("EEE, MMM d", Locale.getDefault());
     }
 
     @Override
     public Fragment getItem(int position) {
-        return DateFragment.newInstance(getDateByOffsetFromBeginning(position));
+        return DateFragment.newInstance(getDateByOffsetFromEpoch(position));
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return tabTitleFormatter.format(getDateByOffsetFromBeginning(position));
+        return getDateByOffsetFromEpoch(position).format("WWW, MMM D", Locale.getDefault());
     }
 
     @Override
@@ -37,8 +31,7 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
         return Common.getDaysSinceEpoch();
     }
 
-    private Date getDateByOffsetFromBeginning(int position) {
-        // Given the position the user is at in the pager, calculate the corresponding date
-        return new Date(Common.getEpoch().plusDays(position).getMilliseconds(TimeZone.getDefault()));
+    private DateTime getDateByOffsetFromEpoch(int position) {
+        return Common.getEpoch().plusDays(position);
     }
 }
