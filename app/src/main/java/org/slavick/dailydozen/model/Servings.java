@@ -109,15 +109,15 @@ public class Servings extends TruncatableModel {
         return date != null ? getByDateAndFood(Day.getByDate(date), food) : null;
     }
 
-    public static Servings createServingsIfDoesNotExist(final DateTime date, final Food food) {
-        return createServingsIfDoesNotExist(date, food, 0);
+    public static Servings createServingsIfDoesNotExist(final Day day, final Food food) {
+        return createServingsIfDoesNotExist(day, food, 0);
     }
 
-    public static Servings createServingsIfDoesNotExist(final DateTime date, final Food food, final int numServings) {
-        Servings servings = getByDateAndFood(date, food);
+    public static Servings createServingsIfDoesNotExist(final Day day, final Food food, final int numServings) {
+        Servings servings = getByDateAndFood(day, food);
 
         if (servings == null) {
-            servings = new Servings(Day.createDateIfDoesNotExist(date), food);
+            servings = new Servings(day, food);
 
             if (numServings > 0) {
                 servings.setServings(numServings);

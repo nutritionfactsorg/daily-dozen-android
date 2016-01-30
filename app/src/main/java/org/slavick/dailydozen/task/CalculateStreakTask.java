@@ -10,8 +10,6 @@ import org.slavick.dailydozen.model.Servings;
 
 import java.util.List;
 
-import hirondelle.date4j.DateTime;
-
 public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Integer, Boolean> {
     private final Listener listener;
 
@@ -37,10 +35,10 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
             return false;
         }
 
-        final DateTime startingDate = input.getStartingDate();
+        final Day startingDay = input.getStartingDay();
         final Food food = input.getFood();
 
-        final List<Day> daysToCalculate = Day.getDaysAfter(startingDate);
+        final List<Day> daysToCalculate = startingDay.getDaysAfter();
         final int numDays = daysToCalculate.size();
 
         ActiveAndroid.beginTransaction();

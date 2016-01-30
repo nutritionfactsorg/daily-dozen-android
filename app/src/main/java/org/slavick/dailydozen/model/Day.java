@@ -39,8 +39,8 @@ public class Day extends TruncatableModel {
         setDate(date);
     }
 
-    public static long getDateAsLong(DateTime dateTime) {
-        return Long.valueOf(dateTime.format("YYYYMMDD"));
+    private static String getDateAsQueryString(DateTime dateTime) {
+        return dateTime.format("YYYYMMDD");
     }
 
     public DateTime getDateTime() {
@@ -48,7 +48,7 @@ public class Day extends TruncatableModel {
     }
 
     private void setDate(DateTime dateTime) {
-        this.date = getDateAsLong(dateTime);
+        this.date = Long.valueOf(getDateAsQueryString(dateTime));
 
         this.year = dateTime.getYear();
         this.month = dateTime.getMonth();
@@ -68,12 +68,25 @@ public class Day extends TruncatableModel {
         return getDateTime().format("WWW", Locale.getDefault());
     }
 
-    public static Day getByDate(long date) {
-        return new Select().from(Day.class).where("date = ?", date).executeSingle();
+    public static Day getByDate(String dateString) {
+        return new Select().from(Day.class)
+                .where("date = ?", dateString)
+                .executeSingle();
     }
 
     public static Day getByDate(DateTime date) {
-        return getByDate(getDateAsLong(date));
+        return getByDate(getDateAsQueryString(date));
+    }
+
+    public static Day createDateIfDoesNotExist(final String dateString) {
+        Day day = getByDate(dateString);
+
+        if (day == null) {
+            day = new Day(fromDateString(dateString));
+            day.save();
+        }
+
+        return day;
     }
 
     public static Day createDateIfDoesNotExist(final DateTime date) {
@@ -102,13 +115,6 @@ public class Day extends TruncatableModel {
         return getCount() == 0;
     }
 
-    public static List<Day> getDaysAfter(final DateTime date) {
-        return new Select().from(Day.class)
-                .where("date >= ?", getDateAsLong(date))
-                .orderBy("date ASC")
-                .execute();
-    }
-
     public static Day getEarliestDay() {
         return new Select().from(Day.class)
                 .orderBy("date ASC")
@@ -120,7 +126,7 @@ public class Day extends TruncatableModel {
         return getDateTime().minusDays(1);
     }
 
-    public static DateTime fromDateString(String dateString) {
+    private static DateTime fromDateString(String dateString) {
         if (!TextUtils.isEmpty(dateString)) {
             return DateTime.forDateOnly(
                     Integer.valueOf(dateString.substring(0, 4)),  // year
@@ -129,5 +135,12 @@ public class Day extends TruncatableModel {
         }
 
         return null;
+    }
+
+    public List<Day> getDaysAfter() {
+        return new Select().from(Day.class)
+                .where("date >= ?", getDateAsQueryString(getDateTime()))
+                .orderBy("date ASC")
+                .execute();
     }
 }

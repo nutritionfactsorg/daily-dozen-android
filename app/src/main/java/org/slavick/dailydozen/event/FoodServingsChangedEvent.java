@@ -1,20 +1,19 @@
 package org.slavick.dailydozen.event;
 
+import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
-
-import hirondelle.date4j.DateTime;
 
 public class FoodServingsChangedEvent extends BaseEvent {
     private final Food food;
-    private final DateTime dateTime;
+    private final Day day;
 
-    public FoodServingsChangedEvent(DateTime dateTime, Food food) {
-        this.dateTime = dateTime;
+    public FoodServingsChangedEvent(Day day, Food food) {
+        this.day = day;
         this.food = food;
     }
 
-    public DateTime getDate() {
-        return dateTime;
+    public Day getDate() {
+        return day;
     }
 
     public Food getFood() {
