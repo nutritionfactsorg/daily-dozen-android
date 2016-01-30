@@ -1,5 +1,7 @@
 package org.slavick.dailydozen.model;
 
+import android.text.TextUtils;
+
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
@@ -41,7 +43,7 @@ public class Day extends TruncatableModel {
         return Long.valueOf(dateTime.format("YYYYMMDD"));
     }
 
-    public DateTime getDateObject() {
+    public DateTime getDateTime() {
         return DateTime.forDateOnly(year, month, day);
     }
 
@@ -59,11 +61,11 @@ public class Day extends TruncatableModel {
 
     @Override
     public String toString() {
-        return getDateObject().format("WWW, MMM D", Locale.getDefault());
+        return getDateTime().format("WWW, MMM D", Locale.getDefault());
     }
 
     public String getDayOfWeek() {
-        return getDateObject().format("WWW", Locale.getDefault());
+        return getDateTime().format("WWW", Locale.getDefault());
     }
 
     public static Day getByDate(long date) {
@@ -115,14 +117,17 @@ public class Day extends TruncatableModel {
     }
 
     public DateTime getDayBefore() {
-        return getDateObject().minusDays(1);
+        return getDateTime().minusDays(1);
     }
 
     public static DateTime fromDateString(String dateString) {
-        String year = dateString.substring(0, 4);
-        String month = dateString.substring(4, 6);
-        String day = dateString.substring(6, 8);
+        if (!TextUtils.isEmpty(dateString)) {
+            return DateTime.forDateOnly(
+                    Integer.valueOf(dateString.substring(0, 4)),  // year
+                    Integer.valueOf(dateString.substring(4, 6)),  // month
+                    Integer.valueOf(dateString.substring(6, 8))); // day
+        }
 
-        return DateTime.forDateOnly(Integer.valueOf(year), Integer.valueOf(month), Integer.valueOf(day));
+        return null;
     }
 }

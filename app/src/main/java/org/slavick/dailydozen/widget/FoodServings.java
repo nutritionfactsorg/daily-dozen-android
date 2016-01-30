@@ -29,7 +29,6 @@ import org.slavick.dailydozen.task.StreakTaskInput;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.TimeZone;
 
 import hirondelle.date4j.DateTime;
 
@@ -202,10 +201,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void onServingsChanged() {
-        // No need to recalculate streaks if today's servings are changed
-        if (DateTime.today(TimeZone.getDefault()).equals(dateTime)) {
         new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(dateTime, food));
-        }
     }
 
     @Override

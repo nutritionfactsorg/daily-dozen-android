@@ -136,11 +136,11 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
         line.add(String.valueOf(day.getDate()));
 
-        final DateTime date = day.getDateObject();
+        final DateTime dateTime = day.getDateTime();
 
         // TODO: 1/5/16 this is horribly inefficient, but good enough for now
         for (Food food : allFoods) {
-            final Servings serving = Servings.getByDateAndFood(date, food);
+            final Servings serving = Servings.getByDateAndFood(dateTime, food);
             line.add(serving != null ? String.valueOf(serving.getServings()) : "0");
         }
 

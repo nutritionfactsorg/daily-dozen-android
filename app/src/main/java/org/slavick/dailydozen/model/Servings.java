@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Map;
 
 import hirondelle.date4j.DateTime;
-import hugo.weaving.DebugLog;
 
 @Table(name = "servings")
 public class Servings extends TruncatableModel {
@@ -57,7 +56,6 @@ public class Servings extends TruncatableModel {
         recalculateStreak();
     }
 
-    @DebugLog
     public void recalculateStreak() {
         if (servings == food.getRecommendedServings()) {
             streak = getStreakFromDayBefore() + 1;
@@ -186,7 +184,7 @@ public class Servings extends TruncatableModel {
 
             for (Servings serving : servings) {
                 servingsInMonth.put(
-                        serving.getDate().getDateObject(),
+                        serving.getDate().getDateTime(),
                         serving.getServings() == food.getRecommendedServings());
             }
         }
