@@ -46,31 +46,33 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
 
         final List<Day> allDays = Day.getAllDays();
 
-        final int numDays = allDays.size();
+        final List<Food> allFoods = Food.getAllFoods();
+        final int numFoods = allFoods.size();
 
-        for (Food food : Food.getAllFoods()) {
+        for (int i = 0; i < numFoods; i++) {
             ActiveAndroid.beginTransaction();
 
+            Food food = allFoods.get(i);
+
             try {
-                for (int i = 0; i < numDays; i++) {
+                for (Day day : allDays) {
                     if (isCancelled()) {
                         return false;
                     }
 
-                    final Servings servingsOnDate = Servings.getByDateAndFood(allDays.get(i), food);
+                    final Servings servingsOnDate = Servings.getByDateAndFood(day, food);
                     if (servingsOnDate != null) {
                         servingsOnDate.recalculateStreak();
                         servingsOnDate.save();
                     }
-
-                    // TODO: 1/31/16 fix this
-                    publishProgress(i + 1, numDays);
                 }
 
                 ActiveAndroid.setTransactionSuccessful();
             } finally {
                 ActiveAndroid.endTransaction();
             }
+
+            publishProgress(i + 1, numFoods);
         }
 
         return true;
