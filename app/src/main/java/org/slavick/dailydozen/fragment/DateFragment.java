@@ -79,7 +79,7 @@ public class DateFragment extends Fragment {
     }
 
     public void onEvent(FoodServingsChangedEvent event) {
-        if (event.getDate().getDateString().equals(dateString)) {
+        if (event.getDateString().equals(dateString)) {
             updateServingsCount();
         }
     }

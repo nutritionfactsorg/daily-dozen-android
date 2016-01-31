@@ -21,6 +21,6 @@ public class Bus {
     }
 
     public static void foodServingsChangedEvent(Day day, Food food) {
-        post(new FoodServingsChangedEvent(day, food));
+        post(new FoodServingsChangedEvent(day.getDateString(), food.getName()));
     }
 }

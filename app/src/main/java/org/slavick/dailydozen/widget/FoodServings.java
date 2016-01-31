@@ -215,7 +215,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     public void onEvent(FoodServingsChangedEvent event) {
-        if (event.getFood().getName().equals(food.getName())) {
+        if (event.getFoodName().equals(food.getName())) {
             initFoodStreak(getServings());
         }
     }

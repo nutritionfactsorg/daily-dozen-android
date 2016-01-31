@@ -1,22 +1,19 @@
 package org.slavick.dailydozen.event;
 
-import org.slavick.dailydozen.model.Day;
-import org.slavick.dailydozen.model.Food;
-
 public class FoodServingsChangedEvent extends BaseEvent {
-    private final Food food;
-    private final Day day;
+    private final String dateString;
+    private final String foodName;
 
-    public FoodServingsChangedEvent(Day day, Food food) {
-        this.day = day;
-        this.food = food;
+    public FoodServingsChangedEvent(String dateString, String foodName) {
+        this.dateString = dateString;
+        this.foodName = foodName;
     }
 
-    public Day getDate() {
-        return day;
+    public String getDateString() {
+        return dateString;
     }
 
-    public Food getFood() {
-        return food;
+    public String getFoodName() {
+        return foodName;
     }
 }
