@@ -21,12 +21,15 @@ import org.slavick.dailydozen.adapter.DatePagerAdapter;
 import org.slavick.dailydozen.controller.PermissionController;
 import org.slavick.dailydozen.controller.Prefs;
 import org.slavick.dailydozen.model.Day;
+import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.task.BackupTask;
+import org.slavick.dailydozen.task.CalculateStreaksTask;
 import org.slavick.dailydozen.task.RestoreTask;
 
 import java.io.File;
 
-public class MainActivity extends AppCompatActivity implements BackupTask.Listener, RestoreTask.Listener {
+public class MainActivity extends AppCompatActivity
+        implements BackupTask.Listener, RestoreTask.Listener, CalculateStreaksTask.Listener {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     protected ViewPager datePager;
@@ -51,7 +54,21 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
 
     private void calculateStreaksAfterDatabaseUpgradeToV2() {
         if (!Prefs.getInstance(this).streaksHaveBeenCalculatedAfterDatabaseUpgradeToV2()) {
-            // TODO: 1/29/16 auto backup and restore to calculate streaks
+            if (Servings.isEmpty()) {
+                Prefs.getInstance(this).setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2();
+            } else {
+                new AlertDialog.Builder(this)
+                        .setCancelable(false)
+                        .setTitle("New feature: Streaks!")
+                        .setMessage("Your database will now be upgraded to support the new streaks feature.")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                new CalculateStreaksTask(MainActivity.this, MainActivity.this).execute();
+                            }
+                        })
+                        .create().show();
+            }
         }
     }
 
@@ -209,9 +226,6 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
 
     @Override
     public void onBackupComplete(boolean success) {
-        // TODO: 1/29/16 this needs to determine if the backup was user invoked or system invoked
-        // if user invoked, then share the file
-        // if system invoked, restore the file immediately
         if (success) {
             shareBackupFile();
         }
@@ -219,9 +233,16 @@ public class MainActivity extends AppCompatActivity implements BackupTask.Listen
 
     @Override
     public void onRestoreComplete(boolean success) {
-        // TODO: 1/29/16 this needs to be able to handle writing Prefs
-        // Prefs.getInstance(this).setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2();
         if (success) {
+            initDatePager();
+        }
+    }
+
+    @Override
+    public void onCalculateStreaksComplete(boolean success) {
+        if (success) {
+            Prefs.getInstance(this).setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2();
+
             initDatePager();
         }
     }

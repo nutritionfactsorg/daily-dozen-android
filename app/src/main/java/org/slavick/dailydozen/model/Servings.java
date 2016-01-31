@@ -186,7 +186,7 @@ public class Servings extends TruncatableModel {
         return servingsInMonth;
     }
 
-    public static int getTotalServingsCount() {
-        return new Select().from(Servings.class).count();
+    public static boolean isEmpty() {
+        return new Select().from(Servings.class).count() == 0;
     }
 }

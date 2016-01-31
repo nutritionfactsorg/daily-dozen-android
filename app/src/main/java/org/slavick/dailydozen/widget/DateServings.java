@@ -33,7 +33,7 @@ public class DateServings extends CardViewHeader {
             public void onClick(View v) {
                 final Context context = getContext();
 
-                if (Servings.getTotalServingsCount() > 0) {
+                if (!Servings.isEmpty()) {
                     context.startActivity(new Intent(context, ServingsHistoryActivity.class));
                 } else {
                     Common.showToast(context, R.string.no_servings_to_chart_toast);
