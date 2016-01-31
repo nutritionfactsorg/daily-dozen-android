@@ -108,8 +108,6 @@ public class Servings extends TruncatableModel {
     }
 
     public static Servings createServingsIfDoesNotExist(final Day day, final Food food, final int numServings) {
-        // TODO: 1/30/16 handle null days
-
         Servings servings = getByDateAndFood(day, food);
 
         if (servings == null) {
