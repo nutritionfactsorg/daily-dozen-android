@@ -122,7 +122,7 @@ public class Day extends TruncatableModel {
     }
 
     public Day getDayBefore() {
-        return new Day(getDateTime().minusDays(1));
+        return Day.getByDate(getDateString(getDateTime().minusDays(1)));
     }
 
     private static DateTime fromDateString(String dateString) {

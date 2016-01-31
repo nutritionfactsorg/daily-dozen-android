@@ -18,7 +18,7 @@ import org.slavick.dailydozen.widget.DateServings;
 import org.slavick.dailydozen.widget.FoodServings;
 
 public class DateFragment extends Fragment {
-    private Day day;
+    private String dateString;
 
     protected DateServings dateServings;
     protected ViewGroup lvFoodServings;
@@ -51,13 +51,13 @@ public class DateFragment extends Fragment {
         final Bundle args = getArguments();
 
         if (args != null && args.containsKey(Args.DATE)) {
-            day = Day.getByDate(args.getString(Args.DATE));
+            dateString = args.getString(Args.DATE);
 
             updateServingsCount();
 
             for (Food food : Food.getAllFoods()) {
                 final FoodServings foodServings = new FoodServings(getContext());
-                foodServings.setDateAndFood(day, food);
+                foodServings.setDateAndFood(dateString, food);
                 lvFoodServings.addView(foodServings);
 
                 Bus.register(foodServings);
@@ -79,12 +79,12 @@ public class DateFragment extends Fragment {
     }
 
     public void onEvent(FoodServingsChangedEvent event) {
-        if (event.getDate().equals(day)) {
+        if (event.getDate().getDateString().equals(dateString)) {
             updateServingsCount();
         }
     }
 
     private void updateServingsCount() {
-        dateServings.setServings(Servings.getTotalServingsOnDate(day));
+        dateServings.setServings(Servings.getTotalServingsOnDate(Day.getByDate(dateString)));
     }
 }
