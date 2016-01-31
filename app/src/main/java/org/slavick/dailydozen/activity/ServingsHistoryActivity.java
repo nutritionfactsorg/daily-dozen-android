@@ -70,22 +70,24 @@ public class ServingsHistoryActivity extends AppCompatActivity {
     }
 
     private CombinedData getChartData() {
-        final List<Day> allDays = Day.getAllDays();
-
-        if (allDays == null || allDays.isEmpty()) {
+        if (Day.isEmpty()) {
             return null;
         }
 
-        final List<String> xVals = new ArrayList<>(allDays.size());
-        final List<BarEntry> barEntries = new ArrayList<>(allDays.size());
-        final List<Entry> lineEntries = new ArrayList<>(allDays.size());
+        final Day earliestDay = Day.getEarliestDay();
+        final int numDaysOfServings = earliestDay.getNumDaysSince();
+
+        final List<String> xLabels = new ArrayList<>(numDaysOfServings);
+        final List<BarEntry> barEntries = new ArrayList<>(numDaysOfServings);
+        final List<Entry> lineEntries = new ArrayList<>(numDaysOfServings);
 
         float previousTrend = 0;
 
-        for (Day day : allDays) {
-            int xIndex = xVals.size();
+        for (int i = 0; i < numDaysOfServings; i++) {
+            int xIndex = xLabels.size();
 
-            xVals.add(day.getDayOfWeek());
+            final Day day = Day.getByDate(Day.getDayByOffset(earliestDay, i));
+            xLabels.add(day.getDayOfWeek());
 
             final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
 
@@ -95,9 +97,9 @@ public class ServingsHistoryActivity extends AppCompatActivity {
             lineEntries.add(new Entry(previousTrend, xIndex));
         }
 
-        CombinedData combinedData = new CombinedData(xVals);
-        combinedData.setData(getBarData(xVals, barEntries));
-        combinedData.setData(getLineData(xVals, lineEntries));
+        CombinedData combinedData = new CombinedData(xLabels);
+        combinedData.setData(getBarData(xLabels, barEntries));
+        combinedData.setData(getLineData(xLabels, lineEntries));
         return combinedData;
     }
 

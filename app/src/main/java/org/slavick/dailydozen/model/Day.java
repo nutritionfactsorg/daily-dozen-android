@@ -50,11 +50,19 @@ public class Day extends TruncatableModel {
 
     // Calculates the number of days between epoch == 0 (Jan 1, 1970) and now
     public static int getNumDaysSinceEpoch() {
-        return getEpoch().numDaysFrom(DateTime.today(TimeZone.getDefault())) + 1;
+        return getEpoch().numDaysFrom(getToday()) + 1;
+    }
+
+    public int getNumDaysSince() {
+        return getDateTime().numDaysFrom(getToday()) + 1;
     }
 
     public static DateTime getEpoch() {
         return DateTime.forInstant(0, TimeZone.getDefault());
+    }
+
+    private static DateTime getToday() {
+        return DateTime.today(TimeZone.getDefault());
     }
 
     public DateTime getDateTime() {
@@ -83,16 +91,21 @@ public class Day extends TruncatableModel {
     }
 
     public static Day getByDate(String dateString) {
-        return new Select().from(Day.class)
+        Day day = new Select().from(Day.class)
                 .where("date = ?", dateString)
                 .executeSingle();
+
+        if (day == null) {
+            day = new Day(fromDateString(dateString));
+        }
+
+        return day;
     }
 
     public static Day createDateIfDoesNotExist(final String dateString) {
         Day day = getByDate(dateString);
 
-        if (day == null) {
-            day = new Day(fromDateString(dateString));
+        if (day.getId() == null) {
             day.save();
         }
 
@@ -149,5 +162,9 @@ public class Day extends TruncatableModel {
 
     public static String getTabTitleForDay(int daysSinceEpoch) {
         return getEpoch().plusDays(daysSinceEpoch).format("WWW, MMM D", Locale.getDefault());
+    }
+
+    public static String getDayByOffset(Day earliestDay, int offset) {
+        return earliestDay.getDateTime().plusDays(offset).format("YYYYMMDD", Locale.getDefault());
     }
 }

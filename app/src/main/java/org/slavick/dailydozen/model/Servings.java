@@ -128,7 +128,7 @@ public class Servings extends TruncatableModel {
     private static List<Servings> getAllServingsOnDate(Day day) {
         List<Servings> servings = new ArrayList<>();
 
-        if (day != null) {
+        if (day != null && day.getId() != null) {
             servings = new Select().from(Servings.class)
                     .where("date_id = ?", day.getId())
                     .execute();
@@ -140,8 +140,10 @@ public class Servings extends TruncatableModel {
     public static int getTotalServingsOnDate(final Day day) {
         int numServings = 0;
 
-        for (Servings serving : getAllServingsOnDate(day)) {
-            numServings += serving.getServings();
+        if (day != null && day.getId() != null) {
+            for (Servings serving : getAllServingsOnDate(day)) {
+                numServings += serving.getServings();
+            }
         }
 
         return numServings;
