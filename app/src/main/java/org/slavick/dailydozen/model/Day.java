@@ -50,7 +50,11 @@ public class Day extends TruncatableModel {
 
     // Calculates the number of days between epoch == 0 (Jan 1, 1970) and now
     public static int getNumDaysSinceEpoch() {
-        return getEpoch().numDaysFrom(getToday()) + 1;
+        return getNumDaysSinceEpoch(getToday());
+    }
+
+    public static int getNumDaysSinceEpoch(final DateTime date) {
+        return getEpoch().numDaysFrom(date) + 1;
     }
 
     public int getNumDaysSince() {
@@ -61,7 +65,7 @@ public class Day extends TruncatableModel {
         return DateTime.forInstant(0, TimeZone.getDefault());
     }
 
-    private static DateTime getToday() {
+    public static DateTime getToday() {
         return DateTime.today(TimeZone.getDefault());
     }
 
@@ -166,5 +170,10 @@ public class Day extends TruncatableModel {
 
     public static String getDayByOffset(Day earliestDay, int offset) {
         return earliestDay.getDateTime().plusDays(offset).format("YYYYMMDD", Locale.getDefault());
+    }
+
+    public static boolean isToday(String dateString) {
+        final DateTime date = fromDateString(dateString);
+        return date != null && date.compareTo(getToday()) == 0;
     }
 }

@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
@@ -20,6 +21,7 @@ import org.slavick.dailydozen.widget.FoodServings;
 public class DateFragment extends Fragment {
     private String dateString;
 
+    protected TextView tvBackToToday;
     protected DateServings dateServings;
     protected ViewGroup lvFoodServings;
 
@@ -37,6 +39,7 @@ public class DateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_date, container, false);
 
+        tvBackToToday = (TextView) view.findViewById(R.id.back_to_today);
         dateServings = (DateServings) view.findViewById(R.id.date_servings);
         lvFoodServings = (ViewGroup) view.findViewById(R.id.date_food_servings);
 
@@ -53,6 +56,8 @@ public class DateFragment extends Fragment {
         if (args != null && args.containsKey(Args.DATE)) {
             dateString = args.getString(Args.DATE);
 
+            initBackToTodayButton();
+
             updateServingsCount();
 
             for (Food food : Food.getAllFoods()) {
@@ -62,6 +67,21 @@ public class DateFragment extends Fragment {
 
                 Bus.register(foodServings);
             }
+        }
+    }
+
+    private void initBackToTodayButton() {
+        if (Day.isToday(dateString)) {
+            tvBackToToday.setVisibility(View.GONE);
+        } else {
+            tvBackToToday.setVisibility(View.VISIBLE);
+
+            tvBackToToday.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Bus.displayLatestDate();
+                }
+            });
         }
     }
 
