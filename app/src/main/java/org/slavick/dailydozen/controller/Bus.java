@@ -1,7 +1,6 @@
 package org.slavick.dailydozen.controller;
 
 import org.slavick.dailydozen.event.BaseEvent;
-import org.slavick.dailydozen.event.DisplayDateEvent;
 import org.slavick.dailydozen.event.FoodServingsChangedEvent;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
@@ -23,9 +22,5 @@ public class Bus {
 
     public static void foodServingsChangedEvent(Day day, Food food) {
         post(new FoodServingsChangedEvent(day.getDateString(), food.getName()));
-    }
-
-    public static void displayLatestDate() {
-        post(new DisplayDateEvent(Day.getToday()));
     }
 }

@@ -5,15 +5,6 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/back_to_today"
-        android:text="Back to today"
-        android:gravity="center"
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"/>
-
     <org.slavick.dailydozen.widget.DateServings
         android:id="@+id/date_servings"
         style="@style/Widget.CardContentSides"

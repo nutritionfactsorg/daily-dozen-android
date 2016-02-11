@@ -171,9 +171,4 @@ public class Day extends TruncatableModel {
     public static String getDayByOffset(Day earliestDay, int offset) {
         return earliestDay.getDateTime().plusDays(offset).format("YYYYMMDD", Locale.getDefault());
     }
-
-    public static boolean isToday(String dateString) {
-        final DateTime date = fromDateString(dateString);
-        return date != null && date.compareTo(getToday()) == 0;
-    }
 }
