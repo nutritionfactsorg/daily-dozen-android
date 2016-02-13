@@ -1,5 +1,6 @@
 package org.slavick.dailydozen.activity;
 
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -228,12 +229,26 @@ public class MainActivity extends AppCompatActivity
         final String backupInstructions = TextUtils.join("\n", getResources().getStringArray(R.array.backup_instructions_lines));
         final Uri backupFileUri = FileProvider.getUriForFile(this, Common.FILE_PROVIDER_AUTHORITY, backupFile);
 
-        final Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.putExtra(Intent.EXTRA_SUBJECT, backupFile.getName());
-        shareIntent.putExtra(Intent.EXTRA_TEXT, backupInstructions);
-        shareIntent.putExtra(Intent.EXTRA_STREAM, backupFileUri);
-        shareIntent.setType(getString(R.string.backup_mimetype));
-        startActivity(shareIntent);
+        try {
+            final Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, backupFile.getName());
+            shareIntent.putExtra(Intent.EXTRA_TEXT, backupInstructions);
+            shareIntent.putExtra(Intent.EXTRA_STREAM, backupFileUri);
+            shareIntent.setType(getString(R.string.backup_mimetype));
+            startActivity(shareIntent);
+        } catch (ActivityNotFoundException e) {
+            new AlertDialog.Builder(this)
+                    .setCancelable(false)
+                    .setTitle("No email apps found")
+                    .setMessage("Backing up your data requires you to have an email app installed so you can email the .csv backup file to yourself. Please install an email app and try again.")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .create().show();
+        }
     }
 
     @Override
