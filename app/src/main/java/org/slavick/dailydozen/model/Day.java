@@ -50,7 +50,11 @@ public class Day extends TruncatableModel {
 
     // Calculates the number of days between epoch == 0 (Jan 1, 1970) and now
     public static int getNumDaysSinceEpoch() {
-        return getEpoch().numDaysFrom(getToday()) + 1;
+        return getNumDaysSinceEpoch(getToday());
+    }
+
+    public static int getNumDaysSinceEpoch(final DateTime date) {
+        return getEpoch().numDaysFrom(date) + 1;
     }
 
     public int getNumDaysSince() {
