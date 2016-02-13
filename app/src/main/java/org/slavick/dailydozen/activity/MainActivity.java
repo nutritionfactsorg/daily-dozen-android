@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
@@ -35,6 +36,9 @@ public class MainActivity extends AppCompatActivity
     protected ViewPager datePager;
     protected PagerTabStrip datePagerIndicator;
 
+    private Handler dayChangeHandler;
+    private Runnable dayChangeRunnable;
+
     private int daysSinceEpoch;
 
     private boolean alreadyHandledRestoreIntent;
@@ -48,6 +52,7 @@ public class MainActivity extends AppCompatActivity
         datePagerIndicator = (PagerTabStrip) findViewById(R.id.date_pager_indicator);
 
         initDatePager();
+        initDatePagerIndicator();
 
         calculateStreaksAfterDatabaseUpgradeToV2();
     }
@@ -85,8 +90,17 @@ public class MainActivity extends AppCompatActivity
         if (daysSinceEpoch < Day.getNumDaysSinceEpoch()) {
             initDatePager();
         }
-        
+
+        startDayChangeHandler();
+
         checkIfOpenedForRestore(getIntent());
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        stopDayChangeHandler();
     }
 
     @Override
@@ -138,8 +152,6 @@ public class MainActivity extends AppCompatActivity
 
         // Go to today's date by default
         datePager.setCurrentItem(datePagerAdapter.getCount(), false);
-
-        initDatePagerIndicator();
     }
 
     private void initDatePagerIndicator() {
@@ -244,6 +256,30 @@ public class MainActivity extends AppCompatActivity
             Prefs.getInstance(this).setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2();
 
             initDatePager();
+        }
+    }
+
+    private void startDayChangeHandler() {
+        if (dayChangeRunnable == null) {
+            dayChangeRunnable = new Runnable() {
+                @Override
+                public void run() {
+                    initDatePager();
+                    startDayChangeHandler();
+                }
+            };
+        }
+
+        stopDayChangeHandler();
+
+        dayChangeHandler = new Handler();
+        dayChangeHandler.postDelayed(dayChangeRunnable, Day.getMillisUntilMidnight());
+    }
+
+    private void stopDayChangeHandler() {
+        if (dayChangeHandler != null && dayChangeRunnable != null) {
+            dayChangeHandler.removeCallbacks(dayChangeRunnable);
+            dayChangeHandler = null;
         }
     }
 }

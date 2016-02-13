@@ -8,8 +8,12 @@ import org.slavick.dailydozen.fragment.DateFragment;
 import org.slavick.dailydozen.model.Day;
 
 public class DatePagerAdapter extends FragmentStatePagerAdapter {
+    private int numDaysSinceEpoch;
+
     public DatePagerAdapter(FragmentManager fm) {
         super(fm);
+
+        numDaysSinceEpoch = Day.getNumDaysSinceEpoch();
     }
 
     @Override
@@ -24,6 +28,6 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return Day.getNumDaysSinceEpoch();
+        return numDaysSinceEpoch;
     }
 }
