@@ -31,27 +31,15 @@
 
     </android.support.v4.widget.NestedScrollView>
 
-    <LinearLayout
+    <TextView
         android:id="@+id/back_to_today"
         android:visibility="gone"
+        android:text="@string/back_to_today"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="5dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <View
-            android:background="@color/colorDividerColor"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
-
-        <TextView
-            android:text="@string/back_to_today"
-            android:textColor="@android:color/white"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:padding="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

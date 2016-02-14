@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
@@ -20,7 +21,7 @@ import org.slavick.dailydozen.widget.FoodServings;
 public class DateFragment extends Fragment {
     private String dateString;
 
-    protected ViewGroup tvBackToToday;
+    protected TextView tvBackToToday;
     protected DateServings dateServings;
     protected ViewGroup lvFoodServings;
 
@@ -38,7 +39,7 @@ public class DateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_date, container, false);
 
-        tvBackToToday = (ViewGroup) view.findViewById(R.id.back_to_today);
+        tvBackToToday = (TextView) view.findViewById(R.id.back_to_today);
         dateServings = (DateServings) view.findViewById(R.id.date_servings);
         lvFoodServings = (ViewGroup) view.findViewById(R.id.date_food_servings);
 
