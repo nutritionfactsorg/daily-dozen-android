@@ -65,7 +65,7 @@ public class Day extends TruncatableModel {
         return DateTime.forInstant(0, TimeZone.getDefault());
     }
 
-    private static DateTime getToday() {
+    public static DateTime getToday() {
         return DateTime.today(TimeZone.getDefault());
     }
 
@@ -176,5 +176,10 @@ public class Day extends TruncatableModel {
 
     public static String getDayByOffset(Day earliestDay, int offset) {
         return earliestDay.getDateTime().plusDays(offset).format("YYYYMMDD", Locale.getDefault());
+    }
+
+    public static boolean isToday(String dateString) {
+        final DateTime date = fromDateString(dateString);
+        return date != null && date.compareTo(getToday()) == 0;
     }
 }

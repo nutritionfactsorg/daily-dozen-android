@@ -59,6 +59,7 @@
     <string name="task_backup_title">Backing up</string>
     <string name="task_restore_title">Restoring</string>
     <string name="task_calculating_streaks_title">Calculating streaks</string>
+    <string name="back_to_today">Back to today</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

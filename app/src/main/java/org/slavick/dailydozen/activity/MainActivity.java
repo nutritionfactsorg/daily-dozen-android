@@ -20,8 +20,10 @@ import android.view.MenuItem;
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
+import org.slavick.dailydozen.controller.Bus;
 import org.slavick.dailydozen.controller.PermissionController;
 import org.slavick.dailydozen.controller.Prefs;
+import org.slavick.dailydozen.event.DisplayDateEvent;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.task.BackupTask;
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
+        Bus.register(this);
 
         // If the app is sent to the background and brought back to the foreground the next day, a crash results when
         // the adapter is found to return a different value from getCount() without notifyDataSetChanged() having been
@@ -100,6 +103,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onPause() {
         super.onPause();
+        Bus.unregister(this);
 
         stopDayChangeHandler();
     }
@@ -296,5 +300,9 @@ public class MainActivity extends AppCompatActivity
             dayChangeHandler.removeCallbacks(dayChangeRunnable);
             dayChangeHandler = null;
         }
+    }
+
+    public void onEvent(DisplayDateEvent event) {
+        datePager.setCurrentItem(Day.getNumDaysSinceEpoch(event.getDate()));
     }
 }
