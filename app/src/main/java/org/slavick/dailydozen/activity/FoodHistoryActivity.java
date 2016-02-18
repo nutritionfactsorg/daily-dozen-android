@@ -1,8 +1,12 @@
 package org.slavick.dailydozen.activity;
 
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.util.ArrayMap;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -17,17 +21,17 @@ import org.slavick.dailydozen.model.Servings;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import java.util.TimeZone;
+
+import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends FoodLoadingActivity {
     protected ViewGroup vgLegend;
 
     private CaldroidFragment calendar;
 
-    private HashMap<Date, Integer> datesWithEvents;
+    private Map<DateTime, Drawable> datesWithEvents;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -37,9 +41,9 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
         vgLegend = (ViewGroup) findViewById(R.id.calendar_legend);
 
-        datesWithEvents = new HashMap<>();
+        datesWithEvents = new ArrayMap<>();
         if (savedInstanceState != null) {
-            datesWithEvents = (HashMap<Date, Integer>) savedInstanceState.getSerializable(Args.DATES_WITH_EVENTS);
+            datesWithEvents = (ArrayMap<DateTime, Drawable>) savedInstanceState.getSerializable(Args.DATES_WITH_EVENTS);
         }
 
         displayFoodHistory();
@@ -60,7 +64,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
         calendar.setArguments(args);
 
-        datesWithEvents = new HashMap<>();
+        datesWithEvents = new ArrayMap<>();
 
         calendar.setCaldroidListener(new CaldroidListener() {
             @Override
@@ -95,6 +99,12 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                 cal.set(Calendar.SECOND, 0);
                 cal.set(Calendar.MILLISECOND, 0);
 
+                final ColorDrawable bgLessThanRecServings = new ColorDrawable(
+                        ContextCompat.getColor(FoodHistoryActivity.this, R.color.legend_less_than_recommended_servings));
+
+                final ColorDrawable bgRecServings = new ColorDrawable(
+                        ContextCompat.getColor(FoodHistoryActivity.this, R.color.legend_recommended_servings));
+
                 int i = 0;
                 cal.add(Calendar.MONTH, -2);
                 do {
@@ -102,9 +112,8 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
                     for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
                         datesWithEvents.put(
-                                new Date(serving.getKey().getDateTime().getMilliseconds(TimeZone.getDefault())),
-                                serving.getValue() ?
-                                        R.color.legend_recommended_servings : R.color.legend_less_than_recommended_servings);
+                                serving.getKey().getDateTime(),
+                                serving.getValue() ? bgRecServings : bgLessThanRecServings);
                     }
 
                     cal.add(Calendar.MONTH, 1);
@@ -118,7 +127,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
 
-                calendar.setBackgroundResourceForDates(datesWithEvents);
+                calendar.setBackgroundDrawableForDateTimes(datesWithEvents);
                 calendar.refreshView();
             }
         }.execute();

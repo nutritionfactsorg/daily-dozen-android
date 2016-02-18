@@ -76,7 +76,7 @@ public class Day extends TruncatableModel {
     }
 
     public DateTime getDateTime() {
-        return DateTime.forDateOnly(year, month, day);
+        return new DateTime(year, month, day, 0, 0, 0, 0);
     }
 
     private void setDate(DateTime dateTime) {
