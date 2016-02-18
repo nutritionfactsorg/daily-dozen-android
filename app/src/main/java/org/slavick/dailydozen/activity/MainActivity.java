@@ -138,6 +138,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_rate_in_play_store:
+                openPlayStore();
+                return true;
             case R.id.menu_backup:
                 backup();
                 return true;
@@ -147,6 +150,18 @@ public class MainActivity extends AppCompatActivity
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void openPlayStore() {
+        try {
+            startActivity(createOpenPlayStoreIntent("market://details?id="));
+        } catch (ActivityNotFoundException e) {
+            startActivity(createOpenPlayStoreIntent("https://play.google.com/store/apps/details?id="));
+        }
+    }
+
+    private Intent createOpenPlayStoreIntent(final String url) {
+        return new Intent(Intent.ACTION_VIEW, Uri.parse(url + getPackageName()));
     }
 
     private void initDatePager() {

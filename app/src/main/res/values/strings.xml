@@ -60,6 +60,7 @@
     <string name="task_restore_title">Restoring</string>
     <string name="task_calculating_streaks_title">Calculating streaks</string>
     <string name="back_to_today">Back to today</string>
+    <string name="rate_in_play_store">Rate in Play Store</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
