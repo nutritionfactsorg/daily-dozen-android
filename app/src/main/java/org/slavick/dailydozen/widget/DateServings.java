@@ -26,7 +26,7 @@ public class DateServings extends CardViewHeader {
     }
 
     public void setServings(final int servingsOnDate) {
-        setSubHeader(String.format("%s out of 24   {fa-bar-chart 18dp @color/colorPrimary}", servingsOnDate));
+        setSubHeader(String.format("%s out of 24   {fa-bar-chart 20dp @color/colorPrimary}", servingsOnDate));
 
         setSubHeaderOnClickListener(new OnClickListener() {
             @Override

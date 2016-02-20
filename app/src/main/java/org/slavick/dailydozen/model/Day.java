@@ -96,10 +96,6 @@ public class Day extends TruncatableModel {
         return getDateTime().format("WWW, MMM D", Locale.getDefault());
     }
 
-    public String getDayOfWeek() {
-        return getDateTime().format("WWW", Locale.getDefault());
-    }
-
     public static Day getByDate(String dateString) {
         Day day = new Select().from(Day.class)
                 .where("date = ?", dateString)
