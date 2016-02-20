@@ -36,7 +36,7 @@ public class DateServings extends CardViewHeader {
                 if (!Servings.isEmpty()) {
                     context.startActivity(new Intent(context, ServingsHistoryActivity.class));
                 } else {
-                    Common.showToast(context, R.string.no_servings_to_chart_toast);
+                    Common.showToast(context, R.string.no_servings_recorded);
                 }
             }
         });

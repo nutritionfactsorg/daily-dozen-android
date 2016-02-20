@@ -193,10 +193,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void backup() {
-        if (PermissionController.canWriteExternalStorage(this)) {
-            new BackupTask(this, this).execute(getBackupFile());
+        if (!Servings.isEmpty()) {
+            if (PermissionController.canWriteExternalStorage(this)) {
+                new BackupTask(this, this).execute(getBackupFile());
+            } else {
+                PermissionController.askForWriteExternalStorage(this);
+            }
         } else {
-            PermissionController.askForWriteExternalStorage(this);
+            Common.showToast(this, getString(R.string.no_servings_recorded));
         }
     }
 

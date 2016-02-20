@@ -41,8 +41,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         allFoods = Food.getAllFoods();
 
         if (isEmpty(allDays) || isEmpty(allFoods)) {
-            final Context context = getContext();
-            Common.showToast(context, R.string.backup_cancelled_database_empty);
+            Common.showToast(getContext(), R.string.backup_cancelled_database_empty);
 
             progress.hide();
             cancel(true);

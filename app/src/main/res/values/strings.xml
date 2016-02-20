@@ -55,7 +55,7 @@
     <string name="icon_info">{fa-info-circle 16dp @color/colorPrimary}</string>
     <string name="icon_calendar">{fa-calendar 20dp}</string>
     <string name="daily_servings_history">Daily Servings History</string>
-    <string name="no_servings_to_chart_toast">You have not recorded any servings yet!</string>
+    <string name="no_servings_recorded">You have not recorded any servings yet!</string>
     <string name="task_backup_title">Backing up</string>
     <string name="task_restore_title">Restoring</string>
     <string name="task_calculating_streaks_title">Calculating streaks</string>
