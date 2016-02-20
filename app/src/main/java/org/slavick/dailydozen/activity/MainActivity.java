@@ -212,9 +212,10 @@ public class MainActivity extends AppCompatActivity
         final Uri restoreFileUri = intent.getData();
 
         if (restoreFileUri != null) {
+            // FIXME: 2/20/16 this should only be set to true if the RestoreTask returns true (did not fail and was not cancelled)
             alreadyHandledRestoreIntent = true;
 
-            if (Day.getCount() > 0) {
+            if (!Servings.isEmpty()) {
                 new AlertDialog.Builder(this)
                         .setTitle(getString(R.string.restore_confirm_title))
                         .setMessage(getString(R.string.restore_confirm_message))

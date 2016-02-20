@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 
-import java.util.List;
-
 public abstract class TaskWithContext<Params, Progress, Result> extends AsyncTask<Params, Progress, Result> {
     private Context context;
 
@@ -29,6 +27,7 @@ public abstract class TaskWithContext<Params, Progress, Result> extends AsyncTas
         progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 
         // This will cancel the running AsyncTask
+        progress.setCancelable(true);
         progress.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
@@ -42,9 +41,5 @@ public abstract class TaskWithContext<Params, Progress, Result> extends AsyncTas
         super.onPostExecute(result);
 
         progress.dismiss();
-    }
-
-    protected boolean isEmpty(final List<?> list) {
-        return list == null || list.size() == 0;
     }
 }

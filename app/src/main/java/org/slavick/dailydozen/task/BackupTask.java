@@ -42,11 +42,8 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     protected void onPreExecute() {
         super.onPreExecute();
 
-        allDays = Day.getAllDays();
-        allFoods = Food.getAllFoods();
-
-        if (isEmpty(allDays) || isEmpty(allFoods)) {
-            Common.showToast(getContext(), R.string.backup_cancelled_database_empty);
+        if (Servings.isEmpty()) {
+            Common.showToast(getContext(), R.string.no_servings_recorded);
 
             progress.hide();
             cancel(true);
@@ -61,6 +58,9 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         if (isCancelled()) {
             return false;
         }
+
+        allDays = Day.getAllDays();
+        allFoods = Food.getAllFoods();
 
         final File backupFile = params[0];
         Log.d(TAG, "backupFilename = " + backupFile.getName());

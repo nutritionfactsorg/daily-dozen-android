@@ -1,5 +1,6 @@
 package org.slavick.dailydozen.task;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
 import android.support.v4.util.ArrayMap;
@@ -17,8 +18,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.LineNumberReader;
 
 import hugo.weaving.DebugLog;
 
@@ -51,27 +51,48 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
     @Override
     protected Boolean doInBackground(Uri... params) {
-        final List<String> lines = readBackupFileLines(params[0]);
+        try {
+            final ContentResolver contentResolver = getContext().getContentResolver();
 
-        if (!isEmpty(lines) && !isCancelled()) {
-            deleteAllExistingData();
+            InputStream restoreInputStream = contentResolver.openInputStream(params[0]);
 
-            headers = lines.get(0).split(",");
+            if (restoreInputStream != null) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
 
-            final int numLines = lines.size();
+                final LineNumberReader lineNumberReader = new LineNumberReader(reader);
+                lineNumberReader.skip(Integer.MAX_VALUE);
+                final int numLines = lineNumberReader.getLineNumber() + 1;
+                lineNumberReader.close();
 
-            // Start at 1 to skip the headers line
-            for (int i = 1; i < numLines; i++) {
-                if (isCancelled()) {
-                    return false;
-                }
+                deleteAllExistingData();
 
-                restoreLine(lines.get(i));
+                // Need to recreate the InputStream and BufferedReader after closing LineNumberReader
+                reader = new BufferedReader(new InputStreamReader(contentResolver.openInputStream(params[0])));
 
-                publishProgress(i + 1, numLines);
+                String line = reader.readLine();
+                headers = line.split(",");
+
+                int i = 0;
+
+                do {
+                    if (!isCancelled()) {
+                        line = reader.readLine();
+
+                        if (!TextUtils.isEmpty(line)) {
+                            restoreLine(line);
+                        }
+
+                        publishProgress(++i, numLines);
+                    }
+                } while (line != null);
+
+                reader.close();
+                restoreInputStream.close();
+
+                return !isCancelled();
             }
-
-            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         return false;
@@ -81,35 +102,6 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     private void deleteAllExistingData() {
         Servings.truncate(Servings.class);
         Day.truncate(Day.class);
-    }
-
-    private List<String> readBackupFileLines(final Uri backupFileUri) {
-        final List<String> backupFileLines = new ArrayList<>();
-
-        try {
-            final InputStream restoreInputStream = getContext().getContentResolver().openInputStream(backupFileUri);
-
-            if (restoreInputStream != null) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
-
-                String line;
-
-                do {
-                    line = reader.readLine();
-
-                    if (!TextUtils.isEmpty(line)) {
-                        backupFileLines.add(line);
-                    }
-                } while (line != null);
-
-                reader.close();
-                restoreInputStream.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return backupFileLines;
     }
 
     @DebugLog
@@ -156,8 +148,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     protected void onPostExecute(Boolean success) {
         super.onPostExecute(success);
 
-        final Context context = getContext();
-        Common.showToast(context, success ? R.string.restore_success : R.string.restore_failed);
+        Common.showToast(getContext(), success ? R.string.restore_success : R.string.restore_failed);
 
         if (listener != null) {
             listener.onRestoreComplete(success);
