@@ -123,7 +123,7 @@ public class Servings extends TruncatableModel {
         return servings;
     }
 
-    private static List<Servings> getAllServingsOnDate(Day day) {
+    public static List<Servings> getServingsOnDate(Day day) {
         List<Servings> servings = new ArrayList<>();
 
         if (day != null && day.getId() != null) {
@@ -139,7 +139,7 @@ public class Servings extends TruncatableModel {
         int numServings = 0;
 
         if (day != null && day.getId() != null) {
-            for (Servings serving : getAllServingsOnDate(day)) {
+            for (Servings serving : getServingsOnDate(day)) {
                 numServings += serving.getServings();
             }
         }

@@ -1,6 +1,8 @@
 package org.slavick.dailydozen.task;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -15,6 +17,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     private final static String TAG = BackupTask.class.getSimpleName();
@@ -129,17 +132,29 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     }
 
     private String getDayLine(Day day) {
+        Map<Food, Servings> foodServingsMap = createFoodServingsLookup(day);
+
         final List<String> line = new ArrayList<>();
 
         line.add(String.valueOf(day.getDate()));
 
-        // TODO: 1/5/16 this is horribly inefficient, but good enough for now
         for (Food food : allFoods) {
-            final Servings serving = Servings.getByDateAndFood(day, food);
-            line.add(serving != null ? String.valueOf(serving.getServings()) : "0");
+            line.add(foodServingsMap.containsKey(food) ? String.valueOf(foodServingsMap.get(food).getServings()) : "0");
         }
 
         return convertListToCsv(line);
+    }
+
+    // This method converts the List of Servings into a Map for much faster lookup.
+    @NonNull
+    private Map<Food, Servings> createFoodServingsLookup(Day day) {
+        Map<Food, Servings> foodServingsMap = new ArrayMap<>();
+
+        for (Servings servings : Servings.getServingsOnDate(day)) {
+            foodServingsMap.put(servings.getFood(), servings);
+        }
+
+        return foodServingsMap;
     }
 
     private String convertListToCsv(final List<String> list) {
