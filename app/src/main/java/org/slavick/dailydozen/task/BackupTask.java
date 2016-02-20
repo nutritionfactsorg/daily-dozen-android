@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import hugo.weaving.DebugLog;
+
 public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     private final static String TAG = BackupTask.class.getSimpleName();
 
@@ -131,6 +133,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         return convertListToCsv(headers);
     }
 
+    @DebugLog
     private String getDayLine(Day day) {
         Map<Food, Integer> foodServingsMap = createFoodServingsLookup(day);
 
