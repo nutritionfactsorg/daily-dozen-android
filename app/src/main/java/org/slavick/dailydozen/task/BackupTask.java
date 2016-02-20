@@ -132,14 +132,14 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     }
 
     private String getDayLine(Day day) {
-        Map<Food, Servings> foodServingsMap = createFoodServingsLookup(day);
+        Map<Food, Integer> foodServingsMap = createFoodServingsLookup(day);
 
         final List<String> line = new ArrayList<>();
 
         line.add(String.valueOf(day.getDate()));
 
         for (Food food : allFoods) {
-            line.add(foodServingsMap.containsKey(food) ? String.valueOf(foodServingsMap.get(food).getServings()) : "0");
+            line.add(foodServingsMap.containsKey(food) ? String.valueOf(foodServingsMap.get(food)) : "0");
         }
 
         return convertListToCsv(line);
@@ -147,11 +147,11 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
     // This method converts the List of Servings into a Map for much faster lookup.
     @NonNull
-    private Map<Food, Servings> createFoodServingsLookup(Day day) {
-        Map<Food, Servings> foodServingsMap = new ArrayMap<>();
+    private Map<Food, Integer> createFoodServingsLookup(Day day) {
+        Map<Food, Integer> foodServingsMap = new ArrayMap<>();
 
         for (Servings servings : Servings.getServingsOnDate(day)) {
-            foodServingsMap.put(servings.getFood(), servings);
+            foodServingsMap.put(servings.getFood(), servings.getServings());
         }
 
         return foodServingsMap;
