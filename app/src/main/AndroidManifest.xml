@@ -21,6 +21,8 @@
         <activity
             android:name=".activity.MainActivity"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name">
 
             <intent-filter>
@@ -43,12 +45,19 @@
 
         <activity
             android:name=".activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/about_this_app"/>
 
-        <activity android:name=".activity.DebugActivity" />
+        <activity
+            android:name=".activity.DebugActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".activity.FoodHistoryActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -57,6 +66,8 @@
 
         <activity
             android:name=".activity.FoodInfoActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -66,6 +77,8 @@
         <activity
             android:name=".activity.ServingsHistoryActivity"
             android:label="@string/daily_servings_history"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
