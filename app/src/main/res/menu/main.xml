@@ -13,4 +13,8 @@
         android:id="@+id/menu_about"
         android:title="@string/about"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_debug"
+        android:title="@string/debug"
+        app:showAsAction="never" />
 </menu>

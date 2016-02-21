@@ -17,6 +17,7 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.slavick.dailydozen.BuildConfig;
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.adapter.DatePagerAdapter;
@@ -35,6 +36,8 @@ import java.io.File;
 public class MainActivity extends AppCompatActivity
         implements BackupTask.Listener, RestoreTask.Listener, CalculateStreaksTask.Listener {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
+
+    private static final int DEBUG_SETTINGS_REQUEST = 1;
 
     protected ViewPager datePager;
     protected PagerTabStrip datePagerIndicator;
@@ -67,9 +70,9 @@ public class MainActivity extends AppCompatActivity
             } else {
                 new AlertDialog.Builder(this)
                         .setCancelable(false)
-                        .setTitle("New feature: Streaks!")
-                        .setMessage("Your database will now be upgraded to support the new streaks feature.")
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        .setTitle(R.string.dialog_streaks_title)
+                        .setMessage(R.string.dialog_streaks_message)
+                        .setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 new CalculateStreaksTask(MainActivity.this, MainActivity.this).execute();
@@ -132,6 +135,10 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
+
+        // Only show the debug menu option if the apk is a debug build
+        menu.findItem(R.id.menu_debug).setVisible(BuildConfig.DEBUG);
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -147,8 +154,23 @@ public class MainActivity extends AppCompatActivity
             case R.id.menu_about:
                 startActivity(new Intent(this, AboutActivity.class));
                 return true;
+            case R.id.menu_debug:
+                startActivityForResult(new Intent(this, DebugActivity.class), DEBUG_SETTINGS_REQUEST);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case DEBUG_SETTINGS_REQUEST:
+                // Always refresh the data shown when returning from the Debug Activity
+                initDatePager();
+                break;
         }
     }
 
@@ -217,16 +239,16 @@ public class MainActivity extends AppCompatActivity
 
             if (!Servings.isEmpty()) {
                 new AlertDialog.Builder(this)
-                        .setTitle(getString(R.string.restore_confirm_title))
-                        .setMessage(getString(R.string.restore_confirm_message))
-                        .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
+                        .setTitle(R.string.restore_confirm_title)
+                        .setMessage(R.string.restore_confirm_message)
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 restore(restoreFileUri);
                                 dialog.dismiss();
                             }
                         })
-                        .setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
@@ -263,9 +285,9 @@ public class MainActivity extends AppCompatActivity
         } catch (ActivityNotFoundException e) {
             new AlertDialog.Builder(this)
                     .setCancelable(false)
-                    .setTitle("No email apps found")
-                    .setMessage("Backing up your data requires you to have an email app installed so you can email the .csv backup file to yourself. Please install an email app and try again.")
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    .setTitle(R.string.dialog_no_email_apps_title)
+                    .setMessage(R.string.dialog_no_email_apps_message)
+                    .setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();

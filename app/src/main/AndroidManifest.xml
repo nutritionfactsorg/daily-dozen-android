@@ -45,6 +45,8 @@
             android:name=".activity.AboutActivity"
             android:label="@string/about_this_app"/>
 
+        <activity android:name=".activity.DebugActivity" />
+
         <activity
             android:name=".activity.FoodHistoryActivity"
             android:parentActivityName=".activity.MainActivity">

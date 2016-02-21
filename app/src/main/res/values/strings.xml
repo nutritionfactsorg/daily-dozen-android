@@ -60,6 +60,14 @@
     <string name="task_calculating_streaks_title">Calculating streaks</string>
     <string name="back_to_today">Back to today</string>
     <string name="rate_in_play_store">Rate in Play Store</string>
+    <string name="debug">Debug</string>
+    <string name="debug_clear_data">Clear all data</string>
+    <string name="debug_clear_data_message">This will delete all entered Servings. Do you wish to continue?</string>
+    <string name="OK">OK</string>
+    <string name="dialog_streaks_title">New feature: Streaks!</string>
+    <string name="dialog_streaks_message">Your database will now be upgraded to support the new streaks feature.</string>
+    <string name="dialog_no_email_apps_title">No email apps found</string>
+    <string name="dialog_no_email_apps_message">Backing up your data requires you to have an email app installed so you can email the .csv backup file to yourself. Please install an email app and try again.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
