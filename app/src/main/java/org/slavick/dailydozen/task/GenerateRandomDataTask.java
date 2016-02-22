@@ -2,6 +2,8 @@ package org.slavick.dailydozen.task;
 
 import android.content.Context;
 
+import com.activeandroid.ActiveAndroid;
+
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
@@ -58,14 +60,22 @@ public class GenerateRandomDataTask extends TaskWithContext<Void, Integer, Boole
 
     @DebugLog
     private void createServingsForDay(List<Food> allFoods, DateTime current) {
-        final Day day = new Day(current);
-        day.save();
+        ActiveAndroid.beginTransaction();
 
-        for (Food food : allFoods) {
-            final int numServings = random.nextInt(food.getRecommendedServings() + 1);
-            if (numServings > 0) {
-                Servings.createServingsIfDoesNotExist(day, food, numServings);
+        try {
+            final Day day = new Day(current);
+            day.save();
+
+            for (Food food : allFoods) {
+                final int numServings = random.nextInt(food.getRecommendedServings() + 1);
+                if (numServings > 0) {
+                    Servings.createServingsIfDoesNotExist(day, food, numServings);
+                }
             }
+
+            ActiveAndroid.setTransactionSuccessful();
+        } finally {
+            ActiveAndroid.endTransaction();
         }
     }
 
