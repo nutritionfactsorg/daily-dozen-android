@@ -124,15 +124,6 @@ public class Day extends TruncatableModel {
                 .execute();
     }
 
-    public static int getCount() {
-        return new Select().from(Day.class)
-                .count();
-    }
-
-    public static boolean isEmpty() {
-        return getCount() == 0;
-    }
-
     public static Day getEarliestDay() {
         return new Select().from(Day.class)
                 .orderBy("date ASC")

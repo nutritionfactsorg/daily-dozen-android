@@ -82,13 +82,4 @@ public class Food extends Model {
     public static List<Food> getAllFoods() {
         return new Select().from(Food.class).execute();
     }
-
-    public static int getCount() {
-        return new Select().from(Food.class)
-                .count();
-    }
-
-    public static boolean isEmpty() {
-        return getCount() == 0;
-    }
 }

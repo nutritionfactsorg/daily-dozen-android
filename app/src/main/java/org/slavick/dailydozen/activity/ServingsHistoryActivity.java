@@ -70,7 +70,7 @@ public class ServingsHistoryActivity extends AppCompatActivity {
     }
 
     private CombinedData getChartData() {
-        if (Day.isEmpty()) {
+        if (Servings.isEmpty()) {
             return null;
         }
 

@@ -29,7 +29,7 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
     protected void onPreExecute() {
         super.onPreExecute();
 
-        if (Day.isEmpty() || Food.isEmpty()) {
+        if (Servings.isEmpty()) {
             progress.hide();
             cancel(true);
         } else {
