@@ -3,7 +3,6 @@ package org.slavick.dailydozen.task;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.util.ArrayMap;
-import android.text.TextUtils;
 import android.util.Log;
 
 import org.slavick.dailydozen.Common;
@@ -15,7 +14,6 @@ import org.slavick.dailydozen.model.Servings;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -67,36 +65,31 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
         final int numDays = allDays.size();
 
-        final List<String> csvLines = new ArrayList<>(numDays);
+        final String lineSeparator = System.getProperty("line.separator");
 
-        csvLines.add(getHeadersLine());
+        final StringBuilder csvLines = new StringBuilder(getHeadersLine());
 
         for (int i = 0; i < numDays; i++) {
-            if (isCancelled()) {
-                return false;
+            if (!isCancelled()) {
+                csvLines.append(String.format("%s%s", lineSeparator, getDayLine(allDays.get(i))));
+
+                publishProgress(i + 1, numDays);
             }
-
-            csvLines.add(getDayLine(allDays.get(i)));
-
-            publishProgress(i + 1, numDays);
         }
 
-        final String backupText = TextUtils.join(getLineSeparator(), csvLines);
-        Log.d(TAG, backupText);
+        if (!isCancelled()) {
+            try {
+                final FileWriter fileWriter = new FileWriter(backupFile);
+                fileWriter.write(csvLines.toString());
+                fileWriter.close();
 
-        try {
-            final FileWriter fileWriter = new FileWriter(backupFile);
-            fileWriter.write(backupText);
-            fileWriter.close();
-
-            Log.d(TAG, backupFile.getAbsolutePath() + " successfully written");
-
-            return true;
-        } catch (IOException e) {
-            e.printStackTrace();
+                Log.d(TAG, "backup file successfully written");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
-        return false;
+        return !isCancelled();
     }
 
     @Override
@@ -121,31 +114,29 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         }
     }
 
+    @DebugLog
     private String getHeadersLine() {
-        final List<String> headers = new ArrayList<>();
-
-        headers.add("Date");
+        final StringBuilder headers = new StringBuilder("Date");
 
         for (Food food : allFoods) {
-            headers.add(food.getName());
+            headers.append(String.format(",%s", food.getName()));
         }
 
-        return convertListToCsv(headers);
+        return headers.toString();
     }
 
     @DebugLog
     private String getDayLine(Day day) {
         Map<Food, Integer> foodServingsMap = createFoodServingsLookup(day);
 
-        final List<String> line = new ArrayList<>();
-
-        line.add(String.valueOf(day.getDate()));
+        final StringBuilder line = new StringBuilder(String.valueOf(day.getDate()));
 
         for (Food food : allFoods) {
-            line.add(foodServingsMap.containsKey(food) ? String.valueOf(foodServingsMap.get(food)) : "0");
+            line.append(String.format(",%s",
+                    foodServingsMap.containsKey(food) ? String.valueOf(foodServingsMap.get(food)) : "0"));
         }
 
-        return convertListToCsv(line);
+        return line.toString();
     }
 
     // This method converts the List of Servings into a Map for much faster lookup.
@@ -158,13 +149,5 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         }
 
         return foodServingsMap;
-    }
-
-    private String convertListToCsv(final List<String> list) {
-        return TextUtils.join(",", list);
-    }
-
-    private String getLineSeparator() {
-        return System.getProperty("line.separator");
     }
 }
