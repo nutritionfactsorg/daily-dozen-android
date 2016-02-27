@@ -47,8 +47,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             return null;
         }
 
-        final Day earliestDay = Day.getEarliestDay();
-        final int numDaysOfServings = earliestDay.getNumDaysSince();
+        final int maxDaysToLoad = params[0];
+
+        final List<Day> history = Day.getHistory(maxDaysToLoad);
+        final int numDaysOfServings = history.size();
 
         final List<String> xLabels = new ArrayList<>(numDaysOfServings);
         final List<BarEntry> barEntries = new ArrayList<>(numDaysOfServings);
@@ -63,7 +65,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
 
             final int xIndex = xLabels.size();
 
-            final Day day = Day.getByDate(Day.getDayByOffset(earliestDay, i));
+            final Day day = history.get(i);
             xLabels.add(day.getDayOfWeek());
 
             final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
