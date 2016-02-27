@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
-    style="@style/Widget.CardContentSides"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
@@ -13,6 +12,8 @@
         android:textColor="@color/colorPrimaryText"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:gravity="start|center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:clickable="true"/>
@@ -40,6 +41,9 @@
     <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/food_history"
         android:text="@string/icon_calendar"
+        android:paddingRight="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="start|center_vertical"
         style="@style/Icon"/>
 
 </LinearLayout>

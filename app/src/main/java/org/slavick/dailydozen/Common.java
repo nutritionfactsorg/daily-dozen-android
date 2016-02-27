@@ -1,6 +1,7 @@
 package org.slavick.dailydozen;
 
 import android.content.Context;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
@@ -38,5 +39,9 @@ public class Common {
 
     public static void showToast(final Context context, final int stringId) {
         showToast(context, context.getString(stringId));
+    }
+
+    public static int convertDpToPx(final Context context, final int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
     }
 }
