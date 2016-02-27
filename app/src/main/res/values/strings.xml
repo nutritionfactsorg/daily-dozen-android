@@ -71,6 +71,7 @@
     <string name="debug_generate_random_data">Generate random data</string>
     <string name="debug_generate_random_data_message">Any existing data will de deleted and replaced with random data. Do you wish to continue?</string>
     <string name="task_generating_random_data">Generating random data</string>
+    <string name="task_loading_servings_history_title">Loading Servings History</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
