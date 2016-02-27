@@ -2,6 +2,7 @@ package org.slavick.dailydozen.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
@@ -21,6 +22,7 @@ public class ServingsHistoryActivity extends AppCompatActivity implements LoadSe
     @Override
     public void onLoadServings(CombinedData chartData) {
         final CombinedChart chart = (CombinedChart) findViewById(R.id.daily_servings_chart);
+        chart.setVisibility(View.VISIBLE);
 
         chart.setData(chartData);
 
@@ -50,11 +52,6 @@ public class ServingsHistoryActivity extends AppCompatActivity implements LoadSe
         chart.setDoubleTapToZoomEnabled(false);
         chart.setHighlightPerDragEnabled(false);
         chart.setHighlightPerTapEnabled(false);
-
-        // This is necessary to get the Y axis max value set properly and the chart to display the rightmost data point.
-        // Something about loading the data in the LoadServingsHistoryTask causes this to be an issue.
-        chart.notifyDataSetChanged();
-        chart.invalidate();
     }
 
     @Override
