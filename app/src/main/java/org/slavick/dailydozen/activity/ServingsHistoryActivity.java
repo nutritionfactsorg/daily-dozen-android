@@ -46,8 +46,8 @@ public class ServingsHistoryActivity extends AppCompatActivity {
                 CombinedChart.DrawOrder.BAR, CombinedChart.DrawOrder.LINE
         });
 
-        // Only show 4 days at a time and start the chart with the latest day in view
-        chart.setVisibleXRange(4, 4);
+        // Only show 1 week at a time and start the chart with the latest day in view
+        chart.setVisibleXRange(7, 7);
         chart.moveViewToX(chart.getXChartMax());
 
         chart.setDescription("");
@@ -87,7 +87,7 @@ public class ServingsHistoryActivity extends AppCompatActivity {
             int xIndex = xLabels.size();
 
             final Day day = Day.getByDate(Day.getDayByOffset(earliestDay, i));
-            xLabels.add(day.toString());
+            xLabels.add(day.getDayOfWeek());
 
             final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
 
