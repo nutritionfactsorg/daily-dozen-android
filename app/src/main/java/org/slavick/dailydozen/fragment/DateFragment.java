@@ -3,6 +3,7 @@ package org.slavick.dailydozen.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.controller.Bus;
 import org.slavick.dailydozen.event.FoodServingsChangedEvent;
+import org.slavick.dailydozen.exception.InvalidDateException;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
@@ -20,6 +22,8 @@ import org.slavick.dailydozen.widget.DateServings;
 import org.slavick.dailydozen.widget.FoodServings;
 
 public class DateFragment extends Fragment {
+    private static final String TAG = DateFragment.class.getSimpleName();
+
     private Day day;
 
     protected TextView tvBackToToday;
@@ -55,18 +59,22 @@ public class DateFragment extends Fragment {
         final Bundle args = getArguments();
 
         if (args != null && args.containsKey(Args.DATE)) {
-            day = Day.getByDate(args.getString(Args.DATE));
+            try {
+                day = Day.getByDate(args.getString(Args.DATE));
 
-            initBackToTodayButton();
+                initBackToTodayButton();
 
-            updateServingsCount();
+                updateServingsCount();
 
-            for (Food food : Food.getAllFoods()) {
-                final FoodServings foodServings = new FoodServings(getContext());
-                foodServings.setDateAndFood(day, food);
-                lvFoodServings.addView(foodServings);
+                for (Food food : Food.getAllFoods()) {
+                    final FoodServings foodServings = new FoodServings(getContext());
+                    foodServings.setDateAndFood(day, food);
+                    lvFoodServings.addView(foodServings);
 
-                Bus.register(foodServings);
+                    Bus.register(foodServings);
+                }
+            } catch (InvalidDateException e) {
+                Log.e(TAG, "displayFormForDate: ", e);
             }
         }
     }

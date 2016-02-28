@@ -6,6 +6,8 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
+import org.slavick.dailydozen.exception.InvalidDateException;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
@@ -102,7 +104,11 @@ public class Day extends TruncatableModel {
         return getDateTime().format("WWW", Locale.getDefault());
     }
 
-    public static Day getByDate(String dateString) {
+    public static Day getByDate(String dateString) throws InvalidDateException {
+        if (TextUtils.isEmpty(dateString) || !dateString.matches("\\d{8}")) {
+            throw new InvalidDateException(dateString);
+        }
+
         Day day = new Select().from(Day.class)
                 .where("date = ?", dateString)
                 .executeSingle();
@@ -114,7 +120,7 @@ public class Day extends TruncatableModel {
         return day;
     }
 
-    public static Day createDayIfDoesNotExist(final String dateString) {
+    public static Day createDayIfDoesNotExist(final String dateString) throws InvalidDateException {
         return createDayIfDoesNotExist(getByDate(dateString));
     }
 
@@ -144,7 +150,7 @@ public class Day extends TruncatableModel {
         return days;
     }
 
-    public Day getDayBefore() {
+    public Day getDayBefore() throws InvalidDateException {
         return Day.getByDate(getDateString(getDateTime().minusDays(1)));
     }
 

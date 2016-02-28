@@ -2,10 +2,13 @@ package org.slavick.dailydozen.model;
 
 import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
+
+import org.slavick.dailydozen.exception.InvalidDateException;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -63,8 +66,14 @@ public class Servings extends TruncatableModel {
     }
 
     private int getStreakFromDayBefore() {
-        final Servings servings = Servings.getByDateAndFood(date.getDayBefore(), food);
-        return servings != null ? servings.getStreak() : 0;
+        try {
+            final Servings servings = Servings.getByDateAndFood(date.getDayBefore(), food);
+            return servings != null ? servings.getStreak() : 0;
+        } catch (InvalidDateException e) {
+            Log.e(TAG, "getStreakFromDayBefore: ", e);
+        }
+
+        return 0;
     }
 
     public int getStreak() {

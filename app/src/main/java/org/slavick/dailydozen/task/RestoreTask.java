@@ -5,11 +5,13 @@ import android.content.Context;
 import android.net.Uri;
 import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.activeandroid.ActiveAndroid;
 
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.exception.InvalidDateException;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 import org.slavick.dailydozen.model.Servings;
@@ -121,6 +123,8 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
             }
 
             ActiveAndroid.setTransactionSuccessful();
+        } catch (InvalidDateException e) {
+            Log.e(TAG, "restoreLine: ", e);
         } finally {
             ActiveAndroid.endTransaction();
         }
