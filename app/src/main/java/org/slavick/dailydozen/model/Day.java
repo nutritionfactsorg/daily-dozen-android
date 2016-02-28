@@ -58,10 +58,6 @@ public class Day extends TruncatableModel {
         return getEpoch().numDaysFrom(date) + 1;
     }
 
-    public int getNumDaysSince() {
-        return getDateTime().numDaysFrom(getToday()) + 1;
-    }
-
     public static DateTime getEpoch() {
         return DateTime.forInstant(0, TimeZone.getDefault());
     }
@@ -77,6 +73,11 @@ public class Day extends TruncatableModel {
     }
 
     public DateTime getDateTime() {
+        // NOTE: This method used to be the following line. However, because of a bug in Caldroid, I had to
+        // change the implementation to return a DateTime with 0 in the time fields instead of null otherwise the
+        // food servings history chart would not show events.
+        // return DateTime.forDateOnly(year, month, day);
+
         return new DateTime(year, month, day, 0, 0, 0, 0);
     }
 
@@ -113,10 +114,12 @@ public class Day extends TruncatableModel {
         return day;
     }
 
-    public static Day createDateIfDoesNotExist(final String dateString) {
-        Day day = getByDate(dateString);
+    public static Day createDayIfDoesNotExist(final String dateString) {
+        return createDayIfDoesNotExist(getByDate(dateString));
+    }
 
-        if (day.getId() == null) {
+    public static Day createDayIfDoesNotExist(final Day day) {
+        if (day != null && day.getId() == null) {
             day.save();
         }
 
@@ -127,13 +130,6 @@ public class Day extends TruncatableModel {
         return new Select().from(Day.class)
                 .orderBy("date ASC")
                 .execute();
-    }
-
-    public static Day getEarliestDay() {
-        return new Select().from(Day.class)
-                .orderBy("date ASC")
-                .limit(1)
-                .executeSingle();
     }
 
     public static List<Day> getHistory(int daysOfHistory) {
@@ -178,12 +174,17 @@ public class Day extends TruncatableModel {
         return getEpoch().plusDays(daysSinceEpoch).format("WWW, MMM D", Locale.getDefault());
     }
 
-    public static String getDayByOffset(Day earliestDay, int offset) {
-        return earliestDay.getDateTime().plusDays(offset).format("YYYYMMDD", Locale.getDefault());
-    }
+    public static boolean isToday(final Day day) {
+        // NOTE: This method used to be the following single line. However, because of a bug in Caldroid, I had to
+        // change the implementation of getDateTime() to return a DateTime with 0 in the time fields instead of null.
+        // That broke the following comparison and now I have to manually check if year, month, and day are equal.
+        // return day.getDateTime().compareTo(getToday()) == 0;
 
-    public static boolean isToday(String dateString) {
-        final DateTime date = fromDateString(dateString);
-        return date != null && date.compareTo(getToday()) == 0;
+        final DateTime dateInQuestion = day.getDateTime();
+        final DateTime today = getToday();
+
+        return dateInQuestion.getYear().equals(today.getYear()) &&
+                dateInQuestion.getMonth().equals(today.getMonth()) &&
+                dateInQuestion.getDay().equals(today.getDay());
     }
 }

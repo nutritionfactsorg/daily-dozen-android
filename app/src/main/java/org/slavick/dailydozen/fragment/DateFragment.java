@@ -20,7 +20,7 @@ import org.slavick.dailydozen.widget.DateServings;
 import org.slavick.dailydozen.widget.FoodServings;
 
 public class DateFragment extends Fragment {
-    private String dateString;
+    private Day day;
 
     protected TextView tvBackToToday;
     protected DateServings dateServings;
@@ -55,7 +55,7 @@ public class DateFragment extends Fragment {
         final Bundle args = getArguments();
 
         if (args != null && args.containsKey(Args.DATE)) {
-            dateString = args.getString(Args.DATE);
+            day = Day.getByDate(args.getString(Args.DATE));
 
             initBackToTodayButton();
 
@@ -63,7 +63,7 @@ public class DateFragment extends Fragment {
 
             for (Food food : Food.getAllFoods()) {
                 final FoodServings foodServings = new FoodServings(getContext());
-                foodServings.setDateAndFood(dateString, food);
+                foodServings.setDateAndFood(day, food);
                 lvFoodServings.addView(foodServings);
 
                 Bus.register(foodServings);
@@ -72,7 +72,7 @@ public class DateFragment extends Fragment {
     }
 
     private void initBackToTodayButton() {
-        if (Day.isToday(dateString)) {
+        if (Day.isToday(day)) {
             tvBackToToday.setVisibility(View.GONE);
         } else {
             tvBackToToday.setVisibility(View.VISIBLE);
@@ -101,12 +101,12 @@ public class DateFragment extends Fragment {
 
     @Subscribe
     public void onEvent(FoodServingsChangedEvent event) {
-        if (event.getDateString().equals(dateString)) {
+        if (event.getDateString().equals(day.getDateString())) {
             updateServingsCount();
         }
     }
 
     private void updateServingsCount() {
-        dateServings.setServings(Servings.getTotalServingsOnDate(Day.getByDate(dateString)));
+        dateServings.setServings(Servings.getTotalServingsOnDate(day));
     }
 }

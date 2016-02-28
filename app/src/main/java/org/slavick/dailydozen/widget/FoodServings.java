@@ -35,7 +35,7 @@ import java.util.List;
 public class FoodServings extends LinearLayout implements CalculateStreakTask.Listener {
     private final static String TAG = FoodServings.class.getSimpleName();
 
-    private String dateString;
+    private Day day;
     private Food food;
 
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
@@ -69,8 +69,8 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         ivFoodHistory = (IconTextView) findViewById(R.id.food_history);
     }
 
-    public void setDateAndFood(final String dateString, final Food food) {
-        this.dateString = dateString;
+    public void setDateAndFood(final Day day, final Food food) {
+        this.day = day;
         this.food = food;
 
         initFoodName();
@@ -81,12 +81,8 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         initFoodStreak(servings);
     }
 
-    private Day getDay() {
-        return Day.getByDate(dateString);
-    }
-
     private Servings getServings() {
-        return Servings.getByDateAndFood(getDay(), food);
+        return Servings.getByDateAndFood(day, food);
     }
 
     private void initFoodName() {
@@ -175,7 +171,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void handleServingChecked() {
-        final Day day = Day.createDateIfDoesNotExist(dateString);
+        day = Day.createDayIfDoesNotExist(day);
 
         final Servings servings = Servings.createServingsIfDoesNotExist(day, food);
         if (servings != null) {
@@ -207,12 +203,12 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void onServingsChanged() {
-        new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(getDay(), food));
+        new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(day, food));
     }
 
     @Override
     public void onCalculateStreakComplete(boolean success) {
-        Bus.foodServingsChangedEvent(getDay(), food);
+        Bus.foodServingsChangedEvent(day, food);
     }
 
     @Subscribe
