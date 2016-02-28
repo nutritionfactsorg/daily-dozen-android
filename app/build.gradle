@@ -50,5 +50,5 @@ dependencies {
     compile 'com.roomorama:caldroid:3.0.0'
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.1'
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
-    compile 'de.greenrobot:eventbus:2.4.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
 }

@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.joanzapata.iconify.widget.IconTextView;
 
+import org.greenrobot.eventbus.Subscribe;
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.activity.FoodHistoryActivity;
@@ -214,6 +215,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         Bus.foodServingsChangedEvent(getDay(), food);
     }
 
+    @Subscribe
     public void onEvent(FoodServingsChangedEvent event) {
         if (event.getFoodName().equals(food.getName())) {
             initFoodStreak(getServings());

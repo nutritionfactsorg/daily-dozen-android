@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import org.greenrobot.eventbus.Subscribe;
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.controller.Bus;
@@ -98,6 +99,7 @@ public class DateFragment extends Fragment {
         dateServings = null;
     }
 
+    @Subscribe
     public void onEvent(FoodServingsChangedEvent event) {
         if (event.getDateString().equals(dateString)) {
             updateServingsCount();
