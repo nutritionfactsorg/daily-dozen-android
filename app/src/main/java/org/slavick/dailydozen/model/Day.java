@@ -6,6 +6,7 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -96,6 +97,10 @@ public class Day extends TruncatableModel {
         return getDateTime().format("WWW, MMM D", Locale.getDefault());
     }
 
+    public String getDayOfWeek() {
+        return getDateTime().format("WWW", Locale.getDefault());
+    }
+
     public static Day getByDate(String dateString) {
         Day day = new Select().from(Day.class)
                 .where("date = ?", dateString)
@@ -129,6 +134,18 @@ public class Day extends TruncatableModel {
                 .orderBy("date ASC")
                 .limit(1)
                 .executeSingle();
+    }
+
+    public static List<Day> getHistory(int daysOfHistory) {
+        final List<Day> days = new Select().from(Day.class)
+                .orderBy("date DESC") // Sort in DESC order so that limit will take from most recent to past
+                .limit(daysOfHistory)
+                .execute();
+
+        // Reverse days so they are in ASC order
+        Collections.reverse(days);
+
+        return days;
     }
 
     public Day getDayBefore() {

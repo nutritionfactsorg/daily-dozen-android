@@ -17,6 +17,7 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.greenrobot.eventbus.Subscribe;
 import org.slavick.dailydozen.BuildConfig;
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
@@ -344,6 +345,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    @Subscribe
     public void onEvent(DisplayDateEvent event) {
         datePager.setCurrentItem(Day.getNumDaysSinceEpoch(event.getDate()));
     }

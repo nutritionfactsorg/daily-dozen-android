@@ -22,7 +22,18 @@ public class DateServings extends CardViewHeader {
     }
 
     private void init(final Context context) {
+        // Add some extra padding around the servings subheader so the user has a larger area to tap
+        initPaddingAroundTextViews();
+
         setHeader(context.getString(R.string.servings));
+    }
+
+    private void initPaddingAroundTextViews() {
+        final int dp8 = Common.convertDpToPx(getContext(), 8);
+        final int dp16 = Common.convertDpToPx(getContext(), 16);
+
+        tvHeader.setPadding(dp16, dp8, 0, dp8);
+        tvSubHeader.setPadding(0, dp8, dp16, dp8);
     }
 
     public void setServings(final int servingsOnDate) {

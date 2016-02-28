@@ -1,12 +1,11 @@
 package org.slavick.dailydozen.controller;
 
+import org.greenrobot.eventbus.EventBus;
 import org.slavick.dailydozen.event.BaseEvent;
 import org.slavick.dailydozen.event.DisplayDateEvent;
 import org.slavick.dailydozen.event.FoodServingsChangedEvent;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
-
-import de.greenrobot.event.EventBus;
 
 public class Bus {
     public static void register(Object object) {
