@@ -10,7 +10,7 @@ import android.widget.Button;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Servings;
-import org.slavick.dailydozen.task.GenerateRandomDataTask;
+import org.slavick.dailydozen.task.GenerateDataTask;
 
 public class DebugActivity extends AppCompatActivity {
     @Override
@@ -19,6 +19,7 @@ public class DebugActivity extends AppCompatActivity {
         setContentView(R.layout.activity_debug);
 
         initClearDataButton();
+        initGenerateFullDataButton();
         initGenerateRandomDataButton();
     }
 
@@ -50,19 +51,28 @@ public class DebugActivity extends AppCompatActivity {
         });
     }
 
+    private void initGenerateFullDataButton() {
+        final Button btnGenerateFullData = (Button) findViewById(R.id.debug_generate_full_data);
+        btnGenerateFullData.setOnClickListener(getGenerateDataClickListener(false));
+    }
+
     private void initGenerateRandomDataButton() {
         final Button btnGenerateRandomData = (Button) findViewById(R.id.debug_generate_random_data);
-        btnGenerateRandomData.setOnClickListener(new View.OnClickListener() {
+        btnGenerateRandomData.setOnClickListener(getGenerateDataClickListener(true));
+    }
+
+    private View.OnClickListener getGenerateDataClickListener(final boolean generateRandomData) {
+        return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(DebugActivity.this)
                         .setCancelable(false)
                         .setTitle(R.string.debug_generate_random_data)
-                        .setMessage(R.string.debug_generate_random_data_message)
+                        .setMessage(R.string.debug_generate_data_message)
                         .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                new GenerateRandomDataTask(DebugActivity.this).execute();
+                                new GenerateDataTask(DebugActivity.this).execute(generateRandomData);
 
                                 dialog.dismiss();
                             }
@@ -75,6 +85,6 @@ public class DebugActivity extends AppCompatActivity {
                         })
                         .create().show();
             }
-        });
+        };
     }
 }

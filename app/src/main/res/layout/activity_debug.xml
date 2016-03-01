@@ -11,6 +11,12 @@
         android:layout_height="wrap_content"/>
 
     <Button
+        android:id="@+id/debug_generate_full_data"
+        android:text="@string/debug_generate_full_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
         android:id="@+id/debug_generate_random_data"
         android:text="@string/debug_generate_random_data"
         android:layout_width="match_parent"
