@@ -69,7 +69,8 @@
     <string name="dialog_no_email_apps_title">No email apps found</string>
     <string name="dialog_no_email_apps_message">Backing up your data requires you to have an email app installed so you can email the .csv backup file to yourself. Please install an email app and try again.</string>
     <string name="debug_generate_random_data">Generate random data</string>
-    <string name="debug_generate_random_data_message">Any existing data will de deleted and replaced with random data. Do you wish to continue?</string>
+    <string name="debug_generate_full_data">Generate full data</string>
+    <string name="debug_generate_data_message">All existing data will be replaced. Do you wish to continue?</string>
     <string name="task_generating_random_data">Generating random data</string>
     <string name="task_loading_servings_history_title">Loading Servings History</string>
 
