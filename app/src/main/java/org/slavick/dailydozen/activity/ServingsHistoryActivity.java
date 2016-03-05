@@ -17,7 +17,7 @@ import org.slavick.dailydozen.task.LoadServingsHistoryTask;
 public class ServingsHistoryActivity extends AppCompatActivity
         implements LoadServingsHistoryTask.Listener, AdapterView.OnItemSelectedListener {
 
-    private int daysOfHistory = 30;
+    private Spinner historySpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +25,27 @@ public class ServingsHistoryActivity extends AppCompatActivity
         setContentView(R.layout.activity_servings_history);
 
         initHistorySpinner();
+        loadData();
+    }
 
-        new LoadServingsHistoryTask(this, this).execute(daysOfHistory);
+    private void loadData() {
+        new LoadServingsHistoryTask(this, this).execute(getSelectedDaysOfHistory());
+    }
+
+    private int getSelectedDaysOfHistory() {
+        switch (historySpinner.getSelectedItemPosition()) {
+            case 1:
+                return 90;
+            case 2:
+                return 180;
+            case 3:
+                return 365;
+            case 4:
+                return Integer.MAX_VALUE;
+            case 0:
+            default:
+                return 30;
+        }
     }
 
     private void initHistorySpinner() {
@@ -34,7 +53,7 @@ public class ServingsHistoryActivity extends AppCompatActivity
                 R.array.servings_history_choices, android.R.layout.simple_list_item_1);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        final Spinner historySpinner = (Spinner) findViewById(R.id.daily_servings_spinner);
+        historySpinner = (Spinner) findViewById(R.id.daily_servings_spinner);
         historySpinner.setOnItemSelectedListener(this);
         historySpinner.setAdapter(adapter);
     }
@@ -51,15 +70,26 @@ public class ServingsHistoryActivity extends AppCompatActivity
                 CombinedChart.DrawOrder.BAR, CombinedChart.DrawOrder.LINE
         });
 
-        // Only show 1 week at a time and start the chart with the latest day in view
-        chart.setVisibleXRange(daysOfHistory, daysOfHistory);
-        chart.moveViewToX(chart.getXChartMax());
+        final int daysOfHistory = chartData.getLineData().getXValCount();
 
         if (daysOfHistory > 30) {
+            chart.setVisibleXRange(daysOfHistory, daysOfHistory);
+
+            chart.getXAxis().setDrawLabels(false);
+
+            // Hide labels as they won't be legible anyways
             for (BarLineScatterCandleBubbleDataSet<?> dataSet : chartData.getDataSets()) {
                 dataSet.setDrawValues(false);
             }
+        } else {
+            // Only show 1 week at a time
+            chart.setVisibleXRange(7, 7);
+
+            chart.getXAxis().setDrawLabels(true);
         }
+
+        // Start the chart with the latest day in view
+        chart.moveViewToX(chart.getXChartMax());
 
         chart.setDescription("");
 
@@ -87,22 +117,7 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        final String selectedItem = (String) parent.getItemAtPosition(position);
-
-        daysOfHistory = 30;
-        if (selectedItem.equalsIgnoreCase("1 month")) {
-            daysOfHistory = 30;
-        } else if (selectedItem.equals("3 months")) {
-            daysOfHistory = 90;
-        } else if (selectedItem.equals("6 months")) {
-            daysOfHistory = 180;
-        } else if (selectedItem.equals("1 year")) {
-            daysOfHistory = 365;
-        } else if (selectedItem.equals("from the beginning")) {
-            daysOfHistory = Integer.MAX_VALUE;
-        }
-
-        new LoadServingsHistoryTask(this, this).execute(daysOfHistory);
+        loadData();
     }
 
     @Override
