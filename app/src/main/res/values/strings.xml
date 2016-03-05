@@ -123,4 +123,12 @@
         <item />
         <item>3. Select Open with Daily Dozen</item>
     </string-array>
+
+    <string-array name="servings_history_choices">
+        <item>1 month</item>
+        <item>3 months</item>
+        <item>6 months</item>
+        <item>1 year</item>
+        <item>Since the beginning</item>
+    </string-array>
 </resources>

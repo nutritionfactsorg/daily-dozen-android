@@ -49,7 +49,8 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
 
         final int maxDaysToLoad = params[0];
 
-        final List<Day> history = Day.getHistory(maxDaysToLoad);
+        final List<Day> history = maxDaysToLoad == -1 ? Day.getAllDays() : Day.getHistory(maxDaysToLoad);
+
         final int numDaysOfServings = history.size();
 
         final List<String> xLabels = new ArrayList<>(numDaysOfServings);
