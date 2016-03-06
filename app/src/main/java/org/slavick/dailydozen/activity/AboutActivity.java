@@ -15,10 +15,10 @@ import android.widget.TextView;
 
 import org.slavick.dailydozen.BuildConfig;
 import org.slavick.dailydozen.R;
-import org.slavick.dailydozen.widget.CardViewHeader;
 
 public class AboutActivity extends AppCompatActivity {
-    protected CardViewHeader cvHeader;
+    protected TextView tvHeader;
+    protected TextView tvVersion;
     protected TextView tvAbout;
 
     @Override
@@ -26,7 +26,8 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        cvHeader = (CardViewHeader) findViewById(R.id.about_header);
+        tvHeader = (TextView) findViewById(R.id.about_header);
+        tvVersion = (TextView) findViewById(R.id.about_version);
         tvAbout = (TextView) findViewById(R.id.about_text);
 
         initActionBar();
@@ -54,8 +55,8 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     private void initHeader() {
-        cvHeader.setHeader(getString(R.string.app_name));
-        cvHeader.setSubHeader(String.format("version %s", BuildConfig.VERSION_NAME));
+        tvHeader.setText(getString(R.string.app_name));
+        tvVersion.setText(String.format("version %s", BuildConfig.VERSION_NAME));
     }
 
     private void initLinksInText() {
