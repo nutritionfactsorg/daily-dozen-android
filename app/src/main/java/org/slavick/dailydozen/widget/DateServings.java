@@ -12,11 +12,9 @@ import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.activity.ServingsHistoryActivity;
 import org.slavick.dailydozen.model.Servings;
 
-import likeanimation.LikeButtonView;
-
 public class DateServings extends LinearLayout {
     private TextView tvHeader;
-    private LikeButtonView tvStar;
+    private TextView tvStar;
     private TextView tvSubHeader;
 
     public DateServings(Context context) {
@@ -32,7 +30,7 @@ public class DateServings extends LinearLayout {
     private void init(final Context context) {
         inflate(context, R.layout.date_servings, this);
         tvHeader = (TextView) findViewById(R.id.header);
-        tvStar = (LikeButtonView) findViewById(R.id.star);
+        tvStar = (TextView) findViewById(R.id.star);
         tvSubHeader = (TextView) findViewById(R.id.subheader);
 
         // Add some extra padding around the servings subheader so the user has a larger area to tap
@@ -63,7 +61,6 @@ public class DateServings extends LinearLayout {
 
     public void setServings(final int servingsOnDate) {
         tvStar.setVisibility(servingsOnDate == 24 ? VISIBLE : GONE);
-        tvStar.onClick(tvStar);
 
         setSubHeader(String.format("%s out of 24   {fa-bar-chart 20dp @color/colorPrimary}", servingsOnDate));
 
