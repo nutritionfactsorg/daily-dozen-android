@@ -13,13 +13,20 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start|center_vertical"/>
 
-    <com.joanzapata.iconify.widget.IconTextView
+    <likeanimation.LikeButtonView
         android:id="@+id/star"
-        android:text="@string/date_servings_star"
         android:visibility="gone"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
+
+    <!--<com.joanzapata.iconify.widget.IconTextView-->
+        <!--android:id="@+id/star"-->
+        <!--android:text="@string/date_servings_star"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"/>-->
 
     <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/subheader"

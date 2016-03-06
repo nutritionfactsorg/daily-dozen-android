@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+    <likeanimation.DotsView
+        android:id="@+id/vDotsView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"/>
+
+    <likeanimation.CircleView
+        android:id="@+id/vCircle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"/>
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/ivStar"
+        android:text="@string/date_servings_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+</merge>
