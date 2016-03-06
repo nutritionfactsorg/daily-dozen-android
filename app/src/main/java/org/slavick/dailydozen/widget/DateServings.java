@@ -4,13 +4,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.activity.ServingsHistoryActivity;
 import org.slavick.dailydozen.model.Servings;
 
-public class DateServings extends CardViewHeader {
+public class DateServings extends LinearLayout {
+    private TextView tvHeader;
+    private TextView tvStar;
+    private TextView tvSubHeader;
+
     public DateServings(Context context) {
         super(context);
         init(context);
@@ -22,10 +28,27 @@ public class DateServings extends CardViewHeader {
     }
 
     private void init(final Context context) {
+        inflate(context, R.layout.date_servings, this);
+        tvHeader = (TextView) findViewById(R.id.header);
+        tvStar = (TextView) findViewById(R.id.star);
+        tvSubHeader = (TextView) findViewById(R.id.subheader);
+
         // Add some extra padding around the servings subheader so the user has a larger area to tap
         initPaddingAroundTextViews();
 
         setHeader(context.getString(R.string.servings));
+    }
+
+    public void setHeader(final String text) {
+        tvHeader.setText(text);
+    }
+
+    public void setSubHeader(final String text) {
+        tvSubHeader.setText(text);
+    }
+
+    protected void setSubHeaderOnClickListener(OnClickListener onClickListener) {
+        tvSubHeader.setOnClickListener(onClickListener);
     }
 
     private void initPaddingAroundTextViews() {
@@ -37,6 +60,8 @@ public class DateServings extends CardViewHeader {
     }
 
     public void setServings(final int servingsOnDate) {
+        tvStar.setVisibility(servingsOnDate == 24 ? VISIBLE : GONE);
+
         setSubHeader(String.format("%s out of 24   {fa-bar-chart 20dp @color/colorPrimary}", servingsOnDate));
 
         setSubHeaderOnClickListener(new OnClickListener() {
