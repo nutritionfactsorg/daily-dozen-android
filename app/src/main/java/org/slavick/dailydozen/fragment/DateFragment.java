@@ -32,7 +32,7 @@ public class DateFragment extends Fragment {
 
     private TextView tvBackToToday;
     private DateServings dateServings;
-    private ViewGroup lvFoodServings;
+    private ViewGroup vgFoodServings;
     private ViewGroup vgExplodingStar;
     private LikeButtonView explodingStar;
 
@@ -52,7 +52,7 @@ public class DateFragment extends Fragment {
 
         tvBackToToday = (TextView) view.findViewById(R.id.back_to_today);
         dateServings = (DateServings) view.findViewById(R.id.date_servings);
-        lvFoodServings = (ViewGroup) view.findViewById(R.id.date_food_servings);
+        vgFoodServings = (ViewGroup) view.findViewById(R.id.date_food_servings);
         vgExplodingStar = (ViewGroup) view.findViewById(R.id.exploding_star_container);
         explodingStar = (LikeButtonView) view.findViewById(R.id.exploding_star);
 
@@ -77,7 +77,7 @@ public class DateFragment extends Fragment {
                 for (Food food : Food.getAllFoods()) {
                     final FoodServings foodServings = new FoodServings(getContext());
                     foodServings.setDateAndFood(day, food);
-                    lvFoodServings.addView(foodServings);
+                    vgFoodServings.addView(foodServings);
 
                     Bus.register(foodServings);
                 }
@@ -108,8 +108,8 @@ public class DateFragment extends Fragment {
 
         Bus.unregister(this);
 
-        for (int i = 0; i < lvFoodServings.getChildCount(); i++) {
-            Bus.unregister(lvFoodServings.getChildAt(i));
+        for (int i = 0; i < vgFoodServings.getChildCount(); i++) {
+            Bus.unregister(vgFoodServings.getChildAt(i));
         }
 
         dateServings = null;
