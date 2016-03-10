@@ -20,7 +20,7 @@ public class Servings extends TruncatableModel {
     private final static String TAG = Servings.class.getSimpleName();
 
     @Column(name = "date_id")
-    private Day date;
+    private Day day;
 
     @Column(name = "food_id")
     private Food food;
@@ -34,13 +34,13 @@ public class Servings extends TruncatableModel {
     public Servings() {
     }
 
-    public Servings(Day date, Food food) {
-        this.date = date;
+    public Servings(Day day, Food food) {
+        this.day = day;
         this.food = food;
     }
 
-    public Day getDate() {
-        return date;
+    public Day getDay() {
+        return day;
     }
 
     public Food getFood() {
@@ -67,7 +67,7 @@ public class Servings extends TruncatableModel {
 
     private int getStreakFromDayBefore() {
         try {
-            final Servings servings = Servings.getByDateAndFood(date.getDayBefore(), food);
+            final Servings servings = Servings.getByDateAndFood(day.getDayBefore(), food);
             return servings != null ? servings.getStreak() : 0;
         } catch (InvalidDateException e) {
             Log.e(TAG, "getStreakFromDayBefore: ", e);
@@ -98,7 +98,7 @@ public class Servings extends TruncatableModel {
 
     @Override
     public String toString() {
-        return String.format("[%s] [%s] [Servings %s]", food.toString(), date.toString(), getServings());
+        return String.format("[%s] [%s] [Servings %s]", food.toString(), day.toString(), getServings());
     }
 
     public static Servings getByDateAndFood(final Day day, final Food food) {
@@ -185,7 +185,7 @@ public class Servings extends TruncatableModel {
 
             for (Servings serving : servings) {
                 servingsInMonth.put(
-                        serving.getDate(),
+                        serving.getDay(),
                         serving.getServings() == food.getRecommendedServings());
             }
         }

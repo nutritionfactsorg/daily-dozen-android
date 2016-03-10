@@ -19,21 +19,16 @@ import hirondelle.date4j.DateTime;
 public class Day extends TruncatableModel {
     private final static String TAG = Day.class.getSimpleName();
 
-    public static final String DATE = "date";
-    public static final String YEAR = "year";
-    public static final String MONTH = "month";
-    private static final String DAY = "day";
-
-    @Column(name = DATE, unique = true, index = true)
+    @Column(name = "date", unique = true, index = true)
     private long date;
 
-    @Column(name = YEAR)
+    @Column(name = "year")
     private int year;
 
-    @Column(name = MONTH)
+    @Column(name = "month")
     private int month;
 
-    @Column(name = DAY)
+    @Column(name = "day")
     private int day;
 
     public Day() {
