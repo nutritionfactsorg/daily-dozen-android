@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.util.ArrayMap;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -21,12 +22,16 @@ import org.slavick.dailydozen.model.Servings;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 
 import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends FoodLoadingActivity {
+    private static final String TAG = "FoodHistoryActivity";
+
     protected ViewGroup vgLegend;
 
     private CaldroidFragment calendar;
@@ -92,6 +97,8 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
     private void displayEntriesForVisibleMonths(final Calendar cal, final long foodId) {
         new AsyncTask<Void, Void, Void>() {
+            private Set<Calendar> alreadyLoadedMonths = new HashSet<>();
+
             @Override
             protected Void doInBackground(Void... params) {
                 cal.set(Calendar.HOUR_OF_DAY, 0);
@@ -112,12 +119,19 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
                 int i = 0;
                 do {
-                    final Map<Day, Boolean> servings = Servings.getServingsOfFoodInMonth(foodId, cal);
+                    // TODO: test that this does not reload months
+                    if (!alreadyLoadedMonths.contains(cal)) {
+                        final Map<Day, Boolean> servings = Servings.getServingsOfFoodInMonth(foodId, cal);
+                        alreadyLoadedMonths.add(cal);
+                        Log.d(TAG, String.format("loading month: %s %s", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1));
 
-                    for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
-                        datesWithEvents.put(
-                                serving.getKey().getDateTime(),
-                                serving.getValue() ? bgRecServings : bgLessThanRecServings);
+                        for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
+                            datesWithEvents.put(
+                                    serving.getKey().getDateTime(),
+                                    serving.getValue() ? bgRecServings : bgLessThanRecServings);
+                        }
+                    } else {
+                        Log.d(TAG, String.format("skipping month: %s %s", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1));
                     }
 
                     cal.add(Calendar.MONTH, 1);
