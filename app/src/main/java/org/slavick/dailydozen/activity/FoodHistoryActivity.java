@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.util.ArrayMap;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -36,6 +35,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
     private CaldroidFragment calendar;
 
+    private Set<String> loadedMonths = new HashSet<>();
     private Map<DateTime, Drawable> datesWithEvents;
 
     @SuppressWarnings("unchecked")
@@ -97,8 +97,6 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
     private void displayEntriesForVisibleMonths(final Calendar cal, final long foodId) {
         new AsyncTask<Void, Void, Void>() {
-            private Set<Calendar> alreadyLoadedMonths = new HashSet<>();
-
             @Override
             protected Void doInBackground(Void... params) {
                 cal.set(Calendar.HOUR_OF_DAY, 0);
@@ -119,19 +117,17 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
                 int i = 0;
                 do {
-                    // TODO: test that this does not reload months
-                    if (!alreadyLoadedMonths.contains(cal)) {
+                    final String monthStr = getMonthString(cal);
+
+                    if (!loadedMonths.contains(monthStr)) {
                         final Map<Day, Boolean> servings = Servings.getServingsOfFoodInMonth(foodId, cal);
-                        alreadyLoadedMonths.add(cal);
-                        Log.d(TAG, String.format("loading month: %s %s", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1));
+                        loadedMonths.add(monthStr);
 
                         for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
                             datesWithEvents.put(
                                     serving.getKey().getDateTime(),
                                     serving.getValue() ? bgRecServings : bgLessThanRecServings);
                         }
-                    } else {
-                        Log.d(TAG, String.format("skipping month: %s %s", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1));
                     }
 
                     cal.add(Calendar.MONTH, 1);
@@ -139,6 +135,10 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                 } while (i < 3);
 
                 return null;
+            }
+
+            private String getMonthString(Calendar cal) {
+                return String.format("%s%s", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1);
             }
 
             @Override
