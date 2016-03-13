@@ -16,6 +16,7 @@ import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.controller.Bus;
 import org.slavick.dailydozen.event.FoodServingsChangedEvent;
+import org.slavick.dailydozen.event.ShowExplodingStarAnimation;
 import org.slavick.dailydozen.exception.InvalidDateException;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
@@ -126,6 +127,11 @@ public class DateFragment extends Fragment {
                 showExplodingStarAnimation();
             }
         }
+    }
+
+    @Subscribe
+    public void onEvent(ShowExplodingStarAnimation event) {
+        showExplodingStarAnimation();
     }
 
     private void showExplodingStarAnimation() {

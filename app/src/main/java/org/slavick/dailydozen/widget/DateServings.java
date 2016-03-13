@@ -10,9 +10,10 @@ import android.widget.TextView;
 import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.activity.ServingsHistoryActivity;
+import org.slavick.dailydozen.controller.Bus;
 import org.slavick.dailydozen.model.Servings;
 
-public class DateServings extends LinearLayout {
+public class DateServings extends LinearLayout implements View.OnLongClickListener{
     private TextView tvHeader;
     private TextView tvStar;
     private TextView tvSubHeader;
@@ -32,6 +33,8 @@ public class DateServings extends LinearLayout {
         tvHeader = (TextView) findViewById(R.id.header);
         tvStar = (TextView) findViewById(R.id.star);
         tvSubHeader = (TextView) findViewById(R.id.subheader);
+
+        setOnLongClickListener(this);
 
         // Add some extra padding around the servings subheader so the user has a larger area to tap
         initPaddingAroundTextViews();
@@ -76,5 +79,11 @@ public class DateServings extends LinearLayout {
                 }
             }
         });
+    }
+
+    @Override
+    public boolean onLongClick(View v) {
+        Bus.showExplodingStarAnimation();
+        return true;
     }
 }

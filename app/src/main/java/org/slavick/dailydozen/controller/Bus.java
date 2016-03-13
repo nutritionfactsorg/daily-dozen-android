@@ -4,6 +4,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.slavick.dailydozen.event.BaseEvent;
 import org.slavick.dailydozen.event.DisplayDateEvent;
 import org.slavick.dailydozen.event.FoodServingsChangedEvent;
+import org.slavick.dailydozen.event.ShowExplodingStarAnimation;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
 
@@ -26,5 +27,9 @@ public class Bus {
 
     public static void displayLatestDate() {
         post(new DisplayDateEvent(Day.getToday()));
+    }
+
+    public static void showExplodingStarAnimation() {
+        post(new ShowExplodingStarAnimation());
     }
 }
