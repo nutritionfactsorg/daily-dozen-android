@@ -30,7 +30,6 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskInput, Int
     protected void onPreExecute() {
         super.onPreExecute();
 
-        progress.setCancelable(false);
         progress.setTitle(R.string.task_generating_random_data);
         progress.show();
     }
