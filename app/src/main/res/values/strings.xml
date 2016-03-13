@@ -77,6 +77,7 @@
     <string name="task_loading_servings_history_title">Loading Servings History</string>
     <string name="history_to_show">History to show</string>
     <string name="date_servings_star">{fa-star 24dp @color/gold}</string>
+    <string name="date_servings_star_large">{fa-star 64dp @color/gold}</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

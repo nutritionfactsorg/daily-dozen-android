@@ -17,7 +17,7 @@
 
     <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/ivStar"
-        android:text="@string/date_servings_star"
+        android:text="@string/date_servings_star_large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
