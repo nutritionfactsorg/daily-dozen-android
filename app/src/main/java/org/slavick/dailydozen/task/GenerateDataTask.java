@@ -16,8 +16,8 @@ import java.util.TimeZone;
 import hirondelle.date4j.DateTime;
 import hugo.weaving.DebugLog;
 
-public class GenerateDataTask extends TaskWithContext<Boolean, Integer, Boolean> {
-    private Boolean generateRandomData;
+public class GenerateDataTask extends TaskWithContext<GenerateDataTaskInput, Integer, Boolean> {
+    private GenerateDataTaskInput taskInput;
     private Random random;
 
     public GenerateDataTask(Context context) {
@@ -36,16 +36,16 @@ public class GenerateDataTask extends TaskWithContext<Boolean, Integer, Boolean>
     }
 
     @Override
-    protected Boolean doInBackground(Boolean... params) {
+    protected Boolean doInBackground(GenerateDataTaskInput... params) {
         if (params != null && params.length > 0) {
-            generateRandomData = params[0];
+            taskInput = params[0];
         }
 
         deleteAllExistingData();
 
         final List<Food> allFoods = Food.getAllFoods();
 
-        final int numDays = 365;
+        final int numDays = taskInput.getHistoryToGenerate();
 
         final DateTime today = DateTime.today(TimeZone.getDefault());
         DateTime current = today.minusDays(numDays);
@@ -73,7 +73,7 @@ public class GenerateDataTask extends TaskWithContext<Boolean, Integer, Boolean>
 
             for (Food food : allFoods) {
                 final int recommendedServings = food.getRecommendedServings();
-                final int numServings = generateRandomData ? random.nextInt(recommendedServings + 1) : recommendedServings;
+                final int numServings = taskInput.generateRandomData() ? random.nextInt(recommendedServings + 1) : recommendedServings;
 
                 if (numServings > 0) {
                     Servings.createServingsIfDoesNotExist(day, food, numServings);
