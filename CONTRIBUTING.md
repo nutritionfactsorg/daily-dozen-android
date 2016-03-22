@@ -20,7 +20,7 @@ Help us to keep the [Daily Dozen for Android][daily-dozen-android] open and incl
 
 If you have a question or issue with how to use the [Daily Dozen for Android][daily-dozen-android] app or for other support-related questions, please contact us by visiting the [NutritionFacts.org Help Desk on Zendesk][zendesk].
  
-For development-related questions or problems, please join us on our Slack [#development][slack-dev] channel.
+For development-related questions or problems, please join us on our Slack [#development][slack-dev] channel.  (To join, please email [Christi Richards][cremail] for an invitation.)
 
 <a name="issue"></a> Found an Issue?
 ------------------------------------
@@ -65,7 +65,7 @@ When submitting an issue, providing the following information will increase the 
 
 We want to foster a community of participation and learning, especially for people interested in committing to FOSS projects. Kent C. Dodds provides a great set of tutorials covering [How to Contribute to an Open Source Project on GitHub][contribute-os] geared toward submitting your first Pull Request.  Check it out and start contributing!  
 
-If you have any questions, or don't know where to start - join us on our Slack [#development][slack-dev] channel.
+If you have any questions, or don't know where to start - join us on our Slack [#development][slack-dev] channel.  (To join, please email [Christi Richards][cremail] for an invitation.)
 
 ### Submitting a Pull Request
 
@@ -161,3 +161,4 @@ The footer should reference GitHub issues that this commit **Closes**.
 [issue]: https://github.com/nutritionfactsorg/daily-dozen-android/issues/new "Create an Issue"
 [pr]: https://github.com/nutritionfactsorg/daily-dozen-android/pulls "Pull Requests"
 [contribute-os]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github "How to Contribute to an Open Source Project on GitHub"
+[cremail]: mailto:christi@nutritionfacts.org?subject=Slack%20#Development%20Invitation

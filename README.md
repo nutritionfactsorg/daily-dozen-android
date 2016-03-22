@@ -1,6 +1,8 @@
 Daily Dozen Android App
 ========================
 
+<p align="center"><img src="http://nutritionfactsorg.s3.amazonaws.com/wp-content/uploads/2016/03/21232747/github.jpg" style="width: 600px"></p>
+
 About
 -----------
 
