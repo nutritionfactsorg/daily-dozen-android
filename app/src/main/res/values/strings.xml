@@ -54,7 +54,7 @@
     <string name="food_info">Food Info</string>
     <string name="food_history">Food History</string>
     <string name="icon_info">{fa-info-circle 16dp @color/gray}</string>
-    <string name="icon_calendar">{fa-calendar 20dp}</string>
+    <string name="icon_calendar">{fa-calendar 20dp @color/gray_dark}</string>
     <string name="daily_servings_history">Daily Servings History</string>
     <string name="no_servings_recorded">You have not recorded any servings yet!</string>
     <string name="task_backup_title">Backing up</string>

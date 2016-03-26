@@ -65,7 +65,7 @@ public class DateServings extends LinearLayout implements View.OnLongClickListen
     public void setServings(final int servingsOnDate) {
         tvStar.setVisibility(servingsOnDate == 24 ? VISIBLE : GONE);
 
-        setSubHeader(String.format("%s out of 24   {fa-bar-chart 20dp @color/colorPrimary}", servingsOnDate));
+        setSubHeader(String.format("%s out of 24   {fa-bar-chart 20dp @color/gray_dark}", servingsOnDate));
 
         setSubHeaderOnClickListener(new OnClickListener() {
             @Override
