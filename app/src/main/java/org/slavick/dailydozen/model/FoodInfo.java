@@ -12,14 +12,37 @@ import java.util.List;
 import java.util.Map;
 
 public class FoodInfo {
+    private static Map<String, Integer> foodIcons;
     private static Map<String, List<String>> servingSizes;
     private static Map<String, List<String>> typesOfFood;
 
     public static void init(final Context context) {
         final Resources resources = context.getResources();
 
+        initFoodIcons(resources);
         initServingSizes(resources);
         initTypesOfFood(resources);
+    }
+
+    public static Integer getFoodIcon(final String foodName) {
+        return foodIcons.get(foodName);
+    }
+
+    private static void initFoodIcons(Resources res) {
+        foodIcons = new ArrayMap<>();
+
+        foodIcons.put(res.getString(R.string.beans), R.drawable.ic_beans);
+        foodIcons.put(res.getString(R.string.berries), R.drawable.ic_berries);
+        foodIcons.put(res.getString(R.string.other_fruits), R.drawable.ic_other_fruits);
+        foodIcons.put(res.getString(R.string.cruciferous_vegetables), R.drawable.ic_cruciferous_vegetables);
+        foodIcons.put(res.getString(R.string.greens), R.drawable.ic_greens);
+        foodIcons.put(res.getString(R.string.other_vegetables), R.drawable.ic_other_vegetables);
+        foodIcons.put(res.getString(R.string.flaxseeds), R.drawable.ic_flaxseeds);
+        foodIcons.put(res.getString(R.string.nuts), R.drawable.ic_nuts);
+        foodIcons.put(res.getString(R.string.spices), R.drawable.ic_spices);
+        foodIcons.put(res.getString(R.string.whole_grains), R.drawable.ic_whole_grains);
+        foodIcons.put(res.getString(R.string.beverages), R.drawable.ic_beverages);
+        foodIcons.put(res.getString(R.string.exercise), R.drawable.ic_exercise);
     }
 
     public static List<String> getTypesOfFood(final String foodName) {

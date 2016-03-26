@@ -2,6 +2,7 @@ package org.slavick.dailydozen.widget;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,6 +26,7 @@ import org.slavick.dailydozen.controller.Bus;
 import org.slavick.dailydozen.event.FoodServingsChangedEvent;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Food;
+import org.slavick.dailydozen.model.FoodInfo;
 import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.task.CalculateStreakTask;
 import org.slavick.dailydozen.task.StreakTaskInput;
@@ -40,6 +43,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
 
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
+    private ImageView ivIcon;
     private TextView tvName;
     private StreakWidget tvStreak;
     private ViewGroup vgCheckboxes;
@@ -63,6 +67,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     private void init(final Context context) {
         LayoutInflater.from(context).inflate(R.layout.food_item, this);
 
+        ivIcon = (ImageView) findViewById(R.id.food_icon);
         tvName = (TextView) findViewById(R.id.food_name);
         tvStreak = (StreakWidget) findViewById(R.id.food_streak);
         vgCheckboxes = (ViewGroup) findViewById(R.id.food_checkboxes);
@@ -73,6 +78,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         this.day = day;
         this.food = food;
 
+        initFoodIcon();
         initFoodName();
         initFoodHistory();
 
@@ -85,6 +91,10 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         return Servings.getByDateAndFood(day, food);
     }
 
+    private void initFoodIcon() {
+        ivIcon.setImageDrawable(ContextCompat.getDrawable(getContext(), FoodInfo.getFoodIcon(food.getName())));
+    }
+
     private void initFoodName() {
         tvName.setText(String.format("%s %s", food.getName(), getContext().getString(R.string.icon_info)));
 
@@ -92,7 +102,13 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void initFoodStreak(Servings servings) {
-        tvStreak.setStreak(servings != null ? servings.getStreak() : 0);
+        final int streak = servings != null ? servings.getStreak() : 0;
+        if (streak > 0) {
+            tvStreak.setVisibility(VISIBLE);
+            tvStreak.setStreak(streak);
+        } else {
+            tvStreak.setVisibility(GONE);
+        }
     }
 
     private View.OnClickListener getOnFoodNameClickListener() {

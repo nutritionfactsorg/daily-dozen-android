@@ -7,27 +7,38 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <com.joanzapata.iconify.widget.IconTextView
-        android:id="@+id/food_name"
-        android:textColor="@color/colorPrimaryText"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        android:gravity="start|center_vertical"
-        android:paddingLeft="16dp"
-        android:paddingStart="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:clickable="true"/>
-
-    <org.slavick.dailydozen.widget.StreakWidget
-        android:id="@+id/food_streak"
-        android:textSize="10sp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="5dp"
-        android:layout_marginStart="5dp"
-        android:padding="2dp"
+    <ImageView
+        android:id="@+id/food_icon"
+        android:padding="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"/>
+        android:contentDescription="@null"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/food_name"
+            android:textColor="@color/colorPrimaryText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:gravity="start|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true"/>
+
+        <org.slavick.dailydozen.widget.StreakWidget
+            android:id="@+id/food_streak"
+            android:textSize="10sp"
+            android:layout_gravity="start"
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/food_checkboxes"
