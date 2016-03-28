@@ -144,6 +144,7 @@ public class Servings extends TruncatableModel {
         return servings;
     }
 
+    // TODO: Can this be refactored to perform only a single query instead of a max of 12?
     public static int getTotalServingsOnDate(final Day day) {
         int numServings = 0;
 
@@ -156,30 +157,26 @@ public class Servings extends TruncatableModel {
         return numServings;
     }
 
-    public static int getAverageTotalServingsInYear(final Calendar calendar) {
-        int totalServingsInYear = 0;
-
-        final List<Day> daysInYear = Day.getDaysInYear(calendar);
-        final int numDaysInYear = daysInYear.size();
-
-        for (Day day : daysInYear) {
-            totalServingsInYear += getTotalServingsOnDate(day);
-        }
-
-        return totalServingsInYear / numDaysInYear;
+    public static float getAverageTotalServingsInYear(final Calendar calendar) {
+        return getAverageServingsForDays(Day.getDaysInYear(calendar));
     }
 
     public static float getAverageTotalServingsInMonth(final Calendar calendar) {
-        float totalServingsInMonth = 0;
+        return getAverageServingsForDays(Day.getDaysInMonth(calendar));
+    }
 
-        final List<Day> daysInMonth = Day.getDaysInMonth(calendar);
-        final int numDaysInMonth = daysInMonth.size();
-
-        for (Day day : daysInMonth) {
-            totalServingsInMonth += getTotalServingsOnDate(day);
+    private static float getAverageServingsForDays(final List<Day> days) {
+        if (days == null || days.isEmpty()) {
+            return 0;
         }
 
-        return totalServingsInMonth / numDaysInMonth;
+        int totalServings = 0;
+
+        for (Day day : days) {
+            totalServings += getTotalServingsOnDate(day);
+        }
+
+        return (float) totalServings / days.size();
     }
 
     // Any Dates in the return map indicate that at least one serving of the food was consumed on that date.
