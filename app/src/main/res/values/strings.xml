@@ -75,7 +75,7 @@
     <string name="debug_generate_data_message">All existing data will be replaced. Do you wish to continue?</string>
     <string name="task_generating_random_data">Generating random data</string>
     <string name="task_loading_servings_history_title">Loading Servings History</string>
-    <string name="history_to_show">History to show</string>
+    <string name="time_scale">Time Scale</string>
     <string name="history_to_generate">History to Generate</string>
     <string name="date_servings_star">{fa-star 24dp @color/gold}</string>
     <string name="date_servings_star_large">{fa-star 64dp @color/gold}</string>
@@ -130,12 +130,10 @@
         <item>3. Select Open with Daily Dozen</item>
     </string-array>
 
-    <string-array name="servings_history_choices">
-        <item>1 month</item>
-        <item>3 months</item>
-        <item>6 months</item>
-        <item>1 year</item>
-        <item>All</item>
+    <string-array name="servings_time_scale_choices">
+        <item>Day</item>
+        <item>Month</item>
+        <item>Year</item>
     </string-array>
 
     <string-array name="history_to_generate_choices">

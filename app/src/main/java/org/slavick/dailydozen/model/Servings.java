@@ -156,6 +156,32 @@ public class Servings extends TruncatableModel {
         return numServings;
     }
 
+    public static int getAverageTotalServingsInYear(final Calendar calendar) {
+        int totalServingsInYear = 0;
+
+        final List<Day> daysInYear = Day.getDaysInYear(calendar);
+        final int numDaysInYear = daysInYear.size();
+
+        for (Day day : daysInYear) {
+            totalServingsInYear += getTotalServingsOnDate(day);
+        }
+
+        return totalServingsInYear / numDaysInYear;
+    }
+
+    public static float getAverageTotalServingsInMonth(final Calendar calendar) {
+        float totalServingsInMonth = 0;
+
+        final List<Day> daysInMonth = Day.getDaysInMonth(calendar);
+        final int numDaysInMonth = daysInMonth.size();
+
+        for (Day day : daysInMonth) {
+            totalServingsInMonth += getTotalServingsOnDate(day);
+        }
+
+        return totalServingsInMonth / numDaysInMonth;
+    }
+
     // Any Dates in the return map indicate that at least one serving of the food was consumed on that date.
     // The Boolean for the date indicates whether the number of servings equals the recommended servings of the food.
     public static Map<Day, Boolean> getServingsOfFoodInMonth(final long foodId, final Calendar calendar) {
@@ -164,10 +190,7 @@ public class Servings extends TruncatableModel {
         final Food food = Food.getById(foodId);
 
         if (food != null) {
-            final List<Day> datesInMonth = new Select().from(Day.class)
-                    .where("year = ?", calendar.get(Calendar.YEAR))
-                    .and("month = ?", calendar.get(Calendar.MONTH) + 1)
-                    .execute();
+            final List<Day> datesInMonth = Day.getDaysInMonth(calendar);
 
             final String[] placeholderArray = new String[datesInMonth.size()];
             final Long[] dateIds = new Long[datesInMonth.size()];

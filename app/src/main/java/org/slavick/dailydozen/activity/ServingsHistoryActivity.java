@@ -8,10 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.github.mikephil.charting.charts.CombinedChart;
-import com.github.mikephil.charting.data.BarLineScatterCandleBubbleDataSet;
 import com.github.mikephil.charting.data.CombinedData;
 
 import org.slavick.dailydozen.R;
+import org.slavick.dailydozen.model.enums.TimeScale;
 import org.slavick.dailydozen.task.LoadServingsHistoryTask;
 
 public class ServingsHistoryActivity extends AppCompatActivity
@@ -32,25 +32,22 @@ public class ServingsHistoryActivity extends AppCompatActivity
         new LoadServingsHistoryTask(this, this).execute(getSelectedDaysOfHistory());
     }
 
+    @TimeScale.Interface
     private int getSelectedDaysOfHistory() {
         switch (historySpinner.getSelectedItemPosition()) {
-            case 1:
-                return 90;
-            case 2:
-                return 180;
-            case 3:
-                return 365;
-            case 4:
-                return Integer.MAX_VALUE;
             case 0:
             default:
-                return 30;
+                return TimeScale.DAYS;
+            case 1:
+                return TimeScale.MONTHS;
+            case 2:
+                return TimeScale.YEARS;
         }
     }
 
     private void initHistorySpinner() {
         final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.servings_history_choices, android.R.layout.simple_list_item_1);
+                R.array.servings_time_scale_choices, android.R.layout.simple_list_item_1);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         historySpinner = (Spinner) findViewById(R.id.daily_servings_spinner);
@@ -70,23 +67,9 @@ public class ServingsHistoryActivity extends AppCompatActivity
                 CombinedChart.DrawOrder.BAR, CombinedChart.DrawOrder.LINE
         });
 
-        final int daysOfHistory = chartData.getLineData().getXValCount();
+        chart.setVisibleXRange(5, 5);
 
-        if (daysOfHistory > 30) {
-            chart.setVisibleXRange(daysOfHistory, daysOfHistory);
-
-            chart.getXAxis().setDrawLabels(false);
-
-            // Hide labels as they won't be legible anyways
-            for (BarLineScatterCandleBubbleDataSet<?> dataSet : chartData.getDataSets()) {
-                dataSet.setDrawValues(false);
-            }
-        } else {
-            // Only show 1 week at a time
-            chart.setVisibleXRange(7, 7);
-
-            chart.getXAxis().setDrawLabels(true);
-        }
+        chart.getXAxis().setDrawLabels(true);
 
         // Start the chart with the latest day in view
         chart.moveViewToX(chart.getXChartMax());

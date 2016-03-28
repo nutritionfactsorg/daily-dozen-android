@@ -10,7 +10,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/history_to_show"
+            android:text="@string/time_scale"
             style="@style/PrimaryText"
             android:paddingLeft="16dp"
             android:paddingStart="16dp"

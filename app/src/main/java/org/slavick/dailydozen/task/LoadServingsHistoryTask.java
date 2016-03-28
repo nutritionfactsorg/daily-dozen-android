@@ -2,6 +2,7 @@ package org.slavick.dailydozen.task;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
@@ -15,12 +16,17 @@ import com.github.mikephil.charting.utils.ViewPortHandler;
 import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.Day;
 import org.slavick.dailydozen.model.Servings;
+import org.slavick.dailydozen.model.enums.TimeScale;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, CombinedData> {
+    private static final String TAG = LoadServingsHistoryTask.class.getSimpleName();
+
     private final Listener listener;
 
     public interface Listener {
@@ -47,9 +53,19 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             return null;
         }
 
-        final int maxDaysToLoad = params[0];
+        switch (params[0]) {
+            default:
+            case TimeScale.DAYS:
+                return getChartDataInDays();
+            case TimeScale.MONTHS:
+                return getChartDataInMonths();
+            case TimeScale.YEARS:
+                return getChartDataInYears();
+        }
+    }
 
-        final List<Day> history = Day.getHistory(maxDaysToLoad);
+    private CombinedData getChartDataInDays() {
+        final List<Day> history = Day.getAllDays();
 
         final int numDaysOfServings = history.size();
 
@@ -88,6 +104,108 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             return combinedData;
         }
     }
+
+    private CombinedData getChartDataInMonths() {
+        final Day firstDay = Day.getFirstDay();
+        final int firstYear = firstDay.getYear();
+        final int firstMonth = firstDay.getMonth();
+        Log.d(TAG, String.format("getChartDataInMonths: firstYear [%s], firstMonth [%s]", firstYear, firstMonth));
+
+        final Calendar cal = Calendar.getInstance(Locale.getDefault());
+        final int currentYear = cal.get(Calendar.YEAR);
+        final int currentMonth = cal.get(Calendar.MONTH) + 1;
+        Log.d(TAG, String.format("getChartDataInMonths: currentYear [%s], currentMonth [%s]", currentYear, currentMonth));
+
+        cal.set(Calendar.YEAR, firstDay.getYear());
+        cal.set(Calendar.MONTH, firstDay.getMonth() - 1);
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+
+        // TODO: 3/26/16 iterate through calendar month by month until you get to the current month
+        int year = firstYear;
+        int month = firstMonth;
+
+        final List<String> xLabels = new ArrayList<>();
+        final List<Entry> lineEntries = new ArrayList<>();
+
+        while (year < currentYear || (year == currentYear && month <= currentMonth)) {
+            final int xIndex = xLabels.size();
+
+            xLabels.add(String.format("%s/%s", month, year));
+
+            final float averageTotalServingsInMonth = Servings.getAverageTotalServingsInMonth(cal);
+
+            lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
+
+//            publishProgress(i + 1, numDaysOfServings);
+
+            cal.add(Calendar.MONTH, 1);
+            year = cal.get(Calendar.YEAR);
+            month = cal.get(Calendar.MONTH) + 1;
+
+            Log.d(TAG, String.format("getChartDataInMonths: year [%s], month [%s], average [%s]", year, month, averageTotalServingsInMonth));
+        }
+
+        if (isCancelled()) {
+            return null;
+        } else {
+            final CombinedData combinedData = new CombinedData(xLabels);
+            combinedData.setData(getLineData(xLabels, lineEntries));
+            return combinedData;
+        }
+    }
+
+    private CombinedData getChartDataInYears() {
+        final Day firstDay = Day.getFirstDay();
+        final int firstYear = firstDay.getYear();
+        Log.d(TAG, String.format("getChartDataInMonths: firstYear [%s]", firstYear));
+
+        final Calendar cal = Calendar.getInstance(Locale.getDefault());
+        final int currentYear = cal.get(Calendar.YEAR);
+        Log.d(TAG, String.format("getChartDataInMonths: currentYear [%s]", currentYear));
+
+        cal.set(Calendar.YEAR, firstDay.getYear());
+        cal.set(Calendar.MONTH, 0);
+        cal.set(Calendar.MONTH, 0);
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+
+        // TODO: 3/26/16 iterate through calendar month by month until you get to the current month
+        int year = firstYear;
+
+        final List<String> xLabels = new ArrayList<>();
+        final List<Entry> lineEntries = new ArrayList<>();
+
+        while (year <= currentYear) {
+            final int xIndex = xLabels.size();
+
+            xLabels.add(String.valueOf(year));
+
+            final float averageTotalServingsInYear = Servings.getAverageTotalServingsInYear(cal);
+
+            lineEntries.add(new Entry(averageTotalServingsInYear, xIndex));
+
+//            publishProgress(i + 1, numDaysOfServings);
+
+            cal.add(Calendar.YEAR, 1);
+            year = cal.get(Calendar.YEAR);
+
+            Log.d(TAG, String.format("getChartDataInMonths: year [%s], average [%s]", year, averageTotalServingsInYear));
+        }
+
+        if (isCancelled()) {
+            return null;
+        } else {
+            final CombinedData combinedData = new CombinedData(xLabels);
+            combinedData.setData(getLineData(xLabels, lineEntries));
+            return combinedData;
+        }
+    }
+
 
     // Calculates an exponentially smoothed moving average with 10% smoothing
     private float calculateTrend(float previousTrend, int currentValue) {
