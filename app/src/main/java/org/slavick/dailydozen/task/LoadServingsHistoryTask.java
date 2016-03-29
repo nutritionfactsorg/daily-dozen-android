@@ -27,6 +27,9 @@ import java.util.Locale;
 public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, CombinedData> {
     private static final String TAG = LoadServingsHistoryTask.class.getSimpleName();
 
+    private final static double AVERAGE_MILLIS_PER_YEAR = 365.24 * 24 * 60 * 60 * 1000;
+    private final static double AVERAGE_MILLIS_PER_MONTH = AVERAGE_MILLIS_PER_YEAR / 12;
+
     private final Listener listener;
 
     public interface Listener {
@@ -123,7 +126,9 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         cal.set(Calendar.SECOND, 0);
         cal.set(Calendar.MILLISECOND, 0);
 
-        // TODO: 3/26/16 iterate through calendar month by month until you get to the current month
+        final int numMonths = monthsBetween(cal, Calendar.getInstance(Locale.getDefault()));
+        int i = 0;
+
         int year = firstYear;
         int month = firstMonth;
 
@@ -139,7 +144,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
 
             lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
 
-//            publishProgress(i + 1, numDaysOfServings);
+            publishProgress(i++, numMonths);
 
             cal.add(Calendar.MONTH, 1);
             year = cal.get(Calendar.YEAR);
@@ -174,7 +179,9 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         cal.set(Calendar.SECOND, 0);
         cal.set(Calendar.MILLISECOND, 0);
 
-        // TODO: 3/26/16 iterate through calendar month by month until you get to the current month
+        final int numYears = yearsBetween(cal, Calendar.getInstance(Locale.getDefault()));
+        int i = 0;
+
         int year = firstYear;
 
         final List<String> xLabels = new ArrayList<>();
@@ -189,7 +196,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
 
             lineEntries.add(new Entry(averageTotalServingsInYear, xIndex));
 
-//            publishProgress(i + 1, numDaysOfServings);
+            publishProgress(i++, numYears);
 
             cal.add(Calendar.YEAR, 1);
             year = cal.get(Calendar.YEAR);
@@ -269,6 +276,20 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
     protected void onPostExecute(CombinedData chartData) {
         super.onPostExecute(chartData);
         listener.onLoadServings(chartData);
+    }
+
+    // These methods are meant to calculate a rough approximation of the number of months and the number of years between
+    // a start date and an end date. The output is meant only for showing progress when loading data from the database.
+    private static int monthsBetween(Calendar start, Calendar end) {
+        return timeBetween(start, end, AVERAGE_MILLIS_PER_MONTH);
+    }
+
+    private static int yearsBetween(Calendar start, Calendar end) {
+        return timeBetween(start, end, AVERAGE_MILLIS_PER_YEAR);
+    }
+
+    private static int timeBetween(Calendar start, Calendar end, double millis) {
+        return (int) ((end.getTime().getTime() - start.getTime().getTime()) / millis);
     }
 
     private class BarChartValueFormatter implements com.github.mikephil.charting.formatter.ValueFormatter {
