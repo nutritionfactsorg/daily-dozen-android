@@ -28,8 +28,8 @@ android {
         applicationId "org.slavick.dailydozen"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 20
-        versionName "7"
+        versionCode 21
+        versionName "8"
     }
     buildTypes {
         release {
