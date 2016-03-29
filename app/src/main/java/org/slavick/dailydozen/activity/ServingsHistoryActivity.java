@@ -19,6 +19,8 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
     private Spinner historySpinner;
 
+    private boolean alreadyLoadingData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +31,10 @@ public class ServingsHistoryActivity extends AppCompatActivity
     }
 
     private void loadData() {
-        new LoadServingsHistoryTask(this, this).execute(getSelectedDaysOfHistory());
+        if (!alreadyLoadingData) {
+            alreadyLoadingData = true;
+            new LoadServingsHistoryTask(this, this).execute(getSelectedDaysOfHistory());
+        }
     }
 
     @TimeScale.Interface
@@ -57,7 +62,7 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
     @Override
     public void onLoadServings(CombinedData chartData) {
-        final CombinedChart chart = (CombinedChart) findViewById(R.id.daily_servings_chart);
+        CombinedChart chart = (CombinedChart) findViewById(R.id.daily_servings_chart);
         chart.setVisibility(View.VISIBLE);
 
         chart.setData(chartData);
@@ -91,6 +96,8 @@ public class ServingsHistoryActivity extends AppCompatActivity
         chart.setDoubleTapToZoomEnabled(false);
         chart.setHighlightPerDragEnabled(false);
         chart.setHighlightPerTapEnabled(false);
+
+        alreadyLoadingData = false;
     }
 
     @Override
