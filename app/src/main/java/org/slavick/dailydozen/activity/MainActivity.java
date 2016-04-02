@@ -226,7 +226,7 @@ public class MainActivity extends AppCompatActivity
                 PermissionController.askForWriteExternalStorage(this);
             }
         } else {
-            Common.showToast(this, getString(R.string.no_servings_recorded));
+            Common.showToast(this, R.string.no_servings_recorded);
         }
     }
 

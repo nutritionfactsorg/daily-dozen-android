@@ -30,7 +30,7 @@ public class Common {
     }
 
     public static void showNotImplementedYet(final Context context) {
-        showToast(context, context.getString(R.string.not_implemented_yet));
+        showToast(context, R.string.not_implemented_yet);
     }
 
     public static void showToast(final Context context, final String message) {
