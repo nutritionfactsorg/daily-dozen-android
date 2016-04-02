@@ -125,7 +125,7 @@
     <string-array name="backup_instructions_lines">
         <item>Follow these steps to restore this backup in the Daily Dozen app</item>
         <item />
-        <item>1. The Daily Dozen app must be installed on your Android phone. You can download it here: https://play.google.com/store/apps/details?id=org.slavick.dailydozen</item>
+        <item>1. The Daily Dozen app must be installed on your Android phone. You can download it here: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
         <item>2. Tap on the backup file attached to this email.</item>
         <item />

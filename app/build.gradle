@@ -25,7 +25,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "org.slavick.dailydozen"
+        applicationId "org.nutritionfacts.dailydozen"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 21
