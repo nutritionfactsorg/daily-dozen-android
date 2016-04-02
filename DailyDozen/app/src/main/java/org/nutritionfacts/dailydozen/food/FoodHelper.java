@@ -104,7 +104,7 @@ public class FoodHelper {
             foodType.iconResourceId = R.drawable.ic_spices;
             foodType.overviewImageResourceId = R.drawable.spices;
             foodType.name = resources.getString(R.string.food_type_spices_name);
-            foodType.recommendedServingCount = -1.0;
+            foodType.recommendedServingCount = 1.0;
             foodType.exampleTitles.add(resources.getString(R.string.my_favorites));
             foodType.exampleBodies.add(resources.getString(R.string.food_type_spices_example));
 
