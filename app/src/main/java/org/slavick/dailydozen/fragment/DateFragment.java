@@ -26,6 +26,7 @@ import org.slavick.dailydozen.widget.FoodServings;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import likeanimation.LikeButtonView;
 
 public class DateFragment extends Fragment {
@@ -100,18 +101,12 @@ public class DateFragment extends Fragment {
     }
 
     private void initBackToTodayButton() {
-        if (Day.isToday(day)) {
-            tvBackToToday.setVisibility(View.GONE);
-        } else {
-            tvBackToToday.setVisibility(View.VISIBLE);
+        tvBackToToday.setVisibility(Day.isToday(day) ? View.GONE : View.VISIBLE);
+    }
 
-            tvBackToToday.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Bus.displayLatestDate();
-                }
-            });
-        }
+    @OnClick(R.id.back_to_today)
+    public void onBackToTodayClicked() {
+        Bus.displayLatestDate();
     }
 
     @Override

@@ -15,8 +15,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.joanzapata.iconify.widget.IconTextView;
-
 import org.greenrobot.eventbus.Subscribe;
 import org.slavick.dailydozen.Args;
 import org.slavick.dailydozen.R;
@@ -37,6 +35,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class FoodServings extends LinearLayout implements CalculateStreakTask.Listener {
     private final static String TAG = FoodServings.class.getSimpleName();
@@ -54,8 +53,6 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     protected StreakWidget tvStreak;
     @Bind(R.id.food_checkboxes)
     protected ViewGroup vgCheckboxes;
-    @Bind(R.id.food_history)
-    protected IconTextView ivFoodHistory;
 
     public FoodServings(Context context) {
         super(context);
@@ -83,7 +80,6 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
 
         initFoodIcon();
         initFoodName();
-        initFoodHistory();
 
         final Servings servings = getServings();
         initCheckboxes(servings);
@@ -100,8 +96,6 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
 
     private void initFoodName() {
         tvName.setText(String.format("%s %s", food.getName(), getContext().getString(R.string.icon_info)));
-
-        tvName.setOnClickListener(getOnFoodNameClickListener());
     }
 
     private void initFoodStreak(Servings servings) {
@@ -114,22 +108,14 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         }
     }
 
-    private View.OnClickListener getOnFoodNameClickListener() {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getContext().startActivity(createFoodIntent(FoodInfoActivity.class, food));
-            }
-        };
+    @OnClick(R.id.food_name)
+    public void onFoodNameClicked() {
+        getContext().startActivity(createFoodIntent(FoodInfoActivity.class, food));
     }
 
-    private void initFoodHistory() {
-        ivFoodHistory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getContext().startActivity(createFoodIntent(FoodHistoryActivity.class, food));
-            }
-        });
+    @OnClick(R.id.food_history)
+    public void onFoodHistoryClicked() {
+        getContext().startActivity(createFoodIntent(FoodHistoryActivity.class, food));
     }
 
     private Intent createFoodIntent(final Class<? extends AppCompatActivity> klass, final Food food) {

@@ -15,13 +15,15 @@ import org.slavick.dailydozen.model.Servings;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.OnLongClick;
 
-public class DateServings extends LinearLayout implements View.OnLongClickListener {
+public class DateServings extends LinearLayout {
     @Bind(R.id.header)
     protected TextView tvHeader;
     @Bind(R.id.star)
     protected TextView tvStar;
-    @Bind(R.id.subheader)
+    @Bind(R.id.sub_header)
     protected TextView tvSubHeader;
 
     public DateServings(Context context) {
@@ -38,9 +40,7 @@ public class DateServings extends LinearLayout implements View.OnLongClickListen
         final View view = inflate(context, R.layout.date_servings, this);
         ButterKnife.bind(this, view);
 
-        setOnLongClickListener(this);
-
-        // Add some extra padding around the servings subheader so the user has a larger area to tap
+        // Add some extra padding around the servings sub header so the user has a larger area to tap
         initPaddingAroundTextViews();
 
         setHeader(context.getString(R.string.servings));
@@ -52,10 +52,6 @@ public class DateServings extends LinearLayout implements View.OnLongClickListen
 
     public void setSubHeader(final String text) {
         tvSubHeader.setText(text);
-    }
-
-    protected void setSubHeaderOnClickListener(OnClickListener onClickListener) {
-        tvSubHeader.setOnClickListener(onClickListener);
     }
 
     private void initPaddingAroundTextViews() {
@@ -70,23 +66,21 @@ public class DateServings extends LinearLayout implements View.OnLongClickListen
         tvStar.setVisibility(servingsOnDate == 24 ? VISIBLE : GONE);
 
         setSubHeader(String.format("%s out of 24   {fa-bar-chart 20dp @color/gray_dark}", servingsOnDate));
-
-        setSubHeaderOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Context context = getContext();
-
-                if (!Servings.isEmpty()) {
-                    context.startActivity(new Intent(context, ServingsHistoryActivity.class));
-                } else {
-                    Common.showToast(context, R.string.no_servings_recorded);
-                }
-            }
-        });
     }
 
-    @Override
-    public boolean onLongClick(View v) {
+    @OnClick(R.id.sub_header)
+    public void onSubHeaderClicked() {
+        final Context context = getContext();
+
+        if (!Servings.isEmpty()) {
+            context.startActivity(new Intent(context, ServingsHistoryActivity.class));
+        } else {
+            Common.showToast(context, R.string.no_servings_recorded);
+        }
+    }
+
+    @OnLongClick(R.id.star)
+    public boolean onStarLongClicked() {
         Bus.showExplodingStarAnimation();
         return true;
     }

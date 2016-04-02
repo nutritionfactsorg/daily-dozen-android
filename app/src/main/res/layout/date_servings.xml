@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"/>
 
     <com.joanzapata.iconify.widget.IconTextView
-        android:id="@+id/subheader"
+        android:id="@+id/sub_header"
         style="@style/SecondaryText"
         android:layout_weight="1"
         android:layout_width="0dp"
