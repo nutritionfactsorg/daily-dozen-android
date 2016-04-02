@@ -16,19 +16,22 @@ import android.widget.TextView;
 import org.slavick.dailydozen.BuildConfig;
 import org.slavick.dailydozen.R;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class AboutActivity extends AppCompatActivity {
+    @Bind(R.id.about_header)
     protected TextView tvHeader;
+    @Bind(R.id.about_version)
     protected TextView tvVersion;
+    @Bind(R.id.about_text)
     protected TextView tvAbout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-
-        tvHeader = (TextView) findViewById(R.id.about_header);
-        tvVersion = (TextView) findViewById(R.id.about_version);
-        tvAbout = (TextView) findViewById(R.id.about_text);
+        ButterKnife.bind(this);
 
         initActionBar();
 

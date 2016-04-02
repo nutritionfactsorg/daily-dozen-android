@@ -14,10 +14,16 @@ import org.slavick.dailydozen.R;
 import org.slavick.dailydozen.model.enums.TimeScale;
 import org.slavick.dailydozen.task.LoadServingsHistoryTask;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class ServingsHistoryActivity extends AppCompatActivity
         implements LoadServingsHistoryTask.Listener, AdapterView.OnItemSelectedListener {
 
-    private Spinner historySpinner;
+    @Bind(R.id.daily_servings_spinner)
+    protected Spinner historySpinner;
+    @Bind(R.id.daily_servings_chart)
+    protected CombinedChart chart;
 
     private boolean alreadyLoadingData;
 
@@ -25,6 +31,7 @@ public class ServingsHistoryActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_servings_history);
+        ButterKnife.bind(this);
 
         initHistorySpinner();
         loadData();
@@ -55,14 +62,17 @@ public class ServingsHistoryActivity extends AppCompatActivity
                 R.array.servings_time_scale_choices, android.R.layout.simple_list_item_1);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        historySpinner = (Spinner) findViewById(R.id.daily_servings_spinner);
         historySpinner.setOnItemSelectedListener(this);
         historySpinner.setAdapter(adapter);
     }
 
     @Override
     public void onLoadServings(CombinedData chartData) {
-        CombinedChart chart = (CombinedChart) findViewById(R.id.daily_servings_chart);
+        if (chartData == null) {
+            finish();
+            return;
+        }
+
         chart.setVisibility(View.VISIBLE);
 
         chart.setData(chartData);

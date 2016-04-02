@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 
 import org.slavick.dailydozen.Common;
@@ -17,8 +16,13 @@ import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.task.GenerateDataTask;
 import org.slavick.dailydozen.task.GenerateDataTaskInput;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class DebugActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    private Spinner historyToGenerateSpinner;
+    @Bind(R.id.history_to_generate_spinner)
+    protected Spinner historyToGenerateSpinner;
 
     private int historyToGenerate;
 
@@ -26,40 +30,9 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_debug);
-        historyToGenerateSpinner = (Spinner) findViewById(R.id.history_to_generate_spinner);
+        ButterKnife.bind(this);
 
-        initClearDataButton();
         initHistoryToGenerateSpinner();
-        initGenerateFullDataButton();
-        initGenerateRandomDataButton();
-    }
-
-    private void initClearDataButton() {
-        final Button btnClearData = (Button) findViewById(R.id.debug_clear_data);
-        btnClearData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new AlertDialog.Builder(DebugActivity.this)
-                        .setTitle(R.string.debug_clear_data)
-                        .setMessage(R.string.debug_clear_data_message)
-                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Servings.truncate(Servings.class);
-                                Day.truncate(Day.class);
-
-                                dialog.dismiss();
-                            }
-                        })
-                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        })
-                        .create().show();
-            }
-        });
     }
 
     private void initHistoryToGenerateSpinner() {
@@ -67,49 +40,66 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
                 R.array.history_to_generate_choices, android.R.layout.simple_list_item_1);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        historyToGenerateSpinner = (Spinner) findViewById(R.id.history_to_generate_spinner);
         historyToGenerateSpinner.setOnItemSelectedListener(this);
         historyToGenerateSpinner.setAdapter(adapter);
 
         historyToGenerateSpinner.setSelection(3); // Select 1 year by default
     }
 
-    private void initGenerateFullDataButton() {
-        final Button btnGenerateFullData = (Button) findViewById(R.id.debug_generate_full_data);
-        btnGenerateFullData.setOnClickListener(getGenerateDataClickListener(false));
+    @OnClick(R.id.debug_clear_data)
+    public void onClearDataClicked() {
+        new AlertDialog.Builder(DebugActivity.this)
+                .setTitle(R.string.debug_clear_data)
+                .setMessage(R.string.debug_clear_data_message)
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Servings.truncate(Servings.class);
+                        Day.truncate(Day.class);
+
+                        dialog.dismiss();
+                    }
+                })
+                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .create().show();
     }
 
-    private void initGenerateRandomDataButton() {
-        final Button btnGenerateRandomData = (Button) findViewById(R.id.debug_generate_random_data);
-        btnGenerateRandomData.setOnClickListener(getGenerateDataClickListener(true));
+    @OnClick(R.id.debug_generate_full_data)
+    public void onGenerateFullDataClicked() {
+        generateData(false);
     }
 
-    private View.OnClickListener getGenerateDataClickListener(final boolean generateRandomData) {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new AlertDialog.Builder(DebugActivity.this)
-                        .setTitle(R.string.debug_generate_random_data)
-                        .setMessage(R.string.debug_generate_data_message)
-                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                final GenerateDataTaskInput taskInput = new GenerateDataTaskInput(historyToGenerate, generateRandomData);
+    @OnClick(R.id.debug_generate_random_data)
+    public void onGenerateRandomDataClicked() {
+        generateData(true);
+    }
 
-                                new GenerateDataTask(DebugActivity.this).execute(taskInput);
+    private void generateData(final boolean generateRandomData) {
+        new AlertDialog.Builder(DebugActivity.this)
+                .setTitle(R.string.debug_generate_random_data)
+                .setMessage(R.string.debug_generate_data_message)
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        final GenerateDataTaskInput taskInput = new GenerateDataTaskInput(historyToGenerate, generateRandomData);
 
-                                dialog.dismiss();
-                            }
-                        })
-                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        })
-                        .create().show();
-            }
-        };
+                        new GenerateDataTask(DebugActivity.this).execute(taskInput);
+
+                        dialog.dismiss();
+                    }
+                })
+                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .create().show();
     }
 
     @Override

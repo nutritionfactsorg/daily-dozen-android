@@ -35,6 +35,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class FoodServings extends LinearLayout implements CalculateStreakTask.Listener {
     private final static String TAG = FoodServings.class.getSimpleName();
 
@@ -43,11 +46,16 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
 
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
-    private ImageView ivIcon;
-    private TextView tvName;
-    private StreakWidget tvStreak;
-    private ViewGroup vgCheckboxes;
-    private IconTextView ivFoodHistory;
+    @Bind(R.id.food_icon)
+    protected ImageView ivIcon;
+    @Bind(R.id.food_name)
+    protected TextView tvName;
+    @Bind(R.id.food_streak)
+    protected StreakWidget tvStreak;
+    @Bind(R.id.food_checkboxes)
+    protected ViewGroup vgCheckboxes;
+    @Bind(R.id.food_history)
+    protected IconTextView ivFoodHistory;
 
     public FoodServings(Context context) {
         super(context);
@@ -65,13 +73,8 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void init(final Context context) {
-        LayoutInflater.from(context).inflate(R.layout.food_item, this);
-
-        ivIcon = (ImageView) findViewById(R.id.food_icon);
-        tvName = (TextView) findViewById(R.id.food_name);
-        tvStreak = (StreakWidget) findViewById(R.id.food_streak);
-        vgCheckboxes = (ViewGroup) findViewById(R.id.food_checkboxes);
-        ivFoodHistory = (IconTextView) findViewById(R.id.food_history);
+        final View view = LayoutInflater.from(context).inflate(R.layout.food_item, this);
+        ButterKnife.bind(this, view);
     }
 
     public void setDateAndFood(final Day day, final Food food) {

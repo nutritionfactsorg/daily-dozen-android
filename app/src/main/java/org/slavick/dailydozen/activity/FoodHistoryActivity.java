@@ -26,11 +26,14 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends FoodLoadingActivity {
     private static final String TAG = "FoodHistoryActivity";
 
+    @Bind(R.id.calendar_legend)
     protected ViewGroup vgLegend;
 
     private CaldroidFragment calendar;
@@ -43,8 +46,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_history);
-
-        vgLegend = (ViewGroup) findViewById(R.id.calendar_legend);
+        ButterKnife.bind(this);
 
         datesWithEvents = new ArrayMap<>();
         if (savedInstanceState != null) {

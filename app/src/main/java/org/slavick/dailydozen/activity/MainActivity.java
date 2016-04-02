@@ -34,13 +34,18 @@ import org.slavick.dailydozen.task.RestoreTask;
 
 import java.io.File;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity
         implements BackupTask.Listener, RestoreTask.Listener, CalculateStreaksTask.Listener {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     private static final int DEBUG_SETTINGS_REQUEST = 1;
 
+    @Bind(R.id.date_pager)
     protected ViewPager datePager;
+    @Bind(R.id.date_pager_indicator)
     protected PagerTabStrip datePagerIndicator;
 
     private Handler dayChangeHandler;
@@ -54,9 +59,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        datePager = (ViewPager) findViewById(R.id.date_pager);
-        datePagerIndicator = (PagerTabStrip) findViewById(R.id.date_pager_indicator);
+        ButterKnife.bind(this);
 
         initDatePager();
         initDatePagerIndicator();

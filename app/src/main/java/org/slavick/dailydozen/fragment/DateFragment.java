@@ -24,18 +24,25 @@ import org.slavick.dailydozen.model.Servings;
 import org.slavick.dailydozen.widget.DateServings;
 import org.slavick.dailydozen.widget.FoodServings;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import likeanimation.LikeButtonView;
 
 public class DateFragment extends Fragment {
     private static final String TAG = DateFragment.class.getSimpleName();
 
-    private Day day;
+    @Bind(R.id.back_to_today)
+    protected TextView tvBackToToday;
+    @Bind(R.id.date_servings)
+    protected DateServings dateServings;
+    @Bind(R.id.date_food_servings)
+    protected ViewGroup vgFoodServings;
+    @Bind(R.id.exploding_star_container)
+    protected ViewGroup vgExplodingStar;
+    @Bind(R.id.exploding_star)
+    protected LikeButtonView explodingStar;
 
-    private TextView tvBackToToday;
-    private DateServings dateServings;
-    private ViewGroup vgFoodServings;
-    private ViewGroup vgExplodingStar;
-    private LikeButtonView explodingStar;
+    private Day day;
 
     public static DateFragment newInstance(final Day day) {
         final Bundle args = new Bundle();
@@ -55,16 +62,17 @@ public class DateFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        tvBackToToday = (TextView) view.findViewById(R.id.back_to_today);
-        dateServings = (DateServings) view.findViewById(R.id.date_servings);
-        vgFoodServings = (ViewGroup) view.findViewById(R.id.date_food_servings);
-        vgExplodingStar = (ViewGroup) view.findViewById(R.id.exploding_star_container);
-        explodingStar = (LikeButtonView) view.findViewById(R.id.exploding_star);
+        ButterKnife.bind(this, view);
 
         displayFormForDate();
 
         Bus.register(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        ButterKnife.unbind(this);
     }
 
     private void displayFormForDate() {

@@ -10,8 +10,13 @@ import org.slavick.dailydozen.model.FoodInfo;
 
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class FoodInfoActivity extends FoodLoadingActivity {
+    @Bind(R.id.food_types)
     protected ListView lvFoodTypes;
+    @Bind(R.id.food_serving_sizes)
     protected ListView lvFoodServingSizes;
 
     @SuppressWarnings("unchecked")
@@ -19,9 +24,7 @@ public class FoodInfoActivity extends FoodLoadingActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_info);
-
-        lvFoodTypes = (ListView) findViewById(R.id.food_types);
-        lvFoodServingSizes = (ListView) findViewById(R.id.food_serving_sizes);
+        ButterKnife.bind(this);
 
         displayFoodInfo();
     }

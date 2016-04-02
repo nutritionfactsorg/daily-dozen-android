@@ -13,10 +13,16 @@ import org.slavick.dailydozen.activity.ServingsHistoryActivity;
 import org.slavick.dailydozen.controller.Bus;
 import org.slavick.dailydozen.model.Servings;
 
-public class DateServings extends LinearLayout implements View.OnLongClickListener{
-    private TextView tvHeader;
-    private TextView tvStar;
-    private TextView tvSubHeader;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+public class DateServings extends LinearLayout implements View.OnLongClickListener {
+    @Bind(R.id.header)
+    protected TextView tvHeader;
+    @Bind(R.id.star)
+    protected TextView tvStar;
+    @Bind(R.id.subheader)
+    protected TextView tvSubHeader;
 
     public DateServings(Context context) {
         super(context);
@@ -29,10 +35,8 @@ public class DateServings extends LinearLayout implements View.OnLongClickListen
     }
 
     private void init(final Context context) {
-        inflate(context, R.layout.date_servings, this);
-        tvHeader = (TextView) findViewById(R.id.header);
-        tvStar = (TextView) findViewById(R.id.star);
-        tvSubHeader = (TextView) findViewById(R.id.subheader);
+        final View view = inflate(context, R.layout.date_servings, this);
+        ButterKnife.bind(this, view);
 
         setOnLongClickListener(this);
 
