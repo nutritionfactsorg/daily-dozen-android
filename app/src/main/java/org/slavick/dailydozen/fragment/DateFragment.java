@@ -49,7 +49,12 @@ public class DateFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_date, container, false);
+        return inflater.inflate(R.layout.fragment_date, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         tvBackToToday = (TextView) view.findViewById(R.id.back_to_today);
         dateServings = (DateServings) view.findViewById(R.id.date_servings);
@@ -60,8 +65,6 @@ public class DateFragment extends Fragment {
         displayFormForDate();
 
         Bus.register(this);
-
-        return view;
     }
 
     private void displayFormForDate() {
