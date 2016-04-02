@@ -44,4 +44,8 @@ public class Common {
     public static int convertDpToPx(final Context context, final int dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
     }
+
+    public static String getLineSeparator() {
+        return System.getProperty("line.separator");
+    }
 }

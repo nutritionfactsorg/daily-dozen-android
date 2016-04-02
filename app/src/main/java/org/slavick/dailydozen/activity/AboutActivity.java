@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import org.slavick.dailydozen.BuildConfig;
+import org.slavick.dailydozen.Common;
 import org.slavick.dailydozen.R;
 
 import butterknife.Bind;
@@ -63,7 +64,8 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     private void initLinksInText() {
-        final String aboutText = TextUtils.join("\n", getResources().getStringArray(R.array.about_text_lines));
+        final String aboutText = TextUtils.join(Common.getLineSeparator(),
+                getResources().getStringArray(R.array.about_text_lines));
         final SpannableStringBuilder ssb = new SpannableStringBuilder(aboutText);
 
         initLink(aboutText, ssb, R.string.book_title, R.string.url_book);

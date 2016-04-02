@@ -276,7 +276,8 @@ public class MainActivity extends AppCompatActivity
 
     private void shareBackupFile() {
         final File backupFile = getBackupFile();
-        final String backupInstructions = TextUtils.join("\n", getResources().getStringArray(R.array.backup_instructions_lines));
+        final String backupInstructions = TextUtils.join(Common.getLineSeparator(),
+                getResources().getStringArray(R.array.backup_instructions_lines));
         final Uri backupFileUri = FileProvider.getUriForFile(this, Common.FILE_PROVIDER_AUTHORITY, backupFile);
 
         try {

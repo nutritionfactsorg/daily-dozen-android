@@ -65,7 +65,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
         final int numDays = allDays.size();
 
-        final String lineSeparator = System.getProperty("line.separator");
+        final String lineSeparator = Common.getLineSeparator();
 
         final StringBuilder csvLines = new StringBuilder(getHeadersLine());
 
