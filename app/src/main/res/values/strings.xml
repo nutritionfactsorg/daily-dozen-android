@@ -29,12 +29,14 @@
     <string name="url_my_website">http://johnslavick.com</string>
     <string name="library_activeandroid">ActiveAndroid</string>
     <string name="library_android_iconify">android-iconify</string>
+    <string name="library_butterknife">ButterKnife</string>
     <string name="library_caldroid">Caldroid</string>
     <string name="library_eventbus">EventBus</string>
     <string name="library_likeanimation">LikeAnimation</string>
     <string name="library_mpandroidchart">MPAndroidChart</string>
     <string name="url_activeandroid">https://github.com/pardom/ActiveAndroid</string>
     <string name="url_android_iconify">https://github.com/JoanZapata/android-iconify</string>
+    <string name="url_butterknife">https://github.com/JakeWharton/butterknife</string>
     <string name="url_caldroid">https://github.com/roomorama/Caldroid</string>
     <string name="url_eventbus">https://github.com/greenrobot/EventBus</string>
     <string name="url_likeanimation">https://github.com/frogermcs/LikeAnimation/</string>
@@ -117,7 +119,7 @@
         <item />
         <item>Daily Dozen was created by John Slavick.</item>
         <item />
-        <item>The following open source libraries were used: ActiveAndroid, android-iconify, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>The following open source libraries were used: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
