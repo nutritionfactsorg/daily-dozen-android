@@ -2,6 +2,7 @@ package org.nutritionfacts.dailydozen.model;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.support.annotation.DrawableRes;
 import android.support.v4.util.ArrayMap;
 
 import org.nutritionfacts.dailydozen.R;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 public class FoodInfo {
+    private static Map<String, Integer> foodImages;
     private static Map<String, Integer> foodIcons;
     private static Map<String, List<String>> servingSizes;
     private static Map<String, List<String>> typesOfFood;
@@ -19,11 +21,35 @@ public class FoodInfo {
     public static void init(final Context context) {
         final Resources resources = context.getResources();
 
+        initFoodImages(resources);
         initFoodIcons(resources);
         initServingSizes(resources);
         initTypesOfFood(resources);
     }
 
+    @DrawableRes
+    public static Integer getFoodImage(final String foodName) {
+        return foodImages.get(foodName);
+    }
+
+    private static void initFoodImages(Resources res) {
+        foodImages = new ArrayMap<>();
+
+        foodImages.put(res.getString(R.string.beans), R.drawable.beans);
+        foodImages.put(res.getString(R.string.berries), R.drawable.berries);
+        foodImages.put(res.getString(R.string.other_fruits), R.drawable.other_fruits);
+        foodImages.put(res.getString(R.string.cruciferous_vegetables), R.drawable.cruciferous_vegetables);
+        foodImages.put(res.getString(R.string.greens), R.drawable.greens);
+        foodImages.put(res.getString(R.string.other_vegetables), R.drawable.other_vegetables);
+        foodImages.put(res.getString(R.string.flaxseeds), R.drawable.flaxseeds);
+        foodImages.put(res.getString(R.string.nuts), R.drawable.nuts);
+        foodImages.put(res.getString(R.string.spices), R.drawable.spices);
+        foodImages.put(res.getString(R.string.whole_grains), R.drawable.whole_grains);
+        foodImages.put(res.getString(R.string.beverages), R.drawable.beverages);
+        foodImages.put(res.getString(R.string.exercise), R.drawable.exercise);
+    }
+
+    @DrawableRes
     public static Integer getFoodIcon(final String foodName) {
         return foodIcons.get(foodName);
     }
