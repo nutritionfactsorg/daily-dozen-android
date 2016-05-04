@@ -136,18 +136,18 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
 
             xLabels.add(String.format("%s/%s", monthOneBased, year));
 
-            final float averageTotalServingsInMonth = Servings.getAverageTotalServingsInMonth(cal);
+            final float averageTotalServingsInMonth = Servings.getAverageTotalServingsInMonth(year, monthOneBased);
+
+            Log.d(TAG, String.format("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
+                    year, monthOneBased, averageTotalServingsInMonth));
 
             lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
-
-            publishProgress(i++, numMonths);
 
             cal.add(Calendar.MONTH, 1);
             year = cal.get(Calendar.YEAR);
             monthOneBased = cal.get(Calendar.MONTH) + 1;
 
-            Log.d(TAG, String.format("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
-                    year, monthOneBased, averageTotalServingsInMonth));
+            publishProgress(i++, numMonths);
         }
 
         if (isCancelled()) {
@@ -167,9 +167,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         final int currentYear = getCurrentYear();
         Log.d(TAG, String.format("getChartDataInYears: currentYear [%s]", currentYear));
 
-        final Calendar cal = createCalendarForYear(firstYear);
-
-        final int numYears = yearsBetween(cal, Calendar.getInstance(Locale.getDefault()));
+        final int numYears = currentYear - firstYear;
         int i = 0;
 
         int year = firstYear;
@@ -182,17 +180,16 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
 
             xLabels.add(String.valueOf(year));
 
-            final float averageTotalServingsInYear = Servings.getAverageTotalServingsInYear(cal);
-
-            lineEntries.add(new Entry(averageTotalServingsInYear, xIndex));
-
-            publishProgress(i++, numYears);
-
-            cal.add(Calendar.YEAR, 1);
-            year = cal.get(Calendar.YEAR);
+            final float averageTotalServingsInYear = Servings.getAverageTotalServingsInYear(year);
 
             Log.d(TAG, String.format("getChartDataInYears: year [%s], average [%s]",
                     year, averageTotalServingsInYear));
+
+            lineEntries.add(new Entry(averageTotalServingsInYear, xIndex));
+
+            year++;
+
+            publishProgress(i++, numYears);
         }
 
         if (isCancelled()) {
@@ -202,13 +199,6 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             combinedData.setData(getLineData(xLabels, lineEntries));
             return combinedData;
         }
-    }
-
-    private Calendar createCalendarForYear(final int year) {
-        final Calendar cal = createCalendar();
-        cal.set(Calendar.YEAR, year);
-        cal.set(Calendar.MONTH, 0);
-        return cal;
     }
 
     private Calendar createCalendarForYearAndMonth(final int year, final int monthZeroBased) {
@@ -299,14 +289,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         listener.onLoadServings(chartData);
     }
 
-    // These methods are meant to calculate a rough approximation of the number of months and the number of years between
-    // a start date and an end date. The output is meant only for showing progress when loading data from the database.
+    // This method is meant to calculate a rough approximation of the number of months between a start date and
+    // an end date. The output is meant only for showing progress when loading data from the database.
     private static int monthsBetween(Calendar start, Calendar end) {
         return timeBetween(start, end, AVERAGE_MILLIS_PER_MONTH);
-    }
-
-    private static int yearsBetween(Calendar start, Calendar end) {
-        return timeBetween(start, end, AVERAGE_MILLIS_PER_YEAR);
     }
 
     private static int timeBetween(Calendar start, Calendar end, double millis) {

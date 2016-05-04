@@ -11,7 +11,6 @@ import com.activeandroid.query.Select;
 import org.slavick.dailydozen.exception.InvalidDateException;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 
@@ -157,12 +156,12 @@ public class Servings extends TruncatableModel {
         return numServings;
     }
 
-    public static float getAverageTotalServingsInYear(final Calendar calendar) {
-        return getAverageServingsForDays(Day.getDaysInYear(calendar));
+    public static float getAverageTotalServingsInYear(final int year) {
+        return getAverageServingsForDays(Day.getDaysInYear(year));
     }
 
-    public static float getAverageTotalServingsInMonth(final Calendar calendar) {
-        return getAverageServingsForDays(Day.getDaysInMonth(calendar));
+    public static float getAverageTotalServingsInMonth(final int year, final int monthOneBased) {
+        return getAverageServingsForDays(Day.getDaysInYearAndMonth(year, monthOneBased));
     }
 
     private static float getAverageServingsForDays(final List<Day> days) {
@@ -181,13 +180,13 @@ public class Servings extends TruncatableModel {
 
     // Any Dates in the return map indicate that at least one serving of the food was consumed on that date.
     // The Boolean for the date indicates whether the number of servings equals the recommended servings of the food.
-    public static Map<Day, Boolean> getServingsOfFoodInMonth(final long foodId, final Calendar calendar) {
+    public static Map<Day, Boolean> getServingsOfFoodInYearAndMonth(final long foodId, final int year, final int monthOneBased) {
         final Map<Day, Boolean> servingsInMonth = new ArrayMap<>();
 
         final Food food = Food.getById(foodId);
 
         if (food != null) {
-            final List<Day> datesInMonth = Day.getDaysInMonth(calendar);
+            final List<Day> datesInMonth = Day.getDaysInYearAndMonth(year, monthOneBased);
 
             final String[] placeholderArray = new String[datesInMonth.size()];
             final Long[] dateIds = new Long[datesInMonth.size()];

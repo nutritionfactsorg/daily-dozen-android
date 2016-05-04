@@ -8,7 +8,6 @@ import com.activeandroid.query.Select;
 
 import org.slavick.dailydozen.exception.InvalidDateException;
 
-import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -141,16 +140,16 @@ public class Day extends TruncatableModel {
                 .execute();
     }
 
-    public static List<Day> getDaysInMonth(final Calendar calendar) {
+    public static List<Day> getDaysInYearAndMonth(final int year, final int monthOneBased) {
         return new Select().from(Day.class)
-                .where("year = ?", calendar.get(Calendar.YEAR))
-                .and("month = ?", calendar.get(Calendar.MONTH) + 1)
+                .where("year = ?", year)
+                .and("month = ?", monthOneBased)
                 .execute();
     }
 
-    public static List<Day> getDaysInYear(final Calendar calendar) {
+    public static List<Day> getDaysInYear(final int year) {
         return new Select().from(Day.class)
-                .where("year = ?", calendar.get(Calendar.YEAR))
+                .where("year = ?", year)
                 .execute();
     }
 
