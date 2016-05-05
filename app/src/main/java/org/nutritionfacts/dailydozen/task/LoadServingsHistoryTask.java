@@ -95,91 +95,70 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             previousTrend = calculateTrend(previousTrend, totalServingsOnDate);
             lineEntries.add(new Entry(previousTrend, xIndex));
 
-            publishProgress(i + 1, numDaysOfServings);
+            publishProgress(i++, numDaysOfServings);
         }
 
-        if (isCancelled()) {
-            return null;
-        } else {
-            final CombinedData combinedData = new CombinedData(xLabels);
-            combinedData.setData(getBarData(xLabels, barEntries));
-            combinedData.setData(getLineData(xLabels, lineEntries));
-            return combinedData;
-        }
+        return createLineAndBarData(xLabels, lineEntries, barEntries);
     }
 
     private CombinedData getChartDataInMonths() {
         final Day firstDay = Day.getFirstDay();
         final int firstYear = firstDay.getYear();
-        final int firstMonth = firstDay.getMonth();
-        Log.d(TAG, String.format("getChartDataInMonths: firstYear [%s], firstMonth [%s]", firstYear, firstMonth));
+        final int firstMonthOneBased = firstDay.getMonth();
+        Log.d(TAG, String.format("getChartDataInMonths: firstYear [%s], firstMonthOneBased [%s]",
+                firstYear, firstMonthOneBased));
 
-        final Calendar cal = Calendar.getInstance(Locale.getDefault());
-        final int currentYear = cal.get(Calendar.YEAR);
-        final int currentMonth = cal.get(Calendar.MONTH) + 1;
-        Log.d(TAG, String.format("getChartDataInMonths: currentYear [%s], currentMonth [%s]", currentYear, currentMonth));
+        final int currentYear = getCurrentYear();
+        final int currentMonthOneBased = getCurrentMonthOneBased();
+        Log.d(TAG, String.format("getChartDataInMonths: currentYear [%s], currentMonthOneBased [%s]",
+                currentYear, currentMonthOneBased));
 
-        cal.set(Calendar.YEAR, firstDay.getYear());
-        cal.set(Calendar.MONTH, firstDay.getMonth() - 1);
-        cal.set(Calendar.HOUR_OF_DAY, 0);
-        cal.set(Calendar.MINUTE, 0);
-        cal.set(Calendar.SECOND, 0);
-        cal.set(Calendar.MILLISECOND, 0);
+        final Calendar cal = getCalendarForYearAndMonth(firstYear, firstMonthOneBased - 1);
 
-        final int numMonths = monthsBetween(cal, Calendar.getInstance(Locale.getDefault()));
+        final int numMonths = monthsSince(cal);
         int i = 0;
 
         int year = firstYear;
-        int month = firstMonth;
+        int monthOneBased = firstMonthOneBased;
 
         final List<String> xLabels = new ArrayList<>();
         final List<Entry> lineEntries = new ArrayList<>();
 
-        while (year < currentYear || (year == currentYear && month <= currentMonth)) {
+        while (year < currentYear || (year == currentYear && monthOneBased <= currentMonthOneBased)) {
+            if (isCancelled()) {
+                break;
+            }
+
             final int xIndex = xLabels.size();
 
-            xLabels.add(String.format("%s/%s", month, year));
+            xLabels.add(String.format("%s/%s", monthOneBased, year));
 
-            final float averageTotalServingsInMonth = Servings.getAverageTotalServingsInMonth(cal);
+            final float averageTotalServingsInMonth = Servings.getAverageTotalServingsInMonth(year, monthOneBased);
+
+            Log.d(TAG, String.format("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
+                    year, monthOneBased, averageTotalServingsInMonth));
 
             lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
 
-            publishProgress(i++, numMonths);
-
             cal.add(Calendar.MONTH, 1);
             year = cal.get(Calendar.YEAR);
-            month = cal.get(Calendar.MONTH) + 1;
+            monthOneBased = cal.get(Calendar.MONTH) + 1;
 
-            Log.d(TAG, String.format("getChartDataInMonths: year [%s], month [%s], average [%s]", year, month, averageTotalServingsInMonth));
+            publishProgress(i++, numMonths);
         }
 
-        if (isCancelled()) {
-            return null;
-        } else {
-            final CombinedData combinedData = new CombinedData(xLabels);
-            combinedData.setData(getLineData(xLabels, lineEntries));
-            return combinedData;
-        }
+        return createLineData(xLabels, lineEntries);
     }
 
     private CombinedData getChartDataInYears() {
         final Day firstDay = Day.getFirstDay();
         final int firstYear = firstDay.getYear();
-        Log.d(TAG, String.format("getChartDataInMonths: firstYear [%s]", firstYear));
+        Log.d(TAG, String.format("getChartDataInYears: firstYear [%s]", firstYear));
 
-        final Calendar cal = Calendar.getInstance(Locale.getDefault());
-        final int currentYear = cal.get(Calendar.YEAR);
-        Log.d(TAG, String.format("getChartDataInMonths: currentYear [%s]", currentYear));
+        final int currentYear = getCurrentYear();
+        Log.d(TAG, String.format("getChartDataInYears: currentYear [%s]", currentYear));
 
-        cal.set(Calendar.YEAR, firstDay.getYear());
-        cal.set(Calendar.MONTH, 0);
-        cal.set(Calendar.MONTH, 0);
-        cal.set(Calendar.HOUR_OF_DAY, 0);
-        cal.set(Calendar.MINUTE, 0);
-        cal.set(Calendar.SECOND, 0);
-        cal.set(Calendar.MILLISECOND, 0);
-
-        final int numYears = yearsBetween(cal, Calendar.getInstance(Locale.getDefault()));
+        final int numYears = currentYear - firstYear;
         int i = 0;
 
         int year = firstYear;
@@ -188,22 +167,38 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         final List<Entry> lineEntries = new ArrayList<>();
 
         while (year <= currentYear) {
+            if (isCancelled()) {
+                break;
+            }
+
             final int xIndex = xLabels.size();
 
             xLabels.add(String.valueOf(year));
 
-            final float averageTotalServingsInYear = Servings.getAverageTotalServingsInYear(cal);
+            final float averageTotalServingsInYear = Servings.getAverageTotalServingsInYear(year);
+
+            Log.d(TAG, String.format("getChartDataInYears: year [%s], average [%s]",
+                    year, averageTotalServingsInYear));
 
             lineEntries.add(new Entry(averageTotalServingsInYear, xIndex));
 
+            year++;
+
             publishProgress(i++, numYears);
-
-            cal.add(Calendar.YEAR, 1);
-            year = cal.get(Calendar.YEAR);
-
-            Log.d(TAG, String.format("getChartDataInMonths: year [%s], average [%s]", year, averageTotalServingsInYear));
         }
 
+        return createLineData(xLabels, lineEntries);
+    }
+
+    private CombinedData createLineAndBarData(List<String> xLabels, List<Entry> lineEntries, List<BarEntry> barEntries) {
+        final CombinedData combinedData = createLineData(xLabels, lineEntries);
+        if (combinedData != null) {
+            combinedData.setData(getBarData(xLabels, barEntries));
+        }
+        return combinedData;
+    }
+
+    private CombinedData createLineData(final List<String> xLabels, final List<Entry> lineEntries) {
         if (isCancelled()) {
             return null;
         } else {
@@ -213,6 +208,29 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         }
     }
 
+    private static Calendar getCalendarForYearAndMonth(final int year, final int monthZeroBased) {
+        final Calendar cal = getCalendarForToday();
+        cal.set(Calendar.YEAR, year);
+        cal.set(Calendar.MONTH, monthZeroBased);
+        return cal;
+    }
+
+    private static Calendar getCalendarForToday() {
+        final Calendar cal = Calendar.getInstance(Locale.getDefault());
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        return cal;
+    }
+
+    private static int getCurrentYear() {
+        return getCalendarForToday().get(Calendar.YEAR);
+    }
+
+    private static int getCurrentMonthOneBased() {
+        return getCalendarForToday().get(Calendar.MONTH) + 1;
+    }
 
     // Calculates an exponentially smoothed moving average with 10% smoothing
     private float calculateTrend(float previousTrend, int currentValue) {
@@ -278,14 +296,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         listener.onLoadServings(chartData);
     }
 
-    // These methods are meant to calculate a rough approximation of the number of months and the number of years between
-    // a start date and an end date. The output is meant only for showing progress when loading data from the database.
-    private static int monthsBetween(Calendar start, Calendar end) {
-        return timeBetween(start, end, AVERAGE_MILLIS_PER_MONTH);
-    }
-
-    private static int yearsBetween(Calendar start, Calendar end) {
-        return timeBetween(start, end, AVERAGE_MILLIS_PER_YEAR);
+    // This method is meant to calculate a rough approximation of the number of months between a start date and now.
+    // The output is meant only for showing progress when loading data from the database.
+    private static int monthsSince(Calendar start) {
+        return timeBetween(start, getCalendarForToday(), AVERAGE_MILLIS_PER_MONTH);
     }
 
     private static int timeBetween(Calendar start, Calendar end, double millis) {

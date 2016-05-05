@@ -122,7 +122,8 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                     final String monthStr = getMonthString(cal);
 
                     if (!loadedMonths.contains(monthStr)) {
-                        final Map<Day, Boolean> servings = Servings.getServingsOfFoodInMonth(foodId, cal);
+                        final Map<Day, Boolean> servings = Servings.getServingsOfFoodInYearAndMonth(foodId,
+                                cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1);
                         loadedMonths.add(monthStr);
 
                         for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
