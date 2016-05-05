@@ -113,9 +113,9 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         Log.d(TAG, String.format("getChartDataInMonths: currentYear [%s], currentMonthOneBased [%s]",
                 currentYear, currentMonthOneBased));
 
-        final Calendar cal = createCalendarForYearAndMonth(firstYear, firstMonthOneBased - 1);
+        final Calendar cal = getCalendarForYearAndMonth(firstYear, firstMonthOneBased - 1);
 
-        final int numMonths = monthsBetween(cal, Calendar.getInstance(Locale.getDefault()));
+        final int numMonths = monthsSince(cal);
         int i = 0;
 
         int year = firstYear;
@@ -208,14 +208,14 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         }
     }
 
-    private Calendar createCalendarForYearAndMonth(final int year, final int monthZeroBased) {
-        final Calendar cal = createCalendar();
+    private static Calendar getCalendarForYearAndMonth(final int year, final int monthZeroBased) {
+        final Calendar cal = getCalendarForToday();
         cal.set(Calendar.YEAR, year);
         cal.set(Calendar.MONTH, monthZeroBased);
         return cal;
     }
 
-    private Calendar createCalendar() {
+    private static Calendar getCalendarForToday() {
         final Calendar cal = Calendar.getInstance(Locale.getDefault());
         cal.set(Calendar.HOUR_OF_DAY, 0);
         cal.set(Calendar.MINUTE, 0);
@@ -224,12 +224,12 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         return cal;
     }
 
-    private int getCurrentYear() {
-        return createCalendar().get(Calendar.YEAR);
+    private static int getCurrentYear() {
+        return getCalendarForToday().get(Calendar.YEAR);
     }
 
-    private int getCurrentMonthOneBased() {
-        return createCalendar().get(Calendar.MONTH) + 1;
+    private static int getCurrentMonthOneBased() {
+        return getCalendarForToday().get(Calendar.MONTH) + 1;
     }
 
     // Calculates an exponentially smoothed moving average with 10% smoothing
@@ -296,10 +296,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         listener.onLoadServings(chartData);
     }
 
-    // This method is meant to calculate a rough approximation of the number of months between a start date and
-    // an end date. The output is meant only for showing progress when loading data from the database.
-    private static int monthsBetween(Calendar start, Calendar end) {
-        return timeBetween(start, end, AVERAGE_MILLIS_PER_MONTH);
+    // This method is meant to calculate a rough approximation of the number of months between a start date and now.
+    // The output is meant only for showing progress when loading data from the database.
+    private static int monthsSince(Calendar start) {
+        return timeBetween(start, getCalendarForToday(), AVERAGE_MILLIS_PER_MONTH);
     }
 
     private static int timeBetween(Calendar start, Calendar end, double millis) {
