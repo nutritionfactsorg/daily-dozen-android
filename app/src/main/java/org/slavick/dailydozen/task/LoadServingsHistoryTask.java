@@ -95,17 +95,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             previousTrend = calculateTrend(previousTrend, totalServingsOnDate);
             lineEntries.add(new Entry(previousTrend, xIndex));
 
-            publishProgress(i + 1, numDaysOfServings);
+            publishProgress(i++, numDaysOfServings);
         }
 
-        if (isCancelled()) {
-            return null;
-        } else {
-            final CombinedData combinedData = new CombinedData(xLabels);
-            combinedData.setData(getBarData(xLabels, barEntries));
-            combinedData.setData(getLineData(xLabels, lineEntries));
-            return combinedData;
-        }
+        return createLineAndBarData(xLabels, lineEntries, barEntries);
     }
 
     private CombinedData getChartDataInMonths() {
@@ -116,7 +109,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
                 firstYear, firstMonthOneBased));
 
         final int currentYear = getCurrentYear();
-        final int currentMonthOneBased = getCurrentMonthZeroBased() + 1;
+        final int currentMonthOneBased = getCurrentMonthOneBased();
         Log.d(TAG, String.format("getChartDataInMonths: currentYear [%s], currentMonthOneBased [%s]",
                 currentYear, currentMonthOneBased));
 
@@ -132,6 +125,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         final List<Entry> lineEntries = new ArrayList<>();
 
         while (year < currentYear || (year == currentYear && monthOneBased <= currentMonthOneBased)) {
+            if (isCancelled()) {
+                break;
+            }
+
             final int xIndex = xLabels.size();
 
             xLabels.add(String.format("%s/%s", monthOneBased, year));
@@ -150,13 +147,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             publishProgress(i++, numMonths);
         }
 
-        if (isCancelled()) {
-            return null;
-        } else {
-            final CombinedData combinedData = new CombinedData(xLabels);
-            combinedData.setData(getLineData(xLabels, lineEntries));
-            return combinedData;
-        }
+        return createLineData(xLabels, lineEntries);
     }
 
     private CombinedData getChartDataInYears() {
@@ -176,6 +167,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         final List<Entry> lineEntries = new ArrayList<>();
 
         while (year <= currentYear) {
+            if (isCancelled()) {
+                break;
+            }
+
             final int xIndex = xLabels.size();
 
             xLabels.add(String.valueOf(year));
@@ -192,6 +187,18 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             publishProgress(i++, numYears);
         }
 
+        return createLineData(xLabels, lineEntries);
+    }
+
+    private CombinedData createLineAndBarData(List<String> xLabels, List<Entry> lineEntries, List<BarEntry> barEntries) {
+        final CombinedData combinedData = createLineData(xLabels, lineEntries);
+        if (combinedData != null) {
+            combinedData.setData(getBarData(xLabels, barEntries));
+        }
+        return combinedData;
+    }
+
+    private CombinedData createLineData(final List<String> xLabels, final List<Entry> lineEntries) {
         if (isCancelled()) {
             return null;
         } else {
@@ -221,8 +228,8 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         return createCalendar().get(Calendar.YEAR);
     }
 
-    private int getCurrentMonthZeroBased() {
-        return createCalendar().get(Calendar.MONTH);
+    private int getCurrentMonthOneBased() {
+        return createCalendar().get(Calendar.MONTH) + 1;
     }
 
     // Calculates an exponentially smoothed moving average with 10% smoothing
