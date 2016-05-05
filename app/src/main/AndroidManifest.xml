@@ -1,4 +1,4 @@
-<manifest package="org.slavick.dailydozen"
+<manifest package="org.nutritionfacts.dailydozen"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -91,7 +91,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="org.slavick.dailydozen.fileprovider"
+            android:authorities="org.nutritionfacts.dailydozen.fileprovider"
             android:grantUriPermissions="true"
             android:exported="false">
             <meta-data

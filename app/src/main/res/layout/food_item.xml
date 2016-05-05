@@ -29,7 +29,7 @@
             android:layout_weight="1"
             android:clickable="true"/>
 
-        <org.slavick.dailydozen.widget.StreakWidget
+        <org.nutritionfacts.dailydozen.widget.StreakWidget
             android:id="@+id/food_streak"
             android:textSize="10sp"
             android:layout_gravity="start"
