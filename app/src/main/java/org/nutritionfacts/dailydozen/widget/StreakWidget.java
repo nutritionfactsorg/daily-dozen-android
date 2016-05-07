@@ -1,6 +1,8 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
+import android.support.annotation.ColorRes;
+import android.support.annotation.DrawableRes;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
@@ -32,18 +34,20 @@ public class StreakWidget extends IconTextView {
 
             setText(String.format("%s days", streak));
 
-            if (streak > ONE_DAY && streak < ONE_WEEK) {
-                setTextColor(ContextCompat.getColor(getContext(), android.R.color.white));
-                setBackgroundResource(R.drawable.rounded_rectangle_bronze);
+            if (streak < ONE_WEEK) {
+                setBackgroundAndTextColor(R.drawable.rounded_rectangle_bronze, android.R.color.white);
             } else if (streak >= ONE_WEEK && streak < TWO_WEEKS) {
-                setTextColor(ContextCompat.getColor(getContext(), android.R.color.black));
-                setBackgroundResource(R.drawable.rounded_rectangle_silver);
+                setBackgroundAndTextColor(R.drawable.rounded_rectangle_silver, android.R.color.black);
             } else if (streak >= TWO_WEEKS) {
-                setTextColor(ContextCompat.getColor(getContext(), android.R.color.black));
-                setBackgroundResource(R.drawable.rounded_rectangle_gold);
+                setBackgroundAndTextColor(R.drawable.rounded_rectangle_gold, android.R.color.black);
             }
         } else {
             setVisibility(View.GONE);
         }
+    }
+
+    private void setBackgroundAndTextColor(@DrawableRes int drawableId, @ColorRes int colorId) {
+        setBackgroundResource(drawableId);
+        setTextColor(ContextCompat.getColor(getContext(), colorId));
     }
 }
