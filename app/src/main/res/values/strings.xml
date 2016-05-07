@@ -25,8 +25,8 @@
     <string name="url_book">http://nutritionfacts.org/book/</string>
     <string name="nutritionfacts_title">nutritionfacts.org</string>
     <string name="url_nutritionfacts">http://nutritionfacts.org</string>
-    <string name="my_name">John Slavick</string>
-    <string name="url_my_website">http://johnslavick.com</string>
+    <string name="name_john_slavick">John Slavick</string>
+    <string name="url_john_slavick">http://johnslavick.com</string>
     <string name="library_activeandroid">ActiveAndroid</string>
     <string name="library_android_iconify">android-iconify</string>
     <string name="library_butterknife">ButterKnife</string>
@@ -81,6 +81,8 @@
     <string name="history_to_generate">History to Generate</string>
     <string name="date_servings_star">{fa-star 24dp @color/gold}</string>
     <string name="date_servings_star_large">{fa-star 64dp @color/gold}</string>
+    <string name="welcome_to_my_daily_dozen">Welcome to my Daily Dozen!</string>
+    <string name="activity_welcome_text">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -113,13 +115,11 @@
     </integer-array>
 
     <string-array name="about_text_lines">
-        <item>This app was inspired by the book How Not to Die by Dr. Michael Greger. Please see his website nutritionfacts.org for a wealth of videos on nutrition.</item>
+        <item>This app was created by John Slavick.</item>
         <item />
-        <item>In the book, there is a chapter describing a checklist of the daily dozen foods you should eat for great health. Daily Dozen is that checklist as an Android app.</item>
+        <item>The following open source libraries are used: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
         <item />
-        <item>Daily Dozen was created by John Slavick.</item>
-        <item />
-        <item>The following open source libraries were used: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Special thanks to the volunteer efforts of the creators of the previous app: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">

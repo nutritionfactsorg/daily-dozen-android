@@ -21,6 +21,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class AboutActivity extends AppCompatActivity {
+    @Bind(R.id.about_welcome)
+    protected TextView tvWelcome;
     @Bind(R.id.about_header)
     protected TextView tvHeader;
     @Bind(R.id.about_version)
@@ -37,6 +39,8 @@ public class AboutActivity extends AppCompatActivity {
         initActionBar();
 
         initHeader();
+
+        initLinksInWelcome();
         initLinksInText();
     }
 
@@ -63,14 +67,22 @@ public class AboutActivity extends AppCompatActivity {
         tvVersion.setText(String.format("version %s", BuildConfig.VERSION_NAME));
     }
 
+    private void initLinksInWelcome() {
+        final String welcomeText = getString(R.string.activity_welcome_text);
+        final SpannableStringBuilder ssb = new SpannableStringBuilder(welcomeText);
+
+        initLink(welcomeText, ssb, R.string.book_title, R.string.url_book);
+
+        tvWelcome.setMovementMethod(LinkMovementMethod.getInstance());
+        tvWelcome.setText(ssb, TextView.BufferType.SPANNABLE);
+    }
+
     private void initLinksInText() {
         final String aboutText = TextUtils.join(Common.getLineSeparator(),
                 getResources().getStringArray(R.array.about_text_lines));
         final SpannableStringBuilder ssb = new SpannableStringBuilder(aboutText);
 
-        initLink(aboutText, ssb, R.string.book_title, R.string.url_book);
-        initLink(aboutText, ssb, R.string.nutritionfacts_title, R.string.url_nutritionfacts);
-        initLink(aboutText, ssb, R.string.my_name, R.string.url_my_website);
+        initLink(aboutText, ssb, R.string.name_john_slavick, R.string.url_john_slavick);
         initLink(aboutText, ssb, R.string.library_activeandroid, R.string.url_activeandroid);
         initLink(aboutText, ssb, R.string.library_android_iconify, R.string.url_android_iconify);
         initLink(aboutText, ssb, R.string.library_butterknife, R.string.url_butterknife);
