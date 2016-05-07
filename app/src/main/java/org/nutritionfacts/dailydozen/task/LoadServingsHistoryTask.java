@@ -17,18 +17,15 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
+import org.nutritionfacts.dailydozen.util.DateUtil;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, CombinedData> {
     private static final String TAG = LoadServingsHistoryTask.class.getSimpleName();
-
-    private final static double AVERAGE_MILLIS_PER_YEAR = 365.24 * 24 * 60 * 60 * 1000;
-    private final static double AVERAGE_MILLIS_PER_MONTH = AVERAGE_MILLIS_PER_YEAR / 12;
 
     private final Listener listener;
 
@@ -108,14 +105,14 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         Log.d(TAG, String.format("getChartDataInMonths: firstYear [%s], firstMonthOneBased [%s]",
                 firstYear, firstMonthOneBased));
 
-        final int currentYear = getCurrentYear();
-        final int currentMonthOneBased = getCurrentMonthOneBased();
+        final int currentYear = DateUtil.getCurrentYear();
+        final int currentMonthOneBased = DateUtil.getCurrentMonthOneBased();
         Log.d(TAG, String.format("getChartDataInMonths: currentYear [%s], currentMonthOneBased [%s]",
                 currentYear, currentMonthOneBased));
 
-        final Calendar cal = getCalendarForYearAndMonth(firstYear, firstMonthOneBased - 1);
+        final Calendar cal = DateUtil.getCalendarForYearAndMonth(firstYear, firstMonthOneBased - 1);
 
-        final int numMonths = monthsSince(cal);
+        final int numMonths = DateUtil.monthsSince(cal);
         int i = 0;
 
         int year = firstYear;
@@ -140,9 +137,9 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
 
             lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
 
-            cal.add(Calendar.MONTH, 1);
-            year = cal.get(Calendar.YEAR);
-            monthOneBased = cal.get(Calendar.MONTH) + 1;
+            DateUtil.addOneMonth(cal);
+            year = DateUtil.getYear(cal);
+            monthOneBased = DateUtil.getMonthOneBased(cal);
 
             publishProgress(i++, numMonths);
         }
@@ -155,7 +152,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         final int firstYear = firstDay.getYear();
         Log.d(TAG, String.format("getChartDataInYears: firstYear [%s]", firstYear));
 
-        final int currentYear = getCurrentYear();
+        final int currentYear = DateUtil.getCurrentYear();
         Log.d(TAG, String.format("getChartDataInYears: currentYear [%s]", currentYear));
 
         final int numYears = currentYear - firstYear;
@@ -206,30 +203,6 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             combinedData.setData(getLineData(xLabels, lineEntries));
             return combinedData;
         }
-    }
-
-    private static Calendar getCalendarForYearAndMonth(final int year, final int monthZeroBased) {
-        final Calendar cal = getCalendarForToday();
-        cal.set(Calendar.YEAR, year);
-        cal.set(Calendar.MONTH, monthZeroBased);
-        return cal;
-    }
-
-    private static Calendar getCalendarForToday() {
-        final Calendar cal = Calendar.getInstance(Locale.getDefault());
-        cal.set(Calendar.HOUR_OF_DAY, 0);
-        cal.set(Calendar.MINUTE, 0);
-        cal.set(Calendar.SECOND, 0);
-        cal.set(Calendar.MILLISECOND, 0);
-        return cal;
-    }
-
-    private static int getCurrentYear() {
-        return getCalendarForToday().get(Calendar.YEAR);
-    }
-
-    private static int getCurrentMonthOneBased() {
-        return getCalendarForToday().get(Calendar.MONTH) + 1;
     }
 
     // Calculates an exponentially smoothed moving average with 10% smoothing
@@ -294,16 +267,6 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
     protected void onPostExecute(CombinedData chartData) {
         super.onPostExecute(chartData);
         listener.onLoadServings(chartData);
-    }
-
-    // This method is meant to calculate a rough approximation of the number of months between a start date and now.
-    // The output is meant only for showing progress when loading data from the database.
-    private static int monthsSince(Calendar start) {
-        return timeBetween(start, getCalendarForToday(), AVERAGE_MILLIS_PER_MONTH);
-    }
-
-    private static int timeBetween(Calendar start, Calendar end, double millis) {
-        return (int) ((end.getTime().getTime() - start.getTime().getTime()) / millis);
     }
 
     private class BarChartValueFormatter implements com.github.mikephil.charting.formatter.ValueFormatter {

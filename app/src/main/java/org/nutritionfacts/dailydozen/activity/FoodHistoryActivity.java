@@ -18,11 +18,11 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.util.DateUtil;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
@@ -36,7 +36,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     @Bind(R.id.calendar_legend)
     protected ViewGroup vgLegend;
 
-    private CaldroidFragment calendar;
+    private CaldroidFragment caldroid;
 
     private Set<String> loadedMonths = new HashSet<>();
     private Map<DateTime, Drawable> datesWithEvents;
@@ -62,18 +62,11 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     }
 
     private void initCalendar(final long foodId, final int recommendedServings) {
-        final Calendar cal = Calendar.getInstance(Locale.getDefault());
-        calendar = new CaldroidFragment();
-
-        final Bundle args = new Bundle();
-        args.putInt(CaldroidFragment.MONTH, cal.get(Calendar.MONTH) + 1);
-        args.putInt(CaldroidFragment.YEAR, cal.get(Calendar.YEAR));
-
-        calendar.setArguments(args);
-
         datesWithEvents = new ArrayMap<>();
 
-        calendar.setCaldroidListener(new CaldroidListener() {
+        caldroid = CaldroidFragment.newInstance("", DateUtil.getCurrentMonthOneBased(), DateUtil.getCurrentYear());
+
+        caldroid.setCaldroidListener(new CaldroidListener() {
             @Override
             public void onSelectDate(Date date, View view) {
             }
@@ -81,19 +74,14 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
             @Override
             public void onChangeMonth(int month, int year) {
                 super.onChangeMonth(month, year);
-
-                final Calendar cal = Calendar.getInstance(Locale.getDefault());
-                cal.set(Calendar.YEAR, year);
-                cal.set(Calendar.MONTH, month - 1); // The month property of Calendar starts at 0
-
-                displayEntriesForVisibleMonths(cal, foodId);
+                displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(year, month - 1), foodId);
             }
         });
 
         vgLegend.setVisibility(recommendedServings > 1 ? View.VISIBLE : View.GONE);
 
         final FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-        t.replace(R.id.calendar_fragment_container, calendar);
+        t.replace(R.id.calendar_fragment_container, caldroid);
         t.commit();
     }
 
@@ -101,11 +89,6 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
-                cal.set(Calendar.HOUR_OF_DAY, 0);
-                cal.set(Calendar.MINUTE, 0);
-                cal.set(Calendar.SECOND, 0);
-                cal.set(Calendar.MILLISECOND, 0);
-
                 final ColorDrawable bgLessThanRecServings = new ColorDrawable(
                         ContextCompat.getColor(FoodHistoryActivity.this, R.color.legend_less_than_recommended_servings));
 
@@ -115,15 +98,16 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                 // We start 2 months in the past because this prevents "flickering" of dates when the user swipes to
                 // the previous month. For instance, starting in February and swiping to January, the dates from
                 // December that are shown in the January calendar will have their backgrounds noticeably flicker on.
-                cal.add(Calendar.MONTH, -2);
+                DateUtil.subtractMonths(cal, 2);
 
                 int i = 0;
                 do {
-                    final String monthStr = getMonthString(cal);
+                    final String monthStr = DateUtil.toStringYYYYMM(cal);
 
                     if (!loadedMonths.contains(monthStr)) {
                         final Map<Day, Boolean> servings = Servings.getServingsOfFoodInYearAndMonth(foodId,
-                                cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1);
+                                DateUtil.getYear(cal), DateUtil.getMonthOneBased(cal));
+
                         loadedMonths.add(monthStr);
 
                         for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
@@ -133,23 +117,19 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                         }
                     }
 
-                    cal.add(Calendar.MONTH, 1);
+                    DateUtil.addOneMonth(cal);
                     i++;
                 } while (i < 3);
 
                 return null;
             }
 
-            private String getMonthString(Calendar cal) {
-                return String.format("%s%s", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1);
-            }
-
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
 
-                calendar.setBackgroundDrawableForDateTimes(datesWithEvents);
-                calendar.refreshView();
+                caldroid.setBackgroundDrawableForDateTimes(datesWithEvents);
+                caldroid.refreshView();
             }
         }.execute();
     }
