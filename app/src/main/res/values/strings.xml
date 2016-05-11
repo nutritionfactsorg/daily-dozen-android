@@ -23,6 +23,12 @@
     <string name="about_this_app">About this app</string>
     <string name="book_title">How Not to Die</string>
     <string name="url_book">http://nutritionfacts.org/book/</string>
+    <string name="donate">Donate</string>
+    <string name="url_donate">https://nutritionfacts.org/donate/</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="url_subscribe">http://nutritionfacts.org/subscribe/</string>
+    <string name="open_source">Open Source</string>
+    <string name="url_open_source">http://nutritionfacts.org/open-source/</string>
     <string name="nutritionfacts_title">nutritionfacts.org</string>
     <string name="url_nutritionfacts">http://nutritionfacts.org</string>
     <string name="name_john_slavick">John Slavick</string>

@@ -1,6 +1,8 @@
 package org.nutritionfacts.dailydozen;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,5 +49,9 @@ public class Common {
 
     public static String getLineSeparator() {
         return System.getProperty("line.separator");
+    }
+
+    public static void openUrlInExternalBrowser(final Context context, final int urlId) {
+        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(context.getString(urlId))));
     }
 }

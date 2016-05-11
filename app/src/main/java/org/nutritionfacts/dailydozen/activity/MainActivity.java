@@ -149,6 +149,18 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_how_not_to_die:
+                Common.openUrlInExternalBrowser(this, R.string.url_book);
+                return true;
+            case R.id.menu_donate:
+                Common.openUrlInExternalBrowser(this, R.string.url_donate);
+                return true;
+            case R.id.menu_subscribe:
+                Common.openUrlInExternalBrowser(this, R.string.url_subscribe);
+                return true;
+            case R.id.menu_open_source:
+                Common.openUrlInExternalBrowser(this, R.string.url_open_source);
+                return true;
             case R.id.menu_rate_in_play_store:
                 openPlayStore();
                 return true;

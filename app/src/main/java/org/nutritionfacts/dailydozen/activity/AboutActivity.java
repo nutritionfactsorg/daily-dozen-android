@@ -1,7 +1,5 @@
 package org.nutritionfacts.dailydozen.activity;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -97,7 +95,6 @@ public class AboutActivity extends AppCompatActivity {
 
     private void initLink(final String textToSearch, final SpannableStringBuilder ssb, final int textToFindId, final int urlId) {
         final String textToFind = getString(textToFindId);
-        final String url = getString(urlId);
 
         final int startIndex = textToSearch.indexOf(textToFind);
 
@@ -105,7 +102,7 @@ public class AboutActivity extends AppCompatActivity {
             ssb.setSpan(new ClickableSpan() {
                 @Override
                 public void onClick(View widget) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                    Common.openUrlInExternalBrowser(AboutActivity.this, urlId);
                 }
             }, startIndex, startIndex + textToFind.length(), 0);
         }
