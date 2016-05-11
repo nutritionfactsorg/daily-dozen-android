@@ -40,6 +40,7 @@
                     style="@style/PrimaryText"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
@@ -47,6 +48,7 @@
                     android:id="@+id/about_welcome"
                     android:text="@string/activity_welcome_text"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
