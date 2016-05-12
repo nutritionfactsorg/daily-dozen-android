@@ -89,6 +89,10 @@
     <string name="date_servings_star_large">{fa-star 64dp @color/gold}</string>
     <string name="welcome_to_my_daily_dozen">Welcome to my Daily Dozen!</string>
     <string name="activity_welcome_text">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Do you like this app?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Please give us feedback in the Play Store.</string>
+    <string name="rate_now">Give Feedback</string>
+    <string name="not_now">Not Now</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

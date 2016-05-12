@@ -191,15 +191,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void openPlayStore() {
-        try {
-            startActivity(createOpenPlayStoreIntent("market://details?id="));
-        } catch (ActivityNotFoundException e) {
-            startActivity(createOpenPlayStoreIntent("https://play.google.com/store/apps/details?id="));
-        }
-    }
-
-    private Intent createOpenPlayStoreIntent(final String url) {
-        return new Intent(Intent.ACTION_VIEW, Uri.parse(url + getPackageName()));
+        Common.openPlayStore(this);
     }
 
     private void initDatePager() {

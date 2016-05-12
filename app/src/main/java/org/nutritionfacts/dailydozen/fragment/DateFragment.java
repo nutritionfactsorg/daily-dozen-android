@@ -13,8 +13,10 @@ import android.widget.TextView;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
 import org.nutritionfacts.dailydozen.event.ShowExplodingStarAnimation;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
@@ -152,8 +154,20 @@ public class DateFragment extends Fragment {
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
                 vgExplodingStar.setVisibility(View.GONE);
+
+                askUserToRateAfterFirstStarExplosion();
             }
         });
+    }
+
+    private void askUserToRateAfterFirstStarExplosion() {
+        final Prefs prefs = Prefs.getInstance(getContext());
+
+        if (!prefs.userHasSeenFirstStarExplosion()) {
+            Common.askUserToRateApp(getContext());
+
+            prefs.setUserHasSeenFirstStarExplosion();
+        }
     }
 
     private void updateServingsCount() {

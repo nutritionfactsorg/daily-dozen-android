@@ -8,6 +8,7 @@ import org.nutritionfacts.dailydozen.Common;
 public class Prefs {
     private static final String FOODS_HAVE_BEEN_CREATED = "foods_have_been_created";
     private static final String STREAKS_HAVE_BEEN_CALCULATED_ON_DATABASE_UPGRADE_V2 = "v2_streaks_calculated";
+    private static final String USER_HAS_SEEN_FIRST_STAR_EXPLOSION = "user_has_seen_first_star_explosion";
 
     private static Prefs instance;
 
@@ -25,12 +26,16 @@ public class Prefs {
         return instance;
     }
 
+    private boolean getBooleanPref(final String name) {
+        return sharedPrefs.getBoolean(name, false);
+    }
+
     private void setBooleanPref(final String name, final boolean value) {
         sharedPrefs.edit().putBoolean(name, value).apply();
     }
 
     public boolean foodsHaveBeenCreated() {
-        return sharedPrefs.getBoolean(FOODS_HAVE_BEEN_CREATED, false);
+        return getBooleanPref(FOODS_HAVE_BEEN_CREATED);
     }
 
     public void setFoodsHaveBeenCreated() {
@@ -38,10 +43,18 @@ public class Prefs {
     }
 
     public boolean streaksHaveBeenCalculatedAfterDatabaseUpgradeToV2() {
-        return sharedPrefs.getBoolean(STREAKS_HAVE_BEEN_CALCULATED_ON_DATABASE_UPGRADE_V2, false);
+        return getBooleanPref(STREAKS_HAVE_BEEN_CALCULATED_ON_DATABASE_UPGRADE_V2);
     }
 
     public void setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2() {
         setBooleanPref(STREAKS_HAVE_BEEN_CALCULATED_ON_DATABASE_UPGRADE_V2, true);
+    }
+
+    public boolean userHasSeenFirstStarExplosion() {
+        return getBooleanPref(USER_HAS_SEEN_FIRST_STAR_EXPLOSION);
+    }
+
+    public void setUserHasSeenFirstStarExplosion() {
+        setBooleanPref(USER_HAS_SEEN_FIRST_STAR_EXPLOSION, true);
     }
 }
