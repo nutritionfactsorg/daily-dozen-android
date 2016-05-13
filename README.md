@@ -36,17 +36,19 @@ The Daily Dozen Android App is licensed under the GPLv3
 Contributors
 ------------
 
-* [Christi Richards][christirichards] (Maintainer)
+* [John Slavick][slavick] (Maintainer)
+* [Christi Richards][christirichards]
 * [Lauren Hacker][laurenhacker]
 
-**Special thanks to the volunteer efforts of the original creators of the app:**
-
-- **Application Development:** Chan Kruse
-- **Application Design:** Allan Portera
-- **Photography:** Sangeeta Kumar
+Special thanks to the volunteer efforts of the creators of the previous app: Chan Kruse, Allan Portera, and Sangeeta Kumar
 
 Updates
 -------
+
+###Version 8 - Completely new app
+- Entries are now persisted over time and can be graphed and charted
+- Added streaks so you can see at a glance how many days you have met your required servings
+- History can be backed up to a comma-separated values text file
 
 ###1.0.1 - 1.0.2 (Google Play)
 - Misspelling fix
@@ -58,6 +60,6 @@ Updates
 [contribute]: https://github.com/nutritionfactsorg/daily-dozen-android/blob/master/CONTRIBUTING.md "Contribute to the Daily Dozen Android App"
 [donate]: https://nutritionfacts.org/donate "Donate to NutritionFacts.org"
 [book]: http://nutritionfacts.org/book "How Not to Die"
-[digitalboro]: http://digitalboro.com/ "Digital Boro"
+[slavick]: http://github.com/slavick "John Slavick on GitHub"
 [christirichards]: http://github.com/christirichards "Christi Richards on GitHub"
-[laurenhacker]: http://github.com/lahacker "Lauren Hacker on Github"
+[laurenhacker]: http://github.com/lahacker "Lauren Hacker on GitHub"

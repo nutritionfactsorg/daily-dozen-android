@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_how_not_to_die"
+        android:title="@string/book_title"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_donate"
+        android:title="@string/donate"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_subscribe"
+        android:title="@string/subscribe"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_open_source"
+        android:title="@string/open_source"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_rate_in_play_store"
+        android:title="@string/rate_in_play_store"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_backup"
+        android:title="@string/backup"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_about"
+        android:title="@string/about"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_debug"
+        android:title="@string/debug"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,1 @@
+ALTER TABLE servings ADD COLUMN streak INTEGER;
