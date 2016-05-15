@@ -92,7 +92,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             previousTrend = calculateTrend(previousTrend, totalServingsOnDate);
             lineEntries.add(new Entry(previousTrend, xIndex));
 
-            publishProgress(i++, numDaysOfServings);
+            publishProgress(i + 1, numDaysOfServings);
         }
 
         return createLineAndBarData(xLabels, lineEntries, barEntries);
