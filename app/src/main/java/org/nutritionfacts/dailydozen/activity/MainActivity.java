@@ -34,7 +34,7 @@ import org.nutritionfacts.dailydozen.task.RestoreTask;
 
 import java.io.File;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity
 
     private static final int DEBUG_SETTINGS_REQUEST = 1;
 
-    @Bind(R.id.date_pager)
+    @BindView(R.id.date_pager)
     protected ViewPager datePager;
-    @Bind(R.id.date_pager_indicator)
+    @BindView(R.id.date_pager_indicator)
     protected PagerTabStrip datePagerIndicator;
 
     private Handler dayChangeHandler;

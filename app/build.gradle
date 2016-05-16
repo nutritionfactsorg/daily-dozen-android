@@ -12,6 +12,7 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 apply plugin: 'com.jakewharton.hugo'
+apply plugin: 'com.neenbedankt.android-apt'
 
 repositories {
     mavenCentral()
@@ -28,8 +29,8 @@ android {
         applicationId "org.nutritionfacts.dailydozen"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 22
-        versionName "8"
+        versionCode 23
+        versionName "9"
     }
     buildTypes {
         release {
@@ -52,5 +53,6 @@ dependencies {
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
     compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
 }

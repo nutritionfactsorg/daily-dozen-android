@@ -12,15 +12,15 @@ import org.nutritionfacts.dailydozen.model.FoodInfo;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class FoodInfoActivity extends FoodLoadingActivity {
-    @Bind(R.id.food_info_image)
+    @BindView(R.id.food_info_image)
     protected ImageView ivFood;
-    @Bind(R.id.food_types)
+    @BindView(R.id.food_types)
     protected ListView lvFoodTypes;
-    @Bind(R.id.food_serving_sizes)
+    @BindView(R.id.food_serving_sizes)
     protected ListView lvFoodServingSizes;
 
     @SuppressWarnings("unchecked")
