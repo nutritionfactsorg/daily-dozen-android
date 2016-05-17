@@ -93,6 +93,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Please give us feedback in the Play Store.</string>
     <string name="rate_now">Give Feedback</string>
     <string name="not_now">Not Now</string>
+    <string name="format_version" formatted="false">version %s</string>
+    <string name="format_num_days" formatted="false">%s days</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
