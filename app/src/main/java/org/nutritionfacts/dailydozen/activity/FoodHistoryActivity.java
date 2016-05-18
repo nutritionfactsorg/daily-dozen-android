@@ -58,7 +58,9 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
     private void displayFoodHistory() {
         final Food food = getFood();
-        initCalendar(food.getId(), food.getRecommendedServings());
+        if (food != null) {
+            initCalendar(food.getId(), food.getRecommendedServings());
+        }
     }
 
     private void initCalendar(final long foodId, final int recommendedServings) {

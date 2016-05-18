@@ -8,6 +8,7 @@ import android.widget.ListView;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 
 import java.util.List;
@@ -34,11 +35,15 @@ public class FoodInfoActivity extends FoodLoadingActivity {
     }
 
     private void displayFoodInfo() {
-        final String foodName = getFood().getName();
+        final Food food = getFood();
 
-        initImage(foodName);
-        initList(lvFoodTypes, FoodInfo.getTypesOfFood(foodName));
-        initList(lvFoodServingSizes, FoodInfo.getServingSizes(foodName));
+        if (food != null) {
+            final String foodName = food.getName();
+
+            initImage(foodName);
+            initList(lvFoodTypes, FoodInfo.getTypesOfFood(foodName));
+            initList(lvFoodServingSizes, FoodInfo.getServingSizes(foodName));
+        }
     }
 
     private void initImage(String foodName) {
