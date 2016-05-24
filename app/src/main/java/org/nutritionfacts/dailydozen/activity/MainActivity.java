@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import org.greenrobot.eventbus.Subscribe;
+import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
@@ -31,6 +32,7 @@ import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.BackupTask;
 import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
 import org.nutritionfacts.dailydozen.task.RestoreTask;
+import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import java.io.File;
 
@@ -65,6 +67,23 @@ public class MainActivity extends AppCompatActivity
         initDatePagerIndicator();
 
         calculateStreaksAfterDatabaseUpgradeToV2();
+
+        handleIntentIfNecessary();
+    }
+
+    private void handleIntentIfNecessary() {
+        final Intent intent = getIntent();
+
+        if (intent != null) {
+            final Bundle extras = intent.getExtras();
+
+            if (extras != null) {
+                if (extras.getBoolean(Args.OPEN_NOTIFICATION_SETTINGS, false)) {
+                    NotificationUtil.dismissUpdateReminderNotification(this);
+                    startActivity(new Intent(this, NotificationSettingsActivity.class));
+                }
+            }
+        }
     }
 
     private void calculateStreaksAfterDatabaseUpgradeToV2() {
@@ -163,6 +182,9 @@ public class MainActivity extends AppCompatActivity
                 return true;
             case R.id.menu_rate_in_play_store:
                 openPlayStore();
+                return true;
+            case R.id.menu_notification_settings:
+                startActivity(new Intent(this, NotificationSettingsActivity.class));
                 return true;
             case R.id.menu_backup:
                 backup();

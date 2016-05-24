@@ -22,6 +22,10 @@
         android:title="@string/rate_in_play_store"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/menu_notification_settings"
+        android:title="@string/notification_settings"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/menu_backup"
         android:title="@string/backup"
         app:showAsAction="never"/>
