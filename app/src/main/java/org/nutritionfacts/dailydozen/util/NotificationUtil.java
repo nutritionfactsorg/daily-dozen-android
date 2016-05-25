@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen.util;
 
+import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -10,7 +11,10 @@ import android.support.v4.app.TaskStackBuilder;
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.activity.MainActivity;
+import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
+import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
+import org.nutritionfacts.dailydozen.receiver.AlarmReceiver;
 
 import java.util.Random;
 
@@ -58,5 +62,35 @@ public class NotificationUtil {
         final String[] foodNames = context.getResources().getStringArray(R.array.notification_icon_food_names);
 
         return FoodInfo.getFoodIcon(foodNames[new Random().nextInt(foodNames.length)]);
+    }
+
+    public static void setRepeatingAlarmForNotification(final Context context, final UpdateReminderPref pref) {
+        if (pref != null) {
+            final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+
+            final PendingIntent alarmPendingIntent = getAlarmPendingIntent(context);
+
+            alarmManager.cancel(alarmPendingIntent);
+
+            alarmManager.setRepeating(
+                    AlarmManager.RTC_WAKEUP,
+                    pref.toCalendar().getTimeInMillis(),
+                    DateUtil.MILLIS_PER_DAY,
+                    alarmPendingIntent);
+        }
+    }
+
+    public static void cancelRepeatingAlarmForNotification(final Context context) {
+        ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).cancel(
+                getAlarmPendingIntent(context));
+    }
+
+    private static PendingIntent getAlarmPendingIntent(Context context) {
+        return PendingIntent.getBroadcast(context, 0, new Intent(context, AlarmReceiver.class), PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    public static void initUpdateNotificationAlarm(final Context context) {
+        cancelRepeatingAlarmForNotification(context);
+        setRepeatingAlarmForNotification(context, Prefs.getInstance(context).getUpdateReminderPref());
     }
 }

@@ -7,12 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SwitchCompat;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
 import android.widget.TimePicker;
 
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
+import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,7 +26,7 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
     @BindView(R.id.daily_reminder_config_container)
     protected ViewGroup vgDailyReminderConfig;
     @BindView(R.id.daily_reminder_time)
-    protected TextView tvTime;
+    protected Button tvTime;
 
     private UpdateReminderPref updateReminderPref;
 
@@ -57,7 +58,13 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
 
         tvTime.setText(updateReminderPref.toString());
 
+        setUpdateReminder();
+    }
+
+    private void setUpdateReminder() {
         Prefs.getInstance(this).setUpdateReminderPref(updateReminderPref);
+
+        NotificationUtil.setRepeatingAlarmForNotification(this, updateReminderPref);
     }
 
     private void disableUpdateReminderPref() {
@@ -65,9 +72,11 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
         vgDailyReminderConfig.setVisibility(View.GONE);
 
         Prefs.getInstance(this).removeUpdateReminderPref();
+
+        NotificationUtil.cancelRepeatingAlarmForNotification(this);
     }
 
-    @OnClick(R.id.daily_reminder_set_time)
+    @OnClick({R.id.daily_reminder_set_time, R.id.daily_reminder_time})
     public void onUpdateReminderSetTimeClicked() {
         new TimePickerDialog(
                 NotificationSettingsActivity.this,

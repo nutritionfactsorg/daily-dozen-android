@@ -2,6 +2,7 @@ package org.nutritionfacts.dailydozen.model.pref;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Calendar;
 import java.util.Locale;
 
 public class UpdateReminderPref {
@@ -34,5 +35,13 @@ public class UpdateReminderPref {
         }
 
         return String.format(Locale.getDefault(), "%s:%02d %s", hour, minute, hourOfDay < 12 ? "AM" : "PM");
+    }
+
+    public Calendar toCalendar() {
+        final Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, hourOfDay);
+        cal.set(Calendar.MINUTE, minute);
+        cal.set(Calendar.SECOND, 0);
+        return cal;
     }
 }

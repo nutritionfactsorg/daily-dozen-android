@@ -99,7 +99,7 @@
     <string name="notification_text">Add your servings for today</string>
     <string name="notification_settings">Notification Settings</string>
     <string name="enable_daily_reminder">Enable Daily Reminder</string>
-    <string name="show_notification_at">Show notification at</string>
+    <string name="show_reminder_at">Show reminder at</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

@@ -8,6 +8,7 @@ import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
+import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -25,6 +26,8 @@ public class DailyDozenApplication extends Application {
         ensureAllFoodsExistInDatabase();
 
         FoodInfo.init(this);
+
+        NotificationUtil.initUpdateNotificationAlarm(this);
     }
 
     private void ensureAllFoodsExistInDatabase() {

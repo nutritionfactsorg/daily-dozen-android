@@ -96,6 +96,10 @@
                 android:value=".activity.MainActivity"/>
         </activity>
 
+        <receiver
+            android:name=".receiver.AlarmReceiver"
+            android:process=":remote"/>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="d542627abc7aba7245e85330a3f392d5cf858690" />
