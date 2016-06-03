@@ -95,7 +95,7 @@
     <string name="not_now">Not Now</string>
     <string name="format_version" formatted="false">version %s</string>
     <string name="format_num_days" formatted="false">%s days</string>
-    <string name="notification_title">Update Daily Dozen</string>
+    <string name="notification_title">Update your Daily Dozen</string>
     <string name="notification_text">Add your servings for today</string>
     <string name="notification_settings">Notification Settings</string>
     <string name="enable_daily_reminder">Enable Daily Reminder</string>

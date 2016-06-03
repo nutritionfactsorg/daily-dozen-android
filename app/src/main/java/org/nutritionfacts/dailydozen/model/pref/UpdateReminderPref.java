@@ -1,11 +1,15 @@
 package org.nutritionfacts.dailydozen.model.pref;
 
+import android.util.Log;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Calendar;
 import java.util.Locale;
 
 public class UpdateReminderPref {
+    private final static String TAG = UpdateReminderPref.class.getSimpleName();
+
     @SerializedName("hourOfDay")
     private int hourOfDay = 20; // Default to 8pm
     @SerializedName("minute")
@@ -39,9 +43,20 @@ public class UpdateReminderPref {
 
     public long getAlarmTimeInMillis() {
         final Calendar cal = Calendar.getInstance();
+        final int currentHourOfDay = cal.get(Calendar.HOUR_OF_DAY);
+        final int currentMinute = cal.get(Calendar.MINUTE);
+
         cal.set(Calendar.HOUR_OF_DAY, hourOfDay);
         cal.set(Calendar.MINUTE, minute);
         cal.set(Calendar.SECOND, 0);
+
+        // If the alarm time for today has already passed, add 24 hours to set the alarm for tomorrow.
+        if (currentHourOfDay > hourOfDay || currentHourOfDay == hourOfDay && currentMinute >= minute) {
+            cal.add(Calendar.HOUR, 24);
+        }
+
+        Log.d(TAG, String.format("getAlarmTimeInMillis %s = %s", cal.getTime(), cal.getTimeInMillis()));
+
         return cal.getTimeInMillis();
     }
 }
