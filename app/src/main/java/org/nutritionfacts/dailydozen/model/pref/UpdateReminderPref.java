@@ -4,10 +4,11 @@ import android.util.Log;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class UpdateReminderPref {
+public class UpdateReminderPref implements Serializable {
     private final static String TAG = UpdateReminderPref.class.getSimpleName();
 
     @SerializedName("hourOfDay")

@@ -18,6 +18,7 @@ import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 import org.nutritionfacts.dailydozen.receiver.AlarmReceiver;
 
+import java.io.Serializable;
 import java.util.Random;
 
 public class NotificationUtil {
@@ -34,16 +35,24 @@ public class NotificationUtil {
                 .addAction(R.drawable.ic_settings_black_24dp, context.getString(R.string.notification_settings), getNotificationSettingsClickedIntent(context));
 
         if (intent != null && intent.getExtras() != null) {
-            if (intent.getExtras().getBoolean(Args.VIBRATE, false)) {
-                final Vibrator vibratorService = getVibratorService(context);
+            final Serializable serializable = intent.getExtras().getSerializable(Args.UPDATE_REMINDER_PREF);
 
-                if (vibratorService.hasVibrator()) {
-                    vibratorService.vibrate(150);
+            if (serializable != null) {
+                final UpdateReminderPref updateReminderPref = (UpdateReminderPref) serializable;
+
+                if (updateReminderPref.isVibrate()) {
+                    final Vibrator vibratorService = getVibratorService(context);
+
+                    if (vibratorService.hasVibrator()) {
+                        vibratorService.vibrate(150);
+                    }
                 }
-            }
 
-            if (intent.getExtras().getBoolean(Args.PLAY_SOUND, false)) {
-                builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+                if (updateReminderPref.isPlaySound()) {
+                    builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+                }
+
+                setAlarmForUpdateReminderNotification(context, updateReminderPref);
             }
         }
 
@@ -92,7 +101,7 @@ public class NotificationUtil {
         return FoodInfo.getFoodIcon(foodNames[new Random().nextInt(foodNames.length)]);
     }
 
-    public static void setRepeatingAlarmForNotification(final Context context, final UpdateReminderPref pref) {
+    public static void setAlarmForUpdateReminderNotification(final Context context, final UpdateReminderPref pref) {
         if (pref != null) {
             final AlarmManager alarmManager = getAlarmManager(context);
 
@@ -100,15 +109,11 @@ public class NotificationUtil {
 
             alarmManager.cancel(alarmPendingIntent);
 
-            alarmManager.setRepeating(
-                    AlarmManager.RTC_WAKEUP,
-                    pref.getAlarmTimeInMillis(),
-                    DateUtil.MILLIS_PER_DAY,
-                    alarmPendingIntent);
+            alarmManager.set(AlarmManager.RTC_WAKEUP, pref.getAlarmTimeInMillis(), alarmPendingIntent);
         }
     }
 
-    public static void cancelRepeatingAlarmForNotification(final Context context, UpdateReminderPref pref) {
+    public static void cancelAlarmForUpdateReminderNotification(final Context context, UpdateReminderPref pref) {
         getAlarmManager(context).cancel(getAlarmPendingIntent(context, pref));
     }
 
@@ -116,8 +121,7 @@ public class NotificationUtil {
         final Intent intent = new Intent(context, AlarmReceiver.class);
 
         if (pref != null) {
-            intent.putExtra(Args.VIBRATE, pref.isVibrate());
-            intent.putExtra(Args.PLAY_SOUND, pref.isPlaySound());
+            intent.putExtra(Args.UPDATE_REMINDER_PREF, pref);
         }
 
         return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -125,7 +129,7 @@ public class NotificationUtil {
 
     public static void initUpdateNotificationAlarm(final Context context) {
         final UpdateReminderPref pref = Prefs.getInstance(context).getUpdateReminderPref();
-        cancelRepeatingAlarmForNotification(context, pref);
-        setRepeatingAlarmForNotification(context, pref);
+        cancelAlarmForUpdateReminderNotification(context, pref);
+        setAlarmForUpdateReminderNotification(context, pref);
     }
 }

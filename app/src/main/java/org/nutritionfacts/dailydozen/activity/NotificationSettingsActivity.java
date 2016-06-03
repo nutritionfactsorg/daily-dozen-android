@@ -79,7 +79,7 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
     private void setUpdateReminder() {
         Prefs.getInstance(this).setUpdateReminderPref(updateReminderPref);
 
-        NotificationUtil.setRepeatingAlarmForNotification(this, updateReminderPref);
+        NotificationUtil.setAlarmForUpdateReminderNotification(this, updateReminderPref);
     }
 
     private void disableUpdateReminderPref() {
@@ -88,7 +88,7 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
 
         final Prefs prefs = Prefs.getInstance(this);
 
-        NotificationUtil.cancelRepeatingAlarmForNotification(this, prefs.getUpdateReminderPref());
+        NotificationUtil.cancelAlarmForUpdateReminderNotification(this, prefs.getUpdateReminderPref());
         prefs.removeUpdateReminderPref();
     }
 
