@@ -56,8 +56,6 @@ public class FoodInfoActivity extends FoodLoadingActivity {
             ivFood.setImageDrawable(foodImage);
         } else {
             ivFood.setVisibility(View.GONE);
-            ivFood.setVisibility(View.GONE);
-            ivFood.setVisibility(View.GONE);
         }
     }
 
