@@ -54,6 +54,10 @@ public class NotificationUtil {
         getNotificationManager(context).cancel(UPDATE_REMINDER_ID);
     }
 
+    private static AlarmManager getAlarmManager(final Context context) {
+        return (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+    }
+
     private static NotificationManager getNotificationManager(final Context context) {
         return (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
     }
@@ -90,7 +94,7 @@ public class NotificationUtil {
 
     public static void setRepeatingAlarmForNotification(final Context context, final UpdateReminderPref pref) {
         if (pref != null) {
-            final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+            final AlarmManager alarmManager = getAlarmManager(context);
 
             final PendingIntent alarmPendingIntent = getAlarmPendingIntent(context, pref);
 
@@ -105,8 +109,7 @@ public class NotificationUtil {
     }
 
     public static void cancelRepeatingAlarmForNotification(final Context context, UpdateReminderPref pref) {
-        ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).cancel(
-                getAlarmPendingIntent(context, pref));
+        getAlarmManager(context).cancel(getAlarmPendingIntent(context, pref));
     }
 
     private static PendingIntent getAlarmPendingIntent(Context context, UpdateReminderPref pref) {
