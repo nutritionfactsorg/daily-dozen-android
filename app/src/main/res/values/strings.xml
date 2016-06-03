@@ -99,7 +99,7 @@
     <string name="notification_text">Add your servings for today</string>
     <string name="notification_settings">Notification Settings</string>
     <string name="enable_daily_reminder">Enable Daily Reminder</string>
-    <string name="show_reminder_at">Show reminder at</string>
+    <string name="remind_me_at">Remind me at</string>
     <string name="vibrate">Vibrate</string>
     <string name="play_sound">Play Sound</string>
 
