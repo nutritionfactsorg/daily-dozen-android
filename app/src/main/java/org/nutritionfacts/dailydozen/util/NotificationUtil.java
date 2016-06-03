@@ -35,7 +35,11 @@ public class NotificationUtil {
 
         if (intent != null && intent.getExtras() != null) {
             if (intent.getExtras().getBoolean(Args.VIBRATE, false)) {
-                ((Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE)).vibrate(150);
+                final Vibrator vibratorService = getVibratorService(context);
+
+                if (vibratorService.hasVibrator()) {
+                    vibratorService.vibrate(150);
+                }
             }
 
             if (intent.getExtras().getBoolean(Args.PLAY_SOUND, false)) {
@@ -52,6 +56,14 @@ public class NotificationUtil {
 
     private static NotificationManager getNotificationManager(final Context context) {
         return (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+    }
+
+    private static Vibrator getVibratorService(final Context context) {
+        return (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+    }
+
+    public static boolean deviceHasVibrator(final Context context) {
+        return getVibratorService(context).hasVibrator();
     }
 
     private static PendingIntent getUpdateReminderClickedIntent(final Context context) {

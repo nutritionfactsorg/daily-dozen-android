@@ -27,6 +27,8 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
     protected ViewGroup vgDailyReminderConfig;
     @BindView(R.id.daily_reminder_time)
     protected Button tvTime;
+    @BindView(R.id.daily_reminder_vibrate_container)
+    protected ViewGroup vgVibrate;
     @BindView(R.id.daily_reminder_vibrate)
     protected SwitchCompat vibrateSwitch;
     @BindView(R.id.daily_reminder_play_sound)
@@ -62,11 +64,16 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
 
         tvTime.setText(updateReminderPref.toString());
 
-        vibrateSwitch.setChecked(updateReminderPref.isVibrate());
+        initVibratePref();
 
         playSoundSwitch.setChecked(updateReminderPref.isPlaySound());
 
         setUpdateReminder();
+    }
+
+    private void initVibratePref() {
+        vgVibrate.setVisibility(NotificationUtil.deviceHasVibrator(this) ? View.VISIBLE : View.GONE);
+        vibrateSwitch.setChecked(updateReminderPref.isVibrate());
     }
 
     private void setUpdateReminder() {
