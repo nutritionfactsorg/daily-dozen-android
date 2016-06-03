@@ -1,7 +1,10 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.text.TextUtils;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -37,7 +40,7 @@ public class FoodInfoActivity extends FoodLoadingActivity {
     private void displayFoodInfo() {
         final Food food = getFood();
 
-        if (food != null) {
+        if (food != null && !TextUtils.isEmpty(food.getName())) {
             final String foodName = food.getName();
 
             initImage(foodName);
@@ -47,7 +50,15 @@ public class FoodInfoActivity extends FoodLoadingActivity {
     }
 
     private void initImage(String foodName) {
-        ivFood.setImageDrawable(ContextCompat.getDrawable(this, FoodInfo.getFoodImage(foodName)));
+        final Drawable foodImage = ContextCompat.getDrawable(this, FoodInfo.getFoodImage(foodName));
+
+        if (foodImage != null) {
+            ivFood.setImageDrawable(foodImage);
+        } else {
+            ivFood.setVisibility(View.GONE);
+            ivFood.setVisibility(View.GONE);
+            ivFood.setVisibility(View.GONE);
+        }
     }
 
     private void initList(final ListView listView, final List<String> items) {
