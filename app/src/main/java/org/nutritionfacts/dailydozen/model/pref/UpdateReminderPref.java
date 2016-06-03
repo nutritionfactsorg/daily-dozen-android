@@ -7,7 +7,7 @@ import java.util.Locale;
 
 public class UpdateReminderPref {
     @SerializedName("hourOfDay")
-    private int hourOfDay;
+    private int hourOfDay = 20; // Default to 8pm
     @SerializedName("minute")
     private int minute;
 
@@ -37,11 +37,11 @@ public class UpdateReminderPref {
         return String.format(Locale.getDefault(), "%s:%02d %s", hour, minute, hourOfDay < 12 ? "AM" : "PM");
     }
 
-    public Calendar toCalendar() {
+    public long getAlarmTimeInMillis() {
         final Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY, hourOfDay);
         cal.set(Calendar.MINUTE, minute);
         cal.set(Calendar.SECOND, 0);
-        return cal;
+        return cal.getTimeInMillis();
     }
 }

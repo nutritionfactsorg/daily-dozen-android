@@ -74,7 +74,7 @@ public class NotificationUtil {
 
             alarmManager.setRepeating(
                     AlarmManager.RTC_WAKEUP,
-                    pref.toCalendar().getTimeInMillis(),
+                    pref.getAlarmTimeInMillis(),
                     DateUtil.MILLIS_PER_DAY,
                     alarmPendingIntent);
         }
