@@ -27,6 +27,10 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
     protected ViewGroup vgDailyReminderConfig;
     @BindView(R.id.daily_reminder_time)
     protected Button tvTime;
+    @BindView(R.id.daily_reminder_vibrate)
+    protected SwitchCompat vibrateSwitch;
+    @BindView(R.id.daily_reminder_play_sound)
+    protected SwitchCompat playSoundSwitch;
 
     private UpdateReminderPref updateReminderPref;
 
@@ -58,6 +62,10 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
 
         tvTime.setText(updateReminderPref.toString());
 
+        vibrateSwitch.setChecked(updateReminderPref.isVibrate());
+
+        playSoundSwitch.setChecked(updateReminderPref.isPlaySound());
+
         setUpdateReminder();
     }
 
@@ -71,9 +79,10 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
         dailyReminderSwitch.setChecked(false);
         vgDailyReminderConfig.setVisibility(View.GONE);
 
-        Prefs.getInstance(this).removeUpdateReminderPref();
+        final Prefs prefs = Prefs.getInstance(this);
 
-        NotificationUtil.cancelRepeatingAlarmForNotification(this);
+        NotificationUtil.cancelRepeatingAlarmForNotification(this, prefs.getUpdateReminderPref());
+        prefs.removeUpdateReminderPref();
     }
 
     @OnClick({R.id.daily_reminder_set_time, R.id.daily_reminder_time})
@@ -98,12 +107,25 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
         }
     }
 
+    @OnCheckedChanged(R.id.daily_reminder_vibrate)
+    public void onVibrateSwitchToggled(final boolean isChecked) {
+        updateReminderPref.setVibrate(isChecked);
+
+        initUpdateReminderPrefConfig();
+    }
+
+    @OnCheckedChanged(R.id.daily_reminder_play_sound)
+    public void onPlaySoundSwitchToggled(final boolean isChecked) {
+        updateReminderPref.setPlaySound(isChecked);
+
+        initUpdateReminderPrefConfig();
+    }
+
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         updateReminderPref.setHourOfDay(hourOfDay);
         updateReminderPref.setMinute(minute);
 
-        // Call this to update the preference
         initUpdateReminderPrefConfig();
     }
 }

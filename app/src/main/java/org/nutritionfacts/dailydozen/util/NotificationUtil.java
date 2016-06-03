@@ -5,6 +5,8 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.media.RingtoneManager;
+import android.os.Vibrator;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 
@@ -22,7 +24,7 @@ public class NotificationUtil {
     private static final int UPDATE_REMINDER_ID = 1;
     private static final int NOTIFICATION_SETTINGS_ID = 2;
 
-    public static void showUpdateReminderNotification(final Context context) {
+    public static void showUpdateReminderNotification(final Context context, Intent intent) {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setAutoCancel(true)
                 .setSmallIcon(getRandomNotificationIcon(context))
@@ -31,6 +33,16 @@ public class NotificationUtil {
                 .setContentIntent(getUpdateReminderClickedIntent(context))
                 .addAction(R.drawable.ic_settings_black_24dp, context.getString(R.string.notification_settings), getNotificationSettingsClickedIntent(context));
 
+        if (intent != null && intent.getExtras() != null) {
+            if (intent.getExtras().getBoolean(Args.VIBRATE, false)) {
+                ((Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE)).vibrate(150);
+            }
+
+            if (intent.getExtras().getBoolean(Args.PLAY_SOUND, false)) {
+                builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+            }
+        }
+
         getNotificationManager(context).notify(UPDATE_REMINDER_ID, builder.build());
     }
 
@@ -38,7 +50,7 @@ public class NotificationUtil {
         getNotificationManager(context).cancel(UPDATE_REMINDER_ID);
     }
 
-    private static NotificationManager getNotificationManager(Context context) {
+    private static NotificationManager getNotificationManager(final Context context) {
         return (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
     }
 
@@ -68,7 +80,7 @@ public class NotificationUtil {
         if (pref != null) {
             final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
-            final PendingIntent alarmPendingIntent = getAlarmPendingIntent(context);
+            final PendingIntent alarmPendingIntent = getAlarmPendingIntent(context, pref);
 
             alarmManager.cancel(alarmPendingIntent);
 
@@ -80,17 +92,25 @@ public class NotificationUtil {
         }
     }
 
-    public static void cancelRepeatingAlarmForNotification(final Context context) {
+    public static void cancelRepeatingAlarmForNotification(final Context context, UpdateReminderPref pref) {
         ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).cancel(
-                getAlarmPendingIntent(context));
+                getAlarmPendingIntent(context, pref));
     }
 
-    private static PendingIntent getAlarmPendingIntent(Context context) {
-        return PendingIntent.getBroadcast(context, 0, new Intent(context, AlarmReceiver.class), PendingIntent.FLAG_UPDATE_CURRENT);
+    private static PendingIntent getAlarmPendingIntent(Context context, UpdateReminderPref pref) {
+        final Intent intent = new Intent(context, AlarmReceiver.class);
+
+        if (pref != null) {
+            intent.putExtra(Args.VIBRATE, pref.isVibrate());
+            intent.putExtra(Args.PLAY_SOUND, pref.isPlaySound());
+        }
+
+        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
     public static void initUpdateNotificationAlarm(final Context context) {
-        cancelRepeatingAlarmForNotification(context);
-        setRepeatingAlarmForNotification(context, Prefs.getInstance(context).getUpdateReminderPref());
+        final UpdateReminderPref pref = Prefs.getInstance(context).getUpdateReminderPref();
+        cancelRepeatingAlarmForNotification(context, pref);
+        setRepeatingAlarmForNotification(context, pref);
     }
 }

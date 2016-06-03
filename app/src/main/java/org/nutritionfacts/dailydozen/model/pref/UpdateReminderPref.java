@@ -14,6 +14,10 @@ public class UpdateReminderPref {
     private int hourOfDay = 20; // Default to 8pm
     @SerializedName("minute")
     private int minute;
+    @SerializedName("vibrate")
+    private boolean vibrate;
+    @SerializedName("playSound")
+    private boolean playSound;
 
     public void setHourOfDay(int hourOfDay) {
         this.hourOfDay = hourOfDay;
@@ -29,6 +33,22 @@ public class UpdateReminderPref {
 
     public int getMinute() {
         return minute;
+    }
+
+    public boolean isVibrate() {
+        return vibrate;
+    }
+
+    public void setVibrate(boolean vibrate) {
+        this.vibrate = vibrate;
+    }
+
+    public boolean isPlaySound() {
+        return playSound;
+    }
+
+    public void setPlaySound(boolean playSound) {
+        this.playSound = playSound;
     }
 
     @Override
