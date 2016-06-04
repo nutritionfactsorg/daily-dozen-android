@@ -69,7 +69,6 @@
     <string name="task_restore_title">Restoring</string>
     <string name="task_calculating_streaks_title">Calculating streaks</string>
     <string name="back_to_today">Back to today</string>
-    <string name="rate_in_play_store">Rate in Play Store</string>
     <string name="debug">Debug</string>
     <string name="debug_clear_data">Clear all data</string>
     <string name="debug_clear_data_message">This will delete all entered Servings. Do you wish to continue?</string>
@@ -95,6 +94,13 @@
     <string name="not_now">Not Now</string>
     <string name="format_version" formatted="false">version %s</string>
     <string name="format_num_days" formatted="false">%s days</string>
+    <string name="daily_reminder_title">Daily Dozen Reminder</string>
+    <string name="daily_reminder_text">Update your servings for today</string>
+    <string name="daily_reminder_settings">Daily Reminder Settings</string>
+    <string name="enable_daily_reminder">Enable Daily Reminder</string>
+    <string name="remind_me_at">Remind me at</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="play_sound">Play Sound</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -109,6 +115,15 @@
         <item>@string/whole_grains</item>
         <item>@string/beverages</item>
         <item>@string/exercise</item>
+    </string-array>
+
+    <string-array name="notification_icon_food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
     </string-array>
 
     <integer-array name="food_quantities">
