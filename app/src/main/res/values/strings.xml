@@ -69,7 +69,6 @@
     <string name="task_restore_title">Restoring</string>
     <string name="task_calculating_streaks_title">Calculating streaks</string>
     <string name="back_to_today">Back to today</string>
-    <string name="rate_in_play_store">Rate in Play Store</string>
     <string name="debug">Debug</string>
     <string name="debug_clear_data">Clear all data</string>
     <string name="debug_clear_data_message">This will delete all entered Servings. Do you wish to continue?</string>
@@ -95,9 +94,9 @@
     <string name="not_now">Not Now</string>
     <string name="format_version" formatted="false">version %s</string>
     <string name="format_num_days" formatted="false">%s days</string>
-    <string name="notification_title">Update your Daily Dozen</string>
-    <string name="notification_text">Add your servings for today</string>
-    <string name="notification_settings">Notification Settings</string>
+    <string name="daily_reminder_title">Daily Dozen Reminder</string>
+    <string name="daily_reminder_text">Update your servings for today</string>
+    <string name="daily_reminder_settings">Daily Reminder Settings</string>
     <string name="enable_daily_reminder">Enable Daily Reminder</string>
     <string name="remind_me_at">Remind me at</string>
     <string name="vibrate">Vibrate</string>

@@ -32,10 +32,10 @@ public class NotificationUtil {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setAutoCancel(true)
                 .setSmallIcon(getRandomNotificationIcon(context))
-                .setContentTitle(context.getString(R.string.notification_title))
-                .setContentText(context.getString(R.string.notification_text))
+                .setContentTitle(context.getString(R.string.daily_reminder_title))
+                .setContentText(context.getString(R.string.daily_reminder_text))
                 .setContentIntent(getUpdateReminderClickedIntent(context))
-                .addAction(R.drawable.ic_settings_black_24dp, context.getString(R.string.notification_settings), getNotificationSettingsClickedIntent(context));
+                .addAction(R.drawable.ic_settings_black_24dp, context.getString(R.string.daily_reminder_settings), getNotificationSettingsClickedIntent(context));
 
         if (intent != null && intent.getExtras() != null) {
             final Serializable serializable = intent.getExtras().getSerializable(Args.UPDATE_REMINDER_PREF);

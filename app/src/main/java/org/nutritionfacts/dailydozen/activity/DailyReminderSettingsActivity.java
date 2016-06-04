@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 
-public class NotificationSettingsActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
+public class DailyReminderSettingsActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     @BindView(R.id.daily_reminder_switch)
     protected SwitchCompat dailyReminderSwitch;
     @BindView(R.id.daily_reminder_config_container)
@@ -94,8 +94,8 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
     @OnClick({R.id.daily_reminder_set_time, R.id.daily_reminder_time})
     public void onUpdateReminderSetTimeClicked() {
         new TimePickerDialog(
-                NotificationSettingsActivity.this,
-                NotificationSettingsActivity.this,
+                DailyReminderSettingsActivity.this,
+                DailyReminderSettingsActivity.this,
                 updateReminderPref.getHourOfDay(),
                 updateReminderPref.getMinute(),
                 false)

@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity
             if (extras != null) {
                 if (extras.getBoolean(Args.OPEN_NOTIFICATION_SETTINGS, false)) {
                     NotificationUtil.dismissUpdateReminderNotification(this);
-                    startActivity(new Intent(this, NotificationSettingsActivity.class));
+                    startActivity(new Intent(this, DailyReminderSettingsActivity.class));
                 }
             }
         }
@@ -180,11 +180,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.menu_open_source:
                 Common.openUrlInExternalBrowser(this, R.string.url_open_source);
                 return true;
-            case R.id.menu_rate_in_play_store:
-                openPlayStore();
-                return true;
-            case R.id.menu_notification_settings:
-                startActivity(new Intent(this, NotificationSettingsActivity.class));
+            case R.id.menu_daily_reminder_settings:
+                startActivity(new Intent(this, DailyReminderSettingsActivity.class));
                 return true;
             case R.id.menu_backup:
                 backup();
@@ -210,10 +207,6 @@ public class MainActivity extends AppCompatActivity
                 initDatePager();
                 break;
         }
-    }
-
-    private void openPlayStore() {
-        Common.openPlayStore(this);
     }
 
     private void initDatePager() {
