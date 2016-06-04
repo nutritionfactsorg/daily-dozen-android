@@ -2,6 +2,7 @@
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -84,6 +85,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.MainActivity"/>
         </activity>
+
+        <activity
+            android:name=".activity.DailyReminderSettingsActivity"
+            android:label="@string/daily_reminder_settings"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
+        <receiver
+            android:name=".receiver.AlarmReceiver"
+            android:process=":remote"/>
 
         <meta-data
             android:name="io.fabric.ApiKey"

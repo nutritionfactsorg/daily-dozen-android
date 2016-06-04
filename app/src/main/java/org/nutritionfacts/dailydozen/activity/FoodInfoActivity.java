@@ -1,26 +1,30 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.text.TextUtils;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class FoodInfoActivity extends FoodLoadingActivity {
-    @Bind(R.id.food_info_image)
+    @BindView(R.id.food_info_image)
     protected ImageView ivFood;
-    @Bind(R.id.food_types)
+    @BindView(R.id.food_types)
     protected ListView lvFoodTypes;
-    @Bind(R.id.food_serving_sizes)
+    @BindView(R.id.food_serving_sizes)
     protected ListView lvFoodServingSizes;
 
     @SuppressWarnings("unchecked")
@@ -34,15 +38,25 @@ public class FoodInfoActivity extends FoodLoadingActivity {
     }
 
     private void displayFoodInfo() {
-        final String foodName = getFood().getName();
+        final Food food = getFood();
 
-        initImage(foodName);
-        initList(lvFoodTypes, FoodInfo.getTypesOfFood(foodName));
-        initList(lvFoodServingSizes, FoodInfo.getServingSizes(foodName));
+        if (food != null && !TextUtils.isEmpty(food.getName())) {
+            final String foodName = food.getName();
+
+            initImage(foodName);
+            initList(lvFoodTypes, FoodInfo.getTypesOfFood(foodName));
+            initList(lvFoodServingSizes, FoodInfo.getServingSizes(foodName));
+        }
     }
 
     private void initImage(String foodName) {
-        ivFood.setImageDrawable(ContextCompat.getDrawable(this, FoodInfo.getFoodImage(foodName)));
+        final Drawable foodImage = ContextCompat.getDrawable(this, FoodInfo.getFoodImage(foodName));
+
+        if (foodImage != null) {
+            ivFood.setImageDrawable(foodImage);
+        } else {
+            ivFood.setVisibility(View.GONE);
+        }
     }
 
     private void initList(final ListView listView, final List<String> items) {

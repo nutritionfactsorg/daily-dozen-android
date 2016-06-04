@@ -15,17 +15,17 @@ import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class AboutActivity extends AppCompatActivity {
-    @Bind(R.id.about_welcome)
+    @BindView(R.id.about_welcome)
     protected TextView tvWelcome;
-    @Bind(R.id.about_header)
+    @BindView(R.id.about_header)
     protected TextView tvHeader;
-    @Bind(R.id.about_version)
+    @BindView(R.id.about_version)
     protected TextView tvVersion;
-    @Bind(R.id.about_text)
+    @BindView(R.id.about_text)
     protected TextView tvAbout;
 
     @Override
@@ -62,7 +62,7 @@ public class AboutActivity extends AppCompatActivity {
 
     private void initHeader() {
         tvHeader.setText(getString(R.string.app_name));
-        tvVersion.setText(String.format("version %s", BuildConfig.VERSION_NAME));
+        tvVersion.setText(String.format(getString(R.string.format_version), BuildConfig.VERSION_NAME));
     }
 
     private void initLinksInWelcome() {

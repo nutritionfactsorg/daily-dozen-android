@@ -13,17 +13,17 @@ import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.Servings;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnLongClick;
 
 public class DateServings extends LinearLayout {
-    @Bind(R.id.header)
+    @BindView(R.id.header)
     protected TextView tvHeader;
-    @Bind(R.id.star)
+    @BindView(R.id.star)
     protected TextView tvStar;
-    @Bind(R.id.sub_header)
+    @BindView(R.id.sub_header)
     protected TextView tvSubHeader;
 
     public DateServings(Context context) {

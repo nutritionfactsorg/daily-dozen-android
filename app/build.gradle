@@ -12,6 +12,7 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 apply plugin: 'com.jakewharton.hugo'
+apply plugin: 'com.neenbedankt.android-apt'
 
 repositories {
     mavenCentral()
@@ -28,8 +29,8 @@ android {
         applicationId "org.nutritionfacts.dailydozen"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 22
-        versionName "8"
+        versionCode 24
+        versionName "9"
     }
     buildTypes {
         release {
@@ -41,16 +42,18 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.android.support:cardview-v7:23.3.0'
-    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
     compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
-    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.6@aar') {
         transitive = true;
     }
     compile 'com.roomorama:caldroid:3.0.1'
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
     compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.google.code.gson:gson:2.6.2'
 }

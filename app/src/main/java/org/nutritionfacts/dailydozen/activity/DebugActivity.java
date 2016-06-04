@@ -16,12 +16,12 @@ import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.GenerateDataTask;
 import org.nutritionfacts.dailydozen.task.GenerateDataTaskInput;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class DebugActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    @Bind(R.id.history_to_generate_spinner)
+    @BindView(R.id.history_to_generate_spinner)
     protected Spinner historyToGenerateSpinner;
 
     private int historyToGenerate;
