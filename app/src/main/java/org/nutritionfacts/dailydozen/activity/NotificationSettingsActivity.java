@@ -86,10 +86,9 @@ public class NotificationSettingsActivity extends AppCompatActivity implements T
         dailyReminderSwitch.setChecked(false);
         vgDailyReminderConfig.setVisibility(View.GONE);
 
-        final Prefs prefs = Prefs.getInstance(this);
+        NotificationUtil.cancelAlarmForUpdateReminderNotification(this, updateReminderPref);
 
-        NotificationUtil.cancelAlarmForUpdateReminderNotification(this, prefs.getUpdateReminderPref());
-        prefs.removeUpdateReminderPref();
+        Prefs.getInstance(this).removeUpdateReminderPref();
     }
 
     @OnClick({R.id.daily_reminder_set_time, R.id.daily_reminder_time})

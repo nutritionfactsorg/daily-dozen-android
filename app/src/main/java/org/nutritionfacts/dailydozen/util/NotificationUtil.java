@@ -9,6 +9,7 @@ import android.media.RingtoneManager;
 import android.os.Vibrator;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
+import android.util.Log;
 
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.R;
@@ -22,6 +23,8 @@ import java.io.Serializable;
 import java.util.Random;
 
 public class NotificationUtil {
+    private final static String TAG = NotificationUtil.class.getSimpleName();
+
     private static final int UPDATE_REMINDER_ID = 1;
     private static final int NOTIFICATION_SETTINGS_ID = 2;
 
@@ -109,11 +112,15 @@ public class NotificationUtil {
 
             alarmManager.cancel(alarmPendingIntent);
 
-            alarmManager.set(AlarmManager.RTC_WAKEUP, pref.getAlarmTimeInMillis(), alarmPendingIntent);
+            final long alarmTimeInMillis = pref.getAlarmTimeInMillis();
+            Log.d(TAG, String.format("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis));
+
+            alarmManager.set(AlarmManager.RTC_WAKEUP, alarmTimeInMillis, alarmPendingIntent);
         }
     }
 
     public static void cancelAlarmForUpdateReminderNotification(final Context context, UpdateReminderPref pref) {
+        Log.d(TAG, "cancelAlarmForUpdateReminderNotification");
         getAlarmManager(context).cancel(getAlarmPendingIntent(context, pref));
     }
 
@@ -127,9 +134,21 @@ public class NotificationUtil {
         return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
-    public static void initUpdateNotificationAlarm(final Context context) {
-        final UpdateReminderPref pref = Prefs.getInstance(context).getUpdateReminderPref();
-        cancelAlarmForUpdateReminderNotification(context, pref);
-        setAlarmForUpdateReminderNotification(context, pref);
+    public static void initUpdateReminderNotificationAlarm(final Context context) {
+        final Prefs prefs = Prefs.getInstance(context);
+
+        UpdateReminderPref updateReminderPref = prefs.getUpdateReminderPref();
+
+        if (updateReminderPref == null && !prefs.defaultUpdateReminderHasBeenCreated()) {
+            Log.d(TAG, "initUpdateReminderNotificationAlarm: Creating default update reminder");
+
+            updateReminderPref = new UpdateReminderPref();
+            prefs.setUpdateReminderPref(updateReminderPref);
+
+            prefs.setDefaultUpdateReminderHasBeenCreated();
+        }
+
+        cancelAlarmForUpdateReminderNotification(context, updateReminderPref);
+        setAlarmForUpdateReminderNotification(context, updateReminderPref);
     }
 }
