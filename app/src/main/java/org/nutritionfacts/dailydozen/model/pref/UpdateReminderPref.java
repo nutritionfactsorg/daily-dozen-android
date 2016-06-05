@@ -11,14 +11,15 @@ import java.util.Locale;
 public class UpdateReminderPref implements Serializable {
     private final static String TAG = UpdateReminderPref.class.getSimpleName();
 
+    // The default Update Reminder notification vibrates the phone and plays a sound at 8pm
     @SerializedName("hourOfDay")
     private int hourOfDay = 20; // Default to 8pm
     @SerializedName("minute")
-    private int minute;
+    private int minute = 0;
     @SerializedName("vibrate")
-    private boolean vibrate;
+    private boolean vibrate = true;
     @SerializedName("playSound")
-    private boolean playSound;
+    private boolean playSound = true;
 
     public void setHourOfDay(int hourOfDay) {
         this.hourOfDay = hourOfDay;
