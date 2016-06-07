@@ -45,6 +45,13 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
+###Version 9
+- Added a Daily Reminder to update your servings
+- Fixed bug where every other day was being skipped in the daily servings chart
+- Fixed bug where failing to load the image in FoodInfoActivity was crashing the app
+- Removed allowBackup="false" from AndroidManifest.xml. This will allow devices running Marshmallow and later to automatically backup to the user's Google Account.
+- Upgraded to ButterKnife 8.0.1
+
 ###Version 8 - Completely new app
 - Entries are now persisted over time and can be graphed and charted
 - Added streaks so you can see at a glance how many days you have met your required servings

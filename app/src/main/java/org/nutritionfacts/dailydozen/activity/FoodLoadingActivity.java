@@ -23,6 +23,10 @@ public abstract class FoodLoadingActivity extends AppCompatActivity {
         initActionBar();
 
         loadFoodFromIntent();
+
+        if (food == null) {
+            finish();
+        }
     }
 
     private void initActionBar() {
@@ -48,7 +52,9 @@ public abstract class FoodLoadingActivity extends AppCompatActivity {
         if (intent != null) {
             food = Food.getById(intent.getLongExtra(Args.FOOD_ID, -1));
 
-            setTitle(food.getName());
+            if (food != null) {
+                setTitle(food.getName());
+            }
         }
     }
 }

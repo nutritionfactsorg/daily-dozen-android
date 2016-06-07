@@ -26,24 +26,27 @@ import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.widget.DateServings;
 import org.nutritionfacts.dailydozen.widget.FoodServings;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 import likeanimation.LikeButtonView;
 
 public class DateFragment extends Fragment {
     private static final String TAG = DateFragment.class.getSimpleName();
 
-    @Bind(R.id.back_to_today)
+    @BindView(R.id.back_to_today)
     protected TextView tvBackToToday;
-    @Bind(R.id.date_servings)
+    @BindView(R.id.date_servings)
     protected DateServings dateServings;
-    @Bind(R.id.date_food_servings)
+    @BindView(R.id.date_food_servings)
     protected ViewGroup vgFoodServings;
-    @Bind(R.id.exploding_star_container)
+    @BindView(R.id.exploding_star_container)
     protected ViewGroup vgExplodingStar;
-    @Bind(R.id.exploding_star)
+    @BindView(R.id.exploding_star)
     protected LikeButtonView explodingStar;
+
+    private Unbinder unbinder;
 
     private Day day;
 
@@ -65,7 +68,7 @@ public class DateFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ButterKnife.bind(this, view);
+        unbinder = ButterKnife.bind(this, view);
 
         displayFormForDate();
 
@@ -75,7 +78,7 @@ public class DateFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
+        unbinder.unbind();
     }
 
     private void displayFormForDate() {

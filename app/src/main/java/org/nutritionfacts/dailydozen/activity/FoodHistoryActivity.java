@@ -26,14 +26,14 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends FoodLoadingActivity {
     private static final String TAG = "FoodHistoryActivity";
 
-    @Bind(R.id.calendar_legend)
+    @BindView(R.id.calendar_legend)
     protected ViewGroup vgLegend;
 
     private CaldroidFragment caldroid;
@@ -58,7 +58,9 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
     private void displayFoodHistory() {
         final Food food = getFood();
-        initCalendar(food.getId(), food.getRecommendedServings());
+        if (food != null) {
+            initCalendar(food.getId(), food.getRecommendedServings());
+        }
     }
 
     private void initCalendar(final long foodId, final int recommendedServings) {

@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -45,13 +45,13 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
 
     private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
-    @Bind(R.id.food_icon)
+    @BindView(R.id.food_icon)
     protected ImageView ivIcon;
-    @Bind(R.id.food_name)
+    @BindView(R.id.food_name)
     protected TextView tvName;
-    @Bind(R.id.food_streak)
+    @BindView(R.id.food_streak)
     protected StreakWidget tvStreak;
-    @Bind(R.id.food_checkboxes)
+    @BindView(R.id.food_checkboxes)
     protected ViewGroup vgCheckboxes;
 
     public FoodServings(Context context) {

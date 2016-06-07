@@ -4,7 +4,8 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class DateUtil {
-    private final static double AVERAGE_MILLIS_PER_YEAR = 365.24 * 24 * 60 * 60 * 1000;
+    public final static long MILLIS_PER_DAY = 24 * 60 * 60 * 1000;
+    private final static double AVERAGE_MILLIS_PER_YEAR = 365.24 * MILLIS_PER_DAY;
     private final static double AVERAGE_MILLIS_PER_MONTH = AVERAGE_MILLIS_PER_YEAR / 12;
 
     public static Calendar getCalendarForYearAndMonth(final int year, final int monthZeroBased) {

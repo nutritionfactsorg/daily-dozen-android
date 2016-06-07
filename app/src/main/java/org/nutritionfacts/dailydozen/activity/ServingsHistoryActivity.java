@@ -14,15 +14,15 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ServingsHistoryActivity extends AppCompatActivity
         implements LoadServingsHistoryTask.Listener, AdapterView.OnItemSelectedListener {
 
-    @Bind(R.id.daily_servings_spinner)
+    @BindView(R.id.daily_servings_spinner)
     protected Spinner historySpinner;
-    @Bind(R.id.daily_servings_chart)
+    @BindView(R.id.daily_servings_chart)
     protected CombinedChart chart;
 
     private boolean alreadyLoadingData;
