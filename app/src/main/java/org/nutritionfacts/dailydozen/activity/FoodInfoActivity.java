@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -20,6 +21,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class FoodInfoActivity extends FoodLoadingActivity {
+    private final static String TAG = FoodInfoActivity.class.getSimpleName();
+
     @BindView(R.id.food_info_image)
     protected ImageView ivFood;
     @BindView(R.id.food_types)
@@ -50,11 +53,16 @@ public class FoodInfoActivity extends FoodLoadingActivity {
     }
 
     private void initImage(String foodName) {
-        final Drawable foodImage = ContextCompat.getDrawable(this, FoodInfo.getFoodImage(foodName));
+        try {
+            final Drawable foodImage = ContextCompat.getDrawable(this, FoodInfo.getFoodImage(foodName));
 
-        if (foodImage != null) {
-            ivFood.setImageDrawable(foodImage);
-        } else {
+            if (foodImage != null) {
+                ivFood.setImageDrawable(foodImage);
+            } else {
+                ivFood.setVisibility(View.GONE);
+            }
+        } catch (OutOfMemoryError error) {
+            Log.e(TAG, "Exception caught while trying to load food image", error);
             ivFood.setVisibility(View.GONE);
         }
     }
