@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
+import android.os.Build;
 import android.os.Vibrator;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
@@ -115,6 +116,16 @@ public class NotificationUtil {
             final long alarmTimeInMillis = pref.getAlarmTimeInMillis();
             Log.d(TAG, String.format("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis));
 
+            setAlarm(alarmManager, alarmPendingIntent, alarmTimeInMillis);
+        }
+    }
+
+    private static void setAlarm(AlarmManager alarmManager, PendingIntent alarmPendingIntent, long alarmTimeInMillis) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, alarmTimeInMillis, alarmPendingIntent);
+        } else {
+            // Note: Beginning in API 19, the trigger time passed to this method is treated as inexact: the alarm
+            // will not be delivered before this time, but may be deferred and delivered some time later
             alarmManager.set(AlarmManager.RTC_WAKEUP, alarmTimeInMillis, alarmPendingIntent);
         }
     }
