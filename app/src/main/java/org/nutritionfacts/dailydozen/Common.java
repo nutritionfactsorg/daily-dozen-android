@@ -5,11 +5,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -19,6 +21,10 @@ public class Common {
     public static final String PREFERENCES_FILE = "org.nutritionfacts.dailydozen.preferences";
 
     private static boolean userIsBeingAsked;
+
+    private Common() {
+        // hide constructor
+    }
 
     public static void fullyExpandList(final ListView list) {
         list.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, getListViewHeight(list)));
@@ -100,5 +106,14 @@ public class Common {
 
     private static Intent createOpenPlayStoreIntent(final Context context, final String url) {
         return new Intent(Intent.ACTION_VIEW, Uri.parse(url + context.getPackageName()));
+    }
+
+    // This method is for loading images in a way that protects against crashes due to OutOfMemoryErrors
+    public static void loadImage(final Context context, final ImageView imageView, final int imageId) {
+        try {
+            imageView.setImageDrawable(ContextCompat.getDrawable(context, imageId));
+        } catch (OutOfMemoryError e) {
+            imageView.setVisibility(View.GONE);
+        }
     }
 }

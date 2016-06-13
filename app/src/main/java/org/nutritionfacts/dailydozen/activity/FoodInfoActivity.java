@@ -1,11 +1,7 @@
 package org.nutritionfacts.dailydozen.activity;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -53,18 +49,7 @@ public class FoodInfoActivity extends FoodLoadingActivity {
     }
 
     private void initImage(String foodName) {
-        try {
-            final Drawable foodImage = ContextCompat.getDrawable(this, FoodInfo.getFoodImage(foodName));
-
-            if (foodImage != null) {
-                ivFood.setImageDrawable(foodImage);
-            } else {
-                ivFood.setVisibility(View.GONE);
-            }
-        } catch (OutOfMemoryError error) {
-            Log.e(TAG, "Exception caught while trying to load food image", error);
-            ivFood.setVisibility(View.GONE);
-        }
+        Common.loadImage(this, ivFood, FoodInfo.getFoodImage(foodName));
     }
 
     private void initList(final ListView listView, final List<String> items) {
