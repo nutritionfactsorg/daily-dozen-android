@@ -38,7 +38,12 @@
             style="@style/Widget.CardContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="4dp"
+            android:paddingStart="4dp"
+            android:paddingRight="4dp"
+            android:paddingEnd="4dp"
             android:orientation="horizontal"
             android:baselineAligned="false">
 

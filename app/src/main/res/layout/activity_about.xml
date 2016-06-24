@@ -32,8 +32,10 @@
                     android:src="@drawable/dr_greger"
                     android:contentDescription="@null"
                     android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"/>
 
                 <TextView
                     android:text="@string/welcome_to_my_daily_dozen"
