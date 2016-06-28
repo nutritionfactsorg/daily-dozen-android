@@ -63,7 +63,11 @@ public class Common {
     }
 
     public static void openUrlInExternalBrowser(final Context context, final int urlId) {
-        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(context.getString(urlId))));
+        openUrlInExternalBrowser(context, context.getString(urlId));
+    }
+
+    public static void openUrlInExternalBrowser(final Context context, final String url) {
+        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
     }
 
     public static void askUserToRateApp(final Context context) {
