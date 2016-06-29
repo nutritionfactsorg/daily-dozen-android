@@ -168,6 +168,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_latest_videos:
+                Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);
+                return true;
             case R.id.menu_how_not_to_die:
                 Common.openUrlInExternalBrowser(this, R.string.url_book);
                 return true;

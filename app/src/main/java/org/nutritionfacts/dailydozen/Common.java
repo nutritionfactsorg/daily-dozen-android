@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.ColorInt;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.TypedValue;
@@ -119,5 +120,10 @@ public class Common {
         } catch (OutOfMemoryError e) {
             imageView.setVisibility(View.GONE);
         }
+    }
+
+    @ColorInt
+    public static int getListItemColorForPosition(final Context context, final int position) {
+        return ContextCompat.getColor(context,position % 2 == 0 ? android.R.color.white : R.color.gray_light);
     }
 }
