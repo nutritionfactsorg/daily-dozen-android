@@ -24,7 +24,7 @@
                 android:contentDescription="@null"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="centerInside"
+                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 app:layout_collapseMode="parallax"/>
 
