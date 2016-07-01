@@ -2,6 +2,7 @@
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -99,6 +100,12 @@
         <receiver
             android:name=".receiver.AlarmReceiver"
             android:process=":remote"/>
+
+        <receiver android:name=".receiver.DeviceBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
 
         <meta-data
             android:name="io.fabric.ApiKey"

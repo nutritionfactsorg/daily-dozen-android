@@ -2,7 +2,6 @@ package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -17,6 +16,7 @@ import android.widget.TextView;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
@@ -91,7 +91,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void initFoodIcon() {
-        ivIcon.setImageDrawable(ContextCompat.getDrawable(getContext(), FoodInfo.getFoodIcon(food.getName())));
+        Common.loadImage(getContext(), ivIcon, FoodInfo.getFoodIcon(food.getName()));
     }
 
     private void initFoodName() {

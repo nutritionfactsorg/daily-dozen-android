@@ -45,6 +45,12 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
+###Version 10
+- Added links to videos on nutritionfacts.org. These links are for overall food groups like beans and greens, but also for specific foods like chickpeas and spinach.
+- Fixed bug where update reminder alarm was not being set when the device restarted.
+- Fixed very rare OutOfMemoryError crash when loading the large food images.
+- Upgraded to ButterKnife 8.1.0
+
 ###Version 9
 - Added a Daily Reminder to update your servings
 - Fixed bug where every other day was being skipped in the daily servings chart

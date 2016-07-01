@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.support.annotation.DrawableRes;
 import android.support.v4.util.ArrayMap;
+import android.text.TextUtils;
 
 import org.nutritionfacts.dailydozen.R;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +18,9 @@ public class FoodInfo {
     private static Map<String, Integer> foodIcons;
     private static Map<String, List<String>> servingSizes;
     private static Map<String, List<String>> typesOfFood;
-    
+    private static Map<String, String> foodTypeVideos;
+    private static Map<String, List<String>> foodVideos;
+
     private static String beans;
     private static String berries;
     private static String otherFruits;
@@ -39,6 +43,8 @@ public class FoodInfo {
         initFoodIcons();
         initServingSizes(resources);
         initTypesOfFood(resources);
+        initFoodTypeVideos(resources);
+        initFoodVideos(resources);
     }
 
     private static void bindFoodNames(Resources res) {
@@ -104,6 +110,10 @@ public class FoodInfo {
         return typesOfFood.get(foodName);
     }
 
+    private static void putTypeOfFood(Resources res, String food, int foodInfoTypeId) {
+        typesOfFood.put(food, Arrays.asList(res.getStringArray(foodInfoTypeId)));
+    }
+
     private static void initTypesOfFood(Resources res) {
         typesOfFood = new ArrayMap<>();
 
@@ -121,12 +131,12 @@ public class FoodInfo {
         putTypeOfFood(res, exercise, R.array.food_info_types_exercise);
     }
 
-    private static void putTypeOfFood(Resources res, String food, int foodInfoTypeId) {
-        typesOfFood.put(food, Arrays.asList(res.getStringArray(foodInfoTypeId)));
-    }
-
     public static List<String> getServingSizes(final String foodName) {
         return servingSizes.get(foodName);
+    }
+
+    private static void putServingSize(Resources res, String food, int servingSizesId) {
+        servingSizes.put(food, Arrays.asList(res.getStringArray(servingSizesId)));
     }
 
     private static void initServingSizes(Resources res) {
@@ -146,7 +156,63 @@ public class FoodInfo {
         putServingSize(res, exercise, R.array.food_info_serving_sizes_exercise);
     }
 
-    private static void putServingSize(Resources res, String food, int servingSizesId) {
-        servingSizes.put(food, Arrays.asList(res.getStringArray(servingSizesId)));
+    public static void putFoodTypeVideos(Resources res, String food, int urlId) {
+        foodTypeVideos.put(food, getVideoLink(res.getString(urlId)));
+    }
+
+    public static String getFoodTypeVideosLink(final String foodName) {
+        return foodTypeVideos.get(foodName);
+    }
+
+    private static void initFoodTypeVideos(Resources res) {
+        foodTypeVideos = new ArrayMap<>();
+
+        putFoodTypeVideos(res, beans, R.string.food_info_videos_beans);
+        putFoodTypeVideos(res, berries, R.string.food_info_videos_berries);
+        putFoodTypeVideos(res, otherFruits, R.string.food_info_videos_fruits);
+        putFoodTypeVideos(res, cruciferousVegetables, R.string.food_info_videos_cruciferous);
+        putFoodTypeVideos(res, greens, R.string.food_info_videos_greens);
+        putFoodTypeVideos(res, otherVegetables, R.string.food_info_videos_vegetables);
+        putFoodTypeVideos(res, flaxseeds, R.string.food_info_videos_flaxseeds);
+        putFoodTypeVideos(res, nuts, R.string.food_info_videos_nuts);
+        putFoodTypeVideos(res, spices, R.string.food_info_videos_spices);
+        putFoodTypeVideos(res, wholeGrains, R.string.food_info_videos_whole_grains);
+        putFoodTypeVideos(res, beverages, R.string.food_info_videos_beverages);
+        putFoodTypeVideos(res, exercise, R.string.food_info_videos_exercise);
+    }
+
+    public static List<String> getFoodVideosLink(final String foodName) {
+        return foodVideos.containsKey(foodName) ? foodVideos.get(foodName) : new ArrayList<String>();
+    }
+
+    public static void putFoodVideosLink(Resources res, String food, int videosId) {
+        final List<String> topicVideos = new ArrayList<>();
+
+        for (String topic : res.getStringArray(videosId)) {
+            topicVideos.add(getVideoLink(topic));
+        }
+
+        foodVideos.put(food, topicVideos);
+    }
+
+    private static void initFoodVideos(Resources res) {
+        foodVideos = new ArrayMap<>();
+
+        putFoodVideosLink(res, beans, R.array.food_videos_beans);
+        putFoodVideosLink(res, berries, R.array.food_videos_berries);
+        putFoodVideosLink(res, otherFruits, R.array.food_videos_other_fruits);
+        putFoodVideosLink(res, cruciferousVegetables, R.array.food_videos_cruciferous_vegetables);
+        putFoodVideosLink(res, greens, R.array.food_videos_greens);
+        putFoodVideosLink(res, otherVegetables, R.array.food_videos_other_vegetables);
+        // NOTE: There is only a single flaxseeds topic so we only show the top level link in the ActionBar
+        putFoodVideosLink(res, nuts, R.array.food_videos_nuts);
+        putFoodVideosLink(res, spices, R.array.food_videos_spices);
+        putFoodVideosLink(res, wholeGrains, R.array.food_videos_whole_grains);
+        putFoodVideosLink(res, beverages, R.array.food_videos_beverages);
+        // NOTE: There are no topics for specific exercises
+    }
+
+    private static String getVideoLink(final String websiteTopicName) {
+        return TextUtils.isEmpty(websiteTopicName) ? "" : "http://nutritionfacts.org/topics/" + websiteTopicName;
     }
 }

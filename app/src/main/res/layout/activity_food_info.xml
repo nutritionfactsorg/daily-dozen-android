@@ -24,7 +24,8 @@
                 android:contentDescription="@null"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
                 app:layout_collapseMode="parallax"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>
@@ -59,7 +60,7 @@
                         android:text="@string/serving_sizes"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
-                    <ListView
+                    <android.support.v7.widget.RecyclerView
                         android:id="@+id/food_serving_sizes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -86,7 +87,7 @@
                         android:text="@string/types"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
-                    <ListView
+                    <android.support.v7.widget.RecyclerView
                         android:id="@+id/food_types"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
