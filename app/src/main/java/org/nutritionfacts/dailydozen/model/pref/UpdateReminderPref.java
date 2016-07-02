@@ -4,11 +4,10 @@ import android.util.Log;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class UpdateReminderPref implements Serializable {
+public class UpdateReminderPref {
     private final static String TAG = UpdateReminderPref.class.getSimpleName();
 
     // The default Update Reminder notification vibrates the phone and plays a sound at 8pm
