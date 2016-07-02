@@ -10,7 +10,10 @@ import android.os.Build;
 import android.os.Vibrator;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
+import android.text.TextUtils;
 import android.util.Log;
+
+import com.google.gson.Gson;
 
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.R;
@@ -20,7 +23,6 @@ import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 import org.nutritionfacts.dailydozen.receiver.AlarmReceiver;
 
-import java.io.Serializable;
 import java.util.Random;
 
 public class NotificationUtil {
@@ -39,10 +41,10 @@ public class NotificationUtil {
                 .addAction(R.drawable.ic_settings_black_24dp, context.getString(R.string.daily_reminder_settings), getNotificationSettingsClickedIntent(context));
 
         if (intent != null && intent.getExtras() != null) {
-            final Serializable serializable = intent.getExtras().getSerializable(Args.UPDATE_REMINDER_PREF);
+            final String updateReminderPrefJson = intent.getExtras().getString(Args.UPDATE_REMINDER_PREF);
 
-            if (serializable != null) {
-                final UpdateReminderPref updateReminderPref = (UpdateReminderPref) serializable;
+            if (!TextUtils.isEmpty(updateReminderPrefJson)) {
+                final UpdateReminderPref updateReminderPref = new Gson().fromJson(updateReminderPrefJson, UpdateReminderPref.class);
 
                 if (updateReminderPref.isVibrate()) {
                     final Vibrator vibratorService = getVibratorService(context);
@@ -139,7 +141,7 @@ public class NotificationUtil {
         final Intent intent = new Intent(context, AlarmReceiver.class);
 
         if (pref != null) {
-            intent.putExtra(Args.UPDATE_REMINDER_PREF, pref);
+            intent.putExtra(Args.UPDATE_REMINDER_PREF, new Gson().toJson(pref));
         }
 
         return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
