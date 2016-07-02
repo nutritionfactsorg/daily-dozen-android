@@ -11,6 +11,8 @@ import java.util.Locale;
 public class UpdateReminderPref implements Serializable {
     private final static String TAG = UpdateReminderPref.class.getSimpleName();
 
+    private static final long serialVersionUID = -8017821674944561318L;
+
     // The default Update Reminder notification vibrates the phone and plays a sound at 8pm
     @SerializedName("hourOfDay")
     private int hourOfDay = 20; // Default to 8pm
