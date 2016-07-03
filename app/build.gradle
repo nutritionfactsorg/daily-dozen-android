@@ -29,8 +29,8 @@ android {
         applicationId "org.nutritionfacts.dailydozen"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 28
-        versionName "10.2"
+        versionCode 29
+        versionName "10.3"
     }
     buildTypes {
         release {
