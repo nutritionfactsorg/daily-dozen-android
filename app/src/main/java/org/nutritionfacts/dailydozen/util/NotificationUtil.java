@@ -41,24 +41,28 @@ public class NotificationUtil {
                 .addAction(R.drawable.ic_settings_black_24dp, context.getString(R.string.daily_reminder_settings), getNotificationSettingsClickedIntent(context));
 
         if (intent != null && intent.getExtras() != null) {
-            final String updateReminderPrefJson = intent.getExtras().getString(Args.UPDATE_REMINDER_PREF);
+            try {
+                final String updateReminderPrefJson = intent.getExtras().getString(Args.UPDATE_REMINDER_PREF);
 
-            if (!TextUtils.isEmpty(updateReminderPrefJson)) {
-                final UpdateReminderPref updateReminderPref = new Gson().fromJson(updateReminderPrefJson, UpdateReminderPref.class);
+                if (!TextUtils.isEmpty(updateReminderPrefJson)) {
+                    final UpdateReminderPref updateReminderPref = new Gson().fromJson(updateReminderPrefJson, UpdateReminderPref.class);
 
-                if (updateReminderPref.isVibrate()) {
-                    final Vibrator vibratorService = getVibratorService(context);
+                    if (updateReminderPref.isVibrate()) {
+                        final Vibrator vibratorService = getVibratorService(context);
 
-                    if (vibratorService.hasVibrator()) {
-                        vibratorService.vibrate(150);
+                        if (vibratorService.hasVibrator()) {
+                            vibratorService.vibrate(150);
+                        }
                     }
-                }
 
-                if (updateReminderPref.isPlaySound()) {
-                    builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
-                }
+                    if (updateReminderPref.isPlaySound()) {
+                        builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+                    }
 
-                setAlarmForUpdateReminderNotification(context, updateReminderPref);
+                    setAlarmForUpdateReminderNotification(context, updateReminderPref);
+                }
+            } catch (RuntimeException e) {
+                Log.e(TAG, "Caught RuntimeException in showUpdateReminderNotification", e);
             }
         }
 
