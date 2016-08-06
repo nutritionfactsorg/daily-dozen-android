@@ -56,42 +56,44 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         try {
             final ContentResolver contentResolver = getContext().getContentResolver();
 
-            InputStream restoreInputStream = contentResolver.openInputStream(params[0]);
+            if (params != null && params.length > 0) {
+                InputStream restoreInputStream = contentResolver.openInputStream(params[0]);
 
-            if (restoreInputStream != null) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
+                if (restoreInputStream != null) {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
 
-                final LineNumberReader lineNumberReader = new LineNumberReader(reader);
-                lineNumberReader.skip(Integer.MAX_VALUE);
-                final int numLines = lineNumberReader.getLineNumber() + 1;
-                lineNumberReader.close();
+                    final LineNumberReader lineNumberReader = new LineNumberReader(reader);
+                    lineNumberReader.skip(Integer.MAX_VALUE);
+                    final int numLines = lineNumberReader.getLineNumber() + 1;
+                    lineNumberReader.close();
 
-                deleteAllExistingData();
+                    deleteAllExistingData();
 
-                // Need to recreate the InputStream and BufferedReader after closing LineNumberReader
-                reader = new BufferedReader(new InputStreamReader(contentResolver.openInputStream(params[0])));
+                    // Need to recreate the InputStream and BufferedReader after closing LineNumberReader
+                    reader = new BufferedReader(new InputStreamReader(contentResolver.openInputStream(params[0])));
 
-                String line = reader.readLine();
-                headers = line.split(",");
+                    String line = reader.readLine();
+                    headers = line.split(",");
 
-                int i = 0;
+                    int i = 0;
 
-                do {
-                    if (!isCancelled()) {
-                        line = reader.readLine();
+                    do {
+                        if (!isCancelled()) {
+                            line = reader.readLine();
 
-                        if (!TextUtils.isEmpty(line)) {
-                            restoreLine(line);
+                            if (!TextUtils.isEmpty(line)) {
+                                restoreLine(line);
+                            }
+
+                            publishProgress(++i, numLines);
                         }
+                    } while (line != null);
 
-                        publishProgress(++i, numLines);
-                    }
-                } while (line != null);
+                    reader.close();
+                    restoreInputStream.close();
 
-                reader.close();
-                restoreInputStream.close();
-
-                return !isCancelled();
+                    return !isCancelled();
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -112,17 +114,20 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
         try {
             final String[] values = line.split(",");
-            final Day day = Day.createDayIfDoesNotExist(values[0]);
 
-            // Start at 1 to skip the first header column which is "Date" and not a food
-            for (int j = 1; j < headers.length; j++) {
-                final Integer numServings = Integer.valueOf(values[j]);
-                if (numServings > 0) {
-                    Servings.createServingsIfDoesNotExist(day, getFoodByName(headers[j]), numServings);
+            if (values.length > 0) {
+                final Day day = Day.createDayIfDoesNotExist(values[0]);
+
+                // Start at 1 to skip the first header column which is "Date" and not a food
+                for (int j = 1; j < headers.length; j++) {
+                    final Integer numServings = Integer.valueOf(values[j]);
+                    if (numServings > 0) {
+                        Servings.createServingsIfDoesNotExist(day, getFoodByName(headers[j]), numServings);
+                    }
                 }
-            }
 
-            ActiveAndroid.setTransactionSuccessful();
+                ActiveAndroid.setTransactionSuccessful();
+            }
         } catch (InvalidDateException e) {
             Log.e(TAG, "restoreLine: ", e);
         } finally {
