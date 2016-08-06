@@ -150,13 +150,18 @@ public class DateFragment extends Fragment {
         explodingStar.runAnimation(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationCancel(Animator animation) {
-                explodingStar.cancelAnimation();
+                if (explodingStar != null) {
+                    explodingStar.cancelAnimation();
+                }
             }
 
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-                vgExplodingStar.setVisibility(View.GONE);
+
+                if (vgExplodingStar != null) {
+                    vgExplodingStar.setVisibility(View.GONE);
+                }
 
                 askUserToRateAfterFirstStarExplosion();
             }
