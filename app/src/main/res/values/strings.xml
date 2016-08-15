@@ -22,33 +22,33 @@
     <string name="about">About</string>
     <string name="about_this_app">About this app</string>
     <string name="latest_videos">Latest Videos</string>
-    <string name="url_latest_videos">http://nutritionfacts.org/videos/</string>
-    <string name="book_title">How Not to Die</string>
-    <string name="url_book">http://nutritionfacts.org/book/</string>
+    <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
+    <string name="book_title" translatable="false">How Not to Die</string>
+    <string name="url_book" translatable="false">http://nutritionfacts.org/book/</string>
     <string name="donate">Donate</string>
-    <string name="url_donate">https://nutritionfacts.org/donate/</string>
+    <string name="url_donate" translatable="false">https://nutritionfacts.org/donate/</string>
     <string name="subscribe">Subscribe</string>
-    <string name="url_subscribe">http://nutritionfacts.org/subscribe/</string>
+    <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe/</string>
     <string name="open_source">Open Source</string>
-    <string name="url_open_source">http://nutritionfacts.org/open-source/</string>
-    <string name="nutritionfacts_title">nutritionfacts.org</string>
-    <string name="url_nutritionfacts">http://nutritionfacts.org</string>
-    <string name="name_john_slavick">John Slavick</string>
-    <string name="url_john_slavick">http://johnslavick.com</string>
-    <string name="library_activeandroid">ActiveAndroid</string>
-    <string name="library_android_iconify">android-iconify</string>
+    <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source/</string>
+    <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
+    <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
+    <string name="name_john_slavick" translatable="false">John Slavick</string>
+    <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
+    <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
+    <string name="library_android_iconify" translatable="false">android-iconify</string>
     <string name="library_butterknife">ButterKnife</string>
-    <string name="library_caldroid">Caldroid</string>
-    <string name="library_eventbus">EventBus</string>
-    <string name="library_likeanimation">LikeAnimation</string>
-    <string name="library_mpandroidchart">MPAndroidChart</string>
-    <string name="url_activeandroid">https://github.com/pardom/ActiveAndroid</string>
-    <string name="url_android_iconify">https://github.com/JoanZapata/android-iconify</string>
-    <string name="url_butterknife">https://github.com/JakeWharton/butterknife</string>
-    <string name="url_caldroid">https://github.com/roomorama/Caldroid</string>
-    <string name="url_eventbus">https://github.com/greenrobot/EventBus</string>
-    <string name="url_likeanimation">https://github.com/frogermcs/LikeAnimation/</string>
-    <string name="url_mpandroidchart">https://github.com/PhilJay/MPAndroidChart</string>
+    <string name="library_caldroid" translatable="false">Caldroid</string>
+    <string name="library_eventbus" translatable="false">EventBus</string>
+    <string name="library_likeanimation" translatable="false">LikeAnimation</string>
+    <string name="library_mpandroidchart" translatable="false">MPAndroidChart</string>
+    <string name="url_activeandroid" translatable="false">https://github.com/pardom/ActiveAndroid</string>
+    <string name="url_android_iconify" translatable="false">https://github.com/JoanZapata/android-iconify</string>
+    <string name="url_butterknife" translatable="false">https://github.com/JakeWharton/butterknife</string>
+    <string name="url_caldroid" translatable="false">https://github.com/roomorama/Caldroid</string>
+    <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
+    <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
+    <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
     <string name="not_implemented_yet">Not implemented yet</string>
     <string name="permission_needed_to_write_storage">Can\'t backup without permission to write to storage</string>
     <string name="backup_failed">Backup failed</string>
@@ -57,14 +57,14 @@
     <string name="restore_success">Restore successful</string>
     <string name="restore_confirm_title">Restore Backup</string>
     <string name="restore_confirm_message">Any existing data will be deleted before restoring from backup. Do you wish to continue?</string>
-    <string name="backup_mimetype">message/rfc822</string>
+    <string name="backup_mimetype" translatable="false">message/rfc822</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="backup">Backup</string>
     <string name="food_info">Food Info</string>
     <string name="food_history">Food History</string>
-    <string name="icon_info">{fa-info-circle 16dp @color/gray}</string>
-    <string name="icon_calendar">{fa-calendar 20dp @color/gray_dark}</string>
+    <string name="icon_info" translatable="false">{fa-info-circle 16dp @color/gray}</string>
+    <string name="icon_calendar" translatable="false">{fa-calendar 20dp @color/gray_dark}</string>
     <string name="daily_servings_history">Daily Servings History</string>
     <string name="no_servings_recorded">You have not recorded any servings yet!</string>
     <string name="task_backup_title">Backing up</string>
@@ -86,8 +86,8 @@
     <string name="task_loading_servings_history_title">Loading Servings History</string>
     <string name="time_scale">Time Scale</string>
     <string name="history_to_generate">History to Generate</string>
-    <string name="date_servings_star">{fa-star 24dp @color/gold}</string>
-    <string name="date_servings_star_large">{fa-star 64dp @color/gold}</string>
+    <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
+    <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
     <string name="welcome_to_my_daily_dozen">Welcome to my Daily Dozen!</string>
     <string name="activity_welcome_text">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.</string>
     <string name="dialog_ask_user_to_rate_app_title">Do you like this app?</string>
