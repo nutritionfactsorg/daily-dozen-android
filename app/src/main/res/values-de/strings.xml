@@ -385,38 +385,38 @@
     </string-array>
     
     <string-array name="food_info_serving_sizes_beans">
-        <item>1/4 Tasse (60 ml) Hummus oder Bohnendip</item>
-        <item>1/2 Tasse (120 ml) gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
+        <item>¼ Tasse (60 ml) Hummus oder Bohnendip</item>
+        <item>½ Tasse (120 ml) gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
         <item>1 Tasse (240 ml) frische Erbsen oder Linsen gekeimt</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_berries">
-        <item>1/2 Tasse (120 ml) frisch oder gefroren</item>
-        <item>1/4 Tasse (60 ml) getrocknet</item>
+        <item>½ Tasse (120 ml) frisch oder gefroren</item>
+        <item>¼ Tasse (60 ml) getrocknet</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_other_fruits">
         <item>1 mittelgroße Frucht</item>
         <item>1 (120 ml) Tasse geschnittene Früchte</item>
-        <item>1/4 (60 ml) Tasse getrocknete Früchte</item>
+        <item>¼ (60 ml) Tasse getrocknete Früchte</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-         <item>1/2 Tasse (120 ml) gehackt</item>
-         <item>1/4 Tasse (60 ml) Rosenkohl oder Brokkolisprossen</item> 
+         <item>½ Tasse (120 ml) gehackt</item>
+         <item>¼ Tasse (60 ml) Rosenkohl oder Brokkolisprossen</item> 
          <item>1 Esslöffel (15 ml) Meerrettich</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_greens">
         <item>1 Tasse (240 ml) roh</item>
-        <item>1/2 Tasse (120 ml) gekocht</item>
+        <item>½ Tasse (120 ml) gekocht</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_other_vegetables">
         <item>1 Tasse (240 ml) rohes Blattgemüse</item> 
-        <item>1/2 Tasse (120 ml) roh oder gekocht; kein Blattgemüse</item> 
-        <item>1/2 Tasse (120 ml) Gemüsesaft</item> 
-        <item>1/4 Tasse (60 ml) getrocknete Pilze</item>
+        <item>½ Tasse (120 ml) roh oder gekocht; kein Blattgemüse</item> 
+        <item>½ Tasse (120 ml) Gemüsesaft</item> 
+        <item>¼ Tasse (60 ml) getrocknete Pilze</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_flaxseeds">
@@ -424,26 +424,26 @@
     </string-array>
     
     <string-array name="food_info_serving_sizes_nuts">
-        <item>1/4 Tasse (60 ml) Nüsse oder Samen</item>
+        <item>¼ Tasse (60 ml) Nüsse oder Samen</item>
         <item>2 Teelöffel (10 ml) Butter aus Nüssen oder Samen</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_spices">
-        <item>1/4 Teelöffel (1,2 ml) Kurkuma</item>
+        <item>¼ Teelöffel (1,2 ml) Kurkuma</item>
         <item>Alle anderen (salzfreien) Kräuter und Gewürze die du magst</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>1/2 Tasse (120 ml) heißes oder gekochtes Getreide, Teigwaren, oder Maiskörner</item>
+        <item>½ Tasse (120 ml) heißes oder gekochtes Getreide, Teigwaren, oder Maiskörner</item>
         <item>1 Tasse (240 ml) Getreide</item>
         <item>1 Tortilla oder 1 Brotscheibe</item>
-        <item>1/2 Bagel oder 1/2 Englischer Muffin</item>
+        <item>½ Bagel oder ½ Englischer Muffin</item>
         <item>3 Tassen (710 ml) Popcorn</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_beverages">
         <!-- metric classes are 250 ml and therefore smaller than the classes in the U.S. -->
-        <item>1 1/2 Gläser (340 ml)</item>
+        <item>1½ Gläser (340 ml)</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_exercise">
