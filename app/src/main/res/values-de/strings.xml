@@ -100,11 +100,11 @@
     <string-array name="backup_instructions_lines">
         <item>Folge diesen Schritten um die Sicherung in der Daily Dozen App wiederherzustellen</item>
         <item />
-        1. Die Daily Dozen App muss auf deinem Android-Smartphone installiert sein. Du kannst sie hier herunterladen: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. Die Daily Dozen App muss auf deinem Android-Smartphone installiert sein. Du kannst sie hier herunterladen: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
-        2. Tippe auf die Sicherungsdatei, welche diesem E-Mail angehängt ist.</item>
+        <item>2. Tippe auf die Sicherungsdatei, welche diesem E-Mail angehängt ist.</item>
         <item />
-        3. Wähle Daily Dozen im Öffnen-Menü.</item>
+        <item>3. Wähle Daily Dozen im Öffnen-Menü.</item>
     </string-array>
 
     <string-array name="servings_time_scale_choices">
@@ -143,18 +143,18 @@
     </string-array>
 
     <string-array name="food_info_types_berries">
-        <item>Acai berries</item>
-        <item>Barberries</item>
-        <item>Blackberries</item>
-        <item>Blueberries</item>
-        <item>Cherries (sweet or tart)</item>
-        <item>Concord grapes</item>
-        <item>Cranberries</item>
-        <item>Goji berries</item>
-        <item>Kumquats</item>
-        <item>Mulberries</item>
-        <item>Raspberries (black or red)</item>
-        <item>Strawberries</item>
+        <item>Acai Beeren</item>
+        <item>Berberitzen</item>
+        <item>Brombeeren</item>
+        <item>Heidelbeeren</item>
+        <item>Kirschen oder Weichseln</item>
+        <item>Concord-Trauben</item>
+        <item>Cranberries</item>
+        <item>Goji-Beeren</item>
+        <item>Kumquats</item>
+        <item>Maulbeeren</item>
+        <item>Himbeeren (schwarz oder rot)</item>
+        <item>Erdbeeren</item>
     </string-array>
     
     <string-array name="food_info_types_other_fruits">
@@ -189,19 +189,19 @@
     </string-array>
     
     <string-array name="food_info_types_cruciferous_vegetables">
-         <item>Rucola<item>
-         <item>Pak Choi<item>
-         <item>Brokkoli<item>
-         <item>Rosenkohl<item>
-         <item>Kohl<item>
-         <item>Blumenkohl<item>
-         <item>Blattkohl<item>
-         <item>Meerrettich<item>
-         <item>Kohl (schwarz, grün und rot)<item>
-         <item>Senfkörner<item> 
-         <item>Radieschen<item>
-         <item>Kohlrabi<item>
-         <item>Kresse<item>
+         <item>Rucola</item>
+         <item>Pak Choi</item>
+         <item>Brokkoli</item>
+         <item>Rosenkohl</item>
+         <item>Kohl</item>
+         <item>Blumenkohl</item>
+         <item>Blattkohl</item>
+         <item>Meerrettich</item>
+         <item>Kohl (schwarz, grün und rot)</item>
+         <item>Senfkörner</item>
+         <item>Radieschen</item>
+         <item>Kohlrabi</item>
+         <item>Kresse</item>
     </string-array>
     
     <string-array name="food_info_types_greens">
@@ -225,14 +225,14 @@
         <item>Möhren</item>
         <item>Mais</item>
         <item>Knoblauch</item>
-        <item>Pilze (Knopf, Auster, Portobello und Shiitake)</item>
+        <item>Pilze (Champignon, Austern-, Portobello- oder Shiitakepilze)</item>
         <item>Okra</item>
         <item>Zwiebeln</item>
         <item>Lila Kartoffeln</item>
         <item>Kürbis</item>
-        <item>Sea Gemüse (arame, Rotalgen und Nori)</item>
+        <item>Algen (Arame, Rotalgen oder Nori)</item>
         <item>Knackerbsen</item> 
-        <item>Squash (delicata, Sommer und Spaghettikürbis -Sorten)</item>
+        <item>Kürbis (Delicata, Sommer- und Spaghettikürbis-Sorten)</item>
         <item>Süßkartoffeln / Yams</item>
         <item>Tomaten</item>
         <item>Zucchini</item>
@@ -247,7 +247,7 @@
         <item>Mandeln</item>
         <item>Paranüsse</item>
         <item>Cashewkerne</item>
-        <item>Chia Samen</item>
+        <item>Chia-Samen</item>
         <item>Haselnüsse</item>
         <item>Hanfsamen</item>
         <item>Macadamianüsse</item>
