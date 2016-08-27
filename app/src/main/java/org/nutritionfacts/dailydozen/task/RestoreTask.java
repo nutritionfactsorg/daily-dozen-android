@@ -67,30 +67,35 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                     final int numLines = lineNumberReader.getLineNumber() + 1;
                     lineNumberReader.close();
 
-                    deleteAllExistingData();
-
                     // Need to recreate the InputStream and BufferedReader after closing LineNumberReader
-                    reader = new BufferedReader(new InputStreamReader(contentResolver.openInputStream(params[0])));
+                    final InputStream inputStream = contentResolver.openInputStream(params[0]);
 
-                    String line = reader.readLine();
-                    headers = line.split(",");
+                    if (inputStream != null) {
+                        // Only delete all existing data if we are sure we have an input stream
+                        deleteAllExistingData();
 
-                    int i = 0;
+                        reader = new BufferedReader(new InputStreamReader(inputStream));
 
-                    do {
-                        if (!isCancelled()) {
-                            line = reader.readLine();
+                        String line = reader.readLine();
+                        headers = line.split(",");
 
-                            if (!TextUtils.isEmpty(line)) {
-                                restoreLine(line);
+                        int i = 0;
+
+                        do {
+                            if (!isCancelled()) {
+                                line = reader.readLine();
+
+                                if (!TextUtils.isEmpty(line)) {
+                                    restoreLine(line);
+                                }
+
+                                publishProgress(++i, numLines);
                             }
+                        } while (line != null);
 
-                            publishProgress(++i, numLines);
-                        }
-                    } while (line != null);
-
-                    reader.close();
-                    restoreInputStream.close();
+                        reader.close();
+                        restoreInputStream.close();
+                    }
 
                     return !isCancelled();
                 }
