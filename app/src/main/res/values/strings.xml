@@ -517,6 +517,7 @@
     <string name="food_info_videos_whole_grains">grains</string>
     <string name="food_info_videos_beverages">beverages</string>
     <string name="food_info_videos_exercise">exercise</string>
+    <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
 
     <string-array name="food_videos_beans">
         <item>black-beans</item>

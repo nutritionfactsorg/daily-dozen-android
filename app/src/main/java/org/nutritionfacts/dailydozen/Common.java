@@ -68,7 +68,11 @@ public class Common {
     }
 
     public static void openUrlInExternalBrowser(final Context context, final String url) {
-        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        try {
+            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        } catch (ActivityNotFoundException e) {
+            showToast(context, R.string.error_cannot_handle_url);
+        }
     }
 
     public static void askUserToRateApp(final Context context) {
