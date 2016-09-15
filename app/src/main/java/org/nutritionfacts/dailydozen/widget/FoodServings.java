@@ -137,7 +137,6 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     private ServingCheckBox createCheckBox(List<ServingCheckBox> checkBoxes, Integer currentServings,  Integer maxServings) {
         final ServingCheckBox checkBox = new ServingCheckBox(getContext());
         checkBox.setChecked(currentServings > 0);
-        checkBox.setCheckChangeListener();
         checkBox.setOnCheckedChangeListener(getOnCheckedChangeListener(checkBox));
         if (maxServings > 1)
             checkBox.setNextServing(createCheckBox(checkBoxes, --currentServings, --maxServings));
@@ -149,7 +148,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         return new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                checkBox.onCheckClick(isChecked);
+                checkBox.onCheckChange(isChecked);
                 if (isChecked) {
                     handleServingChecked();
                 } else {

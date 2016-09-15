@@ -19,23 +19,7 @@ public class ServingCheckBox extends CheckBox {
         nextServing.scbNextServing = this;
     }
 
-    public void setCheckChangeListener(){
-        this.setOnCheckedChangeListener(getOnCheckedChangeListener());
-    }
-
-    private CompoundButton.OnCheckedChangeListener getOnCheckedChangeListener() {
-        if (onCheckedChangeListener == null) {
-            onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    onCheckClick(isChecked);
-                }
-            };
-        }
-        return onCheckedChangeListener;
-    }
-
-    public void onCheckClick(boolean isChecked){
+    public void onCheckChange(boolean isChecked){
         if (isChecked)
             continueCheck();
         else
