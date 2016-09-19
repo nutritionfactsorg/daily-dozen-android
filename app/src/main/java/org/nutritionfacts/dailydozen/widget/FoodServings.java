@@ -22,6 +22,7 @@ import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
+import org.nutritionfacts.dailydozen.view.ServingCheckBox;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
@@ -42,9 +43,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
 
     private Day day;
     private Food food;
-
-    private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
-
+    private final List<ServingCheckBox> checkBoxes = new ArrayList<>();
     @BindView(R.id.food_icon)
     protected ImageView ivIcon;
     @BindView(R.id.food_name)
@@ -127,52 +126,45 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     private void initCheckboxes(Servings servings) {
         int numExistingServings = servings != null ? servings.getServings() : 0;
 
-        final List<CheckBox> checkBoxes = new ArrayList<>();
-
-        for (int i = 0; i < food.getRecommendedServings(); i++) {
-            final boolean isChecked = numExistingServings > 0;
-
-            checkBoxes.add(createCheckBox(isChecked));
-
-            numExistingServings--;
-        }
-
+        createCheckBox(checkBoxes, numExistingServings, food.getRecommendedServings());
         vgCheckboxes.removeAllViews();
 
-        // Add the checkboxes in reverse order because they were checked from left to right. Reversing the order
-        // makes it so the checks appear right to left.
-        Collections.reverse(checkBoxes);
         for (CheckBox checkBox : checkBoxes) {
             vgCheckboxes.addView(checkBox);
         }
     }
 
-    private CheckBox createCheckBox(final boolean isChecked) {
-        final CheckBox checkBox = new CheckBox(getContext());
-
-        // It is necessary to set the checked status before we set the onCheckedChangeListener
-        checkBox.setChecked(isChecked);
-
-        checkBox.setOnCheckedChangeListener(getOnCheckedChangeListener());
-
+    private ServingCheckBox createCheckBox(List<ServingCheckBox> checkBoxes, Integer currentServings,  Integer maxServings) {
+        final ServingCheckBox checkBox = new ServingCheckBox(getContext());
+        checkBox.setChecked(currentServings > 0);
+        checkBox.setOnCheckedChangeListener(getOnCheckedChangeListener(checkBox));
+        if (maxServings > 1)
+            checkBox.setNextServing(createCheckBox(checkBoxes, --currentServings, --maxServings));
+        checkBoxes.add(checkBox);
         return checkBox;
     }
 
-    private CompoundButton.OnCheckedChangeListener getOnCheckedChangeListener() {
-        if (onCheckedChangeListener == null) {
-            onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked) {
-                        handleServingChecked();
-                    } else {
-                        handleServingUnchecked();
-                    }
+    private CompoundButton.OnCheckedChangeListener getOnCheckedChangeListener(final ServingCheckBox checkBox) {
+        return new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkBox.onCheckChange(isChecked);
+                if (isChecked) {
+                    handleServingChecked();
+                } else {
+                    handleServingUnchecked();
                 }
-            };
-        }
+            }
+        };
+    }
 
-        return onCheckedChangeListener;
+    private Integer getNumberOfCheckedBoxes(){
+        Integer numChecked = 0;
+        for (ServingCheckBox checkbox : checkBoxes){
+            if (checkbox.isChecked())
+                numChecked++;
+        }
+        return numChecked;
     }
 
     private void handleServingChecked() {
@@ -180,11 +172,11 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
 
         final Servings servings = Servings.createServingsIfDoesNotExist(day, food);
         if (servings != null) {
-            servings.increaseServings();
+            while (getNumberOfCheckedBoxes() > servings.getServings())
+                servings.increaseServings();
+
             servings.save();
-
             onServingsChanged();
-
             Log.d(TAG, String.format("Increased Servings for %s", servings));
         }
     }
@@ -192,11 +184,11 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     private void handleServingUnchecked() {
         final Servings servings = getServings();
         if (servings != null) {
-            servings.decreaseServings();
+            while (getNumberOfCheckedBoxes() < servings.getServings())
+                servings.decreaseServings();
 
             if (servings.getServings() > 0) {
                 servings.save();
-
                 Log.d(TAG, String.format("Decreased Servings for %s", servings));
             } else {
                 Log.d(TAG, String.format("Deleting %s", servings));
