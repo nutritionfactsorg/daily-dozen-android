@@ -50,7 +50,7 @@ public class Servings extends TruncatableModel {
         return servings;
     }
 
-    private void setServings(int servings) {
+    public void setServings(int servings) {
         this.servings = servings;
 
         recalculateStreak();
@@ -77,22 +77,6 @@ public class Servings extends TruncatableModel {
 
     public int getStreak() {
         return streak;
-    }
-
-    public void increaseServings() {
-        final int servings = getServings();
-
-        if (servings < food.getRecommendedServings()) {
-            setServings(servings + 1);
-        }
-    }
-
-    public void decreaseServings() {
-        final int servings = getServings();
-
-        if (servings > 0) {
-            setServings(servings - 1);
-        }
     }
 
     @Override

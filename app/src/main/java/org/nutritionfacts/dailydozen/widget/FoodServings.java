@@ -22,16 +22,15 @@ import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
-import org.nutritionfacts.dailydozen.view.ServingCheckBox;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.CalculateStreakTask;
 import org.nutritionfacts.dailydozen.task.StreakTaskInput;
+import org.nutritionfacts.dailydozen.view.ServingCheckBox;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
@@ -171,9 +170,10 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         day = Day.createDayIfDoesNotExist(day);
 
         final Servings servings = Servings.createServingsIfDoesNotExist(day, food);
-        if (servings != null) {
-            while (getNumberOfCheckedBoxes() > servings.getServings())
-                servings.increaseServings();
+        final Integer numberOfCheckedBoxes = getNumberOfCheckedBoxes();
+
+        if (servings != null && servings.getServings() != numberOfCheckedBoxes) {
+            servings.setServings(numberOfCheckedBoxes);
 
             servings.save();
             onServingsChanged();
@@ -183,9 +183,10 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
 
     private void handleServingUnchecked() {
         final Servings servings = getServings();
-        if (servings != null) {
-            while (getNumberOfCheckedBoxes() < servings.getServings())
-                servings.decreaseServings();
+        final Integer numberOfCheckedBoxes = getNumberOfCheckedBoxes();
+
+        if (servings != null && servings.getServings() != numberOfCheckedBoxes) {
+            servings.setServings(numberOfCheckedBoxes);
 
             if (servings.getServings() > 0) {
                 servings.save();
