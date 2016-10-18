@@ -40,14 +40,13 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <org.nutritionfacts.dailydozen.widget.FoodCheckBoxes
         android:id="@+id/food_checkboxes"
-        android:layout_weight="1"
         android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:layout_gravity="end|center_vertical"
-        android:gravity="end"
-        android:orientation="horizontal"/>
+        android:gravity="end"/>
 
     <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/food_history"
