@@ -42,7 +42,7 @@
     <string name="history">Historie</string>
     <string name="greens">Blattgemüse</string>
     <string name="format_version">Version %s</string>
-    <string name="format_num_days">% Tage</string>
+    <string name="format_num_days">%s Tage</string>
     <string name="food_info_videos_whole_grains">Getreide</string>
     <string name="food_info_videos_vegetables">Gemüse</string>
     <string name="food_info_videos_spices">Gewürze</string>
@@ -88,6 +88,21 @@
     <string name="daily_servings_history">Tägliche Portionen Historie</string>
     <string name="debug_clear_data_message">Dies löscht alle eingegebenen Portionen. Möchtest du fortfahren?</string>
     <string name="dialog_no_email_apps_message">Das Sichern deiner Daten erfordert, dass du eine E-Mail-App installiert hast, damit die CSV-Backup-Datei per E-Mail versendet werden kann. Bitte installiere eine E-Mail-App und versuche es erneut.</string>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+    </string-array>
     
     <string-array name="about_text_lines">
         <item>Diese Anwendung wurde von John Slavick erstellt.</item>

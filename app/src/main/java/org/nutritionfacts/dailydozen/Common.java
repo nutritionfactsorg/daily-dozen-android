@@ -98,16 +98,21 @@ public class Common {
     }
 
     // This method is for loading images in a way that protects against crashes due to OutOfMemoryErrors
-    public static void loadImage(final Context context, final ImageView imageView, final int imageId) {
-        try {
-            imageView.setImageDrawable(ContextCompat.getDrawable(context, imageId));
-        } catch (OutOfMemoryError e) {
-            imageView.setVisibility(View.GONE);
+    public static boolean loadImage(final Context context, final ImageView imageView, final Integer imageId) {
+        if (imageId != null) {
+            try {
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, imageId));
+                return true;
+            } catch (OutOfMemoryError e) {
+                imageView.setVisibility(View.GONE);
+            }
         }
+
+        return false;
     }
 
     @ColorInt
     public static int getListItemColorForPosition(final Context context, final int position) {
-        return ContextCompat.getColor(context,position % 2 == 0 ? android.R.color.white : R.color.gray_light);
+        return ContextCompat.getColor(context, position % 2 == 0 ? android.R.color.white : R.color.gray_light);
     }
 }

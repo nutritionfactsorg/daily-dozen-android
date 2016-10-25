@@ -59,24 +59,31 @@ public class FoodServings extends LinearLayout {
         ButterKnife.bind(this, view);
     }
 
-    public void setDateAndFood(final Day day, final Food food) {
+    public boolean setDateAndFood(final Day day, final Food food) {
         this.day = day;
         this.food = food;
 
-        initFoodIcon();
-        initFoodName();
+        final boolean foundFoodIcon = initFoodIcon();
+        if (foundFoodIcon) {
+            initFoodName();
 
-        final Servings servings = getServings();
-        initCheckboxes(servings);
-        initFoodStreak(servings);
+            final Servings servings = getServings();
+            initCheckboxes(servings);
+            initFoodStreak(servings);
+
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private Servings getServings() {
         return Servings.getByDateAndFood(day, food);
     }
 
-    private void initFoodIcon() {
-        Common.loadImage(getContext(), ivIcon, FoodInfo.getFoodIcon(food.getName()));
+    private boolean initFoodIcon() {
+        final Context context = getContext();
+        return Common.loadImage(context, ivIcon, FoodInfo.getFoodIcon(food.getName()));
     }
 
     private void initFoodName() {
