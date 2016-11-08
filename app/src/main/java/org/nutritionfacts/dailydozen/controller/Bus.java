@@ -4,6 +4,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.nutritionfacts.dailydozen.event.BaseEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
+import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.event.ShowExplodingStarAnimation;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -31,5 +32,9 @@ public class Bus {
 
     public static void showExplodingStarAnimation() {
         post(new ShowExplodingStarAnimation());
+    }
+
+    public static void restoreCompleteEvent(final boolean success) {
+        post(new RestoreCompleteEvent(success));
     }
 }

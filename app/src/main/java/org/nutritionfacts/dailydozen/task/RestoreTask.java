@@ -11,6 +11,7 @@ import com.activeandroid.ActiveAndroid;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -27,19 +28,11 @@ import hugo.weaving.DebugLog;
 public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     private final static String TAG = RestoreTask.class.getSimpleName();
 
-    private final Listener listener;
-
     private String[] headers;
     private ArrayMap<String, Food> foodLookup;
 
-    public interface Listener {
-        void onRestoreComplete(boolean success);
-    }
-
-    public RestoreTask(Context context, Listener listener) {
+    public RestoreTask(Context context) {
         super(context);
-        this.listener = listener;
-
         foodLookup = new ArrayMap<>();
     }
 
@@ -164,8 +157,6 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
         Common.showToast(getContext(), success ? R.string.restore_success : R.string.restore_failed);
 
-        if (listener != null) {
-            listener.onRestoreComplete(success);
-        }
+        Bus.restoreCompleteEvent(success);
     }
 }

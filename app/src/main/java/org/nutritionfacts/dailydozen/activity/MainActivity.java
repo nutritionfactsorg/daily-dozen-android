@@ -27,6 +27,7 @@ import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
+import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.BackupTask;
@@ -40,7 +41,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity
-        implements BackupTask.Listener, RestoreTask.Listener, CalculateStreaksTask.Listener {
+        implements BackupTask.Listener, CalculateStreaksTask.Listener {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     private static final int DEBUG_SETTINGS_REQUEST = 1;
@@ -289,7 +290,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void restore(final Uri restoreFileUri) {
-        new RestoreTask(this, this).execute(restoreFileUri);
+        new RestoreTask(this).execute(restoreFileUri);
     }
 
     public File getBackupFile() {
@@ -331,9 +332,9 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public void onRestoreComplete(boolean success) {
-        if (success) {
+    @Subscribe
+    public void onEvent(RestoreCompleteEvent event) {
+        if (event.isSuccess()) {
             initDatePager();
         }
     }
