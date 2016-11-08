@@ -1,0 +1,1 @@
+ALTER TABLE foods ADD COLUMN id_name TEXT;
