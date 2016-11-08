@@ -7,6 +7,7 @@ import android.util.Log;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
@@ -22,18 +23,11 @@ import hugo.weaving.DebugLog;
 public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     private final static String TAG = BackupTask.class.getSimpleName();
 
-    private final Listener listener;
-
     private List<Day> allDays;
     private List<Food> allFoods;
 
-    public interface Listener {
-        void onBackupComplete(boolean success);
-    }
-
-    public BackupTask(Context context, Listener listener) {
+    public BackupTask(Context context) {
         super(context);
-        this.listener = listener;
     }
 
     @Override
@@ -109,9 +103,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         final Context context = getContext();
         Common.showToast(context, success ? R.string.backup_success : R.string.backup_failed);
 
-        if (listener != null) {
-            listener.onBackupComplete(success);
-        }
+        Bus.backupCompleteEvent(success);
     }
 
     @DebugLog
