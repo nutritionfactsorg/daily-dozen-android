@@ -33,8 +33,8 @@ import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.BackupTask;
-import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
 import org.nutritionfacts.dailydozen.task.RestoreTask;
+import org.nutritionfacts.dailydozen.util.DatabaseUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import java.io.File;
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         initDatePager();
         initDatePagerIndicator();
 
-        calculateStreaksAfterDatabaseUpgradeToV2();
+        DatabaseUtil.performUpgradesIfNecessary(this);
 
         handleIntentIfNecessary();
     }
@@ -84,26 +84,6 @@ public class MainActivity extends AppCompatActivity {
                     NotificationUtil.dismissUpdateReminderNotification(this);
                     startActivity(new Intent(this, DailyReminderSettingsActivity.class));
                 }
-            }
-        }
-    }
-
-    private void calculateStreaksAfterDatabaseUpgradeToV2() {
-        if (!Prefs.getInstance(this).streaksHaveBeenCalculatedAfterDatabaseUpgradeToV2()) {
-            if (Servings.isEmpty()) {
-                Prefs.getInstance(this).setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2();
-            } else {
-                new AlertDialog.Builder(this)
-                        .setCancelable(false)
-                        .setTitle(R.string.dialog_streaks_title)
-                        .setMessage(R.string.dialog_streaks_message)
-                        .setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                new CalculateStreaksTask(MainActivity.this).execute();
-                            }
-                        })
-                        .create().show();
             }
         }
     }
