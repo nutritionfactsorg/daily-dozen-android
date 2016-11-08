@@ -8,7 +8,6 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 
 import org.nutritionfacts.dailydozen.R;
-import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
@@ -22,7 +21,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class FoodCheckBoxes extends LinearLayout implements CalculateStreakTask.Listener {
+public class FoodCheckBoxes extends LinearLayout {
     private final static String TAG = FoodCheckBoxes.class.getSimpleName();
 
     @BindView(R.id.food_check_boxes_container)
@@ -146,11 +145,6 @@ public class FoodCheckBoxes extends LinearLayout implements CalculateStreakTask.
     }
 
     private void onServingsChanged() {
-        new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(day, food));
-    }
-
-    @Override
-    public void onCalculateStreakComplete(boolean success) {
-        Bus.foodServingsChangedEvent(day, food);
+        new CalculateStreakTask(getContext()).execute(new StreakTaskInput(day, food));
     }
 }
