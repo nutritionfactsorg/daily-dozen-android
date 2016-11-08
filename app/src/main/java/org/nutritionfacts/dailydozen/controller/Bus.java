@@ -1,10 +1,14 @@
 package org.nutritionfacts.dailydozen.controller;
 
+import com.github.mikephil.charting.data.CombinedData;
+
 import org.greenrobot.eventbus.EventBus;
 import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
 import org.nutritionfacts.dailydozen.event.BaseEvent;
+import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
+import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.event.ShowExplodingStarAnimation;
 import org.nutritionfacts.dailydozen.model.Day;
@@ -41,5 +45,13 @@ public class Bus {
 
     public static void backupCompleteEvent(final boolean success) {
         post(new BackupCompleteEvent(success));
+    }
+
+    public static void calculateStreaksComplete(final boolean success) {
+        post(new CalculateStreaksTaskCompleteEvent(success));
+    }
+
+    public static void loadServingsHistoryCompleteEvent(final CombinedData chartData) {
+        post(new LoadServingsHistoryCompleteEvent(chartData));
     }
 }

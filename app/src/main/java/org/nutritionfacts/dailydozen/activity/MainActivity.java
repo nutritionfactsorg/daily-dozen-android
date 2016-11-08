@@ -27,6 +27,7 @@ import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
+import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
 import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.model.Day;
@@ -41,8 +42,7 @@ import java.io.File;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity
-        implements CalculateStreaksTask.Listener {
+public class MainActivity extends AppCompatActivity {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     private static final int DEBUG_SETTINGS_REQUEST = 1;
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity
                         .setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                new CalculateStreaksTask(MainActivity.this, MainActivity.this).execute();
+                                new CalculateStreaksTask(MainActivity.this).execute();
                             }
                         })
                         .create().show();
@@ -340,11 +340,10 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public void onCalculateStreaksComplete(boolean success) {
-        if (success) {
+    @Subscribe
+    public void onEvent(CalculateStreaksTaskCompleteEvent event) {
+        if (event.isSuccess()) {
             Prefs.getInstance(this).setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2();
-
             initDatePager();
         }
     }

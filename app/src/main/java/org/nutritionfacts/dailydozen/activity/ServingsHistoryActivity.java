@@ -10,7 +10,10 @@ import android.widget.Spinner;
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
 
+import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
 
@@ -18,7 +21,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ServingsHistoryActivity extends AppCompatActivity
-        implements LoadServingsHistoryTask.Listener, AdapterView.OnItemSelectedListener {
+        implements AdapterView.OnItemSelectedListener {
 
     @BindView(R.id.daily_servings_spinner)
     protected Spinner historySpinner;
@@ -37,10 +40,22 @@ public class ServingsHistoryActivity extends AppCompatActivity
         loadData();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Bus.register(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Bus.unregister(this);
+    }
+
     private void loadData() {
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
-            new LoadServingsHistoryTask(this, this).execute(getSelectedDaysOfHistory());
+            new LoadServingsHistoryTask(this).execute(getSelectedDaysOfHistory());
         }
     }
 
@@ -66,8 +81,9 @@ public class ServingsHistoryActivity extends AppCompatActivity
         historySpinner.setAdapter(adapter);
     }
 
-    @Override
-    public void onLoadServings(CombinedData chartData) {
+    @Subscribe
+    public void onEvent(LoadServingsHistoryCompleteEvent event) {
+        final CombinedData chartData = event.getChartData();
         if (chartData == null) {
             finish();
             return;
@@ -108,11 +124,6 @@ public class ServingsHistoryActivity extends AppCompatActivity
         chart.setHighlightPerTapEnabled(false);
 
         alreadyLoadingData = false;
-    }
-
-    @Override
-    public void onLoadServingsCancelled() {
-        finish();
     }
 
     @Override
