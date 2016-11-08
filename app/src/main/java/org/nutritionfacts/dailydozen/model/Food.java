@@ -19,11 +19,18 @@ public class Food extends Model {
     @Column(name = "name", index = true)
     private String name;
 
+    @Column(name = "id_name", index = true)
+    private String idName;
+
     @Column(name = "recommended_servings")
     private int recommendedServings;
 
     public String getName() {
         return name;
+    }
+
+    public String getIdName() {
+        return idName;
     }
 
     public int getRecommendedServings() {
