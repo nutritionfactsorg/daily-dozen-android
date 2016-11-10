@@ -94,10 +94,11 @@ public class DateFragment extends Fragment {
 
                 for (Food food : Food.getAllFoods()) {
                     final FoodServings foodServings = new FoodServings(getContext());
-                    foodServings.setDateAndFood(day, food);
-                    vgFoodServings.addView(foodServings);
-
-                    Bus.register(foodServings);
+                    final boolean success = foodServings.setDateAndFood(day, food);
+                    if (success) {
+                        vgFoodServings.addView(foodServings);
+                        Bus.register(foodServings);
+                    }
                 }
             } catch (InvalidDateException e) {
                 Log.e(TAG, "displayFormForDate: ", e);
@@ -150,13 +151,18 @@ public class DateFragment extends Fragment {
         explodingStar.runAnimation(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationCancel(Animator animation) {
-                explodingStar.cancelAnimation();
+                if (explodingStar != null) {
+                    explodingStar.cancelAnimation();
+                }
             }
 
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-                vgExplodingStar.setVisibility(View.GONE);
+
+                if (vgExplodingStar != null) {
+                    vgExplodingStar.setVisibility(View.GONE);
+                }
 
                 askUserToRateAfterFirstStarExplosion();
             }

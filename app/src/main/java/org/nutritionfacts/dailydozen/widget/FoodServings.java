@@ -4,12 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,30 +16,19 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
-import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Servings;
-import org.nutritionfacts.dailydozen.task.CalculateStreakTask;
-import org.nutritionfacts.dailydozen.task.StreakTaskInput;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class FoodServings extends LinearLayout implements CalculateStreakTask.Listener {
-    private final static String TAG = FoodServings.class.getSimpleName();
-
+public class FoodServings extends LinearLayout {
     private Day day;
     private Food food;
-
-    private CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
 
     @BindView(R.id.food_icon)
     protected ImageView ivIcon;
@@ -52,7 +37,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     @BindView(R.id.food_streak)
     protected StreakWidget tvStreak;
     @BindView(R.id.food_checkboxes)
-    protected ViewGroup vgCheckboxes;
+    protected FoodCheckBoxes foodCheckBoxes;
 
     public FoodServings(Context context) {
         super(context);
@@ -70,28 +55,35 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void init(final Context context) {
-        final View view = LayoutInflater.from(context).inflate(R.layout.food_item, this);
+        final View view = LayoutInflater.from(context).inflate(R.layout.food_servings, this);
         ButterKnife.bind(this, view);
     }
 
-    public void setDateAndFood(final Day day, final Food food) {
+    public boolean setDateAndFood(final Day day, final Food food) {
         this.day = day;
         this.food = food;
 
-        initFoodIcon();
-        initFoodName();
+        final boolean foundFoodIcon = initFoodIcon();
+        if (foundFoodIcon) {
+            initFoodName();
 
-        final Servings servings = getServings();
-        initCheckboxes(servings);
-        initFoodStreak(servings);
+            final Servings servings = getServings();
+            initCheckboxes(servings);
+            initFoodStreak(servings);
+
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private Servings getServings() {
         return Servings.getByDateAndFood(day, food);
     }
 
-    private void initFoodIcon() {
-        Common.loadImage(getContext(), ivIcon, FoodInfo.getFoodIcon(food.getName()));
+    private boolean initFoodIcon() {
+        final Context context = getContext();
+        return Common.loadImage(context, ivIcon, FoodInfo.getFoodIcon(food.getName()));
     }
 
     private void initFoodName() {
@@ -108,7 +100,7 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
         }
     }
 
-    @OnClick(R.id.food_name)
+    @OnClick({R.id.food_icon, R.id.food_name})
     public void onFoodNameClicked() {
         getContext().startActivity(createFoodIntent(FoodInfoActivity.class, food));
     }
@@ -125,95 +117,9 @@ public class FoodServings extends LinearLayout implements CalculateStreakTask.Li
     }
 
     private void initCheckboxes(Servings servings) {
-        int numExistingServings = servings != null ? servings.getServings() : 0;
-
-        final List<CheckBox> checkBoxes = new ArrayList<>();
-
-        for (int i = 0; i < food.getRecommendedServings(); i++) {
-            final boolean isChecked = numExistingServings > 0;
-
-            checkBoxes.add(createCheckBox(isChecked));
-
-            numExistingServings--;
-        }
-
-        vgCheckboxes.removeAllViews();
-
-        // Add the checkboxes in reverse order because they were checked from left to right. Reversing the order
-        // makes it so the checks appear right to left.
-        Collections.reverse(checkBoxes);
-        for (CheckBox checkBox : checkBoxes) {
-            vgCheckboxes.addView(checkBox);
-        }
-    }
-
-    private CheckBox createCheckBox(final boolean isChecked) {
-        final CheckBox checkBox = new CheckBox(getContext());
-
-        // It is necessary to set the checked status before we set the onCheckedChangeListener
-        checkBox.setChecked(isChecked);
-
-        checkBox.setOnCheckedChangeListener(getOnCheckedChangeListener());
-
-        return checkBox;
-    }
-
-    private CompoundButton.OnCheckedChangeListener getOnCheckedChangeListener() {
-        if (onCheckedChangeListener == null) {
-            onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked) {
-                        handleServingChecked();
-                    } else {
-                        handleServingUnchecked();
-                    }
-                }
-            };
-        }
-
-        return onCheckedChangeListener;
-    }
-
-    private void handleServingChecked() {
-        day = Day.createDayIfDoesNotExist(day);
-
-        final Servings servings = Servings.createServingsIfDoesNotExist(day, food);
-        if (servings != null) {
-            servings.increaseServings();
-            servings.save();
-
-            onServingsChanged();
-
-            Log.d(TAG, String.format("Increased Servings for %s", servings));
-        }
-    }
-
-    private void handleServingUnchecked() {
-        final Servings servings = getServings();
-        if (servings != null) {
-            servings.decreaseServings();
-
-            if (servings.getServings() > 0) {
-                servings.save();
-
-                Log.d(TAG, String.format("Decreased Servings for %s", servings));
-            } else {
-                Log.d(TAG, String.format("Deleting %s", servings));
-                servings.delete();
-            }
-
-            onServingsChanged();
-        }
-    }
-
-    private void onServingsChanged() {
-        new CalculateStreakTask(getContext(), this).execute(new StreakTaskInput(day, food));
-    }
-
-    @Override
-    public void onCalculateStreakComplete(boolean success) {
-        Bus.foodServingsChangedEvent(day, food);
+        foodCheckBoxes.setDay(day);
+        foodCheckBoxes.setFood(food);
+        foodCheckBoxes.setServings(servings);
     }
 
     @Subscribe

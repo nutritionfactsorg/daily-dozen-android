@@ -22,33 +22,33 @@
     <string name="about">About</string>
     <string name="about_this_app">About this app</string>
     <string name="latest_videos">Latest Videos</string>
-    <string name="url_latest_videos">http://nutritionfacts.org/videos/</string>
-    <string name="book_title">How Not to Die</string>
-    <string name="url_book">http://nutritionfacts.org/book/</string>
+    <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
+    <string name="book_title" translatable="false">How Not to Die</string>
+    <string name="url_book" translatable="false">http://nutritionfacts.org/book/</string>
     <string name="donate">Donate</string>
-    <string name="url_donate">https://nutritionfacts.org/donate/</string>
+    <string name="url_donate" translatable="false">https://nutritionfacts.org/donate/</string>
     <string name="subscribe">Subscribe</string>
-    <string name="url_subscribe">http://nutritionfacts.org/subscribe/</string>
+    <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe/</string>
     <string name="open_source">Open Source</string>
-    <string name="url_open_source">http://nutritionfacts.org/open-source/</string>
-    <string name="nutritionfacts_title">nutritionfacts.org</string>
-    <string name="url_nutritionfacts">http://nutritionfacts.org</string>
-    <string name="name_john_slavick">John Slavick</string>
-    <string name="url_john_slavick">http://johnslavick.com</string>
-    <string name="library_activeandroid">ActiveAndroid</string>
-    <string name="library_android_iconify">android-iconify</string>
+    <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source/</string>
+    <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
+    <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
+    <string name="name_john_slavick" translatable="false">John Slavick</string>
+    <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
+    <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
+    <string name="library_android_iconify" translatable="false">android-iconify</string>
     <string name="library_butterknife">ButterKnife</string>
-    <string name="library_caldroid">Caldroid</string>
-    <string name="library_eventbus">EventBus</string>
-    <string name="library_likeanimation">LikeAnimation</string>
-    <string name="library_mpandroidchart">MPAndroidChart</string>
-    <string name="url_activeandroid">https://github.com/pardom/ActiveAndroid</string>
-    <string name="url_android_iconify">https://github.com/JoanZapata/android-iconify</string>
-    <string name="url_butterknife">https://github.com/JakeWharton/butterknife</string>
-    <string name="url_caldroid">https://github.com/roomorama/Caldroid</string>
-    <string name="url_eventbus">https://github.com/greenrobot/EventBus</string>
-    <string name="url_likeanimation">https://github.com/frogermcs/LikeAnimation/</string>
-    <string name="url_mpandroidchart">https://github.com/PhilJay/MPAndroidChart</string>
+    <string name="library_caldroid" translatable="false">Caldroid</string>
+    <string name="library_eventbus" translatable="false">EventBus</string>
+    <string name="library_likeanimation" translatable="false">LikeAnimation</string>
+    <string name="library_mpandroidchart" translatable="false">MPAndroidChart</string>
+    <string name="url_activeandroid" translatable="false">https://github.com/pardom/ActiveAndroid</string>
+    <string name="url_android_iconify" translatable="false">https://github.com/JoanZapata/android-iconify</string>
+    <string name="url_butterknife" translatable="false">https://github.com/JakeWharton/butterknife</string>
+    <string name="url_caldroid" translatable="false">https://github.com/roomorama/Caldroid</string>
+    <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
+    <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
+    <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
     <string name="not_implemented_yet">Not implemented yet</string>
     <string name="permission_needed_to_write_storage">Can\'t backup without permission to write to storage</string>
     <string name="backup_failed">Backup failed</string>
@@ -57,14 +57,14 @@
     <string name="restore_success">Restore successful</string>
     <string name="restore_confirm_title">Restore Backup</string>
     <string name="restore_confirm_message">Any existing data will be deleted before restoring from backup. Do you wish to continue?</string>
-    <string name="backup_mimetype">message/rfc822</string>
+    <string name="backup_mimetype" translatable="false">message/rfc822</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="backup">Backup</string>
     <string name="food_info">Food Info</string>
     <string name="food_history">Food History</string>
-    <string name="icon_info">{fa-info-circle 16dp @color/gray}</string>
-    <string name="icon_calendar">{fa-calendar 20dp @color/gray_dark}</string>
+    <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
+    <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
     <string name="daily_servings_history">Daily Servings History</string>
     <string name="no_servings_recorded">You have not recorded any servings yet!</string>
     <string name="task_backup_title">Backing up</string>
@@ -86,8 +86,8 @@
     <string name="task_loading_servings_history_title">Loading Servings History</string>
     <string name="time_scale">Time Scale</string>
     <string name="history_to_generate">History to Generate</string>
-    <string name="date_servings_star">{fa-star 24dp @color/gold}</string>
-    <string name="date_servings_star_large">{fa-star 64dp @color/gold}</string>
+    <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
+    <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
     <string name="welcome_to_my_daily_dozen">Welcome to my Daily Dozen!</string>
     <string name="activity_welcome_text">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.</string>
     <string name="dialog_ask_user_to_rate_app_title">Do you like this app?</string>
@@ -104,6 +104,25 @@
     <string name="vibrate">Vibrate</string>
     <string name="play_sound">Play Sound</string>
     <string name="videos">Videos</string>
+
+    <!--
+    NOTE: These strings should never be translated from English
+    These strings are used as the canonical names for the different foods and make it easy to switch between languages
+    -->
+    <string-array name="food_id_names" translatable="false">
+        <item>Beans</item>
+        <item>Berries</item>
+        <item>Other Fruits</item>
+        <item>Cruciferous Vegetables</item>
+        <item>Greens</item>
+        <item>Other Vegetables</item>
+        <item>Flaxseeds</item>
+        <item>Nuts</item>
+        <item>Spices</item>
+        <item>Whole Grains</item>
+        <item>Beverages</item>
+        <item>Exercise</item>
+    </string-array>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -211,7 +230,7 @@
         <item>Raspberries (black or red)</item>
         <item>Strawberries</item>
     </string-array>
-    
+
     <string-array name="food_info_types_other_fruits">
         <item>Apples</item>
         <item>Dried apricots</item>
@@ -242,7 +261,7 @@
         <item>Tangerines</item>
         <item>Watermelon</item>
     </string-array>
-    
+
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Arugula</item>
         <item>Bok choy</item>
@@ -258,7 +277,7 @@
         <item>Turnip greens</item>
         <item>Watercress</item>
     </string-array>
-    
+
     <string-array name="food_info_types_greens">
         <item>Arugula</item>
         <item>Beet greens</item>
@@ -271,7 +290,7 @@
         <item>Swiss chard</item>
         <item>Turnip greens</item>
     </string-array>
-    
+
     <string-array name="food_info_types_other_vegetables">
         <item>Artichokes</item>
         <item>Asparagus</item>
@@ -292,12 +311,12 @@
         <item>Tomatoes</item>
         <item>Zucchini</item>
     </string-array>
-    
+
     <string-array name="food_info_types_flaxseeds">
         <item>Brown flaxseeds</item>
         <item>Golden flaxseeds</item>
     </string-array>
-    
+
     <string-array name="food_info_types_nuts">
         <item>Almonds</item>
         <item>Brazil nuts</item>
@@ -313,7 +332,7 @@
         <item>Sunflower seeds</item>
         <item>Walnuts</item>
     </string-array>
-    
+
     <string-array name="food_info_types_spices">
         <item>Allspice</item>
         <item>Barberries</item>
@@ -348,7 +367,7 @@
         <item>Turmeric</item>
         <item>Vanilla</item>
     </string-array>
-    
+
     <string-array name="food_info_types_whole_grains">
         <item>Barley</item>
         <item>Brown rice</item>
@@ -362,7 +381,7 @@
         <item>Whole-wheat pasta</item>
         <item>Wild rice</item>
     </string-array>
-    
+
     <string-array name="food_info_types_beverages">
         <item>Black tea</item>
         <item>Chai tea</item>
@@ -381,7 +400,7 @@
         <item>Water</item>
         <item>White tea</item>
     </string-array>
-    
+
     <string-array name="food_info_types_exercise">
         <item>Bicycling</item>
         <item>Canoeing</item>
@@ -438,56 +457,56 @@
         <item>Walking briskly uphill</item>
         <item>Water jogging</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_beans">
         <item>1/4 cup of hummus or bean dip</item>,
         <item>1/2 cup cooked beans, split peas, lentils, tofu, or tempeh</item>,
         <item>1 cup of fresh peas or sprouted lentils</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_berries">
         <item>1/2 cup fresh or frozen</item>
         <item>1/4 cup dried</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_other_fruits">
         <item>1 medium-sized fruit</item>
         <item>1 cup cut-up fruit</item>
         <item>1/4 cup dried fruit</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
         <item>1/2 cup chopped</item>
         <item>1/4 cup Brussels or broccoli sprouts</item>
         <item>1 tablespoon horseradish</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_greens">
         <item>1 cup raw</item>
         <item>1/2 cup cooked</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_other_vegetables">
         <item>1 cup raw leafy vegetables</item>
         <item>1/2 cup raw or cooked nonleafy vegetables</item>
         <item>1/2 cup vegetable juice</item>
         <item>1/4 cup dried mushrooms</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_flaxseeds">
         <item>1 tablespoon ground</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_nuts">
         <item>1/4 cup nuts or seeds</item>
         <item>2 tablespoons nut or seed butter</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_spices">
         <item>1/4 teaspoon of turmeric</item>
         <item>Any other (salt-free) herbs and spices you enjoy</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_whole_grains">
         <item>1/2 cup hot cereal or cooked grains, pasta, or corn kernels</item>
         <item>1 cup cold cereal</item>
@@ -495,11 +514,11 @@
         <item>1/2 a bagel or english muffin</item>
         <item>3 cups popped popcorn</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_beverages">
         <item>One glass (12 ounces)</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_exercise">
         <item>90 minutes of moderate-intensity activity</item>
         <item>40 minutes of vigorous-intensity activity</item>
@@ -517,8 +536,9 @@
     <string name="food_info_videos_whole_grains">grains</string>
     <string name="food_info_videos_beverages">beverages</string>
     <string name="food_info_videos_exercise">exercise</string>
+    <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
 
-    <string-array name="food_videos_beans">
+    <string-array name="food_videos_beans" translatable="false">
         <item>black-beans</item>
         <item></item>
         <item></item>
@@ -538,7 +558,7 @@
         <item>tempeh</item>
     </string-array>
 
-    <string-array name="food_videos_berries">
+    <string-array name="food_videos_berries" translatable="false">
         <item>acai-berries</item>
         <item>barberries</item>
         <item>blackberries</item>
@@ -553,7 +573,7 @@
         <item>strawberries</item>
     </string-array>
 
-    <string-array name="food_videos_other_fruits">
+    <string-array name="food_videos_other_fruits" translatable="false">
         <item>apples</item>
         <item>apricots</item>
         <item>avocados</item>
@@ -584,7 +604,7 @@
         <item>watermelon</item>
     </string-array>
 
-    <string-array name="food_videos_cruciferous_vegetables">
+    <string-array name="food_videos_cruciferous_vegetables" translatable="false">
         <item></item>
         <item>bok-choy</item>
         <item>broccoli</item>
@@ -600,7 +620,7 @@
         <item>watercress</item>
     </string-array>
 
-    <string-array name="food_videos_greens">
+    <string-array name="food_videos_greens" translatable="false">
         <item></item>
         <item>beet-greens</item>
         <item>collard-greens</item>
@@ -613,7 +633,7 @@
         <item>turnips</item>
     </string-array>
 
-    <string-array name="food_videos_other_vegetables">
+    <string-array name="food_videos_other_vegetables" translatable="false">
         <item>artichokes</item>
         <item>asparagus</item>
         <item>beets</item>
@@ -634,7 +654,7 @@
         <item>zucchini</item>
     </string-array>
 
-    <string-array name="food_videos_nuts">
+    <string-array name="food_videos_nuts" translatable="false">
         <item>almonds</item>
         <item>brazil-nuts</item>
         <item>cashews</item>
@@ -650,7 +670,7 @@
         <item>walnuts</item>
     </string-array>
 
-    <string-array name="food_videos_spices">
+    <string-array name="food_videos_spices" translatable="false">
         <item>allspice</item>
         <item>barberries</item>
         <item>basil</item>
@@ -685,7 +705,7 @@
         <item></item>
     </string-array>
 
-    <string-array name="food_videos_whole_grains">
+    <string-array name="food_videos_whole_grains" translatable="false">
         <item>barley</item>
         <item>rice</item>
         <item>buckwheat</item>
@@ -699,7 +719,7 @@
         <item>rice</item>
     </string-array>
 
-    <string-array name="food_videos_beverages">
+    <string-array name="food_videos_beverages" translatable="false">
         <item>black-tea</item>
         <item>chai-tea</item>
         <item>chamomile-tea</item>

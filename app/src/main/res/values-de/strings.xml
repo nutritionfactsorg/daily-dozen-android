@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Daily Dozen</string>
+    <string name="OK">OK</string>
+    <string name="yes">Ja</string>
+    <string name="whole_grains">Vollkorn</string>
+    <string name="videos">Videos</string>
+    <string name="welcome_to_my_daily_dozen">Willkommen zu meinen Daily Dozen!</string>
+    <string name="vibrate">Vibrieren</string>
+    <string name="types">Typen</string>
+    <string name="time_scale">Zeitraum</string>
+    <string name="task_restore_title">Wiederherstellen</string>
+    <string name="task_loading_servings_history_title">Lade Portions-Historie</string>
+    <string name="task_generating_random_data">Erstelle Zufallsdaten</string>
+    <string name="task_calculating_streaks_title">Berechne Streaks</string>
+    <string name="task_backup_title">Erstelle Sicherung</string>
+    <string name="subscribe">Abbonieren</string>
+    <string name="spices">Gewürze</string>
+    <string name="servings_some">Einige Portionen</string>
+    <string name="servings_all">Alle Portionen</string>
+    <string name="servings">Portionen</string>
+    <string name="serving_sizes">Portionsgröße</string>
+    <string name="restore_success">Wiederherstellung erfolgreich</string>
+    <string name="restore_failed">Wiederherstellung fehlgeschlagen</string>
+    <string name="restore_confirm_title">Sicherung wiederherstellen</string>
+    <string name="restore_confirm_message">Bereits existierende Daten werden bei der Sicherung überschrieben. Möchten Sie fortfahren?</string>
+    <string name="remind_me_at">Erinnere mich um</string>
+    <string name="rate_now">Feedback geben</string>
+    <string name="play_sound">Ton abspielen</string>
+    <string name="permission_needed_to_write_storage">Für das Erstellen einer Sicherung ist ein Schreibzugriff erforderlich</string>
+    <string name="other_vegetables">Anderes Gemüse</string>
+    <string name="other_fruits">Anderes Obst</string>
+    <string name="open_source">Open Source</string>
+    <string name="nuts">Nüsse</string>
+    <string name="not_now">Nicht jetzt</string>
+    <string name="not_implemented_yet">Noch nicht implementiert</string>
+    <string name="no_servings_recorded">Du hast noch keine Portionen aufgezeichnet!</string>
+    <string name="no">Nein</string>
+    <string name="library_butterknife">Buttermesser</string>
+    <string name="latest_videos">Neueste Videos</string>
+    <string name="history_to_generate">Zu erstellende Historie</string>
+    <string name="history">Historie</string>
+    <string name="greens">Blattgemüse</string>
+    <string name="format_version">Version %s</string>
+    <string name="format_num_days">%s Tage</string>
+    <string name="food_info_videos_whole_grains">Getreide</string>
+    <string name="food_info_videos_vegetables">Gemüse</string>
+    <string name="food_info_videos_spices">Gewürze</string>
+    <string name="food_info_videos_nuts">Nüsse</string>
+    <string name="food_info_videos_greens">Blattgemüse</string>
+    <string name="food_info_videos_fruits">Obst</string>
+    <string name="food_info_videos_flaxseeds">Leinsamen</string>
+    <string name="food_info_videos_exercise">Sport</string>
+    <string name="food_info_videos_beverages">Getränke</string>
+    <string name="food_info_videos_berries">Beeren</string>
+    <string name="food_info_videos_cruciferous">Kreuzblütengewächse</string>
+    <string name="food_info_videos_beans">Bohnen</string>
+    <string name="food_info">Lebensmittelinfo</string>
+    <string name="food_history">Lebensmittel Historie</string>
+    <string name="flaxseeds">Leinsamen</string>
+    <string name="exercise">Sport</string>
+    <string name="enable_daily_reminder">Tägliche Benachrichtigung aktivieren</string>
+    <string name="donate">Spenden</string>
+    <string name="dialog_streaks_title">Neue Funktion: Streaks!</string>
+    <string name="dialog_streaks_message">Die Datenbank wird nun erneuert um das Streaks-Feature zu unterstützen.</string>
+    <string name="dialog_no_email_apps_title">Keine E-Mail Anwendung gefunden</string>
+    <string name="dialog_ask_user_to_rate_app_title">Magst du diese App?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Gib uns Feedback im Play Store.</string>
+    <string name="debug_generate_random_data">Erstelle Zufallsdaten</string>
+    <string name="debug_generate_full_data">Erstelle Gesamtdaten</string>
+    <string name="debug_generate_data_message">Alle bestehenden Daten werden ersetzt. Möchtest du fortfahren?</string>
+    <string name="debug_clear_data">Lösche alle Daten</string>
+    <string name="debug">Debug</string>
+    <string name="about">Über</string>
+    <string name="about_this_app">Über diese App</string>
+    <string name="activity_welcome_text">Verwende diese App auf täglicher Basis um den Überblick über die Lebensmittel zu behalten, welche ich für eine optimale Gesundheit und Langlebigkeit in meinem Buch „How Not to Die“ empfehle.</string>
+    <string name="back_to_today">Zurück zu Heute</string>
+    <string name="backup">Sicherung</string>
+    <string name="backup_failed">Sicherung felhgeschlagen</string>
+    <string name="backup_success">Sicherung erfolgreich</string>
+    <string name="beans">Bohnen</string>
+    <string name="berries">Beeren</string>
+    <string name="beverages">Getränke</string>
+    <string name="cruciferous_vegetables">Kreuzblütengewächse</string>
+    <string name="daily_reminder_settings">Tägliche-Benachrichtigungs-Einstellungen</string>
+    <string name="daily_reminder_text">Update für heutige Portionen</string>
+    <string name="daily_reminder_title">Daily Dozen Erinnerung</string>
+    <string name="daily_servings_history">Tägliche Portionen Historie</string>
+    <string name="debug_clear_data_message">Dies löscht alle eingegebenen Portionen. Möchtest du fortfahren?</string>
+    <string name="dialog_no_email_apps_message">Das Sichern deiner Daten erfordert, dass du eine E-Mail-App installiert hast, damit die CSV-Backup-Datei per E-Mail versendet werden kann. Bitte installiere eine E-Mail-App und versuche es erneut.</string>
+    <string name="error_cannot_handle_url">URL konnte nicht geöffnet werden. Bitte installieren Sie einen Browser.</string>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+    </string-array>
+    
+    <string-array name="about_text_lines">
+        <item>Diese Anwendung wurde von John Slavick erstellt.</item>
+        <item />
+        <item>Die folgenden Open-Source Bibliotheken werden verwendet: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation und MPAndroidChart.</item>
+        <item />
+        <item>Spezieller Dank geht an die freiwilligen Ersteller der vorherigen App: Chan Kruse, Allan Portera und Sangeeta Kumar.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>Folge diesen Schritten um die Sicherung in der Daily Dozen App wiederherzustellen</item>
+        <item />
+        <item>1. Die Daily Dozen App muss auf deinem Android-Smartphone installiert sein. Du kannst sie hier herunterladen: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Tippe auf die Sicherungsdatei, welche diesem E-Mail angehängt ist.</item>
+        <item />
+        <item>3. Wähle Daily Dozen im Öffnen-Menü.</item>
+    </string-array>
+
+    <string-array name="servings_time_scale_choices">
+        <item>Tag</item>
+        <item>Monat</item>
+        <item>Jahr</item>
+    </string-array>
+
+    <string-array name="history_to_generate_choices">
+        <item>1 Monat</item>
+        <item>3 Monate</item>
+        <item>6 Monate</item>
+        <item>1 Jahr</item>
+        <item>2 Jahre</item>
+        <item>5 Jahre</item>
+    </string-array>
+
+    <string-array name="food_info_types_beans">
+        <item>Schwarze Bohnen</item>
+        <item>Schwarze-Augen-Bohnen</item>
+        <item>Butterbohnen</item>
+        <item>Cannellini</item>
+        <item>Kichererbsen</item>
+        <item>Edamame</item>
+        <item>Englische Erbsen</item>
+        <item>Kichererbsen</item>
+        <item>Great Northern Bohnen</item>
+        <item>Kidney-Bohnen</item>
+        <item>Linsen (Beluga, französisch, oder rote Sorten)</item>
+        <item>Miso</item>
+        <item>Navy-Bohnen</item>
+        <item>Pintobohnen</item>
+        <item>Kleine rote Bohnen</item>
+        <item>Spalterbsen (gelb oder grün)</item>
+        <item>Tempeh</item>
+    </string-array>
+
+    <string-array name="food_info_types_berries">
+        <item>Acai Beeren</item>
+        <item>Berberitzen</item>
+        <item>Brombeeren</item>
+        <item>Heidelbeeren</item>
+        <item>Kirschen oder Weichseln</item>
+        <item>Concord-Trauben</item>
+        <item>Cranberries</item>
+        <item>Goji-Beeren</item>
+        <item>Kumquats</item>
+        <item>Maulbeeren</item>
+        <item>Himbeeren (schwarz oder rot)</item>
+        <item>Erdbeeren</item>
+    </string-array>
+    
+    <string-array name="food_info_types_other_fruits">
+        <item>Äpfel</item>
+        <item>Getrocknete Aprikosen</item>
+        <item>Avocados</item>
+        <item>Bananen</item>
+        <item>Cantaloup-Melone</item>
+        <item>Clementinen</item>
+        <item>Datteln</item>
+        <item>Getrocknete Feigen</item>
+        <item>Grapefruit</item>
+        <item>Honigtau</item>
+        <item>Kiwi</item>
+        <item>Zitronen</item>
+        <item>Zitronen</item>
+        <item>Lychees</item>
+        <item>Mangos</item>
+        <item>Nektarinen</item>
+        <item>Orangen</item>
+        <item>Papaya</item>
+        <item>Passionsfrucht</item>
+        <item>Pfirsiche</item>
+        <item>Birnen</item>
+        <item>Ananas</item>
+        <item>Pflaumen (vor allem schwarze Pflaumen)</item>
+        <item>Pluots</item>
+        <item>Granatäpfel</item>
+        <item>Backpflaumen</item>
+        <item>Mandarinen</item>
+        <item>Wassermelone</item>
+    </string-array>
+    
+    <string-array name="food_info_types_cruciferous_vegetables">
+         <item>Rucola</item>
+         <item>Pak Choi</item>
+         <item>Brokkoli</item>
+         <item>Rosenkohl</item>
+         <item>Kohl</item>
+         <item>Blumenkohl</item>
+         <item>Blattkohl</item>
+         <item>Meerrettich</item>
+         <item>Kohl (schwarz, grün und rot)</item>
+         <item>Senfkörner</item>
+         <item>Radieschen</item>
+         <item>Kohlrabi</item>
+         <item>Kresse</item>
+    </string-array>
+    
+    <string-array name="food_info_types_greens">
+        <item>Rucola</item>
+        <item>Rüben</item>
+        <item>Blattkohl</item>
+        <item>Kohl (schwarz, grün und rot)</item>
+        <item>Mesclun-Mix (gemischte junge Blattsalate)</item>
+        <item>Senfkörner</item> 
+        <item>Sauerampfer</item>
+        <item>Spinat</item>
+        <item>Mangold</item>
+        <item>Kohlrabi</item>
+    </string-array>
+    
+    <string-array name="food_info_types_other_vegetables">
+        <item>Artischocken</item>
+        <item>Spargel</item>
+        <item>Rüben</item>
+        <item>Paprika</item>
+        <item>Möhren</item>
+        <item>Mais</item>
+        <item>Knoblauch</item>
+        <item>Pilze (Champignon, Austern-, Portobello- oder Shiitakepilze)</item>
+        <item>Okra</item>
+        <item>Zwiebeln</item>
+        <item>Lila Kartoffeln</item>
+        <item>Kürbis</item>
+        <item>Algen (Arame, Rotalgen oder Nori)</item>
+        <item>Knackerbsen</item> 
+        <item>Kürbis (Delicata, Sommer- und Spaghettikürbis-Sorten)</item>
+        <item>Süßkartoffeln / Yams</item>
+        <item>Tomaten</item>
+        <item>Zucchini</item>
+    </string-array>
+    
+    <string-array name="food_info_types_flaxseeds">
+        <item>Braune Leinsamen</item>
+        <item>Goldleinsamen</item>
+    </string-array>
+    
+    <string-array name="food_info_types_nuts">
+        <item>Mandeln</item>
+        <item>Paranüsse</item>
+        <item>Cashewkerne</item>
+        <item>Chia-Samen</item>
+        <item>Haselnüsse</item>
+        <item>Hanfsamen</item>
+        <item>Macadamianüsse</item>
+        <item>Pecannüsse</item>
+        <item>Pistazien</item>
+        <item>Kürbiskerne</item>
+        <item>Sesamsamen</item>
+        <item>Sonnenblumenkerne</item>
+        <item>Walnüsse</item>
+    </string-array>
+    
+    <string-array name="food_info_types_spices">
+        <item>Piment (Nelkenpfeffer)</item>
+        <item>Berberitzen</item>
+        <item>Basilikum</item>
+        <item>Lorbeerblätter</item>
+        <item>Kardamom</item>
+        <item>Chili-Pulver</item>
+        <item>Cilantro</item>
+        <item>Zimt</item>
+        <item>Gewürznelken</item>
+        <item>Koriander</item>
+        <item>Kreuzkümmel</item>
+        <item>Curry Pulver</item>
+        <item>Dill</item>
+        <item>Bockshornklee</item>
+        <item>Knoblauch</item>
+        <item>Ingwer</item>
+        <item>Meerrettich</item>
+        <item>Zitronengras</item>
+        <item>Majoran</item>
+        <item>Senfpulver</item>
+        <item>Muskatnuss</item>
+        <item>Oregano</item>
+        <item>Geräucherte Paprika</item>
+        <item>Petersilie</item>
+        <item>Pfeffer</item>
+        <item>Pfefferminze</item>
+        <item>Rosmarin</item>
+        <item>Safran</item>
+        <item>Salbei</item>
+        <item>Thymian</item>
+        <item>Kurkuma</item>
+        <item>Vanille</item>
+    </string-array>
+    
+    <string-array name="food_info_types_whole_grains">
+        <item>Gerste</item>
+        <item>Brauner Reis</item>
+        <item>Buchweizen</item>
+        <item>Hirse</item>
+        <item>Hafer</item>
+        <item>Popcorn</item>
+        <item>Andenhirse</item>
+        <item>Roggen</item>
+        <item>Teff</item>
+        <item>Vollkornnudeln</item>
+        <item>Wildreis</item>
+    </string-array>
+    
+    <string-array name="food_info_types_beverages">
+        <item>Schwarzer Tee</item>
+        <item>Chai-Tee</item>
+        <item>Kamillentee</item>
+        <item>Kaffee</item>
+        <item>Earl-Grey-Tee</item>
+        <item>Grüner Tee</item>
+        <item>Hibiskustee</item>
+        <item>Heiße Schokolade</item>
+        <item>Jasmintee</item>
+        <item>Zitronenmelisse-Tee</item>
+        <item>Matcha-Tee</item>
+        <item>Mandelblüte Oolong-Tee</item>
+        <item>Pfefferminztee</item>
+        <item>Roibuschtee</item>
+        <item>Wasser</item>
+        <item>Weißer Tee</item>
+    </string-array>
+    
+    <string-array name="food_info_types_exercise">
+        <item>Radfahren</item>
+        <item>Kanusport</item>
+        <item>Tanzen</item>
+        <item>Völkerball</item>
+        <item>Abfahrtslauf</item>
+        <item>Fechten</item>
+        <item>Wandern</item>
+        <item>Hausarbeit</item>
+        <item>Eislaufen</item>
+        <item>Inlineskating</item>
+        <item>Jonglieren</item>
+        <item>Springen auf einem Trampolin</item>
+        <item>Paddelboot fahren</item>
+        <item>Frisbee spielen</item>
+        <item>Rollschuhlaufen</item>
+        <item>Körbe schießen</item>
+        <item>Schneeschaufeln (leichter Schneefall)</item>
+        <item>Skateboardfahren</item>
+        <item>Schnorcheln</item>
+        <item>Surfen</item>
+        <item>Schwimmen (entspannt)</item>
+        <item>Tennis (Doppel)</item>
+        <item>Wassertreten</item>
+        <item>Rasches Gehen (6 km/h)</item>
+        <item>Wassergymnastik</item>
+        <item>Wasserski</item>
+        <item>Gartenarbeit</item>
+        <item>Yoga</item>
+        <item>Backpacking</item>
+        <item>Basketball</item>
+        <item>Radfahren (bergauf)</item>
+        <item>Zirkel-Krafttraining</item>
+        <item>Skilanglauf</item>
+        <item>Fußball</item>
+        <item>Eishockey</item>
+        <item>Jogging</item>
+        <item>Jumping Jacks</item>
+        <item>Sprungseil</item>
+        <item>Lacrosse</item>
+        <item>Liegestütze</item>
+        <item>Klimmzüge</item>
+        <item>Racquetball</item>
+        <item>Felsklettern</item>
+        <item>Rugby</item>
+        <item>Laufen</item>
+        <item>Gerätetauchen</item>
+        <item>Tennis (Einzel)</item>
+        <item>Fußball</item>
+        <item>Eisschnelllauf</item>
+        <item>Squash</item>
+        <item>Step-Aerobic</item>
+        <item>Schwimmen Runden</item>
+        <item>Flottes Bergaufgehen</item>
+        <item>Wasserjogging</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_beans">
+        <item>¼ Tasse (60 ml) Hummus oder Bohnendip</item>
+        <item>½ Tasse (120 ml) gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
+        <item>1 Tasse (240 ml) frische Erbsen oder Linsen gekeimt</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_berries">
+        <item>½ Tasse (120 ml) frisch oder gefroren</item>
+        <item>¼ Tasse (60 ml) getrocknet</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>1 mittelgroße Frucht</item>
+        <item>1 (120 ml) Tasse geschnittene Früchte</item>
+        <item>¼ (60 ml) Tasse getrocknete Früchte</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+         <item>½ Tasse (120 ml) gehackt</item>
+         <item>¼ Tasse (60 ml) Rosenkohl oder Brokkolisprossen</item> 
+         <item>1 Esslöffel (15 ml) Meerrettich</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_greens">
+        <item>1 Tasse (240 ml) roh</item>
+        <item>½ Tasse (120 ml) gekocht</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>1 Tasse (240 ml) rohes Blattgemüse</item> 
+        <item>½ Tasse (120 ml) roh oder gekocht; kein Blattgemüse</item> 
+        <item>½ Tasse (120 ml) Gemüsesaft</item> 
+        <item>¼ Tasse (60 ml) getrocknete Pilze</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>1 Teelöffel (5 ml) gerieben</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>¼ Tasse (60 ml) Nüsse oder Samen</item>
+        <item>2 Teelöffel (10 ml) Butter aus Nüssen oder Samen</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_spices">
+        <item>¼ Teelöffel (1,2 ml) Kurkuma</item>
+        <item>Alle anderen (salzfreien) Kräuter und Gewürze die du magst</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>½ Tasse (120 ml) heißes oder gekochtes Getreide, Teigwaren, oder Maiskörner</item>
+        <item>1 Tasse (240 ml) Getreide</item>
+        <item>1 Tortilla oder 1 Brotscheibe</item>
+        <item>½ Bagel oder ½ Englischer Muffin</item>
+        <item>3 Tassen (710 ml) Popcorn</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_beverages">
+        <!-- metric classes are 250 ml and therefore smaller than the classes in the U.S. -->
+        <item>1½ Gläser (340 ml)</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>90 Minuten Aktivität mittlerer Intensität</item>
+        <item>40 Minuten Aktivität hoher Intensität</item>
+    </string-array>
+
+</resources>

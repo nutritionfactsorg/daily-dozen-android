@@ -14,6 +14,7 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
@@ -27,16 +28,8 @@ import java.util.List;
 public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, CombinedData> {
     private static final String TAG = LoadServingsHistoryTask.class.getSimpleName();
 
-    private final Listener listener;
-
-    public interface Listener {
-        void onLoadServings(CombinedData chartData);
-        void onLoadServingsCancelled();
-    }
-
-    public LoadServingsHistoryTask(Context context, Listener listener) {
+    public LoadServingsHistoryTask(Context context) {
         super(context);
-        this.listener = listener;
     }
 
     @Override
@@ -260,13 +253,13 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
     @Override
     protected void onCancelled() {
         super.onCancelled();
-        listener.onLoadServingsCancelled();
+        Bus.loadServingsHistoryCompleteEvent(null);
     }
 
     @Override
     protected void onPostExecute(CombinedData chartData) {
         super.onPostExecute(chartData);
-        listener.onLoadServings(chartData);
+        Bus.loadServingsHistoryCompleteEvent(chartData);
     }
 
     private class BarChartValueFormatter implements com.github.mikephil.charting.formatter.ValueFormatter {

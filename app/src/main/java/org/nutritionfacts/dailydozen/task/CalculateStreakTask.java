@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.activeandroid.ActiveAndroid;
 
+import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
@@ -11,15 +12,11 @@ import org.nutritionfacts.dailydozen.model.Servings;
 import java.util.List;
 
 public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Integer, Boolean> {
-    private final Listener listener;
+    private Day startingDay;
+    private Food food;
 
-    public interface Listener {
-        void onCalculateStreakComplete(boolean success);
-    }
-
-    public CalculateStreakTask(Context context, Listener listener) {
+    public CalculateStreakTask(Context context) {
         super(context);
-        this.listener = listener;
     }
 
     @Override
@@ -35,8 +32,8 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
             return false;
         }
 
-        final Day startingDay = input.getStartingDay();
-        final Food food = input.getFood();
+        startingDay = input.getStartingDay();
+        food = input.getFood();
 
         final List<Day> daysToCalculate = startingDay.getDaysAfter();
         final int numDays = daysToCalculate.size();
@@ -70,8 +67,8 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
     protected void onPostExecute(Boolean success) {
         super.onPostExecute(success);
 
-        if (listener != null) {
-            listener.onCalculateStreakComplete(success);
+        if (success) {
+            Bus.foodServingsChangedEvent(startingDay, food);
         }
     }
 }

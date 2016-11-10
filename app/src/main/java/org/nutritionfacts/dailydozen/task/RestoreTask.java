@@ -9,8 +9,8 @@ import android.util.Log;
 
 import com.activeandroid.ActiveAndroid;
 
-import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -27,19 +27,11 @@ import hugo.weaving.DebugLog;
 public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     private final static String TAG = RestoreTask.class.getSimpleName();
 
-    private final Listener listener;
-
     private String[] headers;
     private ArrayMap<String, Food> foodLookup;
 
-    public interface Listener {
-        void onRestoreComplete(boolean success);
-    }
-
-    public RestoreTask(Context context, Listener listener) {
+    public RestoreTask(Context context) {
         super(context);
-        this.listener = listener;
-
         foodLookup = new ArrayMap<>();
     }
 
@@ -56,42 +48,49 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         try {
             final ContentResolver contentResolver = getContext().getContentResolver();
 
-            InputStream restoreInputStream = contentResolver.openInputStream(params[0]);
+            if (params != null && params.length > 0) {
+                InputStream restoreInputStream = contentResolver.openInputStream(params[0]);
 
-            if (restoreInputStream != null) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
+                if (restoreInputStream != null) {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
 
-                final LineNumberReader lineNumberReader = new LineNumberReader(reader);
-                lineNumberReader.skip(Integer.MAX_VALUE);
-                final int numLines = lineNumberReader.getLineNumber() + 1;
-                lineNumberReader.close();
+                    final LineNumberReader lineNumberReader = new LineNumberReader(reader);
+                    lineNumberReader.skip(Integer.MAX_VALUE);
+                    final int numLines = lineNumberReader.getLineNumber() + 1;
+                    lineNumberReader.close();
 
-                deleteAllExistingData();
+                    // Need to recreate the InputStream and BufferedReader after closing LineNumberReader
+                    final InputStream inputStream = contentResolver.openInputStream(params[0]);
 
-                // Need to recreate the InputStream and BufferedReader after closing LineNumberReader
-                reader = new BufferedReader(new InputStreamReader(contentResolver.openInputStream(params[0])));
+                    if (inputStream != null) {
+                        // Only delete all existing data if we are sure we have an input stream
+                        deleteAllExistingData();
 
-                String line = reader.readLine();
-                headers = line.split(",");
+                        reader = new BufferedReader(new InputStreamReader(inputStream));
 
-                int i = 0;
+                        String line = reader.readLine();
+                        headers = line.split(",");
 
-                do {
-                    if (!isCancelled()) {
-                        line = reader.readLine();
+                        int i = 0;
 
-                        if (!TextUtils.isEmpty(line)) {
-                            restoreLine(line);
-                        }
+                        do {
+                            if (!isCancelled()) {
+                                line = reader.readLine();
 
-                        publishProgress(++i, numLines);
+                                if (!TextUtils.isEmpty(line)) {
+                                    restoreLine(line);
+                                }
+
+                                publishProgress(++i, numLines);
+                            }
+                        } while (line != null);
+
+                        reader.close();
+                        restoreInputStream.close();
                     }
-                } while (line != null);
 
-                reader.close();
-                restoreInputStream.close();
-
-                return !isCancelled();
+                    return !isCancelled();
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -112,17 +111,20 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
         try {
             final String[] values = line.split(",");
-            final Day day = Day.createDayIfDoesNotExist(values[0]);
 
-            // Start at 1 to skip the first header column which is "Date" and not a food
-            for (int j = 1; j < headers.length; j++) {
-                final Integer numServings = Integer.valueOf(values[j]);
-                if (numServings > 0) {
-                    Servings.createServingsIfDoesNotExist(day, getFoodByName(headers[j]), numServings);
+            if (values.length > 0) {
+                final Day day = Day.createDayIfDoesNotExist(values[0]);
+
+                // Start at 1 to skip the first header column which is "Date" and not a food
+                for (int j = 1; j < headers.length; j++) {
+                    final Integer numServings = Integer.valueOf(values[j]);
+                    if (numServings > 0) {
+                        Servings.createServingsIfDoesNotExist(day, getFoodByName(headers[j]), numServings);
+                    }
                 }
-            }
 
-            ActiveAndroid.setTransactionSuccessful();
+                ActiveAndroid.setTransactionSuccessful();
+            }
         } catch (InvalidDateException e) {
             Log.e(TAG, "restoreLine: ", e);
         } finally {
@@ -132,7 +134,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
     private Food getFoodByName(String foodName) {
         if (!foodLookup.containsKey(foodName)) {
-            foodLookup.put(foodName, Food.getByName(foodName));
+            foodLookup.put(foodName, Food.getByNameOrIdName(foodName));
         }
 
         return foodLookup.get(foodName);
@@ -151,11 +153,6 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     @Override
     protected void onPostExecute(Boolean success) {
         super.onPostExecute(success);
-
-        Common.showToast(getContext(), success ? R.string.restore_success : R.string.restore_failed);
-
-        if (listener != null) {
-            listener.onRestoreComplete(success);
-        }
+        Bus.restoreCompleteEvent(success);
     }
 }

@@ -10,11 +10,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.TypedValue;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.Toast;
 
 public class Common {
@@ -25,22 +21,6 @@ public class Common {
 
     private Common() {
         // hide constructor
-    }
-
-    public static void fullyExpandList(final ListView list) {
-        list.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, getListViewHeight(list)));
-    }
-
-    private static int getListViewHeight(final ListView list) {
-        final Adapter adapter = list.getAdapter();
-        final int count = adapter.getCount();
-
-        list.measure(
-                View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED),
-                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-
-        // The (count - 1) hides the final list item divider
-        return list.getMeasuredHeight() * count + ((count - 1) * list.getDividerHeight());
     }
 
     public static void showNotImplementedYet(final Context context) {
@@ -68,7 +48,11 @@ public class Common {
     }
 
     public static void openUrlInExternalBrowser(final Context context, final String url) {
-        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        try {
+            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        } catch (ActivityNotFoundException e) {
+            showToast(context, R.string.error_cannot_handle_url);
+        }
     }
 
     public static void askUserToRateApp(final Context context) {
@@ -114,16 +98,21 @@ public class Common {
     }
 
     // This method is for loading images in a way that protects against crashes due to OutOfMemoryErrors
-    public static void loadImage(final Context context, final ImageView imageView, final int imageId) {
-        try {
-            imageView.setImageDrawable(ContextCompat.getDrawable(context, imageId));
-        } catch (OutOfMemoryError e) {
-            imageView.setVisibility(View.GONE);
+    public static boolean loadImage(final Context context, final ImageView imageView, final Integer imageId) {
+        if (imageId != null) {
+            try {
+                imageView.setImageDrawable(ContextCompat.getDrawable(context, imageId));
+                return true;
+            } catch (OutOfMemoryError e) {
+                imageView.setVisibility(View.GONE);
+            }
         }
+
+        return false;
     }
 
     @ColorInt
     public static int getListItemColorForPosition(final Context context, final int position) {
-        return ContextCompat.getColor(context,position % 2 == 0 ? android.R.color.white : R.color.gray_light);
+        return ContextCompat.getColor(context, position % 2 == 0 ? android.R.color.white : R.color.gray_light);
     }
 }
