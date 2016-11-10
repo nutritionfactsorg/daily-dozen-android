@@ -1,6 +1,6 @@
 package org.nutritionfacts.dailydozen.model;
 
-import android.util.Log;
+import android.text.TextUtils;
 
 import com.activeandroid.ActiveAndroid;
 import com.activeandroid.Model;
@@ -14,8 +14,6 @@ import hugo.weaving.DebugLog;
 
 @Table(name = "foods")
 public class Food extends Model {
-    private static final String TAG = Food.class.getSimpleName();
-
     @Column(name = "name", index = true)
     private String name;
 
@@ -29,8 +27,16 @@ public class Food extends Model {
         return name;
     }
 
-    public String getIdName() {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String getIdName() {
         return idName;
+    }
+
+    private void setIdName(String idName) {
+        this.idName = idName;
     }
 
     public int getRecommendedServings() {
@@ -40,8 +46,9 @@ public class Food extends Model {
     public Food() {
     }
 
-    public Food(String name, int recommendedServings) {
+    public Food(String name, String foodIdName, int recommendedServings) {
         this.name = name;
+        this.idName = foodIdName;
         this.recommendedServings = recommendedServings;
     }
 
@@ -51,12 +58,14 @@ public class Food extends Model {
     }
 
     @DebugLog
-    public static void ensureAllFoodsExistInDatabase(final String[] foodNames, final int[] recommendedServings) {
+    public static void ensureAllFoodsExistInDatabase(final String[] foodNames,
+                                                     final String[] foodIdNames,
+                                                     final int[] recommendedServings) {
         ActiveAndroid.beginTransaction();
 
         try {
             for (int i = 0; i < foodNames.length; i++) {
-                createFoodIfDoesNotExist(foodNames[i], recommendedServings[i]);
+                createFoodIfDoesNotExist(foodNames[i], foodIdNames[i], recommendedServings[i]);
             }
 
             ActiveAndroid.setTransactionSuccessful();
@@ -73,16 +82,35 @@ public class Food extends Model {
         return new Select().from(Food.class).where("name = ?", foodName).executeSingle();
     }
 
-    private static boolean exists(String foodName) {
-        return getByName(foodName) != null;
+    private static Food getByIdName(final String idName) {
+        return new Select().from(Food.class)
+                .where("id_name = ?", idName)
+                .or("name = ?", idName)
+                .executeSingle();
     }
 
-    public static void createFoodIfDoesNotExist(final String foodName, final int recommendedServings) {
-        if (!exists(foodName)) {
-            final Food food = new Food(foodName, recommendedServings);
-            food.save();
+    private static void createFoodIfDoesNotExist(final String foodName,
+                                                 final String idName,
+                                                 final int recommendedServings) {
+        boolean needToSave = false;
 
-            Log.d(TAG, String.format("Created %s", food));
+        Food food = getByIdName(idName);
+
+        if (food == null) {
+            food = new Food(foodName, idName, recommendedServings);
+            needToSave = true;
+        } else if (TextUtils.isEmpty(food.getIdName())) {
+            food.setIdName(idName);
+            needToSave = true;
+        }
+
+        if (!food.getName().equalsIgnoreCase(foodName)) {
+            food.setName(foodName);
+            needToSave = true;
+        }
+
+        if (needToSave) {
+            food.save();
         }
     }
 

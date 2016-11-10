@@ -32,6 +32,7 @@ public class DailyDozenApplication extends Application {
     private void ensureAllFoodsExistInDatabase() {
         Food.ensureAllFoodsExistInDatabase(
                 getResources().getStringArray(R.array.food_names),
+                getResources().getStringArray(R.array.food_id_names),
                 getResources().getIntArray(R.array.food_quantities));
     }
 }
