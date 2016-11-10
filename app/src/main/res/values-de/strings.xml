@@ -88,6 +88,7 @@
     <string name="daily_servings_history">Tägliche Portionen Historie</string>
     <string name="debug_clear_data_message">Dies löscht alle eingegebenen Portionen. Möchtest du fortfahren?</string>
     <string name="dialog_no_email_apps_message">Das Sichern deiner Daten erfordert, dass du eine E-Mail-App installiert hast, damit die CSV-Backup-Datei per E-Mail versendet werden kann. Bitte installiere eine E-Mail-App und versuche es erneut.</string>
+    <string name="error_cannot_handle_url">URL konnte nicht geöffnet werden. Bitte installieren Sie einen Browser.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

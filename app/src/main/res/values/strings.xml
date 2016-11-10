@@ -109,7 +109,7 @@
     NOTE: These strings should never be translated from English
     These strings are used as the canonical names for the different foods and make it easy to switch between languages
     -->
-    <string-array name="food_id_names">
+    <string-array name="food_id_names" translatable="false">
         <item>Beans</item>
         <item>Berries</item>
         <item>Other Fruits</item>
@@ -538,7 +538,7 @@
     <string name="food_info_videos_exercise">exercise</string>
     <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
 
-    <string-array name="food_videos_beans">
+    <string-array name="food_videos_beans" translatable="false">
         <item>black-beans</item>
         <item></item>
         <item></item>
@@ -558,7 +558,7 @@
         <item>tempeh</item>
     </string-array>
 
-    <string-array name="food_videos_berries">
+    <string-array name="food_videos_berries" translatable="false">
         <item>acai-berries</item>
         <item>barberries</item>
         <item>blackberries</item>
@@ -573,7 +573,7 @@
         <item>strawberries</item>
     </string-array>
 
-    <string-array name="food_videos_other_fruits">
+    <string-array name="food_videos_other_fruits" translatable="false">
         <item>apples</item>
         <item>apricots</item>
         <item>avocados</item>
@@ -604,7 +604,7 @@
         <item>watermelon</item>
     </string-array>
 
-    <string-array name="food_videos_cruciferous_vegetables">
+    <string-array name="food_videos_cruciferous_vegetables" translatable="false">
         <item></item>
         <item>bok-choy</item>
         <item>broccoli</item>
@@ -620,7 +620,7 @@
         <item>watercress</item>
     </string-array>
 
-    <string-array name="food_videos_greens">
+    <string-array name="food_videos_greens" translatable="false">
         <item></item>
         <item>beet-greens</item>
         <item>collard-greens</item>
@@ -633,7 +633,7 @@
         <item>turnips</item>
     </string-array>
 
-    <string-array name="food_videos_other_vegetables">
+    <string-array name="food_videos_other_vegetables" translatable="false">
         <item>artichokes</item>
         <item>asparagus</item>
         <item>beets</item>
@@ -654,7 +654,7 @@
         <item>zucchini</item>
     </string-array>
 
-    <string-array name="food_videos_nuts">
+    <string-array name="food_videos_nuts" translatable="false">
         <item>almonds</item>
         <item>brazil-nuts</item>
         <item>cashews</item>
@@ -670,7 +670,7 @@
         <item>walnuts</item>
     </string-array>
 
-    <string-array name="food_videos_spices">
+    <string-array name="food_videos_spices" translatable="false">
         <item>allspice</item>
         <item>barberries</item>
         <item>basil</item>
@@ -705,7 +705,7 @@
         <item></item>
     </string-array>
 
-    <string-array name="food_videos_whole_grains">
+    <string-array name="food_videos_whole_grains" translatable="false">
         <item>barley</item>
         <item>rice</item>
         <item>buckwheat</item>
@@ -719,7 +719,7 @@
         <item>rice</item>
     </string-array>
 
-    <string-array name="food_videos_beverages">
+    <string-array name="food_videos_beverages" translatable="false">
         <item>black-tea</item>
         <item>chai-tea</item>
         <item>chamomile-tea</item>
