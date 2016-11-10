@@ -335,6 +335,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Subscribe
     public void onEvent(RestoreCompleteEvent event) {
+        Common.showToast(this, event.isSuccess() ? R.string.restore_success : R.string.restore_failed);
+
         if (event.isSuccess()) {
             initDatePager();
         }

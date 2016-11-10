@@ -9,7 +9,6 @@ import android.util.Log;
 
 import com.activeandroid.ActiveAndroid;
 
-import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
@@ -135,7 +134,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
     private Food getFoodByName(String foodName) {
         if (!foodLookup.containsKey(foodName)) {
-            foodLookup.put(foodName, Food.getByName(foodName));
+            foodLookup.put(foodName, Food.getByNameOrIdName(foodName));
         }
 
         return foodLookup.get(foodName);
@@ -154,9 +153,6 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     @Override
     protected void onPostExecute(Boolean success) {
         super.onPostExecute(success);
-
-        Common.showToast(getContext(), success ? R.string.restore_success : R.string.restore_failed);
-
         Bus.restoreCompleteEvent(success);
     }
 }
