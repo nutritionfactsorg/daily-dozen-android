@@ -45,6 +45,13 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
+###Version 11
+- Added German translation - thanks to github contributor MovGP0
+- Improved CheckBox functionality - thanks to github contributor notmypassword
+- Fixed swapped images - thanks to github contributor myang310
+- Fixed bug where last CheckBox for Beverages was hidden on devices with small screens
+- Fixed a few minor crashes
+
 ###Version 10
 - Added links to videos on nutritionfacts.org. These links are for overall food groups like beans and greens, but also for specific foods like chickpeas and spinach.
 - Fixed bug where update reminder alarm was not being set when the device restarted.
