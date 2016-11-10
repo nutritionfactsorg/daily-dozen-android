@@ -46,9 +46,9 @@ Updates
 -------
 
 ###Version 11
-- Added German translation - thanks to github contributor MovGP0
-- Improved CheckBox functionality - thanks to github contributor notmypassword
-- Fixed swapped images - thanks to github contributor myang310
+- Added German translation - thanks to contributor [MovGP0](https://github.com/MovGP0)
+- Improved CheckBox functionality - thanks to contributor [notmypassword](https://github.com/notmypassword)
+- Fixed swapped images - thanks to contributor [myang310](https://github.com/myang310)
 - Fixed bug where last CheckBox for Beverages was hidden on devices with small screens
 - Fixed a few minor crashes
 
