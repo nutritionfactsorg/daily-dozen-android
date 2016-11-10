@@ -100,7 +100,7 @@ public class FoodServings extends LinearLayout {
         }
     }
 
-    @OnClick(R.id.food_name)
+    @OnClick({R.id.food_icon, R.id.food_name})
     public void onFoodNameClicked() {
         getContext().startActivity(createFoodIntent(FoodInfoActivity.class, food));
     }
