@@ -106,6 +106,23 @@
     <string name="videos">Videos</string>
 
     <!--
+    NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
+    must not be translated.
+    -->
+    <string name="food_info_videos_beans" translatable="false">beans</string>
+    <string name="food_info_videos_berries" translatable="false">berries</string>
+    <string name="food_info_videos_fruits" translatable="false">fruit</string>
+    <string name="food_info_videos_cruciferous" translatable="false">cruciferous-vegetables</string>
+    <string name="food_info_videos_greens" translatable="false">greens</string>
+    <string name="food_info_videos_vegetables" translatable="false">vegetables</string>
+    <string name="food_info_videos_flaxseeds" translatable="false">flax-seeds</string>
+    <string name="food_info_videos_nuts" translatable="false">nuts</string>
+    <string name="food_info_videos_spices" translatable="false">spices</string>
+    <string name="food_info_videos_whole_grains" translatable="false">grains</string>
+    <string name="food_info_videos_beverages" translatable="false">beverages</string>
+    <string name="food_info_videos_exercise" translatable="false">exercise</string>
+
+    <!--
     NOTE: These strings should never be translated from English
     These strings are used as the canonical names for the different foods and make it easy to switch between languages
     -->
@@ -524,18 +541,6 @@
         <item>40 minutes of vigorous-intensity activity</item>
     </string-array>
 
-    <string name="food_info_videos_beans">beans</string>
-    <string name="food_info_videos_berries">berries</string>
-    <string name="food_info_videos_fruits">fruit</string>
-    <string name="food_info_videos_cruciferous">cruciferous-vegetables</string>
-    <string name="food_info_videos_greens">greens</string>
-    <string name="food_info_videos_vegetables">vegetables</string>
-    <string name="food_info_videos_flaxseeds">flax-seeds</string>
-    <string name="food_info_videos_nuts">nuts</string>
-    <string name="food_info_videos_spices">spices</string>
-    <string name="food_info_videos_whole_grains">grains</string>
-    <string name="food_info_videos_beverages">beverages</string>
-    <string name="food_info_videos_exercise">exercise</string>
     <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
 
     <string-array name="food_videos_beans" translatable="false">
