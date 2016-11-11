@@ -476,38 +476,38 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>1/4 cup of hummus or bean dip</item>,
-        <item>1/2 cup cooked beans, split peas, lentils, tofu, or tempeh</item>,
+        <item>¼ cup of hummus or bean dip</item>,
+        <item>½ cup cooked beans, split peas, lentils, tofu, or tempeh</item>,
         <item>1 cup of fresh peas or sprouted lentils</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>1/2 cup fresh or frozen</item>
-        <item>1/4 cup dried</item>
+        <item>½ cup fresh or frozen</item>
+        <item>¼ cup dried</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
         <item>1 medium-sized fruit</item>
         <item>1 cup cut-up fruit</item>
-        <item>1/4 cup dried fruit</item>
+        <item>¼ cup dried fruit</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>1/2 cup chopped</item>
-        <item>1/4 cup Brussels or broccoli sprouts</item>
+        <item>½ cup chopped</item>
+        <item>¼ cup Brussels or broccoli sprouts</item>
         <item>1 tablespoon horseradish</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
         <item>1 cup raw</item>
-        <item>1/2 cup cooked</item>
+        <item>½ cup cooked</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
         <item>1 cup raw leafy vegetables</item>
-        <item>1/2 cup raw or cooked nonleafy vegetables</item>
-        <item>1/2 cup vegetable juice</item>
-        <item>1/4 cup dried mushrooms</item>
+        <item>½ cup raw or cooked nonleafy vegetables</item>
+        <item>½ cup vegetable juice</item>
+        <item>¼ cup dried mushrooms</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
@@ -515,20 +515,20 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
-        <item>1/4 cup nuts or seeds</item>
+        <item>¼ cup nuts or seeds</item>
         <item>2 tablespoons nut or seed butter</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
-        <item>1/4 teaspoon of turmeric</item>
+        <item>¼ teaspoon of turmeric</item>
         <item>Any other (salt-free) herbs and spices you enjoy</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>1/2 cup hot cereal or cooked grains, pasta, or corn kernels</item>
+        <item>½ cup hot cereal or cooked grains, pasta, or corn kernels</item>
         <item>1 cup cold cereal</item>
         <item>1 tortilla or slice of bread</item>
-        <item>1/2 a bagel or english muffin</item>
+        <item>½ a bagel or english muffin</item>
         <item>3 cups popped popcorn</item>
     </string-array>
 
