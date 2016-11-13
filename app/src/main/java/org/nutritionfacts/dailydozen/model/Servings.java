@@ -7,6 +7,7 @@ import android.util.Log;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
+import com.activeandroid.util.SQLiteUtils;
 
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
@@ -127,14 +128,13 @@ public class Servings extends TruncatableModel {
         return servings;
     }
 
-    // TODO: Can this be refactored to perform only a single query instead of a max of 12?
     public static int getTotalServingsOnDate(final Day day) {
         int numServings = 0;
 
         if (day != null && day.getId() != null) {
-            for (Servings serving : getServingsOnDate(day)) {
-                numServings += serving.getServings();
-            }
+            numServings = SQLiteUtils.intQuery(
+                    "SELECT SUM(s.servings) FROM servings s WHERE s.date_id = ?",
+                    new String[]{day.getId().toString()});
         }
 
         return numServings;
