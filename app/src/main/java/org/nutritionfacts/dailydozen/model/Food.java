@@ -31,7 +31,7 @@ public class Food extends Model {
         this.name = name;
     }
 
-    private String getIdName() {
+    public String getIdName() {
         return idName;
     }
 

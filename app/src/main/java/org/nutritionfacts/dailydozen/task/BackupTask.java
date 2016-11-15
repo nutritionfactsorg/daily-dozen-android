@@ -111,7 +111,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         final StringBuilder headers = new StringBuilder("Date");
 
         for (Food food : allFoods) {
-            headers.append(String.format(",%s", food.getName()));
+            headers.append(String.format(",%s", food.getIdName()));
         }
 
         return headers.toString();
