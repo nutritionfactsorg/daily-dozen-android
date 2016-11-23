@@ -7,13 +7,25 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import org.nutritionfacts.dailydozen.fragment.DateFragment;
 import org.nutritionfacts.dailydozen.model.Day;
 
+import hirondelle.date4j.DateTime;
+
 public class DatePagerAdapter extends FragmentStatePagerAdapter {
     private int numDaysSinceEpoch;
+    public int numDaysSinceEpochToDay;
 
     public DatePagerAdapter(FragmentManager fm) {
         super(fm);
-
+        setDates(Day.getNumDaysSinceEpoch());
+    }
+    
+    public DatePagerAdapter(FragmentManager fm, DateTime dt) {
+        super(fm);
+        setDates(Day.getNumDaysSinceEpoch(dt));
+    }
+    
+    private void setDates(int days){
         numDaysSinceEpoch = Day.getNumDaysSinceEpoch();
+        numDaysSinceEpochToDay = days;
     }
 
     @Override

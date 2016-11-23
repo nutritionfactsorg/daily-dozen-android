@@ -42,6 +42,7 @@ import java.io.File;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import hirondelle.date4j.DateTime;
 public class MainActivity extends AppCompatActivity {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
@@ -59,18 +60,18 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean alreadyHandledRestoreIntent;
 
+    private DateTime dateToOpen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        handleIntentIfNecessary();
         initDatePager();
         initDatePagerIndicator();
 
         calculateStreaksAfterDatabaseUpgradeToV2();
-
-        handleIntentIfNecessary();
     }
 
     private void handleIntentIfNecessary() {
@@ -83,6 +84,9 @@ public class MainActivity extends AppCompatActivity {
                 if (extras.getBoolean(Args.OPEN_NOTIFICATION_SETTINGS, false)) {
                     NotificationUtil.dismissUpdateReminderNotification(this);
                     startActivity(new Intent(this, DailyReminderSettingsActivity.class));
+                }
+                if (extras.containsKey(Args.DATE)) {
+                    dateToOpen = new DateTime(extras.getString(Args.DATE));
                 }
             }
         }
@@ -113,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         Bus.register(this);
 
+        handleIntentIfNecessary();
         // If the app is sent to the background and brought back to the foreground the next day, a crash results when
         // the adapter is found to return a different value from getCount() without notifyDataSetChanged() having been
         // called first. This is an attempt to fix that, but I am not sure that it works.
@@ -215,13 +220,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDatePager() {
-        final DatePagerAdapter datePagerAdapter = new DatePagerAdapter(getSupportFragmentManager());
+        final DatePagerAdapter datePagerAdapter = dateToOpen == null ? new DatePagerAdapter(getSupportFragmentManager()) :  new DatePagerAdapter(getSupportFragmentManager(),dateToOpen);
         datePager.setAdapter(datePagerAdapter);
 
         daysSinceEpoch = datePagerAdapter.getCount();
 
         // Go to today's date by default
-        datePager.setCurrentItem(datePagerAdapter.getCount(), false);
+        datePager.setCurrentItem(datePagerAdapter.numDaysSinceEpochToDay - 1, false);
     }
 
     private void initDatePagerIndicator() {
