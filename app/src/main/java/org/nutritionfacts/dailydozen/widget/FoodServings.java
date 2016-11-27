@@ -107,7 +107,7 @@ public class FoodServings extends LinearLayout {
 
     @OnClick(R.id.food_history)
     public void onFoodHistoryClicked() {
-        getContext().startActivity(createFoodIntent(FoodHistoryActivity.class, food));
+        getContext().startActivity(createFoodIntent(FoodHistoryActivity.class, food, day));
     }
 
     private Intent createFoodIntent(final Class<? extends AppCompatActivity> klass, final Food food) {
@@ -116,6 +116,13 @@ public class FoodServings extends LinearLayout {
         return intent;
     }
 
+    private Intent createFoodIntent(final Class<? extends AppCompatActivity> klass, final Food food, final Day day) {
+        final Intent intent = new Intent(getContext(), klass);
+        intent.putExtra(Args.FOOD_ID, food.getId());
+        intent.putExtra(Args.DATE, day.getDateTime().format("YYYY-MM-DD"));
+        return intent;
+    }
+    
     private void initCheckboxes(Servings servings) {
         foodCheckBoxes.setDay(day);
         foodCheckBoxes.setFood(food);

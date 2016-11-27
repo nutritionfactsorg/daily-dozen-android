@@ -40,6 +40,10 @@ public class DateUtil {
         return cal.get(Calendar.MONTH) + 1;
     }
 
+    public static int getDay(Calendar cal) {
+        return cal.get(Calendar.DAY_OF_MONTH);
+    }
+    
     // This method is meant to calculate a rough approximation of the number of months between a start date and now.
     // The output is meant only for showing progress when loading data from the database.
     public static int monthsSince(Calendar start) {
@@ -60,5 +64,13 @@ public class DateUtil {
 
     public static String toStringYYYYMM(Calendar cal) {
         return String.format("%s%s", getYear(cal), getMonthOneBased(cal));
+    }
+
+    public static String toStringYYYYMMDDByHyphen(Calendar cal) {
+        return String.format("%s-%s-%s", getYear(cal), twoDigit(getMonthOneBased(cal)),twoDigit(getDay(cal)));
+    }
+
+    private static String twoDigit(int dateNumber){
+        return dateNumber < 10 ? "0" + dateNumber : String.valueOf(dateNumber);
     }
 }

@@ -34,7 +34,7 @@ public class Bus {
     public static void displayLatestDate() {
         post(new DisplayDateEvent(Day.getToday()));
     }
-
+        
     public static void showExplodingStarAnimation() {
         post(new ShowExplodingStarAnimation());
     }
