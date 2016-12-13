@@ -2,7 +2,7 @@
 <resources>
 <string name="app_name">Daily Dozen</string>
 
-<string name="beans">Haricots</string>
+<string name="beans">Légumineuses</string>
 <string name="berries">Baies</string>
 <string name="other_fruits">Autres fruits</string>
 <string name="cruciferous_vegetables">Crucifères</string>
