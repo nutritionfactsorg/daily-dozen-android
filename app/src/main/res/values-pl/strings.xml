@@ -249,34 +249,34 @@
     </string-array>
 
     <string-array name="food_info_types_other_fruits">
-        <item>Apples</item>
-        <item>Dried apricots</item>
-        <item>Avocados</item>
-        <item>Bananas</item>
-        <item>Cantaloupe</item>
-        <item>Clementines</item>
-        <item>Dates</item>
-        <item>Dried figs</item>
-        <item>Grapefruit</item>
-        <item>Honeydew</item>
-        <item>Kiwifruit</item>
-        <item>Lemons</item>
-        <item>Limes</item>
-        <item>Lychees</item>
-        <item>Mangos</item>
-        <item>Nectarines</item>
-        <item>Oranges</item>
-        <item>Papaya</item>
-        <item>Passion fruit</item>
-        <item>Peaches</item>
-        <item>Pears</item>
-        <item>Pineapple</item>
-        <item>Plums (especially black plums)</item>
-        <item>Pluots</item>
-        <item>Pomegranates</item>
-        <item>Prunes</item>
-        <item>Tangerines</item>
-        <item>Watermelon</item>
+        <item>Jabłka</item>
+        <item>Morele suszone</item>
+        <item>Awokada</item>
+        <item>Banany</item>
+        <item>Kantalupa</item>
+        <item>Mandarynki</item>
+        <item>Daktyle</item>
+        <item>Figi suszone</item>
+        <item>Grejfruty</item>
+        <item>Melon miodowy</item>
+        <item>Kiwi</item>
+        <item>Cytryny</item>
+        <item>Limonki</item>
+        <item>Liczi</item>
+        <item>Mango</item>
+        <item>Nektarynki</item>
+        <item>Pomarańcze</item>
+        <item>Papaje</item>
+        <item>Męczennica jadalna</item>
+        <item>Brzoskwinie</item>
+        <item>Gruszki</item>
+        <item>Ananasy</item>
+        <item>Śliwki (zwłaszcza czarne śliwki)</item>
+        <item>Śliwa(ang. Pluots)</item>
+        <item>Granat właściwy</item>
+        <item>Śliwki suszone</item>
+        <item>Mandarynki(ang. tangerine)</item>
+        <item>Arbuz</item>
     </string-array>
 
     <string-array name="food_info_types_cruciferous_vegetables">
