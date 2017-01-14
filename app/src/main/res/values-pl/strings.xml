@@ -234,18 +234,18 @@
     </string-array>
 
     <string-array name="food_info_types_berries">
-        <item>Euterpa warzywna</item>
         <item>Berberys</item>
+        <item>Euterpa warzywna</item>
         <item>Jeżyna bezkolcowa</item>
         <item>Jagody</item>
-        <item>Wiśnie (słodkie lub kwaśne)</item>
         <item>Concord (coś jak winorośl)</item>
+        <item>Jagody goji</item>
+        <item>Kumkwat</item>
+        <item>Morwy</item>
+        <item>Maliny (Czarna lub czerwona)</item>
+        <item>truskawki</item>
+        <item>Wiśnie (słodkie lub kwaśne)</item>
         <item>Żurawina</item>
-        <item>Goji berries</item>
-        <item>Kumquats</item>
-        <item>Mulberries</item>
-        <item>Raspberries (black or red)</item>
-        <item>Strawberries</item>
     </string-array>
 
     <string-array name="food_info_types_other_fruits">
@@ -280,7 +280,7 @@
     </string-array>
 
     <string-array name="food_info_types_cruciferous_vegetables">
-        <item>Arugula</item>
+        <item>Rukola</item>
         <item>Bok choy</item>
         <item>Broccoli</item>
         <item>Brussels sprouts</item>
