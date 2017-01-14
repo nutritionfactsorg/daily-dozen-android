@@ -234,13 +234,13 @@
     </string-array>
 
     <string-array name="food_info_types_berries">
-        <item>Acai berries</item>
-        <item>Barberries</item>
-        <item>Blackberries</item>
-        <item>Blueberries</item>
-        <item>Cherries (sweet or tart)</item>
-        <item>Concord grapes</item>
-        <item>Cranberries</item>
+        <item>Euterpa warzywna</item>
+        <item>Berberys</item>
+        <item>Jeżyna bezkolcowa</item>
+        <item>Jagody</item>
+        <item>Wiśnie (słodkie lub kwaśne)</item>
+        <item>Concord (coś jak winorośl)</item>
+        <item>Żurawina</item>
         <item>Goji berries</item>
         <item>Kumquats</item>
         <item>Mulberries</item>
