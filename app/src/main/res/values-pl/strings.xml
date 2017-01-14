@@ -579,34 +579,34 @@
     </string-array>
 
     <string-array name="food_videos_other_fruits" translatable="false">
-        <item>apples</item>
+        <item>Jabłka</item>
         <item>apricots</item>
-        <item>avocados</item>
-        <item>bananas</item>
-        <item>cantaloupe</item>
+        <item>awokada</item>
+        <item>banany</item>
+        <item>kantalupy</item>
         <item></item>
-        <item>dates</item>
-        <item>figs</item>
-        <item>grapefruit</item>
+        <item>daktyle</item>
+        <item>figi</item>
+        <item>grejfruty</item>
         <item></item>
-        <item>kiwifruit</item>
-        <item>lemons</item>
-        <item>limes</item>
+        <item>kiwi</item>
+        <item>cytryny</item>
+        <item>limonki</item>
         <item></item>
         <item>mango</item>
         <item></item>
-        <item>oranges</item>
-        <item>papaya</item>
+        <item>pomarańcze</item>
+        <item>papaja</item>
         <item></item>
-        <item>peaches</item>
-        <item>pears</item>
-        <item>pineapples</item>
-        <item>plums</item>
+        <item>brzoskwinie</item>
+        <item>gruszki</item>
+        <item>ananasy</item>
+        <item>śliwki</item>
         <item></item>
-        <item>pomegranates</item>
-        <item>prunes</item>
+        <item>granaty</item>
+        <item>suszone śliwki</item>
         <item></item>
-        <item>watermelon</item>
+        <item>arbuz</item>
     </string-array>
 
     <string-array name="food_videos_cruciferous_vegetables" translatable="false">
@@ -744,5 +744,3 @@
     </string-array>
 
 </resources>
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
