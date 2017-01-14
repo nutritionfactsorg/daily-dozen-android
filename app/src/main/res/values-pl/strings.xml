@@ -214,11 +214,11 @@
     </string-array>
 
     <string-array name="food_info_types_beans">
-        <item>Black beans</item>
-        <item>Black-eyed peas</item>
-        <item>Butter beans</item>
-        <item>Cannellini beans</item>
-        <item>Chickpeas</item>
+        <item>czarna fasola</item>
+        <item>czarno nakrapiana fasola</item>
+        <item>Fasola półksiężycowata</item>
+        <item>biała fasola/fasola cannellini</item>
+        <item>Ciecierzyca pospolita</item>
         <item>Edamame</item>
         <item>English peas</item>
         <item>Garbanzo beans</item>
