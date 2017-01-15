@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Daily Dozen</string>
 
-    <string name="beans">Beans</string>
-    <string name="berries">Berries</string>
+    <string name="beans">Fasole</string>
+    <string name="berries">Drobne owoce(ang. berries)</string>
     <string name="other_fruits">Inne owoce</string>
-    <string name="cruciferous_vegetables">Cruciferous Vegetables</string>
-    <string name="greens">Greens</string>
+    <string name="cruciferous_vegetables">Kalafiorowate warzywa</string>
+    <string name="greens">Zielenina</string>
     <string name="other_vegetables">Inne warzywa</string>
     <string name="flaxseeds">Nasiona lnu</string>
     <string name="nuts">Orzechy</string>
@@ -16,12 +16,12 @@
     <string name="serving_sizes">Rozmiar porcji</string>
     <string name="types">Typy</string>
     <string name="history">Historia</string>
-    <string name="servings_some">Some servings</string>
-    <string name="servings_all">All servings</string>
-    <string name="servings">Servings</string>
-    <string name="about">About</string>
-    <string name="about_this_app">About this app</string>
-    <string name="latest_videos">Latest Videos</string>
+    <string name="servings_some">Wybrane porcje</string>
+    <string name="servings_all">Wszystkie porje</string>
+    <string name="servings">porje</string>
+    <string name="about">Informacje</string>
+    <string name="about_this_app">O tej aplikacji</string>
+    <string name="latest_videos">Najnowsze filmy</string>
     <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
     <string name="book_title" translatable="false">How Not to Die</string>
     <string name="url_book" translatable="false">http://nutritionfacts.org/book/</string>
@@ -29,7 +29,7 @@
     <string name="url_donate" translatable="false">https://nutritionfacts.org/donate/</string>
     <string name="subscribe">Zasubskrybuj</string>
     <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe/</string>
-    <string name="open_source">Open Source</string>
+    <string name="open_source">Wolne oprogramowanie</string>
     <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source/</string>
     <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
     <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
@@ -49,8 +49,8 @@
     <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
     <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
     <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
-    <string name="not_implemented_yet">Not implemented yet</string>
-    <string name="permission_needed_to_write_storage">Can\'t backup without permission to write to storage</string>
+    <string name="not_implemented_yet">Jeszcze nie zaimplementowane</string>
+    <string name="permission_needed_to_write_storage">Nie można wykonać backupu bez prawa do zapisu na danym obszarze</string>
     <string name="backup_failed">Backup nieudany</string>
     <string name="restore_failed">Przywracanie nieudane</string>
     <string name="backup_success">Backup udany</string>
@@ -61,13 +61,13 @@
     <string name="yes">Tak</string>
     <string name="no">Nie</string>
     <string name="backup">Backup</string>
-    <string name="food_info">Food Info</string>
-    <string name="food_history">Food History</string>
+    <string name="food_info">Informacja o jedzeniu</string>
+    <string name="food_history">Historia jedzenia</string>
     <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
     <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
     <string name="daily_servings_history">Daily Servings History</string>
     <string name="no_servings_recorded">You have not recorded any servings yet!</string>
-    <string name="task_backup_title">Backing up</string>
+    <string name="task_backup_title">Backupowanie</string>
     <string name="task_restore_title">Przywracanie</string>
     <string name="task_calculating_streaks_title">Calculating streaks</string>
     <string name="back_to_today">Wróć do dziś</string>
@@ -77,7 +77,7 @@
     <string name="OK">OK</string>
     <string name="dialog_streaks_title">New feature: Streaks!</string>
     <string name="dialog_streaks_message">Your database will now be upgraded to support the new streaks feature.</string>
-    <string name="dialog_no_email_apps_title">No email apps found</string>
+    <string name="dialog_no_email_apps_title">Nie znaleziono adresu email aplikacji</string>
     <string name="dialog_no_email_apps_message">Backing up your data requires you to have an email app installed so you can email the .csv backup file to yourself. Please install an email app and try again.</string>
     <string name="debug_generate_random_data">Generate random data</string>
     <string name="debug_generate_full_data">Generate full data</string>
@@ -85,7 +85,7 @@
     <string name="task_generating_random_data">Generating random data</string>
     <string name="task_loading_servings_history_title">Loading Servings History</string>
     <string name="time_scale">Time Scale</string>
-    <string name="history_to_generate">History to Generate</string>
+    <string name="history_to_generate">Historia do wygenerowania</string>
     <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
     <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
     <string name="welcome_to_my_daily_dozen">Witamy w my Daily Dozen!</string>
@@ -93,17 +93,17 @@
     <string name="dialog_ask_user_to_rate_app_title">Do you like this app?</string>
     <string name="dialog_ask_user_to_rate_app_message">Please give us feedback in the Play Store.</string>
     <string name="rate_now">Give Feedback</string>
-    <string name="not_now">Not Now</string>
+    <string name="not_now">Nie teraz</string>
     <string name="format_version" formatted="false">version %s</string>
     <string name="format_num_days" formatted="false">%s days</string>
     <string name="daily_reminder_title">Daily Dozen Reminder</string>
     <string name="daily_reminder_text">Update your servings for today</string>
     <string name="daily_reminder_settings">Daily Reminder Settings</string>
     <string name="enable_daily_reminder">Enable Daily Reminder</string>
-    <string name="remind_me_at">Remind me at</string>
-    <string name="vibrate">Vibrate</string>
-    <string name="play_sound">Play Sound</string>
-    <string name="videos">Videos</string>
+    <string name="remind_me_at">Przypomnij mi o </string>
+    <string name="vibrate">Wibracja</string>
+    <string name="play_sound">Odtwarzaj dzwięk</string>
+    <string name="videos">Filmy</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
@@ -181,7 +181,7 @@
     </integer-array>
 
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Ta aplikacja została stworzona przez Johna Slavicka.</item>
         <item />
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
         <item />
@@ -316,8 +316,8 @@
         <item>Kukurydza</item>
         <item>Czosnek</item>
         <item>Grzyby (pieczaka, boczniak, i Twardnik japoński)</item>
-        <item>Okra</item>
-        <item>Onions</item>
+        <item>Piżmian jadalny</item>
+        <item>Cebule</item>
         <item>Purple potatoes</item>
         <item>Pumpkin</item>
         <item>Sea vegetables (arame, dulse, and nori)</item>
