@@ -11,7 +11,7 @@
     <string name="nuts">Orzechy</string>
     <string name="spices">Przyprawy</string>
     <string name="whole_grains">Pełne ziarna</string>
-    <string name="beverages">Beverages</string>
+    <string name="beverages">Nawodnienie</string>
     <string name="exercise">Ćwiczenia</string>
     <string name="serving_sizes">Rozmiar porcji</string>
     <string name="types">Typy</string>
@@ -25,9 +25,9 @@
     <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
     <string name="book_title" translatable="false">How Not to Die</string>
     <string name="url_book" translatable="false">http://nutritionfacts.org/book/</string>
-    <string name="donate">Donate</string>
+    <string name="donate">Wspomóż</string>
     <string name="url_donate" translatable="false">https://nutritionfacts.org/donate/</string>
-    <string name="subscribe">Subscribe</string>
+    <string name="subscribe">Zasubskrybuj</string>
     <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe/</string>
     <string name="open_source">Open Source</string>
     <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source/</string>
@@ -51,15 +51,15 @@
     <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
     <string name="not_implemented_yet">Not implemented yet</string>
     <string name="permission_needed_to_write_storage">Can\'t backup without permission to write to storage</string>
-    <string name="backup_failed">Backup failed</string>
-    <string name="restore_failed">Restore failed</string>
-    <string name="backup_success">Backup successful</string>
-    <string name="restore_success">Restore successful</string>
-    <string name="restore_confirm_title">Restore Backup</string>
+    <string name="backup_failed">Backup nieudany</string>
+    <string name="restore_failed">Przywracanie nieudane</string>
+    <string name="backup_success">Backup udany</string>
+    <string name="restore_success">Przywracanie udane</string>
+    <string name="restore_confirm_title">Przywracanie Backup</string>
     <string name="restore_confirm_message">Any existing data will be deleted before restoring from backup. Do you wish to continue?</string>
     <string name="backup_mimetype" translatable="false">message/rfc822</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
     <string name="backup">Backup</string>
     <string name="food_info">Food Info</string>
     <string name="food_history">Food History</string>
@@ -68,11 +68,11 @@
     <string name="daily_servings_history">Daily Servings History</string>
     <string name="no_servings_recorded">You have not recorded any servings yet!</string>
     <string name="task_backup_title">Backing up</string>
-    <string name="task_restore_title">Restoring</string>
+    <string name="task_restore_title">Przywracanie</string>
     <string name="task_calculating_streaks_title">Calculating streaks</string>
-    <string name="back_to_today">Back to today</string>
+    <string name="back_to_today">Wróć do dziś</string>
     <string name="debug">Debug</string>
-    <string name="debug_clear_data">Clear all data</string>
+    <string name="debug_clear_data">Wyczyść wszystkie dane</string>
     <string name="debug_clear_data_message">This will delete all entered Servings. Do you wish to continue?</string>
     <string name="OK">OK</string>
     <string name="dialog_streaks_title">New feature: Streaks!</string>
@@ -88,7 +88,7 @@
     <string name="history_to_generate">History to Generate</string>
     <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
     <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
-    <string name="welcome_to_my_daily_dozen">Welcome to my Daily Dozen!</string>
+    <string name="welcome_to_my_daily_dozen">Witamy w my Daily Dozen!</string>
     <string name="activity_welcome_text">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.</string>
     <string name="dialog_ask_user_to_rate_app_title">Do you like this app?</string>
     <string name="dialog_ask_user_to_rate_app_message">Please give us feedback in the Play Store.</string>
@@ -199,9 +199,9 @@
     </string-array>
 
     <string-array name="servings_time_scale_choices">
-        <item>Day</item>
-        <item>Month</item>
-        <item>Year</item>
+        <item>Dzień</item>
+        <item>Miesiąc</item>
+        <item>Rok</item>
     </string-array>
 
     <string-array name="history_to_generate_choices">
@@ -329,34 +329,34 @@
     </string-array>
 
     <string-array name="food_info_types_flaxseeds">
-        <item>Brown flaxseeds</item>
-        <item>Golden flaxseeds</item>
+        <item>Len brązowy</item>
+        <item>Len złocisty(żółty)</item>
     </string-array>
 
     <string-array name="food_info_types_nuts">
-        <item>Almonds</item>
-        <item>Brazil nuts</item>
-        <item>Cashews</item>
-        <item>Chia seeds</item>
-        <item>Hazelnuts</item>
-        <item>Hemp seeds</item>
-        <item>Macadamia nuts</item>
-        <item>Pecans</item>
-        <item>Pistachios</item>
-        <item>Pumpkin seeds</item>
-        <item>Sesame seeds</item>
-        <item>Sunflower seeds</item>
-        <item>Walnuts</item>
+        <item>Migdały</item>
+        <item>Brazylijskie orzechy</item>
+        <item>Nerkowiec(Nanercz zachodni)</item>
+        <item>Szałwia hiszpańska</item>
+        <item>Orzechy laskowe</item>
+        <item>Nasiona konopi</item>
+        <item>Ozechy Makadamia</item>
+        <item>Pekany(Orzechy orzesznika jadalnego)</item>
+        <item>Pistacje</item>
+        <item>Nasiona dyni</item>
+        <item>Nasiona sezamu</item>
+        <item>Ziarna słonecznika</item>
+        <item>Orzechy włoskie</item>
     </string-array>
 
     <string-array name="food_info_types_spices">
-        <item>Allspice</item>
-        <item>Barberries</item>
-        <item>Basil</item>
-        <item>Bay leaves</item>
-        <item>Cardamom</item>
-        <item>Chili powder</item>
-        <item>Cilantro</item>
+        <item>Ziela angielskiego</item>
+        <item>Berberys</item>
+        <item>Bazylia</item>
+        <item>Liść laurowy</item>
+        <item>Kardamom</item>
+        <item>Chilli w proszku</item>
+        <item>Kolendra</item>
         <item>Cinnamon</item>
         <item>Cloves</item>
         <item>Coriander</item>
