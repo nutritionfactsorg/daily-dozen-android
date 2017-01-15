@@ -3,12 +3,12 @@
 
     <string name="beans">Beans</string>
     <string name="berries">Berries</string>
-    <string name="other_fruits">Other Fruits</string>
+    <string name="other_fruits">Inne owoce</string>
     <string name="cruciferous_vegetables">Cruciferous Vegetables</string>
     <string name="greens">Greens</string>
     <string name="other_vegetables">Other Vegetables</string>
     <string name="flaxseeds">Flaxseeds</string>
-    <string name="nuts">Nuts</string>
+    <string name="nuts">Orzechy</string>
     <string name="spices">Spices</string>
     <string name="whole_grains">Whole Grains</string>
     <string name="beverages">Beverages</string>
@@ -280,31 +280,31 @@
 
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Rukola</item>
-        <item>Bok choy</item>
-        <item>Broccoli</item>
-        <item>Brussels sprouts</item>
-        <item>Cabbage</item>
-        <item>Cauliflower</item>
-        <item>Collard greens</item>
-        <item>Horseradish</item>
-        <item>Kale (black, green, and red)</item>
-        <item>Mustard greens</item>
-        <item>Radishes</item>
-        <item>Turnip greens</item>
-        <item>Watercress</item>
+        <item>Kapusta właściwa chińska</item>
+        <item>Brokuły</item>
+        <item>Brukselka (Kapusta warzywna brukselska)</item>
+        <item>Kapusta biała(Kapusta warzywna głowiasta)</item>
+        <item>Kalafior</item>
+        <item>Kapusta pastewna</item>
+        <item>Chrzan pospolity</item>
+        <item>Jarmuż (czarny, zielony, i czerwony)</item>
+        <item>Kapusta sitowata(nie często)</item>
+        <item>Rzodkiew zwyczajna</item>
+        <item>Zielenina z rzepy</item>
+        <item>Rukiew wodna</item>
     </string-array>
 
     <string-array name="food_info_types_greens">
-        <item>Arugula</item>
-        <item>Beet greens</item>
-        <item>Collard greens</item>
-        <item>Kale (black, green, and red)</item>
-        <item>Mesclun mix (assorted young salad greens)</item>
-        <item>Mustard greens</item>
-        <item>Sorrel</item>
-        <item>Spinach</item>
-        <item>Swiss chard</item>
-        <item>Turnip greens</item>
+        <item>Rukola</item>
+        <item>Zielenina z buraka</item>
+        <item>Kapusta pastewna</item>
+        <item>Jarmuż (czarny, zielony, i czerwony)</item>
+        <item>Mix sałat (mieszanina młodych zielonych sałat)</item>
+        <item>Kapusta sitowata(nie często)</item>
+        <item>Szczaw zwyczajny</item>
+        <item>Szpinak</item>
+        <item>Boćwina (Burak liściowy)</item>
+        <item>Zielenina z rzepy</item>
     </string-array>
 
     <string-array name="food_info_types_other_vegetables">
