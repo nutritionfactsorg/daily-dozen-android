@@ -11,7 +11,7 @@
     <string name="nuts">Orzechy</string>
     <string name="spices">Przyprawy</string>
     <string name="whole_grains">Pełne ziarna</string>
-    <string name="beverages">Nawodnienie</string>
+    <string name="beverages">Napoje</string>
     <string name="exercise">Ćwiczenia</string>
     <string name="serving_sizes">Rozmiar porcji</string>
     <string name="types">Typy</string>
@@ -399,14 +399,14 @@
     </string-array>
 
     <string-array name="food_info_types_beverages">
-        <item>Black tea</item>
+        <item>Herbata czarna</item>
         <item>Chai tea</item>
         <item>Vanilla chamomile tea</item>
-        <item>Coffee</item>
-        <item>Earl grey tea</item>
-        <item>Green tea</item>
+        <item>Kawa</item>
+        <item>Earl grey herbata</item>
+        <item>Zielona herbata</item>
         <item>Hibiscus tea</item>
-        <item>Hot chocolate</item>
+        <item>Gorąca czekolada</item>
         <item>Jasmine tea</item>
         <item>Lemon balm tea</item>
         <item>Matcha tea</item>
@@ -418,28 +418,28 @@
     </string-array>
 
     <string-array name="food_info_types_exercise">
-        <item>Bicycling</item>
-        <item>Canoeing</item>
-        <item>Dancing</item>
-        <item>Dodgeball</item>
-        <item>Downhill skiing</item>
-        <item>Fencing</item>
-        <item>Hiking</item>
-        <item>Housework</item>
-        <item>Ice-skating</item>
-        <item>Inline skating</item>
-        <item>Juggling</item>
-        <item>Jumping on a trampoline</item>
-        <item>Paddle boating</item>
-        <item>Playing frisbee</item>
-        <item>Roller-skating</item>
+        <item>Jazda na rowerze</item>
+        <item>Kajakarstwo</item>
+        <item>Tańczenie</item>
+        <item>Dwa ognie</item>
+        <item>Jazda na nartach (Downhill)</item>
+        <item>Szermierka</item>
+        <item>Wspinaczka</item>
+        <item>Prace domowe(sprzątanie)</item>
+        <item>Jazda na lodzie</item>
+        <item>Jazda na rolkach</item>
+        <item>Żąglowanie</item>
+        <item>Skakanie na trampolinie</item>
+        <item>Jazda rowerem wodnym</item>
+        <item>Frisbee</item>
+        <item>Jazda na wrotkach</item>
         <item>Shooting baskets</item>
         <item>Shoveling light snow</item>
         <item>Skateboarding</item>
         <item>Snorkeling</item>
-        <item>Surfing</item>
+        <item>Serfing</item>
         <item>Swimming recreationally</item>
-        <item>Tennis (doubles)</item>
+        <item>Tenis (debel)</item>
         <item>Treading water</item>
         <item>Walking briskly (4 mph)</item>
         <item>Water aerobics</item>
@@ -447,25 +447,25 @@
         <item>Yard work</item>
         <item>Yoga</item>
         <item>Backpacking</item>
-        <item>Basketball</item>
+        <item>Koszykówka</item>
         <item>Bicycling uphill</item>
         <item>Circuit weight training</item>
         <item>Cross-country skiing</item>
-        <item>Football</item>
-        <item>Hockey</item>
+        <item>Futbol Amerykański</item>
+        <item>Hokej</item>
         <item>Jogging</item>
         <item>Jumping jacks</item>
         <item>Jumping rope</item>
         <item>Lacrosse</item>
-        <item>Push-ups</item>
-        <item>Pull-ups</item>
+        <item>Pompki</item>
+        <item>Podciąganie się</item>
         <item>Racquetball</item>
-        <item>Rock climbing</item>
+        <item>Wspinaczka</item>
         <item>Rugby</item>
-        <item>Running</item>
+        <item>Bieganie</item>
         <item>Scuba diving</item>
-        <item>Tennis (singles)</item>
-        <item>Soccer</item>
+        <item>Tenis (singiel)</item>
+        <item>Piłka nożna</item>
         <item>Speed skating</item>
         <item>Squash</item>
         <item>Step aerobics</item>
@@ -475,26 +475,26 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>¼ cup of hummus or bean dip</item>,
-        <item>½ cup cooked beans, split peas, lentils, tofu, or tempeh</item>,
-        <item>1 cup of fresh peas or sprouted lentils</item>
+        <item>¼ szklanki humusu lub dipu(fasolowgo)</item>,
+        <item>½ szklanki gotowanych fasol, zmiksowanego grochu, soczewicy, tofu, lub tempeh</item>,
+        <item>1 szklanka świeżego grochu lub kiełkującej soczewicy</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>½ cup fresh or frozen</item>
-        <item>¼ cup dried</item>
+        <item>½ szklanki świeżych lub zamrożonych</item>
+        <item>¼ szklanki suszonych</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>1 medium-sized fruit</item>
-        <item>1 cup cut-up fruit</item>
-        <item>¼ cup dried fruit</item>
+        <item>1 średniej wielkości owoc</item>
+        <item>1 szklanka pociętych owoców</item>
+        <item>¼ szklanki suszonych owoców</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>½ cup chopped</item>
-        <item>¼ cup Brussels or broccoli sprouts</item>
-        <item>1 tablespoon horseradish</item>
+        <item>½ szklanki rozdrobnionego</item>
+        <item>¼ szklanki Brukselki lub kiełków brokułów</item>
+        <item>1 łyżka stołowa chrzanu</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
