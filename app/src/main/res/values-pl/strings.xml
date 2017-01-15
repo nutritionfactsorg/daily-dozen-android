@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Daily Dozen</string>
+    <string name="app_name">Dzienna dwunastka</string>
 
     <string name="beans">Fasole</string>
     <string name="berries">Drobne owoce(ang. berries)</string>
@@ -357,31 +357,31 @@
         <item>Kardamom</item>
         <item>Chilli w proszku</item>
         <item>Kolendra</item>
-        <item>Cinnamon</item>
-        <item>Cloves</item>
-        <item>Coriander</item>
-        <item>Cumin</item>
-        <item>Curry powder</item>
-        <item>Dill</item>
-        <item>Fenugreek</item>
-        <item>Garlic</item>
-        <item>Ginger</item>
-        <item>Horseradish</item>
-        <item>Lemongrass</item>
-        <item>Marjoram</item>
-        <item>Mustard powder</item>
-        <item>Nutmeg</item>
+        <item>Cynamon</item>
+        <item>Goździki</item>
+        <item>Kolędra</item>
+        <item>Kmin rzymski</item>
+        <item>Curry w proszku</item>
+        <item>Koper</item>
+        <item>Kozieradka</item>
+        <item>Czosnek</item>
+        <item>Imbir</item>
+        <item>Chrzan</item>
+        <item>Trawa cytrynowa</item>
+        <item>Majeranek</item>
+        <item>Gorczyca mielona(lub musztarda w proszku)</item>
+        <item>Gałka muszkatołowa</item>
         <item>Oregano</item>
-        <item>Smoked paprika</item>
-        <item>Parsley</item>
-        <item>Pepper</item>
-        <item>Peppermint</item>
-        <item>Rosemary</item>
-        <item>Saffron</item>
-        <item>Sage</item>
-        <item>Thyme</item>
-        <item>Turmeric</item>
-        <item>Vanilla</item>
+        <item>Papryka w proszku</item>
+        <item>Pietruszka</item>
+        <item>Pieprz</item>
+        <item>Mięta</item>
+        <item>Rozmaryn</item>
+        <item>Szafran</item>
+        <item>Szałwia</item>
+        <item>Tymianek</item>
+        <item>Kurkuma</item>
+        <item>Wanila</item>
     </string-array>
 
     <string-array name="food_info_types_whole_grains">
