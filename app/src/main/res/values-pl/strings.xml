@@ -6,16 +6,16 @@
     <string name="other_fruits">Inne owoce</string>
     <string name="cruciferous_vegetables">Cruciferous Vegetables</string>
     <string name="greens">Greens</string>
-    <string name="other_vegetables">Other Vegetables</string>
-    <string name="flaxseeds">Flaxseeds</string>
+    <string name="other_vegetables">Inne warzywa</string>
+    <string name="flaxseeds">Nasiona lnu</string>
     <string name="nuts">Orzechy</string>
-    <string name="spices">Spices</string>
-    <string name="whole_grains">Whole Grains</string>
+    <string name="spices">Przyprawy</string>
+    <string name="whole_grains">Pełne ziarna</string>
     <string name="beverages">Beverages</string>
-    <string name="exercise">Exercise</string>
-    <string name="serving_sizes">Serving Sizes</string>
-    <string name="types">Types</string>
-    <string name="history">History</string>
+    <string name="exercise">Ćwiczenia</string>
+    <string name="serving_sizes">Rozmiar porcji</string>
+    <string name="types">Typy</string>
+    <string name="history">Historia</string>
     <string name="servings_some">Some servings</string>
     <string name="servings_all">All servings</string>
     <string name="servings">Servings</string>
@@ -205,12 +205,12 @@
     </string-array>
 
     <string-array name="history_to_generate_choices">
-        <item>1 month</item>
-        <item>3 months</item>
-        <item>6 months</item>
-        <item>1 year</item>
-        <item>2 years</item>
-        <item>5 years</item>
+        <item>1 miesiąc</item>
+        <item>3 miesiące</item>
+        <item>6 miesiące</item>
+        <item>1 rok</item>
+        <item>2 lata</item>
+        <item>5 lat</item>
     </string-array>
 
     <string-array name="food_info_types_beans">
@@ -308,14 +308,14 @@
     </string-array>
 
     <string-array name="food_info_types_other_vegetables">
-        <item>Artichokes</item>
-        <item>Asparagus</item>
-        <item>Beets</item>
-        <item>Bell peppers</item>
-        <item>Carrots</item>
-        <item>Corn</item>
-        <item>Garlic</item>
-        <item>Mushrooms (button, oyster, portobello, and shiitake)</item>
+        <item>Karoczochy</item>
+        <item>Szparagi</item>
+        <item>Buraki</item>
+        <item>Papryki</item>
+        <item>Marchewki</item>
+        <item>Kukurydza</item>
+        <item>Czosnek</item>
+        <item>Grzyby (pieczaka, boczniak, i Twardnik japoński)</item>
         <item>Okra</item>
         <item>Onions</item>
         <item>Purple potatoes</item>
