@@ -253,7 +253,7 @@
     <string-array name="food_info_types_other_fruits">
         <item>Appels</item>
         <item>Gedroogde abrikozen</item>
-        <item>Avacado's</item>
+        <item>Avacados</item>
         <item>Bananen</item>
         <item>Cantaloepa meloen</item>
         <item>Clementines</item>
@@ -483,7 +483,7 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>½ kop (120 ml) verse of diepgevroren</item>
+        <item>½ kop (120 ml) verse of diepvries</item>
         <item>¼ kop (60 ml) gedroogde</item>
     </string-array>
 
@@ -494,7 +494,7 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>½ kop (120 ml) gehakte</item>
+        <item>½ kop (120 ml) gehakt</item>
         <item>¼ kop (60 ml) broccoli of spruiten</item>
         <item>1 eetlepel (15 ml) mierikswortel</item>
     </string-array>
@@ -506,7 +506,7 @@
 
     <string-array name="food_info_serving_sizes_other_vegetables">
         <item>1 kop (240 ml) rauwe bladgroenten</item>
-        <item>½ kop (120 ml) auwe of gekookte groenten geen bladeren</item>
+        <item>½ kop (120 ml) rauwe of gekookte groenten geen bladeren</item>
         <item>½ kop (120 ml) groentesap</item>
         <item>¼ kop (60 ml) gedroogde paddestoelen</item>
     </string-array>
