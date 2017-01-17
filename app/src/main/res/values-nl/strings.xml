@@ -5,7 +5,7 @@
     <string name="berries">Bessen</string>
     <string name="other_fruits">Overige Fruit</string>
     <string name="cruciferous_vegetables">Kruisbloemige Groenten</string>
-    <string name="greens">Groenten</string>
+    <string name="greens">Blad groenten</string>
     <string name="other_vegetables">Overige Groenten</string>
     <string name="flaxseeds">Lijnzaad</string>
     <string name="nuts">Noten</string>
@@ -98,11 +98,11 @@
     <string name="format_num_days" formatted="false">%s dagen</string>
     <string name="daily_reminder_title">Herinnering Dagelijkse Dozijn</string>
     <string name="daily_reminder_text">Vul uw dagelijkse porties in</string>
-    <string name="daily_reminder_settings">Instellingen Dagelijkse Herinneringen</string>
-    <string name="enable_daily_reminder">Dagelijkse Herinneringen Aan</string>
-    <string name="remind_me_at">Herriner me om </string>
+    <string name="daily_reminder_settings">Instellingen dagelijkse herinneringen</string>
+    <string name="enable_daily_reminder">Dagelijkse herinneringen aan</string>
+    <string name="remind_me_at">Herrinering om </string>
     <string name="vibrate">Trillen</string>
-    <string name="play_sound">Geluid afspelen</string>
+    <string name="play_sound">Geluid</string>
     <string name="videos">Videos</string>
 
     <!--
@@ -534,7 +534,7 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
-        <item>een glas (340 ml)</item>
+        <item>1½ glas (340 ml)</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">
