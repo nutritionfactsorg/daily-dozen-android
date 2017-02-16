@@ -23,7 +23,7 @@
     <string name="about_this_app">"Информация за приложението"</string>
     <string name="latest_videos">"Най-новите видео клипове"</string>
     <string name="url_latest_videos" translatable="false">"http://nutritionfacts.org/videos"</string>
-    <string name="book_title" translatable="false">"Книгата „Как да не умрем“"</string>
+    <string name="book_title" translatable="false">How Not to Die</string>>
     <string name="url_book" translatable="false">"http://nutritionfacts.org/book"</string>
     <string name="donate">"Направете дарение"</string>
     <string name="url_donate" translatable="false">"https://nutritionfacts.org/donate"</string>
@@ -33,7 +33,7 @@
     <string name="url_open_source" translatable="false">"http://nutritionfacts.org/open-source"</string>
     <string name="nutritionfacts_title" translatable="false">"nutritionfacts.org"</string>
     <string name="url_nutritionfacts" translatable="false">"http://nutritionfacts.org"</string>
-    <string name="name_john_slavick" translatable="false">"Джон Славик"</string>
+    <string name="name_john_slavick" translatable="false">"John Slavick"</string>
     <string name="url_john_slavick" translatable="false">"http://johnslavick.com"</string>
     <string name="library_activeandroid" translatable="false">"ActiveAndroid"</string>
     <string name="library_android_iconify" translatable="false">"Android-iconify"</string>
@@ -109,37 +109,37 @@
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
     must not be translated.
     -->
-    <string name="food_info_videos_beans" translatable="false">"бобови растения"</string>
-    <string name="food_info_videos_berries" translatable="false">"горски плодове"</string>
-    <string name="food_info_videos_fruits" translatable="false">"плодове"</string>
-    <string name="food_info_videos_cruciferous" translatable="false">"кръстоцветни-зеленчуци"</string>
-    <string name="food_info_videos_greens" translatable="false">"зеленолистни"</string>
-    <string name="food_info_videos_vegetables" translatable="false">"зеленчуци"</string>
-    <string name="food_info_videos_flaxseeds" translatable="false">"ленено семе"</string>
-    <string name="food_info_videos_nuts" translatable="false">"ядки"</string>
-    <string name="food_info_videos_spices" translatable="false">"подправки"</string>
-    <string name="food_info_videos_whole_grains" translatable="false">"зърнени"</string>
-    <string name="food_info_videos_beverages" translatable="false">"напитки"</string>
-    <string name="food_info_videos_exercise" translatable="false">"упражнения"</string>
+	<string name="food_info_videos_beans" translatable="false">beans</string>
+    <string name="food_info_videos_berries" translatable="false">berries</string>
+    <string name="food_info_videos_fruits" translatable="false">fruit</string>
+    <string name="food_info_videos_cruciferous" translatable="false">cruciferous-vegetables</string>
+    <string name="food_info_videos_greens" translatable="false">greens</string>
+    <string name="food_info_videos_vegetables" translatable="false">vegetables</string>
+    <string name="food_info_videos_flaxseeds" translatable="false">flax-seeds</string>
+    <string name="food_info_videos_nuts" translatable="false">nuts</string>
+    <string name="food_info_videos_spices" translatable="false">spices</string>
+    <string name="food_info_videos_whole_grains" translatable="false">grains</string>
+    <string name="food_info_videos_beverages" translatable="false">beverages</string>
+	<string name="food_info_videos_exercise" translatable="false">exercise</string>
 
     <!--
     NOTE: These strings should never be translated from English
     These strings are used as the canonical names for the different foods and make it easy to switch between languages
     -->
     <string-array name="food_id_names" translatable="false">
-        <item>"Бобови"</item>
-        <item>"Горски плодове"</item>
-        <item>"Други плодове"</item>
-        <item>"Кръстоцветни зеленчуци"</item>
-        <item>"Зеленолистни"</item>
-        <item>"Други зеленчуци"</item>
-        <item>"Ленено семе"</item>
-        <item>"Ядки"</item>
-        <item>"Подправки"</item>
-        <item>"Пълнозърнести"</item>
-        <item>"Напитки"</item>
-        <item>"Упражнения"</item>
-    </string-array>
+        <item>Beans</item>
+        <item>Berries</item>
+        <item>Other Fruits</item>
+        <item>Cruciferous Vegetables</item>
+        <item>Greens</item>
+        <item>Other Vegetables</item>
+        <item>Flaxseeds</item>
+        <item>Nuts</item>
+        <item>Spices</item>
+        <item>Whole Grains</item>
+        <item>Beverages</item>
+        <item>Exercise</item>
+</string-array>
 
     <string-array name="food_names">
         <item>"@string/beans"</item>
@@ -544,203 +544,203 @@
     <string name="error_cannot_handle_url">"Връзката не може да се отвори. Моля, инсталирайте браузър."</string>
 
     <string-array name="food_videos_beans" translatable="false">
-        <item>"Черен боб"</item>
-        <item/>
-        <item/>
-        <item/>
-        <item>"Нахут"</item>
-        <item>"Едамаме"</item>
-        <item/>
-        <item>""</item>
-        <item/>
-        <item>"Фасул"</item>
-        <item>"Леща"</item>
-        <item>"Мисо"</item>
-        <item>"Дребен бял боб"</item>
-        <item>"Шарен боб"</item>
-        <item/>
-        <item>"Сух грах"</item>
-        <item>"Темпе"</item>
+        <item>black-beans</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>chickpeas</item>
+        <item>edamame</item>
+        <item></item>
+        <item>garbanzo-beans</item>
+        <item></item>
+        <item>kidney-beans</item>
+        <item>lentils</item>
+        <item>miso</item>
+        <item>navy-beans</item>
+        <item>pinto-beans</item>
+        <item></item>
+        <item>split-peas</item>
+        <item>tempeh</item>
     </string-array>
 
     <string-array name="food_videos_berries" translatable="false">
-        <item>"Асаи"</item>
-        <item>"Кисел трън"</item>
-        <item>"Къпини"</item>
-        <item>"Боровинки"</item>
-        <item>"Череши"</item>
-        <item>"Американско грозде „Конкорд“"</item>
-        <item>"Червени боровинки"</item>
-        <item>"Годжи бери"</item>
-        <item/>
-        <item/>
-        <item>"Малини"</item>
-        <item>"Ягоди"</item>
+        <item>acai-berries</item>
+        <item>barberries</item>
+        <item>blackberries</item>
+        <item>blueberries</item>
+        <item>cherries</item>
+        <item>concord-grapes</item>
+        <item>cranberries</item>
+        <item>goji-berries</item>
+        <item></item>
+        <item></item>
+        <item>raspberries</item>
+        <item>strawberries</item>
     </string-array>
 
     <string-array name="food_videos_other_fruits" translatable="false">
-        <item>"Ябълки"</item>
-        <item>"Кайсии"</item>
-        <item>"Авокадо"</item>
-        <item>"Банани"</item>
-        <item>"Пъпеш"</item>
-        <item/>
-        <item>"Фурми"</item>
-        <item>"Смокини"</item>
-        <item>"Грейпфрут"</item>
-        <item/>
-        <item>"Киви"</item>
-        <item>"Лимони"</item>
-        <item>"Зелен лимон"</item>
-        <item/>
-        <item>"Манго"</item>
-        <item/>
-        <item>"Портокали"</item>
-        <item>"Папая"</item>
-        <item/>
-        <item>"Праскови"</item>
-        <item>"Круши"</item>
-        <item>"Ананас"</item>
-        <item>"Сливи"</item>
-        <item/>
-        <item>"Нарове"</item>
-        <item>"Сушени сливи"</item>
-        <item/>
-        <item>"Диня"</item>
+        <item>apples</item>
+        <item>apricots</item>
+        <item>avocados</item>
+        <item>bananas</item>
+        <item>cantaloupe</item>
+        <item></item>
+        <item>dates</item>
+        <item>figs</item>
+        <item>grapefruit</item>
+        <item></item>
+        <item>kiwifruit</item>
+        <item>lemons</item>
+        <item>limes</item>
+        <item></item>
+        <item>mango</item>
+        <item></item>
+        <item>oranges</item>
+        <item>papaya</item>
+        <item></item>
+        <item>peaches</item>
+        <item>pears</item>
+        <item>pineapples</item>
+        <item>plums</item>
+        <item></item>
+        <item>pomegranates</item>
+        <item>prunes</item>
+        <item></item>
+        <item>watermelon</item>
     </string-array>
 
     <string-array name="food_videos_cruciferous_vegetables" translatable="false">
-        <item/>
-        <item>"Бок чой"</item>
-        <item>"Броколи"</item>
-        <item>"Брюкселско зеле"</item>
-        <item>"Зеле"</item>
-        <item>"Карфиол"</item>
-        <item>"Зелеви растения"</item>
-        <item/>
-        <item>"Кейл"</item>
-        <item>"Сарепска горчица"</item>
-        <item>"Репички"</item>
-        <item>"Ряпа"</item>
-        <item>"Кресон"</item>
+        <item></item>
+        <item>bok-choy</item>
+        <item>broccoli</item>
+        <item>brussels-sprouts</item>
+        <item>cabbage</item>
+        <item>cauliflower</item>
+        <item>collard-greens</item>
+        <item></item>
+        <item>kale</item>
+        <item>mustard-greens</item>
+        <item>radishes</item>
+        <item>turnips</item>
+        <item>watercress</item>
     </string-array>
 
     <string-array name="food_videos_greens" translatable="false">
-        <item/>
-        <item>"Цвекло"</item>
-        <item>"Зелеви растения"</item>
-        <item>"Зеле"</item>
-        <item>"Микс от млади салатни зеленчуци"</item>
-        <item>"Сарепска горчица"</item>
-        <item/>
-        <item>"Спанак"</item>
-        <item>"Манголд"</item>
-        <item>"Ряпа"</item>
+        <item></item>
+        <item>beet-greens</item>
+        <item>collard-greens</item>
+        <item>kale</item>
+        <item>mesclun-mix</item>
+        <item>mustard-greens</item>
+        <item></item>
+        <item>spinach</item>
+        <item>swiss-chard</item>
+        <item>turnips</item>
     </string-array>
 
     <string-array name="food_videos_other_vegetables" translatable="false">
-        <item>"Артишок"</item>
-        <item>"Аспержи"</item>
-        <item>"Цвекло"</item>
-        <item>"Камби"</item>
-        <item>"Моркови"</item>
-        <item>"Царевица"</item>
-        <item>"Чесън"</item>
-        <item>"Гъби"</item>
-        <item>"Бамя"</item>
-        <item>"Лук"</item>
-        <item>"Лилави картофи"</item>
-        <item>"Тиква"</item>
-        <item>"Морски зеленчуци"</item>
-        <item/>
-        <item>"Тиква „Скуош“"</item>
-        <item>"Сладки картофи"</item>
-        <item>"Домати"</item>
-        <item>"Тиквички"</item>
+        <item>artichokes</item>
+        <item>asparagus</item>
+        <item>beets</item>
+        <item>bell-peppers</item>
+        <item>carrots</item>
+        <item>corn</item>
+        <item>garlic</item>
+        <item>mushrooms</item>
+        <item>okra</item>
+        <item>onions</item>
+        <item>purple-potatoes</item>
+        <item>pumpkin</item>
+        <item>sea-vegetables</item>
+        <item></item>
+        <item>squash</item>
+        <item>sweet-potatoes</item>
+        <item>tomatoes</item>
+        <item>zucchini</item>
     </string-array>
 
     <string-array name="food_videos_nuts" translatable="false">
-        <item>"Бадеми"</item>
-        <item>"Бразилски орехи"</item>
-        <item>"Кашу"</item>
-        <item>"Семена от чиа"</item>
-        <item>"Лешници"</item>
-        <item/>
-        <item>"Ядки от макадамия"</item>
-        <item>"Пекан"</item>
-        <item>"Шамфъстъци"</item>
-        <item>"Тиквени семена"</item>
-        <item>"Сусам"</item>
-        <item>"Слънчогледови семки"</item>
-        <item>"Орехи"</item>
+        <item>almonds</item>
+        <item>brazil-nuts</item>
+        <item>cashews</item>
+        <item>chia-seeds</item>
+        <item>hazelnuts</item>
+        <item></item>
+        <item>macadamia-nuts</item>
+        <item>pecans</item>
+        <item>pistachios</item>
+        <item>pumpkin-seeds</item>
+        <item>sesame-seeds</item>
+        <item>sunflower-seeds</item>
+        <item>walnuts</item>
     </string-array>
 
     <string-array name="food_videos_spices" translatable="false">
-        <item>"Бахар"</item>
-        <item>"Кисел трън"</item>
-        <item>"Босилек"</item>
-        <item/>
-        <item>"Кардамон"</item>
-        <item/>
-        <item>"Кориандър"</item>
-        <item>"Канела"</item>
-        <item>"Карамфил"</item>
-        <item>"Кориандър"</item>
-        <item>"Кимион"</item>
-        <item>"Къри на прах"</item>
-        <item/>
-        <item>"Сминдух"</item>
-        <item>"Чесън"</item>
-        <item>"Джинджифил"</item>
-        <item/>
-        <item>"Лимонена трева"</item>
-        <item>"Риган"</item>
-        <item>"Горчица на прах"</item>
-        <item>"Индийско орехче"</item>
-        <item>"Риган"</item>
-        <item/>
-        <item>"Магданоз"</item>
-        <item>"Пипер"</item>
-        <item>"Мента"</item>
-        <item>"Розмарин"</item>
-        <item>"Шафран"</item>
-        <item/>
-        <item>"Мащерка"</item>
-        <item>"Куркума"</item>
-        <item/>
+        <item>allspice</item>
+        <item>barberries</item>
+        <item>basil</item>
+        <item></item>
+        <item>cardamom</item>
+        <item></item>
+        <item>cilantro</item>
+        <item>cinnamon</item>
+        <item>cloves</item>
+        <item>coriander</item>
+        <item>cumin</item>
+        <item>curry-powder</item>
+        <item></item>
+        <item>fenugreek</item>
+        <item>garlic</item>
+        <item>ginger</item>
+        <item></item>
+        <item>lemongrass</item>
+        <item>marjoram</item>
+        <item>mustard-powder</item>
+        <item>nutmeg</item>
+        <item>oregano</item>
+        <item></item>
+        <item>parsley</item>
+        <item>pepper</item>
+        <item>peppermint</item>
+        <item>rosemary</item>
+        <item>saffron</item>
+        <item></item>
+        <item>thyme</item>
+        <item>turmeric</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_videos_whole_grains" translatable="false">
-        <item>"Ечемик"</item>
-        <item>"Ориз"</item>
-        <item>"Елда"</item>
-        <item>"Просо"</item>
-        <item>"Овес"</item>
-        <item>"Пуканки"</item>
-        <item>"Киноа"</item>
-        <item>"Ръж"</item>
-        <item>"Теф"</item>
-        <item>"Паста"</item>
-        <item>"Ориз"</item>
+        <item>barley</item>
+        <item>rice</item>
+        <item>buckwheat</item>
+        <item>millet</item>
+        <item>oats</item>
+        <item>popcorn</item>
+        <item>quinoa</item>
+        <item>rye</item>
+        <item>teff</item>
+        <item>pasta</item>
+        <item>rice</item>
     </string-array>
 
     <string-array name="food_videos_beverages" translatable="false">
-        <item>"Черен чай"</item>
-        <item>"Чаи чай"</item>
-        <item>"Чай от лайка"</item>
-        <item>"Кафе"</item>
-        <item>"„Ърл Грей“ чай"</item>
-        <item>"Зелен чай"</item>
-        <item>"Чай от хибикус"</item>
-        <item/>
-        <item>"Чай от жасмин"</item>
-        <item/>
-        <item>"Матча"</item>
-        <item>"Оолонг чай"</item>
-        <item/>
-        <item>"Ройбос чай"</item>
-        <item>"Вода"</item>
-        <item>"Бял чай"</item>
+        <item>black-tea</item>
+        <item>chai-tea</item>
+        <item>chamomile-tea</item>
+        <item>coffee</item>
+        <item>earl-grey-tea</item>
+        <item>green-tea</item>
+        <item>hibiscus-tea</item>
+        <item></item>
+        <item>jasmine-tea</item>
+        <item></item>
+        <item>matcha</item>
+        <item>oolong-tea</item>
+        <item></item>
+        <item>rooibos-tea</item>
+        <item>water</item>
+        <item>white-tea</item>
     </string-array>
 
 </resources>
