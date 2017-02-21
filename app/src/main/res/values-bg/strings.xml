@@ -1,109 +1,109 @@
 <resources>
-    <string name="app_name">"Daily Dozen"</string>
+    <string name="app_name">Daily Dozen</string>
 
-    <string name="beans">"Бобови"</string>
-    <string name="berries">"Горски плодове"</string>
-    <string name="other_fruits">"Други плодове"</string>
-    <string name="cruciferous_vegetables">"Кръстоцветни зеленчуци"</string>
-    <string name="greens">"Зеленолистни зеленчуци"</string>
-    <string name="other_vegetables">"Други зеленчуци"</string>
-    <string name="flaxseeds">"Ленено семе"</string>
-    <string name="nuts">"Ядки"</string>
-    <string name="spices">"Подправки"</string>
-    <string name="whole_grains">"Пълнозърнести"</string>
-    <string name="beverages">"Напитки"</string>
-    <string name="exercise">"Упражнения"</string>
-    <string name="serving_sizes">"Порции"</string>
-    <string name="types">"Видове"</string>
-    <string name="history">"История"</string>
-    <string name="servings_some">"Някои порции"</string>
-    <string name="servings_all">"Всички порции"</string>
-    <string name="servings">"Порция"</string>
-    <string name="about">"Относно"</string>
-    <string name="about_this_app">"Информация за приложението"</string>
-    <string name="latest_videos">"Най-новите видео клипове"</string>
-    <string name="url_latest_videos" translatable="false">"http://nutritionfacts.org/videos"</string>
+    <string name="beans">Бобови</string>
+    <string name="berries">Горски плодове</string>
+    <string name="other_fruits">Други плодове</string>
+    <string name="cruciferous_vegetables">Кръстоцветни зеленчуци</string>
+    <string name="greens">Зеленолистни зеленчуци</string>
+    <string name="other_vegetables">Други зеленчуци</string>
+    <string name="flaxseeds">Ленено семе</string>
+    <string name="nuts">Ядки</string>
+    <string name="spices">Подправки</string>
+    <string name="whole_grains">Пълнозърнести</string>
+    <string name="beverages">Напитки</string>
+    <string name="exercise">Упражнения</string>
+    <string name="serving_sizes">Порции</string>
+    <string name="types">Видове</string>
+    <string name="history">История</string>
+    <string name="servings_some">Някои порции</string>
+    <string name="servings_all">Всички порции</string>
+    <string name="servings">Порция</string>
+    <string name="about">Относно</string>
+    <string name="about_this_app">Информация за приложението</string>
+    <string name="latest_videos">Най-новите видео клипове</string>
+    <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos</string>
     <string name="book_title" translatable="false">How Not to Die</string>>
-    <string name="url_book" translatable="false">"http://nutritionfacts.org/book"</string>
-    <string name="donate">"Направете дарение"</string>
-    <string name="url_donate" translatable="false">"https://nutritionfacts.org/donate"</string>
-    <string name="subscribe">"Абонирай се"</string>
-    <string name="url_subscribe" translatable="false">"http://nutritionfacts.org/subscribe"</string>
-    <string name="open_source">"Отворен код"</string>
-    <string name="url_open_source" translatable="false">"http://nutritionfacts.org/open-source"</string>
-    <string name="nutritionfacts_title" translatable="false">"nutritionfacts.org"</string>
-    <string name="url_nutritionfacts" translatable="false">"http://nutritionfacts.org"</string>
-    <string name="name_john_slavick" translatable="false">"John Slavick"</string>
-    <string name="url_john_slavick" translatable="false">"http://johnslavick.com"</string>
-    <string name="library_activeandroid" translatable="false">"ActiveAndroid"</string>
-    <string name="library_android_iconify" translatable="false">"Android-iconify"</string>
-    <string name="library_butterknife">"ButterKnife"</string>
-    <string name="library_caldroid" translatable="false">"Caldroid"</string>
-    <string name="library_eventbus" translatable="false">"EventBus"</string>
-    <string name="library_likeanimation" translatable="false">"LikeAnimation"</string>
-    <string name="library_mpandroidchart" translatable="false">"MPAndroidChart"</string>
-    <string name="url_activeandroid" translatable="false">"https://github.com/pardom/ActiveAndroid"</string>
-    <string name="url_android_iconify" translatable="false">"https://github.com/JoanZapata/android-iconify"</string>
-    <string name="url_butterknife" translatable="false">"https://github.com/JakeWharton/butterknife"</string>
-    <string name="url_caldroid" translatable="false">"https://github.com/roomorama/Caldroid"</string>
-    <string name="url_eventbus" translatable="false">"https://github.com/greenrobot/EventBus"</string>
-    <string name="url_likeanimation" translatable="false">"https://github.com/frogermcs/LikeAnimation"</string>
-    <string name="url_mpandroidchart" translatable="false">"https://github.com/PhilJay/MPAndroidChart"</string>
-    <string name="not_implemented_yet">"Все още не е внедрено"</string>
-    <string name="permission_needed_to_write_storage">"Не може да направите резервно копие без да имате права за писане върху паметта"</string>
-    <string name="backup_failed">"Задачата за създаване на архив е неуспешна"</string>
-    <string name="restore_failed">"Процесът по възстановяване на информация от архив е неуспешен"</string>
-    <string name="backup_success">"Архивът е успешно създаден"</string>
-    <string name="restore_success">"Процесът по възстановяване на информация от архив е успешен"</string>
-    <string name="restore_confirm_title">"Възстанови архива"</string>
-    <string name="restore_confirm_message">"Всички съществуващи данни ще бъдат изтрити преди възстановяване от архив. Желаете ли да продължите?"</string>
-    <string name="backup_mimetype" translatable="false">"message/rfc822"</string>
-    <string name="yes">"Да"</string>
-    <string name="no">"Не"</string>
-    <string name="backup">"Архивиране"</string>
-    <string name="food_info">"Информация за храните"</string>
-    <string name="food_history">"История на храните"</string>
-    <string name="icon_info" translatable="false">"{fa-info-circle 12dp @color/gray}"</string>
-    <string name="icon_calendar" translatable="false">"{fa-calendar 16dp @color/gray_dark}"</string>
-    <string name="daily_servings_history">"История на отбелязаните дневни порции"</string>
-    <string name="no_servings_recorded">"Все още не сте отбелязали порции!"</string>
-    <string name="task_backup_title">"Архивиране"</string>
-    <string name="task_restore_title">"Възстановяване"</string>
-    <string name="task_calculating_streaks_title">"Статистическите линии се изчисляват"</string>
-    <string name="back_to_today">"Върнете се към днешната дата"</string>
-    <string name="debug">"Отстраняване на грешки"</string>
-    <string name="debug_clear_data">"Изчистване на всички данни"</string>
-    <string name="debug_clear_data_message">"Това ще изтрие всички въведени порции. Желаете ли да продължите?"</string>
-    <string name="OK">"ОК"</string>
-    <string name="dialog_streaks_title">"Нова функция: Линии!"</string>
-    <string name="dialog_streaks_message">"Вашата база данни ще бъде обновена, за да поддържа новата функция „линии“."</string>
-    <string name="dialog_no_email_apps_title">"Няма намерени имейл приложения"</string>
-    <string name="dialog_no_email_apps_message">"Архивирането на данни изисква да имате инсталирано приложение за имейл, за да можете да изпратите csv файл по пощата. Моля инсталирайте имейл клиент и опитайте отново."</string>
-    <string name="debug_generate_random_data">"Генериране на случайни данни"</string>
-    <string name="debug_generate_full_data">"Генериране на пълна информация"</string>
-    <string name="debug_generate_data_message">"Всички съществуващи данни ще бъдат заменени. Желаете ли да продължите?"</string>
-    <string name="task_generating_random_data">"Генериране на случайни данни"</string>
-    <string name="task_loading_servings_history_title">"Зареждане на историята на дозите"</string>
-    <string name="time_scale">"Времева скала"</string>
-    <string name="history_to_generate">"Генериране на история"</string>
-    <string name="date_servings_star" translatable="false">"{fa-star 24dp @color/gold}"</string>
-    <string name="date_servings_star_large" translatable="false">"{fa-star 64dp @color/gold}"</string>
-    <string name="welcome_to_my_daily_dozen">"Добре дошли в моя Daily Dozen!"</string>
-    <string name="activity_welcome_text">"Използвайте това приложение на дневна база, за да следите храните, които аз препоръчвам за оптимално здраве и дълголетие в книгата си „Как да не умрем“."</string>
-    <string name="dialog_ask_user_to_rate_app_title">"Харесвате ли това приложение?"</string>
-    <string name="dialog_ask_user_to_rate_app_message">"Моля, дайте ни обратна връзка в Google Play Store."</string>
-    <string name="rate_now">"Изпратете обратна информация"</string>
-    <string name="not_now">"Пропусни"</string>
-    <string formatted="false" name="format_version">"версия %s"</string>
-    <string formatted="false" name="format_num_days">"%s дни"</string>
-    <string name="daily_reminder_title">"Напомняне за Daily Dozen"</string>
-    <string name="daily_reminder_text">"Актуализиране на вашите порции за днес"</string>
-    <string name="daily_reminder_settings">"Настройки за напомняне"</string>
-    <string name="enable_daily_reminder">"Активиране на напомнянето"</string>
-    <string name="remind_me_at">"Напомни ми на"</string>
-    <string name="vibrate">"Вибрация"</string>
-    <string name="play_sound">"Възпроизвеждане на звук"</string>
-    <string name="videos">"Видео клипове"</string>
+    <string name="url_book" translatable="false">http://nutritionfacts.org/book</string>
+    <string name="donate">Направете дарение</string>
+    <string name="url_donate" translatable="false">https://nutritionfacts.org/donate</string>
+    <string name="subscribe">Абонирай се</string>
+    <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe</string>
+    <string name="open_source">Отворен код</string>
+    <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source</string>
+    <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
+    <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
+    <string name="name_john_slavick" translatable="false">John Slavick</string>
+    <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
+    <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
+    <string name="library_android_iconify" translatable="false">Android-iconify</string>
+    <string name="library_butterknife">ButterKnife</string>
+    <string name="library_caldroid" translatable="false">Caldroid</string>
+    <string name="library_eventbus" translatable="false">EventBus</string>
+    <string name="library_likeanimation" translatable="false">LikeAnimation</string>
+    <string name="library_mpandroidchart" translatable="false">MPAndroidChart</string>
+    <string name="url_activeandroid" translatable="false">https://github.com/pardom/ActiveAndroid</string>
+    <string name="url_android_iconify" translatable="false">https://github.com/JoanZapata/android-iconify</string>
+    <string name="url_butterknife" translatable="false">https://github.com/JakeWharton/butterknife</string>
+    <string name="url_caldroid" translatable="false">https://github.com/roomorama/Caldroid</string>
+    <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
+    <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation</string>
+    <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
+    <string name="not_implemented_yet">Все още не е внедрено</string>
+    <string name="permission_needed_to_write_storage">Не може да направите резервно копие без да имате права за писане върху паметта</string>
+    <string name="backup_failed">Задачата за създаване на архив е неуспешна</string>
+    <string name="restore_failed">Процесът по възстановяване на информация от архив е неуспешен</string>
+    <string name="backup_success">Архивът е успешно създаден</string>
+    <string name="restore_success">Процесът по възстановяване на информация от архив е успешен</string>
+    <string name="restore_confirm_title">Възстанови архива</string>
+    <string name="restore_confirm_message">Всички съществуващи данни ще бъдат изтрити преди възстановяване от архив. Желаете ли да продължите?</string>
+    <string name="backup_mimetype" translatable="false">message/rfc822</string>
+    <string name="yes">Да</string>
+    <string name="no">Не</string>
+    <string name="backup">Архивиране</string>
+    <string name="food_info">Информация за храните</string>
+    <string name="food_history">История на храните</string>
+    <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
+    <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
+    <string name="daily_servings_history">История на отбелязаните дневни порции</string>
+    <string name="no_servings_recorded">Все още не сте отбелязали порции!</string>
+    <string name="task_backup_title">Архивиране</string>
+    <string name="task_restore_title">Възстановяване</string>
+    <string name="task_calculating_streaks_title">Статистическите линии се изчисляват</string>
+    <string name="back_to_today">Върнете се към днешната дата</string>
+    <string name="debug">Отстраняване на грешки</string>
+    <string name="debug_clear_data">Изчистване на всички данни</string>
+    <string name="debug_clear_data_message">Това ще изтрие всички въведени порции. Желаете ли да продължите?</string>
+    <string name="OK">ОК</string>
+    <string name="dialog_streaks_title">Нова функция: Линии!</string>
+    <string name="dialog_streaks_message">Вашата база данни ще бъде обновена, за да поддържа новата функция „линии“.</string>
+    <string name="dialog_no_email_apps_title">Няма намерени имейл приложения</string>
+    <string name="dialog_no_email_apps_message">Архивирането на данни изисква да имате инсталирано приложение за имейл, за да можете да изпратите csv файл по пощата. Моля инсталирайте имейл клиент и опитайте отново.</string>
+    <string name="debug_generate_random_data">Генериране на случайни данни</string>
+    <string name="debug_generate_full_data">Генериране на пълна информация</string>
+    <string name="debug_generate_data_message">Всички съществуващи данни ще бъдат заменени. Желаете ли да продължите?</string>
+    <string name="task_generating_random_data">Генериране на случайни данни</string>
+    <string name="task_loading_servings_history_title">Зареждане на историята на дозите</string>
+    <string name="time_scale">Времева скала</string>
+    <string name="history_to_generate">Генериране на история</string>
+    <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
+    <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
+    <string name="welcome_to_my_daily_dozen">Добре дошли в моя Daily Dozen!</string>
+    <string name="activity_welcome_text">Използвайте това приложение на дневна база, за да следите храните, които аз препоръчвам за оптимално здраве и дълголетие в книгата си „Как да не умрем“.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Харесвате ли това приложение?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Моля, дайте ни обратна връзка в Google Play Store.</string>
+    <string name="rate_now">Изпратете обратна информация</string>
+    <string name="not_now">Пропусни</string>
+    <string formatted="false" name="format_version">версия %s</string>
+    <string formatted="false" name="format_num_days">%s дни</string>
+    <string name="daily_reminder_title">Напомняне за Daily Dozen</string>
+    <string name="daily_reminder_text">Актуализиране на вашите порции за днес</string>
+    <string name="daily_reminder_settings">Настройки за напомняне</string>
+    <string name="enable_daily_reminder">Активиране на напомнянето</string>
+    <string name="remind_me_at">Напомни ми на</string>
+    <string name="vibrate">Вибрация</string>
+    <string name="play_sound">Възпроизвеждане на звук</string>
+    <string name="videos">Видео клипове</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
@@ -142,27 +142,27 @@
 </string-array>
 
     <string-array name="food_names">
-        <item>"@string/beans"</item>
-        <item>"@string/berries"</item>
-        <item>"@string/other_fruits"</item>
-        <item>"@string/cruciferous_vegetables"</item>
-        <item>"@string/greens"</item>
-        <item>"@string/other_vegetables"</item>
-        <item>"@string/flaxseeds"</item>
-        <item>"@string/nuts"</item>
-        <item>"@string/nuts"</item>
-        <item>"@string/nuts"</item>
-        <item>"@string/nuts"</item>
-        <item>"@string/nuts"</item>
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">
-        <item>"@string/beans"</item>
-        <item>"@string/berries"</item>
-        <item>"@string/other_fruits"</item>
-        <item>"@string/cruciferous_vegetables"</item>
-        <item>"@string/other_vegetables"</item>
-        <item>"@string/spices"</item>
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
     </string-array>
 
     <integer-array name="food_quantities">
@@ -181,367 +181,367 @@
     </integer-array>
 
     <string-array name="about_text_lines">
-        <item>"Това приложение е създадено от John Slavick."</item>
+        <item>Това приложение е създадено от John Slavick.</item>
         <item/>
-        <item>"Използват се следните библиотеки с отворен код: ActiveAndroid, Android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, и MPAndroidChart."</item>
+        <item>Използват се следните библиотеки с отворен код: ActiveAndroid, Android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, и MPAndroidChart.</item>
         <item/>
-        <item>"Специални благодарности за усилията положени от създателите на първата версия на приложението: Chan Kruse, Allan Portera, и Sangeeta Kumar."</item>
+        <item>Специални благодарности за усилията положени от създателите на първата версия на приложението: Chan Kruse, Allan Portera, и Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
-        <item>"Следвайте тези стъпки, за да възстановите Daily Dozen от резервно копие"</item>
+        <item>Следвайте тези стъпки, за да възстановите Daily Dozen от резервно копие</item>
         <item/>
-        <item>"1. Приложението Daily Dozen трябва да се инсталира на вашия телефон с Андроид. Можете да го изтеглите от тук: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen"</item>
+        <item>1. Приложението Daily Dozen трябва да се инсталира на вашия телефон с Андроид. Можете да го изтеглите от тук: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item/>
-        <item>"2. Изберете архивния файл, прикачен към този имейл."</item>
+        <item>2. Изберете архивния файл, прикачен към този имейл.</item>
         <item/>
-        <item>"3. Изберете „Отвори“ с Daily Dozen"</item>
+        <item>3. Изберете „Отвори“ с Daily Dozen</item>
     </string-array>
 
     <string-array name="servings_time_scale_choices">
-        <item>"Ден"</item>
-        <item>"Месец"</item>
-        <item>"Година"</item>
+        <item>Ден</item>
+        <item>Месец</item>
+        <item>Година</item>
     </string-array>
 
     <string-array name="history_to_generate_choices">
-        <item>"1 месец"</item>
-        <item>"3 месеца"</item>
-        <item>"6 месеца"</item>
-        <item>"1 година"</item>
-        <item>"2 години"</item>
-        <item>"5 години"</item>
+        <item>1 месец</item>
+        <item>3 месеца</item>
+        <item>6 месеца</item>
+        <item>1 година</item>
+        <item>2 години</item>
+        <item>5 години</item>
     </string-array>
 
     <string-array name="food_info_types_beans">
-        <item>"Черен боб"</item>
-        <item>"Папуда"</item>
-        <item>"Жълт боб"</item>
-        <item>"Бял боб"</item>
-        <item>"Нахут"</item>
-        <item>"Едамаме"</item>
-        <item>"Английски грах"</item>
-        <item>"Нахут тип Гарбанзо"</item>
-        <item>"Едър боб"</item>
-        <item>"Бъбрековиден боб"</item>
-        <item>"Леща (белуга, френска и червени сортове)"</item>
-        <item>"Мисо"</item>
-        <item>"Дребен боб"</item>
-        <item>"Боб Пинто"</item>
-        <item>"Дребен червен боб"</item>
-        <item>"Белен грах (жълт или зелен)"</item>
-        <item>"Темпе"</item>
+        <item>Черен боб</item>
+        <item>Папуда</item>
+        <item>Жълт боб</item>
+        <item>Бял боб</item>
+        <item>Нахут</item>
+        <item>Едамаме</item>
+        <item>Английски грах</item>
+        <item>Нахут тип Гарбанзо</item>
+        <item>Едър боб</item>
+        <item>Бъбрековиден боб</item>
+        <item>Леща (белуга, френска и червени сортове)</item>
+        <item>Мисо</item>
+        <item>Дребен боб</item>
+        <item>Боб Пинто</item>
+        <item>Дребен червен боб</item>
+        <item>Белен грах (жълт или зелен)</item>
+        <item>Темпе</item>
     </string-array>
 
     <string-array name="food_info_types_berries">
-        <item>"Акаи плодове"</item>
-        <item>"Кисел трън"</item>
-        <item>"Къпини"</item>
-        <item>"Боровинки"</item>
-        <item>"Череши (сладки или кисели)"</item>
-        <item>"Американски грозде \"Конкорд\""</item>
-        <item>"Червени боровинки"</item>
-        <item>"Годжи Бери"</item>
-        <item>"Кумкуат"</item>
-        <item>"Черници"</item>
-        <item>"Малини (черни или червени)"</item>
-        <item>"Ягоди"</item>
+        <item>Акаи плодове</item>
+        <item>Кисел трън</item>
+        <item>Къпини</item>
+        <item>Боровинки</item>
+        <item>Череши (сладки или кисели)</item>
+        <item>Американски грозде („Конкорд“)</item>
+        <item>Червени боровинки</item>
+        <item>Годжи Бери</item>
+        <item>Кумкуат</item>
+        <item>Черници</item>
+        <item>Малини (черни или червени)</item>
+        <item>Ягоди</item>
     </string-array>
 
     <string-array name="food_info_types_other_fruits">
-        <item>"Ябълки"</item>
-        <item>"Сушени кайсии"</item>
-        <item>"Авокадо"</item>
-        <item>"Банани"</item>
-        <item>"Пъпеш"</item>
-        <item>"Мандарини"</item>
-        <item>"Фурми"</item>
-        <item>"Сушени смокини"</item>
-        <item>"Грейпфрут"</item>
-        <item>"Пъпеш \"Медена роса\""</item>
-        <item>"Киви"</item>
-        <item>"Лимони"</item>
-        <item>"Лайм"</item>
-        <item>"Личии"</item>
-        <item>"Манго"</item>
-        <item>"Нектарини"</item>
-        <item>"Портокали"</item>
-        <item>"Папая"</item>
-        <item>"Маракуя"</item>
-        <item>"Праскови"</item>
-        <item>"Круши"</item>
-        <item>"Ананас"</item>
-        <item>"Сливи (особено черни сливи)"</item>
-        <item>"Едри сини сливи"</item>
-        <item>"Нар"</item>
-        <item>"Сушени сливи"</item>
-        <item>"Мандарини"</item>
-        <item>"Диня"</item>
+        <item>Ябълки</item>
+        <item>Сушени кайсии</item>
+        <item>Авокадо</item>
+        <item>Банани</item>
+        <item>Пъпеш</item>
+        <item>Мандарини</item>
+        <item>Фурми</item>
+        <item>Сушени смокини</item>
+        <item>Грейпфрут</item>
+        <item>Пъпеш („Медена роса“)</item>
+        <item>Киви</item>
+        <item>Лимони</item>
+        <item>Лайм</item>
+        <item>Личии</item>
+        <item>Манго</item>
+        <item>Нектарини</item>
+        <item>Портокали</item>
+        <item>Папая</item>
+        <item>Маракуя</item>
+        <item>Праскови</item>
+        <item>Круши</item>
+        <item>Ананас</item>
+        <item>Сливи (особено черни сливи)</item>
+        <item>Едри сини сливи</item>
+        <item>Нар</item>
+        <item>Сушени сливи</item>
+        <item>Мандарини</item>
+        <item>Диня</item>
     </string-array>
 
     <string-array name="food_info_types_cruciferous_vegetables">
-        <item>"Рукола"</item>
-        <item>"Бок чой"</item>
-        <item>"Броколи"</item>
-        <item>"Брюкселско зеле"</item>
-        <item>"Зеле"</item>
-        <item>"Карфиол"</item>
-        <item>"Зелеви растения"</item>
-        <item>"Хрян"</item>
-        <item>"Кейл (черен, зелен и червен)"</item>
-        <item>"Сарепска горчица"</item>
-        <item>"Репички"</item>
-        <item>"Ряпа"</item>
-        <item>"Кресон"</item>
+        <item>Рукола</item>
+        <item>Бок чой</item>
+        <item>Броколи</item>
+        <item>Брюкселско зеле</item>
+        <item>Зеле</item>
+        <item>Карфиол</item>
+        <item>Зелеви растения</item>
+        <item>Хрян</item>
+        <item>Кейл (черен, зелен и червен)</item>
+        <item>Сарепска горчица</item>
+        <item>Репички</item>
+        <item>Ряпа</item>
+        <item>Кресон</item>
     </string-array>
 
     <string-array name="food_info_types_greens">
-        <item>"Рукола"</item>
-        <item>"Цвекло"</item>
-        <item>"Зелеви растения"</item>
-        <item>"Кейл/Къдраво зеле (черно, зелено и червено)"</item>
-        <item>"Микс от млади салатни зеленчуци"</item>
-        <item>"Сарепска горчица"</item>
-        <item>"Киселец"</item>
-        <item>"Спанак"</item>
-        <item>"Манголд"</item>
-        <item>"Ряпа"</item>
+        <item>Рукола</item>
+        <item>Цвекло</item>
+        <item>Зелеви растения</item>
+        <item>Кейл/Къдраво зеле (черно, зелено и червено)</item>
+        <item>Микс от млади салатни зеленчуци</item>
+        <item>Сарепска горчица</item>
+        <item>Киселец</item>
+        <item>Спанак</item>
+        <item>Манголд</item>
+        <item>Ряпа</item>
     </string-array>
 
     <string-array name="food_info_types_other_vegetables">
-        <item>"Артишок"</item>
-        <item>"Аспержи"</item>
-        <item>"Цвекло"</item>
-        <item>"Камби"</item>
-        <item>"Моркови"</item>
-        <item>"Царевица"</item>
-        <item>"Чесън"</item>
-        <item>"Гъби (печурки, кладница и шийтаке)"</item>
-        <item>"Бамя"</item>
-        <item>"Лук"</item>
-        <item>"Лилави картофи"</item>
-        <item>"Тиква"</item>
-        <item>"Морски зеленчуци (араме, дулсе и нори)"</item>
-        <item>"Грах"</item>
-        <item>"Тиква „Скуош“ (деликата, лято и скуош „спагети“)"</item>
-        <item>"Сладки картофи"</item>
-        <item>"Домати"</item>
-        <item>"Тиквички"</item>
+        <item>Артишок</item>
+        <item>Аспержи</item>
+        <item>Цвекло</item>
+        <item>Камби</item>
+        <item>Моркови</item>
+        <item>Царевица</item>
+        <item>Чесън</item>
+        <item>Гъби (печурки, кладница и шийтаке)</item>
+        <item>Бамя</item>
+        <item>Лук</item>
+        <item>Лилави картофи</item>
+        <item>Тиква</item>
+        <item>Морски зеленчуци (араме, дулсе и нори)</item>
+        <item>Грах</item>
+        <item>Тиква „Скуош“ (деликата, лято и скуош „спагети“)</item>
+        <item>Сладки картофи</item>
+        <item>Домати</item>
+        <item>Тиквички</item>
     </string-array>
 
     <string-array name="food_info_types_flaxseeds">
-        <item>"Кафяво лененото семе"</item>
-        <item>"Златно лененото семе"</item>
+        <item>Кафяво лененото семе</item>
+        <item>Златно лененото семе</item>
     </string-array>
 
     <string-array name="food_info_types_nuts">
-        <item>"Бадеми"</item>
-        <item>"Бразилски орех"</item>
-        <item>"Кашу"</item>
-        <item>"Семена от чиа"</item>
-        <item>"Лешници"</item>
-        <item>"Конопени семена"</item>
-        <item>"Макадамия"</item>
-        <item>"Пекан"</item>
-        <item>"Шамфъстък"</item>
-        <item>"Тиквени семена"</item>
-        <item>"Сусам"</item>
-        <item>"Слънчогледови семки"</item>
-        <item>"Орехи"</item>
+        <item>Бадеми</item>
+        <item>Бразилски орех</item>
+        <item>Кашу</item>
+        <item>Семена от чиа</item>
+        <item>Лешници</item>
+        <item>Конопени семена</item>
+        <item>Макадамия</item>
+        <item>Пекан</item>
+        <item>Шамфъстък</item>
+        <item>Тиквени семена</item>
+        <item>Сусам</item>
+        <item>Слънчогледови семки</item>
+        <item>Орехи</item>
     </string-array>
 
     <string-array name="food_info_types_spices">
-        <item>"Бахар"</item>
-        <item>"Кисел трън"</item>
-        <item>"Босилек"</item>
-        <item>"Дафинови листа"</item>
-        <item>"Кардамон"</item>
-        <item>"Чили на прах"</item>
-        <item>"Силантро"</item>
-        <item>"Канела"</item>
-        <item>"Карамфил"</item>
-        <item>"Кориандър"</item>
-        <item>"Кимион"</item>
-        <item>"Къри на прах"</item>
-        <item>"Копър"</item>
-        <item>"Сминдух"</item>
-        <item>"Чесън"</item>
-        <item>"Джинджифил"</item>
-        <item>"Хрян"</item>
-        <item>"Лимонена трева"</item>
-        <item>"Риган"</item>
-        <item>"Горчица на прах"</item>
-        <item>"Индийско орехче"</item>
-        <item>"Риган"</item>
-        <item>"Пушен червен пипер"</item>
-        <item>"Магданоз"</item>
-        <item>"Пипер"</item>
-        <item>"Мента"</item>
-        <item>"Розмарин"</item>
-        <item>"Шафран"</item>
-        <item>"Градински чай"</item>
-        <item>"Мащерка"</item>
-        <item>"Куркума"</item>
-        <item>"Ванилия"</item>
+        <item>Бахар</item>
+        <item>Кисел трън</item>
+        <item>Босилек</item>
+        <item>Дафинови листа</item>
+        <item>Кардамон</item>
+        <item>Чили на прах</item>
+        <item>Силантро</item>
+        <item>Канела</item>
+        <item>Карамфил</item>
+        <item>Кориандър</item>
+        <item>Кимион</item>
+        <item>Къри на прах</item>
+        <item>Копър</item>
+        <item>Сминдух</item>
+        <item>Чесън</item>
+        <item>Джинджифил</item>
+        <item>Хрян</item>
+        <item>Лимонена трева</item>
+        <item>Риган</item>
+        <item>Горчица на прах</item>
+        <item>Индийско орехче</item>
+        <item>Риган</item>
+        <item>Пушен червен пипер</item>
+        <item>Магданоз</item>
+        <item>Пипер</item>
+        <item>Мента</item>
+        <item>Розмарин</item>
+        <item>Шафран</item>
+        <item>Градински чай</item>
+        <item>Мащерка</item>
+        <item>Куркума</item>
+        <item>Ванилия</item>
     </string-array>
 
     <string-array name="food_info_types_whole_grains">
-        <item>"Ечемик"</item>
-        <item>"Кафяв ориз"</item>
-        <item>"Елда"</item>
-        <item>"Просо"</item>
-        <item>"Овесени ядки"</item>
-        <item>"Пуканки"</item>
-        <item>"Киноа"</item>
-        <item>"Ръж"</item>
-        <item>"Теф"</item>
-        <item>"Пълнозърнеста паста"</item>
-        <item>"Див ориз"</item>
+        <item>Ечемик</item>
+        <item>Кафяв ориз</item>
+        <item>Елда</item>
+        <item>Просо</item>
+        <item>Овесени ядки</item>
+        <item>Пуканки</item>
+        <item>Киноа</item>
+        <item>Ръж</item>
+        <item>Теф</item>
+        <item>Пълнозърнеста паста</item>
+        <item>Див ориз</item>
     </string-array>
 
     <string-array name="food_info_types_beverages">
-        <item>"Черен чай"</item>
-        <item>"Чаи чай"</item>
-        <item>"Ванилово-лайков чай"</item>
-        <item>"Кафе"</item>
-        <item>"„Ърл Грей“ чай"</item>
-        <item>"Зелен чай"</item>
-        <item>"Чай от хибискус"</item>
-        <item>"Горещ шоколад"</item>
-        <item>"Жасминов чай"</item>
-        <item>"Чай от маточина"</item>
-        <item>"Матча чай"</item>
-        <item>"Чай „цъфнали бадеми оолонг“"</item>
-        <item>"Чай от мента"</item>
-        <item>"Ройбос чай"</item>
-        <item>"Вода"</item>
-        <item>"Бял чай"</item>
+        <item>Черен чай</item>
+        <item>Чаи чай</item>
+        <item>Ванилово-лайков чай</item>
+        <item>Кафе</item>
+        <item>„Ърл Грей“ чай</item>
+        <item>Зелен чай</item>
+        <item>Чай от хибискус</item>
+        <item>Горещ шоколад</item>
+        <item>Жасминов чай</item>
+        <item>Чай от маточина</item>
+        <item>Матча чай</item>
+        <item>Чай „цъфнали бадеми оолонг“</item>
+        <item>Чай от мента</item>
+        <item>Ройбос чай</item>
+        <item>Вода</item>
+        <item>Бял чай</item>
     </string-array>
 
     <string-array name="food_info_types_exercise">
-        <item>"Колоездене"</item>
-        <item>"Гребане"</item>
-        <item>"Танцуване"</item>
-        <item>"Народна топка"</item>
-        <item>"Спускане ски"</item>
-        <item>"Фехтовка"</item>
-        <item>"Туризъм"</item>
-        <item>"Домакинска работа"</item>
-        <item>"Фигурно пързаляне"</item>
-        <item>"Каране на ролери"</item>
-        <item>"Жонглиране"</item>
-        <item>"Скокове на батут"</item>
-        <item>"Каране на водно колело"</item>
-        <item>"Игра с фризби"</item>
-        <item>"Каране на кънки"</item>
-        <item>"Баскетбол"</item>
-        <item>"Изгребване на сняг"</item>
-        <item>"Каране на скейтборд"</item>
-        <item>"Плуване с шнорхел"</item>
-        <item>"Сърфиране"</item>
-        <item>"Плуване"</item>
-        <item>"Тенис на двойки"</item>
-        <item>"Синхронно плуване"</item>
-        <item>"Бързо ходене (6,4 км/ч)"</item>
-        <item>"Водна аеробика"</item>
-        <item>"Каране на водни ски"</item>
-        <item>"Градинарство"</item>
-        <item>"Йога"</item>
-        <item>"Туризъм"</item>
-        <item>"Баскетбол"</item>
-        <item>"Планинско колоездене"</item>
-        <item>"Вдигане на тежести"</item>
-        <item>"Ски бягане"</item>
-        <item>"Футбол"</item>
-        <item>"Хокей"</item>
-        <item>"Джогинг"</item>
-        <item>"Подскоци"</item>
-        <item>"Скачането на въже"</item>
-        <item>"Игра на топка"</item>
-        <item>"Лицеви опори"</item>
-        <item>"Набирания"</item>
-        <item>"Ракетбол"</item>
-        <item>"Скално катерене"</item>
-        <item>"Ръгби"</item>
-        <item>"Тичане"</item>
-        <item>"Гмуркане"</item>
-        <item>"Тенис на корд"</item>
-        <item>"Футбол"</item>
-        <item>"Пързаляне с кънки"</item>
-        <item>"Скуош"</item>
-        <item>"Аеробика"</item>
-        <item>"Плуване"</item>
-        <item>"Планинско тичане"</item>
-        <item>"Воден джогинг"</item>
+        <item>Колоездене</item>
+        <item>Гребане</item>
+        <item>Танцуване</item>
+        <item>Народна топка</item>
+        <item>Спускане ски</item>
+        <item>Фехтовка</item>
+        <item>Туризъм</item>
+        <item>Домакинска работа</item>
+        <item>Фигурно пързаляне</item>
+        <item>Каране на ролери</item>
+        <item>Жонглиране</item>
+        <item>Скокове на батут</item>
+        <item>Каране на водно колело</item>
+        <item>Игра с фризби</item>
+        <item>Каране на кънки</item>
+        <item>Баскетбол</item>
+        <item>Изгребване на сняг</item>
+        <item>Каране на скейтборд</item>
+        <item>Плуване с шнорхел</item>
+        <item>Сърфиране</item>
+        <item>Плуване</item>
+        <item>Тенис на двойки</item>
+        <item>Синхронно плуване</item>
+        <item>Бързо ходене (6,4 км/ч)</item>
+        <item>Водна аеробика</item>
+        <item>Каране на водни ски</item>
+        <item>Градинарство</item>
+        <item>Йога</item>
+        <item>Туризъм</item>
+        <item>Баскетбол</item>
+        <item>Планинско колоездене</item>
+        <item>Вдигане на тежести</item>
+        <item>Ски бягане</item>
+        <item>Футбол</item>
+        <item>Хокей</item>
+        <item>Джогинг</item>
+        <item>Подскоци</item>
+        <item>Скачането на въже</item>
+        <item>Игра на топка</item>
+        <item>Лицеви опори</item>
+        <item>Набирания</item>
+        <item>Ракетбол</item>
+        <item>Скално катерене</item>
+        <item>Ръгби</item>
+        <item>Тичане</item>
+        <item>Гмуркане</item>
+        <item>Тенис на корд</item>
+        <item>Футбол</item>
+        <item>Пързаляне с кънки</item>
+        <item>Скуош</item>
+        <item>Аеробика</item>
+        <item>Плуване</item>
+        <item>Планинско тичане</item>
+        <item>Воден джогинг</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>"¼ чаша хумус или бобова разядка"</item>,
-        <item>"½ чаша сварен боб, грах, леща, тофу или темпе"</item>,
-        <item>"1 чаша пресен грах или покълнала леща"</item>
+        <item>¼ чаша хумус или бобова разядка</item>,
+        <item>½ чаша сварен боб, грах, леща, тофу или темпе</item>,
+        <item>1 чаша пресен грах или покълнала леща</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>"½ чаша пресни или замразени боровинки"</item>
-        <item>"¼ чаша изсушени боровинки"</item>
+        <item>½ чаша пресни или замразени боровинки</item>
+        <item>¼ чаша изсушени боровинки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>"1 средно голям плод"</item>
-        <item>"1 чаша нарязани плодове"</item>
-        <item>"¼ чаша сушени плодове"</item>
+        <item>1 средно голям плод</item>
+        <item>1 чаша нарязани плодове</item>
+        <item>¼ чаша сушени плодове</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>"½ чаша нарязани цветнолистни"</item>
-        <item>"¼ чаша брюкселско зеле или броколи"</item>
-        <item>"1 супена лъжица хрян"</item>
+        <item>½ чаша нарязани цветнолистни</item>
+        <item>¼ чаша брюкселско зеле или броколи</item>
+        <item>1 супена лъжица хрян</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
-        <item>"1 чаша сурови зеленолистни"</item>
-        <item>"½ чаша варени зеленолистни"</item>
+        <item>1 чаша сурови зеленолистни</item>
+        <item>½ чаша варени зеленолистни</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>"1 чаша сурови листни зеленчуци"</item>
-        <item>"½ чаша сурови или варени зеленчуци"</item>
-        <item>"½ чаша зеленчуков сок"</item>
-        <item>"¼ чаша сушени гъби"</item>
+        <item>1 чаша сурови листни зеленчуци</item>
+        <item>½ чаша сурови или варени зеленчуци</item>
+        <item>½ чаша зеленчуков сок</item>
+        <item>¼ чаша сушени гъби</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>"1 супена лъжица ленено семе"</item>
+        <item>1 супена лъжица ленено семе</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
-        <item>"¼ чаша ядки или семена"</item>
-        <item>"2 супени лъжици ядки или масло от семена"</item>
+        <item>¼ чаша ядки или семена</item>
+        <item>2 супени лъжици ядки или масло от семена</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
-        <item>"¼ чаена лъжичка куркума"</item>
-        <item>"Всякакви други безсолни билки и подправки, които обичате"</item>
+        <item>¼ чаена лъжичка куркума</item>
+        <item>Всякакви други безсолни билки и подправки, които обичате</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>"½ чаша топла зърнена закуска или сварени зърна, паста или царевица"</item>
-        <item>"1 чаша студена зърнена закуска"</item>
-        <item>"1 тортила или филия хляб"</item>
-        <item>"½ поничка или английски мъфин"</item>
-        <item>"3 чаши пуканки"</item>
+        <item>½ чаша топла зърнена закуска или сварени зърна, паста или царевица</item>
+        <item>1 чаша студена зърнена закуска</item>
+        <item>1 тортила или филия хляб</item>
+        <item>½ поничка или английски мъфин</item>
+        <item>3 чаши пуканки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
-        <item>"Една чаша (350 мл.)"</item>
+        <item>Една чаша (350 мл.)</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">
-        <item>"90 минути умерена интензивност на физическа дейност"</item>
-        <item>"40 минути енергично интензивност дейност"</item>
+        <item>90 минути умерена интензивност на физическа дейност</item>
+        <item>40 минути енергично интензивност дейност</item>
     </string-array>
 
-    <string name="error_cannot_handle_url">"Връзката не може да се отвори. Моля, инсталирайте браузър."</string>
+    <string name="error_cannot_handle_url">Връзката не може да се отвори. Моля, инсталирайте браузър.</string>
 
     <string-array name="food_videos_beans" translatable="false">
         <item>black-beans</item>
