@@ -23,11 +23,12 @@ import org.nutritionfacts.dailydozen.util.DateUtil;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistoryTaskParams, Integer, CombinedData> {
     private static final String TAG = LoadServingsHistoryTask.class.getSimpleName();
+
+    private static final int MONTHS_IN_YEAR = 12;
 
     public LoadServingsHistoryTask(Context context) {
         super(context);
@@ -97,31 +98,16 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
         return createLineAndBarData(xLabels, lineEntries, barEntries);
     }
 
-    // TODO: 2/23/17 This method needs to use inputParams
     private CombinedData getChartDataInMonths(final LoadServingsHistoryTaskParams inputParams) {
-        final Day firstDay = Day.getFirstDay();
-        final int firstYear = firstDay.getYear();
-        final int firstMonthOneBased = firstDay.getMonth();
-        Log.d(TAG, String.format("getChartDataInMonths: firstYear [%s], firstMonthOneBased [%s]",
-                firstYear, firstMonthOneBased));
-
-        final int currentYear = DateUtil.getCurrentYear();
-        final int currentMonthOneBased = DateUtil.getCurrentMonthOneBased();
-        Log.d(TAG, String.format("getChartDataInMonths: currentYear [%s], currentMonthOneBased [%s]",
-                currentYear, currentMonthOneBased));
-
-        final Calendar cal = DateUtil.getCalendarForYearAndMonth(firstYear, firstMonthOneBased - 1);
-
-        final int numMonths = DateUtil.monthsSince(cal);
         int i = 0;
 
-        int year = firstYear;
-        int monthOneBased = firstMonthOneBased;
+        int year = inputParams.getSelectedYear();
+        int monthOneBased = 1;
 
         final List<String> xLabels = new ArrayList<>();
         final List<Entry> lineEntries = new ArrayList<>();
 
-        while (year < currentYear || (year == currentYear && monthOneBased <= currentMonthOneBased)) {
+        while (monthOneBased <= MONTHS_IN_YEAR) {
             if (isCancelled()) {
                 break;
             }
@@ -135,13 +121,13 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
             Log.d(TAG, String.format("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
                     year, monthOneBased, averageTotalServingsInMonth));
 
-            lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
+            if (averageTotalServingsInMonth > 0) {
+                lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
+            }
 
-            DateUtil.addOneMonth(cal);
-            year = DateUtil.getYear(cal);
-            monthOneBased = DateUtil.getMonthOneBased(cal);
+            monthOneBased++;
 
-            publishProgress(i++, numMonths);
+            publishProgress(i++, MONTHS_IN_YEAR);
         }
 
         return createLineData(xLabels, lineEntries);
