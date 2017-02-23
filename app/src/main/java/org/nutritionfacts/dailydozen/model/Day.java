@@ -8,6 +8,7 @@ import com.activeandroid.query.Select;
 
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -138,6 +139,18 @@ public class Day extends TruncatableModel {
         return new Select().from(Day.class)
                 .orderBy("date ASC")
                 .execute();
+    }
+
+    public static List<Day> getLastSixtyDays() {
+        final List<Day> datesInDescOrder = new Select().from(Day.class)
+                .orderBy("date DESC")
+                .limit(60)
+                .execute();
+
+        // We must reverse the returned dates, otherwise, the chart will display the latest dates on the left
+        Collections.reverse(datesInDescOrder);
+
+        return datesInDescOrder;
     }
 
     public static List<Day> getDaysInYearAndMonth(final int year, final int monthOneBased) {

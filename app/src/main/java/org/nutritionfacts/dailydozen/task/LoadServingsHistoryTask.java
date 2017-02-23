@@ -58,7 +58,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
     }
 
     private CombinedData getChartDataInDays() {
-        final List<Day> history = Day.getAllDays();
+        final List<Day> history = Day.getLastSixtyDays();
 
         final int numDaysOfServings = history.size();
 
@@ -73,17 +73,20 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
                 break;
             }
 
-            final int xIndex = xLabels.size();
-
             final Day day = history.get(i);
-            xLabels.add(day.getDayOfWeek());
 
             final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
 
-            barEntries.add(new BarEntry(totalServingsOnDate, xIndex));
-
             previousTrend = calculateTrend(previousTrend, totalServingsOnDate);
-            lineEntries.add(new Entry(previousTrend, xIndex));
+
+            // Only show the past 30 days of servings when showing daily servings history
+            if (numDaysOfServings < 30 || numDaysOfServings - i <= 30) {
+                final int xIndex = xLabels.size();
+
+                xLabels.add(day.getDayOfWeek());
+                barEntries.add(new BarEntry(totalServingsOnDate, xIndex));
+                lineEntries.add(new Entry(previousTrend, xIndex));
+            }
 
             publishProgress(i + 1, numDaysOfServings);
         }
