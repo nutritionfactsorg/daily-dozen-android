@@ -82,8 +82,8 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
 
             previousTrend = calculateTrend(previousTrend, totalServingsOnDate);
 
-            // Only show the past 30 days of servings when showing daily servings history
-            if (numDaysOfServings < 30 || numDaysOfServings - i <= 30) {
+            // Only show the past days of servings in the selected month and year
+            if (day.getYear() == inputParams.getSelectedYear() && day.getMonth() == inputParams.getSelectedMonth()) {
                 final int xIndex = xLabels.size();
 
                 xLabels.add(day.getDayOfWeek());
