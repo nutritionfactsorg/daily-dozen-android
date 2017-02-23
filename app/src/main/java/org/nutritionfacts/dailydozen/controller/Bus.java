@@ -11,6 +11,7 @@ import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
 import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.event.ShowExplodingStarAnimation;
+import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 
@@ -53,5 +54,9 @@ public class Bus {
 
     public static void loadServingsHistoryCompleteEvent(final CombinedData chartData) {
         post(new LoadServingsHistoryCompleteEvent(chartData));
+    }
+
+    public static void timeScaleSelected(int selectedTimeScale) {
+        post(new TimeScaleSelectedEvent(selectedTimeScale));
     }
 }

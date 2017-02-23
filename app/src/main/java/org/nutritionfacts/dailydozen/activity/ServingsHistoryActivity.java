@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
@@ -14,8 +12,10 @@ import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
+import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
+import org.nutritionfacts.dailydozen.view.TimeScaleSelector;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,8 +23,8 @@ import butterknife.ButterKnife;
 public class ServingsHistoryActivity extends AppCompatActivity
         implements AdapterView.OnItemSelectedListener {
 
-    @BindView(R.id.daily_servings_spinner)
-    protected Spinner historySpinner;
+    @BindView(R.id.daily_servings_history_time_scale)
+    protected TimeScaleSelector timeScaleSelector;
     @BindView(R.id.daily_servings_chart)
     protected CombinedChart chart;
 
@@ -36,7 +36,6 @@ public class ServingsHistoryActivity extends AppCompatActivity
         setContentView(R.layout.activity_servings_history);
         ButterKnife.bind(this);
 
-        initHistorySpinner();
         loadData();
     }
 
@@ -53,32 +52,19 @@ public class ServingsHistoryActivity extends AppCompatActivity
     }
 
     private void loadData() {
+        loadData(TimeScale.DAYS);
+    }
+
+    private void loadData(@TimeScale.Interface final int timeScale) {
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
-            new LoadServingsHistoryTask(this).execute(getSelectedDaysOfHistory());
+            new LoadServingsHistoryTask(this).execute(timeScale);
         }
     }
 
-    @TimeScale.Interface
-    private int getSelectedDaysOfHistory() {
-        switch (historySpinner.getSelectedItemPosition()) {
-            case 0:
-            default:
-                return TimeScale.DAYS;
-            case 1:
-                return TimeScale.MONTHS;
-            case 2:
-                return TimeScale.YEARS;
-        }
-    }
-
-    private void initHistorySpinner() {
-        final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.servings_time_scale_choices, android.R.layout.simple_list_item_1);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        historySpinner.setOnItemSelectedListener(this);
-        historySpinner.setAdapter(adapter);
+    @Subscribe
+    public void onEvent(TimeScaleSelectedEvent event) {
+        loadData(event.getSelectedTimeScale());
     }
 
     @Subscribe
