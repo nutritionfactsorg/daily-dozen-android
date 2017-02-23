@@ -215,7 +215,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
     }
 
     private BarData getBarData(List<String> xVals, List<BarEntry> barEntries) {
-        final BarDataSet dataSet = new BarDataSet(barEntries, "Servings");
+        final BarDataSet dataSet = new BarDataSet(barEntries, getContext().getString(R.string.servings));
 
         dataSet.setColor(ContextCompat.getColor(getContext(), R.color.colorPrimary));
         dataSet.setValueTextColor(ContextCompat.getColor(getContext(), android.R.color.white));
@@ -228,7 +228,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
     }
 
     private LineData getLineData(List<String> xVals, List<Entry> lineEntries) {
-        final LineDataSet dataSet = new LineDataSet(lineEntries, "Moving Average");
+        final LineDataSet dataSet = new LineDataSet(lineEntries, getContext().getString(R.string.moving_average));
 
         final int color = ContextCompat.getColor(getContext(), R.color.colorAccent);
 
