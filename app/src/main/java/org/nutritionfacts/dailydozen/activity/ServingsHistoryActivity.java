@@ -12,9 +12,12 @@ import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
+import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
 import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
-import org.nutritionfacts.dailydozen.model.enums.TimeScale;
+import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
+import org.nutritionfacts.dailydozen.task.params.LoadServingsHistoryTaskParams;
+import org.nutritionfacts.dailydozen.view.TimeRangeSelector;
 import org.nutritionfacts.dailydozen.view.TimeScaleSelector;
 
 import butterknife.BindView;
@@ -25,6 +28,8 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
     @BindView(R.id.daily_servings_history_time_scale)
     protected TimeScaleSelector timeScaleSelector;
+    @BindView(R.id.daily_servings_history_time_range)
+    protected TimeRangeSelector timeRangeSelector;
     @BindView(R.id.daily_servings_chart)
     protected CombinedChart chart;
 
@@ -36,35 +41,52 @@ public class ServingsHistoryActivity extends AppCompatActivity
         setContentView(R.layout.activity_servings_history);
         ButterKnife.bind(this);
 
+        initTimeRangeSelector();
+
         loadData();
+    }
+
+    private void initTimeRangeSelector() {
+        final Day firstDay = Day.getFirstDay();
+        final Day lastDay = Day.getLastDay();
+        timeRangeSelector.setStartAndEnd(
+                firstDay.getYear(), firstDay.getMonth(),
+                lastDay.getYear(), lastDay.getMonth());
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         Bus.register(this);
+        Bus.register(timeRangeSelector);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Bus.unregister(this);
+        Bus.unregister(timeRangeSelector);
     }
 
     private void loadData() {
-        loadData(TimeScale.DAYS);
-    }
-
-    private void loadData(@TimeScale.Interface final int timeScale) {
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
-            new LoadServingsHistoryTask(this).execute(timeScale);
+
+            new LoadServingsHistoryTask(this).execute(new LoadServingsHistoryTaskParams(
+                    timeScaleSelector.getSelectedTimeScale(),
+                    timeRangeSelector.getSelectedYear(),
+                    timeRangeSelector.getSelectedMonth()));
         }
     }
 
     @Subscribe
+    public void onEvent(TimeRangeSelectedEvent event) {
+        loadData();
+    }
+
+    @Subscribe
     public void onEvent(TimeScaleSelectedEvent event) {
-        loadData(event.getSelectedTimeScale());
+        loadData();
     }
 
     @Subscribe

@@ -18,6 +18,7 @@ import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
+import org.nutritionfacts.dailydozen.task.params.LoadServingsHistoryTaskParams;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
 import java.text.DecimalFormat;
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, CombinedData> {
+public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistoryTaskParams, Integer, CombinedData> {
     private static final String TAG = LoadServingsHistoryTask.class.getSimpleName();
 
     public LoadServingsHistoryTask(Context context) {
@@ -41,24 +42,26 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
     }
 
     @Override
-    protected CombinedData doInBackground(Integer... params) {
-        if (Servings.isEmpty()) {
+    protected CombinedData doInBackground(LoadServingsHistoryTaskParams... params) {
+        if (Servings.isEmpty() || params[0] == null) {
             return null;
         }
 
-        switch (params[0]) {
+        final LoadServingsHistoryTaskParams inputParams = params[0];
+
+        switch (inputParams.getTimeScale()) {
             default:
             case TimeScale.DAYS:
-                return getChartDataInDays();
+                return getChartDataInDays(inputParams);
             case TimeScale.MONTHS:
-                return getChartDataInMonths();
+                return getChartDataInMonths(inputParams);
             case TimeScale.YEARS:
                 return getChartDataInYears();
         }
     }
 
-    private CombinedData getChartDataInDays() {
-        final List<Day> history = Day.getLastSixtyDays();
+    private CombinedData getChartDataInDays(final LoadServingsHistoryTaskParams inputParams) {
+        final List<Day> history = Day.getLastTwoMonths(inputParams.getSelectedYear(), inputParams.getSelectedMonth());
 
         final int numDaysOfServings = history.size();
 
@@ -94,7 +97,8 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         return createLineAndBarData(xLabels, lineEntries, barEntries);
     }
 
-    private CombinedData getChartDataInMonths() {
+    // TODO: 2/23/17 This method needs to use inputParams
+    private CombinedData getChartDataInMonths(final LoadServingsHistoryTaskParams inputParams) {
         final Day firstDay = Day.getFirstDay();
         final int firstYear = firstDay.getYear();
         final int firstMonthOneBased = firstDay.getMonth();

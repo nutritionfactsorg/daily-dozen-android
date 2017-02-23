@@ -10,6 +10,7 @@ import android.widget.Spinner;
 
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,8 +32,17 @@ public class TimeScaleSelector extends LinearLayout implements AdapterView.OnIte
         init(context);
     }
 
+    @TimeScale.Interface
     public int getSelectedTimeScale() {
-        return timeScaleSpinner.getSelectedItemPosition();
+        switch (timeScaleSpinner.getSelectedItemPosition()) {
+            case TimeScale.MONTHS:
+                return TimeScale.MONTHS;
+            case TimeScale.YEARS:
+                return TimeScale.YEARS;
+            default:
+            case TimeScale.DAYS:
+                return TimeScale.DAYS;
+        }
     }
 
     private void init(final Context context) {

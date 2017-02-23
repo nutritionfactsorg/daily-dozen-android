@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen.util;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -60,5 +61,10 @@ public class DateUtil {
 
     public static String toStringYYYYMM(Calendar cal) {
         return String.format("%s%s", getYear(cal), getMonthOneBased(cal));
+    }
+
+    public static String getShortNameOfMonth(final int monthNumberOneBased) {
+        return new SimpleDateFormat("MMM", Locale.getDefault())
+                .format(getCalendarForYearAndMonth(2016, monthNumberOneBased - 1).getTime());
     }
 }

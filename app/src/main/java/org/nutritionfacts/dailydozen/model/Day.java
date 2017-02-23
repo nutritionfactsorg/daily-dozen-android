@@ -8,7 +8,9 @@ import com.activeandroid.query.Select;
 
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -104,7 +106,8 @@ public class Day extends TruncatableModel {
     }
 
     public String getDayOfWeek() {
-        return getDateTime().format("WWW", Locale.getDefault());
+        // TODO: 2/23/17 Make this more readable
+        return getDateTime().format("YYYYMMDD", Locale.getDefault());
     }
 
     public static Day getByDate(String dateString) throws InvalidDateException {
@@ -141,16 +144,28 @@ public class Day extends TruncatableModel {
                 .execute();
     }
 
-    public static List<Day> getLastSixtyDays() {
-        final List<Day> datesInDescOrder = new Select().from(Day.class)
-                .orderBy("date DESC")
-                .limit(60)
-                .execute();
+    // TODO: 2/23/17 This method could use some cleanup
+    public static List<Day> getLastTwoMonths(int year, int month) {
+        final List<Day> currentMonth = getDaysInYearAndMonth(year, month);
 
-        // We must reverse the returned dates, otherwise, the chart will display the latest dates on the left
-        Collections.reverse(datesInDescOrder);
+        int prevYear = year;
+        int prevMonth = month;
+        if (month == 1) {
+            prevYear--;
+            prevMonth = 12;
+        } else {
+            prevMonth--;
+        }
 
-        return datesInDescOrder;
+        final List<Day> previousMonth = getDaysInYearAndMonth(prevYear, prevMonth);
+
+        final List<Day> allDays = new ArrayList<>(currentMonth.size() + previousMonth.size());
+        allDays.addAll(currentMonth);
+        allDays.addAll(previousMonth);
+
+        Collections.sort(allDays, new DayComparator(false));
+
+        return allDays;
     }
 
     public static List<Day> getDaysInYearAndMonth(final int year, final int monthOneBased) {
@@ -169,6 +184,13 @@ public class Day extends TruncatableModel {
     public static Day getFirstDay() {
         return new Select().from(Day.class)
                 .orderBy("date ASC")
+                .limit(1)
+                .executeSingle();
+    }
+
+    public static Day getLastDay() {
+        return new Select().from(Day.class)
+                .orderBy("date DESC")
                 .limit(1)
                 .executeSingle();
     }
@@ -215,5 +237,37 @@ public class Day extends TruncatableModel {
         return dateInQuestion.getYear().equals(today.getYear()) &&
                 dateInQuestion.getMonth().equals(today.getMonth()) &&
                 dateInQuestion.getDay().equals(today.getDay());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Day day = (Day) o;
+
+        return date == day.date;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = (int) (31 * result + (date ^ (date >>> 32)));
+        return result;
+    }
+
+    private static class DayComparator implements Comparator<Day> {
+        private boolean desc;
+
+        DayComparator(boolean desc) {
+            this.desc = desc;
+        }
+
+        @Override
+        public int compare(Day o1, Day o2) {
+            return (int) (desc ?
+                    o2.getDate() - o1.getDate() :
+                    o1.getDate() - o2.getDate());
+        }
     }
 }

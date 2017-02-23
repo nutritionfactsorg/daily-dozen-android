@@ -37,4 +37,23 @@
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
     </style>
 
+    <style name="TimeRangeSelector">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="TimeRangeSelector.PreviousButton">
+        <item name="android:text">{fa-chevron-left 14dp}</item>
+    </style>
+
+    <style name="TimeRangeSelector.NextButton">
+        <item name="android:text">{fa-chevron-right 14dp}</item>
+    </style>
+
+    <style name="TimeRangeSelector.Selected">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
 </resources>

@@ -9,6 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <org.nutritionfacts.dailydozen.view.TimeRangeSelector
+        android:id="@+id/daily_servings_history_time_range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <View
         android:background="@color/colorDividerColor"
         android:layout_width="match_parent"
