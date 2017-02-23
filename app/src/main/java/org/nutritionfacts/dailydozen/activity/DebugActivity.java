@@ -14,7 +14,7 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.GenerateDataTask;
-import org.nutritionfacts.dailydozen.task.GenerateDataTaskInput;
+import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -86,9 +86,9 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        final GenerateDataTaskInput taskInput = new GenerateDataTaskInput(historyToGenerate, generateRandomData);
+                        final GenerateDataTaskParams taskParams = new GenerateDataTaskParams(historyToGenerate, generateRandomData);
 
-                        new GenerateDataTask(DebugActivity.this).execute(taskInput);
+                        new GenerateDataTask(DebugActivity.this).execute(taskParams);
 
                         dialog.dismiss();
                     }

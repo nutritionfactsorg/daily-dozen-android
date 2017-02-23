@@ -1,10 +1,10 @@
-package org.nutritionfacts.dailydozen.task;
+package org.nutritionfacts.dailydozen.task.params;
 
-public class GenerateDataTaskInput {
+public class GenerateDataTaskParams {
     private int historyToGenerate;
     private boolean generateRandomData;
 
-    public GenerateDataTaskInput(int historyToGenerate, boolean generateRandomData) {
+    public GenerateDataTaskParams(int historyToGenerate, boolean generateRandomData) {
         this.historyToGenerate = historyToGenerate;
         this.generateRandomData = generateRandomData;
     }
