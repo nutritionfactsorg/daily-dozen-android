@@ -144,24 +144,19 @@ public class Day extends TruncatableModel {
                 .execute();
     }
 
-    // TODO: 2/23/17 This method could use some cleanup
     public static List<Day> getLastTwoMonths(int year, int month) {
-        final List<Day> currentMonth = getDaysInYearAndMonth(year, month);
+        final List<Day> daysInCurrentMonth = getDaysInYearAndMonth(year, month);
+        final List<Day> daysInPreviousMonth;
 
-        int prevYear = year;
-        int prevMonth = month;
         if (month == 1) {
-            prevYear--;
-            prevMonth = 12;
+            daysInPreviousMonth = getDaysInYearAndMonth(year - 1, 12);
         } else {
-            prevMonth--;
+            daysInPreviousMonth = getDaysInYearAndMonth(year, month - 1);
         }
 
-        final List<Day> previousMonth = getDaysInYearAndMonth(prevYear, prevMonth);
-
-        final List<Day> allDays = new ArrayList<>(currentMonth.size() + previousMonth.size());
-        allDays.addAll(currentMonth);
-        allDays.addAll(previousMonth);
+        final List<Day> allDays = new ArrayList<>(daysInCurrentMonth.size() + daysInPreviousMonth.size());
+        allDays.addAll(daysInCurrentMonth);
+        allDays.addAll(daysInPreviousMonth);
 
         Collections.sort(allDays, new DayComparator(false));
 
