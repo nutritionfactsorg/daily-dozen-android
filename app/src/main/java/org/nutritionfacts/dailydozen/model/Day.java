@@ -106,8 +106,7 @@ public class Day extends TruncatableModel {
     }
 
     public String getDayOfWeek() {
-        // TODO: 2/23/17 Make this more readable
-        return getDateTime().format("YYYYMMDD", Locale.getDefault());
+        return getDateTime().format("WWW", Locale.getDefault());
     }
 
     public static Day getByDate(String dateString) throws InvalidDateException {
