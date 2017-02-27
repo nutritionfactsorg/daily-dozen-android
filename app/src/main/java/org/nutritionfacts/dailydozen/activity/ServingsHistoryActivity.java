@@ -119,6 +119,7 @@ public class ServingsHistoryActivity extends AppCompatActivity
         chart.setDrawValueAboveBar(false);
 
         // Even though we hide the left axis, we must set its max value so that full servings days reach the top
+        chart.getAxisLeft().setAxisMinValue(0);
         chart.getAxisLeft().setAxisMaxValue(24);
         chart.getAxisLeft().setEnabled(false);
 
