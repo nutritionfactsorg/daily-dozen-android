@@ -220,7 +220,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
     private LineData getLineData(List<String> xVals, List<Entry> lineEntries) {
         final LineDataSet dataSet = new LineDataSet(lineEntries, getContext().getString(R.string.moving_average));
 
-        final int color = ContextCompat.getColor(getContext(), R.color.colorAccent);
+        final int color = ContextCompat.getColor(getContext(), R.color.brown);
 
         dataSet.setColor(color);
         dataSet.setLineWidth(2.5f);
