@@ -61,6 +61,9 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
         }
     }
 
+    // This method loads the last two months of servings into memory, but only shows the selected
+    // month. This is because it needs to use the data from the month before to calculate the
+    // starting moving average.
     private CombinedData getChartDataInDays(final LoadServingsHistoryTaskParams inputParams) {
         final List<Day> history = Day.getLastTwoMonths(inputParams.getSelectedYear(), inputParams.getSelectedMonth());
 
@@ -112,16 +115,16 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
                 break;
             }
 
-            final int xIndex = xLabels.size();
-
-            xLabels.add(String.format("%s/%s", monthOneBased, year));
-
             final float averageTotalServingsInMonth = Servings.getAverageTotalServingsInMonth(year, monthOneBased);
 
             Log.d(TAG, String.format("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
                     year, monthOneBased, averageTotalServingsInMonth));
 
             if (averageTotalServingsInMonth > 0) {
+                final int xIndex = xLabels.size();
+
+                xLabels.add(DateUtil.getShortNameOfMonth(monthOneBased));
+
                 lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
             }
 
