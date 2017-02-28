@@ -3,7 +3,6 @@ package org.nutritionfacts.dailydozen.task;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.util.ArrayMap;
-import android.util.Log;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
@@ -19,10 +18,9 @@ import java.util.List;
 import java.util.Map;
 
 import hugo.weaving.DebugLog;
+import timber.log.Timber;
 
 public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
-    private final static String TAG = BackupTask.class.getSimpleName();
-
     private List<Day> allDays;
     private List<Food> allFoods;
 
@@ -55,7 +53,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         allFoods = Food.getAllFoods();
 
         final File backupFile = params[0];
-        Log.d(TAG, "backupFilename = " + backupFile.getName());
+        Timber.d("backupFilename = " + backupFile.getName());
 
         final int numDays = allDays.size();
 
@@ -77,7 +75,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
                 fileWriter.write(csvLines.toString());
                 fileWriter.close();
 
-                Log.d(TAG, "backup file successfully written");
+                Timber.d("backup file successfully written");
             } catch (IOException e) {
                 e.printStackTrace();
             }

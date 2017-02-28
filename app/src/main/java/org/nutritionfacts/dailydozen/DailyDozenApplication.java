@@ -10,6 +10,7 @@ import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import io.fabric.sdk.android.Fabric;
+import timber.log.Timber;
 
 public class DailyDozenApplication extends Application {
     @Override
@@ -18,7 +19,9 @@ public class DailyDozenApplication extends Application {
 
         Iconify.with(new FontAwesomeModule());
 
-        if (!BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
+            Timber.plant(new Timber.DebugTree());
+        } else {
             Fabric.with(this, new Crashlytics());
         }
 

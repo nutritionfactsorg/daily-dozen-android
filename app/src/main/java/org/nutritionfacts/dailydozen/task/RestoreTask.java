@@ -5,7 +5,6 @@ import android.content.Context;
 import android.net.Uri;
 import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.activeandroid.ActiveAndroid;
 
@@ -23,10 +22,9 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 
 import hugo.weaving.DebugLog;
+import timber.log.Timber;
 
 public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
-    private final static String TAG = RestoreTask.class.getSimpleName();
-
     private String[] headers;
     private ArrayMap<String, Food> foodLookup;
 
@@ -126,7 +124,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                 ActiveAndroid.setTransactionSuccessful();
             }
         } catch (InvalidDateException e) {
-            Log.e(TAG, "restoreLine: ", e);
+            Timber.e("restoreLine: ", e);
         } finally {
             ActiveAndroid.endTransaction();
         }

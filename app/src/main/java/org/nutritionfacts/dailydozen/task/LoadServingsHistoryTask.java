@@ -2,7 +2,6 @@ package org.nutritionfacts.dailydozen.task;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
@@ -25,9 +24,9 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistoryTaskParams, Integer, CombinedData> {
-    private static final String TAG = LoadServingsHistoryTask.class.getSimpleName();
+import timber.log.Timber;
 
+public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistoryTaskParams, Integer, CombinedData> {
     private static final int MONTHS_IN_YEAR = 12;
 
     public LoadServingsHistoryTask(Context context) {
@@ -117,7 +116,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
 
             final float averageTotalServingsInMonth = Servings.getAverageTotalServingsInMonth(year, monthOneBased);
 
-            Log.d(TAG, String.format("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
+            Timber.d(String.format("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
                     year, monthOneBased, averageTotalServingsInMonth));
 
             if (averageTotalServingsInMonth > 0) {
@@ -139,10 +138,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
     private CombinedData getChartDataInYears() {
         final Day firstDay = Day.getFirstDay();
         final int firstYear = firstDay.getYear();
-        Log.d(TAG, String.format("getChartDataInYears: firstYear [%s]", firstYear));
+        Timber.d(String.format("getChartDataInYears: firstYear [%s]", firstYear));
 
         final int currentYear = DateUtil.getCurrentYear();
-        Log.d(TAG, String.format("getChartDataInYears: currentYear [%s]", currentYear));
+        Timber.d(String.format("getChartDataInYears: currentYear [%s]", currentYear));
 
         final int numYears = currentYear - firstYear;
         int i = 0;
@@ -163,7 +162,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
 
             final float averageTotalServingsInYear = Servings.getAverageTotalServingsInYear(year);
 
-            Log.d(TAG, String.format("getChartDataInYears: year [%s], average [%s]",
+            Timber.d(String.format("getChartDataInYears: year [%s], average [%s]",
                     year, averageTotalServingsInYear));
 
             lineEntries.add(new Entry(averageTotalServingsInYear, xIndex));

@@ -2,7 +2,6 @@ package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
@@ -20,10 +19,9 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import timber.log.Timber;
 
 public class FoodCheckBoxes extends LinearLayout {
-    private final static String TAG = FoodCheckBoxes.class.getSimpleName();
-
     @BindView(R.id.food_check_boxes_container)
     protected ViewGroup vgContainer;
 
@@ -117,7 +115,7 @@ public class FoodCheckBoxes extends LinearLayout {
 
             servings.save();
             onServingsChanged();
-            Log.d(TAG, String.format("Increased Servings for %s", servings));
+            Timber.d(String.format("Increased Servings for %s", servings));
         }
     }
 
@@ -130,9 +128,9 @@ public class FoodCheckBoxes extends LinearLayout {
 
             if (servings.getServings() > 0) {
                 servings.save();
-                Log.d(TAG, String.format("Decreased Servings for %s", servings));
+                Timber.d(String.format("Decreased Servings for %s", servings));
             } else {
-                Log.d(TAG, String.format("Deleting %s", servings));
+                Timber.d(String.format("Deleting %s", servings));
                 servings.delete();
             }
 
