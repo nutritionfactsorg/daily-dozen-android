@@ -35,10 +35,16 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/food_history"
+                android:text="@string/icon_calendar"
+                android:gravity="start|center_vertical"
+                style="@style/FoodHistoryIcon" />
+
             <org.nutritionfacts.dailydozen.widget.StreakWidget
                 android:id="@+id/food_streak"
                 android:textSize="10sp"
-                android:layout_gravity="start"
+                android:layout_gravity="center"
                 android:padding="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,19 +52,10 @@
 
             <org.nutritionfacts.dailydozen.widget.FoodCheckBoxes
                 android:id="@+id/food_checkboxes"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|center_vertical"
                 android:gravity="end"/>
-
-            <com.joanzapata.iconify.widget.IconTextView
-                android:id="@+id/food_history"
-                android:text="@string/icon_calendar"
-                android:paddingRight="8dp"
-                android:paddingEnd="8dp"
-                android:gravity="start|center_vertical"
-                style="@style/FoodHistoryIcon"/>
 
         </LinearLayout>
 
