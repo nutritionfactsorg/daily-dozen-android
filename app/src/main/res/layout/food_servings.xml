@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/food_servings_background"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
     android:layout_width="match_parent"
