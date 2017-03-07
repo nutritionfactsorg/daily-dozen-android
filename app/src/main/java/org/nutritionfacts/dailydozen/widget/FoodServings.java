@@ -1,8 +1,6 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.greenrobot.eventbus.Subscribe;
-import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
-import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -102,18 +97,12 @@ public class FoodServings extends LinearLayout {
 
     @OnClick({R.id.food_icon, R.id.food_name})
     public void onFoodNameClicked() {
-        getContext().startActivity(createFoodIntent(FoodInfoActivity.class, food));
+        Common.openFoodInfo(getContext(), food);
     }
 
-    @OnClick(R.id.food_history)
+    @OnClick({R.id.food_history, R.id.food_streak})
     public void onFoodHistoryClicked() {
-        getContext().startActivity(createFoodIntent(FoodHistoryActivity.class, food));
-    }
-
-    private Intent createFoodIntent(final Class<? extends AppCompatActivity> klass, final Food food) {
-        final Intent intent = new Intent(getContext(), klass);
-        intent.putExtra(Args.FOOD_ID, food.getId());
-        return intent;
+        Common.openFoodHistory(getContext(), food);
     }
 
     private void initCheckboxes(Servings servings) {
