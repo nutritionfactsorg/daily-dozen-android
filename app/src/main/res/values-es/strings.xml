@@ -1,0 +1,482 @@
+<resources>
+    <string name="app_name">Daily Dozen</string>
+
+    <string name="beans">Frijoles</string>
+    <string name="berries">Bayas</string>
+    <string name="other_fruits">Otras Frutas</string>
+    <string name="cruciferous_vegetables">Vegetales Crucíferos</string>
+    <string name="greens">Vegetales de Hoja Verde</string>
+    <string name="other_vegetables">Otros Vegetales</string>
+    <string name="flaxseeds">Linaza</string>
+    <string name="nuts">Nueces</string>
+    <string name="spices">Especias</string>
+    <string name="whole_grains">Granos Integrales</string>
+    <string name="beverages">Bebidas</string>
+    <string name="exercise">Ejercicio</string>
+    <string name="serving_sizes">Tamaño de las Porciones</string>
+    <string name="types">Tipos</string>
+    <string name="history">Historia</string>
+    <string name="servings_some">Algunas Porciones</string>
+    <string name="servings_all">Todas las Porciones</string>
+    <string name="servings">Porciones</string>
+    <string name="about">Conócenos</string>
+    <string name="about_this_app">Acerca de Esta App</string>
+    <string name="latest_videos">Videos más Recientes</string>
+    <string name="donate">Dona</string>
+    <string name="subscribe">Suscríbete</string>
+    <string name="open_source">Código Abierto</string>
+    <string name="library_butterknife">ButterKnife</string>
+    <string name="not_implemented_yet">Aún no Implementado</string>
+    <string name="permission_needed_to_write_storage">No puedes hacer copias de respaldo sin permiso para guardar en el disco duro</string>
+    <string name="backup_failed">Falla en la copia de respaldo</string>
+    <string name="restore_failed">Falla en restaurar</string>
+    <string name="backup_success">Respaldo exitoso</string>
+    <string name="restore_success">Restauración exitosa</string>
+    <string name="restore_confirm_title">Restaura el respaldo</string>
+    <string name="restore_confirm_message">Todos los datos existentes seran borrados antes de restaurar el respaldo. ¿Deseas continuar?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="backup">Respaldo</string>
+    <string name="food_info">Información sobre los Alimentos</string>
+    <string name="food_history">Historia Alimenticia</string>
+    <string name="daily_servings_history">Historial de Porciones Diarias</string>
+    <string name="no_servings_recorded">¡Todavía no has registrado ninguna porción!</string>
+    <string name="task_backup_title">Respaldando</string>
+    <string name="task_restore_title">Restaurando</string>
+    <string name="task_calculating_streaks_title">Calculando la racha</string>
+    <string name="back_to_today">Volver al día de hoy</string>
+    <string name="debug">Depurar</string>
+    <string name="debug_clear_data">Borrar todos los datos</string>
+    <string name="debug_clear_data_message">Esto borrará todas las porciones registradas. ¿Deseas continuar?</string>
+    <string name="OK">OK</string>
+    <string name="dialog_streaks_title">Nueva característica: ¡Rachas!</string>
+    <string name="dialog_streaks_message">Tu base de datos será actualizada para sostener la nueva característica de rachas.</string>
+    <string name="dialog_no_email_apps_title">No se encontraron email apps</string>
+    <string name="dialog_no_email_apps_message">El respaldo de tus data requiere que tengas instalada un app de email para que puedas mandarte a ti mismo el archivo de respaldo .csv vía email. Por favor instala una app de email y trata de nuevo.</string>
+    <string name="debug_generate_random_data">Genera data al azar</string>
+    <string name="debug_generate_full_data">Genera data completa</string>
+    <string name="debug_generate_data_message">Toda la data existente será reemplazada. ¿Deseas continuar?</string>
+    <string name="task_generating_random_data">Generando data al azar</string>
+    <string name="task_loading_servings_history_title">Cargando Historial de Porciones</string>
+    <string name="time_scale">Ecala de Tiempo</string>
+    <string name="history_to_generate">Historial a Generarse</string>
+    <string name="welcome_to_my_daily_dozen">¡Bienvenido a Mi Docena Diaria!</string>
+    <string name="activity_welcome_text">Utiliza esta app a diario para llevar un registro de los alimentos que recomiendo para salud óptima y longevidad en mi libro Como no Morir.</string>
+    <string name="dialog_ask_user_to_rate_app_title">¿Te gusta esta app?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Por favor danos tus comentarios en el Play Store.</string>
+    <string name="rate_now">Danos tus Comentarios</string>
+    <string name="not_now">No en este momento</string>
+    <string name="format_version" formatted="false">version %s</string>
+    <string name="format_num_days" formatted="false">%s days</string>
+    <string name="daily_reminder_title">Recordatorio de la Docena Diaria</string>
+    <string name="daily_reminder_text">Actualiza tus porciones de hoy</string>
+    <string name="daily_reminder_settings">Configuración del Recordatorio Diario</string>
+    <string name="enable_daily_reminder">Activa el Recordatorio Diario</string>
+    <string name="remind_me_at">Recuerdame a las</string>
+    <string name="vibrate">Vibra</string>
+    <string name="play_sound">Sonido</string>
+    <string name="videos">Videos</string>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+    </string-array>
+
+    <string-array name="notification_icon_food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
+    </string-array>
+
+    <integer-array name="food_quantities">
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>1</item>
+    </integer-array>
+
+    <string-array name="about_text_lines">
+        <item>Esta app fue creada por John Slavick.</item>
+        <item />
+        <item>Las siguientes open source libraries fueron utilizadas: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, y MPAndroidChart.</item>
+        <item />
+        <item>Agradecimiento especial a los esfuerzos de los voluntarios de la app anterior: Chan Kruse, Allan Portera, y Sangeeta Kumar.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>Sigue estos pasos para restaurar el respaldo en la Daily Dozen app</item>
+        <item />
+        <item>1. La Daily Dozen app debe estar instalada en tu telefono Android. La puedes accesar aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Dale clic al archivo de respaldo anexado a este correo electronico.</item>
+        <item />
+        <item>3. Selecciona Open with Daily Dozen</item>
+    </string-array>
+
+    <string-array name="servings_time_scale_choices">
+        <item>Día</item>
+        <item>Mes</item>
+        <item>Año</item>
+    </string-array>
+
+    <string-array name="history_to_generate_choices">
+        <item>1 mes</item>
+        <item>3 meses</item>
+        <item>6 meses</item>
+        <item>1 año</item>
+        <item>2 años</item>
+        <item>5 años</item>
+    </string-array>
+
+    <string-array name="food_info_types_beans">
+        <item>Frijoles negros</item>
+        <item>Frijoles de ojo negro</item>
+        <item>Frijoles de mantequilla</item>
+        <item>Frijoles cannellini</item>
+        <item>Garbanzos</item>
+        <item>Edamame</item>
+        <item>Guisante Ingles</item>
+        <item>Frijoles garbanzos</item>
+        <item>Frijoles grandes del norte</item>
+        <item>Frijoles</item>
+        <item>Lentejas (beluga, Francesa, y de variedades rojas)</item>
+        <item>Miso</item>
+        <item>Frijoles blancos</item>
+        <item>Frijoles pintos</item>
+        <item>Frijoles rojos pequeños</item>
+        <item>Guisantes partidos (amarillos o verdes)</item>
+        <item>Tempeh</item>
+    </string-array>
+
+    <string-array name="food_info_types_berries">
+        <item>Bayas de Acai</item>
+        <item>Agracejos</item>
+        <item>Moras</item>
+        <item>Arandános azules</item>
+        <item>Cerezas (dulces o acidas)</item>
+        <item>Uvas concord</item>
+        <item>Arandános agrios</item>
+        <item>Bayas Goji</item>
+        <item>Kumquats</item>
+        <item>Moras mulberry</item>
+        <item>Frambuesas (negras o rojas)</item>
+        <item>Fresas</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_fruits">
+        <item>Manzanas</item>
+        <item>Albaricoques secos</item>
+        <item>Aguacates</item>
+        <item>Bananas</item>
+        <item>Melones naranja</item>
+        <item>Clementinas</item>
+        <item>Datiles</item>
+        <item>Higos secos</item>
+        <item>Toronja</item>
+        <item>Melones verdes</item>
+        <item>Kiwis</item>
+        <item>Limones amarillos</item>
+        <item>Limones verdes</item>
+        <item>Lychees</item>
+        <item>Mangos</item>
+        <item>Nectarinas</item>
+        <item>Naranjas</item>
+        <item>Papaya</item>
+        <item>Maracuyá</item>
+        <item>Duraznos</item>
+        <item>Peras</item>
+        <item>Piña</item>
+        <item>Ciruelas (en especial ciruelas negras)</item>
+        <item>Pluots</item>
+        <item>Granadas</item>
+        <item>Ciruelas pasas</item>
+        <item>Mandarinas</item>
+        <item>Sandía</item>
+    </string-array>
+
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Arugula</item>
+        <item>Bok choy</item>
+        <item>Brocoli</item>
+        <item>Repollos de Bruselas</item>
+        <item>Repollo</item>
+        <item>Coliflor</item>
+        <item>Berza</item>
+        <item>Rábano picante</item>
+        <item>Col rizada (negra, verde, y roja)</item>
+        <item>Hojas de mostaza</item>
+        <item>Rábanos</item>
+        <item>Nabos verdes</item>
+        <item>Berro</item>
+    </string-array>
+
+    <string-array name="food_info_types_greens">
+        <item>Arugula</item>
+        <item>Hojas de remolacha</item>
+        <item>Berza</item>
+        <item>Col rizada (negra, verde, y roja)</item>
+        <item>Mezcla Mesclun (hojas tiernas verdes variadas)</item>
+        <item>Hojas de mostaza</item>
+        <item>Alazán</item>
+        <item>Espinaca</item>
+        <item>Acelga</item>
+        <item>Nabos verdes</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_vegetables">
+        <item>Alcachofas</item>
+        <item>Espárragos</item>
+        <item>Remolachas</item>
+        <item>Pimiento morrón</item>
+        <item>Zanahorias</item>
+        <item>Maíz</item>
+        <item>Ajo</item>
+        <item>Champiñones (botón, ostra, portobello, y shiitake)</item>
+        <item>Okra</item>
+        <item>Cebollas</item>
+        <item>Patatas moradas</item>
+        <item>Calabaza</item>
+        <item>Vegetales marinos (arame, dulse, and nori)</item>
+        <item>guisantes</item>
+        <item>Calabacines (variedades de delicata, verano, y spaghetti)</item>
+        <item>Camotes</item>
+        <item>Tomates</item>
+        <item>Calabacitas zuchini</item>
+    </string-array>
+
+    <string-array name="food_info_types_flaxseeds">
+        <item>Linaza café</item>
+        <item>Linaza dorada</item>
+    </string-array>
+
+    <string-array name="food_info_types_nuts">
+        <item>Almendras</item>
+        <item>Nueces de Brasil</item>
+        <item>Marañones</item>
+        <item>Semillas de chia</item>
+        <item>Avellanas</item>
+        <item>Semillás de Cañamo</item>
+        <item>Nueces de macadamia</item>
+        <item>Nueces pecanas</item>
+        <item>Pistachos</item>
+        <item>Semillas de calabaza</item>
+        <item>Semillas de ajonjolí</item>
+        <item>Semillas de girasol</item>
+        <item>Nueces</item>
+    </string-array>
+
+    <string-array name="food_info_types_spices">
+        <item>Pimienta de Jamaica/Inglesa</item>
+        <item>Agracejo</item>
+        <item>Albahaca</item>
+        <item>Hojas de laurel</item>
+        <item>Cardamomo</item>
+        <item>Chile en polvo</item>
+        <item>Cilantro</item>
+        <item>Canela</item>
+        <item>Clavos</item>
+        <item>Cilantro</item>
+        <item>Comino</item>
+        <item>Polvo de curry</item>
+        <item>Eneldo</item>
+        <item>Fenogreco</item>
+        <item>Ajo</item>
+        <item>Gengibre</item>
+        <item>Rábano picante</item>
+        <item>Citronela</item>
+        <item>Mejorana</item>
+        <item>Polvo de mostaza</item>
+        <item>Nuez moscada</item>
+        <item>Oregano</item>
+        <item>Papríka ahumada</item>
+        <item>Perejil</item>
+        <item>Pimienta</item>
+        <item>Menta</item>
+        <item>Romero</item>
+        <item>Azafrán</item>
+        <item>Salvia</item>
+        <item>Tomillo</item>
+        <item>Cúrcuma</item>
+        <item>Vainilla</item>
+    </string-array>
+
+    <string-array name="food_info_types_whole_grains">
+        <item>Cebada</item>
+        <item>Arroz integral</item>
+        <item>Alforfón</item>
+        <item>Mijo</item>
+        <item>Avena</item>
+        <item>Palomitas de maíz</item>
+        <item>Quinoa</item>
+        <item>Centeno</item>
+        <item>Teff</item>
+        <item>Pasta integral</item>
+        <item>Arroz salvaje</item>
+    </string-array>
+
+    <string-array name="food_info_types_beverages">
+        <item>Té negro</item>
+        <item>Té Chai</item>
+        <item>Té de vainilla y manzanilla</item>
+        <item>Café</item>
+        <item>Té Earl grey</item>
+        <item>Té verde</item>
+        <item>Té de Jamaica</item>
+        <item>Chocolate caliente</item>
+        <item>Té de jazmín</item>
+        <item>Té de limón</item>
+        <item>Té de matcha</item>
+        <item>Té de retoño de almendra oolong</item>
+        <item>Té de menta</item>
+        <item>Té de Rooibos</item>
+        <item>Agua</item>
+        <item>Té blanco</item>
+    </string-array>
+
+    <string-array name="food_info_types_exercise">
+        <item>Bicicleta</item>
+        <item>Canoa</item>
+        <item>Baile</item>
+        <item>Quemado/Dodgeball</item>
+        <item>Ésquí en descenso</item>
+        <item>Esgrima</item>
+        <item>Senderismo</item>
+        <item>Quehaceres domésticos</item>
+        <item>Patinaje en hielo</item>
+        <item>Patinaje en línea</item>
+        <item>Malabarismos</item>
+        <item>Saltar en trampolín</item>
+        <item>Remos</item>
+        <item>Jugar frisbee</item>
+        <item>Patinaje</item>
+        <item>Tirar canastas</item>
+        <item>Palear nieve ligera</item>
+        <item>Patineta</item>
+        <item>Snorkeling</item>
+        <item>Surfear</item>
+        <item>Nadar recreacionalmente</item>
+        <item>Tennis (dobles)</item>
+        <item>Mantenerse a flote</item>
+        <item>Caminata rápida (4 mph)</item>
+        <item>Aerobicos acuaticos</item>
+        <item>Ésquí en agua</item>
+        <item>Jardinear</item>
+        <item>Yoga</item>
+        <item>Mochilear</item>
+        <item>Baloncesto</item>
+        <item>Bicicleta cuesta arriba</item>
+        <item>Circuito de entrenamiento con pesas</item>
+        <item>Ésquí a campo travíesa</item>
+        <item>Football americano</item>
+        <item>Hockey</item>
+        <item>Trotar</item>
+        <item>Saltos de tijera</item>
+        <item>Salta cuerda</item>
+        <item>Lacrosse</item>
+        <item>Lagartijas</item>
+        <item>Dominadas</item>
+        <item>Racquetball</item>
+        <item>Escalar</item>
+        <item>Rugby</item>
+        <item>Correr</item>
+        <item>Buceo</item>
+        <item>Tennis (sencillos)</item>
+        <item>Fútbol</item>
+        <item>Patinaje de velocidad</item>
+        <item>Squash</item>
+        <item>Aerobicos step</item>
+        <item>Natación</item>
+        <item>Caminata rápida cuesta arriba</item>
+        <item>Trotar en agua</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans">
+        <item>¼ taza de hummus o dip de frijol</item>,
+        <item>½ taza de frijoles cocidos, arvejas partidas, lentejas, tofu o tempeh</item>,
+        <item>1 taza de guisantes frescos o retoños de lentejas</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries">
+        <item>½ taza frescos o congelados</item>
+        <item>¼ taza secos</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>1 fruta de tamaño medio</item>
+        <item>1 taza de fruta partida</item>
+        <item>¼ taza de fruta seca</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+        <item>½ taza picado</item>
+        <item>¼ taza de coles de Bruselas o retoños de brócoli</item>
+        <item>1 cucharada de rábano picante</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens">
+        <item>1 taza cruda</item>
+        <item>½ taza cocida</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>1 taza de vegetales de hoja cruda</item>
+        <item>½ taza de vegetales sin hoja cruda o cocida</item>
+        <item>½ taza de jugo de vegetales</item>
+        <item>¼ taza de champiñones secos</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>1 cucharada molida</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>¼ taza de nueces o semillas</item>
+        <item>2 cucharadas de mantequilla de nueces o semillas</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices">
+        <item>¼ cucharadita de cúrcuma</item>
+        <item>Cualquier otra especie (sin sal) que gustes</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>½ taza de cereal caliente o granos, pasta o granos de maíz cocidos</item>
+        <item>1 taza de cereal frio</item>
+        <item>1 tortilla o rodaja de pan</item>
+        <item>½ de un bagel o english muffin</item>
+        <item>3 tazas de palomitas de maíz reventadas</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages">
+        <item>Un vaso (12 onzas)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>90 minutos de actividad de moderada intensidad</item>
+        <item>40 minutos de actividad de vigorosa intensidad</item>
+    </string-array>
+
+    <string name="error_cannot_handle_url">No puedes abrir el url. Por favor instala un browser.</string>
+
+</resources>
