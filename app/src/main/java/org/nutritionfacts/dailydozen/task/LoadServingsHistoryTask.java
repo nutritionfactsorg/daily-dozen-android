@@ -10,6 +10,7 @@ import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import org.nutritionfacts.dailydozen.R;
@@ -232,6 +233,9 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
         dataSet.setValueTextSize(12);
         dataSet.setValueTextColor(color);
 
+        // Format the value labels to two decimal places
+        dataSet.setValueFormatter(new LineChartValueFormatter());
+
         return new LineData(xVals, dataSet);
     }
 
@@ -257,11 +261,24 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
         Bus.loadServingsHistoryCompleteEvent(chartData);
     }
 
-    private class BarChartValueFormatter implements com.github.mikephil.charting.formatter.ValueFormatter {
+    private class BarChartValueFormatter implements ValueFormatter {
         private DecimalFormat decimalFormat;
 
-        public BarChartValueFormatter() {
+        BarChartValueFormatter() {
             decimalFormat = new DecimalFormat("#");
+        }
+
+        @Override
+        public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+            return decimalFormat.format(value);
+        }
+    }
+
+    private class LineChartValueFormatter implements ValueFormatter {
+        private final DecimalFormat decimalFormat;
+
+        LineChartValueFormatter() {
+            decimalFormat = new DecimalFormat("#.00");
         }
 
         @Override
