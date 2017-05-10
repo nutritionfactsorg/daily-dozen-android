@@ -41,8 +41,8 @@ public class DateUtil {
         cal.add(Calendar.MONTH, 1);
     }
 
-    public static void subtractMonths(Calendar cal, int numMonths) {
-        cal.add(Calendar.MONTH, 0 - Math.abs(numMonths));
+    public static void subtractTwoMonths(Calendar cal) {
+        cal.add(Calendar.MONTH, -2);
     }
 
     public static String toStringYYYYMM(Calendar cal) {

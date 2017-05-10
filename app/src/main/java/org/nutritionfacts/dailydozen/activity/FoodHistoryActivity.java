@@ -98,7 +98,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                 // We start 2 months in the past because this prevents "flickering" of dates when the user swipes to
                 // the previous month. For instance, starting in February and swiping to January, the dates from
                 // December that are shown in the January calendar will have their backgrounds noticeably flicker on.
-                DateUtil.subtractMonths(cal, 2);
+                DateUtil.subtractTwoMonths(cal);
 
                 int i = 0;
                 do {
