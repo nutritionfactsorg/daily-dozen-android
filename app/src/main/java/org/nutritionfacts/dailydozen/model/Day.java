@@ -155,19 +155,19 @@ public class Day extends TruncatableModel {
         allDays.addAll(daysInCurrentMonth);
         allDays.addAll(daysInPreviousMonth);
 
-        Collections.sort(allDays, new DayComparator(false));
+        Collections.sort(allDays, new DayComparator());
 
         return allDays;
     }
 
-    public static List<Day> getDaysInYearAndMonth(final int year, final int monthOneBased) {
+    static List<Day> getDaysInYearAndMonth(final int year, final int monthOneBased) {
         return new Select().from(Day.class)
                 .where("year = ?", year)
                 .and("month = ?", monthOneBased)
                 .execute();
     }
 
-    public static List<Day> getDaysInYear(final int year) {
+    static List<Day> getDaysInYear(final int year) {
         return new Select().from(Day.class)
                 .where("year = ?", year)
                 .execute();
@@ -187,7 +187,7 @@ public class Day extends TruncatableModel {
                 .executeSingle();
     }
 
-    public Day getDayBefore() throws InvalidDateException {
+    Day getDayBefore() throws InvalidDateException {
         return Day.getByDate(getDateString(getDateTime().minusDays(1)));
     }
 
@@ -249,17 +249,9 @@ public class Day extends TruncatableModel {
     }
 
     private static class DayComparator implements Comparator<Day> {
-        private boolean desc;
-
-        DayComparator(boolean desc) {
-            this.desc = desc;
-        }
-
         @Override
         public int compare(Day o1, Day o2) {
-            return (int) (desc ?
-                    o2.getDate() - o1.getDate() :
-                    o1.getDate() - o2.getDate());
+            return (int) (o1.getDate() - o2.getDate());
         }
     }
 }
