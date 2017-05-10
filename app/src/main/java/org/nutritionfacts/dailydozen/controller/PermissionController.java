@@ -22,7 +22,7 @@ public class PermissionController {
                 WRITE_EXTERNAL_STORAGE_REQUEST);
     }
 
-    public static boolean grantedWriteExternalStorage(int requestCode, String[] permissions, int[] grantResults) {
+    public static boolean grantedWriteExternalStorage(int requestCode, int[] grantResults) {
         boolean permissionGranted = false;
 
         switch (requestCode) {

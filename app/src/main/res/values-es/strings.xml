@@ -26,7 +26,6 @@
     <string name="subscribe">Suscríbete</string>
     <string name="open_source">Código Abierto</string>
     <string name="library_butterknife">ButterKnife</string>
-    <string name="not_implemented_yet">Aún no Implementado</string>
     <string name="permission_needed_to_write_storage">No puedes hacer copias de respaldo sin permiso para guardar en el disco duro</string>
     <string name="backup_failed">Falla en la copia de respaldo</string>
     <string name="restore_failed">Falla en restaurar</string>
@@ -67,7 +66,7 @@
     <string name="rate_now">Danos tus Comentarios</string>
     <string name="not_now">No en este momento</string>
     <string name="format_version" formatted="false">version %s</string>
-    <string name="format_num_days" formatted="false">%s days</string>
+    <string name="format_num_days" formatted="false">%d days</string>
     <string name="daily_reminder_title">Recordatorio de la Docena Diaria</string>
     <string name="daily_reminder_text">Actualiza tus porciones de hoy</string>
     <string name="daily_reminder_settings">Configuración del Recordatorio Diario</string>

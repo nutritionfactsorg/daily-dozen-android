@@ -28,10 +28,6 @@ public class Common {
         // hide constructor
     }
 
-    public static void showNotImplementedYet(final Context context) {
-        showToast(context, R.string.not_implemented_yet);
-    }
-
     public static void showToast(final Context context, final String message) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
@@ -90,7 +86,7 @@ public class Common {
         }
     }
 
-    public static void openPlayStore(final Context context) {
+    private static void openPlayStore(final Context context) {
         try {
             context.startActivity(createOpenPlayStoreIntent(context, "market://details?id="));
         } catch (ActivityNotFoundException e) {

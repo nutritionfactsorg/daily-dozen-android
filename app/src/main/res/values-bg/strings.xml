@@ -27,7 +27,6 @@
     <string name="subscribe">Абонирай се</string>
     <string name="open_source">Отворен код</string>
     <string name="library_butterknife">ButterKnife</string>
-    <string name="not_implemented_yet">Все още не е внедрено</string>
     <string name="permission_needed_to_write_storage">Не може да направите резервно копие без да имате права за писане върху паметта</string>
     <string name="backup_failed">Задачата за създаване на архив е неуспешна</string>
     <string name="restore_failed">Процесът по възстановяване на информация от архив е неуспешен</string>
@@ -68,7 +67,7 @@
     <string name="rate_now">Изпратете обратна информация</string>
     <string name="not_now">Пропусни</string>
     <string formatted="false" name="format_version">версия %s</string>
-    <string formatted="false" name="format_num_days">%s дни</string>
+    <string formatted="false" name="format_num_days">%d дни</string>
     <string name="daily_reminder_title">Напомняне за Daily Dozen</string>
     <string name="daily_reminder_text">Актуализиране на вашите порции за днес</string>
     <string name="daily_reminder_settings">Настройки за напомняне</string>

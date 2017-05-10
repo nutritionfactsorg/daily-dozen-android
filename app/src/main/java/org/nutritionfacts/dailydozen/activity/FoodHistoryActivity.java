@@ -31,8 +31,6 @@ import butterknife.ButterKnife;
 import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends FoodLoadingActivity {
-    private static final String TAG = "FoodHistoryActivity";
-
     @BindView(R.id.calendar_legend)
     protected ViewGroup vgLegend;
 

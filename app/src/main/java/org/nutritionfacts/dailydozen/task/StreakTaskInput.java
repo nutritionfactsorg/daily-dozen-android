@@ -12,7 +12,7 @@ public class StreakTaskInput {
         this.food = food;
     }
 
-    public Day getStartingDay() {
+    Day getStartingDay() {
         return startingDay;
     }
 

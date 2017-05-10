@@ -7,12 +7,12 @@ import android.os.AsyncTask;
 
 import timber.log.Timber;
 
-public abstract class TaskWithContext<Params, Progress, Result> extends AsyncTask<Params, Progress, Result> {
+abstract class TaskWithContext<Params, Progress, Result> extends AsyncTask<Params, Progress, Result> {
     private Context context;
 
-    protected ProgressDialog progress;
+    ProgressDialog progress;
 
-    public TaskWithContext(final Context context) {
+    TaskWithContext(final Context context) {
         this.context = context;
     }
 

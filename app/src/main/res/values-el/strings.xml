@@ -27,7 +27,6 @@
     <string name="subscribe">Εγγραφή</string>
     <string name="open_source">Ανοιχτός Κώδικας</string>
     <string name="library_butterknife">Μαχαίρι Βουτύρου</string>
-    <string name="not_implemented_yet">Μη υλοποιημένο ακόμα</string>
     <string name="permission_needed_to_write_storage">Αδύνατη η δημιουργία αντιγράφου ασφαλείας χωρίς δικαιώματα εγγραφής στον αποθηκευτικό χώρο</string>
     <string name="backup_failed">Απέτυχε το αντίγραφο ασφαλείας</string>
     <string name="restore_failed">Απέτυχε η επαναφορά αντιγράφου ασφαλείας</string>
@@ -68,7 +67,7 @@
     <string name="rate_now">Αποστολή σχολίων</string>
     <string name="not_now">Όχι τώρα</string>
     <string formatted="false" name="format_version">version %s</string>
-    <string formatted="false" name="format_num_days">%s days</string>
+    <string formatted="false" name="format_num_days">%d days</string>
     <string name="daily_reminder_title">Υπενθύμιση Daily Dozen</string>
     <string name="daily_reminder_text">Ενημερώστε τις μερίδες σας για σήμερα</string>
     <string name="daily_reminder_settings">Ρυθμίσεις Καθημερινής Υπενθύμισης</string>

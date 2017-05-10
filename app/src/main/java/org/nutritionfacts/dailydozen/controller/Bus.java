@@ -61,7 +61,7 @@ public class Bus {
         post(new TimeScaleSelectedEvent(selectedTimeScale));
     }
 
-    public static void timeRangeSelectedEvent(final int selectedYear, final int selectedMonth) {
-        post(new TimeRangeSelectedEvent(selectedYear, selectedMonth));
+    public static void timeRangeSelectedEvent() {
+        post(new TimeRangeSelectedEvent());
     }
 }

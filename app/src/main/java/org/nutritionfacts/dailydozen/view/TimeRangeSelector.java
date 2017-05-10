@@ -191,7 +191,7 @@ public class TimeRangeSelector extends LinearLayout {
     }
 
     private void postTimeRangeSelectedEvent() {
-        Bus.timeRangeSelectedEvent(selectedYear, selectedMonth);
+        Bus.timeRangeSelectedEvent();
     }
 
     @Subscribe

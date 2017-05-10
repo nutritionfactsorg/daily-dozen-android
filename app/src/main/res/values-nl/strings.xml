@@ -27,7 +27,6 @@
     <string name="subscribe">Abonneer</string>
     <string name="open_source">Open Source</string>
     <string name="library_butterknife">ButterKnife</string>
-    <string name="not_implemented_yet">Nog niet geimplementeerd</string>
     <string name="permission_needed_to_write_storage">Kan geen backup maken zonder schrijfrechten naar opslag</string>
     <string name="backup_failed">Backup mislukt</string>
     <string name="restore_failed">Herstel mislukt</string>
@@ -68,7 +67,7 @@
     <string name="rate_now">Geef terugkoppeling!</string>
     <string name="not_now">Niet Nu</string>
     <string name="format_version" formatted="false">versie %s</string>
-    <string name="format_num_days" formatted="false">%s dagen</string>
+    <string name="format_num_days" formatted="false">%d dagen</string>
     <string name="daily_reminder_title">Herinnering Dagelijkse Dozijn</string>
     <string name="daily_reminder_text">Vul uw dagelijkse porties in</string>
     <string name="daily_reminder_settings">Instellingen dagelijkse herinneringen</string>

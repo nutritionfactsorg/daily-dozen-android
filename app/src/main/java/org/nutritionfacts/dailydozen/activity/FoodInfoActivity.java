@@ -21,8 +21,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class FoodInfoActivity extends FoodLoadingActivity {
-    private final static String TAG = FoodInfoActivity.class.getSimpleName();
-
     @BindView(R.id.food_info_image)
     protected ImageView ivFood;
     @BindView(R.id.food_serving_sizes)

@@ -1,9 +1,9 @@
 package org.nutritionfacts.dailydozen.view;
 
 import android.content.Context;
-import android.widget.CheckBox;
+import android.support.v7.widget.AppCompatCheckBox;
 
-public class ServingCheckBox extends CheckBox {
+public class ServingCheckBox extends AppCompatCheckBox {
     private ServingCheckBox scbNextServing;
     private ServingCheckBox scvPrevServing;
 

@@ -20,23 +20,12 @@ public class LoadServingsHistoryTaskParams {
         return timeScale;
     }
 
-    public void setTimeScale(@TimeScale.Interface int timeScale) {
-        this.timeScale = timeScale;
-    }
-
     public int getSelectedYear() {
         return selectedYear;
-    }
-
-    public void setSelectedYear(int selectedYear) {
-        this.selectedYear = selectedYear;
     }
 
     public int getSelectedMonth() {
         return selectedMonth;
     }
 
-    public void setSelectedMonth(int selectedMonth) {
-        this.selectedMonth = selectedMonth;
-    }
 }

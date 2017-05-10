@@ -73,13 +73,13 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHo
         return foodTypes.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.food_name)
-        protected TextView foodName;
+        TextView foodName;
         @BindView(R.id.food_videos)
-        protected TextView foodVideos;
+        TextView foodVideos;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

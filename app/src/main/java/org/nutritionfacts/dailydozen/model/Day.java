@@ -19,8 +19,6 @@ import hirondelle.date4j.DateTime;
 
 @Table(name = "dates")
 public class Day extends TruncatableModel {
-    private final static String TAG = Day.class.getSimpleName();
-
     @Column(name = "date", unique = true, index = true)
     private long date;
 
@@ -52,7 +50,7 @@ public class Day extends TruncatableModel {
         return getDateString(getDateTime());
     }
 
-    public String getDateString(final DateTime dateTime) {
+    private String getDateString(final DateTime dateTime) {
         return dateTime.format("YYYYMMDD");
     }
 
@@ -65,7 +63,7 @@ public class Day extends TruncatableModel {
         return getEpoch().numDaysFrom(date) + 1;
     }
 
-    public static DateTime getEpoch() {
+    private static DateTime getEpoch() {
         return DateTime.forInstant(0, TimeZone.getDefault());
     }
 
