@@ -32,7 +32,7 @@ public class StreakWidget extends IconTextView {
         if (streak > ONE_DAY) {
             setVisibility(View.VISIBLE);
 
-            setText(String.format(getContext().getString(R.string.format_num_days), streak));
+            setText(getContext().getString(R.string.format_num_days, streak));
 
             if (streak < ONE_WEEK) {
                 setBackgroundAndTextColor(R.drawable.rounded_rectangle_bronze, android.R.color.white);
