@@ -21,9 +21,12 @@
 -keepattributes SourceFile,LineNumberTable
 -keep public class * extends java.lang.Exception
 
+# ActiveAndroid
 -keep class com.activeandroid.** { *; }
+
+# MPAndroidChart
 -keep class com.github.mikephil.charting.** { *; }
-# Fabric end
+-dontwarn io.realm.**
 
 # EventBus
 -keepclassmembers class ** {
