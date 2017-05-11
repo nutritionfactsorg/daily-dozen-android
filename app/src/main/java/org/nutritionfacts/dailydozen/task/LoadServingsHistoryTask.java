@@ -40,6 +40,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
 
         progress.setTitle(R.string.task_loading_servings_history_title);
         progress.show();
+
+        // This prevents ServingsHistoryActivity from being closed when the user taps to go to the next/previous
+        // month/year before the progress dialog has closed (before this task has completed)
+        progress.setCancelable(false);
     }
 
     @Override
