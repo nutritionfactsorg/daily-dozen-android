@@ -52,7 +52,7 @@
     <string name="dialog_streaks_title">Nueva característica: ¡Rachas!</string>
     <string name="dialog_streaks_message">Tu base de datos será actualizada para sostener la nueva característica de rachas.</string>
     <string name="dialog_no_email_apps_title">No se encontraron email apps</string>
-    <string name="dialog_no_email_apps_message">El respaldo de tus data requiere que tengas instalada un app de email para que puedas mandarte a ti mismo el archivo de respaldo .csv vía email. Por favor instala una app de email y trata de nuevo.</string>
+    <string name="dialog_no_email_apps_message">El respaldo de tu data requiere que tengas instalada un app de email para que puedas mandarte a ti mismo el archivo de respaldo .csv vía email. Por favor instala una app de email y trata de nuevo.</string>
     <string name="debug_generate_random_data">Genera data al azar</string>
     <string name="debug_generate_full_data">Genera data completa</string>
     <string name="debug_generate_data_message">Toda la data existente será reemplazada. ¿Deseas continuar?</string>
@@ -173,10 +173,10 @@
         <item>Bayas de Acai</item>
         <item>Agracejos</item>
         <item>Moras</item>
-        <item>Arandános azules</item>
+        <item>Arándanos azules</item>
         <item>Cerezas (dulces o acidas)</item>
         <item>Uvas concord</item>
-        <item>Arandános agrios</item>
+        <item>Arándanos agrios</item>
         <item>Bayas Goji</item>
         <item>Kumquats</item>
         <item>Moras mulberry</item>
@@ -191,7 +191,7 @@
         <item>Bananas</item>
         <item>Melones naranja</item>
         <item>Clementinas</item>
-        <item>Datiles</item>
+        <item>Dátiles</item>
         <item>Higos secos</item>
         <item>Toronja</item>
         <item>Melones verdes</item>
@@ -218,7 +218,7 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Arugula</item>
         <item>Bok choy</item>
-        <item>Brocoli</item>
+        <item>Brócoli</item>
         <item>Repollos de Bruselas</item>
         <item>Repollo</item>
         <item>Coliflor</item>
@@ -276,7 +276,7 @@
         <item>Marañones</item>
         <item>Semillas de chia</item>
         <item>Avellanas</item>
-        <item>Semillás de Cañamo</item>
+        <item>Semillas de Cáñamo</item>
         <item>Nueces de macadamia</item>
         <item>Nueces pecanas</item>
         <item>Pistachos</item>
@@ -359,7 +359,7 @@
         <item>Canoa</item>
         <item>Baile</item>
         <item>Quemado/Dodgeball</item>
-        <item>Ésquí en descenso</item>
+        <item>Esquí en descenso</item>
         <item>Esgrima</item>
         <item>Senderismo</item>
         <item>Quehaceres domésticos</item>
@@ -379,15 +379,15 @@
         <item>Tennis (dobles)</item>
         <item>Mantenerse a flote</item>
         <item>Caminata rápida (4 mph)</item>
-        <item>Aerobicos acuaticos</item>
-        <item>Ésquí en agua</item>
+        <item>Aerobicos acuáticos</item>
+        <item>Esquí en agua</item>
         <item>Jardinear</item>
         <item>Yoga</item>
         <item>Mochilear</item>
         <item>Baloncesto</item>
         <item>Bicicleta cuesta arriba</item>
         <item>Circuito de entrenamiento con pesas</item>
-        <item>Ésquí a campo travíesa</item>
+        <item>Esquí a campo traviesa</item>
         <item>Football americano</item>
         <item>Hockey</item>
         <item>Trotar</item>
@@ -462,7 +462,7 @@
 
     <string-array name="food_info_serving_sizes_whole_grains">
         <item>½ taza de cereal caliente o granos, pasta o granos de maíz cocidos</item>
-        <item>1 taza de cereal frio</item>
+        <item>1 taza de cereal frío</item>
         <item>1 tortilla o rodaja de pan</item>
         <item>½ de un bagel o english muffin</item>
         <item>3 tazas de palomitas de maíz reventadas</item>
