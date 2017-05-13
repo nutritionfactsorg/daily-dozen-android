@@ -58,7 +58,7 @@
     <string name="debug_generate_data_message">Toda la data existente será reemplazada. ¿Deseas continuar?</string>
     <string name="task_generating_random_data">Generando data al azar</string>
     <string name="task_loading_servings_history_title">Cargando Historial de Porciones</string>
-    <string name="time_scale">Ecala de Tiempo</string>
+    <string name="time_scale">Escala de Tiempo</string>
     <string name="history_to_generate">Historial a Generarse</string>
     <string name="welcome_to_my_daily_dozen">¡Bienvenido a Mi Docena Diaria!</string>
     <string name="activity_welcome_text">Utiliza esta app a diario para llevar un registro de los alimentos que recomiendo para salud óptima y longevidad en mi libro Como no Morir.</string>
