@@ -5,7 +5,6 @@ import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,10 +30,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import likeanimation.LikeButtonView;
+import timber.log.Timber;
 
 public class DateFragment extends Fragment {
-    private static final String TAG = DateFragment.class.getSimpleName();
-
     @BindView(R.id.back_to_today)
     protected TextView tvBackToToday;
     @BindView(R.id.date_servings)
@@ -101,7 +99,7 @@ public class DateFragment extends Fragment {
                     }
                 }
             } catch (InvalidDateException e) {
-                Log.e(TAG, "displayFormForDate: ", e);
+                Timber.e("displayFormForDate: ", e);
             }
         }
     }

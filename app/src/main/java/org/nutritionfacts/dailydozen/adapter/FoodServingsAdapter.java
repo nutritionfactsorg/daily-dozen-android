@@ -50,11 +50,11 @@ public class FoodServingsAdapter extends RecyclerView.Adapter<FoodServingsAdapte
         return servingSizes.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(android.R.id.text1)
-        protected TextView servingSize;
+        TextView servingSize;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

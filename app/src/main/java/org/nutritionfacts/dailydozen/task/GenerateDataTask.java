@@ -8,6 +8,7 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
 
 import java.util.List;
 import java.util.Random;
@@ -16,8 +17,8 @@ import java.util.TimeZone;
 import hirondelle.date4j.DateTime;
 import hugo.weaving.DebugLog;
 
-public class GenerateDataTask extends TaskWithContext<GenerateDataTaskInput, Integer, Boolean> {
-    private GenerateDataTaskInput taskInput;
+public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, Integer, Boolean> {
+    private GenerateDataTaskParams taskParams;
     private Random random;
 
     public GenerateDataTask(Context context) {
@@ -35,16 +36,16 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskInput, Int
     }
 
     @Override
-    protected Boolean doInBackground(GenerateDataTaskInput... params) {
+    protected Boolean doInBackground(GenerateDataTaskParams... params) {
         if (params != null && params.length > 0) {
-            taskInput = params[0];
+            taskParams = params[0];
         }
 
         deleteAllExistingData();
 
         final List<Food> allFoods = Food.getAllFoods();
 
-        final int numDays = taskInput.getHistoryToGenerate();
+        final int numDays = taskParams.getHistoryToGenerate();
 
         final DateTime today = DateTime.today(TimeZone.getDefault());
         DateTime current = today.minusDays(numDays);
@@ -72,7 +73,7 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskInput, Int
 
             for (Food food : allFoods) {
                 final int recommendedServings = food.getRecommendedServings();
-                final int numServings = taskInput.generateRandomData() ? random.nextInt(recommendedServings + 1) : recommendedServings;
+                final int numServings = taskParams.generateRandomData() ? random.nextInt(recommendedServings + 1) : recommendedServings;
 
                 if (numServings > 0) {
                     Servings.createServingsIfDoesNotExist(day, food, numServings);

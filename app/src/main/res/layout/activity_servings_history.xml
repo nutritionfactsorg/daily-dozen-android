@@ -4,30 +4,15 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <LinearLayout
+    <org.nutritionfacts.dailydozen.view.TimeScaleSelector
+        android:id="@+id/daily_servings_history_time_scale"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content" />
 
-        <TextView
-            android:text="@string/time_scale"
-            style="@style/PrimaryText"
-            android:paddingLeft="16dp"
-            android:paddingStart="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <View
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="1dp"/>
-
-        <Spinner
-            android:id="@+id/daily_servings_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
+    <org.nutritionfacts.dailydozen.view.TimeRangeSelector
+        android:id="@+id/daily_servings_history_time_range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <View
         android:background="@color/colorDividerColor"

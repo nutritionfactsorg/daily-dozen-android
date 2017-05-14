@@ -11,7 +11,6 @@ import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 import hugo.weaving.DebugLog;
 
 public class Prefs {
-    private static final String FOODS_HAVE_BEEN_CREATED = "foods_have_been_created";
     private static final String STREAKS_HAVE_BEEN_CALCULATED_ON_DATABASE_UPGRADE_V2 = "v2_streaks_calculated";
     private static final String USER_HAS_SEEN_FIRST_STAR_EXPLOSION = "user_has_seen_first_star_explosion";
     private static final String PREF_UPDATE_REMINDER = "pref_update_reminder";
@@ -21,7 +20,7 @@ public class Prefs {
 
     private SharedPreferences sharedPrefs;
 
-    public Prefs(final Context context) {
+    private Prefs(final Context context) {
         this.sharedPrefs = context.getSharedPreferences(Common.PREFERENCES_FILE, Context.MODE_PRIVATE);
     }
 
@@ -51,14 +50,6 @@ public class Prefs {
 
     private void setBooleanPref(final String name, final boolean value) {
         sharedPrefs.edit().putBoolean(name, value).apply();
-    }
-
-    public boolean foodsHaveBeenCreated() {
-        return getBooleanPref(FOODS_HAVE_BEEN_CREATED);
-    }
-
-    public void setFoodsHaveBeenCreated() {
-        setBooleanPref(FOODS_HAVE_BEEN_CREATED, true);
     }
 
     public boolean streaksHaveBeenCalculatedAfterDatabaseUpgradeToV2() {

@@ -19,6 +19,7 @@
     <string name="servings_some">Some servings</string>
     <string name="servings_all">All servings</string>
     <string name="servings">Servings</string>
+    <string name="moving_average">Moving Average</string>
     <string name="about">About</string>
     <string name="about_this_app">About this app</string>
     <string name="latest_videos">Latest Videos</string>
@@ -49,7 +50,6 @@
     <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
     <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
     <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
-    <string name="not_implemented_yet">Not implemented yet</string>
     <string name="permission_needed_to_write_storage">Can\'t backup without permission to write to storage</string>
     <string name="backup_failed">Backup failed</string>
     <string name="restore_failed">Restore failed</string>
@@ -95,7 +95,7 @@
     <string name="rate_now">Give Feedback</string>
     <string name="not_now">Not Now</string>
     <string name="format_version" formatted="false">version %s</string>
-    <string name="format_num_days" formatted="false">%s days</string>
+    <string name="format_num_days" formatted="false">%d days</string>
     <string name="daily_reminder_title">Daily Dozen Reminder</string>
     <string name="daily_reminder_text">Update your servings for today</string>
     <string name="daily_reminder_settings">Daily Reminder Settings</string>

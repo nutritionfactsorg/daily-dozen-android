@@ -62,7 +62,7 @@ public class AboutActivity extends AppCompatActivity {
 
     private void initHeader() {
         tvHeader.setText(getString(R.string.app_name));
-        tvVersion.setText(String.format(getString(R.string.format_version), BuildConfig.VERSION_NAME));
+        tvVersion.setText(getString(R.string.format_version, BuildConfig.VERSION_NAME));
     }
 
     private void initLinksInWelcome() {

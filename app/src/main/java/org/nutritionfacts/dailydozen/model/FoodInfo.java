@@ -156,7 +156,7 @@ public class FoodInfo {
         putServingSize(res, exercise, R.array.food_info_serving_sizes_exercise);
     }
 
-    public static void putFoodTypeVideos(Resources res, String food, int urlId) {
+    private static void putFoodTypeVideos(Resources res, String food, int urlId) {
         foodTypeVideos.put(food, getVideoLink(res.getString(urlId)));
     }
 
@@ -185,7 +185,7 @@ public class FoodInfo {
         return foodVideos.containsKey(foodName) ? foodVideos.get(foodName) : new ArrayList<String>();
     }
 
-    public static void putFoodVideosLink(Resources res, String food, int videosId) {
+    private static void putFoodVideosLink(Resources res, String food, int videosId) {
         final List<String> topicVideos = new ArrayList<>();
 
         for (String topic : res.getStringArray(videosId)) {

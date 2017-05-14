@@ -8,10 +8,15 @@ import android.net.Uri;
 import android.support.annotation.ColorInt;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
+import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
+import org.nutritionfacts.dailydozen.model.Food;
 
 public class Common {
     public static final String FILE_PROVIDER_AUTHORITY = "org.nutritionfacts.dailydozen.fileprovider";
@@ -21,10 +26,6 @@ public class Common {
 
     private Common() {
         // hide constructor
-    }
-
-    public static void showNotImplementedYet(final Context context) {
-        showToast(context, R.string.not_implemented_yet);
     }
 
     public static void showToast(final Context context, final String message) {
@@ -85,7 +86,7 @@ public class Common {
         }
     }
 
-    public static void openPlayStore(final Context context) {
+    private static void openPlayStore(final Context context) {
         try {
             context.startActivity(createOpenPlayStoreIntent(context, "market://details?id="));
         } catch (ActivityNotFoundException e) {
@@ -114,5 +115,19 @@ public class Common {
     @ColorInt
     public static int getListItemColorForPosition(final Context context, final int position) {
         return ContextCompat.getColor(context, position % 2 == 0 ? android.R.color.white : R.color.gray_light);
+    }
+
+    private static Intent createFoodIntent(final Context context, final Class<? extends AppCompatActivity> klass, final Food food) {
+        final Intent intent = new Intent(context, klass);
+        intent.putExtra(Args.FOOD_ID, food.getId());
+        return intent;
+    }
+
+    public static void openFoodInfo(final Context context, final Food food) {
+        context.startActivity(createFoodIntent(context, FoodInfoActivity.class, food));
+    }
+
+    public static void openFoodHistory(final Context context, final Food food) {
+        context.startActivity(createFoodIntent(context, FoodHistoryActivity.class, food));
     }
 }

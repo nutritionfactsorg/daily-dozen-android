@@ -19,6 +19,7 @@
     <string name="servings_some">Einige Portionen</string>
     <string name="servings_all">Alle Portionen</string>
     <string name="servings">Portionen</string>
+    <string name="moving_average">Gleitender Durchschnitt</string>
     <string name="serving_sizes">Portionsgröße</string>
     <string name="restore_success">Wiederherstellung erfolgreich</string>
     <string name="restore_failed">Wiederherstellung fehlgeschlagen</string>
@@ -33,7 +34,6 @@
     <string name="open_source">Open Source</string>
     <string name="nuts">Nüsse</string>
     <string name="not_now">Nicht jetzt</string>
-    <string name="not_implemented_yet">Noch nicht implementiert</string>
     <string name="no_servings_recorded">Du hast noch keine Portionen aufgezeichnet!</string>
     <string name="no">Nein</string>
     <string name="library_butterknife">Buttermesser</string>
@@ -42,7 +42,7 @@
     <string name="history">Historie</string>
     <string name="greens">Blattgemüse</string>
     <string name="format_version">Version %s</string>
-    <string name="format_num_days">%s Tage</string>
+    <string name="format_num_days">%d Tage</string>
     <string name="food_info">Lebensmittelinfo</string>
     <string name="food_history">Lebensmittel Historie</string>
     <string name="flaxseeds">Leinsamen</string>

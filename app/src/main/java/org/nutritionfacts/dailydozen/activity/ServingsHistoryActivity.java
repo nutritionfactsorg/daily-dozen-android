@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
@@ -14,8 +12,13 @@ import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
-import org.nutritionfacts.dailydozen.model.enums.TimeScale;
+import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
+import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
+import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
+import org.nutritionfacts.dailydozen.task.params.LoadServingsHistoryTaskParams;
+import org.nutritionfacts.dailydozen.view.TimeRangeSelector;
+import org.nutritionfacts.dailydozen.view.TimeScaleSelector;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,8 +26,10 @@ import butterknife.ButterKnife;
 public class ServingsHistoryActivity extends AppCompatActivity
         implements AdapterView.OnItemSelectedListener {
 
-    @BindView(R.id.daily_servings_spinner)
-    protected Spinner historySpinner;
+    @BindView(R.id.daily_servings_history_time_scale)
+    protected TimeScaleSelector timeScaleSelector;
+    @BindView(R.id.daily_servings_history_time_range)
+    protected TimeRangeSelector timeRangeSelector;
     @BindView(R.id.daily_servings_chart)
     protected CombinedChart chart;
 
@@ -36,49 +41,52 @@ public class ServingsHistoryActivity extends AppCompatActivity
         setContentView(R.layout.activity_servings_history);
         ButterKnife.bind(this);
 
-        initHistorySpinner();
+        initTimeRangeSelector();
+
         loadData();
+    }
+
+    private void initTimeRangeSelector() {
+        final Day firstDay = Day.getFirstDay();
+        final Day lastDay = Day.getLastDay();
+        timeRangeSelector.setStartAndEnd(
+                firstDay.getYear(), firstDay.getMonth(),
+                lastDay.getYear(), lastDay.getMonth());
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         Bus.register(this);
+        Bus.register(timeRangeSelector);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Bus.unregister(this);
+        Bus.unregister(timeRangeSelector);
     }
 
     private void loadData() {
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
-            new LoadServingsHistoryTask(this).execute(getSelectedDaysOfHistory());
+
+            new LoadServingsHistoryTask(this).execute(new LoadServingsHistoryTaskParams(
+                    timeScaleSelector.getSelectedTimeScale(),
+                    timeRangeSelector.getSelectedYear(),
+                    timeRangeSelector.getSelectedMonth()));
         }
     }
 
-    @TimeScale.Interface
-    private int getSelectedDaysOfHistory() {
-        switch (historySpinner.getSelectedItemPosition()) {
-            case 0:
-            default:
-                return TimeScale.DAYS;
-            case 1:
-                return TimeScale.MONTHS;
-            case 2:
-                return TimeScale.YEARS;
-        }
+    @Subscribe
+    public void onEvent(TimeRangeSelectedEvent event) {
+        loadData();
     }
 
-    private void initHistorySpinner() {
-        final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.servings_time_scale_choices, android.R.layout.simple_list_item_1);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        historySpinner.setOnItemSelectedListener(this);
-        historySpinner.setAdapter(adapter);
+    @Subscribe
+    public void onEvent(TimeScaleSelectedEvent event) {
+        loadData();
     }
 
     @Subscribe
@@ -111,6 +119,7 @@ public class ServingsHistoryActivity extends AppCompatActivity
         chart.setDrawValueAboveBar(false);
 
         // Even though we hide the left axis, we must set its max value so that full servings days reach the top
+        chart.getAxisLeft().setAxisMinValue(0);
         chart.getAxisLeft().setAxisMaxValue(24);
         chart.getAxisLeft().setEnabled(false);
 

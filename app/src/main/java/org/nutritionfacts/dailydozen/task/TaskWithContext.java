@@ -4,16 +4,15 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
-import android.util.Log;
 
-public abstract class TaskWithContext<Params, Progress, Result> extends AsyncTask<Params, Progress, Result> {
-    private static final String TAG = TaskWithContext.class.getSimpleName();
+import timber.log.Timber;
 
+abstract class TaskWithContext<Params, Progress, Result> extends AsyncTask<Params, Progress, Result> {
     private Context context;
 
-    protected ProgressDialog progress;
+    ProgressDialog progress;
 
-    public TaskWithContext(final Context context) {
+    TaskWithContext(final Context context) {
         this.context = context;
     }
 
@@ -48,7 +47,7 @@ public abstract class TaskWithContext<Params, Progress, Result> extends AsyncTas
                 progress.dismiss();
             }
         } catch (Exception e) {
-            Log.e(TAG, "onPostExecute: Exception while trying to dismiss progress dialog");
+            Timber.e("onPostExecute: Exception while trying to dismiss progress dialog");
         } finally {
             progress = null;
         }

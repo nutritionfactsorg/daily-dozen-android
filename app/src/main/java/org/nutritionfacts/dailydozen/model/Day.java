@@ -8,6 +8,9 @@ import com.activeandroid.query.Select;
 
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -16,8 +19,6 @@ import hirondelle.date4j.DateTime;
 
 @Table(name = "dates")
 public class Day extends TruncatableModel {
-    private final static String TAG = Day.class.getSimpleName();
-
     @Column(name = "date", unique = true, index = true)
     private long date;
 
@@ -49,7 +50,7 @@ public class Day extends TruncatableModel {
         return getDateString(getDateTime());
     }
 
-    public String getDateString(final DateTime dateTime) {
+    private String getDateString(final DateTime dateTime) {
         return dateTime.format("YYYYMMDD");
     }
 
@@ -62,7 +63,7 @@ public class Day extends TruncatableModel {
         return getEpoch().numDaysFrom(date) + 1;
     }
 
-    public static DateTime getEpoch() {
+    private static DateTime getEpoch() {
         return DateTime.forInstant(0, TimeZone.getDefault());
     }
 
@@ -103,7 +104,7 @@ public class Day extends TruncatableModel {
     }
 
     public String getDayOfWeek() {
-        return getDateTime().format("WWW", Locale.getDefault());
+        return getDateTime().format("D (WWW)", Locale.getDefault());
     }
 
     public static Day getByDate(String dateString) throws InvalidDateException {
@@ -140,14 +141,33 @@ public class Day extends TruncatableModel {
                 .execute();
     }
 
-    public static List<Day> getDaysInYearAndMonth(final int year, final int monthOneBased) {
+    public static List<Day> getLastTwoMonths(int year, int month) {
+        final List<Day> daysInCurrentMonth = getDaysInYearAndMonth(year, month);
+        final List<Day> daysInPreviousMonth;
+
+        if (month == 1) {
+            daysInPreviousMonth = getDaysInYearAndMonth(year - 1, 12);
+        } else {
+            daysInPreviousMonth = getDaysInYearAndMonth(year, month - 1);
+        }
+
+        final List<Day> allDays = new ArrayList<>(daysInCurrentMonth.size() + daysInPreviousMonth.size());
+        allDays.addAll(daysInCurrentMonth);
+        allDays.addAll(daysInPreviousMonth);
+
+        Collections.sort(allDays, new DayComparator());
+
+        return allDays;
+    }
+
+    static List<Day> getDaysInYearAndMonth(final int year, final int monthOneBased) {
         return new Select().from(Day.class)
                 .where("year = ?", year)
                 .and("month = ?", monthOneBased)
                 .execute();
     }
 
-    public static List<Day> getDaysInYear(final int year) {
+    static List<Day> getDaysInYear(final int year) {
         return new Select().from(Day.class)
                 .where("year = ?", year)
                 .execute();
@@ -160,7 +180,14 @@ public class Day extends TruncatableModel {
                 .executeSingle();
     }
 
-    public Day getDayBefore() throws InvalidDateException {
+    public static Day getLastDay() {
+        return new Select().from(Day.class)
+                .orderBy("date DESC")
+                .limit(1)
+                .executeSingle();
+    }
+
+    Day getDayBefore() throws InvalidDateException {
         return Day.getByDate(getDateString(getDateTime().minusDays(1)));
     }
 
@@ -202,5 +229,29 @@ public class Day extends TruncatableModel {
         return dateInQuestion.getYear().equals(today.getYear()) &&
                 dateInQuestion.getMonth().equals(today.getMonth()) &&
                 dateInQuestion.getDay().equals(today.getDay());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Day day = (Day) o;
+
+        return date == day.date;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = (int) (31 * result + (date ^ (date >>> 32)));
+        return result;
+    }
+
+    private static class DayComparator implements Comparator<Day> {
+        @Override
+        public int compare(Day o1, Day o2) {
+            return (int) (o1.getDate() - o2.getDate());
+        }
     }
 }

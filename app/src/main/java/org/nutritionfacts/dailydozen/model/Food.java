@@ -78,10 +78,6 @@ public class Food extends Model {
         return new Select().from(Food.class).where("Id = ?", foodId).executeSingle();
     }
 
-    public static Food getByName(final String foodName) {
-        return new Select().from(Food.class).where("name = ?", foodName).executeSingle();
-    }
-
     public static Food getByNameOrIdName(final String idName) {
         return new Select().from(Food.class)
                 .where("id_name = ?", idName)

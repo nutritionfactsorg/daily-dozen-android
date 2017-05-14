@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if (PermissionController.grantedWriteExternalStorage(requestCode, permissions, grantResults)) {
+        if (PermissionController.grantedWriteExternalStorage(requestCode, grantResults)) {
             backup();
         } else {
             Common.showToast(this, R.string.permission_needed_to_write_storage);
