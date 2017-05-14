@@ -45,6 +45,15 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
+###Version 12
+- Improved performance and functionality of the Daily Servings History graph
+- Redesigned checkbox layout to improve support for translations and small screens
+- Added Spanish translation - thanks to contributor Monica Suarez
+- Added French translation - thanks to contributor [vgstef](https://github.com/vgstef)
+- Added Dutch translation - thanks to contributor [gfvpelt](https://github.com/gfvpelt)
+- Added Bulgarian translation - thanks to contributor [haripetrov](https://github.com/haripetrov)
+- Added Greek translation - thanks to contributor [kapcom01](https://github.com/kapcom01)
+
 ###Version 11
 - Added German translation - thanks to contributor [MovGP0](https://github.com/MovGP0)
 - Improved CheckBox functionality - thanks to contributor [notmypassword](https://github.com/notmypassword)
