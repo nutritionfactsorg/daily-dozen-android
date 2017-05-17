@@ -23,8 +23,8 @@ public class DateServings extends LinearLayout {
     protected TextView tvHeader;
     @BindView(R.id.star)
     protected TextView tvStar;
-    @BindView(R.id.sub_header)
-    protected TextView tvSubHeader;
+    @BindView(R.id.num_servings)
+    protected TextView tvNumServings;
 
     public DateServings(Context context) {
         super(context);
@@ -40,32 +40,13 @@ public class DateServings extends LinearLayout {
         final View view = inflate(context, R.layout.date_servings, this);
         ButterKnife.bind(this, view);
 
-        // Add some extra padding around the servings sub header so the user has a larger area to tap
-        initPaddingAroundTextViews();
-
-        setHeader(context.getString(R.string.servings));
-    }
-
-    public void setHeader(final String text) {
-        tvHeader.setText(text);
-    }
-
-    public void setSubHeader(final String text) {
-        tvSubHeader.setText(text);
-    }
-
-    private void initPaddingAroundTextViews() {
-        final int dp8 = Common.convertDpToPx(getContext(), 8);
-        final int dp16 = Common.convertDpToPx(getContext(), 16);
-
-        tvHeader.setPadding(dp16, dp8, 0, dp8);
-        tvSubHeader.setPadding(0, dp8, dp16, dp8);
+        tvHeader.setText(context.getString(R.string.servings));
     }
 
     public void setServings(final int servingsOnDate) {
         tvStar.setVisibility(servingsOnDate == 24 ? VISIBLE : GONE);
 
-        setSubHeader(String.format("%s out of 24   {fa-bar-chart 20dp @color/gray_dark}", servingsOnDate));
+        tvNumServings.setText(Integer.toString(servingsOnDate));
     }
 
     @OnClick(R.id.sub_header)

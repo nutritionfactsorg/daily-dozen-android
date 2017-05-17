@@ -19,6 +19,7 @@
     <string name="servings_some">Einige Portionen</string>
     <string name="servings_all">Alle Portionen</string>
     <string name="servings">Portionen</string>
+    <string name="out_of">von</string>
     <string name="moving_average">Gleitender Durchschnitt</string>
     <string name="serving_sizes">Portionsgröße</string>
     <string name="restore_success">Wiederherstellung erfolgreich</string>

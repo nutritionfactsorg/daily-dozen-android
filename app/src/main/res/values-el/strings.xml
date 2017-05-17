@@ -19,6 +19,7 @@
     <string name="servings_some">Μερικές Μερίδες</string>
     <string name="servings_all">Όλες οι μερίδες</string>
     <string name="servings">Μερίδες</string>
+    <string name="out_of">από τις</string>
     <string name="moving_average">Κινητός Μέσος Όρος</string>
     <string name="about">Σχετικά</string>
     <string name="about_this_app">Σχετικά με την εφαρμογή</string>
@@ -66,8 +67,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Παρακαλώ δώστε μας τα σχόλιά στο Play Store.</string>
     <string name="rate_now">Αποστολή σχολίων</string>
     <string name="not_now">Όχι τώρα</string>
-    <string formatted="false" name="format_version">version %s</string>
-    <string formatted="false" name="format_num_days">%d days</string>
+    <string formatted="false" name="format_version">εκδοχή %s</string>
+    <string formatted="false" name="format_num_days">%d ημέρες</string>
     <string name="daily_reminder_title">Υπενθύμιση Daily Dozen</string>
     <string name="daily_reminder_text">Ενημερώστε τις μερίδες σας για σήμερα</string>
     <string name="daily_reminder_settings">Ρυθμίσεις Καθημερινής Υπενθύμισης</string>

@@ -19,6 +19,7 @@
     <string name="servings_some">Some servings</string>
     <string name="servings_all">All servings</string>
     <string name="servings">Servings</string>
+    <string name="out_of">out of</string>
     <string name="moving_average">Moving Average</string>
     <string name="about">About</string>
     <string name="about_this_app">About this app</string>
@@ -65,6 +66,8 @@
     <string name="food_history">Food History</string>
     <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
     <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
+    <string name="num_servings_max" translatable="false">24</string>
+    <string name="icon_chart" translatable="false">{fa-bar-chart 20dp @color/gray_dark}</string>
     <string name="daily_servings_history">Daily Servings History</string>
     <string name="no_servings_recorded">You have not recorded any servings yet!</string>
     <string name="task_backup_title">Backing up</string>
