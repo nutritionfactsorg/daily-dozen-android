@@ -63,6 +63,10 @@ public class Day extends TruncatableModel {
         return getEpoch().numDaysFrom(date) + 1;
     }
 
+    public int getNumDaysSince(Day startDay) {
+        return startDay == null ? 0 : getDateTime().numDaysFrom(startDay.getDateTime());
+    }
+
     private static DateTime getEpoch() {
         return DateTime.forInstant(0, TimeZone.getDefault());
     }
