@@ -77,6 +77,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
         final List<BarEntry> barEntries = new ArrayList<>(numDaysOfServings);
         final List<Entry> lineEntries = new ArrayList<>(numDaysOfServings);
 
+        Day previousDay = null;
         float previousTrend = 0;
 
         for (int i = 0; i < numDaysOfServings; i++) {
@@ -85,6 +86,8 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
             }
 
             final Day day = history.get(i);
+
+            previousTrend = adjustTrendForMissingDays(day, previousDay, previousTrend);
 
             final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
 
@@ -100,9 +103,31 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
             }
 
             publishProgress(i + 1, numDaysOfServings);
+
+            previousDay = day;
         }
 
         return createLineAndBarData(xLabels, lineEntries, barEntries);
+    }
+
+    // This method solves the issue where the trend is calculated from a set of data that is missing
+    // some days. Missing days are now taken into account as days with 0 servings.
+    private float adjustTrendForMissingDays(final Day currentDay, final Day previousDay, final float trend) {
+        if (currentDay != null && previousDay != null) {
+            float trendIncludingMissingDays = trend;
+
+            int missingDays = Math.abs(currentDay.getNumDaysSince(previousDay));
+
+            if (missingDays > 1) {
+                for (int i = 0; i < missingDays; i++) {
+                    trendIncludingMissingDays = calculateTrend(trendIncludingMissingDays, 0);
+                }
+            }
+
+            return trendIncludingMissingDays;
+        } else {
+            return trend;
+        }
     }
 
     private CombinedData getChartDataInMonths(final LoadServingsHistoryTaskParams inputParams) {

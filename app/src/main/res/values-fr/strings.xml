@@ -20,6 +20,7 @@
     <string name="servings_some">Quelques portions</string>
     <string name="servings_all">Toutes les portions</string>
     <string name="servings">Portions</string>
+    <string name="out_of">sur</string>
     <string name="moving_average">Moyenne mobile</string>
     <string name="about">À propos</string>
     <string name="about_this_app">À propos de cette application</string>

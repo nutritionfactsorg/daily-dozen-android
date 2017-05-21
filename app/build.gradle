@@ -28,8 +28,8 @@ android {
         applicationId "org.nutritionfacts.dailydozen"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 33
-        versionName "12"
+        versionCode 34
+        versionName "12.1"
     }
     buildTypes {
         release {
@@ -52,8 +52,8 @@ dependencies {
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
     compile 'com.github.PhilJay:MPAndroidChart:v2.2.5'
     compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.jakewharton.timber:timber:4.5.1'
 }
