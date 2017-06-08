@@ -45,7 +45,11 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
-###Version 12
+### Version 12.2
+- Fixed black background issue on Samsung devices
+- You can now move the app to your device's SD card
+
+### Version 12
 - Improved performance and functionality of the Daily Servings History graph
 - Redesigned checkbox layout to improve support for translations and small screens
 - Added Spanish translation - thanks to contributor Monica Suarez
@@ -54,35 +58,35 @@ Updates
 - Added Bulgarian translation - thanks to contributor [haripetrov](https://github.com/haripetrov)
 - Added Greek translation - thanks to contributor [kapcom01](https://github.com/kapcom01)
 
-###Version 11
+### Version 11
 - Added German translation - thanks to contributor [MovGP0](https://github.com/MovGP0)
 - Improved CheckBox functionality - thanks to contributor [notmypassword](https://github.com/notmypassword)
 - Fixed swapped images - thanks to contributor [myang310](https://github.com/myang310)
 - Fixed bug where last CheckBox for Beverages was hidden on devices with small screens
 - Fixed a few minor crashes
 
-###Version 10
+### Version 10
 - Added links to videos on nutritionfacts.org. These links are for overall food groups like beans and greens, but also for specific foods like chickpeas and spinach.
 - Fixed bug where update reminder alarm was not being set when the device restarted.
 - Fixed very rare OutOfMemoryError crash when loading the large food images.
 - Upgraded to ButterKnife 8.1.0
 
-###Version 9
+### Version 9
 - Added a Daily Reminder to update your servings
 - Fixed bug where every other day was being skipped in the daily servings chart
 - Fixed bug where failing to load the image in FoodInfoActivity was crashing the app
 - Removed allowBackup="false" from AndroidManifest.xml. This will allow devices running Marshmallow and later to automatically backup to the user's Google Account.
 - Upgraded to ButterKnife 8.0.1
 
-###Version 8 - Completely new app
+### Version 8 - Completely new app
 - Entries are now persisted over time and can be graphed and charted
 - Added streaks so you can see at a glance how many days you have met your required servings
 - History can be backed up to a comma-separated values text file
 
-###1.0.1 - 1.0.2 (Google Play)
+### 1.0.1 - 1.0.2 (Google Play)
 - Misspelling fix
 
-###1.0.0 (Google Play)
+### 1.0.0 (Google Play)
 - Initial Release
 
 [nutritionfacts.org]: http://nutritionfacts.org "NutritionFacts.org - The Latest in Nutrition Research"
