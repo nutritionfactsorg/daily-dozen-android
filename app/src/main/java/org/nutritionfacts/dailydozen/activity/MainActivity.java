@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.activity;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -31,6 +32,7 @@ import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
 import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.BackupTask;
 import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
@@ -41,11 +43,13 @@ import java.io.File;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import hirondelle.date4j.DateTime;
 
 public class MainActivity extends AppCompatActivity {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     private static final int DEBUG_SETTINGS_REQUEST = 1;
+    public static final int FOOD_HISTORY_REQUEST = 2;
 
     @BindView(R.id.date_pager)
     protected ViewPager datePager;
@@ -210,6 +214,9 @@ public class MainActivity extends AppCompatActivity {
             case DEBUG_SETTINGS_REQUEST:
                 // Always refresh the data shown when returning from the Debug Activity
                 initDatePager();
+                break;
+            case FOOD_HISTORY_REQUEST:
+                datePager.setCurrentItem(Day.getNumDaysSinceEpoch(new DateTime(data.getStringExtra("date"))) - 1);
                 break;
         }
     }
@@ -377,5 +384,10 @@ public class MainActivity extends AppCompatActivity {
     @Subscribe
     public void onEvent(DisplayDateEvent event) {
         datePager.setCurrentItem(Day.getNumDaysSinceEpoch(event.getDate()));
+    }
+
+    public void openFoodHistory(final Context context, final Food food, final Day day){
+        startActivityForResult(Common.createFoodHistoryIntent(context, food, day), FOOD_HISTORY_REQUEST);
+
     }
 }

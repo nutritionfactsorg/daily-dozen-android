@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,9 @@ import android.widget.TextView;
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.activity.MainActivity;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
+import org.nutritionfacts.dailydozen.fragment.DateFragment;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
@@ -23,6 +26,8 @@ import butterknife.OnClick;
 
 public class FoodServings extends LinearLayout {
     private Day day;
+    private DateFragment dateFragmentDay;
+    private MainActivity mainActivity;
     private Food food;
 
     @BindView(R.id.food_icon)
@@ -34,24 +39,26 @@ public class FoodServings extends LinearLayout {
     @BindView(R.id.food_checkboxes)
     protected FoodCheckBoxes foodCheckBoxes;
 
-    public FoodServings(Context context) {
+    public FoodServings(DateFragment df, FragmentActivity fa, Context context) {
         super(context);
-        init(context);
+        init(context, df, fa);
     }
 
-    public FoodServings(Context context, AttributeSet attrs) {
+    public FoodServings(DateFragment df, FragmentActivity fa, Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
+        init(context, df, fa);
     }
 
-    public FoodServings(Context context, AttributeSet attrs, int defStyleAttr) {
+    public FoodServings(DateFragment df, FragmentActivity fa, Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context);
+        init(context, df, fa);
     }
 
-    private void init(final Context context) {
+    private void init(final Context context, DateFragment df, FragmentActivity fa) {
         final View view = LayoutInflater.from(context).inflate(R.layout.food_servings, this);
         ButterKnife.bind(this, view);
+        dateFragmentDay = df;
+        mainActivity = (MainActivity)fa;
     }
 
     public boolean setDateAndFood(final Day day, final Food food) {
@@ -102,7 +109,8 @@ public class FoodServings extends LinearLayout {
 
     @OnClick({R.id.food_history, R.id.food_streak})
     public void onFoodHistoryClicked() {
-        Common.openFoodHistory(getContext(), food);
+        //Common.openFoodHistory(getContext(), food);
+        mainActivity.openFoodHistory(getContext(), food, day);
     }
 
     private void initCheckboxes(Servings servings) {

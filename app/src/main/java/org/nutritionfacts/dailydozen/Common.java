@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
+import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 
 public class Common {
@@ -127,7 +128,7 @@ public class Common {
         context.startActivity(createFoodIntent(context, FoodInfoActivity.class, food));
     }
 
-    public static void openFoodHistory(final Context context, final Food food) {
-        context.startActivity(createFoodIntent(context, FoodHistoryActivity.class, food));
+    public static Intent createFoodHistoryIntent(final Context context, final Food food, Day day){
+        return createFoodIntent(context, FoodHistoryActivity.class, food);
     }
 }

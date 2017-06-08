@@ -91,7 +91,7 @@ public class DateFragment extends Fragment {
                 updateServingsCount();
 
                 for (Food food : Food.getAllFoods()) {
-                    final FoodServings foodServings = new FoodServings(getContext());
+                    final FoodServings foodServings = new FoodServings(this, getActivity(), getContext());
                     final boolean success = foodServings.setDateAndFood(day, food);
                     if (success) {
                         vgFoodServings.addView(foodServings);

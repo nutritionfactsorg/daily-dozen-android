@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
@@ -34,6 +35,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     @BindView(R.id.calendar_legend)
     protected ViewGroup vgLegend;
 
+    private DateTime dateToOpen = Day.getToday();
     private CaldroidFragment caldroid;
 
     private Set<String> loadedMonths = new HashSet<>();
@@ -55,6 +57,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     }
 
     private void displayFoodHistory() {
+        loadDateFromIntent();
         final Food food = getFood();
         if (food != null) {
             initCalendar(food.getId(), food.getRecommendedServings());
@@ -64,11 +67,19 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     private void initCalendar(final long foodId, final int recommendedServings) {
         datesWithEvents = new ArrayMap<>();
 
-        caldroid = CaldroidFragment.newInstance("", DateUtil.getCurrentMonthOneBased(), DateUtil.getCurrentYear());
+        DateTime dateToOpen = Day.getToday();
+        caldroid = CaldroidFragment.newInstance("", dateToOpen.getMonth(), dateToOpen.getYear());
 
         caldroid.setCaldroidListener(new CaldroidListener() {
             @Override
             public void onSelectDate(Date date, View view) {
+                Intent returnIntent = new Intent();
+
+
+                String dateStr = String.valueOf(date.getYear() + 1900) + "-" + String.format("%02d", date.getMonth() + 1) + "-" + String.format("%02d", date.getDate());
+                returnIntent.putExtra("date", dateStr);
+                setResult(MainActivity.FOOD_HISTORY_REQUEST,returnIntent);
+                finish();
             }
 
             @Override
@@ -132,5 +143,14 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                 caldroid.refreshView();
             }
         }.execute();
+    }
+
+    private void loadDateFromIntent() {
+      final Intent intent = getIntent();
+      if (intent != null) {
+        if (intent.hasExtra(Args.DATE)) {
+          dateToOpen = new DateTime(intent.getStringExtra(Args.DATE));
+        }
+      }
     }
 }
