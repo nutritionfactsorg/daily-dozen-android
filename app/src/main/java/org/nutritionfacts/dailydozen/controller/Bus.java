@@ -16,8 +16,6 @@ import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 
-import hirondelle.date4j.DateTime;
-
 public class Bus {
     public static void register(Object object) {
         EventBus.getDefault().register(object);
