@@ -1,7 +1,6 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,6 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.activity.MainActivity;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
-import org.nutritionfacts.dailydozen.fragment.DateFragment;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;

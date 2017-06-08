@@ -388,6 +388,5 @@ public class MainActivity extends AppCompatActivity {
 
     public void openFoodHistory(final Context context, final Food food, final Day day){
         startActivityForResult(Common.createFoodHistoryIntent(context, food), FOOD_HISTORY_REQUEST);
-
     }
 }
