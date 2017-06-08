@@ -10,6 +10,7 @@
     <color name="gray_CCCCCC">#CCCCCC</color>
     <color name="gray_dark">#555555</color>
     <color name="gray_light">#F2F2F2</color>
+    <color name="gray_f9">#F9F9F9</color>
     <color name="green_faint">#CCFFCC</color>
     <color name="green">#00CC00</color>
     <color name="legend_less_than_recommended_servings">@color/green_faint</color>
