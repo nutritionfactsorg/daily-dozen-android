@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -91,7 +92,7 @@ public class DateFragment extends Fragment {
                 updateServingsCount();
 
                 for (Food food : Food.getAllFoods()) {
-                    final FoodServings foodServings = new FoodServings(this, getActivity(), getContext());
+                    final FoodServings foodServings = new FoodServings(getContext());
                     final boolean success = foodServings.setDateAndFood(day, food);
                     if (success) {
                         vgFoodServings.addView(foodServings);

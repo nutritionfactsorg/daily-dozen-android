@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     private static final int DEBUG_SETTINGS_REQUEST = 1;
-    public static final int FOOD_HISTORY_REQUEST = 2;
+    private static final int FOOD_HISTORY_REQUEST = 2;
 
     @BindView(R.id.date_pager)
     protected ViewPager datePager;
@@ -387,7 +387,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openFoodHistory(final Context context, final Food food, final Day day){
-        startActivityForResult(Common.createFoodHistoryIntent(context, food, day), FOOD_HISTORY_REQUEST);
+        startActivityForResult(Common.createFoodHistoryIntent(context, food), FOOD_HISTORY_REQUEST);
 
     }
 }

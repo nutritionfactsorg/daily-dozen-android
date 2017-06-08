@@ -39,13 +39,6 @@ public class Bus {
         post(new DisplayDateEvent(Day.getToday()));
     }
 
-    public static void displayLatestDate2() {
-        post(new DisplayDateEvent(Day.getToday().plusDays(-10)));
-    }
-    public static void displayDate(DateTime date) {
-        post(new DisplayDateEvent(date));
-    }
-
     public static void showExplodingStarAnimation() {
         post(new ShowExplodingStarAnimation());
     }

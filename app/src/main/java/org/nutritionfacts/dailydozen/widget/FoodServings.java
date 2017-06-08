@@ -26,9 +26,8 @@ import butterknife.OnClick;
 
 public class FoodServings extends LinearLayout {
     private Day day;
-    private DateFragment dateFragmentDay;
-    private MainActivity mainActivity;
     private Food food;
+    private MainActivity mainActivity;
 
     @BindView(R.id.food_icon)
     protected ImageView ivIcon;
@@ -39,26 +38,25 @@ public class FoodServings extends LinearLayout {
     @BindView(R.id.food_checkboxes)
     protected FoodCheckBoxes foodCheckBoxes;
 
-    public FoodServings(DateFragment df, FragmentActivity fa, Context context) {
+    public FoodServings(Context context) {
         super(context);
-        init(context, df, fa);
+        init(context);
     }
 
-    public FoodServings(DateFragment df, FragmentActivity fa, Context context, AttributeSet attrs) {
+    public FoodServings(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context, df, fa);
+        init(context);
     }
 
-    public FoodServings(DateFragment df, FragmentActivity fa, Context context, AttributeSet attrs, int defStyleAttr) {
+    public FoodServings(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context, df, fa);
+        init(context);
     }
 
-    private void init(final Context context, DateFragment df, FragmentActivity fa) {
+    private void init(final Context context) {
         final View view = LayoutInflater.from(context).inflate(R.layout.food_servings, this);
         ButterKnife.bind(this, view);
-        dateFragmentDay = df;
-        mainActivity = (MainActivity)fa;
+        mainActivity = (MainActivity)context;
     }
 
     public boolean setDateAndFood(final Day day, final Food food) {
@@ -109,7 +107,6 @@ public class FoodServings extends LinearLayout {
 
     @OnClick({R.id.food_history, R.id.food_streak})
     public void onFoodHistoryClicked() {
-        //Common.openFoodHistory(getContext(), food);
         mainActivity.openFoodHistory(getContext(), food, day);
     }
 
