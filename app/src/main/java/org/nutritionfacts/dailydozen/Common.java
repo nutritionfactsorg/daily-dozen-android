@@ -127,7 +127,7 @@ public class Common {
         context.startActivity(createFoodIntent(context, FoodInfoActivity.class, food));
     }
 
-    public static void openFoodHistory(final Context context, final Food food) {
-        context.startActivity(createFoodIntent(context, FoodHistoryActivity.class, food));
+    public static Intent createFoodHistoryIntent(final Context context, final Food food){
+        return createFoodIntent(context, FoodHistoryActivity.class, food);
     }
 }
