@@ -22,7 +22,7 @@
         <meta-data
             android:name="AA_MODELS"
             android:value="org.nutritionfacts.dailydozen.model.Day, org.nutritionfacts.dailydozen.model.Food, org.nutritionfacts.dailydozen.model.Servings" />
-        
+
         <activity
             android:name=".activity.MainActivity"
             android:launchMode="singleTask"

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.activity.MainActivity;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -24,6 +25,7 @@ import butterknife.OnClick;
 public class FoodServings extends LinearLayout {
     private Day day;
     private Food food;
+    private MainActivity mainActivity;
 
     @BindView(R.id.food_icon)
     protected ImageView ivIcon;
@@ -52,6 +54,7 @@ public class FoodServings extends LinearLayout {
     private void init(final Context context) {
         final View view = LayoutInflater.from(context).inflate(R.layout.food_servings, this);
         ButterKnife.bind(this, view);
+        mainActivity = (MainActivity)context;
     }
 
     public boolean setDateAndFood(final Day day, final Food food) {
@@ -102,7 +105,7 @@ public class FoodServings extends LinearLayout {
 
     @OnClick({R.id.food_history, R.id.food_streak})
     public void onFoodHistoryClicked() {
-        Common.openFoodHistory(getContext(), food);
+        mainActivity.openFoodHistory(getContext(), food, day);
     }
 
     private void initCheckboxes(Servings servings) {
