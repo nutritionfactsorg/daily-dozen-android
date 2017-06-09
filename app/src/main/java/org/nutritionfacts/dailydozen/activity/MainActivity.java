@@ -216,7 +216,8 @@ public class MainActivity extends AppCompatActivity {
                 initDatePager();
                 break;
             case FOOD_HISTORY_REQUEST:
-                datePager.setCurrentItem(Day.getNumDaysSinceEpoch(new DateTime(data.getStringExtra("date"))) - 1);
+                if (data != null && data.hasExtra("date"))
+                    datePager.setCurrentItem(Day.getNumDaysSinceEpoch(new DateTime(data.getStringExtra("date"))) - 1);
                 break;
         }
     }
