@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -128,6 +129,10 @@ public class Common {
     }
 
     public static void openFoodHistory(final Context context, final Food food) {
-        context.startActivity(createFoodIntent(context, FoodHistoryActivity.class, food));
+        if (context instanceof Activity) {
+            ((Activity) context).startActivityForResult(
+                    createFoodIntent(context, FoodHistoryActivity.class, food),
+                    Args.FOOD_HISTORY_REQUEST);
+        }
     }
 }

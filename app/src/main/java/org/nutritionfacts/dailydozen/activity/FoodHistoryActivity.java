@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
@@ -69,6 +70,10 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
         caldroid.setCaldroidListener(new CaldroidListener() {
             @Override
             public void onSelectDate(Date date, View view) {
+                final Intent selectedDateIntent = new Intent();
+                selectedDateIntent.putExtra(Args.DAY, date);
+                setResult(Args.FOOD_HISTORY_REQUEST, selectedDateIntent);
+                finish();
             }
 
             @Override

@@ -35,17 +35,18 @@ import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.BackupTask;
 import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
 import org.nutritionfacts.dailydozen.task.RestoreTask;
+import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import java.io.File;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import hirondelle.date4j.DateTime;
 
 public class MainActivity extends AppCompatActivity {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
-
-    private static final int DEBUG_SETTINGS_REQUEST = 1;
 
     @BindView(R.id.date_pager)
     protected ViewPager datePager;
@@ -195,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, AboutActivity.class));
                 return true;
             case R.id.menu_debug:
-                startActivityForResult(new Intent(this, DebugActivity.class), DEBUG_SETTINGS_REQUEST);
+                startActivityForResult(new Intent(this, DebugActivity.class), Args.DEBUG_SETTINGS_REQUEST);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -207,9 +208,14 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         switch (requestCode) {
-            case DEBUG_SETTINGS_REQUEST:
+            case Args.DEBUG_SETTINGS_REQUEST:
                 // Always refresh the data shown when returning from the Debug Activity
                 initDatePager();
+                break;
+            case Args.FOOD_HISTORY_REQUEST:
+                if (data != null && data.hasExtra(Args.DAY)) {
+                    setDatePagerDate(DateUtil.convertDateToDateTime((Date) data.getSerializableExtra(Args.DAY)));
+                }
                 break;
         }
     }
@@ -376,6 +382,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Subscribe
     public void onEvent(DisplayDateEvent event) {
-        datePager.setCurrentItem(Day.getNumDaysSinceEpoch(event.getDate()));
+        setDatePagerDate(event.getDate());
+    }
+
+    private void setDatePagerDate(final DateTime dateTime) {
+        if (dateTime != null) {
+            datePager.setCurrentItem(Day.getNumDaysSinceEpoch(dateTime));
+        }
     }
 }

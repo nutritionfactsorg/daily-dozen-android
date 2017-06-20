@@ -56,11 +56,12 @@ public class Day extends TruncatableModel {
 
     // Calculates the number of days between epoch == 0 (Jan 1, 1970) and now
     public static int getNumDaysSinceEpoch() {
-        return getNumDaysSinceEpoch(getToday());
+        // Without the plusDays(1) yesterday is considered the latest date
+        return getNumDaysSinceEpoch(getToday().plusDays(1));
     }
 
     public static int getNumDaysSinceEpoch(final DateTime date) {
-        return getEpoch().numDaysFrom(date) + 1;
+        return getEpoch().numDaysFrom(date);
     }
 
     public int getNumDaysSince(Day startDay) {

@@ -2,7 +2,11 @@ package org.nutritionfacts.dailydozen.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
+
+import hirondelle.date4j.DateTime;
 
 public class DateUtil {
     public static Calendar getCalendarForYearAndMonth(final int year, final int monthZeroBased) {
@@ -52,5 +56,9 @@ public class DateUtil {
     public static String getShortNameOfMonth(final int monthNumberOneBased) {
         return new SimpleDateFormat("MMM", Locale.getDefault())
                 .format(getCalendarForYearAndMonth(2016, monthNumberOneBased - 1).getTime());
+    }
+
+    public static DateTime convertDateToDateTime(final Date date) {
+        return date != null ? DateTime.forInstant(date.getTime(), TimeZone.getDefault()) : null;
     }
 }
