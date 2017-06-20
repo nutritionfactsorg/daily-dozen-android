@@ -68,7 +68,7 @@ public class FoodInfoActivity extends FoodLoadingActivity {
             final String foodName = food.getName();
 
             initImage(foodName);
-            initServingTypes(foodName);
+            initServingTypes(food);
             initFoodTypes(foodName);
         }
     }
@@ -77,8 +77,8 @@ public class FoodInfoActivity extends FoodLoadingActivity {
         Common.loadImage(this, ivFood, FoodInfo.getFoodImage(foodName));
     }
 
-    private void initServingTypes(String foodName) {
-        final List<String> servingSizes = FoodInfo.getServingSizes(foodName,
+    private void initServingTypes(final Food food) {
+        final List<String> servingSizes = FoodInfo.getServingSizes(food.getIdName(),
                 Prefs.getInstance(this).getUnitTypePref());
         final FoodServingsAdapter adapter = new FoodServingsAdapter(servingSizes);
 
@@ -116,6 +116,6 @@ public class FoodInfoActivity extends FoodLoadingActivity {
     public void onChangeUnitsClicked() {
         Prefs.getInstance(this).toggleUnitType();
 
-        initServingTypes(getFood().getName());
+        initServingTypes(getFood());
     }
 }

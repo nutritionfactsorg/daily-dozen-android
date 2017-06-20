@@ -165,18 +165,9 @@ public class FoodInfo {
         servingSizesImperial = new ArrayMap<>();
         servingSizesMetric = new ArrayMap<>();
 
-        initServingSizesForFood(context, beans);
-        initServingSizesForFood(context, berries);
-        initServingSizesForFood(context, otherFruits);
-        initServingSizesForFood(context, cruciferousVegetables);
-        initServingSizesForFood(context, greens);
-        initServingSizesForFood(context, otherVegetables);
-        initServingSizesForFood(context, flaxseeds);
-        initServingSizesForFood(context, nuts);
-        initServingSizesForFood(context, spices);
-        initServingSizesForFood(context, wholeGrains);
-        initServingSizesForFood(context, beverages);
-        initServingSizesForFood(context, exercise);
+        for (Food food : Food.getAllFoods()) {
+            initServingSizesForFood(context, food.getIdName());
+        }
     }
 
     private static void initServingSizesForFood(final Context context, final String foodName) {
