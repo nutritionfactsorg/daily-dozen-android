@@ -7,6 +7,7 @@ import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
 
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.model.enums.Units;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,7 +17,8 @@ import java.util.Map;
 public class FoodInfo {
     private static Map<String, Integer> foodImages;
     private static Map<String, Integer> foodIcons;
-    private static Map<String, List<String>> servingSizes;
+    private static Map<String, List<String>> servingSizesImperial;
+    private static Map<String, List<String>> servingSizesMetric;
     private static Map<String, List<String>> typesOfFood;
     private static Map<String, String> foodTypeVideos;
     private static Map<String, List<String>> foodVideos;
@@ -131,29 +133,54 @@ public class FoodInfo {
         putTypeOfFood(res, exercise, R.array.food_info_types_exercise);
     }
 
-    public static List<String> getServingSizes(final String foodName) {
-        return servingSizes.get(foodName);
+    public static List<String> getServingSizes(final String foodName,
+                                               @Units.Interface final int unitType) {
+        switch (unitType) {
+            case Units.METRIC:
+                return servingSizesMetric.get(foodName);
+            default:
+            case Units.IMPERIAL:
+                return servingSizesImperial.get(foodName);
+        }
+
     }
 
-    private static void putServingSize(Resources res, String food, int servingSizesId) {
-        servingSizes.put(food, Arrays.asList(res.getStringArray(servingSizesId)));
+    private static void putServingSize(Resources res,
+                                       Map<String, List<String>> map,
+                                       String food,
+                                       int servingSizesId) {
+        map.put(food, Arrays.asList(res.getStringArray(servingSizesId)));
     }
 
     private static void initServingSizes(Resources res) {
-        servingSizes = new ArrayMap<>();
+        servingSizesImperial = new ArrayMap<>();
+        putServingSize(res, servingSizesImperial, beans, R.array.food_info_serving_sizes_beans_imperial);
+        putServingSize(res, servingSizesImperial, berries, R.array.food_info_serving_sizes_berries_imperial);
+        putServingSize(res, servingSizesImperial, otherFruits, R.array.food_info_serving_sizes_other_fruits_imperial);
+        putServingSize(res, servingSizesImperial, cruciferousVegetables, R.array.food_info_serving_sizes_cruciferous_vegetables_imperial);
+        putServingSize(res, servingSizesImperial, greens, R.array.food_info_serving_sizes_greens_imperial);
+        putServingSize(res, servingSizesImperial, otherVegetables, R.array.food_info_serving_sizes_other_vegetables_imperial);
+        putServingSize(res, servingSizesImperial, flaxseeds, R.array.food_info_serving_sizes_flaxseeds_imperial);
+        putServingSize(res, servingSizesImperial, nuts, R.array.food_info_serving_sizes_nuts_imperial);
+        putServingSize(res, servingSizesImperial, spices, R.array.food_info_serving_sizes_spices_imperial);
+        putServingSize(res, servingSizesImperial, wholeGrains, R.array.food_info_serving_sizes_whole_grains_imperial);
+        putServingSize(res, servingSizesImperial, beverages, R.array.food_info_serving_sizes_beverages_imperial);
+        putServingSize(res, servingSizesImperial, exercise, R.array.food_info_serving_sizes_exercise_imperial);
 
-        putServingSize(res, beans, R.array.food_info_serving_sizes_beans);
-        putServingSize(res, berries, R.array.food_info_serving_sizes_berries);
-        putServingSize(res, otherFruits, R.array.food_info_serving_sizes_other_fruits);
-        putServingSize(res, cruciferousVegetables, R.array.food_info_serving_sizes_cruciferous_vegetables);
-        putServingSize(res, greens, R.array.food_info_serving_sizes_greens);
-        putServingSize(res, otherVegetables, R.array.food_info_serving_sizes_other_vegetables);
-        putServingSize(res, flaxseeds, R.array.food_info_serving_sizes_flaxseeds);
-        putServingSize(res, nuts, R.array.food_info_serving_sizes_nuts);
-        putServingSize(res, spices, R.array.food_info_serving_sizes_spices);
-        putServingSize(res, wholeGrains, R.array.food_info_serving_sizes_whole_grains);
-        putServingSize(res, beverages, R.array.food_info_serving_sizes_beverages);
-        putServingSize(res, exercise, R.array.food_info_serving_sizes_exercise);
+        servingSizesMetric = new ArrayMap<>();
+        putServingSize(res, servingSizesMetric, beans, R.array.food_info_serving_sizes_beans_metric);
+        putServingSize(res, servingSizesMetric, berries, R.array.food_info_serving_sizes_berries_metric);
+        putServingSize(res, servingSizesMetric, otherFruits, R.array.food_info_serving_sizes_other_fruits_metric);
+        putServingSize(res, servingSizesMetric, cruciferousVegetables, R.array.food_info_serving_sizes_cruciferous_vegetables_metric);
+        putServingSize(res, servingSizesMetric, greens, R.array.food_info_serving_sizes_greens_metric);
+        putServingSize(res, servingSizesMetric, otherVegetables, R.array.food_info_serving_sizes_other_vegetables_metric);
+        putServingSize(res, servingSizesMetric, flaxseeds, R.array.food_info_serving_sizes_flaxseeds_metric);
+        putServingSize(res, servingSizesMetric, nuts, R.array.food_info_serving_sizes_nuts_metric);
+        putServingSize(res, servingSizesMetric, spices, R.array.food_info_serving_sizes_spices_metric);
+        putServingSize(res, servingSizesMetric, wholeGrains, R.array.food_info_serving_sizes_whole_grains_metric);
+        putServingSize(res, servingSizesMetric, beverages, R.array.food_info_serving_sizes_beverages_metric);
+        putServingSize(res, servingSizesMetric, exercise, R.array.food_info_serving_sizes_exercise_metric);
+
     }
 
     private static void putFoodTypeVideos(Resources res, String food, int urlId) {

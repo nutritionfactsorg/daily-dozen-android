@@ -107,6 +107,9 @@
     <string name="vibrate">Vibrate</string>
     <string name="play_sound">Play Sound</string>
     <string name="videos">Videos</string>
+    <string name="units">Units</string>
+    <string name="imperial">Imperial</string>
+    <string name="metric">Metric</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
@@ -478,68 +481,134 @@
         <item>Water jogging</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_beans">
+    <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ cup of hummus or bean dip</item>,
         <item>½ cup cooked beans, split peas, lentils, tofu, or tempeh</item>,
         <item>1 cup of fresh peas or sprouted lentils</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_berries">
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g hummus or bean dip</item>,
+        <item>130 g cooked beans, split peas, lentils, tofu, or tempeh</item>,
+        <item>150 g fresh peas or sprouted lentils</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ cup fresh or frozen</item>
         <item>¼ cup dried</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_other_fruits">
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g fresh or frozen</item>
+        <item>40 g dried</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
         <item>1 medium-sized fruit</item>
         <item>1 cup cut-up fruit</item>
         <item>¼ cup dried fruit</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item>1 medium-sized fruit</item>
+        <item>120 g cut-up fruit</item>
+        <item>40 g dried fruit</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ cup chopped</item>
         <item>¼ cup Brussels or broccoli sprouts</item>
         <item>1 tablespoon horseradish</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_greens">
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g chopped</item>
+        <item>12 g Brussels or broccoli sprouts</item>
+        <item>1 tablespoon horseradish</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1 cup raw</item>
         <item>½ cup cooked</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_other_vegetables">
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g raw</item>
+        <item>90 g cooked</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
         <item>1 cup raw leafy vegetables</item>
         <item>½ cup raw or cooked nonleafy vegetables</item>
         <item>½ cup vegetable juice</item>
         <item>¼ cup dried mushrooms</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_flaxseeds">
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g raw leafy vegetables</item>
+        <item>50 g raw or cooked nonleafy vegetables</item>
+        <item>125 ml vegetable juice</item>
+        <item>7 g dried mushrooms</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 tablespoon ground</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_nuts">
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item>1 tablespoon ground</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ cup nuts or seeds</item>
         <item>2 tablespoons nut or seed butter</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_spices">
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g nuts or seeds</item>
+        <item>2 tablespoons nut or seed butter</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
         <item>¼ teaspoon of turmeric</item>
         <item>Any other (salt-free) herbs and spices you enjoy</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_whole_grains">
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item>¼ teaspoon of turmeric</item>
+        <item>Any other (salt-free) herbs and spices you enjoy</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ cup hot cereal or cooked grains, pasta, or corn kernels</item>
         <item>1 cup cold cereal</item>
         <item>1 tortilla or slice of bread</item>
-        <item>½ a bagel or english muffin</item>
+        <item>½ a bagel or English muffin</item>
         <item>3 cups popped popcorn</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_beverages">
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g hot cereal or cooked grains, pasta, or corn kernels</item>
+        <item>50 g cold cereal</item>
+        <item>1 tortilla or slice of bread</item>
+        <item>½ a bagel or English muffin</item>
+        <item>30 g popped popcorn</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
         <item>One glass (12 ounces)</item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_exercise">
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>One glass (350 ml)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item>90 minutes of moderate-intensity activity</item>
+        <item>40 minutes of vigorous-intensity activity</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
         <item>90 minutes of moderate-intensity activity</item>
         <item>40 minutes of vigorous-intensity activity</item>
     </string-array>
