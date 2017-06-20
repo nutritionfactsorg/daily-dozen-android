@@ -12,6 +12,7 @@ import org.nutritionfacts.dailydozen.model.enums.Units;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class FoodInfo {
@@ -43,7 +44,7 @@ public class FoodInfo {
 
         initFoodImages();
         initFoodIcons();
-        initServingSizes(resources);
+        initServingSizes(context);
         initTypesOfFood(resources);
         initFoodTypeVideos(resources);
         initFoodVideos(resources);
@@ -145,42 +146,60 @@ public class FoodInfo {
 
     }
 
-    private static void putServingSize(Resources res,
-                                       Map<String, List<String>> map,
-                                       String food,
-                                       int servingSizesId) {
-        map.put(food, Arrays.asList(res.getStringArray(servingSizesId)));
+    private static int getServingSizesResourceId(final Context context,
+                                                 final String idSuffix) {
+        return context.getResources().getIdentifier(
+                "food_info_serving_sizes_" + idSuffix.toLowerCase(),
+                "array",
+                context.getApplicationInfo().packageName);
     }
 
-    private static void initServingSizes(Resources res) {
+    private static int getServingSizesResourceId(final Context context,
+                                                 final String foodName,
+                                                 @Units.Interface final int unitType) {
+        return getServingSizesResourceId(context,
+                foodName + (unitType == Units.IMPERIAL ? "_imperial" : "_metric"));
+    }
+
+    private static void initServingSizes(Context context) {
         servingSizesImperial = new ArrayMap<>();
-        putServingSize(res, servingSizesImperial, beans, R.array.food_info_serving_sizes_beans_imperial);
-        putServingSize(res, servingSizesImperial, berries, R.array.food_info_serving_sizes_berries_imperial);
-        putServingSize(res, servingSizesImperial, otherFruits, R.array.food_info_serving_sizes_other_fruits_imperial);
-        putServingSize(res, servingSizesImperial, cruciferousVegetables, R.array.food_info_serving_sizes_cruciferous_vegetables_imperial);
-        putServingSize(res, servingSizesImperial, greens, R.array.food_info_serving_sizes_greens_imperial);
-        putServingSize(res, servingSizesImperial, otherVegetables, R.array.food_info_serving_sizes_other_vegetables_imperial);
-        putServingSize(res, servingSizesImperial, flaxseeds, R.array.food_info_serving_sizes_flaxseeds_imperial);
-        putServingSize(res, servingSizesImperial, nuts, R.array.food_info_serving_sizes_nuts_imperial);
-        putServingSize(res, servingSizesImperial, spices, R.array.food_info_serving_sizes_spices_imperial);
-        putServingSize(res, servingSizesImperial, wholeGrains, R.array.food_info_serving_sizes_whole_grains_imperial);
-        putServingSize(res, servingSizesImperial, beverages, R.array.food_info_serving_sizes_beverages_imperial);
-        putServingSize(res, servingSizesImperial, exercise, R.array.food_info_serving_sizes_exercise_imperial);
-
         servingSizesMetric = new ArrayMap<>();
-        putServingSize(res, servingSizesMetric, beans, R.array.food_info_serving_sizes_beans_metric);
-        putServingSize(res, servingSizesMetric, berries, R.array.food_info_serving_sizes_berries_metric);
-        putServingSize(res, servingSizesMetric, otherFruits, R.array.food_info_serving_sizes_other_fruits_metric);
-        putServingSize(res, servingSizesMetric, cruciferousVegetables, R.array.food_info_serving_sizes_cruciferous_vegetables_metric);
-        putServingSize(res, servingSizesMetric, greens, R.array.food_info_serving_sizes_greens_metric);
-        putServingSize(res, servingSizesMetric, otherVegetables, R.array.food_info_serving_sizes_other_vegetables_metric);
-        putServingSize(res, servingSizesMetric, flaxseeds, R.array.food_info_serving_sizes_flaxseeds_metric);
-        putServingSize(res, servingSizesMetric, nuts, R.array.food_info_serving_sizes_nuts_metric);
-        putServingSize(res, servingSizesMetric, spices, R.array.food_info_serving_sizes_spices_metric);
-        putServingSize(res, servingSizesMetric, wholeGrains, R.array.food_info_serving_sizes_whole_grains_metric);
-        putServingSize(res, servingSizesMetric, beverages, R.array.food_info_serving_sizes_beverages_metric);
-        putServingSize(res, servingSizesMetric, exercise, R.array.food_info_serving_sizes_exercise_metric);
 
+        initServingSizesForFood(context, beans);
+        initServingSizesForFood(context, berries);
+        initServingSizesForFood(context, otherFruits);
+        initServingSizesForFood(context, cruciferousVegetables);
+        initServingSizesForFood(context, greens);
+        initServingSizesForFood(context, otherVegetables);
+        initServingSizesForFood(context, flaxseeds);
+        initServingSizesForFood(context, nuts);
+        initServingSizesForFood(context, spices);
+        initServingSizesForFood(context, wholeGrains);
+        initServingSizesForFood(context, beverages);
+        initServingSizesForFood(context, exercise);
+    }
+
+    private static void initServingSizesForFood(final Context context, final String foodName) {
+        final Resources res = context.getResources();
+        final Locale locale = Locale.getDefault();
+
+        // Convert food name to resource id pattern ("Other Vegetables" becomes "other_vegetables")
+        final String formattedFoodName = foodName.toLowerCase().replace(" ", "_");
+
+        String[] servingSizeTexts = res.getStringArray(getServingSizesResourceId(context, formattedFoodName));
+        String[] imperialServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodName, Units.IMPERIAL));
+        String[] metricServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodName, Units.METRIC));
+
+        final List<String> imperial = new ArrayList<>();
+        final List<String> metric = new ArrayList<>();
+
+        for (int i = 0; i < servingSizeTexts.length; i++) {
+            imperial.add(String.format(locale, servingSizeTexts[i], imperialServingSizes[i]));
+            metric.add(String.format(locale, servingSizeTexts[i], metricServingSizes[i]));
+        }
+
+        servingSizesImperial.put(foodName, imperial);
+        servingSizesMetric.put(foodName, metric);
     }
 
     private static void putFoodTypeVideos(Resources res, String food, int urlId) {
