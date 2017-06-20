@@ -515,19 +515,19 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s medium-sized fruit</item>
+        <item>%s1 medium-sized fruit</item>
         <item>%s cut-up fruit</item>
         <item>%s dried fruit</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item>1</item>
+        <item></item>
         <item>1 cup</item>
         <item>¼ cup</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item>1</item>
+        <item></item>
         <item>120 g</item>
         <item>40 g</item>
     </string-array>
@@ -535,19 +535,19 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
         <item>%s chopped</item>
         <item>%s Brussels or broccoli sprouts</item>
-        <item>%s horseradish</item>
+        <item>%s1 tablespoon horseradish</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ cup</item>
         <item>¼ cup</item>
-        <item>1 tablespoon</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g</item>
         <item>12 g</item>
-        <item>1 tablespoon</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
@@ -600,17 +600,17 @@
 
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s nuts or seeds</item>
-        <item>%s nut or seed butter</item>
+        <item>%s2 tablespoons nut or seed butter</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ cup</item>
-        <item>2 tablespoons</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
-        <item>2 tablespoons</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
@@ -631,24 +631,24 @@
     <string-array name="food_info_serving_sizes_whole_grains">
         <item>%s hot cereal or cooked grains, pasta, or corn kernels</item>
         <item>%s cold cereal</item>
-        <item>%s tortilla or slice of bread</item>
-        <item>%s a bagel or English muffin</item>
+        <item>%s1 tortilla or slice of bread</item>
+        <item>%s½ a bagel or English muffin</item>
         <item>%s popped popcorn</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ cup</item>
         <item>1 cup</item>
-        <item>1</item>
-        <item>½</item>
+        <item></item>
+        <item></item>
         <item>3 cups</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
-        <item>1</item>
-        <item>½</item>
+        <item></item>
+        <item></item>
         <item>30 g</item>
     </string-array>
 
