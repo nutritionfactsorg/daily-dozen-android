@@ -413,69 +413,201 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>¼ φλιτζάνι χούμους ή ντιπ φασολιού</item>,
-        <item>½ φλιτζάνι μαγειρεμένα φασόλια, φάβα, φακές, τόφου, ή τέμπε</item>,
-        <item>1 φλιτζάνι αρακά ή φακές φυτρωμένες</item>
+        <item>%s χούμους ή ντιπ φασολιού</item>,
+        <item>%s μαγειρεμένα φασόλια, φάβα, φακές, τόφου, ή τέμπε</item>,
+        <item>%s αρακά ή φακές φυτρωμένες</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ φλιτζάνι</item>,
+        <item>½ φλιτζάνι</item>,
+        <item>1 φλιτζάνι</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g</item>,
+        <item>130 g</item>,
+        <item>150 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>½ φλιτζάνι φρέσκα ή κατεψυγμένα</item>
-        <item>¼ φλιτζανιού αποξηραμένα</item>
+        <item>%s φρέσκα ή κατεψυγμένα</item>
+        <item>%s αποξηραμένα</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ φλιτζάνι</item>
+        <item>¼ φλιτζανιού</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>1 μεσαίου μεγέθους φρούτο</item>
-        <item>1 φλυτζάνι κομμένο φρούτο</item>
-        <item>¼ φλιτζάνι αποξηραμένο φρούτο</item>
+        <item>%s1 μεσαίου μεγέθους φρούτο</item>
+        <item>%s κομμένο φρούτο</item>
+        <item>%s αποξηραμένο φρούτο</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item></item>
+        <item>1 φλυτζάνι</item>
+        <item>¼ φλιτζάνι</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item></item>
+        <item>120 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>½ φλιτζάνι ψιλοκομμένα</item>
-        <item>¼ φλιτζάνι λαχανάκι Βρυξέλλών ή φύτρα μπρόκολου</item>
-        <item>1 κουταλιά της σούπας χρένο</item>
+        <item>%s ψιλοκομμένα</item>
+        <item>%s λαχανάκι Βρυξέλλών ή φύτρα μπρόκολου</item>
+        <item>%s1 κουταλιά της σούπας χρένο</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ φλιτζάνι</item>
+        <item>¼ φλιτζάνι</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g</item>
+        <item>12 g</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
-        <item>1 φλιτζάνι ωμά</item>
-        <item>½ φλιτζάνι μαγειρεμένα</item>
+        <item>%s ωμά</item>
+        <item>%s μαγειρεμένα</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 φλιτζάνι</item>
+        <item>½ φλιτζάνι</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g</item>
+        <item>90 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>1 φλιτζάνι ωμά φυλλώδη λαχανικά</item>
-        <item>½ φλιτζάνι ωμά ή μαγειρεμένα μη φυλλώδη λαχανικά</item>
-        <item>½ φλιτζάνι χυμό λαχανικών</item>
-        <item>¼ φλιτζάνι αποξηραμένα μανιτάρια</item>
+        <item>%s ωμά φυλλώδη λαχανικά</item>
+        <item>%s ωμά ή μαγειρεμένα μη φυλλώδη λαχανικά</item>
+        <item>%s χυμό λαχανικών</item>
+        <item>%s αποξηραμένα μανιτάρια</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 φλιτζάνι</item>
+        <item>½ φλιτζάνι</item>
+        <item>½ φλιτζάνι</item>
+        <item>¼ φλιτζάνι</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 ml</item>
+        <item>7 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>1 κουταλιά της σούπας αλεσμένο</item>
+        <item>%s1 κουταλιά της σούπας αλεσμένο</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
-        <item>¼ φλιτζάνι ξηρούς καρπούς ή σπόρους</item>
-        <item>2 κουταλιές βούτηρο ξηρών καρπών ή σπόρων</item>
+        <item>%s ξηρούς καρπούς ή σπόρους</item>
+        <item>%s2 κουταλιές βούτηρο ξηρών καρπών ή σπόρων</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ φλιτζάνι</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
-        <item>¼ κουταλάκι του γλυκού κουρκουμά</item>
-        <item>Ότι άλλο (χωρίς αλάτι) βότανο και μπαχαρικό σας αρέσει</item>
+        <item>%s¼ κουταλάκι του γλυκού κουρκουμά</item>
+        <item>%sΌτι άλλο (χωρίς αλάτι) βότανο και μπαχαρικό σας αρέσει</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item></item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>½ φλιτζάνι ζεστά δημητριακά ή μαγειρεμένα, ζυμαρικά, ή πυρήνες καλαμποκιού</item>
-        <item>1 φλιτζάνι κρύα δημητριακά</item>
-        <item>1 τορτίγια ή φέτα ψωμί</item>
-        <item>½ κουλούρι ή αγγλικό μάφιν</item>
-        <item>3 φλιτζάνια ποπ κορν</item>
+        <item>%s ζεστά δημητριακά ή μαγειρεμένα, ζυμαρικά, ή πυρήνες καλαμποκιού</item>
+        <item>%s κρύα δημητριακά</item>
+        <item>%s1 τορτίγια ή φέτα ψωμί</item>
+        <item>%s½ κουλούρι ή αγγλικό μάφιν</item>
+        <item>%s ποπ κορν</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ φλιτζάνι</item>
+        <item>1 φλιτζάνι</item>
+        <item></item>
+        <item></item>
+        <item>3 φλιτζάνια</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g</item>
+        <item>50 g</item>
+        <item></item>
+        <item></item>
+        <item>30 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
-        <item>Ένα ποτήρι (350 ml)</item>
+        <item>%sΈνα ποτήρι (350 ml)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">
-        <item>90 λεπτά δραστηριότητα μέτριας έντασης</item>
-        <item>40 λεπτά δραστηριότητα έντονης έντασης</item>
+        <item>%s90 λεπτά δραστηριότητα μέτριας έντασης</item>
+        <item>%s40 λεπτά δραστηριότητα έντονης έντασης</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item></item>
+        <item></item>
     </string-array>
 
     <string name="error_cannot_handle_url">Δεν ήταν δυνατό το άνοιγμα url. Παρακαλώ εγκαταστήστε ένα πρόγραμμα περιήγησης.</string>
