@@ -170,16 +170,21 @@ public class FoodInfo {
         }
     }
 
-    private static void initServingSizesForFood(final Context context, final String foodName) {
+    private static void initServingSizesForFood(final Context context, final String foodIdName) {
         final Resources res = context.getResources();
         final Locale locale = Locale.getDefault();
 
         // Convert food name to resource id pattern ("Other Vegetables" becomes "other_vegetables")
-        final String formattedFoodName = foodName.toLowerCase().replace(" ", "_");
+        final String formattedFoodIdName = foodIdName.toLowerCase().replace(" ", "_");
 
-        String[] servingSizeTexts = res.getStringArray(getServingSizesResourceId(context, formattedFoodName));
-        String[] imperialServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodName, Units.IMPERIAL));
-        String[] metricServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodName, Units.METRIC));
+        // Dynamically load the string-arrays for food.
+        // The naming convention below must be followed:
+        //      food_info_serving_sizes_<formattedFoodIdName>
+        //      food_info_serving_sizes_<formattedFoodIdName>_imperial
+        //      food_info_serving_sizes_<formattedFoodIdName>_metric
+        String[] servingSizeTexts = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName));
+        String[] imperialServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName, Units.IMPERIAL));
+        String[] metricServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName, Units.METRIC));
 
         final List<String> imperial = new ArrayList<>();
         final List<String> metric = new ArrayList<>();
@@ -189,8 +194,8 @@ public class FoodInfo {
             metric.add(String.format(locale, servingSizeTexts[i], metricServingSizes[i]));
         }
 
-        servingSizesImperial.put(foodName, imperial);
-        servingSizesMetric.put(foodName, metric);
+        servingSizesImperial.put(foodIdName, imperial);
+        servingSizesMetric.put(foodIdName, metric);
     }
 
     private static void putFoodTypeVideos(Resources res, String food, int urlId) {
