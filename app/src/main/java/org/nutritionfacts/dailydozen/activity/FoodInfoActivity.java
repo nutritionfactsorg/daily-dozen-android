@@ -35,6 +35,8 @@ public class FoodInfoActivity extends FoodLoadingActivity {
         setContentView(R.layout.activity_food_info);
         ButterKnife.bind(this);
 
+        FoodInfo.initFoodInfo(this);
+
         displayFoodInfo();
     }
 

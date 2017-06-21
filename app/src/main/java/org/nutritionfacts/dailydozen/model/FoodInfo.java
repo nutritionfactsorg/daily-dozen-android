@@ -13,7 +13,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import hugo.weaving.DebugLog;
+
 public class FoodInfo {
+    private static boolean initializedFoodInfo;
+
     private static Map<String, Integer> foodImages;
     private static Map<String, Integer> foodIcons;
     private static Map<String, List<String>> servingSizes;
@@ -34,17 +38,26 @@ public class FoodInfo {
     private static String beverages;
     private static String exercise;
 
-    public static void init(final Context context) {
-        final Resources resources = context.getResources();
+    @DebugLog
+    public static void initFoodIcons(final Context context) {
+        bindFoodNames(context.getResources());
 
-        bindFoodNames(resources);
-
-        initFoodImages();
         initFoodIcons();
-        initServingSizes(resources);
-        initTypesOfFood(resources);
-        initFoodTypeVideos(resources);
-        initFoodVideos(resources);
+    }
+
+    @DebugLog
+    public static void initFoodInfo(final Context context) {
+        if (!initializedFoodInfo) {
+            final Resources res = context.getResources();
+
+            initFoodImages();
+            initServingSizes(res);
+            initTypesOfFood(res);
+            initFoodTypeVideos(res);
+            initFoodVideos(res);
+
+            initializedFoodInfo = true;
+        }
     }
 
     private static void bindFoodNames(Resources res) {
