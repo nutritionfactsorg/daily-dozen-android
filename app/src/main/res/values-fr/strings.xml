@@ -414,69 +414,201 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>¼ tasse d\'humus ou trempette de haricots,</item>
-        <item>½ tasse de haricots cuits, de pois cassés, de lentilles, de tofu ou de tempeh,</item>
-        <item>1 tasse de pois frais ou de lentilles germées</item>
+        <item>%s d\'humus ou trempette de haricots,</item>
+        <item>%s de haricots cuits, de pois cassés, de lentilles, de tofu ou de tempeh,</item>
+        <item>%s de pois frais ou de lentilles germées</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ tasse</item>
+        <item>½ tasse</item>
+        <item>1 tasse</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g</item>
+        <item>130 g</item>
+        <item>150 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>½ tasse de fruits frais ou congelés</item>
-        <item>¼ tasse séché</item>
+        <item>%s de fruits frais ou congelés</item>
+        <item>%s séché</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ tasse</item>
+        <item>¼ tasse</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>1 fruit de taille moyenne</item>
-        <item>1 tasse de fruits coupés</item>
-        <item>¼ tasse de fruits secs</item>
+        <item>%s1 fruit de taille moyenne</item>
+        <item>%s de fruits coupés</item>
+        <item>%s de fruits secs</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item></item>
+        <item>1 tasse</item>
+        <item>¼ tasse</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item></item>
+        <item>120 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>½ tasse haché</item>
-        <item>¼ tasse de pousses de chou ou de brocoli</item>
-        <item>1 cuillerée à soupe de raifort</item>
+        <item>%s haché</item>
+        <item>%s de pousses de chou ou de brocoli</item>
+        <item>%s1 cuillerée à soupe de raifort</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ tasse</item>
+        <item>¼ tasse</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g</item>
+        <item>12 g</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
-        <item>1 tasse cru</item>
-        <item>½ tasse cuit</item>
+        <item>%s cru</item>
+        <item>%s cuit</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 tasse</item>
+        <item>½ tasse</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g</item>
+        <item>90 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>1 tasse de légumes feuillus crus</item>
-        <item>½ tasse de légumes non feuillus crus ou cuits</item>
-        <item>½ tasse de jus de légumes</item>
-        <item>¼ tasse de champignons séchés</item>
+        <item>%s de légumes feuillus crus</item>
+        <item>%s de légumes non feuillus crus ou cuits</item>
+        <item>%s de jus de légumes</item>
+        <item>%s de champignons séchés</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 tasse</item>
+        <item>½ tasse</item>
+        <item>½ tasse</item>
+        <item>¼ tasse</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 ml</item>
+        <item>7 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>1 cuillrée à soupe moulu</item>
+        <item>%s1 cuillrée à soupe moulu</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
-        <item>¼ tasse de noix ou de graines</item>
-        <item>2 cuillerées à soupe de beurre de noix ou de graines</item>
+        <item>%s de noix ou de graines</item>
+        <item>%s2 cuillerées à soupe de beurre de noix ou de graines</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ tasse</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
-        <item>¼ de cuillère à café de curcuma</item>
-        <item>Toutes les autres herbes et épices (sans sel) que vous aimez</item>
+        <item>%s¼ de cuillère à café de curcuma</item>
+        <item>%sToutes les autres herbes et épices (sans sel) que vous aimez</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item></item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>½ tasse de céréales chaudes ou de grains, pâtes ou grains de maïs cuits</item>
-        <item>1 tasse de céréales froides</item>
-        <item>1 tortilla ou tranche de pain</item>
-        <item>½ bagel ou muffin anglais</item>
-        <item>3 tasses de pop-corn éclaté</item>
+        <item>%s de céréales chaudes ou de grains, pâtes ou grains de maïs cuits</item>
+        <item>%s de céréales froides</item>
+        <item>%s1 tortilla ou tranche de pain</item>
+        <item>%s½ bagel ou muffin anglais</item>
+        <item>%s de pop-corn éclaté</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ tasse</item>
+        <item>1 tasse</item>
+        <item></item>
+        <item></item>
+        <item>3 tasses</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g</item>
+        <item>50 g</item>
+        <item></item>
+        <item></item>
+        <item>30 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
-        <item>Un verre (12 onces)</item>
+        <item>Un verre (%s)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12 onces</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350 ml</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">
-        <item>90 minutes d\'activité d\'intensité modérée</item>
-        <item>40 minutes d\'activité intense</item>
+        <item>%s90 minutes d\'activité d\'intensité modérée</item>
+        <item>%s40 minutes d\'activité intense</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item></item>
+        <item></item>
     </string-array>
 
     <string name="error_cannot_handle_url">Impossible d\'ouvrir l\'url. Veuillez installer un navigateur.</string>

@@ -413,69 +413,201 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>¼ чаша хумус или бобова разядка</item>,
-        <item>½ чаша сварен боб, грах, леща, тофу или темпе</item>,
-        <item>1 чаша пресен грах или покълнала леща</item>
+        <item>%s хумус или бобова разядка</item>,
+        <item>%s сварен боб, грах, леща, тофу или темпе</item>,
+        <item>%s пресен грах или покълнала леща</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ чаша</item>,
+        <item>½ чаша</item>,
+        <item>1 чаша</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g</item>,
+        <item>130 g</item>,
+        <item>150 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>½ чаша пресни или замразени боровинки</item>
-        <item>¼ чаша изсушени боровинки</item>
+        <item>%s пресни или замразени боровинки</item>
+        <item>%s изсушени боровинки</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ чаша</item>
+        <item>¼ чаша</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>1 средно голям плод</item>
-        <item>1 чаша нарязани плодове</item>
-        <item>¼ чаша сушени плодове</item>
+        <item>%s средно голям плод</item>
+        <item>%s нарязани плодове</item>
+        <item>%s сушени плодове</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item>1</item>
+        <item>1 чаша</item>
+        <item>¼ чаша</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item>1</item>
+        <item>120 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>½ чаша нарязани цветнолистни</item>
-        <item>¼ чаша брюкселско зеле или броколи</item>
-        <item>1 супена лъжица хрян</item>
+        <item>%s нарязани цветнолистни</item>
+        <item>%s брюкселско зеле или броколи</item>
+        <item>%s супена лъжица хрян</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ чаша</item>
+        <item>¼ чаша</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g</item>
+        <item>12 g</item>
+        <item>1</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
-        <item>1 чаша сурови зеленолистни</item>
-        <item>½ чаша варени зеленолистни</item>
+        <item>%s сурови зеленолистни</item>
+        <item>%s варени зеленолистни</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 чаша</item>
+        <item>½ чаша</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g</item>
+        <item>90 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>1 чаша сурови листни зеленчуци</item>
-        <item>½ чаша сурови или варени зеленчуци</item>
-        <item>½ чаша зеленчуков сок</item>
-        <item>¼ чаша сушени гъби</item>
+        <item>%s сурови листни зеленчуци</item>
+        <item>%s сурови или варени зеленчуци</item>
+        <item>%s зеленчуков сок</item>
+        <item>%s сушени гъби</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 чаша</item>
+        <item>½ чаша</item>
+        <item>½ чаша</item>
+        <item>¼ чаша</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 мл.</item>
+        <item>7 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>1 супена лъжица ленено семе</item>
+        <item>%s1 супена лъжица ленено семе</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
-        <item>¼ чаша ядки или семена</item>
-        <item>2 супени лъжици ядки или масло от семена</item>
+        <item>%s ядки или семена</item>
+        <item>%s2 супени лъжици ядки или масло от семена</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ чаша</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
-        <item>¼ чаена лъжичка куркума</item>
-        <item>Всякакви други безсолни билки и подправки, които обичате</item>
+        <item>%s¼ чаена лъжичка куркума</item>
+        <item>%sВсякакви други безсолни билки и подправки, които обичате</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item></item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>½ чаша топла зърнена закуска или сварени зърна, паста или царевица</item>
-        <item>1 чаша студена зърнена закуска</item>
-        <item>1 тортила или филия хляб</item>
-        <item>½ поничка или английски мъфин</item>
-        <item>3 чаши пуканки</item>
+        <item>%s топла зърнена закуска или сварени зърна, паста или царевица</item>
+        <item>%s студена зърнена закуска</item>
+        <item>%s1 тортила или филия хляб</item>
+        <item>%s½ поничка или английски мъфин</item>
+        <item>%s пуканки</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ чаша</item>
+        <item>1 чаша</item>
+        <item></item>
+        <item></item>
+        <item>3 чаши</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g</item>
+        <item>50 g</item>
+        <item></item>
+        <item></item>
+        <item>30 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
-        <item>Една чаша (350 мл.)</item>
+        <item>%sЕдна чаша (350 мл.)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">
-        <item>90 минути умерена интензивност на физическа дейност</item>
-        <item>40 минути енергично интензивност дейност</item>
+        <item>%s90 минути умерена интензивност на физическа дейност</item>
+        <item>%s40 минути енергично интензивност дейност</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item></item>
+        <item></item>
     </string-array>
 
     <string name="error_cannot_handle_url">Връзката не може да се отвори. Моля, инсталирайте браузър.</string>
