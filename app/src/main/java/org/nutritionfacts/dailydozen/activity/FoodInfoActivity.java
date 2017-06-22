@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -27,6 +29,8 @@ import butterknife.OnClick;
 public class FoodInfoActivity extends FoodLoadingActivity {
     @BindView(R.id.food_info_image)
     protected ImageView ivFood;
+    @BindView(R.id.change_units_container)
+    protected ViewGroup vgChangeUnits;
     @BindView(R.id.change_units_button)
     protected Button btnChangeUnits;
     @BindView(R.id.food_serving_sizes)
@@ -44,6 +48,11 @@ public class FoodInfoActivity extends FoodLoadingActivity {
         FoodInfo.initFoodInfo(this);
 
         displayFoodInfo();
+
+        // Don't show the change units button when displaying info for exercise
+        if (getFood().getIdName().equalsIgnoreCase("exercise")) {
+            vgChangeUnits.setVisibility(View.GONE);
+        }
     }
 
     @Override

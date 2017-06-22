@@ -61,6 +61,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                     <LinearLayout
+                        android:id="@+id/change_units_container"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
