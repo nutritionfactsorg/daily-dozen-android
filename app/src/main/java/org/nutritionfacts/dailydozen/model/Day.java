@@ -39,6 +39,10 @@ public class Day extends TruncatableModel {
         return month;
     }
 
+    public int getDayNumber() {
+        return day;
+    }
+
     public Day() {
     }
 

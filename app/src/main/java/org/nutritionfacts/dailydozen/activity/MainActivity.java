@@ -44,6 +44,7 @@ import java.util.Date;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import hirondelle.date4j.DateTime;
+import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
@@ -212,9 +213,9 @@ public class MainActivity extends AppCompatActivity {
                 // Always refresh the data shown when returning from the Debug Activity
                 initDatePager();
                 break;
-            case Args.FOOD_HISTORY_REQUEST:
-                if (data != null && data.hasExtra(Args.DAY)) {
-                    setDatePagerDate(DateUtil.convertDateToDateTime((Date) data.getSerializableExtra(Args.DAY)));
+            case Args.SELECTABLE_DATE_REQUEST:
+                if (data != null && data.hasExtra(Args.DATE)) {
+                    setDatePagerDate(DateUtil.convertDateToDateTime((Date) data.getSerializableExtra(Args.DATE)));
                 }
                 break;
         }
@@ -387,6 +388,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setDatePagerDate(final DateTime dateTime) {
         if (dateTime != null) {
+            Timber.d("Changing displayed date to " + dateTime.toString());
             datePager.setCurrentItem(Day.getNumDaysSinceEpoch(dateTime));
         }
     }

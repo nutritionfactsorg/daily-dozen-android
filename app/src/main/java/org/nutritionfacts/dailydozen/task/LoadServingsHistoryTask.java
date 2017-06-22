@@ -98,8 +98,14 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
                 final int xIndex = xLabels.size();
 
                 xLabels.add(day.getDayOfWeek());
+
                 barEntries.add(new BarEntry(totalServingsOnDate, xIndex));
-                lineEntries.add(new Entry(previousTrend, xIndex));
+
+                final Entry lineEntry = new Entry(previousTrend, xIndex);
+                // Here we set the optional data field on the Entry class. This gives the user the
+                // ability to tap on a value in the ServingsHistoryActivity and be taken to that date
+                lineEntry.setData(DateUtil.convertDayToDate(day));
+                lineEntries.add(lineEntry);
             }
 
             publishProgress(i + 1, numDaysOfServings);

@@ -1,6 +1,5 @@
 package org.nutritionfacts.dailydozen.activity;
 
-import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
@@ -15,6 +14,7 @@ import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
 
 import org.nutritionfacts.dailydozen.Args;
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -70,9 +70,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
         caldroid.setCaldroidListener(new CaldroidListener() {
             @Override
             public void onSelectDate(Date date, View view) {
-                final Intent selectedDateIntent = new Intent();
-                selectedDateIntent.putExtra(Args.DAY, date);
-                setResult(Args.FOOD_HISTORY_REQUEST, selectedDateIntent);
+                setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(date));
                 finish();
             }
 

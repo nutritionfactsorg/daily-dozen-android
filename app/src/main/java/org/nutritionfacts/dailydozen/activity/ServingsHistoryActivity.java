@@ -7,8 +7,13 @@ import android.widget.AdapterView;
 
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.highlight.Highlight;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import org.greenrobot.eventbus.Subscribe;
+import org.nutritionfacts.dailydozen.Args;
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
@@ -20,11 +25,13 @@ import org.nutritionfacts.dailydozen.task.params.LoadServingsHistoryTaskParams;
 import org.nutritionfacts.dailydozen.view.TimeRangeSelector;
 import org.nutritionfacts.dailydozen.view.TimeScaleSelector;
 
+import java.util.Date;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ServingsHistoryActivity extends AppCompatActivity
-        implements AdapterView.OnItemSelectedListener {
+        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener {
 
     @BindView(R.id.daily_servings_history_time_scale)
     protected TimeScaleSelector timeScaleSelector;
@@ -130,7 +137,8 @@ public class ServingsHistoryActivity extends AppCompatActivity
         chart.setPinchZoom(false);
         chart.setDoubleTapToZoomEnabled(false);
         chart.setHighlightPerDragEnabled(false);
-        chart.setHighlightPerTapEnabled(false);
+
+        chart.setOnChartValueSelectedListener(this);
 
         alreadyLoadingData = false;
     }
@@ -142,6 +150,17 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    @Override
+    public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
+        setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent((Date) e.getData()));
+        finish();
+    }
+
+    @Override
+    public void onNothingSelected() {
 
     }
 }

@@ -1,7 +1,6 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -9,7 +8,6 @@ import android.widget.TextView;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.Servings;
 
@@ -54,7 +52,7 @@ public class DateServings extends LinearLayout {
         final Context context = getContext();
 
         if (!Servings.isEmpty()) {
-            context.startActivity(new Intent(context, ServingsHistoryActivity.class));
+            Common.openServingsHistory(context);
         } else {
             Common.showToast(context, R.string.no_servings_recorded);
         }

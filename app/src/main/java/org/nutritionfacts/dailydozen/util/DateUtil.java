@@ -1,5 +1,7 @@
 package org.nutritionfacts.dailydozen.util;
 
+import org.nutritionfacts.dailydozen.model.Day;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -9,6 +11,15 @@ import java.util.TimeZone;
 import hirondelle.date4j.DateTime;
 
 public class DateUtil {
+    private static Calendar getCalendarForYearMonthAndDay(final int year,
+                                                          final int monthOneBased,
+                                                          final int day) {
+        // We need to subtract one to convert the one-based month arg into a zero-based month
+        final Calendar cal = getCalendarForYearAndMonth(year, monthOneBased - 1);
+        cal.set(Calendar.DAY_OF_MONTH, day);
+        return cal;
+    }
+
     public static Calendar getCalendarForYearAndMonth(final int year, final int monthZeroBased) {
         final Calendar cal = getCalendarForToday();
         cal.set(Calendar.YEAR, year);
@@ -60,5 +71,9 @@ public class DateUtil {
 
     public static DateTime convertDateToDateTime(final Date date) {
         return date != null ? DateTime.forInstant(date.getTime(), TimeZone.getDefault()) : null;
+    }
+
+    public static Date convertDayToDate(final Day day) {
+        return day != null ? getCalendarForYearMonthAndDay(day.getYear(), day.getMonth(), day.getDayNumber()).getTime() : null;
     }
 }
