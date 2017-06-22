@@ -405,9 +405,9 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 ml</item>
-        <item>120 ml</item>
-        <item>240 ml</item>
+        <item>60 g</item>
+        <item>130 g</item>
+        <item>150 g</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_berries">
@@ -421,8 +421,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>120 ml</item>
-        <item>60 ml</item>
+        <item>60 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
@@ -439,8 +439,8 @@
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item></item>
-        <item>120 ml</item>
-        <item>60 ml</item>
+        <item>120 g</item>
+        <item>60 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
@@ -456,8 +456,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>120 ml</item>
-        <item>60 ml</item>
+        <item>30–80 g</item>
+        <item>12 g</item>
         <item></item>
     </string-array>
     
@@ -472,8 +472,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>240 ml</item>
-        <item>120 ml</item>
+        <item>60 g</item>
+        <item>90 g</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_other_vegetables">
@@ -491,10 +491,10 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>240 ml</item>
-        <item>120 ml</item>
-        <item>120 ml</item>
-        <item>60 ml</item>
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 ml</item>
+        <item>7 g</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_flaxseeds">
@@ -520,7 +520,7 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>60 ml</item>
+        <item>30 g</item>
         <item></item>
     </string-array>
     
@@ -556,11 +556,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>120 ml</item>
-        <item>240 ml</item>
+        <item>100 g</item>
+        <item>50 g</item>
         <item></item>
         <item></item>
-        <item>710 ml</item>
+        <item>30 g</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_beverages">
