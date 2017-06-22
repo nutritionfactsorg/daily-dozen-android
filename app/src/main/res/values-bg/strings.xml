@@ -77,6 +77,9 @@
     <string name="vibrate">Вибрация</string>
     <string name="play_sound">Възпроизвеждане на звук</string>
     <string name="videos">Видео клипове</string>
+    <string name="units">единици</string>
+    <string name="imperial">имперски</string>
+    <string name="metric">метричен</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -584,15 +587,15 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
-        <item>%sЕдна чаша (350 мл.)</item>
+        <item>Една чаша (%s)</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item></item>
+        <item>12 унции</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item></item>
+        <item>350 мл.</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">

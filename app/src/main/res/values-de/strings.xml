@@ -78,6 +78,9 @@
     <string name="debug_clear_data_message">Dies löscht alle eingegebenen Portionen. Möchtest du fortfahren?</string>
     <string name="dialog_no_email_apps_message">Das Sichern deiner Daten erfordert, dass du eine E-Mail-App installiert hast, damit die CSV-Backup-Datei per E-Mail versendet werden kann. Bitte installiere eine E-Mail-App und versuche es erneut.</string>
     <string name="error_cannot_handle_url">URL konnte nicht geöffnet werden. Bitte installieren Sie einen Browser.</string>
+    <string name="units">Einheiten</string>
+    <string name="imperial">Kaiserlich</string>
+    <string name="metric">Metrisch</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -561,16 +564,15 @@
     </string-array>
     
     <string-array name="food_info_serving_sizes_beverages">
-        <!-- metric glasses are 250 ml and therefore smaller than the glasses in the U.S. -->
-        <item>%s1½ Gläser (340 ml)</item>
+        <item>1½ Gläser (%s)</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item></item>
+        <item>12 Unzen</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item></item>
+        <item>350 ml</item>
     </string-array>
     
     <string-array name="food_info_serving_sizes_exercise">

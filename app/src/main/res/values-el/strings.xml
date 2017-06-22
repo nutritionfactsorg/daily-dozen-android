@@ -77,6 +77,9 @@
     <string name="vibrate">Δόνηση</string>
     <string name="play_sound">Αναπαραγωγή ήχου</string>
     <string name="videos">Βίντεο</string>
+    <string name="units">Μονάδες</string>
+    <string name="imperial">Αυτοκρατορικός</string>
+    <string name="metric">Μετρικός</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -584,15 +587,15 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
-        <item>%sΈνα ποτήρι (350 ml)</item>
+        <item>Ένα ποτήρι (%s)</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item></item>
+        <item>12 Ουγγιές</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item></item>
+        <item>350 ml</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">

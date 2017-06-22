@@ -78,6 +78,9 @@
     <string name="vibrate">Vibrer</string>
     <string name="play_sound">Jouer un son</string>
     <string name="videos">Vidéos</string>
+    <string name="units">Unités</string>
+    <string name="imperial">Impérial</string>
+    <string name="metric">Métrique</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
