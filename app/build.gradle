@@ -50,7 +50,7 @@ dependencies {
     }
     compile 'com.roomorama:caldroid:3.0.1'
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
-    compile 'com.github.PhilJay:MPAndroidChart:v2.2.5'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
