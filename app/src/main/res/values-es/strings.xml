@@ -416,20 +416,20 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>%s de hummus o dip de frijol</item>,
-        <item>%s de frijoles cocidos, arvejas partidas, lentejas, tofu o tempeh</item>,
+        <item>%s de hummus o dip de frijol</item>
+        <item>%s de frijoles cocidos, arvejas partidas, lentejas, tofu o tempeh</item>
         <item>%s de guisantes frescos o retoños de lentejas</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ taza</item>,
-        <item>½ taza</item>,
+        <item>¼ taza</item>
+        <item>½ taza</item>
         <item>1 taza</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g</item>,
-        <item>130 g</item>,
+        <item>60 g</item>
+        <item>130 g</item>
         <item>150 g</item>
     </string-array>
 

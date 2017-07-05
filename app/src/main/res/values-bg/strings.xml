@@ -416,21 +416,21 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>%s хумус или бобова разядка</item>,
-        <item>%s сварен боб, грах, леща, тофу или темпе</item>,
+        <item>%s хумус или бобова разядка</item>
+        <item>%s сварен боб, грах, леща, тофу или темпе</item>
         <item>%s пресен грах или покълнала леща</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ чаша</item>,
-        <item>½ чаша</item>,
+        <item>¼ чаша</item>
+        <item>½ чаша</item>
         <item>1 чаша</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g</item>,
-        <item>130 g</item>,
-        <item>150 g</item>
+        <item>60 грам</item>
+        <item>130 грам</item>
+        <item>150 грам</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
@@ -444,8 +444,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g</item>
-        <item>40 g</item>
+        <item>60 грам</item>
+        <item>40 грам</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
@@ -462,8 +462,8 @@
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1</item>
-        <item>120 g</item>
-        <item>40 g</item>
+        <item>120 грам</item>
+        <item>40 грам</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
@@ -479,8 +479,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g</item>
-        <item>12 g</item>
+        <item>30–80 грам</item>
+        <item>12 грам</item>
         <item>1</item>
     </string-array>
 
@@ -495,8 +495,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 g</item>
-        <item>90 g</item>
+        <item>60 грам</item>
+        <item>90 грам</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
@@ -514,10 +514,10 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 g</item>
-        <item>50 g</item>
+        <item>60 грам</item>
+        <item>50 грам</item>
         <item>125 мл.</item>
-        <item>7 g</item>
+        <item>7 грам</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
@@ -543,7 +543,7 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g</item>
+        <item>30 грам</item>
         <item></item>
     </string-array>
 
@@ -579,11 +579,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g</item>
-        <item>50 g</item>
+        <item>100 грам</item>
+        <item>50 грам</item>
         <item></item>
         <item></item>
-        <item>30 g</item>
+        <item>30 грам</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
