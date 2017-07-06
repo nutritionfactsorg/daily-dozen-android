@@ -117,6 +117,9 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
         chart.getXAxis().setDrawLabels(true);
 
+        // Without this line, MPAndroidChart v2.1.6 cuts off the tops of the X-axis date labels
+        chart.setExtraTopOffset(4f);
+
         // Start the chart with the latest day in view
         chart.moveViewToX(chart.getXChartMax());
 
