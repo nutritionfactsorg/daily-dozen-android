@@ -20,6 +20,7 @@ import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
 import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
 import org.nutritionfacts.dailydozen.task.params.LoadServingsHistoryTaskParams;
 import org.nutritionfacts.dailydozen.view.TimeRangeSelector;
@@ -142,6 +143,9 @@ public class ServingsHistoryActivity extends AppCompatActivity
         chart.setHighlightPerDragEnabled(false);
 
         chart.setOnChartValueSelectedListener(this);
+
+        // Only enable jumping to dates if the user is viewing daily data
+        chart.setHighlightPerTapEnabled(event.getTimeScale() == TimeScale.DAYS);
 
         alreadyLoadingData = false;
     }
