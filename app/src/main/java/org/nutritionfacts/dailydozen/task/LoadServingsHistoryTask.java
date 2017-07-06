@@ -15,6 +15,7 @@ import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
@@ -27,7 +28,8 @@ import java.util.List;
 
 import timber.log.Timber;
 
-public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistoryTaskParams, Integer, CombinedData> {
+public class LoadServingsHistoryTask
+        extends TaskWithContext<LoadServingsHistoryTaskParams, Integer, LoadServingsHistoryCompleteEvent> {
     private static final int MONTHS_IN_YEAR = 12;
 
     public LoadServingsHistoryTask(Context context) {
@@ -47,7 +49,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
     }
 
     @Override
-    protected CombinedData doInBackground(LoadServingsHistoryTaskParams... params) {
+    protected LoadServingsHistoryCompleteEvent doInBackground(LoadServingsHistoryTaskParams... params) {
         if (Servings.isEmpty() || params[0] == null) {
             return null;
         }
@@ -68,7 +70,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
     // This method loads the last two months of servings into memory, but only shows the selected
     // month. This is because it needs to use the data from the month before to calculate the
     // starting moving average.
-    private CombinedData getChartDataInDays(final LoadServingsHistoryTaskParams inputParams) {
+    private LoadServingsHistoryCompleteEvent getChartDataInDays(final LoadServingsHistoryTaskParams inputParams) {
         final List<Day> history = Day.getLastTwoMonths(inputParams.getSelectedYear(), inputParams.getSelectedMonth());
 
         final int numDaysOfServings = history.size();
@@ -98,8 +100,14 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
                 final int xIndex = xLabels.size();
 
                 xLabels.add(day.getDayOfWeek());
+
                 barEntries.add(new BarEntry(totalServingsOnDate, xIndex));
-                lineEntries.add(new Entry(previousTrend, xIndex));
+
+                final Entry lineEntry = new Entry(previousTrend, xIndex);
+                // Here we set the optional data field on the Entry class. This gives the user the
+                // ability to tap on a value in the ServingsHistoryActivity and be taken to that date
+                lineEntry.setData(DateUtil.convertDayToDate(day));
+                lineEntries.add(lineEntry);
             }
 
             publishProgress(i + 1, numDaysOfServings);
@@ -107,7 +115,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
             previousDay = day;
         }
 
-        return createLineAndBarData(xLabels, lineEntries, barEntries);
+        return createCompleteEvent(createLineAndBarData(xLabels, lineEntries, barEntries), TimeScale.DAYS);
     }
 
     // This method solves the issue where the trend is calculated from a set of data that is missing
@@ -130,7 +138,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
         }
     }
 
-    private CombinedData getChartDataInMonths(final LoadServingsHistoryTaskParams inputParams) {
+    private LoadServingsHistoryCompleteEvent getChartDataInMonths(final LoadServingsHistoryTaskParams inputParams) {
         int i = 0;
 
         int year = inputParams.getSelectedYear();
@@ -162,10 +170,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
             publishProgress(i++, MONTHS_IN_YEAR);
         }
 
-        return createLineData(xLabels, lineEntries);
+        return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.MONTHS);
     }
 
-    private CombinedData getChartDataInYears() {
+    private LoadServingsHistoryCompleteEvent getChartDataInYears() {
         final Day firstDay = Day.getFirstDay();
         final int firstYear = firstDay.getYear();
         Timber.d(String.format("getChartDataInYears: firstYear [%s]", firstYear));
@@ -202,7 +210,12 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
             publishProgress(i++, numYears);
         }
 
-        return createLineData(xLabels, lineEntries);
+        return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.YEARS);
+    }
+
+    private LoadServingsHistoryCompleteEvent createCompleteEvent(final CombinedData combinedData,
+                                                                 @TimeScale.Interface final int timeScale) {
+        return new LoadServingsHistoryCompleteEvent(combinedData, timeScale);
     }
 
     private CombinedData createLineAndBarData(List<String> xLabels, List<Entry> lineEntries, List<BarEntry> barEntries) {
@@ -285,9 +298,9 @@ public class LoadServingsHistoryTask extends TaskWithContext<LoadServingsHistory
     }
 
     @Override
-    protected void onPostExecute(CombinedData chartData) {
-        super.onPostExecute(chartData);
-        Bus.loadServingsHistoryCompleteEvent(chartData);
+    protected void onPostExecute(LoadServingsHistoryCompleteEvent event) {
+        super.onPostExecute(event);
+        Bus.loadServingsHistoryCompleteEvent(event);
     }
 
     private class BarChartValueFormatter implements ValueFormatter {

@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -16,7 +17,10 @@ import android.widget.Toast;
 
 import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
+import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.model.Food;
+
+import java.util.Date;
 
 public class Common {
     public static final String FILE_PROVIDER_AUTHORITY = "org.nutritionfacts.dailydozen.fileprovider";
@@ -123,11 +127,27 @@ public class Common {
         return intent;
     }
 
+    public static Intent createShowDateIntent(final Date date) {
+        final Intent showDateIntent = new Intent();
+        showDateIntent.putExtra(Args.DATE, date);
+        return showDateIntent;
+    }
+
     public static void openFoodInfo(final Context context, final Food food) {
         context.startActivity(createFoodIntent(context, FoodInfoActivity.class, food));
     }
 
     public static void openFoodHistory(final Context context, final Food food) {
-        context.startActivity(createFoodIntent(context, FoodHistoryActivity.class, food));
+        startSelectableDateActivity(context, createFoodIntent(context, FoodHistoryActivity.class, food));
+    }
+
+    public static void openServingsHistory(final Context context) {
+        startSelectableDateActivity(context, new Intent(context, ServingsHistoryActivity.class));
+    }
+
+    private static void startSelectableDateActivity(final Context context, final Intent intent) {
+        if (context instanceof Activity) {
+            ((Activity) context).startActivityForResult(intent, Args.SELECTABLE_DATE_REQUEST);
+        }
     }
 }

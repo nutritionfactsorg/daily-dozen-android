@@ -77,6 +77,9 @@
     <string name="vibrate">Vibra</string>
     <string name="play_sound">Sonido</string>
     <string name="videos">Videos</string>
+    <string name="units">Unidades</string>
+    <string name="imperial">Imperial</string>
+    <string name="metric">Métrico</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -413,69 +416,201 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>¼ taza de hummus o dip de frijol</item>,
-        <item>½ taza de frijoles cocidos, arvejas partidas, lentejas, tofu o tempeh</item>,
-        <item>1 taza de guisantes frescos o retoños de lentejas</item>
+        <item>%s de hummus o dip de frijol</item>
+        <item>%s de frijoles cocidos, arvejas partidas, lentejas, tofu o tempeh</item>
+        <item>%s de guisantes frescos o retoños de lentejas</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ taza</item>
+        <item>½ taza</item>
+        <item>1 taza</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g</item>
+        <item>130 g</item>
+        <item>150 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>½ taza frescos o congelados</item>
-        <item>¼ taza secos</item>
+        <item>%s frescos o congelados</item>
+        <item>%s secos</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ taza</item>
+        <item>¼ taza</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>1 fruta de tamaño medio</item>
-        <item>1 taza de fruta partida</item>
-        <item>¼ taza de fruta seca</item>
+        <item>%s fruta de tamaño medio</item>
+        <item>%s de fruta partida</item>
+        <item>%s de fruta seca</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item>1</item>
+        <item>1 taza</item>
+        <item>¼ taza</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item>1</item>
+        <item>120 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>½ taza picado</item>
-        <item>¼ taza de coles de Bruselas o retoños de brócoli</item>
-        <item>1 cucharada de rábano picante</item>
+        <item>%s picado</item>
+        <item>%s de coles de Bruselas o retoños de brócoli</item>
+        <item>%s de rábano picante</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ taza</item>
+        <item>¼ taza</item>
+        <item>1 cucharada</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g</item>
+        <item>12 g</item>
+        <item>1 cucharada</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
-        <item>1 taza cruda</item>
-        <item>½ taza cocida</item>
+        <item>%s cruda</item>
+        <item>%s cocida</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 taza</item>
+        <item>½ taza</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g</item>
+        <item>90 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>1 taza de vegetales de hoja cruda</item>
-        <item>½ taza de vegetales sin hoja cruda o cocida</item>
-        <item>½ taza de jugo de vegetales</item>
-        <item>¼ taza de champiñones secos</item>
+        <item>%s de vegetales de hoja cruda</item>
+        <item>%s de vegetales sin hoja cruda o cocida</item>
+        <item>%s de jugo de vegetales</item>
+        <item>%s de champiñones secos</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 taza</item>
+        <item>½ taza</item>
+        <item>½ taza</item>
+        <item>¼ taza</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 ml</item>
+        <item>7 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>1 cucharada molida</item>
+        <item>%s molida</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item>1 cucharada</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item>1 cucharada</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
-        <item>¼ taza de nueces o semillas</item>
-        <item>2 cucharadas de mantequilla de nueces o semillas</item>
+        <item>%s de nueces o semillas</item>
+        <item>%s de mantequilla de nueces o semillas</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ taza</item>
+        <item>2 cucharadas</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g</item>
+        <item>2 cucharadas</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
-        <item>¼ cucharadita de cúrcuma</item>
-        <item>Cualquier otra especie (sin sal) que gustes</item>
+        <item>%s de cúrcuma</item>
+        <item>%sCualquier otra especie (sin sal) que gustes</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item>¼ cucharadita</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item>¼ cucharadita</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>½ taza de cereal caliente o granos, pasta o granos de maíz cocidos</item>
-        <item>1 taza de cereal frío</item>
-        <item>1 tortilla o rodaja de pan</item>
-        <item>½ de un bagel o english muffin</item>
-        <item>3 tazas de palomitas de maíz reventadas</item>
+        <item>%s de cereal caliente o granos, pasta o granos de maíz cocidos</item>
+        <item>%s de cereal frío</item>
+        <item>%s tortilla o rodaja de pan</item>
+        <item>%s de un bagel o english muffin</item>
+        <item>%s de palomitas de maíz reventadas</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ taza</item>
+        <item>1 taza</item>
+        <item>1</item>
+        <item>½</item>
+        <item>3 tazas</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g</item>
+        <item>50 g</item>
+        <item>1</item>
+        <item>½</item>
+        <item>30 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
-        <item>Un vaso (12 onzas)</item>
+        <item>Un vaso (%s)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12 onzas</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350 ml</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">
-        <item>90 minutos de actividad de moderada intensidad</item>
-        <item>40 minutos de actividad de vigorosa intensidad</item>
+        <item>%s minutos de actividad de moderada intensidad</item>
+        <item>%s minutos de actividad de vigorosa intensidad</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item>90</item>
+        <item>40</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item>90</item>
+        <item>40</item>
     </string-array>
 
     <string name="error_cannot_handle_url">No puedes abrir el url. Por favor instala un browser.</string>

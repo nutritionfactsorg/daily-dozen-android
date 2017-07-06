@@ -1,7 +1,5 @@
 package org.nutritionfacts.dailydozen.controller;
 
-import com.github.mikephil.charting.data.CombinedData;
-
 import org.greenrobot.eventbus.EventBus;
 import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
 import org.nutritionfacts.dailydozen.event.BaseEvent;
@@ -53,8 +51,8 @@ public class Bus {
         post(new CalculateStreaksTaskCompleteEvent(success));
     }
 
-    public static void loadServingsHistoryCompleteEvent(final CombinedData chartData) {
-        post(new LoadServingsHistoryCompleteEvent(chartData));
+    public static void loadServingsHistoryCompleteEvent(final LoadServingsHistoryCompleteEvent event) {
+        post(event);
     }
 
     public static void timeScaleSelected(final int selectedTimeScale) {

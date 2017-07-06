@@ -50,7 +50,7 @@ public class DateFragment extends Fragment {
 
     public static DateFragment newInstance(final Day day) {
         final Bundle args = new Bundle();
-        args.putString(Args.DAY, day.getDateString());
+        args.putString(Args.DATE, day.getDateString());
 
         final DateFragment dateFragment = new DateFragment();
         dateFragment.setArguments(args);
@@ -82,9 +82,9 @@ public class DateFragment extends Fragment {
     private void displayFormForDate() {
         final Bundle args = getArguments();
 
-        if (args != null && args.containsKey(Args.DAY)) {
+        if (args != null && args.containsKey(Args.DATE)) {
             try {
-                day = Day.getByDate(args.getString(Args.DAY));
+                day = Day.getByDate(args.getString(Args.DATE));
 
                 initBackToTodayButton();
 

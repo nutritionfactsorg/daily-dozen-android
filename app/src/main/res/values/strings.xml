@@ -107,6 +107,9 @@
     <string name="vibrate">Vibrate</string>
     <string name="play_sound">Play Sound</string>
     <string name="videos">Videos</string>
+    <string name="units">Units</string>
+    <string name="imperial">Imperial</string>
+    <string name="metric">Metric</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
@@ -479,69 +482,201 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>¼ cup of hummus or bean dip</item>,
-        <item>½ cup cooked beans, split peas, lentils, tofu, or tempeh</item>,
-        <item>1 cup of fresh peas or sprouted lentils</item>
+        <item>%s of hummus or bean dip</item>
+        <item>%s cooked beans, split peas, lentils, tofu, or tempeh</item>
+        <item>%s of fresh peas or sprouted lentils</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ cup</item>
+        <item>½ cup</item>
+        <item>1 cup</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g</item>
+        <item>130 g</item>
+        <item>150 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>½ cup fresh or frozen</item>
-        <item>¼ cup dried</item>
+        <item>%s fresh or frozen</item>
+        <item>%s dried</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ cup</item>
+        <item>¼ cup</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>1 medium-sized fruit</item>
-        <item>1 cup cut-up fruit</item>
-        <item>¼ cup dried fruit</item>
+        <item>%s1 medium-sized fruit</item>
+        <item>%s cut-up fruit</item>
+        <item>%s dried fruit</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item></item>
+        <item>1 cup</item>
+        <item>¼ cup</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item></item>
+        <item>120 g</item>
+        <item>40 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>½ cup chopped</item>
-        <item>¼ cup Brussels or broccoli sprouts</item>
-        <item>1 tablespoon horseradish</item>
+        <item>%s chopped</item>
+        <item>%s Brussels or broccoli sprouts</item>
+        <item>%s1 tablespoon horseradish</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ cup</item>
+        <item>¼ cup</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g</item>
+        <item>12 g</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
-        <item>1 cup raw</item>
-        <item>½ cup cooked</item>
+        <item>%s raw</item>
+        <item>%s cooked</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 cup</item>
+        <item>½ cup</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g</item>
+        <item>90 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>1 cup raw leafy vegetables</item>
-        <item>½ cup raw or cooked nonleafy vegetables</item>
-        <item>½ cup vegetable juice</item>
-        <item>¼ cup dried mushrooms</item>
+        <item>%s raw leafy vegetables</item>
+        <item>%s raw or cooked nonleafy vegetables</item>
+        <item>%s vegetable juice</item>
+        <item>%s dried mushrooms</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 cup</item>
+        <item>½ cup</item>
+        <item>½ cup</item>
+        <item>¼ cup</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 ml</item>
+        <item>7 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>1 tablespoon ground</item>
+        <item>%s1 tablespoon ground</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
-        <item>¼ cup nuts or seeds</item>
-        <item>2 tablespoons nut or seed butter</item>
+        <item>%s nuts or seeds</item>
+        <item>%s2 tablespoons nut or seed butter</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ cup</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g</item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
-        <item>¼ teaspoon of turmeric</item>
-        <item>Any other (salt-free) herbs and spices you enjoy</item>
+        <item>%s¼ teaspoon of turmeric</item>
+        <item>%sAny other (salt-free) herbs and spices you enjoy</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item></item>
+        <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>½ cup hot cereal or cooked grains, pasta, or corn kernels</item>
-        <item>1 cup cold cereal</item>
-        <item>1 tortilla or slice of bread</item>
-        <item>½ a bagel or english muffin</item>
-        <item>3 cups popped popcorn</item>
+        <item>%s hot cereal or cooked grains, pasta, or corn kernels</item>
+        <item>%s cold cereal</item>
+        <item>%s1 tortilla or slice of bread</item>
+        <item>%s½ a bagel or English muffin</item>
+        <item>%s popped popcorn</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ cup</item>
+        <item>1 cup</item>
+        <item></item>
+        <item></item>
+        <item>3 cups</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g</item>
+        <item>50 g</item>
+        <item></item>
+        <item></item>
+        <item>30 g</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
-        <item>One glass (12 ounces)</item>
+        <item>One glass (%s)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12 ounces</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350 ml</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">
-        <item>90 minutes of moderate-intensity activity</item>
-        <item>40 minutes of vigorous-intensity activity</item>
+        <item>%s90 minutes of moderate-intensity activity</item>
+        <item>%s40 minutes of vigorous-intensity activity</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item></item>
+        <item></item>
     </string-array>
 
     <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>

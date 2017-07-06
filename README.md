@@ -45,6 +45,11 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
+### Version 13
+- Can now switch between metric and Imperial units
+- Tapping on a date in the calendar or chart view now takes you to that date
+- Reverted the MPAndroidChart version as the newer library was causing crashes
+
 ### Version 12.2
 - Fixed black background issue on Samsung devices
 - You can now move the app to your device's SD card
