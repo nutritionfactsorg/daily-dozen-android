@@ -498,7 +498,7 @@
     </string-array>
     
     <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 Teelöffel (5 ml) gerieben</item>
+        <item>%s1 Esslöffel (15 ml) gerieben</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
@@ -511,7 +511,7 @@
     
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s Nüsse oder Samen</item>
-        <item>%s2 Teelöffel Butter aus Nüssen oder Samen</item>
+        <item>%s2 Esslöffel (30 ml) Butter aus Nüssen oder Samen</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
