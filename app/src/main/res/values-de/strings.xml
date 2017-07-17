@@ -14,7 +14,7 @@
     <string name="task_generating_random_data">Erstelle Zufallsdaten</string>
     <string name="task_calculating_streaks_title">Berechne Streaks</string>
     <string name="task_backup_title">Erstelle Sicherung</string>
-    <string name="subscribe">Abbonieren</string>
+    <string name="subscribe">Abonnieren</string>
     <string name="spices">Gewürze</string>
     <string name="servings_some">Einige Portionen</string>
     <string name="servings_all">Alle Portionen</string>
@@ -25,7 +25,7 @@
     <string name="restore_success">Wiederherstellung erfolgreich</string>
     <string name="restore_failed">Wiederherstellung fehlgeschlagen</string>
     <string name="restore_confirm_title">Sicherung wiederherstellen</string>
-    <string name="restore_confirm_message">Bereits existierende Daten werden bei der Sicherung überschrieben. Möchten Sie fortfahren?</string>
+    <string name="restore_confirm_message">Bereits existierende Daten werden bei der Sicherung überschrieben. Möchtest du fortfahren?</string>
     <string name="remind_me_at">Erinnere mich um</string>
     <string name="rate_now">Feedback geben</string>
     <string name="play_sound">Ton abspielen</string>
@@ -45,14 +45,14 @@
     <string name="format_version">Version %s</string>
     <string name="format_num_days">%d Tage</string>
     <string name="food_info">Lebensmittelinfo</string>
-    <string name="food_history">Lebensmittel Historie</string>
+    <string name="food_history">Lebensmittel-Historie</string>
     <string name="flaxseeds">Leinsamen</string>
     <string name="exercise">Sport</string>
     <string name="enable_daily_reminder">Tägliche Benachrichtigung aktivieren</string>
     <string name="donate">Spenden</string>
     <string name="dialog_streaks_title">Neue Funktion: Streaks!</string>
-    <string name="dialog_streaks_message">Die Datenbank wird nun erneuert um das Streaks-Feature zu unterstützen.</string>
-    <string name="dialog_no_email_apps_title">Keine E-Mail Anwendung gefunden</string>
+    <string name="dialog_streaks_message">Die Datenbank wird nun erneuert, um die Streaks-Funktion zu unterstützen.</string>
+    <string name="dialog_no_email_apps_title">Keine E-Mail-App gefunden</string>
     <string name="dialog_ask_user_to_rate_app_title">Magst du diese App?</string>
     <string name="dialog_ask_user_to_rate_app_message">Gib uns Feedback im Play Store.</string>
     <string name="debug_generate_random_data">Erstelle Zufallsdaten</string>
@@ -62,10 +62,10 @@
     <string name="debug">Debug</string>
     <string name="about">Über</string>
     <string name="about_this_app">Über diese App</string>
-    <string name="activity_welcome_text">Verwende diese App auf täglicher Basis um den Überblick über die Lebensmittel zu behalten, welche ich für eine optimale Gesundheit und Langlebigkeit in meinem Buch „How Not to Die“ empfehle.</string>
+    <string name="activity_welcome_text">Verwende diese App jeden Tag und behalte den Überblick über die Lebensmittel, die ich für eine optimale Gesundheit und eine lange Lebensdauer in meinem Buch „How Not to Die“ empfehle.</string>
     <string name="back_to_today">Zurück zu Heute</string>
     <string name="backup">Sicherung</string>
-    <string name="backup_failed">Sicherung felhgeschlagen</string>
+    <string name="backup_failed">Sicherung fehlgeschlagen</string>
     <string name="backup_success">Sicherung erfolgreich</string>
     <string name="beans">Bohnen</string>
     <string name="berries">Beeren</string>
@@ -74,12 +74,12 @@
     <string name="daily_reminder_settings">Tägliche-Benachrichtigungs-Einstellungen</string>
     <string name="daily_reminder_text">Update für heutige Portionen</string>
     <string name="daily_reminder_title">Daily Dozen Erinnerung</string>
-    <string name="daily_servings_history">Tägliche Portionen Historie</string>
+    <string name="daily_servings_history">Tägliche Portionen-Historie</string>
     <string name="debug_clear_data_message">Dies löscht alle eingegebenen Portionen. Möchtest du fortfahren?</string>
     <string name="dialog_no_email_apps_message">Das Sichern deiner Daten erfordert, dass du eine E-Mail-App installiert hast, damit die CSV-Backup-Datei per E-Mail versendet werden kann. Bitte installiere eine E-Mail-App und versuche es erneut.</string>
-    <string name="error_cannot_handle_url">URL konnte nicht geöffnet werden. Bitte installieren Sie einen Browser.</string>
+    <string name="error_cannot_handle_url">URL konnte nicht geöffnet werden. Bitte installiere einen Browser.</string>
     <string name="units">Einheiten</string>
-    <string name="imperial">Kaiserlich</string>
+    <string name="imperial">Englisch</string>
     <string name="metric">Metrisch</string>
 
     <string-array name="food_names">
@@ -100,17 +100,17 @@
     <string-array name="about_text_lines">
         <item>Diese Anwendung wurde von John Slavick erstellt.</item>
         <item />
-        <item>Die folgenden Open-Source Bibliotheken werden verwendet: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation und MPAndroidChart.</item>
+        <item>Die folgenden Open-Source-Bibliotheken werden verwendet: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation und MPAndroidChart.</item>
         <item />
-        <item>Spezieller Dank geht an die freiwilligen Ersteller der vorherigen App: Chan Kruse, Allan Portera und Sangeeta Kumar.</item>
+        <item>Besonderer Dank geht an die freiwilligen Ersteller der vorherigen App: Chan Kruse, Allan Portera und Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
-        <item>Folge diesen Schritten um die Sicherung in der Daily Dozen App wiederherzustellen</item>
+        <item>Folge diesen Schritten, um die Sicherung in der Daily Dozen App wiederherzustellen:</item>
         <item />
         <item>1. Die Daily Dozen App muss auf deinem Android-Smartphone installiert sein. Du kannst sie hier herunterladen: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
-        <item>2. Tippe auf die Sicherungsdatei, welche diesem E-Mail angehängt ist.</item>
+        <item>2. Tippe auf die Sicherungsdatei, welche dieser E-Mail angehängt ist.</item>
         <item />
         <item>3. Wähle Daily Dozen im Öffnen-Menü.</item>
     </string-array>
@@ -178,7 +178,7 @@
         <item>Honigtau</item>
         <item>Kiwi</item>
         <item>Zitronen</item>
-        <item>Zitronen</item>
+        <item>Limette</item>
         <item>Lychees</item>
         <item>Mangos</item>
         <item>Nektarinen</item>
@@ -279,7 +279,7 @@
         <item>Gewürznelken</item>
         <item>Koriander</item>
         <item>Kreuzkümmel</item>
-        <item>Curry Pulver</item>
+        <item>Curry-Pulver</item>
         <item>Dill</item>
         <item>Bockshornklee</item>
         <item>Knoblauch</item>
@@ -347,11 +347,11 @@
         <item>Eislaufen</item>
         <item>Inlineskating</item>
         <item>Jonglieren</item>
-        <item>Springen auf einem Trampolin</item>
+        <item>Trampolinspringen</item>
         <item>Paddelboot fahren</item>
         <item>Frisbee spielen</item>
         <item>Rollschuhlaufen</item>
-        <item>Körbe schießen</item>
+        <item>Korbwerfen</item>
         <item>Schneeschaufeln (leichter Schneefall)</item>
         <item>Skateboardfahren</item>
         <item>Schnorcheln</item>
@@ -367,13 +367,13 @@
         <item>Backpacking</item>
         <item>Basketball</item>
         <item>Radfahren (bergauf)</item>
-        <item>Zirkel-Krafttraining</item>
+        <item>Zirkeltraining</item>
         <item>Skilanglauf</item>
         <item>Fußball</item>
         <item>Eishockey</item>
         <item>Jogging</item>
-        <item>Jumping Jacks</item>
-        <item>Sprungseil</item>
+        <item>Hampelmann (Gymnastik)</item>
+        <item>Seilspringen</item>
         <item>Lacrosse</item>
         <item>Liegestütze</item>
         <item>Klimmzüge</item>
@@ -387,7 +387,7 @@
         <item>Eisschnelllauf</item>
         <item>Squash</item>
         <item>Step-Aerobic</item>
-        <item>Schwimmen Runden</item>
+        <item>Schwimmen (Runden)</item>
         <item>Flottes Bergaufgehen</item>
         <item>Wasserjogging</item>
     </string-array>
@@ -395,7 +395,7 @@
     <string-array name="food_info_serving_sizes_beans">
         <item>%s Hummus oder Bohnendip</item>
         <item>%s gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
-        <item>%s frische Erbsen oder Linsen gekeimt</item>
+        <item>%s frische Erbsen oder gekeimte Linsen</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_imperial">
@@ -526,7 +526,7 @@
     
     <string-array name="food_info_serving_sizes_spices">
         <item>%s¼ Teelöffel (1,2 ml) Kurkuma</item>
-        <item>%sAlle anderen (salzfreien) Kräuter und Gewürze die du magst</item>
+        <item>%sAlle anderen (salzfreien) Kräuter und Gewürze, die du magst</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
@@ -542,7 +542,7 @@
     <string-array name="food_info_serving_sizes_whole_grains">
         <item>%s heißes oder gekochtes Getreide, Teigwaren, oder Maiskörner</item>
         <item>%s Getreide</item>
-        <item>%s1 Tortilla oder 1 Brotscheibe</item>
+        <item>%s1 Tortilla oder 1 Scheibe Brot</item>
         <item>%s½ Bagel oder ½ Englischer Muffin</item>
         <item>%s Popcorn</item>
     </string-array>
@@ -576,8 +576,8 @@
     </string-array>
     
     <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 Minuten Aktivität mittlerer Intensität</item>
-        <item>%s40 Minuten Aktivität hoher Intensität</item>
+        <item>%s90 min Aktivität mittlerer Intensität</item>
+        <item>%s40 min Aktivität hoher Intensität</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
