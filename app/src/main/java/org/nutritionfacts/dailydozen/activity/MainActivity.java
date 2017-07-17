@@ -72,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
         calculateStreaksAfterDatabaseUpgradeToV2();
 
+        NotificationUtil.dismissUpdateReminderNotification(this);
+
         handleIntentIfNecessary();
     }
 
@@ -83,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
 
             if (extras != null) {
                 if (extras.getBoolean(Args.OPEN_NOTIFICATION_SETTINGS, false)) {
-                    NotificationUtil.dismissUpdateReminderNotification(this);
                     startActivity(new Intent(this, DailyReminderSettingsActivity.class));
                 }
             }
