@@ -45,6 +45,10 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
+### Version 13.1
+- Fixed minor bug where notification was not being dismissed unless the app was opened from the notification
+- Improvements to the German translation - thanks to contributor [caugner](https://github.com/caugner)
+
 ### Version 13
 - Can now switch between metric and Imperial units
 - Tapping on a date in the calendar or chart view now takes you to that date
