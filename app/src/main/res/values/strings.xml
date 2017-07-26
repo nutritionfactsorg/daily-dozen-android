@@ -13,6 +13,8 @@
     <string name="whole_grains">Whole Grains</string>
     <string name="beverages">Beverages</string>
     <string name="exercise">Exercise</string>
+    <string name="vitamin_b12">Vitamin B12</string>
+    <string name="vitamin_d">Vitamin D</string>
     <string name="serving_sizes">Serving Sizes</string>
     <string name="types">Types</string>
     <string name="history">History</string>
@@ -127,6 +129,8 @@
     <string name="food_info_videos_whole_grains" translatable="false">grains</string>
     <string name="food_info_videos_beverages" translatable="false">beverages</string>
     <string name="food_info_videos_exercise" translatable="false">exercise</string>
+    <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
+    <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
 
     <!--
     NOTE: These strings should never be translated from English
@@ -145,6 +149,8 @@
         <item>Whole Grains</item>
         <item>Beverages</item>
         <item>Exercise</item>
+        <item>Vitamin B12</item>
+        <item>Vitamin D</item>
     </string-array>
 
     <string-array name="food_names">
@@ -160,6 +166,8 @@
         <item>@string/whole_grains</item>
         <item>@string/beverages</item>
         <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">
@@ -183,6 +191,8 @@
         <item>1</item>
         <item>3</item>
         <item>5</item>
+        <item>1</item>
+        <item>1</item>
         <item>1</item>
     </integer-array>
 

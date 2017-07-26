@@ -19,12 +19,16 @@ import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.model.Food;
+import org.nutritionfacts.dailydozen.model.FoodInfo;
 
 import java.util.Date;
 
 public class Common {
     public static final String FILE_PROVIDER_AUTHORITY = "org.nutritionfacts.dailydozen.fileprovider";
     public static final String PREFERENCES_FILE = "org.nutritionfacts.dailydozen.preferences";
+
+    private static final String VITAMIN_B12 = "Vitamin B12";
+    private static final String VITAMIN_D = "Vitamin D";
 
     private static boolean userIsBeingAsked;
 
@@ -134,7 +138,18 @@ public class Common {
     }
 
     public static void openFoodInfo(final Context context, final Food food) {
-        context.startActivity(createFoodIntent(context, FoodInfoActivity.class, food));
+        FoodInfo.initFoodInfo(context);
+
+        if (isVitamin(food)) {
+            openUrlInExternalBrowser(context, FoodInfo.getFoodTypeVideosLink(food.getName()));
+        } else {
+            context.startActivity(createFoodIntent(context, FoodInfoActivity.class, food));
+        }
+    }
+
+    public static boolean isVitamin(final Food food) {
+        return food != null &&
+                (VITAMIN_B12.equalsIgnoreCase(food.getIdName()) || VITAMIN_D.equalsIgnoreCase(food.getIdName()));
     }
 
     public static void openFoodHistory(final Context context, final Food food) {

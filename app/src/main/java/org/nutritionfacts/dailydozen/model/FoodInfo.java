@@ -40,6 +40,8 @@ public class FoodInfo {
     private static String wholeGrains;
     private static String beverages;
     private static String exercise;
+    private static String vitaminB12;
+    private static String vitaminD;
 
     @DebugLog
     public static void initFoodIcons(final Context context) {
@@ -76,6 +78,8 @@ public class FoodInfo {
         wholeGrains = res.getString(R.string.whole_grains);
         beverages = res.getString(R.string.beverages);
         exercise = res.getString(R.string.exercise);
+        vitaminB12 = res.getString(R.string.vitamin_b12);
+        vitaminD = res.getString(R.string.vitamin_d);
     }
 
     @DrawableRes
@@ -120,6 +124,9 @@ public class FoodInfo {
         foodIcons.put(wholeGrains, R.drawable.ic_whole_grains);
         foodIcons.put(beverages, R.drawable.ic_beverages);
         foodIcons.put(exercise, R.drawable.ic_exercise);
+        // TODO: 7/26/17 Replace this with the real icons
+        foodIcons.put(vitaminB12, R.drawable.ic_spices);
+        foodIcons.put(vitaminD, R.drawable.ic_spices);
     }
 
     public static List<String> getTypesOfFood(final String foodName) {
@@ -190,25 +197,29 @@ public class FoodInfo {
         // Convert food name to resource id pattern ("Other Vegetables" becomes "other_vegetables")
         final String formattedFoodIdName = foodIdName.toLowerCase().replace(" ", "_");
 
-        // Dynamically load the string-arrays for food.
-        // The naming convention below must be followed:
-        //      food_info_serving_sizes_<formattedFoodIdName>
-        //      food_info_serving_sizes_<formattedFoodIdName>_imperial
-        //      food_info_serving_sizes_<formattedFoodIdName>_metric
-        String[] servingSizeTexts = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName));
-        String[] imperialServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName, Units.IMPERIAL));
-        String[] metricServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName, Units.METRIC));
+        try {
+            // Dynamically load the string-arrays for food.
+            // The naming convention below must be followed:
+            //      food_info_serving_sizes_<formattedFoodIdName>
+            //      food_info_serving_sizes_<formattedFoodIdName>_imperial
+            //      food_info_serving_sizes_<formattedFoodIdName>_metric
+            String[] servingSizeTexts = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName));
+            String[] imperialServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName, Units.IMPERIAL));
+            String[] metricServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName, Units.METRIC));
 
-        final List<String> imperial = new ArrayList<>();
-        final List<String> metric = new ArrayList<>();
+            final List<String> imperial = new ArrayList<>();
+            final List<String> metric = new ArrayList<>();
 
-        for (int i = 0; i < servingSizeTexts.length; i++) {
-            imperial.add(String.format(locale, servingSizeTexts[i], imperialServingSizes[i]));
-            metric.add(String.format(locale, servingSizeTexts[i], metricServingSizes[i]));
+            for (int i = 0; i < servingSizeTexts.length; i++) {
+                imperial.add(String.format(locale, servingSizeTexts[i], imperialServingSizes[i]));
+                metric.add(String.format(locale, servingSizeTexts[i], metricServingSizes[i]));
+            }
+
+            servingSizesImperial.put(foodIdName, imperial);
+            servingSizesMetric.put(foodIdName, metric);
+        } catch (Resources.NotFoundException e) {
+            // TODO: 7/26/17 Vitamins B12 and D don't need the above functionality
         }
-
-        servingSizesImperial.put(foodIdName, imperial);
-        servingSizesMetric.put(foodIdName, metric);
     }
 
     private static void putFoodTypeVideos(Resources res, String food, int urlId) {
@@ -234,6 +245,8 @@ public class FoodInfo {
         putFoodTypeVideos(res, wholeGrains, R.string.food_info_videos_whole_grains);
         putFoodTypeVideos(res, beverages, R.string.food_info_videos_beverages);
         putFoodTypeVideos(res, exercise, R.string.food_info_videos_exercise);
+        putFoodTypeVideos(res, vitaminB12, R.string.food_info_videos_vitamin_b12);
+        putFoodTypeVideos(res, vitaminD, R.string.food_info_videos_vitamin_d);
     }
 
     public static List<String> getFoodVideosLink(final String foodName) {
