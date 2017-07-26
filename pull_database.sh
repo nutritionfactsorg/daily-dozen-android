@@ -1,9 +1,8 @@
-# Ensure we are running as root. Otherwise we will not be able to access the database file.
-# NOTE: This only works if your device is rooted
-adb root
-
 # Download the database file to the current working directory.
-adb pull /data/data/org.nutritionfacts.dailydozen/databases/dailydozen.db
+# NOTE: This only works on debuggable builds of the app
+adb shell "run-as org.nutritionfacts.dailydozen cp /data/data/org.nutritionfacts.dailydozen/databases/dailydozen.db /sdcard/dailydozen.db"
+adb pull "/sdcard/dailydozen.db"
+adb shell "rm /sdcard/dailydozen.db"
 
 # Append the current date and time to the file. This way we won't overwrite previously pulled database files.
 mv dailydozen.db DailyDozenDB_$(date +"%Y%m%d%H%M%S").db
