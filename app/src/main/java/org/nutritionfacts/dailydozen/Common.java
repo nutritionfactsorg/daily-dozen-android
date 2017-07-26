@@ -10,7 +10,6 @@ import android.support.annotation.ColorInt;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -45,10 +44,6 @@ public class Common {
 
     public static void showToast(final Context context, final int stringId) {
         showToast(context, context.getString(stringId));
-    }
-
-    public static int convertDpToPx(final Context context, final int dp) {
-        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
     }
 
     public static String getLineSeparator() {
