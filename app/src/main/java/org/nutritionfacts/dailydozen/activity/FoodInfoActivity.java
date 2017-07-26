@@ -48,7 +48,7 @@ public class FoodInfoActivity extends FoodLoadingActivity {
         displayFoodInfo();
 
         // Don't show the change units button when displaying info for exercise
-        if (getFood().getIdName().equalsIgnoreCase("exercise")) {
+        if (Common.EXERCISE.equalsIgnoreCase(getFood().getIdName())) {
             vgChangeUnits.setVisibility(View.GONE);
         }
     }

@@ -42,7 +42,7 @@ public class DateServings extends LinearLayout {
     }
 
     public void setServings(final int servingsOnDate) {
-        tvStar.setVisibility(servingsOnDate == 24 ? VISIBLE : GONE);
+        tvStar.setVisibility(servingsOnDate == Common.MAX_SERVINGS ? VISIBLE : GONE);
 
         tvNumServings.setText(Integer.toString(servingsOnDate));
     }

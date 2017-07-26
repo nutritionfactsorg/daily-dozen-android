@@ -134,7 +134,7 @@ public class DateFragment extends Fragment {
 
             updateServingsCount(servingsOnDate);
 
-            if (servingsOnDate == 24) {
+            if (servingsOnDate == Common.MAX_SERVINGS) {
                 showExplodingStarAnimation();
             }
         }

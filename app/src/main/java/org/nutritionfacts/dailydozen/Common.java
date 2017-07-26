@@ -27,6 +27,9 @@ public class Common {
     public static final String FILE_PROVIDER_AUTHORITY = "org.nutritionfacts.dailydozen.fileprovider";
     public static final String PREFERENCES_FILE = "org.nutritionfacts.dailydozen.preferences";
 
+    public static final int MAX_SERVINGS = 24;
+
+    public static final String EXERCISE = "exercise";
     public static final String VITAMIN_B12 = "Vitamin B12";
     public static final String VITAMIN_D = "Vitamin D";
 
