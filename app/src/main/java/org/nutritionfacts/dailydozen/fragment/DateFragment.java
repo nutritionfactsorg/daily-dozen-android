@@ -128,7 +128,8 @@ public class DateFragment extends Fragment {
 
     @Subscribe
     public void onEvent(FoodServingsChangedEvent event) {
-        if (event.getDateString().equals(day.getDateString())) {
+        // Vitamins do not count towards the daily servings total, so we ignore when they are checked/unchecked
+        if (!event.getIsVitamin() && event.getDateString().equals(day.getDateString())) {
             final int servingsOnDate = Servings.getTotalServingsOnDate(day);
 
             updateServingsCount(servingsOnDate);
