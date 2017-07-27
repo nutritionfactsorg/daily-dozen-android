@@ -217,7 +217,8 @@ public class FoodInfo {
             servingSizesImperial.put(foodIdName, imperial);
             servingSizesMetric.put(foodIdName, metric);
         } catch (Resources.NotFoundException e) {
-            // TODO: 7/26/17 Vitamins B12 and D don't need the above functionality
+            // Vitamin B12 and Vitamin D don't need the above functionality and therefore
+            // don't have the required resource ids for the above code to function correctly
         }
     }
 
