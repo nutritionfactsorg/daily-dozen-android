@@ -80,8 +80,8 @@
     <string name="play_sound">Αναπαραγωγή ήχου</string>
     <string name="videos">Βίντεο</string>
     <string name="units">Μονάδες</string>
-    <string name="imperial">Αυτοκρατορικός</string>
-    <string name="metric">Μετρικός</string>
+    <string name="imperial">Αγγλοσαξονικό</string>
+    <string name="metric">Μετρικό</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -228,7 +228,7 @@
         <item>Ρόκα</item>
         <item>Χόρτα τεύτλων</item>
         <item>Φύλλα Λαχανίδας</item>
-        <item>Καλέ (μαύρο, πράσινο και κόκκινο)</item>
+        <item>Κέιλ (μαύρο, πράσινο και κόκκινο)</item>
         <item>Σαλάτα μείγμα (διάφορα είδη πράσινων)</item>
         <item>Φύλλα μουστάρδας</item>
         <item>Λάπαθο</item>
@@ -417,9 +417,9 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 γραμμάριο</item>
-        <item>130 γραμμάριο</item>
-        <item>150 γραμμάριο</item>
+        <item>60 γραμμάρια</item>
+        <item>130 γραμμάρια</item>
+        <item>150 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
@@ -433,8 +433,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 γραμμάριο</item>
-        <item>40 γραμμάριο</item>
+        <item>60 γραμμάρια</item>
+        <item>40 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
@@ -451,8 +451,8 @@
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item></item>
-        <item>120 γραμμάριο</item>
-        <item>40 γραμμάριο</item>
+        <item>120 γραμμάρια</item>
+        <item>40 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
@@ -468,8 +468,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 γραμμάριο</item>
-        <item>12 γραμμάριο</item>
+        <item>30–80 γραμμάρια</item>
+        <item>12 γραμμάρια</item>
         <item></item>
     </string-array>
 
@@ -484,8 +484,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 γραμμάριο</item>
-        <item>90 γραμμάριο</item>
+        <item>60 γραμμάρια</item>
+        <item>90 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
@@ -503,10 +503,10 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 γραμμάριο</item>
-        <item>50 γραμμάριο</item>
+        <item>60 γραμμάρια</item>
+        <item>50 γραμμάρια</item>
         <item>125 ml</item>
-        <item>7 γραμμάριο</item>
+        <item>7 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
@@ -532,7 +532,7 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 γραμμάριο</item>
+        <item>30 γραμμάρια</item>
         <item></item>
     </string-array>
 
@@ -568,11 +568,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 γραμμάριο</item>
-        <item>50 γραμμάριο</item>
+        <item>100 γραμμάρια</item>
+        <item>50 γραμμάρια</item>
         <item></item>
         <item></item>
-        <item>30 γραμμάριο</item>
+        <item>30 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
