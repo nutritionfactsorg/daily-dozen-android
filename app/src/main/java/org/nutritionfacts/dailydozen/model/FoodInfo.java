@@ -124,9 +124,8 @@ public class FoodInfo {
         foodIcons.put(wholeGrains, R.drawable.ic_whole_grains);
         foodIcons.put(beverages, R.drawable.ic_beverages);
         foodIcons.put(exercise, R.drawable.ic_exercise);
-        // TODO: 7/26/17 Replace this with the real icons
-        foodIcons.put(vitaminB12, R.drawable.ic_spices);
-        foodIcons.put(vitaminD, R.drawable.ic_spices);
+        foodIcons.put(vitaminB12, R.drawable.ic_vitamin_b12);
+        foodIcons.put(vitaminD, R.drawable.ic_vitamin_d);
     }
 
     public static List<String> getTypesOfFood(final String foodName) {
