@@ -13,6 +13,8 @@
     <string name="whole_grains">Ολικής Αλέσεως</string>
     <string name="beverages">Ροφήματα</string>
     <string name="exercise">Γυμναστική</string>
+    <string name="vitamin_b12">Βιταμίνη B12</string>
+    <string name="vitamin_d">Βιταμίνη D</string>
     <string name="serving_sizes">Μερίδα</string>
     <string name="types">Τύποι</string>
     <string name="history">Ιστορικό</string>
@@ -94,6 +96,8 @@
         <item>@string/whole_grains</item>
         <item>@string/beverages</item>
         <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">
@@ -104,21 +108,6 @@
         <item>@string/other_vegetables</item>
         <item>@string/spices</item>
     </string-array>
-
-    <integer-array name="food_quantities">
-        <item>3</item>
-        <item>1</item>
-        <item>3</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>3</item>
-        <item>5</item>
-        <item>1</item>
-    </integer-array>
 
     <string-array name="about_text_lines">
         <item>Η εφαρμογή δημιουργήθηκε από τον John Slavick.</item>

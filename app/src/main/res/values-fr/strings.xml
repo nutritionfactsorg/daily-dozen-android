@@ -14,6 +14,8 @@
     <string name="whole_grains">Grains entiers</string>
     <string name="beverages">Boissons</string>
     <string name="exercise">Exercice</string>
+    <string name="vitamin_b12">Vitamine B12</string>
+    <string name="vitamin_d">Vitamine D</string>
     <string name="serving_sizes">Portions</string>
     <string name="types">Types</string>
     <string name="history">Historique</string>
@@ -95,6 +97,8 @@
         <item>@string/whole_grains</item>
         <item>@string/beverages</item>
         <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">
@@ -105,21 +109,6 @@
         <item>@string/other_vegetables</item>
         <item>@string/spices</item>
     </string-array>
-
-    <integer-array name="food_quantities">
-        <item>3</item>
-        <item>1</item>
-        <item>3</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>3</item>
-        <item>5</item>
-        <item>1</item>
-    </integer-array>
 
     <string-array name="about_text_lines">
         <item>Cette application a été créée par John Slavick.</item>
