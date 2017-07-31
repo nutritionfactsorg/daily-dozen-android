@@ -112,6 +112,8 @@
     <string name="units">Units</string>
     <string name="imperial">Imperial</string>
     <string name="metric">Metric</string>
+    <string name="vitamin_divider_text">Vitamins</string>
+    <string name="dialog_vitamin_explanation_text">Vitamin B12 and Vitamin D are essential for your health but do not count towards your daily servings.\n\nThey have been included in this app to provide you with an easy way for tracking them.</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
