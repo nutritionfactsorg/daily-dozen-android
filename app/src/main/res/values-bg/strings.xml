@@ -82,6 +82,8 @@
     <string name="units">единици</string>
     <string name="imperial">имперски</string>
     <string name="metric">метричен</string>
+    <string name="vitamin_divider_text">Витамини</string>
+    <string name="dialog_vitamin_explanation_text">Витамин B12 и витамин D са от съществено значение за вашето здраве, но не се включват в ежедневните ви порции.\n\nТе са включени в това приложение, за да ви осигурят лесен начин за проследяване на приема.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

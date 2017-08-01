@@ -82,6 +82,8 @@
     <string name="units">Μονάδες</string>
     <string name="imperial">Αγγλοσαξονικό</string>
     <string name="metric">Μετρικό</string>
+    <string name="vitamin_divider_text">Βιταμίνες</string>
+    <string name="dialog_vitamin_explanation_text">Η βιταμίνη Β12 και η βιταμίνη D είναι απαραίτητες για την υγεία σας, αλλά δεν προσμετρώνται στις καθημερινές σας μερίδες.\n\nΠεριλαμβάνονται σε αυτήν την εφαρμογή για να σας παρέχουν έναν εύκολο τρόπο παρακολούθησης της πρόσληψής σας.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>

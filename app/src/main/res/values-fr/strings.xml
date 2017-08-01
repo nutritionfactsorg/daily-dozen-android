@@ -83,6 +83,8 @@
     <string name="units">Unités</string>
     <string name="imperial">Impérial</string>
     <string name="metric">Métrique</string>
+    <string name="vitamin_divider_text">Vitamines</string>
+    <string name="dialog_vitamin_explanation_text">La vitamine B12 et la vitamine D sont essentielles pour votre santé mais ne comptent pas pour vos portions quotidiennes.\n\nIls sont inclus dans cette application pour vous fournir un moyen simple de suivre votre consommation.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
