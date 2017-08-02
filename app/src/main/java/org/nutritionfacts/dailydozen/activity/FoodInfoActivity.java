@@ -45,12 +45,10 @@ public class FoodInfoActivity extends FoodLoadingActivity {
         setContentView(R.layout.activity_food_info);
         ButterKnife.bind(this);
 
-        FoodInfo.initFoodInfo(this);
-
         displayFoodInfo();
 
         // Don't show the change units button when displaying info for exercise
-        if (getFood().getIdName().equalsIgnoreCase("exercise")) {
+        if (Common.EXERCISE.equalsIgnoreCase(getFood().getIdName())) {
             vgChangeUnits.setVisibility(View.GONE);
         }
     }

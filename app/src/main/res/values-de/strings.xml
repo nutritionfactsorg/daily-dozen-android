@@ -48,6 +48,8 @@
     <string name="food_history">Lebensmittel-Historie</string>
     <string name="flaxseeds">Leinsamen</string>
     <string name="exercise">Sport</string>
+    <string name="vitamin_b12">Vitamin B12</string>
+    <string name="vitamin_d">Vitamin D</string>
     <string name="enable_daily_reminder">Tägliche Benachrichtigung aktivieren</string>
     <string name="donate">Spenden</string>
     <string name="dialog_streaks_title">Neue Funktion: Streaks!</string>
@@ -81,6 +83,8 @@
     <string name="units">Einheiten</string>
     <string name="imperial">Englisch</string>
     <string name="metric">Metrisch</string>
+    <string name="vitamin_divider_text">Vitamine</string>
+    <string name="dialog_vitamin_explanation_text">Vitamin B12 und Vitamin D sind äußerst wichtig für deine Gesundheit, zählen aber nicht zu den täglichen Portionen.\n\nSie sind in dieser App enthalten, damit du einfach den Überblick über deine Vitaminzufuhr behalten kannst.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -95,6 +99,8 @@
         <item>@string/whole_grains</item>
         <item>@string/beverages</item>
         <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
     </string-array>
     
     <string-array name="about_text_lines">

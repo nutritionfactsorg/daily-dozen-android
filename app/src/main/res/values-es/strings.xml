@@ -13,6 +13,8 @@
     <string name="whole_grains">Granos Integrales</string>
     <string name="beverages">Bebidas</string>
     <string name="exercise">Ejercicio</string>
+    <string name="vitamin_b12">Vitamina B12</string>
+    <string name="vitamin_d">Vitamina D</string>
     <string name="serving_sizes">Tamaño de las Porciones</string>
     <string name="types">Tipos</string>
     <string name="history">Historia</string>
@@ -80,6 +82,8 @@
     <string name="units">Unidades</string>
     <string name="imperial">Imperial</string>
     <string name="metric">Métrico</string>
+    <string name="vitamin_divider_text">Vitaminas</string>
+    <string name="dialog_vitamin_explanation_text">La vitamina B12 y la vitamina D son esenciales para su salud, pero no cuentan para sus porciones diarias.\n\nSe incluyen en esta aplicación para proporcionarle una manera fácil de monitorear su ingestión.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -94,6 +98,8 @@
         <item>@string/whole_grains</item>
         <item>@string/beverages</item>
         <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">
@@ -104,21 +110,6 @@
         <item>@string/other_vegetables</item>
         <item>@string/spices</item>
     </string-array>
-
-    <integer-array name="food_quantities">
-        <item>3</item>
-        <item>1</item>
-        <item>3</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>3</item>
-        <item>5</item>
-        <item>1</item>
-    </integer-array>
 
     <string-array name="about_text_lines">
         <item>Esta app fue creada por John Slavick.</item>

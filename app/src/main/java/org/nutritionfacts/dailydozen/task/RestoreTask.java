@@ -117,7 +117,10 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                 for (int j = 1; j < headers.length; j++) {
                     final Integer numServings = Integer.valueOf(values[j]);
                     if (numServings > 0) {
-                        Servings.createServingsIfDoesNotExist(day, getFoodByName(headers[j]), numServings);
+                        final Food food = getFoodByName(headers[j]);
+                        if (food != null) {
+                            Servings.createServingsIfDoesNotExist(day, food, numServings);
+                        }
                     }
                 }
 

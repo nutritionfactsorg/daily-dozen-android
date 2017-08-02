@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.controller;
 
 import org.greenrobot.eventbus.EventBus;
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
 import org.nutritionfacts.dailydozen.event.BaseEvent;
 import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
@@ -28,7 +29,7 @@ public class Bus {
     }
 
     public static void foodServingsChangedEvent(Day day, Food food) {
-        post(new FoodServingsChangedEvent(day.getDateString(), food.getName()));
+        post(new FoodServingsChangedEvent(day.getDateString(), food.getName(), Common.isVitamin(food)));
     }
 
     public static void displayLatestDate() {

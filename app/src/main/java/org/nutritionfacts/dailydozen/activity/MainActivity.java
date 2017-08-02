@@ -72,8 +72,6 @@ public class MainActivity extends AppCompatActivity {
 
         calculateStreaksAfterDatabaseUpgradeToV2();
 
-        NotificationUtil.dismissUpdateReminderNotification(this);
-
         handleIntentIfNecessary();
     }
 
@@ -115,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Bus.register(this);
+
+        NotificationUtil.dismissUpdateReminderNotification(this);
 
         // If the app is sent to the background and brought back to the foreground the next day, a crash results when
         // the adapter is found to return a different value from getCount() without notifyDataSetChanged() having been

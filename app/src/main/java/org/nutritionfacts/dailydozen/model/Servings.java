@@ -8,6 +8,7 @@ import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 import com.activeandroid.util.SQLiteUtils;
 
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
 import java.util.ArrayList;
@@ -131,9 +132,10 @@ public class Servings extends TruncatableModel {
         int numServings = 0;
 
         if (day != null && day.getId() != null) {
+            // Calculate the total servings on a particular date, but ignore the values for Vitamins B12 and D
             numServings = SQLiteUtils.intQuery(
-                    "SELECT SUM(s.servings) FROM servings s WHERE s.date_id = ?",
-                    new String[]{day.getId().toString()});
+                    "SELECT SUM(servings) FROM servings WHERE date_id = ? AND food_id not in (SELECT Id FROM foods WHERE id_name = ? OR id_name = ?)",
+                    new String[]{day.getId().toString(), Common.VITAMIN_B12, Common.VITAMIN_D});
         }
 
         return numServings;

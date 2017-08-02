@@ -13,6 +13,8 @@
     <string name="whole_grains">Ολικής Αλέσεως</string>
     <string name="beverages">Ροφήματα</string>
     <string name="exercise">Γυμναστική</string>
+    <string name="vitamin_b12">Βιταμίνη B12</string>
+    <string name="vitamin_d">Βιταμίνη D</string>
     <string name="serving_sizes">Μερίδα</string>
     <string name="types">Τύποι</string>
     <string name="history">Ιστορικό</string>
@@ -78,8 +80,10 @@
     <string name="play_sound">Αναπαραγωγή ήχου</string>
     <string name="videos">Βίντεο</string>
     <string name="units">Μονάδες</string>
-    <string name="imperial">Αυτοκρατορικός</string>
-    <string name="metric">Μετρικός</string>
+    <string name="imperial">Αγγλοσαξονικό</string>
+    <string name="metric">Μετρικό</string>
+    <string name="vitamin_divider_text">Βιταμίνες</string>
+    <string name="dialog_vitamin_explanation_text">Η βιταμίνη Β12 και η βιταμίνη D είναι απαραίτητες για την υγεία σας, αλλά δεν προσμετρώνται στις καθημερινές σας μερίδες.\n\nΠεριλαμβάνονται σε αυτήν την εφαρμογή για να σας παρέχουν έναν εύκολο τρόπο παρακολούθησης της πρόσληψής σας.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -94,6 +98,8 @@
         <item>@string/whole_grains</item>
         <item>@string/beverages</item>
         <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">
@@ -104,21 +110,6 @@
         <item>@string/other_vegetables</item>
         <item>@string/spices</item>
     </string-array>
-
-    <integer-array name="food_quantities">
-        <item>3</item>
-        <item>1</item>
-        <item>3</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>3</item>
-        <item>5</item>
-        <item>1</item>
-    </integer-array>
 
     <string-array name="about_text_lines">
         <item>Η εφαρμογή δημιουργήθηκε από τον John Slavick.</item>
@@ -239,7 +230,7 @@
         <item>Ρόκα</item>
         <item>Χόρτα τεύτλων</item>
         <item>Φύλλα Λαχανίδας</item>
-        <item>Καλέ (μαύρο, πράσινο και κόκκινο)</item>
+        <item>Κέιλ (μαύρο, πράσινο και κόκκινο)</item>
         <item>Σαλάτα μείγμα (διάφορα είδη πράσινων)</item>
         <item>Φύλλα μουστάρδας</item>
         <item>Λάπαθο</item>
@@ -428,9 +419,9 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 γραμμάριο</item>
-        <item>130 γραμμάριο</item>
-        <item>150 γραμμάριο</item>
+        <item>60 γραμμάρια</item>
+        <item>130 γραμμάρια</item>
+        <item>150 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
@@ -444,8 +435,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 γραμμάριο</item>
-        <item>40 γραμμάριο</item>
+        <item>60 γραμμάρια</item>
+        <item>40 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
@@ -462,8 +453,8 @@
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item></item>
-        <item>120 γραμμάριο</item>
-        <item>40 γραμμάριο</item>
+        <item>120 γραμμάρια</item>
+        <item>40 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
@@ -479,8 +470,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 γραμμάριο</item>
-        <item>12 γραμμάριο</item>
+        <item>30–80 γραμμάρια</item>
+        <item>12 γραμμάρια</item>
         <item></item>
     </string-array>
 
@@ -495,8 +486,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 γραμμάριο</item>
-        <item>90 γραμμάριο</item>
+        <item>60 γραμμάρια</item>
+        <item>90 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
@@ -514,10 +505,10 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 γραμμάριο</item>
-        <item>50 γραμμάριο</item>
+        <item>60 γραμμάρια</item>
+        <item>50 γραμμάρια</item>
         <item>125 ml</item>
-        <item>7 γραμμάριο</item>
+        <item>7 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
@@ -543,7 +534,7 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 γραμμάριο</item>
+        <item>30 γραμμάρια</item>
         <item></item>
     </string-array>
 
@@ -579,11 +570,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 γραμμάριο</item>
-        <item>50 γραμμάριο</item>
+        <item>100 γραμμάρια</item>
+        <item>50 γραμμάρια</item>
         <item></item>
         <item></item>
-        <item>30 γραμμάριο</item>
+        <item>30 γραμμάρια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
