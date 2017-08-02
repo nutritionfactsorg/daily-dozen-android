@@ -83,7 +83,7 @@
     <string name="imperial">Imperial</string>
     <string name="metric">Métrico</string>
     <string name="vitamin_divider_text">Vitaminas</string>
-    <string name="dialog_vitamin_explanation_text">La vitamina B12 y la vitamina D son esenciales para su salud, pero no cuentan para sus porciones diarias.\n\nSe incluyen en esta aplicación para proporcionarle una manera fácil de realizar un seguimiento de su ingesta.</string>
+    <string name="dialog_vitamin_explanation_text">La vitamina B12 y la vitamina D son esenciales para su salud, pero no cuentan para sus porciones diarias.\n\nSe incluyen en esta aplicación para proporcionarle una manera fácil de monitorear su ingestión.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
