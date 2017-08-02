@@ -45,6 +45,9 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
+### Version 14
+- Added CheckBoxes for Vitamin B12 and Vitamin D
+
 ### Version 13.1
 - Fixed minor bug where notification was not being dismissed unless the app was opened from the notification
 - Improvements to the German translation - thanks to contributor [caugner](https://github.com/caugner)
