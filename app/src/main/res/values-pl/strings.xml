@@ -385,17 +385,17 @@
     </string-array>
 
     <string-array name="food_info_types_whole_grains">
-        <item>Barley</item>
-        <item>Brown rice</item>
-        <item>Buckwheat</item>
-        <item>Millet</item>
-        <item>Oats</item>
+        <item>Jęczmień</item>
+        <item>Brązowy ryż</item>
+        <item>Gryka</item>
+        <item>Proso</item>
+        <item>Owies</item>
         <item>Popcorn</item>
-        <item>Quinoa</item>
-        <item>Rye</item>
-        <item>Teff</item>
-        <item>Whole-wheat pasta</item>
-        <item>Wild rice</item>
+        <item>Komosa</item>
+        <item>Żyro</item>
+        <item>Miłka abisyńska(tef)</item>
+        <item>Makaron pełnoziarnisty</item>
+        <item>Dziki ryż</item>
     </string-array>
 
     <string-array name="food_info_types_beverages">
