@@ -310,7 +310,6 @@
     
     <string-array name="food_info_types_whole_grains">
         <item>Gerste</item>
-        <item>Brauner Reis</item>
         <item>Buchweizen</item>
         <item>Hirse</item>
         <item>Hafer</item>
@@ -319,7 +318,6 @@
         <item>Roggen</item>
         <item>Teff</item>
         <item>Vollkornnudeln</item>
-        <item>Wildreis</item>
     </string-array>
     
     <string-array name="food_info_types_beverages">
