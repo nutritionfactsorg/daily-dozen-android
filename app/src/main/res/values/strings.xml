@@ -405,7 +405,6 @@
 
     <string-array name="food_info_types_whole_grains">
         <item>Barley</item>
-        <item>Brown rice</item>
         <item>Buckwheat</item>
         <item>Millet</item>
         <item>Oats</item>
@@ -414,7 +413,6 @@
         <item>Rye</item>
         <item>Teff</item>
         <item>Whole-wheat pasta</item>
-        <item>Wild rice</item>
     </string-array>
 
     <string-array name="food_info_types_beverages">
@@ -862,7 +860,6 @@
 
     <string-array name="food_videos_whole_grains" translatable="false">
         <item>barley</item>
-        <item>rice</item>
         <item>buckwheat</item>
         <item>millet</item>
         <item>oats</item>
@@ -871,7 +868,6 @@
         <item>rye</item>
         <item>teff</item>
         <item>pasta</item>
-        <item>rice</item>
     </string-array>
 
     <string-array name="food_videos_beverages" translatable="false">
