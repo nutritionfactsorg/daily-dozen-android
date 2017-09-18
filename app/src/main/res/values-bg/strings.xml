@@ -318,7 +318,6 @@
 
     <string-array name="food_info_types_whole_grains">
         <item>Ечемик</item>
-        <item>Кафяв ориз</item>
         <item>Елда</item>
         <item>Просо</item>
         <item>Овесени ядки</item>
@@ -327,7 +326,6 @@
         <item>Ръж</item>
         <item>Теф</item>
         <item>Пълнозърнеста паста</item>
-        <item>Див ориз</item>
     </string-array>
 
     <string-array name="food_info_types_beverages">

@@ -319,7 +319,6 @@
 
     <string-array name="food_info_types_whole_grains">
         <item>Orge</item>
-        <item>Riz brun</item>
         <item>Sarrasin</item>
         <item>Millet</item>
         <item>Avoine</item>
@@ -328,7 +327,6 @@
         <item>Seigle</item>
         <item>Teff</item>
         <item>Pâtes de blé entier</item>
-        <item>Riz sauvage</item>
     </string-array>
 
     <string-array name="food_info_types_beverages">
