@@ -253,88 +253,88 @@
     </string-array>
 
     <string-array name="food_info_types_berries">
-        <item>Acai berries</item>
-        <item>Barberries</item>
-        <item>Blackberries</item>
-        <item>Blueberries</item>
-        <item>Cherries (sweet or tart)</item>
-        <item>Concord grapes</item>
-        <item>Cranberries</item>
-        <item>Goji berries</item>
-        <item>Kumquats</item>
-        <item>Mulberries</item>
-        <item>Raspberries (black or red)</item>
-        <item>Strawberries</item>
+        <item>Ягоды асаи</item>
+        <item>Ягоды барбариса</item>
+        <item>Ежевика</item>
+        <item>Черника</item>
+        <item>Вишня (сладкая или кислая)</item>
+        <item>Виноград Конкорд</item>
+        <item>Клюква</item>
+        <item>Ягоды годжи</item>
+        <item>Кумкват</item>
+        <item>Шелковица</item>
+        <item>Малина (чёрная или красная)</item>
+        <item>Клубника</item>
     </string-array>
 
     <string-array name="food_info_types_other_fruits">
-        <item>Apples</item>
-        <item>Dried apricots</item>
-        <item>Avocados</item>
-        <item>Bananas</item>
-        <item>Cantaloupe</item>
-        <item>Clementines</item>
-        <item>Dates</item>
-        <item>Dried figs</item>
-        <item>Grapefruit</item>
-        <item>Honeydew</item>
-        <item>Kiwifruit</item>
-        <item>Lemons</item>
-        <item>Limes</item>
-        <item>Lychees</item>
-        <item>Mangos</item>
-        <item>Nectarines</item>
-        <item>Oranges</item>
-        <item>Papaya</item>
-        <item>Passion fruit</item>
-        <item>Peaches</item>
-        <item>Pears</item>
-        <item>Pineapple</item>
-        <item>Plums (especially black plums)</item>
-        <item>Pluots</item>
-        <item>Pomegranates</item>
-        <item>Prunes</item>
-        <item>Tangerines</item>
-        <item>Watermelon</item>
+        <item>Яблоки</item>
+        <item>Курага</item>
+        <item>Авокадо</item>
+        <item>Бананы</item>
+        <item>Дыня Канталупа</item>
+        <item>Мандарины</item>
+        <item>Финики</item>
+        <item>Сушёный инжир</item>
+        <item>Грейпфрут</item>
+        <item>Дыня Нектар (Honeydew)</item>
+        <item>Киви</item>
+        <item>Лимоны</item>
+        <item>Лаймы</item>
+        <item>Личи</item>
+        <item>Манго</item>
+        <item>Нектарины</item>
+        <item>Апельсины</item>
+        <item>Папайя</item>
+        <item>Маракуйя</item>
+        <item>Персики</item>
+        <item>Грушы</item>
+        <item>Ананас</item>
+        <item>Сливы (особенно тёмные сливы)</item>
+        <item>Плумкот</item>
+        <item>Гранат</item>
+        <item>Чернослив</item>
+        <item>Танжерины</item>
+        <item>Арбуз</item>
     </string-array>
 
     <string-array name="food_info_types_cruciferous_vegetables">
-        <item>Arugula</item>
-        <item>Bok choy</item>
-        <item>Broccoli</item>
-        <item>Brussels sprouts</item>
-        <item>Cabbage</item>
-        <item>Cauliflower</item>
-        <item>Collard greens</item>
-        <item>Horseradish</item>
-        <item>Kale (black, green, and red)</item>
-        <item>Mustard greens</item>
-        <item>Radishes</item>
-        <item>Turnip greens</item>
-        <item>Watercress</item>
+        <item>Руккола</item>
+        <item>Пак-чой</item>
+        <item>Брокколи</item>
+        <item>Брюссельская капуста</item>
+        <item>Кочанная капуста</item>
+        <item>Цветная капуста</item>
+        <item>Зелень колларда</item>
+        <item>Хрен</item>
+        <item>Кудрявая капуста (тёмная, зелёная и красная)</item>
+        <item>Молодые листья горчицы</item>
+        <item>Редис</item>
+        <item>Листья репы</item>
+        <item>Водяной кресс</item>
     </string-array>
 
     <string-array name="food_info_types_greens">
-        <item>Arugula</item>
-        <item>Beet greens</item>
-        <item>Collard greens</item>
-        <item>Kale (black, green, and red)</item>
-        <item>Mesclun mix (assorted young salad greens)</item>
-        <item>Mustard greens</item>
-        <item>Sorrel</item>
-        <item>Spinach</item>
-        <item>Swiss chard</item>
-        <item>Turnip greens</item>
+        <item>Руккола</item>
+        <item>Ботва свёклы</item>
+        <item>Зелень колларда</item>
+        <item>Кудрявая капуста (тёмная, зелёная и красная)</item>
+        <item>Месклан (ассорти из молодых салатных листьев)</item>
+        <item>Молодые листья горчицы</item>
+        <item>Щавель</item>
+        <item>Шпинат</item>
+        <item>Мангольд</item>
+        <item>Листья репы</item>
     </string-array>
 
     <string-array name="food_info_types_other_vegetables">
-        <item>Artichokes</item>
-        <item>Asparagus</item>
-        <item>Beets</item>
-        <item>Bell peppers</item>
-        <item>Carrots</item>
-        <item>Corn</item>
-        <item>Garlic</item>
+        <item>Артишоки</item>
+        <item>Побеги спаржи</item>
+        <item>Свёкла</item>
+        <item>Сладкий перец</item>
+        <item>Морковь</item>
+        <item>Кукуруза</item>
+        <item>Чеснок</item>
         <item>Mushrooms (button, oyster, portobello, and shiitake)</item>
         <item>Okra</item>
         <item>Onions</item>
