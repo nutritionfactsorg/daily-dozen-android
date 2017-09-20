@@ -335,42 +335,42 @@
         <item>Морковь</item>
         <item>Кукуруза</item>
         <item>Чеснок</item>
-        <item>Mushrooms (button, oyster, portobello, and shiitake)</item>
-        <item>Okra</item>
-        <item>Onions</item>
-        <item>Purple potatoes</item>
-        <item>Pumpkin</item>
-        <item>Sea vegetables (arame, dulse, and nori)</item>
-        <item>Snap peas</item>
-        <item>Squash (delicata, summer, and spaghetti squash varieties)</item>
-        <item>Sweet potatoes/yams</item>
-        <item>Tomatoes</item>
-        <item>Zucchini</item>
+        <item>Грибы (шампиньоны, вёшенки, портобелло и шиитаке)</item>
+        <item>Бамия (окра)</item>
+        <item>Лук</item>
+        <item>Фиолетовый картофель</item>
+        <item>Тыква</item>
+        <item>Съедобные водоросли (араме, красные водоросли и нори)</item>
+        <item>Стручковый горох (Snap peas)</item>
+        <item>Кабачок ("Деликатесный", молодой и "Спагетти" разновидности)</item>
+        <item>Батат/ямс</item>
+        <item>Помидоры</item>
+        <item>Цуккини</item>
     </string-array>
 
     <string-array name="food_info_types_flaxseeds">
-        <item>Brown flaxseeds</item>
-        <item>Golden flaxseeds</item>
+        <item>Семена коричневого льна</item>
+        <item>Семена белого льна</item>
     </string-array>
 
     <string-array name="food_info_types_nuts">
-        <item>Almonds</item>
-        <item>Brazil nuts</item>
-        <item>Cashews</item>
-        <item>Chia seeds</item>
-        <item>Hazelnuts</item>
-        <item>Hemp seeds</item>
-        <item>Macadamia nuts</item>
-        <item>Pecans</item>
-        <item>Pistachios</item>
-        <item>Pumpkin seeds</item>
-        <item>Sesame seeds</item>
-        <item>Sunflower seeds</item>
-        <item>Walnuts</item>
+        <item>Миндаль</item>
+        <item>Бразильский орех</item>
+        <item>Кешью</item>
+        <item>Семена чиа</item>
+        <item>Фундук</item>
+        <item>Семена конопли</item>
+        <item>Макадамия (Австралийский орех)</item>
+        <item>Орех пекан</item>
+        <item>Фисташки</item>
+        <item>Семена тыквы</item>
+        <item>Кунжут</item>
+        <item>Семечки подсолнечника</item>
+        <item>Грецкие орехи</item>
     </string-array>
 
     <string-array name="food_info_types_spices">
-        <item>Allspice</item>
+        <item>Душистый перец</item>
         <item>Barberries</item>
         <item>Basil</item>
         <item>Bay leaves</item>
