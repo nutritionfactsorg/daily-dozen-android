@@ -371,37 +371,37 @@
 
     <string-array name="food_info_types_spices">
         <item>Душистый перец</item>
-        <item>Barberries</item>
-        <item>Basil</item>
-        <item>Bay leaves</item>
-        <item>Cardamom</item>
-        <item>Chili powder</item>
-        <item>Cilantro</item>
-        <item>Cinnamon</item>
-        <item>Cloves</item>
-        <item>Coriander</item>
-        <item>Cumin</item>
-        <item>Curry powder</item>
-        <item>Dill</item>
-        <item>Fenugreek</item>
-        <item>Garlic</item>
-        <item>Ginger</item>
-        <item>Horseradish</item>
-        <item>Lemongrass</item>
-        <item>Marjoram</item>
-        <item>Mustard powder</item>
-        <item>Nutmeg</item>
-        <item>Oregano</item>
-        <item>Smoked paprika</item>
-        <item>Parsley</item>
-        <item>Pepper</item>
-        <item>Peppermint</item>
-        <item>Rosemary</item>
-        <item>Saffron</item>
-        <item>Sage</item>
-        <item>Thyme</item>
-        <item>Turmeric</item>
-        <item>Vanilla</item>
+        <item>Барбарис</item>
+        <item>Базилик</item>
+        <item>Лавровый лист</item>
+        <item>Кардамон</item>
+        <item>Молотый чили</item>
+        <item>Кориандр (кинза)</item>
+        <item>Корица</item>
+        <item>Гвоздика</item>
+        <item>Семена кориандра (кинзы)</item>
+        <item>Зира (тмин)</item>
+        <item>Карри</item>
+        <item>Укроп</item>
+        <item>Пажитник</item>
+        <item>Чеснок</item>
+        <item>Имбирь</item>
+        <item>Хрен</item>
+        <item>Лимонное сорго</item>
+        <item>Майоран</item>
+        <item>Горчичный порошок</item>
+        <item>Мускатный орех</item>
+        <item>Орегано (душица)</item>
+        <item>Копченая паприка</item>
+        <item>Петрушка</item>
+        <item>Перец</item>
+        <item>Перечная мята</item>
+        <item>Розмарин</item>
+        <item>Шафран</item>
+        <item>Шалфей</item>
+        <item>Тимьян (чабрец)</item>
+        <item>Куркума</item>
+        <item>Ваниль</item>
     </string-array>
 
     <string-array name="food_info_types_whole_grains">
