@@ -89,32 +89,32 @@
     <string name="debug_generate_full_data">Сгенерировать все данные</string>
     <string name="debug_generate_data_message">Все существующие данные будут замещены. Продолжить?</string>
     <string name="task_generating_random_data">Генерирую случайные данные</string>
-    <string name="task_loading_servings_history_title">Loading Servings History</string>
-    <string name="time_scale">Time Scale</string>
-    <string name="history_to_generate">History to Generate</string>
+    <string name="task_loading_servings_history_title">Загружаю Историю Выполнения Плана</string>
+    <string name="time_scale">Масштаб Времени</string>
+    <string name="history_to_generate">История Для Генерации</string>
     <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
     <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
-    <string name="welcome_to_my_daily_dozen">Welcome to my Daily Dozen!</string>
-    <string name="activity_welcome_text">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.</string>
-    <string name="dialog_ask_user_to_rate_app_title">Do you like this app?</string>
-    <string name="dialog_ask_user_to_rate_app_message">Please give us feedback in the Play Store.</string>
-    <string name="rate_now">Give Feedback</string>
-    <string name="not_now">Not Now</string>
+    <string name="welcome_to_my_daily_dozen">Приветствую Вас в Daily Dozen!</string>
+    <string name="activity_welcome_text">Это приложение предназначено для ежедневного отслеживания еды, рекомендованной мной для оптимального здоровья и долголетия в моей книге How Not to Die.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Нравится это приложение?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Ждём Ваших отзывов в Play Store.</string>
+    <string name="rate_now">Оставить Отзыв</string>
+    <string name="not_now">Не Сейчас</string>
     <string name="format_version" formatted="false">version %s</string>
     <string name="format_num_days" formatted="false">%d days</string>
-    <string name="daily_reminder_title">Daily Dozen Reminder</string>
-    <string name="daily_reminder_text">Update your servings for today</string>
-    <string name="daily_reminder_settings">Daily Reminder Settings</string>
-    <string name="enable_daily_reminder">Enable Daily Reminder</string>
-    <string name="remind_me_at">Remind me at</string>
-    <string name="vibrate">Vibrate</string>
-    <string name="play_sound">Play Sound</string>
-    <string name="videos">Videos</string>
-    <string name="units">Units</string>
-    <string name="imperial">Imperial</string>
-    <string name="metric">Metric</string>
-    <string name="vitamin_divider_text">Vitamins</string>
-    <string name="dialog_vitamin_explanation_text">Vitamin B12 and Vitamin D are essential for your health but do not count towards your daily servings.\n\nThey are included in this app to provide you with an easy way to track your intake.</string>
+    <string name="daily_reminder_title">Напоминания Daily Dozen</string>
+    <string name="daily_reminder_text">Отметь сегодняшние порции</string>
+    <string name="daily_reminder_settings">Настройки Daily Reminder</string>
+    <string name="enable_daily_reminder">Включить Ежедневные Напоминания</string>
+    <string name="remind_me_at">Напоминать в</string>
+    <string name="vibrate">Вибрацией</string>
+    <string name="play_sound">Звуком</string>
+    <string name="videos">Видео</string>
+    <string name="units">Единицы</string>
+    <string name="imperial">Английские</string>
+    <string name="metric">Метрические</string>
+    <string name="vitamin_divider_text">Витамины</string>
+    <string name="dialog_vitamin_explanation_text">Хотя и необязательны для выполнения ежедневного плана, витамин B12 и витамин D незаменимы для Вашего здоровья.\n\nОни включены в приложение для Вашего удобства.</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
@@ -200,56 +200,56 @@
     </integer-array>
 
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Это приложение создано Джоном Славиком (John Slavick).</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Приложение использует следующие библиотеки с открытым кодом: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
         <item />
-        <item>Special thanks to the volunteer efforts of the creators of the previous app: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
+        <item>Особая благодарность выражается волонтёрам, создавшым предыдущее приложение: Chan Kruse, Allan Portera и Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
-        <item>Follow these steps to restore this backup in the Daily Dozen app</item>
+        <item>Шаги по восстановлению приложения Daily Dozen из резервной копии</item>
         <item />
-        <item>1. The Daily Dozen app must be installed on your Android phone. You can download it here: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. Daily Dozen должно быть установлено на Вашем Android телефоне. Вы можете скачать его здесь: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
-        <item>2. Tap on the backup file attached to this email.</item>
+        <item>2. Нажмите на файл резервной копии, прикреплённый к данному письму.</item>
         <item />
-        <item>3. Select Open with Daily Dozen</item>
+        <item>3. Выбирите "Открыть с Daily Dozen" (Open with Daily Dozen)</item>
     </string-array>
 
     <string-array name="servings_time_scale_choices">
-        <item>Day</item>
-        <item>Month</item>
-        <item>Year</item>
+        <item>День</item>
+        <item>Месяц</item>
+        <item>Год</item>
     </string-array>
 
     <string-array name="history_to_generate_choices">
-        <item>1 month</item>
-        <item>3 months</item>
-        <item>6 months</item>
-        <item>1 year</item>
-        <item>2 years</item>
-        <item>5 years</item>
+        <item>1 месяц</item>
+        <item>3 месяца</item>
+        <item>6 месяцев</item>
+        <item>1 год</item>
+        <item>2 года</item>
+        <item>5 лет</item>
     </string-array>
 
     <string-array name="food_info_types_beans">
-        <item>Black beans</item>
-        <item>Black-eyed peas</item>
-        <item>Butter beans</item>
-        <item>Cannellini beans</item>
-        <item>Chickpeas</item>
-        <item>Edamame</item>
-        <item>English peas</item>
-        <item>Garbanzo beans</item>
-        <item>Great northern beans</item>
-        <item>Kidney beans</item>
-        <item>Lentils (beluga, french, and red varieties)</item>
-        <item>Miso</item>
-        <item>Navy beans</item>
-        <item>Pinto beans</item>
-        <item>Small red beans</item>
-        <item>Split peas (yellow or green)</item>
-        <item>Tempeh</item>
+        <item>Чёрная фасоль</item>
+        <item>Спаржевая фасоль вигна (black-eyed peas)</item>
+        <item>Луновидная фасоль</item>
+        <item>Белая фасоль Каннеллини (Cannellini beans)</item>
+        <item>Нут</item>
+        <item>Эдамамэ</item>
+        <item>Садовый горох</item>
+        <item>Нут Гарбанзо (Garbanzo beans)</item>
+        <item>Белая фасоль</item>
+        <item>Красная фасоль</item>
+        <item>Чечевица (чёрная ("белуга"), французская и красная разновидности)</item>
+        <item>Мисо</item>
+        <item>Белая фасоль "флотская" (Navy beans)</item>
+        <item>Фасоль пинто</item>
+        <item>Мелкая красная фасоль</item>
+        <item>Горох колотый (жёлтый или зелёный)</item>
+        <item>Темпе</item>
     </string-array>
 
     <string-array name="food_info_types_berries">
