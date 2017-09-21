@@ -405,60 +405,58 @@
     </string-array>
 
     <string-array name="food_info_types_whole_grains">
-        <item>Barley</item>
-        <item>Brown rice</item>
-        <item>Buckwheat</item>
-        <item>Millet</item>
-        <item>Oats</item>
-        <item>Popcorn</item>
-        <item>Quinoa</item>
-        <item>Rye</item>
-        <item>Teff</item>
-        <item>Whole-wheat pasta</item>
-        <item>Wild rice</item>
+        <item>Ячмень</item>
+        <item>Гречневая крупа</item>
+        <item>Пшено</item>
+        <item>Овёс</item>
+        <item>Попкорн</item>
+        <item>Киноа</item>
+        <item>Рожь</item>
+        <item>Теф</item>
+        <item>Цельнозерновые макароны</item>
     </string-array>
 
     <string-array name="food_info_types_beverages">
-        <item>Black tea</item>
-        <item>Chai tea</item>
-        <item>Vanilla chamomile tea</item>
-        <item>Coffee</item>
-        <item>Earl grey tea</item>
-        <item>Green tea</item>
-        <item>Hibiscus tea</item>
-        <item>Hot chocolate</item>
-        <item>Jasmine tea</item>
-        <item>Lemon balm tea</item>
-        <item>Matcha tea</item>
-        <item>Almond blossom oolong tea</item>
-        <item>Peppermint tea</item>
-        <item>Rooibos tea</item>
-        <item>Water</item>
-        <item>White tea</item>
+        <item>Чёрный чай</item>
+        <item>Чай масала (букв. "чай со специями")</item>
+        <item>Ромашковый чай с ванилью</item>
+        <item>Кофе</item>
+        <item>Чай Эрл Грей (чай с бергамонтом)</item>
+        <item>Зелёный чай</item>
+        <item>Каркаде</item>
+        <item>Горячий шоколад</item>
+        <item>Жасминовый чай</item>
+        <item>Чай из мелиссы</item>
+        <item>Маття ("матча")</item>
+        <item>Миндальный улун</item>
+        <item>Чай из перечной мяты</item>
+        <item>Ройбос</item>
+        <item>Вода</item>
+        <item>Белый чай</item>
     </string-array>
 
     <string-array name="food_info_types_exercise">
-        <item>Bicycling</item>
-        <item>Canoeing</item>
-        <item>Dancing</item>
-        <item>Dodgeball</item>
-        <item>Downhill skiing</item>
-        <item>Fencing</item>
-        <item>Hiking</item>
-        <item>Housework</item>
-        <item>Ice-skating</item>
-        <item>Inline skating</item>
-        <item>Juggling</item>
-        <item>Jumping on a trampoline</item>
-        <item>Paddle boating</item>
-        <item>Playing frisbee</item>
-        <item>Roller-skating</item>
-        <item>Shooting baskets</item>
-        <item>Shoveling light snow</item>
-        <item>Skateboarding</item>
-        <item>Snorkeling</item>
-        <item>Surfing</item>
-        <item>Swimming recreationally</item>
+        <item>Езда на велосипеде</item>
+        <item>Гребля</item>
+        <item>Танцы</item>
+        <item>Доджбол (вышибалы)</item>
+        <item>Горнолыжный спорт</item>
+        <item>Фехтование</item>
+        <item>Хайкинг (длительная прогулка, пешеходный туризм)</item>
+        <item>Работа по дому</item>
+        <item>Катание на коньках</item>
+        <item>Роллерблейдинг (экстремальное катание на роликовых коньках)</item>
+        <item>Жонглирование</item>
+        <item>Прыжки на батуте</item>
+        <item>Катание на водном велосипеде</item>
+        <item>Игра с летающим диском</item>
+        <item>Катание на роликах</item>
+        <item>Броски мяча в корзину</item>
+        <item>Сгребание лёгкого снега</item>
+        <item>Скейтбординг</item>
+        <item>Сноркелинг (ныряние с дыхательной трубкой)</item>
+        <item>Сёрфинг</item>
+        <item>Купание</item>
         <item>Tennis (doubles)</item>
         <item>Treading water</item>
         <item>Walking briskly (4 mph)</item>
