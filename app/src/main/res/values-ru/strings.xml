@@ -457,7 +457,7 @@
         <item>Сноркелинг (ныряние с дыхательной трубкой)</item>
         <item>Сёрфинг</item>
         <item>Свободное плавание</item>
-        <item>Теннис (в т. ч. парный)</item>
+        <item>Парный теннис</item>
         <item>Вертикальное удержание на плаву</item>
         <item>Быстрая ходьба (6-7 км/ч)</item>
         <item>Водная гимнастика</item>
@@ -477,25 +477,25 @@
         <item>Лакросс</item>
         <item>Отжимания</item>
         <item>Подтягивания</item>
-        <item>Racquetball</item>
-        <item>Rock climbing</item>
-        <item>Rugby</item>
-        <item>Running</item>
-        <item>Scuba diving</item>
-        <item>Tennis (singles)</item>
-        <item>Soccer</item>
-        <item>Speed skating</item>
-        <item>Squash</item>
-        <item>Step aerobics</item>
-        <item>Swimming laps</item>
-        <item>Walking briskly uphill</item>
-        <item>Water jogging</item>
+        <item>Ракетбол</item>
+        <item>Скалолазание</item>
+        <item>Регби</item>
+        <item>Бег</item>
+        <item>Дайвинг с аквалангом</item>
+        <item>Теннис</item>
+        <item>Соккер (название футбола в США)</item>
+        <item>Конькобежный спорт</item>
+        <item>Сквош</item>
+        <item>Гимнастика на степе</item>
+        <item>Спортивное плавание</item>
+        <item>Быстрая ходьба в горку</item>
+        <item>Беговые движения на плаву</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>%s of hummus or bean dip</item>
-        <item>%s cooked beans, split peas, lentils, tofu, or tempeh</item>
-        <item>%s of fresh peas or sprouted lentils</item>
+        <item>%s хумуса или бобового соуса</item>
+        <item>%s готовых фасоли, колотого гороха, чечевицы, тофу или темпе</item>
+        <item>%s свежего гороха или пророшенной чечевицы</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_imperial">
@@ -861,7 +861,6 @@
 
     <string-array name="food_videos_whole_grains" translatable="false">
         <item>barley</item>
-        <item>rice</item>
         <item>buckwheat</item>
         <item>millet</item>
         <item>oats</item>
@@ -870,7 +869,6 @@
         <item>rye</item>
         <item>teff</item>
         <item>pasta</item>
-        <item>rice</item>
     </string-array>
 
     <string-array name="food_videos_beverages" translatable="false">
