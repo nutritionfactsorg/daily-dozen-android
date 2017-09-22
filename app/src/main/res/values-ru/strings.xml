@@ -499,106 +499,106 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ cup</item>
-        <item>½ cup</item>
-        <item>1 cup</item>
+        <item>¼ чашки</item>
+        <item>½ чашки</item>
+        <item>1 чашки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g</item>
-        <item>130 g</item>
-        <item>150 g</item>
+        <item>60 г</item>
+        <item>130 г</item>
+        <item>150 г</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>%s fresh or frozen</item>
-        <item>%s dried</item>
+        <item>%s свежих или замороженных</item>
+        <item>%s сушёных</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ cup</item>
-        <item>¼ cup</item>
+        <item>½ чашки</item>
+        <item>¼ чашки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g</item>
-        <item>40 g</item>
+        <item>60 г</item>
+        <item>40 г</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 medium-sized fruit</item>
-        <item>%s cut-up fruit</item>
-        <item>%s dried fruit</item>
+        <item>%s1 фрукт среднего размера</item>
+        <item>%s нарезанного фрукта</item>
+        <item>%s сушёного фрукта</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
         <item></item>
-        <item>1 cup</item>
-        <item>¼ cup</item>
+        <item>1 чашка</item>
+        <item>¼ чашки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item></item>
-        <item>120 g</item>
-        <item>40 g</item>
+        <item>120 г</item>
+        <item>40 г</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s chopped</item>
-        <item>%s Brussels or broccoli sprouts</item>
-        <item>%s1 tablespoon horseradish</item>
+        <item>%s нарубленного</item>
+        <item>%s брюссельской капусты или брокколей</item>
+        <item>%s1 столовая ложка хрена</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ cup</item>
-        <item>¼ cup</item>
+        <item>½ чашки</item>
+        <item>¼ чашки</item>
         <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g</item>
-        <item>12 g</item>
+        <item>30–80 г</item>
+        <item>12 г</item>
         <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
-        <item>%s raw</item>
-        <item>%s cooked</item>
+        <item>%s сырых</item>
+        <item>%s приготовленных</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 cup</item>
-        <item>½ cup</item>
+        <item>1 чашка</item>
+        <item>½ чашки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 g</item>
-        <item>90 g</item>
+        <item>60 г</item>
+        <item>90 г</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s raw leafy vegetables</item>
-        <item>%s raw or cooked nonleafy vegetables</item>
-        <item>%s vegetable juice</item>
-        <item>%s dried mushrooms</item>
+        <item>%s сырых листовых овощей</item>
+        <item>%s сырых или приготовленных нелистовых овощей</item>
+        <item>%s овощного сока</item>
+        <item>%s сушёных грибов</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 cup</item>
-        <item>½ cup</item>
-        <item>½ cup</item>
-        <item>¼ cup</item>
+        <item>1 чашка</item>
+        <item>½ чашки</item>
+        <item>½ чашки</item>
+        <item>¼ чашки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 g</item>
-        <item>50 g</item>
-        <item>125 ml</item>
-        <item>7 g</item>
+        <item>60 г</item>
+        <item>50 г</item>
+        <item>125 мл</item>
+        <item>7 г</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 tablespoon ground</item>
+        <item>%s1 столовая ложка измельчённых</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
@@ -610,23 +610,23 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
-        <item>%s nuts or seeds</item>
-        <item>%s2 tablespoons nut or seed butter</item>
+        <item>%s орехов или семян</item>
+        <item>%s2 столовые ложки орехового или семечкого густого масла</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ cup</item>
+        <item>¼ чашки</item>
         <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g</item>
+        <item>30 г</item>
         <item></item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ teaspoon of turmeric</item>
-        <item>%sAny other (salt-free) herbs and spices you enjoy</item>
+        <item>%s¼ чайной ложки куркумы</item>
+        <item>%sЛюбые другие пряности (без соли), которые Вы любите</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
@@ -640,44 +640,44 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s hot cereal or cooked grains, pasta, or corn kernels</item>
-        <item>%s cold cereal</item>
-        <item>%s1 tortilla or slice of bread</item>
-        <item>%s½ a bagel or English muffin</item>
-        <item>%s popped popcorn</item>
+        <item>%s горячих хлопьев или приготовленных злаковых, макарон или кукурузных зёрен</item>
+        <item>%s неразогретых хлопьев</item>
+        <item>%s1 тортилья или ломтик хлеба</item>
+        <item>%s½ бублика или  or английской булочки</item>
+        <item>%s приготовленного попкорна</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ cup</item>
-        <item>1 cup</item>
+        <item>½ чашки</item>
+        <item>1 чашка</item>
         <item></item>
         <item></item>
-        <item>3 cups</item>
+        <item>3 чашки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g</item>
-        <item>50 g</item>
+        <item>100 г</item>
+        <item>50 г</item>
         <item></item>
         <item></item>
-        <item>30 g</item>
+        <item>30 г</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages">
-        <item>One glass (%s)</item>
+        <item>Один стакан (%s)</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>12 ounces</item>
+        <item>12 унций</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>350 ml</item>
+        <item>350 мл</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 minutes of moderate-intensity activity</item>
-        <item>%s40 minutes of vigorous-intensity activity</item>
+        <item>%s90 минут средней нагрузки</item>
+        <item>%s40 минут интенсивной нагрузки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
@@ -690,7 +690,7 @@
         <item></item>
     </string-array>
 
-    <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
+    <string name="error_cannot_handle_url">Не могу открыть ссылку. Пожалуйста, установите браузер.</string>
 
     <string-array name="food_videos_beans" translatable="false">
         <item>black-beans</item>
