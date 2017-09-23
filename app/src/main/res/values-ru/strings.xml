@@ -54,7 +54,7 @@
     <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
     <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
     <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
-    <string name="permission_needed_to_write_storage">Не могу сделать резервную копию без прав на запись в хранилище телефона</string>
+    <string name="permission_needed_to_write_storage">Не могу сделать резервную копию без права на запись в хранилище телефона</string>
     <string name="backup_failed">Резервное копирование не удалось</string>
     <string name="restore_failed">Не удалось восстановить данные</string>
     <string name="backup_success">Резервное копирование выполнено</string>
@@ -83,8 +83,8 @@
     <string name="OK">OK</string>
     <string name="dialog_streaks_title">Новая функция: Полосы!</string>
     <string name="dialog_streaks_message">Ваша база данных сейчас будет обновлена для поддержки новой функции "полосы".</string>
-    <string name="dialog_no_email_apps_title">Email приложения не обноружены</string>
-    <string name="dialog_no_email_apps_message">Резервное копировние Ваших данных требует установленного email приложения для отправки резервного .csv файла на Вашу электронную почту. Пожалуйста, установите email приложение и повторите попытку.</string>
+    <string name="dialog_no_email_apps_title">Email приложения не обнаружены</string>
+    <string name="dialog_no_email_apps_message">Резервное копирование Ваших данных требует установленного email приложения для отправки резервного .csv файла на Вашу электронную почту. Пожалуйста, установите email приложение и повторите попытку.</string>
     <string name="debug_generate_random_data">Сгенерировать случайные данные</string>
     <string name="debug_generate_full_data">Сгенерировать все данные</string>
     <string name="debug_generate_data_message">Все существующие данные будут замещены. Продолжить?</string>
@@ -202,19 +202,19 @@
     <string-array name="about_text_lines">
         <item>Это приложение создано Джоном Славиком (John Slavick).</item>
         <item />
-        <item>Приложение использует следующие библиотеки с открытым кодом: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Приложение использует следующие библиотеки с открытым исходным кодом: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
         <item />
-        <item>Особая благодарность выражается волонтёрам, создавшым предыдущее приложение: Chan Kruse, Allan Portera и Sangeeta Kumar.</item>
+        <item>Особая благодарность выражается волонтёрам, создавшим предыдущее приложение: Chan Kruse, Allan Portera и Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
         <item>Шаги по восстановлению приложения Daily Dozen из резервной копии</item>
         <item />
-        <item>1. Daily Dozen должно быть установлено на Вашем Android телефоне. Вы можете скачать его здесь: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. Daily Dozen должно быть установлено на Вашем Android телефоне. Вы можете скачать приложение здесь: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
         <item>2. Нажмите на файл резервной копии, прикреплённый к данному письму.</item>
         <item />
-        <item>3. Выбирите "Открыть с Daily Dozen" (Open with Daily Dozen)</item>
+        <item>3. Выберите "Открыть с Daily Dozen" (Open with Daily Dozen)</item>
     </string-array>
 
     <string-array name="servings_time_scale_choices">
@@ -288,7 +288,7 @@
         <item>Папайя</item>
         <item>Маракуйя</item>
         <item>Персики</item>
-        <item>Грушы</item>
+        <item>Груши</item>
         <item>Ананас</item>
         <item>Сливы (особенно тёмные сливы)</item>
         <item>Плумкот</item>
@@ -324,7 +324,7 @@
         <item>Щавель</item>
         <item>Шпинат</item>
         <item>Мангольд</item>
-        <item>Листья репы</item>
+        <item>Ботва репы</item>
     </string-array>
 
     <string-array name="food_info_types_other_vegetables">
@@ -360,7 +360,7 @@
         <item>Семена чиа</item>
         <item>Фундук</item>
         <item>Семена конопли</item>
-        <item>Макадамия (Австралийский орех)</item>
+        <item>Макадамия (австралийский орех)</item>
         <item>Орех пекан</item>
         <item>Фисташки</item>
         <item>Семена тыквы</item>
@@ -421,11 +421,11 @@
         <item>Чай масала (букв. "чай со специями")</item>
         <item>Ромашковый чай с ванилью</item>
         <item>Кофе</item>
-        <item>Чай Эрл Грей (чай с бергамонтом)</item>
+        <item>Чай Эрл Грей (чай с бергамотом)</item>
         <item>Зелёный чай</item>
         <item>Каркаде</item>
         <item>Горячий шоколад</item>
-        <item>Жасминовый чай</item>
+        <item>Чай с жасмином</item>
         <item>Чай из мелиссы</item>
         <item>Маття ("матча")</item>
         <item>Миндальный улун</item>
@@ -467,7 +467,7 @@
         <item>Поход с рюкзаком</item>
         <item>Баскетбол</item>
         <item>Подъем в горку на велосипеде</item>
-        <item>Повторные упражнения с весом</item>
+        <item>Повторяемые упражнения с весом</item>
         <item>Лыжный бег</item>
         <item>Футбол</item>
         <item>Хоккей</item>
@@ -501,7 +501,7 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ чашки</item>
         <item>½ чашки</item>
-        <item>1 чашки</item>
+        <item>1 чашка</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_metric">
@@ -611,7 +611,7 @@
 
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s орехов или семян</item>
-        <item>%s2 столовые ложки орехового или семечкого густого масла</item>
+        <item>%s2 столовые ложки ореховой или семечковой пасты</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
@@ -643,7 +643,7 @@
         <item>%s горячих хлопьев или приготовленных злаковых, макарон или кукурузных зёрен</item>
         <item>%s неразогретых хлопьев</item>
         <item>%s1 тортилья или ломтик хлеба</item>
-        <item>%s½ бублика или  or английской булочки</item>
+        <item>%s½ бублика или английской булочки</item>
         <item>%s приготовленного попкорна</item>
     </string-array>
 
