@@ -300,17 +300,20 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Arugula</item>
         <item>Bok choy</item>
-        <item>Broccoli</item>
+        <item>Broccoli (romanesco, broccolini, rapini)</item>
         <item>Brussels sprouts</item>
-        <item>Cabbage</item>
+        <item>Cabbage (green, red and savoy)</item>
         <item>Cauliflower</item>
         <item>Collard greens</item>
         <item>Horseradish</item>
         <item>Kale (black, green, and red)</item>
+        <item>Kohlrabi</item>
+        <item>Mizuna</item>
         <item>Mustard greens</item>
+        <item>Napa cabbage</item>
         <item>Radishes</item>
         <item>Turnip greens</item>
-        <item>Watercress</item>
+        <item>Watercress(land and garden)</item>
     </string-array>
 
     <string-array name="food_info_types_greens">
@@ -769,7 +772,10 @@
         <item>collard-greens</item>
         <item></item>
         <item>kale</item>
+        <item></item>
+        <item></item>
         <item>mustard-greens</item>
+        <item></item>
         <item>radishes</item>
         <item>turnips</item>
         <item>watercress</item>
