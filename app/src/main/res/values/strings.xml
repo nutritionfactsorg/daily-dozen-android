@@ -300,13 +300,14 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Arugula</item>
         <item>Bok choy</item>
-        <item>Broccoli</item>
+        <item>Broccoli (including Romanesco)</item>
         <item>Brussels sprouts</item>
-        <item>Cabbage</item>
-        <item>Cauliflower</item>
+        <item>Cabbage (green, red and savoy)</item>
+        <item>Kohlrabi (green and purple)</item>
+        <item>Cauliflower (white, green, orange and purple)</item>
         <item>Collard greens</item>
         <item>Horseradish</item>
-        <item>Kale (black, green, and red)</item>
+        <item>Kale (curly, lacinato and red Russian)</item>
         <item>Mustard greens</item>
         <item>Radishes</item>
         <item>Turnip greens</item>
@@ -317,7 +318,7 @@
         <item>Arugula</item>
         <item>Beet greens</item>
         <item>Collard greens</item>
-        <item>Kale (black, green, and red)</item>
+        <item>Kale (curly, lacinato and red Russian)</item>
         <item>Mesclun mix (assorted young salad greens)</item>
         <item>Mustard greens</item>
         <item>Sorrel</item>
@@ -765,6 +766,7 @@
         <item>broccoli</item>
         <item>brussels-sprouts</item>
         <item>cabbage</item>
+        <item>kohlrabi</item>
         <item>cauliflower</item>
         <item>collard-greens</item>
         <item></item>
