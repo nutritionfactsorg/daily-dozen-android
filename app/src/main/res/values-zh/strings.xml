@@ -1,0 +1,917 @@
+<resources>
+    <string name="app_name">每日十二要素</string>
+
+    <string name="beans">豆類</string>
+    <string name="berries">莓果類</string>
+    <string name="other_fruits">其他水果</string>
+    <string name="cruciferous_vegetables">十字花科蔬菜</string>
+    <string name="greens">綠色蔬菜</string>
+    <string name="other_vegetables">其他蔬菜</string>
+    <string name="flaxseeds">亞麻籽</string>
+    <string name="nuts">堅果類</string>
+    <string name="spices">香料</string>
+    <string name="whole_grains">全穀類</string>
+    <string name="beverages">飲料</string>
+    <string name="exercise">運動</string>
+    <string name="vitamin_b12">维生素B12</string>
+    <string name="vitamin_d">维生素D</string>
+    <string name="serving_sizes">份量大小</string>
+    <string name="types">種類</string>
+    <string name="history">歷史紀錄</string>
+    <string name="servings_some">部分份量</string>
+    <string name="servings_all">全部份量</string>
+    <string name="servings">份量</string>
+    <string name="out_of">out of</string>
+    <string name="moving_average">移動平均數</string>
+    <string name="about">關於我們</string>
+    <string name="about_this_app">關於這個應用程式</string>
+    <string name="latest_videos">最新影片</string>
+    <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
+    <string name="book_title" translatable="false">How Not to Die</string>
+    <string name="url_book" translatable="false">http://nutritionfacts.org/book/</string>
+    <string name="donate">捐款</string>
+    <string name="url_donate" translatable="false">https://nutritionfacts.org/donate/</string>
+    <string name="subscribe">訂閱</string>
+    <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe/</string>
+    <string name="open_source">免費資源</string>
+    
+    <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
+    <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
+    <string name="name_john_slavick" translatable="false">John Slavick</string>
+    <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
+    <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
+    <string name="library_android_iconify" translatable="false">android-iconify</string>
+    <string name="library_butterknife">ButterKnife</string>
+    <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source/</string>
+    <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
+    <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
+    <string name="name_john_slavick" translatable="false">John Slavick</string>
+    <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
+    <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
+    <string name="library_android_iconify" translatable="false">android-iconify</string>
+    <string name="library_butterknife">ButterKnife</string>
+    <string name="library_caldroid" translatable="false">Caldroid</string>
+    <string name="library_eventbus" translatable="false">EventBus</string>
+    <string name="library_likeanimation" translatable="false">LikeAnimation</string>
+    <string name="library_mpandroidchart" translatable="false">MPAndroidChart</string>
+    <string name="url_activeandroid" translatable="false">https://github.com/pardom/ActiveAndroid</string>
+    <string name="url_android_iconify" translatable="false">https://github.com/JoanZapata/android-iconify</string>
+    <string name="url_butterknife" translatable="false">https://github.com/JakeWharton/butterknife</string>
+    <string name="url_caldroid" translatable="false">https://github.com/roomorama/Caldroid</string>
+    <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
+    <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
+    <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
+    <string name="permission_needed_to_write_storage">不具權限，無法備份至記憶體</string>
+    <string name="backup_failed">備份失敗</string>
+    <string name="restore_failed">還原失敗</string>
+    <string name="backup_success">備份成功</string>
+    <string name="restore_success">還原成功</string>
+    <string name="restore_confirm_title">還原備份</string>
+    <string name="restore_confirm_message">在從備份資料還原前，所有現存的數據都會被刪除。確定要繼續嗎？</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="backup">備份</string>
+    <string name="food_info">食物資訊</string>
+    <string name="food_history">食物歷史紀錄</string>
+    <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
+    <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
+    <string name="num_servings_max" translatable="false">24</string>
+    <string name="icon_chart" translatable="false">{fa-bar-chart 20dp @color/gray_dark}</string>
+    <string name="daily_servings_history">每日分量歷史紀錄</string>
+    <string name="no_servings_recorded">您尚未紀錄任何內容！</string>
+    <string name="task_backup_title">備份中</string>
+    <string name="task_restore_title">還原中</string>
+    <string name="task_calculating_streaks_title">計算圖表中</string>
+    <string name="back_to_today">回到今天</string>
+    <string name="debug">偵錯</string>
+    <string name="debug_clear_data">清除所有資料</string>
+    <string name="debug_clear_data_message">這將刪除所有已輸入的分量。確定要繼續嗎？</string>
+    <string name="OK">確定</string>
+    <string name="dialog_streaks_title">新功能：趨勢圖</string>
+    <string name="dialog_streaks_message">現在將升級您的資料庫，以支持新的趨勢圖功能。</string>
+    <string name="dialog_no_email_apps_title">找不到電子郵件應用程式</string>
+    <string name="dialog_no_email_apps_message">您需要安裝電子郵件應用程式才能使用備份數據功能，才能將.csv的備份檔案寄到自己的電子郵件信箱。請安裝電子郵件應用程式後再重試。</string>
+    <string name="debug_generate_random_data">產生隨機數據</string>
+    <string name="debug_generate_full_data">產生完整數據</string>
+    <string name="debug_generate_data_message">所有現存的數據都將被取代。確定要繼續嗎？</string>
+    <string name="task_generating_random_data">產生隨機數據</string>
+    <string name="task_loading_servings_history_title">載入份量歷史記錄</string>
+    <string name="time_scale">時間尺度</string>
+    <string name="history_to_generate">產生歷史記錄</string>
+    <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
+    <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
+    <string name="welcome_to_my_daily_dozen">歡迎來到我的《每日十二要素》！</string>
+    <string name="activity_welcome_text">我在《食療聖經》中推薦了能夠讓您健康長壽的食物，請每天使用這個應用程式來記錄與追蹤您對這些食物的攝取量。</string>
+    <string name="dialog_ask_user_to_rate_app_title">您喜歡這個應用程式嗎？</string>
+    <string name="dialog_ask_user_to_rate_app_message">請在應用程式商店中給我們指教。</string>
+    <string name="rate_now">我有意見</string>
+    <string name="not_now">稍後再說</string>
+    <string name="format_version" formatted="false">版本 %s</string>
+    <string name="format_num_days" formatted="false">%d 天</string>
+    <string name="daily_reminder_title">每日十二要素提醒</string>
+    <string name="daily_reminder_text">更新您的今日份量</string>
+    <string name="daily_reminder_settings">每日提醒設定</string>
+    <string name="enable_daily_reminder">啟用每日提醒</string>
+    <string name="remind_me_at">提醒時間</string>
+    <string name="vibrate">震動</string>
+    <string name="play_sound">播放聲音</string>
+    <string name="videos">影片</string>
+    <string name="units">Units</string>
+    <string name="imperial">帝国</string>
+    <string name="metric">公</string>
+    <string name="vitamin_divider_text">维生素</string>
+    <string name="dialog_vitamin_explanation_text">维生素B12和维生素D对您的健康至关重要，但不计入您的日常服务。\ n \ n它包含在此应用程序中，为您提供一个简单的方法来跟踪您的摄入量</string>
+
+    <!--
+    NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
+    must not be translated.
+    -->
+    <string name="food_info_videos_beans" translatable="false">beans</string>
+    <string name="food_info_videos_berries" translatable="false">berries</string>
+    <string name="food_info_videos_fruits" translatable="false">fruit</string>
+    <string name="food_info_videos_cruciferous" translatable="false">cruciferous-vegetables</string>
+    <string name="food_info_videos_greens" translatable="false">greens</string>
+    <string name="food_info_videos_vegetables" translatable="false">vegetables</string>
+    <string name="food_info_videos_flaxseeds" translatable="false">flax-seeds</string>
+    <string name="food_info_videos_nuts" translatable="false">nuts</string>
+    <string name="food_info_videos_spices" translatable="false">spices</string>
+    <string name="food_info_videos_whole_grains" translatable="false">grains</string>
+    <string name="food_info_videos_beverages" translatable="false">beverages</string>
+    <string name="food_info_videos_exercise" translatable="false">exercise</string>
+    <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
+    <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
+
+    <!--
+    NOTE: These strings should never be translated from English
+    These strings are used as the canonical names for the different foods and make it easy to switch between languages
+    -->
+    <string-array name="food_id_names" translatable="false">
+        <item>Beans</item>
+        <item>Berries</item>
+        <item>Other Fruits</item>
+        <item>Cruciferous Vegetables</item>
+        <item>Greens</item>
+        <item>Other Vegetables</item>
+        <item>Flaxseeds</item>
+        <item>Nuts</item>
+        <item>Spices</item>
+        <item>Whole Grains</item>
+        <item>Beverages</item>
+        <item>Exercise</item>
+        <item>Vitamin B12</item>
+        <item>Vitamin D</item>
+    </string-array>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
+    </string-array>
+
+    <string-array name="notification_icon_food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
+    </string-array>
+
+    <integer-array name="food_quantities">
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+
+    <string-array name="about_text_lines">
+        <item>這個應用程式是由John Slavick所製作的。</item>
+        <item />
+        <item>使用了以下免費程式庫: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</</item>
+        <item />
+        <item>特別感謝製作前一代應用程式志願者所做的貢獻: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>按照以下步驟在《每日十二要素》應用程式中還原此備份： </item>
+        <item />
+        <item>1. 您必須在Android手機上安裝《每日十二要素》應用程式。您可以從這裡下載： https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. 點擊附加在此電子郵件的備份檔案。</item>
+        <item />
+        <item>3. 選擇以《每日十二要素》應用程式開啟。</item>
+    </string-array>
+
+    <string-array name="servings_time_scale_choices">
+        <item>天</item>
+        <item>月</item>
+        <item>年</item>
+    </string-array>
+
+    <string-array name="history_to_generate_choices">
+        <item>1個月</item>
+        <item>3個月</item>
+        <item>6個月</item>
+        <item>1年</item>
+        <item>2年</item>
+        <item>5年</item>
+    </string-array>
+
+    <string-array name="food_info_types_beans">
+        <item>黑豆</item>
+        <item>黑眼豆</item>
+        <item>利馬豆</item>
+        <item>白腰豆</item>
+        <item>鷹嘴豆</item>
+        <item>毛豆</item>
+        <item>麥豌豆</item>
+        <item>鷹嘴豆</item>
+        <item>北美腰豆</item>
+        <item>菜豆</item>
+        <item>扁豆（包括黑扁豆、法國扁豆與紅扁豆等品種）</item>
+        <item>味噌</item>
+        <item>白豆</item>
+        <item>花豆</item>
+        <item>小紅豆</item>
+        <item>豌豆（黃豌豆或綠豌豆）</item>
+        <item>天貝</item>
+    </string-array>
+
+    <string-array name="food_info_types_berries">
+        <item>巴西莓</item>
+        <item>莿莓</item>
+        <item>黑莓</item>
+        <item>藍莓</item>
+        <item>櫻桃（甜的或酸的）</item>
+        <item>康科德葡萄</item>
+        <item>蔓越莓</item>
+        <item>枸杞</item>
+        <item>金桔</item>
+        <item>桑葚</item>
+        <item>覆盆子（黑色或紅色）</item>
+        <item>草莓</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_fruits">
+        <item>蘋果</item>
+        <item>杏子乾</item>
+        <item>酪梨</item>
+        <item>香蕉</item>
+        <item>哈密瓜</item>
+        <item>小柑橘</item>
+        <item>海棗</item>
+        <item>無花果乾</item>
+        <item>葡萄柚</item>
+        <item>蜜瓜</item>
+        <item>奇異果</item>
+        <item>檸檬</item>
+        <item>萊姆</item>
+        <item>荔枝</item>
+        <item>芒果</item>
+        <item>油桃</item>
+        <item>柳橙</item>
+        <item>木瓜</item>
+        <item>百香果</item>
+        <item>桃子</item>
+        <item>梨子</item>
+        <item>鳳梨</item>
+        <item>李子（尤其是黑李）</item>
+        <item>杏李</item>
+        <item>石榴</item>
+        <item>黑棗</item>
+        <item>橘子</item>
+        <item>西瓜</item>
+    </string-array>
+
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>芝麻葉</item>
+        <item>青江菜</item>
+        <item>綠色花椰菜</item>
+        <item>球芽甘藍</item>
+        <item>甘藍菜</item>
+        <item>白色花椰菜</item>
+        <item>芥藍菜葉</item>
+        <item>辣根</item>
+        <item>羽衣甘藍（黑色、綠色與紅色品種）</item>
+        <item>芥菜</item>
+        <item>蘿蔔</item>
+        <item>蕪菁葉</item>
+        <item>西洋菜</item>
+    </string-array>
+
+    <string-array name="food_info_types_greens">
+        <item>芝麻葉</item>
+        <item>甜菜葉</item>
+        <item>芥藍菜葉</item>
+        <item>羽衣甘藍（黑色、綠色與紅色品種）</item>
+        <item>綜合生菜葉（綜合幼嫩綠色沙拉）</item>
+        <item>芥菜</item>
+        <item>酸模</item>
+        <item>菠菜</item>
+        <item>牛皮菜</item>
+        <item>蕪菁葉</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_vegetables">
+        <item>朝鮮薊</item>
+        <item>蘆筍</item>
+        <item>甜菜</item>
+        <item>甜椒</item>
+        <item>胡蘿蔔</item>
+        <item>玉米</item>
+        <item>大蒜</item>
+        <item>菇類（洋菇、秀珍菇、波特菇與香菇）</item>
+        <item>秋葵</item>
+        <item>洋蔥</item>
+        <item>紫薯</item>
+        <item>南瓜</item>
+        <item>海帶（海藻、紅藻與海苔）</item>
+        <item>甜脆豌豆</item>
+        <item>南瓜屬（包括花生南瓜、夏南瓜與金線南瓜等品種）</item>
+        <item>地瓜／番薯</item>
+        <item>番茄</item>
+        <item>櫛瓜</item>
+    </string-array>
+
+    <string-array name="food_info_types_flaxseeds">
+        <item>棕色亞麻籽</item>
+        <item>黃金亞麻籽</item>
+    </string-array>
+
+    <string-array name="food_info_types_nuts">
+        <item>杏仁</item>
+        <item>巴西堅果</item>
+        <item>腰果</item>
+        <item>奇亞籽</item>
+        <item>榛果／榛子</item>
+        <item>大麻籽</item>
+        <item>夏威夷火山豆</item>
+        <item>胡桃</item>
+        <item>開心果</item>
+        <item>南瓜籽</item>
+        <item>芝麻籽</item>
+        <item>葵花籽</item>
+        <item>核桃</item>
+    </string-array>
+
+    <string-array name="food_info_types_spices">
+        <item>眾香子</item>
+        <item>莿莓</item>
+        <item>羅勒</item>
+        <item>月桂葉</item>
+        <item>小荳蔻</item>
+        <item>辣椒粉</item>
+        <item>芫荽</item>
+        <item>肉桂</item>
+        <item>丁香</item>
+        <item>芫荽籽</item>
+        <item>小茴香</item>
+        <item>咖哩粉</item>
+        <item>蒔蘿</item>
+        <item>葫蘆巴</item>
+        <item>大蒜</item>
+        <item>薑</item>
+        <item>辣根</item>
+        <item>香茅</item>
+        <item>墨角蘭</item>
+        <item>芥末粉</item>
+        <item>肉豆蔻</item>
+        <item>牛至</item>
+        <item>匈牙利煙燻紅椒粉</item>
+        <item>荷蘭芹</item>
+        <item>胡椒</item>
+        <item>薄荷</item>
+        <item>迷迭香</item>
+        <item>番紅花</item>
+        <item>鼠尾草</item>
+        <item>百里香</item>
+        <item>薑黃</item>
+        <item>香草</item>
+    </string-array>
+
+    <string-array name="food_info_types_whole_grains">
+        <item>大麥</item>
+        <item>糙米</item>
+        <item>蕎麥</item>
+        <item>小米</item>
+        <item>燕麥</item>
+        <item>爆米花</item>
+        <item>藜麥</item>
+        <item>裸麥</item>
+        <item>畫眉草籽</item>
+        <item>全麥義大利麵</item>
+        <item>菰米</item>
+    </string-array>
+
+    <string-array name="food_info_types_beverages">
+        <item>紅茶</item>
+        <item>印度香料奶茶</item>
+        <item>香草菊花茶</item>
+        <item>咖啡</item>
+        <item>伯爵茶</item>
+        <item>綠茶</item>
+        <item>洛神花茶</item>
+        <item>熱巧克力</item>
+        <item>茉莉花茶</item>
+        <item>香蜂草茶</item>
+        <item>抹茶</item>
+        <item>杏仁花烏龍茶</item>
+        <item>薄荷茶</item>
+        <item>南非國寶茶</item>
+        <item>水</item>
+        <item>白茶</item>
+    </string-array>
+
+    <string-array name="food_info_types_exercise">
+        <item>騎單車</item>
+        <item>划獨木舟</item>
+        <item>跳舞</item>
+        <item>躲避球</item>
+        <item>下坡滑雪</item>
+        <item>擊劍</item>
+        <item>健行</item>
+        <item>做家事</item>
+        <item>溜冰</item>
+        <item>溜直排輪</item>
+        <item>雜耍</item>
+        <item>跳彈簧床</item>
+        <item>踩腳踏船</item>
+        <item>玩飛盤</item>
+        <item>四輪溜冰</item>
+        <item>投籃</item>
+        <item>剷雪（輕微積雪）</item>
+        <item>玩滑板</item>
+        <item>浮潛</item>
+        <item>衝浪</item>
+        <item>休閒式游泳</item>
+        <item>網球（雙打）</item>
+        <item>立泳</item>
+        <item>健走(每小時4英里)</item>
+        <item>水中有氧</item>
+        <item>滑水</item>
+        <item>整理庭院</item>
+        <item>瑜珈</item>
+        <item>背包旅行</item>
+        <item>打籃球</item>
+        <item>單車爬坡</item>
+        <item>循環重量訓練</item>
+        <item>越野滑雪</item>
+        <item>美式足球</item>
+        <item>曲棍球</item>
+        <item>慢跑</item>
+        <item>開合跳</item>
+        <item>跳繩</item>
+        <item>袋棍球</item>
+        <item>伏地挺身</item>
+        <item>引體向上</item>
+        <item>短柄牆球</item>
+        <item>攀岩</item>
+        <item>橄欖球</item>
+        <item>跑步</item>
+        <item>潛水</item>
+        <item>網球（單打）</item>
+        <item>足球</item>
+        <item>競速滑冰</item>
+        <item>壁球</item>
+        <item>階梯有氧</item>
+        <item>來回游泳</item>
+        <item>快走上坡</item>
+        <item>水中慢跑</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans">
+        <item>¼杯鷹嘴豆泥或豆子沾醬</item>,
+        <item>½杯煮熟的豆子、豌豆、扁豆、豆腐或天貝</item>,
+        <item>1杯新鮮豌豆或扁豆芽</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼杯</item>
+        <item>½杯</item>
+        <item>1杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60克</item>
+        <item>130克</item>
+        <item>150克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries">
+        <item>½杯新鮮或冷凍莓果</item>
+        <item>¼杯莓果乾</item>
+    </string-array>
+    
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½杯</item>
+        <item>¼杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60克</item>
+        <item>40克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>1顆中型水果</item>
+        <item>1杯水果丁</item>
+        <item>¼杯果乾</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item></item>
+        <item>1杯</item>
+        <item>¼杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item></item>
+        <item>120克</item>
+        <item>40克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+        <item>½杯切碎的白花椰菜</item>
+        <item>¼杯球芽甘藍或青花椰苗</item>
+        <item>1大匙辣根</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens">
+        <item>1杯生菜</item>
+        <item>½杯煮過的蔬菜</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>1杯生葉菜</item>
+        <item>½杯生或熟的非葉菜</item>
+        <item>½杯蔬菜汁</item>
+        <item>¼杯乾燥菇類</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½杯</item>
+        <item>¼杯</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80克</item>
+        <item>12克</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens">
+        <item>%s raw</item>
+        <item>%s cooked</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1杯</item>
+        <item>½杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60克</item>
+        <item>90克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>%s raw leafy vegetables</item>
+        <item>%s raw or cooked nonleafy vegetables</item>
+        <item>%s vegetable juice</item>
+        <item>%s dried mushrooms</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1杯</item>
+        <item>½杯</item>
+        <item>½杯</item>
+        <item>¼杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60克</item>
+        <item>50克</item>
+        <item>125毫升</item>
+        <item>7克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>1大匙研磨的亞麻籽</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>¼杯堅果或種籽</item>
+        <item>2大匙果仁醬或種籽醬</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼杯</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30克</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices">
+        <item>¼茶匙的薑黃</item>
+        <item>任何其他你所喜歡的（無鹽）香草和香料</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>½杯熱麥片或煮熟的穀物、義大利麵或玉米粒</item>
+        <item>1杯冷麥片</item>
+        <item>1份墨西哥薄餅或1片麵包</item>
+        <item>½個貝果或英式鬆餅</item>
+        <item>3杯爆好的爆米花</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½杯</item>
+        <item>1杯</item>
+        <item></item>
+        <item></item>
+        <item>3杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100克</item>
+        <item>50克</item>
+        <item></item>
+        <item></item>
+        <item>30克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages">
+        <item>一杯（12盎司）</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12盎司</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350毫升</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>90分鐘的中等強度運動</item>
+        <item>40分鐘的劇烈運動</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string name="error_cannot_handle_url">無法開啟網頁。請安裝瀏覽器。</string>
+
+    <string-array name="food_videos_beans" translatable="false">
+        <item>black-beans</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>chickpeas</item>
+        <item>edamame</item>
+        <item></item>
+        <item>garbanzo-beans</item>
+        <item></item>
+        <item>kidney-beans</item>
+        <item>lentils</item>
+        <item>miso</item>
+        <item>navy-beans</item>
+        <item>pinto-beans</item>
+        <item></item>
+        <item>split-peas</item>
+        <item>tempeh</item>
+    </string-array>
+
+    <string-array name="food_videos_berries" translatable="false">
+        <item>acai-berries</item>
+        <item>barberries</item>
+        <item>blackberries</item>
+        <item>blueberries</item>
+        <item>cherries</item>
+        <item>concord-grapes</item>
+        <item>cranberries</item>
+        <item>goji-berries</item>
+        <item></item>
+        <item></item>
+        <item>raspberries</item>
+        <item>strawberries</item>
+    </string-array>
+
+    <string-array name="food_videos_other_fruits" translatable="false">
+        <item>apples</item>
+        <item>apricots</item>
+        <item>avocados</item>
+        <item>bananas</item>
+        <item>cantaloupe</item>
+        <item></item>
+        <item>dates</item>
+        <item>figs</item>
+        <item>grapefruit</item>
+        <item></item>
+        <item>kiwifruit</item>
+        <item>lemons</item>
+        <item>limes</item>
+        <item></item>
+        <item>mango</item>
+        <item></item>
+        <item>oranges</item>
+        <item>papaya</item>
+        <item></item>
+        <item>peaches</item>
+        <item>pears</item>
+        <item>pineapples</item>
+        <item>plums</item>
+        <item></item>
+        <item>pomegranates</item>
+        <item>prunes</item>
+        <item></item>
+        <item>watermelon</item>
+    </string-array>
+
+    <string-array name="food_videos_cruciferous_vegetables" translatable="false">
+        <item></item>
+        <item>bok-choy</item>
+        <item>broccoli</item>
+        <item>brussels-sprouts</item>
+        <item>cabbage</item>
+        <item>cauliflower</item>
+        <item>collard-greens</item>
+        <item></item>
+        <item>kale</item>
+        <item>mustard-greens</item>
+        <item>radishes</item>
+        <item>turnips</item>
+        <item>watercress</item>
+    </string-array>
+
+    <string-array name="food_videos_greens" translatable="false">
+        <item></item>
+        <item>beet-greens</item>
+        <item>collard-greens</item>
+        <item>kale</item>
+        <item>mesclun-mix</item>
+        <item>mustard-greens</item>
+        <item></item>
+        <item>spinach</item>
+        <item>swiss-chard</item>
+        <item>turnips</item>
+    </string-array>
+
+    <string-array name="food_videos_other_vegetables" translatable="false">
+        <item>artichokes</item>
+        <item>asparagus</item>
+        <item>beets</item>
+        <item>bell-peppers</item>
+        <item>carrots</item>
+        <item>corn</item>
+        <item>garlic</item>
+        <item>mushrooms</item>
+        <item>okra</item>
+        <item>onions</item>
+        <item>purple-potatoes</item>
+        <item>pumpkin</item>
+        <item>sea-vegetables</item>
+        <item></item>
+        <item>squash</item>
+        <item>sweet-potatoes</item>
+        <item>tomatoes</item>
+        <item>zucchini</item>
+    </string-array>
+
+    <string-array name="food_videos_nuts" translatable="false">
+        <item>almonds</item>
+        <item>brazil-nuts</item>
+        <item>cashews</item>
+        <item>chia-seeds</item>
+        <item>hazelnuts</item>
+        <item></item>
+        <item>macadamia-nuts</item>
+        <item>pecans</item>
+        <item>pistachios</item>
+        <item>pumpkin-seeds</item>
+        <item>sesame-seeds</item>
+        <item>sunflower-seeds</item>
+        <item>walnuts</item>
+    </string-array>
+
+    <string-array name="food_videos_spices" translatable="false">
+        <item>allspice</item>
+        <item>barberries</item>
+        <item>basil</item>
+        <item></item>
+        <item>cardamom</item>
+        <item></item>
+        <item>cilantro</item>
+        <item>cinnamon</item>
+        <item>cloves</item>
+        <item>coriander</item>
+        <item>cumin</item>
+        <item>curry-powder</item>
+        <item></item>
+        <item>fenugreek</item>
+        <item>garlic</item>
+        <item>ginger</item>
+        <item></item>
+        <item>lemongrass</item>
+        <item>marjoram</item>
+        <item>mustard-powder</item>
+        <item>nutmeg</item>
+        <item>oregano</item>
+        <item></item>
+        <item>parsley</item>
+        <item>pepper</item>
+        <item>peppermint</item>
+        <item>rosemary</item>
+        <item>saffron</item>
+        <item></item>
+        <item>thyme</item>
+        <item>turmeric</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_videos_whole_grains" translatable="false">
+        <item>barley</item>
+        <item>rice</item>
+        <item>buckwheat</item>
+        <item>millet</item>
+        <item>oats</item>
+        <item>popcorn</item>
+        <item>quinoa</item>
+        <item>rye</item>
+        <item>teff</item>
+        <item>pasta</item>
+        <item>rice</item>
+    </string-array>
+
+    <string-array name="food_videos_beverages" translatable="false">
+        <item>black-tea</item>
+        <item>chai-tea</item>
+        <item>chamomile-tea</item>
+        <item>coffee</item>
+        <item>earl-grey-tea</item>
+        <item>green-tea</item>
+        <item>hibiscus-tea</item>
+        <item></item>
+        <item>jasmine-tea</item>
+        <item></item>
+        <item>matcha</item>
+        <item>oolong-tea</item>
+        <item></item>
+        <item>rooibos-tea</item>
+        <item>water</item>
+        <item>white-tea</item>
+    </string-array>
+
+</resources> 
+
+    
