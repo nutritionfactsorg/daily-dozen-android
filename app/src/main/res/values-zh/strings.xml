@@ -35,13 +35,6 @@
     <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe/</string>
     <string name="open_source">免費資源</string>
     
-    <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
-    <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
-    <string name="name_john_slavick" translatable="false">John Slavick</string>
-    <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
-    <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
-    <string name="library_android_iconify" translatable="false">android-iconify</string>
-    <string name="library_butterknife">ButterKnife</string>
     <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source/</string>
     <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
     <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
@@ -208,7 +201,7 @@
     <string-array name="about_text_lines">
         <item>這個應用程式是由John Slavick所製作的。</item>
         <item />
-        <item>使用了以下免費程式庫: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</</item>
+        <item>使用了以下免費程式庫: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
         <item />
         <item>特別感謝製作前一代應用程式志願者所做的貢獻: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
     </string-array>
@@ -581,11 +574,6 @@
         <item></item>
     </string-array>
 
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s raw</item>
-        <item>%s cooked</item>
-    </string-array>
-
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1杯</item>
         <item>½杯</item>
@@ -594,13 +582,6 @@
     <string-array name="food_info_serving_sizes_greens_metric">
         <item>60克</item>
         <item>90克</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s raw leafy vegetables</item>
-        <item>%s raw or cooked nonleafy vegetables</item>
-        <item>%s vegetable juice</item>
-        <item>%s dried mushrooms</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
