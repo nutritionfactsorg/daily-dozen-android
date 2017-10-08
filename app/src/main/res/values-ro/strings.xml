@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Daily Dozen</string>
+
+    <string name="beans">Leguminoase boabe</string>
+    <string name="berries">Fructe de pădure</string>
+    <string name="other_fruits">Alte fructe</string>
+    <string name="cruciferous_vegetables">Legume crucifere</string>
+    <string name="greens">Verdețuri</string>
+    <string name="other_vegetables">Alte legume</string>
+    <string name="flaxseeds">Semințe de in</string>
+    <string name="nuts">Nuci</string>
+    <string name="spices">Condimente</string>
+    <string name="whole_grains">Cereale integrale</string>
+    <string name="beverages">Băuturi</string>
+    <string name="exercise">Exerciții fizice</string>
+    <string name="vitamin_b12">Vitamina B12</string>
+    <string name="vitamin_d">Vitamina D</string>
+    <string name="serving_sizes">Dimensiunea unei porții</string>
+    <string name="types">Varietăți</string>
+    <string name="history">Istoric</string>
+    <string name="servings_some">Unele porții</string>
+    <string name="servings_all">Toate porțiile</string>
+    <string name="servings">Porții</string>
+    <string name="out_of">din</string>
+    <string name="moving_average">Media mișcării</string>
+    <string name="about">Despre</string>
+    <string name="about_this_app">Despre această aplicație</string>
+    <string name="latest_videos">Ultimele videoclipuri</string>
+    <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
+    <string name="book_title" translatable="false">How Not to Die</string>
+    <string name="url_book" translatable="false">http://nutritionfacts.org/book/</string>
+    <string name="donate">Donați</string>
+    <string name="url_donate" translatable="false">https://nutritionfacts.org/donate/</string>
+    <string name="subscribe">Abonați-vă</string>
+    <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe/</string>
+    <string name="open_source">Sursă deschisă</string>
+    <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source/</string>
+    <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
+    <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
+    <string name="name_john_slavick" translatable="false">John Slavick</string>
+    <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
+    <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
+    <string name="library_android_iconify" translatable="false">android-iconify</string>
+    <string name="library_butterknife">ButterKnife</string>
+    <string name="library_caldroid" translatable="false">Caldroid</string>
+    <string name="library_eventbus" translatable="false">EventBus</string>
+    <string name="library_likeanimation" translatable="false">LikeAnimation</string>
+    <string name="library_mpandroidchart" translatable="false">MPAndroidChart</string>
+    <string name="url_activeandroid" translatable="false">https://github.com/pardom/ActiveAndroid</string>
+    <string name="url_android_iconify" translatable="false">https://github.com/JoanZapata/android-iconify</string>
+    <string name="url_butterknife" translatable="false">https://github.com/JakeWharton/butterknife</string>
+    <string name="url_caldroid" translatable="false">https://github.com/roomorama/Caldroid</string>
+    <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
+    <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
+    <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
+    <string name="permission_needed_to_write_storage">Nu se poate face copie de rezervă a datelor fără permisiunea de a scrie în spațiul de stocare</string>
+    <string name="backup_failed">Efectuarea copiei de rezervă a datelor a eşuat</string>
+    <string name="restore_failed">Restaurarea copiei de rezervă datelor a eşuat</string>
+    <string name="backup_success">Copia de rezervă a datelor a fost efectuată cu succes</string>
+    <string name="restore_success">Restaurarea copiei de rezervă a datelor a fost efectuată cu succes</string>
+    <string name="restore_confirm_title">Restaurează date din copia de rezervă a datelor</string>
+    <string name="restore_confirm_message">Orice date existente vor fi șterse înainte de a fi restaurate din copia de rezervă. Doriți să continuați?</string>
+    <string name="backup_mimetype" translatable="false">message/rfc822</string>
+    <string name="yes">Da</string>
+    <string name="no">Nu</string>
+    <string name="backup">Copie de rezervă</string>
+    <string name="food_info">Informații alimentare</string>
+    <string name="food_history">Informații istorice</string>
+    <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
+    <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
+    <string name="num_servings_max" translatable="false">24</string>
+    <string name="icon_chart" translatable="false">{fa-bar-chart 20dp @color/gray_dark}</string>
+    <string name="daily_servings_history">Istoricul zilnic al porțiilor</string>
+    <string name="no_servings_recorded">Nu ați înregistrat încă porții!</string>
+    <string name="task_backup_title">Se efectuează copie de rezervă a datelor</string>
+    <string name="task_restore_title">Restaurare</string>
+    <string name="task_calculating_streaks_title">Se calculează zilele consecutive</string>
+    <string name="back_to_today">Înapoi la ziua de azi</string>
+    <string name="debug">Depanare</string>
+    <string name="debug_clear_data">Ștergeți toate datele</string>
+    <string name="debug_clear_data_message">Această acțiune va șterge toate intrările introduse. Doriți să continuați?</string>
+    <string name="OK">Bine</string>
+    <string name="dialog_streaks_title">Caracteristică nouă: Secvenţe consecutive!</string>
+    <string name="dialog_streaks_message">Baza dvs. de date va fi acum actualizată pentru a accepta caracteristica nouă de secvenţe consecutive.</string>
+    <string name="dialog_no_email_apps_title">Nu au fost găsite aplicații de e-mail</string>
+    <string name="dialog_no_email_apps_message">Copia de rezervă a datelor dvs. necesită instalarea unei aplicații de e-mail, astfel încât să puteți trimite fișierul de rezervă .csv prin e-mail. Instalați o aplicație de e-mail și încercați din nou.</string>
+    <string name="debug_generate_random_data">Generează date aleatorii</string>
+    <string name="debug_generate_full_data">Generează date complete</string>
+    <string name="debug_generate_data_message">Toate datele existente vor fi înlocuite. Doriți să continuați?</string>
+    <string name="task_generating_random_data">Se generează date aleatorii</string>
+    <string name="task_loading_servings_history_title">Încărcarea istoricului de porții</string>
+    <string name="time_scale">Scală de timp</string>
+    <string name="history_to_generate">Istoric pentru generare</string>
+    <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
+    <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
+    <string name="welcome_to_my_daily_dozen">Bine ați venit în Daily Dozen!</string>
+    <string name="activity_welcome_text">Utilizați această aplicație zilnic pentru a urmări alimentele pe care le recomand pentru o sănătate optimă și longevitate în cartea mea Cum să nu mori.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Îți place această aplicație?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Spuneți-ne părerea în Magazinul Play.</string>
+    <string name="rate_now">Trimiteți părerea</string>
+    <string name="not_now">Nu acum</string>
+    <string name="format_version" formatted="false">versiune %s</string>
+    <string name="format_num_days" formatted="false">%d zile</string>
+    <string name="daily_reminder_title">Daily Dozen memento</string>
+    <string name="daily_reminder_text">Actualizați-vă porțile pentru ziua de azi</string>
+    <string name="daily_reminder_settings">Setările pentru mementourile zilnice</string>
+    <string name="enable_daily_reminder">Activați mementoul zilnic</string>
+    <string name="remind_me_at">Amintiți-mi la</string>
+    <string name="vibrate">Vibrează</string>
+    <string name="play_sound">Redați sunetul</string>
+    <string name="videos">Videoclipuri</string>
+    <string name="units">Unități</string>
+    <string name="imperial">Imperial</string>
+    <string name="metric">Metric</string>
+    <string name="vitamin_divider_text">Vitamine</string>
+    <string name="dialog_vitamin_explanation_text">Vitamina B12 și Vitamina D sunt esențiale pentru sănătatea dumneavoastră, dar nu se iau în considerare în porțiile zilnice.\n\nEle sunt incluse în această aplicație pentru a vă oferi o modalitate ușoară de a urmări aportul dumneavoastră.</string>
+
+    <!--
+    NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
+    must not be translated.
+    -->
+    <string name="food_info_videos_beans" translatable="false">beans</string>
+    <string name="food_info_videos_berries" translatable="false">berries</string>
+    <string name="food_info_videos_fruits" translatable="false">fruit</string>
+    <string name="food_info_videos_cruciferous" translatable="false">cruciferous-vegetables</string>
+    <string name="food_info_videos_greens" translatable="false">greens</string>
+    <string name="food_info_videos_vegetables" translatable="false">vegetables</string>
+    <string name="food_info_videos_flaxseeds" translatable="false">flax-seeds</string>
+    <string name="food_info_videos_nuts" translatable="false">nuts</string>
+    <string name="food_info_videos_spices" translatable="false">spices</string>
+    <string name="food_info_videos_whole_grains" translatable="false">grains</string>
+    <string name="food_info_videos_beverages" translatable="false">beverages</string>
+    <string name="food_info_videos_exercise" translatable="false">exercise</string>
+    <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
+    <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
+
+    <!--
+    NOTE: These strings should never be translated from English
+    These strings are used as the canonical names for the different foods and make it easy to switch between languages
+    -->
+    <string-array name="food_id_names" translatable="false">
+        <item>Beans</item>
+        <item>Berries</item>
+        <item>Other Fruits</item>
+        <item>Cruciferous Vegetables</item>
+        <item>Greens</item>
+        <item>Other Vegetables</item>
+        <item>Flaxseeds</item>
+        <item>Nuts</item>
+        <item>Spices</item>
+        <item>Whole Grains</item>
+        <item>Beverages</item>
+        <item>Exercise</item>
+        <item>Vitamin B12</item>
+        <item>Vitamin D</item>
+    </string-array>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
+    </string-array>
+
+    <string-array name="notification_icon_food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
+    </string-array>
+
+    <integer-array name="food_quantities">
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+
+    <string-array name="about_text_lines">
+        <item>Această aplicație a fost creată de John Slavick.</item>
+        <item />
+        <item>Următoarele biblioteci cu sursă deschisă sunt utilizate în crearea aplicației: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, și MPAndroidChart.</item>
+        <item />
+        <item>Mulțumiri speciale sunt aduse eforturilor de voluntariat ale creatorilor aplicației anterioare: Chan Kruse, Allan Portera, și Sangeeta Kumar.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>Urmați acești pași pentru a restaura copia de siguranță a datelor în aplicația Daily Dozen</item>
+        <item />
+        <item>1. Aplicația Daily Dozen trebuie instalată pe telefonul tău cu Android. Puteți să o descărcați aici: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Atingeți fișierul atașat la acest e-mail.</item>
+        <item />
+        <item>3. Selectați deschidere cu Daily Dozen</item>
+    </string-array>
+
+    <string-array name="servings_time_scale_choices">
+        <item>Zi</item>
+        <item>Lună</item>
+        <item>An</item>
+    </string-array>
+
+    <string-array name="history_to_generate_choices">
+        <item>1 lună</item>
+        <item>3 luni</item>
+        <item>6 luni</item>
+        <item>1 an</item>
+        <item>2 ani</item>
+        <item>5 ani</item>
+    </string-array>
+
+    <string-array name="food_info_types_beans">
+        <item>Fasole neagră</item>
+        <item>Fasole ochi negru</item>
+        <item>Fasole untoasă</item>
+        <item>Fasole cannellini</item>
+        <item>Năut</item>
+        <item>Edamame (păstăi verzi de soia)</item>
+        <item>Mazăre englezească</item>
+        <item>Năut garbanzo</item>
+        <item>Fasole nordică cu bobul mare</item>
+        <item>Fasole roșie cu bob în formă de rinichi</item>
+        <item>Linte (beluga, franceză și roșie)</item>
+        <item>Miso</item>
+        <item>Fasole albă</item>
+        <item>Fasole pinto</item>
+        <item>Fasole roșie cu bobul mic</item>
+        <item>Mazăre uscată (galbenă sau verde)</item>
+        <item>Tempeh</item>
+    </string-array>
+
+    <string-array name="food_info_types_berries">
+        <item>Acai</item>
+        <item>Agrișe</item>
+        <item>Mure</item>
+        <item>Afine</item>
+        <item>Cireșe dulci sau vișine</item>
+        <item>Struguri violet</item>
+        <item>Merișoare</item>
+        <item>Goji (Cătină de garduri)</item>
+        <item>Kumquat</item>
+        <item>Dude</item>
+        <item>Zmeură (neagră sau roșie)</item>
+        <item>Căpșuni</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_fruits">
+        <item>Mere</item>
+        <item>Caise uscate</item>
+        <item>Avocado</item>
+        <item>Banane</item>
+        <item>Pepeni galbeni Cantalup</item>
+        <item>Clementine</item>
+        <item>Curmale</item>
+        <item>Smochine uscate</item>
+        <item>Grepfrut</item>
+        <item>Pepeni galbeni Honeydew</item>
+        <item>Kiwi</item>
+        <item>Lămâi galbene</item>
+        <item>Lămâi verzi</item>
+        <item>Litchi</item>
+        <item>Mango</item>
+        <item>Nectarine</item>
+        <item>Portocale</item>
+        <item>Papaya</item>
+        <item>Fructul pasiunii</item>
+        <item>Piersici</item>
+        <item>Pere</item>
+        <item>Ananas</item>
+        <item>Prune (în special cele negre sau vineții închise)</item>
+        <item>Renglote</item>
+        <item>Rodii</item>
+        <item>Prune uscate</item>
+        <item>Mandarine</item>
+        <item>Pepeni roșii</item>
+    </string-array>
+
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Rucolă</item>
+        <item>Varză chinezească</item>
+        <item>Broccoli</item>
+        <item>Varză de Bruxelles</item>
+        <item>Varză</item>
+        <item>Conopidă</item>
+        <item>Varză furajeră</item>
+        <item>Hrean</item>
+        <item>Varză Kale (creață, neagră, verde și roșie)</item>
+        <item>Frunze de muștar</item>
+        <item>Ridichi</item>
+        <item>Frunze de nap</item>
+        <item>Năsturel (Creson de apă)</item>
+    </string-array>
+
+    <string-array name="food_info_types_greens">
+        <item>Rucolă</item>
+        <item>Frunze de sfeclă</item>
+        <item>Varză furajeră</item>
+        <item>Varză Kale (creață, neagră, verde și roșie)</item>
+        <item>Amestec de salate tinere</item>
+        <item>Frunze de muștar</item>
+        <item>Măcriș</item>
+        <item>Spanac</item>
+        <item>Mangold (Sfeclă elvețiană)</item>
+        <item>Frunze de nap</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_vegetables">
+        <item>Anghinare</item>
+        <item>Sparanghel</item>
+        <item>Sfeclă roșie</item>
+        <item>Ardei grași</item>
+        <item>Morcovi</item>
+        <item>Porumb</item>
+        <item>Usturoi</item>
+        <item>Ciuperci (champignon, pleurotus, portobello și shiitake)</item>
+        <item>Bame</item>
+        <item>Ceapă</item>
+        <item>Cartofi mov</item>
+        <item>Dovleci</item>
+        <item>Alge (arame, dulse și nori)</item>
+        <item>Păstăi de mazăre</item>
+        <item>Bostani (delicata, de vară, spaghetti)</item>
+        <item>Cartofi dulci</item>
+        <item>Roșii</item>
+        <item>Dovlecei</item>
+    </string-array>
+
+    <string-array name="food_info_types_flaxseeds">
+        <item>Semințe de in brune</item>
+        <item>Semințe de in aurii</item>
+    </string-array>
+
+    <string-array name="food_info_types_nuts">
+        <item>Migdale</item>
+        <item>Nuci braziliene</item>
+        <item>Caju</item>
+        <item>Semințe de chia</item>
+        <item>Alune de pădure</item>
+        <item>Semințe de cânepă</item>
+        <item>Nuci macadamia</item>
+        <item>Nuci pecan</item>
+        <item>Fistic</item>
+        <item>Semințe de dovleac</item>
+        <item>Semințe de susan</item>
+        <item>Semințe de floarea soarelui</item>
+        <item>Nuci</item>
+    </string-array>
+
+    <string-array name="food_info_types_spices">
+        <item>Ienibahar</item>
+        <item>Dracila</item>
+        <item>Busuioc</item>
+        <item>Frunze de dafin</item>
+        <item>Cardamom</item>
+        <item>Pulbere de chili</item>
+        <item>Frunze de coriandru</item>
+        <item>Scorţişoară</item>
+        <item>Cuișoare</item>
+        <item>Boabe de coriandru</item>
+        <item>Chimion</item>
+        <item>Pulbere de curry</item>
+        <item>Mărar</item>
+        <item>Schinduf</item>
+        <item>Usturoi</item>
+        <item>Ghimbir</item>
+        <item>Hrean</item>
+        <item>Lemongrass</item>
+        <item>Maghiran</item>
+        <item>Pulbere din semințe de muștar</item>
+        <item>Nucșoară</item>
+        <item>Oregano</item>
+        <item>Boia afumată</item>
+        <item>Pătrunjel</item>
+        <item>Piper</item>
+        <item>Mentă</item>
+        <item>Rozmarin</item>
+        <item>Şofran</item>
+        <item>Salvie</item>
+        <item>Cimbru</item>
+        <item>Turmeric</item>
+        <item>Vanilie</item>
+    </string-array>
+
+    <string-array name="food_info_types_whole_grains">
+        <item>Orz</item>
+        <item>Orez brun</item>
+        <item>Hrișcă</item>
+        <item>Mei</item>
+        <item>Ovăz</item>
+        <item>Floricele de porumb (pop-corn)</item>
+        <item>Quinoa</item>
+        <item>Secară</item>
+        <item>Taf (mei etiopian)</item>
+        <item>Paste din grâu integral</item>
+        <item>Orez sălbatic</item>
+    </string-array>
+
+    <string-array name="food_info_types_beverages">
+        <item>Ceai negru</item>
+        <item>Ceai condimentat</item>
+        <item>Ceai de mușețel cu vanilie</item>
+        <item>Cafea</item>
+        <item>Ceai earl grey</item>
+        <item>Ceai verde</item>
+        <item>Ceai de hibiscus</item>
+        <item>Ciocolată caldă</item>
+        <item>Ceai de iasomie</item>
+        <item>Ceai de roiniță</item>
+        <item>Ceai matcha</item>
+        <item>Ceai (oolong) din floare de migdale</item>
+        <item>Ceai de mentă</item>
+        <item>Ceai de rooibos</item>
+        <item>Apă</item>
+        <item>Ceai alb</item>
+    </string-array>
+
+    <string-array name="food_info_types_exercise">
+        <item>Mers pe bicicletă</item>
+        <item>Canotaj</item>
+        <item>Dans</item>
+        <item>Dodgeball</item>
+        <item>Schiat în pantă</item>
+        <item>Scrimă</item>
+        <item>Drumeție</item>
+        <item>Muncă în gospodărie</item>
+        <item>Patinaj pe gheață</item>
+        <item>Patinaj cu role de viteză (role în linie)</item>
+        <item>Jonglat</item>
+        <item>Sărituri pe o trambulină elastică</item>
+        <item>Vâslit</item>
+        <item>Frisbee</item>
+        <item>Patinaj cu role (patine cu 4 role)</item>
+        <item>Aruncări la un coș de baschet</item>
+        <item>Curățarea zăpezii cu lopata</item>
+        <item>Skateboarding</item>
+        <item>Snorkeling</item>
+        <item>Surfing</item>
+        <item>Înot recreațional</item>
+        <item>Tenis (la dublu)</item>
+        <item>Căratul apei</item>
+        <item>Mers rapid (6,5 km pe oră)</item>
+        <item>Aerobică în apă</item>
+        <item>Schi nautic</item>
+        <item>Grădinărit</item>
+        <item>Yoga</item>
+        <item>Cărat în cârcâ</item>
+        <item>Baschet</item>
+        <item>Mers pe bicicletă la deal</item>
+        <item>Antrenament cu greutăți</item>
+        <item>Schi fond</item>
+        <item>Fotbal american</item>
+        <item>Hochei</item>
+        <item>Jogging</item>
+        <item>Sărituri</item>
+        <item>Sărituri cu coarda</item>
+        <item>Lacrosse</item>
+        <item>Flotări</item>
+        <item>Tracțiuni</item>
+        <item>Racquetball</item>
+        <item>Alpinism</item>
+        <item>Rugbi</item>
+        <item>Alergat</item>
+        <item>Scufundări</item>
+        <item>Tenis (simplu, fară partener)</item>
+        <item>Fotbal european</item>
+        <item>Patinaj viteză</item>
+        <item>Squash</item>
+        <item>Exerciții aerobice</item>
+        <item>Înot profesionist (Ture de bazin)</item>
+        <item>Mers rapid la deal</item>
+        <item>Jogging acvatic</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans">
+        <item>%s humus sau de fasole frecată</item>
+        <item>%s fasole gătită, mazăre uscată (galbenă sau verde), linte, tofu sau tempeh</item>
+        <item>%s mazăre proaspată sau linte încolțită</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ cană</item>
+        <item>½ cană</item>
+        <item>1 cană</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g</item>
+        <item>130 g</item>
+        <item>150 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries">
+        <item>%s proaspete sau congelate</item>
+        <item>%s uscate</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ cană</item>
+        <item>¼ cană</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g</item>
+        <item>40 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>%s1 fruct de mărime medie</item>
+        <item>%s fructe tăiate</item>
+        <item>%s fructe uscate</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item></item>
+        <item>1 cană</item>
+        <item>¼ cană</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item></item>
+        <item>120 g</item>
+        <item>40 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+        <item>%s tocate</item>
+        <item>%s germeni de varză de Bruxelles sau de broccoli</item>
+        <item>%s1 lingură de hrean</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ cană</item>
+        <item>¼ cană</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g</item>
+        <item>12 g</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens">
+        <item>%s crude</item>
+        <item>%s gătite</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 cană</item>
+        <item>½ cană</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g</item>
+        <item>90 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>%s legume frunzoase, crude</item>
+        <item>%s legume fară frunze, crude sau gătite</item>
+        <item>%s suc de legume</item>
+        <item>%s ciuperci uscate</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 cană</item>
+        <item>½ cană</item>
+        <item>½ cană</item>
+        <item>¼ cană</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 ml</item>
+        <item>7 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>%s1 lingură măcinate</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>%s nuci sau semințe</item>
+        <item>%s2 linguri unt de nuci sau de semințe</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ cup</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices">
+        <item>%s¼ linguriță de turmeric</item>
+        <item>%sOrice alte plante aromatice și condimente (fără sare) care vă plac</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>%s cereale calde sau cereale gătite, paste, sau boabe de porumb</item>
+        <item>%s cereale reci</item>
+        <item>%s1 tortilla sau felie de pâine</item>
+        <item>%s½ o baghetă sau brioșă englezească</item>
+        <item>%s floricele de porumb (pop-corn)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ cup</item>
+        <item>1 cup</item>
+        <item></item>
+        <item></item>
+        <item>3 cups</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g</item>
+        <item>50 g</item>
+        <item></item>
+        <item></item>
+        <item>30 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages">
+        <item>Un pahar (%s)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12 ounces</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350 ml</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>%s90 de minute de activitate cu un grad moderat de intensitate</item>
+        <item>%s40 de minute de activitate viguroasă</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string name="error_cannot_handle_url">Nu s-a putut deschide adresa URL. Vă rugăm să instalați un browser.</string>
+
+    <string-array name="food_videos_beans" translatable="false">
+        <item>black-beans</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>chickpeas</item>
+        <item>edamame</item>
+        <item></item>
+        <item>garbanzo-beans</item>
+        <item></item>
+        <item>kidney-beans</item>
+        <item>lentils</item>
+        <item>miso</item>
+        <item>navy-beans</item>
+        <item>pinto-beans</item>
+        <item></item>
+        <item>split-peas</item>
+        <item>tempeh</item>
+    </string-array>
+
+    <string-array name="food_videos_berries" translatable="false">
+        <item>acai-berries</item>
+        <item>barberries</item>
+        <item>blackberries</item>
+        <item>blueberries</item>
+        <item>cherries</item>
+        <item>concord-grapes</item>
+        <item>cranberries</item>
+        <item>goji-berries</item>
+        <item></item>
+        <item></item>
+        <item>raspberries</item>
+        <item>strawberries</item>
+    </string-array>
+
+    <string-array name="food_videos_other_fruits" translatable="false">
+        <item>apples</item>
+        <item>apricots</item>
+        <item>avocados</item>
+        <item>bananas</item>
+        <item>cantaloupe</item>
+        <item></item>
+        <item>dates</item>
+        <item>figs</item>
+        <item>grapefruit</item>
+        <item></item>
+        <item>kiwifruit</item>
+        <item>lemons</item>
+        <item>limes</item>
+        <item></item>
+        <item>mango</item>
+        <item></item>
+        <item>oranges</item>
+        <item>papaya</item>
+        <item></item>
+        <item>peaches</item>
+        <item>pears</item>
+        <item>pineapples</item>
+        <item>plums</item>
+        <item></item>
+        <item>pomegranates</item>
+        <item>prunes</item>
+        <item></item>
+        <item>watermelon</item>
+    </string-array>
+
+    <string-array name="food_videos_cruciferous_vegetables" translatable="false">
+        <item></item>
+        <item>bok-choy</item>
+        <item>broccoli</item>
+        <item>brussels-sprouts</item>
+        <item>cabbage</item>
+        <item>cauliflower</item>
+        <item>collard-greens</item>
+        <item></item>
+        <item>kale</item>
+        <item>mustard-greens</item>
+        <item>radishes</item>
+        <item>turnips</item>
+        <item>watercress</item>
+    </string-array>
+
+    <string-array name="food_videos_greens" translatable="false">
+        <item></item>
+        <item>beet-greens</item>
+        <item>collard-greens</item>
+        <item>kale</item>
+        <item>mesclun-mix</item>
+        <item>mustard-greens</item>
+        <item></item>
+        <item>spinach</item>
+        <item>swiss-chard</item>
+        <item>turnips</item>
+    </string-array>
+
+    <string-array name="food_videos_other_vegetables" translatable="false">
+        <item>artichokes</item>
+        <item>asparagus</item>
+        <item>beets</item>
+        <item>bell-peppers</item>
+        <item>carrots</item>
+        <item>corn</item>
+        <item>garlic</item>
+        <item>mushrooms</item>
+        <item>okra</item>
+        <item>onions</item>
+        <item>purple-potatoes</item>
+        <item>pumpkin</item>
+        <item>sea-vegetables</item>
+        <item></item>
+        <item>squash</item>
+        <item>sweet-potatoes</item>
+        <item>tomatoes</item>
+        <item>zucchini</item>
+    </string-array>
+
+    <string-array name="food_videos_nuts" translatable="false">
+        <item>almonds</item>
+        <item>brazil-nuts</item>
+        <item>cashews</item>
+        <item>chia-seeds</item>
+        <item>hazelnuts</item>
+        <item></item>
+        <item>macadamia-nuts</item>
+        <item>pecans</item>
+        <item>pistachios</item>
+        <item>pumpkin-seeds</item>
+        <item>sesame-seeds</item>
+        <item>sunflower-seeds</item>
+        <item>walnuts</item>
+    </string-array>
+
+    <string-array name="food_videos_spices" translatable="false">
+        <item>allspice</item>
+        <item>barberries</item>
+        <item>basil</item>
+        <item></item>
+        <item>cardamom</item>
+        <item></item>
+        <item>cilantro</item>
+        <item>cinnamon</item>
+        <item>cloves</item>
+        <item>coriander</item>
+        <item>cumin</item>
+        <item>curry-powder</item>
+        <item></item>
+        <item>fenugreek</item>
+        <item>garlic</item>
+        <item>ginger</item>
+        <item></item>
+        <item>lemongrass</item>
+        <item>marjoram</item>
+        <item>mustard-powder</item>
+        <item>nutmeg</item>
+        <item>oregano</item>
+        <item></item>
+        <item>parsley</item>
+        <item>pepper</item>
+        <item>peppermint</item>
+        <item>rosemary</item>
+        <item>saffron</item>
+        <item></item>
+        <item>thyme</item>
+        <item>turmeric</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="food_videos_whole_grains" translatable="false">
+        <item>barley</item>
+        <item>rice</item>
+        <item>buckwheat</item>
+        <item>millet</item>
+        <item>oats</item>
+        <item>popcorn</item>
+        <item>quinoa</item>
+        <item>rye</item>
+        <item>teff</item>
+        <item>pasta</item>
+        <item>rice</item>
+    </string-array>
+
+    <string-array name="food_videos_beverages" translatable="false">
+        <item>black-tea</item>
+        <item>chai-tea</item>
+        <item>chamomile-tea</item>
+        <item>coffee</item>
+        <item>earl-grey-tea</item>
+        <item>green-tea</item>
+        <item>hibiscus-tea</item>
+        <item></item>
+        <item>jasmine-tea</item>
+        <item></item>
+        <item>matcha</item>
+        <item>oolong-tea</item>
+        <item></item>
+        <item>rooibos-tea</item>
+        <item>water</item>
+        <item>white-tea</item>
+    </string-array>
+
+</resources>
