@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Daily Dozen</string>
 
-    <string name="beans">Leguminoase</string>
+    <string name="beans">Leguminoase boabe</string>
     <string name="berries">Fructe de pădure</string>
     <string name="other_fruits">Alte fructe</string>
     <string name="cruciferous_vegetables">Legume crucifere</string>
@@ -16,8 +16,8 @@
     <string name="exercise">Exerciții fizice</string>
     <string name="vitamin_b12">Vitamina B12</string>
     <string name="vitamin_d">Vitamina D</string>
-    <string name="serving_sizes">Dimensiuni de servire</string>
-    <string name="types">Tipuri</string>
+    <string name="serving_sizes">Dimensiunea unei porții</string>
+    <string name="types">Varietăți</string>
     <string name="history">Istoric</string>
     <string name="servings_some">Unele porții</string>
     <string name="servings_all">Toate porțiile</string>
@@ -79,7 +79,7 @@
     <string name="back_to_today">Înapoi la ziua de azi</string>
     <string name="debug">Depanare</string>
     <string name="debug_clear_data">Ștergeți toate datele</string>
-    <string name="debug_clear_data_message">Aceasta va șterge toate intrările introduse. Doriți să continuați?</string>
+    <string name="debug_clear_data_message">Această acțiune va șterge toate intrările introduse. Doriți să continuați?</string>
     <string name="OK">Bine</string>
     <string name="dialog_streaks_title">Caracteristică nouă: Secvenţe consecutive!</string>
     <string name="dialog_streaks_message">Baza dvs. de date va fi acum actualizată pentru a accepta caracteristica nouă de secvenţe consecutive.</string>
@@ -200,21 +200,21 @@
     </integer-array>
 
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Această aplicație a fost creată de John Slavick.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Următoarele biblioteci cu sursă deschisă sunt utilizate în crearea aplicației: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, și MPAndroidChart.</item>
         <item />
-        <item>Special thanks to the volunteer efforts of the creators of the previous app: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
+        <item>Mulțumiri speciale sunt aduse eforturilor de voluntariat ale creatorilor aplicației anterioare: Chan Kruse, Allan Portera, și Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
-        <item>Follow these steps to restore this backup in the Daily Dozen app</item>
+        <item>Urmați acești pași pentru a restaura copia de siguranță a datelor în aplicația Daily Dozen</item>
         <item />
-        <item>1. The Daily Dozen app must be installed on your Android phone. You can download it here: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. Aplicația Daily Dozen trebuie instalată pe telefonul tău cu Android. Puteți să o descărcați aici: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
-        <item>2. Tap on the backup file attached to this email.</item>
+        <item>2. Atingeți fișierul atașat la acest e-mail.</item>
         <item />
-        <item>3. Select Open with Daily Dozen</item>
+        <item>3. Selectați deschidere cu Daily Dozen</item>
     </string-array>
 
     <string-array name="servings_time_scale_choices">
@@ -234,21 +234,21 @@
 
     <string-array name="food_info_types_beans">
         <item>Fasole neagră</item>
-        <item>Mazăre cu ochii negri</item>
-        <item>Fasole Lima</item>
-        <item>Fasole Cannellini</item>
+        <item>Fasole ochi negru</item>
+        <item>Fasole untoasă</item>
+        <item>Fasole cannellini</item>
         <item>Năut</item>
         <item>Edamame (păstăi verzi de soia)</item>
         <item>Mazăre englezească</item>
-        <item>Fasole Garbanzo</item>
-        <item>Fasole nordică mare</item>
-        <item>Fasole cu boabe în formă de rinichi</item>
+        <item>Năut garbanzo</item>
+        <item>Fasole nordică cu bobul mare</item>
+        <item>Fasole roșie cu bob în formă de rinichi</item>
         <item>Linte (beluga, franceză și roșie)</item>
         <item>Miso</item>
         <item>Fasole albă</item>
-        <item>Fasole Pinto</item>
-        <item>Fasole cu boabe roșii mici</item>
-        <item>Mazăre despicată (galbenă sau verde)</item>
+        <item>Fasole pinto</item>
+        <item>Fasole roșie cu bobul mic</item>
+        <item>Mazăre uscată (galbenă sau verde)</item>
         <item>Tempeh</item>
     </string-array>
 
@@ -257,8 +257,8 @@
         <item>Agrișe</item>
         <item>Mure</item>
         <item>Afine</item>
-        <item>Cireșe (dulci sau acre)</item>
-        <item>Struguri Concord</item>
+        <item>Cireșe dulci sau vișine</item>
+        <item>Struguri violet</item>
         <item>Merișoare</item>
         <item>Goji (Cătină de garduri)</item>
         <item>Kumquat</item>
@@ -272,12 +272,12 @@
         <item>Caise uscate</item>
         <item>Avocado</item>
         <item>Banane</item>
-        <item>Pepene galben Cantaloupe</item>
+        <item>Pepeni galbeni Cantalup</item>
         <item>Clementine</item>
         <item>Curmale</item>
         <item>Smochine uscate</item>
-        <item>Grapefruit</item>
-        <item>Pepene Honeydew</item>
+        <item>Grepfrut</item>
+        <item>Pepeni galbeni Honeydew</item>
         <item>Kiwi</item>
         <item>Lămâi galbene</item>
         <item>Lămâi verzi</item>
@@ -290,74 +290,74 @@
         <item>Piersici</item>
         <item>Pere</item>
         <item>Ananas</item>
-        <item>Prune (în special prune negre)</item>
-        <item>Pluots</item>
+        <item>Prune (în special cele negre sau vineții închise)</item>
+        <item>Renglote</item>
         <item>Rodii</item>
         <item>Prune uscate</item>
         <item>Mandarine</item>
-        <item>Pepene roșu</item>
+        <item>Pepeni roșii</item>
     </string-array>
 
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Rucolă</item>
         <item>Varză chinezească</item>
-        <item>Brocoli</item>
+        <item>Broccoli</item>
         <item>Varză de Bruxelles</item>
         <item>Varză</item>
         <item>Conopidă</item>
-        <item>Collard greens</item>
+        <item>Varză furajeră</item>
         <item>Hrean</item>
-        <item>Varză creață - Kale (neagră, verde și roșie)</item>
-        <item>Frunze verzi de muștar</item>
+        <item>Varză Kale (creață, neagră, verde și roșie)</item>
+        <item>Frunze de muștar</item>
         <item>Ridichi</item>
-        <item>Frunze verzi de nap</item>
-        <item>Năsturel</item>
+        <item>Frunze de nap</item>
+        <item>Năsturel (Creson de apă)</item>
     </string-array>
 
     <string-array name="food_info_types_greens">
         <item>Rucolă</item>
         <item>Frunze de sfeclă</item>
-        <item>Collard greens</item>
-        <item>Varză creață - Kale (neagră, verde și roșie)</item>
-        <item>Amestec Mesclun (Salată verde tânără asortată)</item>
-        <item>Frunze verzi de muștar</item>
+        <item>Varză furajeră</item>
+        <item>Varză Kale (creață, neagră, verde și roșie)</item>
+        <item>Amestec de salate tinere</item>
+        <item>Frunze de muștar</item>
         <item>Măcriș</item>
         <item>Spanac</item>
-        <item>Sfeclă elvețiană (mangold)</item>
-        <item>Frunze verzi de nap</item>
+        <item>Mangold (Sfeclă elvețiană)</item>
+        <item>Frunze de nap</item>
     </string-array>
 
     <string-array name="food_info_types_other_vegetables">
         <item>Anghinare</item>
         <item>Sparanghel</item>
         <item>Sfeclă roșie</item>
-        <item>Ardei gras</item>
+        <item>Ardei grași</item>
         <item>Morcovi</item>
         <item>Porumb</item>
         <item>Usturoi</item>
-        <item>Ciuperci (champignon, stridii, portobello și shiitake)</item>
+        <item>Ciuperci (champignon, pleurotus, portobello și shiitake)</item>
         <item>Bame</item>
         <item>Ceapă</item>
         <item>Cartofi mov</item>
-        <item>Dovleac</item>
-        <item>Legume de mare (arame, dulse și nori)</item>
-        <item>Snap peas</item>
-        <item>Bostan (delicat, vară, spaghete)</item>
+        <item>Dovleci</item>
+        <item>Alge (arame, dulse și nori)</item>
+        <item>Păstăi de mazăre</item>
+        <item>Bostani (delicata, de vară, spaghetti)</item>
         <item>Cartofi dulci</item>
         <item>Roșii</item>
-        <item>Dovlecel</item>
+        <item>Dovlecei</item>
     </string-array>
 
     <string-array name="food_info_types_flaxseeds">
-        <item>Semințe de in maro</item>
+        <item>Semințe de in brune</item>
         <item>Semințe de in aurii</item>
     </string-array>
 
     <string-array name="food_info_types_nuts">
         <item>Migdale</item>
         <item>Nuci braziliene</item>
-        <item>Alune Caju</item>
-        <item>Semințe chia</item>
+        <item>Caju</item>
+        <item>Semințe de chia</item>
         <item>Alune de pădure</item>
         <item>Semințe de cânepă</item>
         <item>Nuci macadamia</item>
@@ -371,17 +371,17 @@
 
     <string-array name="food_info_types_spices">
         <item>Ienibahar</item>
-        <item>Berberis</item>
+        <item>Dracila</item>
         <item>Busuioc</item>
-        <item>Foi dafin</item>
+        <item>Frunze de dafin</item>
         <item>Cardamom</item>
         <item>Pulbere de chili</item>
-        <item>Coriandru</item>
+        <item>Frunze de coriandru</item>
         <item>Scorţişoară</item>
         <item>Cuișoare</item>
-        <item>Coriandru</item>
+        <item>Boabe de coriandru</item>
         <item>Chimion</item>
-        <item>Pulbere curry</item>
+        <item>Pulbere de curry</item>
         <item>Mărar</item>
         <item>Schinduf</item>
         <item>Usturoi</item>
@@ -389,10 +389,10 @@
         <item>Hrean</item>
         <item>Lemongrass</item>
         <item>Maghiran</item>
-        <item>Pulbere de muștar</item>
+        <item>Pulbere din semințe de muștar</item>
         <item>Nucșoară</item>
         <item>Oregano</item>
-        <item>Paprika afumată</item>
+        <item>Boia afumată</item>
         <item>Pătrunjel</item>
         <item>Piper</item>
         <item>Mentă</item>
@@ -410,7 +410,7 @@
         <item>Hrișcă</item>
         <item>Mei</item>
         <item>Ovăz</item>
-        <item>Floricele de porumb (popcorn)</item>
+        <item>Floricele de porumb (pop-corn)</item>
         <item>Quinoa</item>
         <item>Secară</item>
         <item>Taf (mei etiopian)</item>
@@ -423,7 +423,7 @@
         <item>Ceai condimentat</item>
         <item>Ceai de mușețel cu vanilie</item>
         <item>Cafea</item>
-        <item>Earl grey tea</item>
+        <item>Ceai earl grey</item>
         <item>Ceai verde</item>
         <item>Ceai de hibiscus</item>
         <item>Ciocolată caldă</item>
@@ -438,66 +438,66 @@
     </string-array>
 
     <string-array name="food_info_types_exercise">
-        <item>Ciclism</item>
+        <item>Mers pe bicicletă</item>
         <item>Canotaj</item>
         <item>Dans</item>
         <item>Dodgeball</item>
-        <item>Schiatul în pantă</item>
+        <item>Schiat în pantă</item>
         <item>Scrimă</item>
         <item>Drumeție</item>
         <item>Muncă în gospodărie</item>
         <item>Patinaj pe gheață</item>
-        <item>Patinaj cu role</item>
-        <item>Jonglerie</item>
-        <item>Sărituri pe trambulină</item>
-        <item>Paddle boating</item>
+        <item>Patinaj cu role de viteză (role în linie)</item>
+        <item>Jonglat</item>
+        <item>Sărituri pe o trambulină elastică</item>
+        <item>Vâslit</item>
         <item>Frisbee</item>
-        <item>Roller-skating</item>
-        <item>Shooting baskets</item>
-        <item>Curățarea zăpezii ușoare</item>
-        <item>Skateboard</item>
+        <item>Patinaj cu role (patine cu 4 role)</item>
+        <item>Aruncări la un coș de baschet</item>
+        <item>Curățarea zăpezii cu lopata</item>
+        <item>Skateboarding</item>
         <item>Snorkeling</item>
-        <item>Surf</item>
-        <item>Înot în aer liber</item>
-        <item>Tenis (dublu)</item>
-        <item>Treading water</item>
-        <item>Plimbare rapidă (4 mph)</item>
-        <item>Aerobic în apă</item>
-        <item>Ski nautic</item>
-        <item>Lucru în curte</item>
+        <item>Surfing</item>
+        <item>Înot recreațional</item>
+        <item>Tenis (la dublu)</item>
+        <item>Căratul apei</item>
+        <item>Mers rapid (6,5 km pe oră)</item>
+        <item>Aerobică în apă</item>
+        <item>Schi nautic</item>
+        <item>Grădinărit</item>
         <item>Yoga</item>
-        <item>Drumeție cu rucsacul</item>
+        <item>Cărat în cârcâ</item>
         <item>Baschet</item>
-        <item>Ciclism pe urcare</item>
-        <item>Instruire privind greutatea în circulație</item>
+        <item>Mers pe bicicletă la deal</item>
+        <item>Antrenament cu greutăți</item>
         <item>Schi fond</item>
-        <item>Fotbal</item>
+        <item>Fotbal american</item>
         <item>Hochei</item>
         <item>Jogging</item>
-        <item>Jumping jacks</item>
-        <item>Sărituri de coarda</item>
+        <item>Sărituri</item>
+        <item>Sărituri cu coarda</item>
         <item>Lacrosse</item>
         <item>Flotări</item>
         <item>Tracțiuni</item>
         <item>Racquetball</item>
         <item>Alpinism</item>
-        <item>Rugby</item>
-        <item>Alergare</item>
+        <item>Rugbi</item>
+        <item>Alergat</item>
         <item>Scufundări</item>
-        <item>Tenis (simplu)</item>
-        <item>Fotbal</item>
+        <item>Tenis (simplu, fară partener)</item>
+        <item>Fotbal european</item>
         <item>Patinaj viteză</item>
         <item>Squash</item>
-        <item>Step aerobics</item>
-        <item>Tururi de înot</item>
-        <item>Mers rapid în sus</item>
-        <item>Jogging în apă</item>
+        <item>Exerciții aerobice</item>
+        <item>Înot profesionist (Ture de bazin)</item>
+        <item>Mers rapid la deal</item>
+        <item>Jogging acvatic</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
-        <item>%s de humus sau pastă de fasole</item>
-        <item>%s leguminoase gătite, mazăre despicată galbenă, linte, tofu, sau tempeh</item>
-        <item>%s mazăre proaspată sau germeni de linte</item>
+        <item>%s humus sau de fasole frecată</item>
+        <item>%s fasole gătită, mazăre uscată (galbenă sau verde), linte, tofu sau tempeh</item>
+        <item>%s mazăre proaspată sau linte încolțită</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_imperial">
@@ -528,7 +528,7 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 fruct de dimensiuni medii</item>
+        <item>%s1 fruct de mărime medie</item>
         <item>%s fructe tăiate</item>
         <item>%s fructe uscate</item>
     </string-array>
@@ -547,7 +547,7 @@
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
         <item>%s tocate</item>
-        <item>%s varză de Bruxelles sau germeni de broccoli</item>
+        <item>%s germeni de varză de Bruxelles sau de broccoli</item>
         <item>%s1 lingură de hrean</item>
     </string-array>
 
@@ -579,8 +579,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s legume cu frunze crude</item>
-        <item>%s legume fară frunze crude sau gătite</item>
+        <item>%s legume frunzoase, crude</item>
+        <item>%s legume fară frunze, crude sau gătite</item>
         <item>%s suc de legume</item>
         <item>%s ciuperci uscate</item>
     </string-array>
@@ -613,7 +613,7 @@
 
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s nuci sau semințe</item>
-        <item>%s2 lingură de nuci sau unt de semințe</item>
+        <item>%s2 linguri unt de nuci sau de semințe</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
@@ -628,7 +628,7 @@
 
     <string-array name="food_info_serving_sizes_spices">
         <item>%s¼ linguriță de turmeric</item>
-        <item>%sOrice alte ierburi și condimente (fără sare) care vă plac</item>
+        <item>%sOrice alte plante aromatice și condimente (fără sare) care vă plac</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
@@ -642,11 +642,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s cereale calde sau gătite, paste făinoase sau boabe de porumb</item>
+        <item>%s cereale calde sau cereale gătite, paste, sau boabe de porumb</item>
         <item>%s cereale reci</item>
         <item>%s1 tortilla sau felie de pâine</item>
-        <item>%s½ o baghetă sau un muffin englezesc</item>
-        <item>%s floricele de porumb (popcorn)</item>
+        <item>%s½ o baghetă sau brioșă englezească</item>
+        <item>%s floricele de porumb (pop-corn)</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
@@ -678,8 +678,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 de minute de activitate cu intensitate moderată</item>
-        <item>%s40 de minute de activitate intensă viguroasă</item>
+        <item>%s90 de minute de activitate cu un grad moderat de intensitate</item>
+        <item>%s40 de minute de activitate viguroasă</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
