@@ -136,5 +136,4 @@ public class Prefs {
     public void toggleUnitType() {
         setIntegerPref(UNIT_TYPE, getUnitTypePref() == Units.METRIC ? Units.IMPERIAL : Units.METRIC);
     }
-
 }
