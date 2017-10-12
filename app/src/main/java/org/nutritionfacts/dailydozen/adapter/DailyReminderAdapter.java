@@ -16,6 +16,7 @@ import org.nutritionfacts.dailydozen.delegate.DailyReminderDelegate;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,6 +42,7 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
         this.context = context;
         this.delegate = delegate;
         updateReminderPrefList = new ArrayList<>(updateReminderPrefSet);
+        Collections.sort(updateReminderPrefList);
         vibratePrefMap = new HashMap<>();
         soundPrefMap = new HashMap<>();
         timeButtonPrefMap = new HashMap<>();
@@ -157,5 +159,4 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
             delegate.initUpdateReminderPrefConfig();
         }
     }
-
 }
