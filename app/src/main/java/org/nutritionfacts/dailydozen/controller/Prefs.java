@@ -9,6 +9,8 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.model.enums.Units;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 
+import java.util.Set;
+
 import hugo.weaving.DebugLog;
 
 public class Prefs {
@@ -42,8 +44,16 @@ public class Prefs {
         return sharedPrefs.getString(name, "");
     }
 
+    private Set<String> getStringSetPref(final String name) {
+        return sharedPrefs.getStringSet(name, null);
+    }
+
     private void setStringPref(final String name, final String value) {
         sharedPrefs.edit().putString(name, value).apply();
+    }
+
+    private void setStringSetPref(final String name, final Set<String> value) {
+        sharedPrefs.edit().putStringSet(name, value).apply();
     }
 
     private boolean getBooleanPref(final String name) {
