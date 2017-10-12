@@ -22,7 +22,9 @@ import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 import org.nutritionfacts.dailydozen.receiver.AlarmReceiver;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 import timber.log.Timber;
 
@@ -153,18 +155,20 @@ public class NotificationUtil {
     public static void initUpdateReminderNotificationAlarm(final Context context) {
         final Prefs prefs = Prefs.getInstance(context);
 
-        UpdateReminderPref updateReminderPref = prefs.getUpdateReminderPref();
+        Set<UpdateReminderPref> updateReminderPref = prefs.getUpdateReminderPref();
 
-        if (updateReminderPref == null && !prefs.defaultUpdateReminderHasBeenCreated()) {
+        if (updateReminderPref.isEmpty() && !prefs.defaultUpdateReminderHasBeenCreated()) {
             Timber.d("initUpdateReminderNotificationAlarm: Creating default update reminder");
 
-            updateReminderPref = new UpdateReminderPref();
+            updateReminderPref = new HashSet<>();
             prefs.setUpdateReminderPref(updateReminderPref);
 
             prefs.setDefaultUpdateReminderHasBeenCreated();
         }
 
-        cancelAlarmForUpdateReminderNotification(context, updateReminderPref);
-        setAlarmForUpdateReminderNotification(context, updateReminderPref);
+        for (UpdateReminderPref pref: updateReminderPref) {
+            cancelAlarmForUpdateReminderNotification(context, pref);
+            setAlarmForUpdateReminderNotification(context, pref);
+        }
     }
 }

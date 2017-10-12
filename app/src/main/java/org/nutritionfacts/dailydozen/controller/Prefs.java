@@ -2,6 +2,7 @@ package org.nutritionfacts.dailydozen.controller;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.ArraySet;
 
 import com.google.gson.Gson;
 
@@ -9,6 +10,7 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.model.enums.Units;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import hugo.weaving.DebugLog;
@@ -89,13 +91,23 @@ public class Prefs {
     }
 
     @DebugLog
-    public void setUpdateReminderPref(UpdateReminderPref pref) {
-        setStringPref(PREF_UPDATE_REMINDER, new Gson().toJson(pref));
+    public void setUpdateReminderPref(Set<UpdateReminderPref> prefs) {
+        Set<String> jsonSet = new HashSet<>();
+        for (UpdateReminderPref pref : prefs) {
+            jsonSet.add(new Gson().toJson(pref));
+        }
+        setStringSetPref(PREF_UPDATE_REMINDER, jsonSet);
     }
 
     @DebugLog
-    public UpdateReminderPref getUpdateReminderPref() {
-        return new Gson().fromJson(getStringPref(PREF_UPDATE_REMINDER), UpdateReminderPref.class);
+    public Set<UpdateReminderPref> getUpdateReminderPref() {
+        Set<UpdateReminderPref> preferences = new HashSet<>();
+        if (getStringSetPref(PREF_UPDATE_REMINDER) != null) {
+            for (String json : getStringSetPref(PREF_UPDATE_REMINDER)) {
+                preferences.add(new Gson().fromJson(json, UpdateReminderPref.class));
+            }
+        }
+        return preferences;
     }
 
     public void removeUpdateReminderPref() {
