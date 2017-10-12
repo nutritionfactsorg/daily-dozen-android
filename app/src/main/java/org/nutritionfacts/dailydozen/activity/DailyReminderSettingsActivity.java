@@ -63,7 +63,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
     @Override
     public void initUpdateReminderPrefConfig() {
         dailyReminderSwitch.setChecked(true);
-        reminderRecyclerView.setVisibility(View.VISIBLE);
+        reminderRecyclerView.setVisibility(View.VISIBLE); //Needs to be recycler view
 
         if (updateReminderPrefs == null) {
             updateReminderPrefs = new HashSet<>();
@@ -75,7 +75,9 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
 
     @Override
     public void updateReminders() {
-        reminderAdapter.notifyDataSetChanged();
+        reminderAdapter = new DailyReminderAdapter(this, updateReminderPrefs, this);
+        reminderRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        reminderRecyclerView.setAdapter(reminderAdapter);
     }
 
     private void setUpdateReminder() {
