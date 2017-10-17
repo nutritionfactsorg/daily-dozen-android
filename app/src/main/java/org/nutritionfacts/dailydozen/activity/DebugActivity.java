@@ -81,7 +81,7 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
 
     private void generateData(final boolean generateRandomData) {
         new AlertDialog.Builder(DebugActivity.this)
-                .setTitle(R.string.debug_generate_random_data)
+                .setTitle(generateRandomData ? R.string.debug_generate_random_data : R.string.debug_generate_full_data)
                 .setMessage(R.string.debug_generate_data_message)
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
