@@ -2,6 +2,7 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,6 +31,9 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
 
     @BindView(R.id.daily_reminder_recycler_view)
     protected RecyclerView reminderRecyclerView;
+
+    @BindView((R.id.addNewReminderBtn))
+    protected FloatingActionButton addNewReminderBtn;
 
     protected DailyReminderAdapter reminderAdapter;
 
@@ -97,6 +101,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
 
     @OnCheckedChanged(R.id.daily_reminder_switch)
     public void onDailyReminderSwitchToggled(final boolean isChecked) {
+        addNewReminderBtn.setVisibility(isChecked ? View.VISIBLE : View.GONE);
         reminderRecyclerView.setVisibility(isChecked ? View.VISIBLE : View.GONE);
 
         if (isChecked) {
