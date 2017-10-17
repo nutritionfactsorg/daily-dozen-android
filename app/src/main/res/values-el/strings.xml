@@ -318,7 +318,6 @@
 
     <string-array name="food_info_types_whole_grains">
         <item>Κριθάρι</item>
-        <item>Καστανό ρύζι</item>
         <item>Φαγόπυρο</item>
         <item>Κεχρί</item>
         <item>Βρώμη</item>
@@ -327,7 +326,6 @@
         <item>Σίκαλη</item>
         <item>Τεφ</item>
         <item>Ζυμαρικά ολικής αλέσεως</item>
-        <item>Αγριο ρύζι</item>
     </string-array>
 
     <string-array name="food_info_types_beverages">

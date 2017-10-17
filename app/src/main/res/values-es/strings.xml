@@ -318,7 +318,6 @@
 
     <string-array name="food_info_types_whole_grains">
         <item>Cebada</item>
-        <item>Arroz integral</item>
         <item>Alforfón</item>
         <item>Mijo</item>
         <item>Avena</item>
@@ -327,7 +326,6 @@
         <item>Centeno</item>
         <item>Teff</item>
         <item>Pasta integral</item>
-        <item>Arroz salvaje</item>
     </string-array>
 
     <string-array name="food_info_types_beverages">
