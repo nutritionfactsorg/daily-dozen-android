@@ -25,11 +25,10 @@ public class Prefs {
     private static Prefs instance;
 
     private SharedPreferences sharedPrefs;
-    private Gson gson;
+    private static final Gson gson = new Gson();
 
     private Prefs(final Context context) {
         this.sharedPrefs = context.getSharedPreferences(Common.PREFERENCES_FILE, Context.MODE_PRIVATE);
-        this.gson = new Gson();
     }
 
     public static Prefs getInstance(final Context context) {
@@ -115,6 +114,10 @@ public class Prefs {
 
     public void removeUpdateReminderPref() {
         removePref(PREF_UPDATE_REMINDER);
+    }
+
+    public boolean hasPreference(String key) {
+        return sharedPrefs.contains(key);
     }
 
     public void setDefaultUpdateReminderHasBeenCreated() {

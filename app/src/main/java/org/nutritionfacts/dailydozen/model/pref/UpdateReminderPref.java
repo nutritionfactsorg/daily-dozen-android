@@ -13,12 +13,19 @@ public class UpdateReminderPref implements Comparable<UpdateReminderPref> {
     // The default Update Reminder notification vibrates the phone and plays a sound at 8pm
     @SerializedName("hourOfDay")
     private int hourOfDay = 20; // Default to 8pm
+
     @SerializedName("minute")
     private int minute = 0;
+
     @SerializedName("vibrate")
     private boolean vibrate = true;
+
     @SerializedName("playSound")
     private boolean playSound = true;
+
+    public static final int DEFAULT_ID = -1;
+
+    private int id = DEFAULT_ID;
 
     public void setHourOfDay(int hourOfDay) {
         this.hourOfDay = hourOfDay;
@@ -50,6 +57,18 @@ public class UpdateReminderPref implements Comparable<UpdateReminderPref> {
 
     public void setPlaySound(boolean playSound) {
         this.playSound = playSound;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public UpdateReminderPref(int id) {
+        setId(id);
     }
 
     @Override

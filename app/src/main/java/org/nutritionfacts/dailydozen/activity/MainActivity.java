@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         Bus.register(this);
 
-        NotificationUtil.dismissUpdateReminderNotification(this);
+        NotificationUtil.dismissUpdateReminderNotifications(this);
 
         // If the app is sent to the background and brought back to the foreground the next day, a crash results when
         // the adapter is found to return a different value from getCount() without notifyDataSetChanged() having been

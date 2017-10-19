@@ -30,32 +30,46 @@ import butterknife.Optional;
 public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdapter.ViewHolder> {
     private Context context;
     private DailyReminderDelegate delegate;
+
     private List<UpdateReminderPref> updateReminderPrefList;
+
     private Map<SwitchCompat, UpdateReminderPref> vibratePrefMap;
     private Map<SwitchCompat, UpdateReminderPref> soundPrefMap;
     private Map<TimePickerDialog, UpdateReminderPref> timePickerPrefMap;
     private Map<Button, UpdateReminderPref> timeButtonPrefMap;
+
     private TimePickerDialog.OnTimeSetListener timeSetListener;
     private TimePickerDialog currentTimePickerDialog;
 
     public DailyReminderAdapter(Context context, Set<UpdateReminderPref> updateReminderPrefSet, final DailyReminderDelegate delegate) {
         this.context = context;
         this.delegate = delegate;
-        updateReminderPrefList = new ArrayList<>(updateReminderPrefSet);
-        Collections.sort(updateReminderPrefList);
+
+        setData(updateReminderPrefSet);
+
         vibratePrefMap = new HashMap<>();
         soundPrefMap = new HashMap<>();
+
         timeButtonPrefMap = new HashMap<>();
         timePickerPrefMap = new HashMap<>();
+
         timeSetListener = new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker picker, int hourOfDay, int minute) {
-                timePickerPrefMap.get(currentTimePickerDialog).setHourOfDay(hourOfDay);
-                timePickerPrefMap.get(currentTimePickerDialog).setMinute(minute);
+                UpdateReminderPref updateReminderPref = timePickerPrefMap.get(currentTimePickerDialog);
+                updateReminderPref.setHourOfDay(hourOfDay);
+                updateReminderPref.setMinute(minute);
+
                 delegate.initUpdateReminderPrefConfig();
                 delegate.updateReminders();
             }
         };
+    }
+
+    public void setData(Set<UpdateReminderPref> updateReminderPrefSet) {
+        updateReminderPrefList = new ArrayList<>(updateReminderPrefSet);
+        Collections.sort(updateReminderPrefList);
+        notifyDataSetChanged();
     }
 
     @Override
@@ -94,18 +108,8 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
     }
 
     private void markChecks(ViewHolder holder, UpdateReminderPref pref) {
-        
-        if (pref.isPlaySound()) {
-            holder.playSoundSwitch.setChecked(true);
-        } else {
-            holder.playSoundSwitch.setChecked(false);
-        }
-        
-        if (pref.isVibrate()) {
-            holder.vibrateSwitch.setChecked(true);
-        } else {
-            holder.vibrateSwitch.setChecked(false);
-        }
+        holder.playSoundSwitch.setChecked(pref.isPlaySound());
+        holder.vibrateSwitch.setChecked(pref.isVibrate());
     }
     
     @Override
@@ -118,26 +122,17 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-
-        @Nullable
-        @BindView(R.id.daily_reminder_config_container)
-        ViewGroup vgDailyReminderConfig;
-
         @Nullable
         @BindView(R.id.daily_reminder_time)
         Button tvTime;
 
         @Nullable
-        @BindView(R.id.daily_reminder_vibrate_container)
-        ViewGroup vgVibrate;
+        @BindView(R.id.daily_reminder_play_sound)
+        SwitchCompat playSoundSwitch;
 
         @Nullable
         @BindView(R.id.daily_reminder_vibrate)
         SwitchCompat vibrateSwitch;
-
-        @Nullable
-        @BindView(R.id.daily_reminder_play_sound)
-        SwitchCompat playSoundSwitch;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -145,17 +140,16 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
         }
 
         @Optional
-        @OnCheckedChanged(R.id.daily_reminder_vibrate)
-        public void onVibrateSwitchToggled(SwitchCompat vibrateSwitch, final boolean isChecked) {
-            vibratePrefMap.get(vibrateSwitch).setVibrate(isChecked);
+        @OnCheckedChanged(R.id.daily_reminder_play_sound)
+        public void onPlaySoundSwitchToggled(SwitchCompat playSoundSwitch, final boolean isChecked) {
+            soundPrefMap.get(playSoundSwitch).setPlaySound(isChecked);
             delegate.initUpdateReminderPrefConfig();
         }
 
         @Optional
-        @OnCheckedChanged(R.id.daily_reminder_play_sound)
-        public void onPlaySoundSwitchToggled(SwitchCompat playSoundSwitch, final boolean isChecked) {
-            soundPrefMap.get(playSoundSwitch).setPlaySound(isChecked);
-
+        @OnCheckedChanged(R.id.daily_reminder_vibrate)
+        public void onVibrateSwitchToggled(SwitchCompat vibrateSwitch, final boolean isChecked) {
+            vibratePrefMap.get(vibrateSwitch).setVibrate(isChecked);
             delegate.initUpdateReminderPrefConfig();
         }
     }
