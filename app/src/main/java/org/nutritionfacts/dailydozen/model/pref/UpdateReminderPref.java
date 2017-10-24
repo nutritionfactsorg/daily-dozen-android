@@ -1,5 +1,7 @@
 package org.nutritionfacts.dailydozen.model.pref;
 
+import android.support.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Calendar;
@@ -7,16 +9,23 @@ import java.util.Locale;
 
 import timber.log.Timber;
 
-public class UpdateReminderPref {
+public class UpdateReminderPref implements Comparable<UpdateReminderPref> {
     // The default Update Reminder notification vibrates the phone and plays a sound at 8pm
     @SerializedName("hourOfDay")
     private int hourOfDay = 20; // Default to 8pm
+
     @SerializedName("minute")
     private int minute = 0;
+
     @SerializedName("vibrate")
     private boolean vibrate = true;
+
     @SerializedName("playSound")
     private boolean playSound = true;
+
+    public static final int DEFAULT_ID = -1;
+
+    private int id = DEFAULT_ID;
 
     public void setHourOfDay(int hourOfDay) {
         this.hourOfDay = hourOfDay;
@@ -50,6 +59,18 @@ public class UpdateReminderPref {
         this.playSound = playSound;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public UpdateReminderPref(int id) {
+        setId(id);
+    }
+
     @Override
     public String toString() {
         int hour = hourOfDay < 12 ? hourOfDay : hourOfDay % 12;
@@ -77,5 +98,22 @@ public class UpdateReminderPref {
         Timber.d(String.format("getAlarmTimeInMillis %s = %s", cal.getTime(), cal.getTimeInMillis()));
 
         return cal.getTimeInMillis();
+    }
+
+    @Override
+    public int compareTo(@NonNull UpdateReminderPref o) {
+        if(this.hourOfDay == o.hourOfDay) {
+            if (this.minute == o.minute) {
+                return 0;
+            } else if (this.minute > o.minute) {
+                return 1;
+            } else {
+                return -1;
+            }
+        } else if (this.hourOfDay > o.hourOfDay) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }
