@@ -2,6 +2,7 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -31,6 +32,9 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
     @BindView(R.id.daily_reminder_recycler_view)
     protected RecyclerView reminderRecyclerView;
 
+    @BindView((R.id.addNewReminderBtn))
+    protected FloatingActionButton addNewReminderBtn;
+
     protected DailyReminderAdapter reminderAdapter;
 
     private Set<UpdateReminderPref> updateReminderPrefs;
@@ -47,7 +51,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
         updateReminderPrefs = Prefs.getInstance(this).getUpdateReminderPref();
         if (updateReminderPrefs == null || updateReminderPrefs.isEmpty()) {
             updateReminderPrefs = new HashSet<>();
-            updateReminderPrefs.add(new UpdateReminderPref());
+            updateReminderPrefs.add(new UpdateReminderPref(NotificationUtil.getNextAvailableNotificationId()));
         }
         reminderAdapter = new DailyReminderAdapter(this, updateReminderPrefs, this);
         reminderRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -67,7 +71,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
 
         if (updateReminderPrefs == null) {
             updateReminderPrefs = new HashSet<>();
-            updateReminderPrefs.add(new UpdateReminderPref());
+            updateReminderPrefs.add(new UpdateReminderPref(NotificationUtil.getNextAvailableNotificationId()));
         }
 
         setUpdateReminder();
@@ -75,9 +79,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
 
     @Override
     public void updateReminders() {
-        reminderAdapter = new DailyReminderAdapter(this, updateReminderPrefs, this);
-        reminderRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        reminderRecyclerView.setAdapter(reminderAdapter);
+        reminderAdapter.setData(updateReminderPrefs);
     }
 
     private void setUpdateReminder() {
@@ -97,6 +99,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
 
     @OnCheckedChanged(R.id.daily_reminder_switch)
     public void onDailyReminderSwitchToggled(final boolean isChecked) {
+        addNewReminderBtn.setVisibility(isChecked ? View.VISIBLE : View.GONE);
         reminderRecyclerView.setVisibility(isChecked ? View.VISIBLE : View.GONE);
 
         if (isChecked) {
@@ -108,7 +111,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
 
     @OnClick(R.id.addNewReminderBtn)
     public void addNewReminder() {
-        updateReminderPrefs.add(new UpdateReminderPref());
+        updateReminderPrefs.add(new UpdateReminderPref(NotificationUtil.getNextAvailableNotificationId()));
         updateReminders();
     }
 }

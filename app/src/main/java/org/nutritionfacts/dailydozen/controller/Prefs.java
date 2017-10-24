@@ -25,6 +25,7 @@ public class Prefs {
     private static Prefs instance;
 
     private SharedPreferences sharedPrefs;
+    private static final Gson gson = new Gson();
 
     private Prefs(final Context context) {
         this.sharedPrefs = context.getSharedPreferences(Common.PREFERENCES_FILE, Context.MODE_PRIVATE);
@@ -94,7 +95,7 @@ public class Prefs {
     public void setUpdateReminderPref(Set<UpdateReminderPref> prefs) {
         Set<String> jsonSet = new HashSet<>();
         for (UpdateReminderPref pref : prefs) {
-            jsonSet.add(new Gson().toJson(pref));
+            jsonSet.add(gson.toJson(pref));
         }
         setStringSetPref(PREF_UPDATE_REMINDER, jsonSet);
     }
@@ -102,9 +103,10 @@ public class Prefs {
     @DebugLog
     public Set<UpdateReminderPref> getUpdateReminderPref() {
         Set<UpdateReminderPref> preferences = new HashSet<>();
-        if (getStringSetPref(PREF_UPDATE_REMINDER) != null) {
-            for (String json : getStringSetPref(PREF_UPDATE_REMINDER)) {
-                preferences.add(new Gson().fromJson(json, UpdateReminderPref.class));
+        Set<String> storedPrefs = getStringSetPref(PREF_UPDATE_REMINDER);
+        if (storedPrefs != null) {
+            for (String json : storedPrefs) {
+                preferences.add(gson.fromJson(json, UpdateReminderPref.class));
             }
         }
         return preferences;
@@ -112,6 +114,10 @@ public class Prefs {
 
     public void removeUpdateReminderPref() {
         removePref(PREF_UPDATE_REMINDER);
+    }
+
+    public boolean hasPreference(String key) {
+        return sharedPrefs.contains(key);
     }
 
     public void setDefaultUpdateReminderHasBeenCreated() {

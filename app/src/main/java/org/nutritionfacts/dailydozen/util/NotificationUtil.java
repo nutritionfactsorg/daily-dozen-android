@@ -23,14 +23,16 @@ import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 import org.nutritionfacts.dailydozen.receiver.AlarmReceiver;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Set;
 
 import timber.log.Timber;
 
 public class NotificationUtil {
-    private static final int UPDATE_REMINDER_ID = 1;
-    private static final int NOTIFICATION_SETTINGS_ID = 2;
+    private static final int NOTIFICATION_SETTINGS_ID = 0;
+    private static int UPDATE_REMINDER_ID = 1;
+    private static final Gson gson = new Gson();
 
     public static void showUpdateReminderNotification(final Context context, Intent intent) {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
@@ -38,7 +40,6 @@ public class NotificationUtil {
                 .setSmallIcon(getRandomNotificationIcon(context))
                 .setContentTitle(context.getString(R.string.daily_reminder_title))
                 .setContentText(context.getString(R.string.daily_reminder_text))
-                .setContentIntent(getUpdateReminderClickedIntent(context))
                 .addAction(R.drawable.ic_settings_black_24dp, context.getString(R.string.daily_reminder_settings), getNotificationSettingsClickedIntent(context));
 
         if (intent != null && intent.getExtras() != null) {
@@ -46,7 +47,7 @@ public class NotificationUtil {
                 final String updateReminderPrefJson = intent.getExtras().getString(Args.UPDATE_REMINDER_PREF);
 
                 if (!TextUtils.isEmpty(updateReminderPrefJson)) {
-                    final UpdateReminderPref updateReminderPref = new Gson().fromJson(updateReminderPrefJson, UpdateReminderPref.class);
+                    final UpdateReminderPref updateReminderPref = gson.fromJson(updateReminderPrefJson, UpdateReminderPref.class);
 
                     if (updateReminderPref.isVibrate()) {
                         final Vibrator vibratorService = getVibratorService(context);
@@ -60,18 +61,21 @@ public class NotificationUtil {
                         builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
                     }
 
+                    int updateReminderId = updateReminderPref.getId();
+
+                    builder.setContentIntent(getUpdateReminderClickedIntent(context, updateReminderId));
+
                     setAlarmForUpdateReminderNotification(context, updateReminderPref);
+                    getNotificationManager(context).notify(updateReminderId, builder.build());
                 }
             } catch (RuntimeException e) {
                 Timber.e("Caught RuntimeException in showUpdateReminderNotification", e);
             }
         }
-
-        getNotificationManager(context).notify(UPDATE_REMINDER_ID, builder.build());
     }
 
-    public static void dismissUpdateReminderNotification(final Context context) {
-        getNotificationManager(context).cancel(UPDATE_REMINDER_ID);
+    public static void dismissUpdateReminderNotifications(final Context context) {
+        getNotificationManager(context).cancelAll();
     }
 
     private static AlarmManager getAlarmManager(final Context context) {
@@ -90,10 +94,10 @@ public class NotificationUtil {
         return getVibratorService(context).hasVibrator();
     }
 
-    private static PendingIntent getUpdateReminderClickedIntent(final Context context) {
+    private static PendingIntent getUpdateReminderClickedIntent(final Context context, int requestCode) {
         return TaskStackBuilder.create(context)
                 .addNextIntent(new Intent(context, MainActivity.class))
-                .getPendingIntent(UPDATE_REMINDER_ID, PendingIntent.FLAG_UPDATE_CURRENT);
+                .getPendingIntent(requestCode, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
     private static PendingIntent getNotificationSettingsClickedIntent(final Context context) {
@@ -145,11 +149,32 @@ public class NotificationUtil {
     private static PendingIntent getAlarmPendingIntent(Context context, UpdateReminderPref pref) {
         final Intent intent = new Intent(context, AlarmReceiver.class);
 
+        PendingIntent pendingIntent = null;
+
         if (pref != null) {
-            intent.putExtra(Args.UPDATE_REMINDER_PREF, new Gson().toJson(pref));
+            intent.putExtra(Args.UPDATE_REMINDER_PREF, gson.toJson(pref));
+            pendingIntent = PendingIntent.getBroadcast(context, pref.getId(), intent, PendingIntent.FLAG_UPDATE_CURRENT);
         }
 
-        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        return pendingIntent;
+    }
+
+    private static void initUpdateReminderId(Set<UpdateReminderPref> updateReminderPrefSet) {
+        if (updateReminderPrefSet.isEmpty())
+            return;
+
+        Iterator<UpdateReminderPref> it = updateReminderPrefSet.iterator();
+        int max = 0;
+
+        while (it.hasNext()) {
+            UpdateReminderPref updateReminderPref = it.next();
+            int id = updateReminderPref.getId();
+
+            if (max < id)
+                max = id;
+        }
+
+        UPDATE_REMINDER_ID = max + 1;
     }
 
     public static void initUpdateReminderNotificationAlarm(final Context context) {
@@ -166,9 +191,27 @@ public class NotificationUtil {
             prefs.setDefaultUpdateReminderHasBeenCreated();
         }
 
+        boolean updatePreferences = false;
+
+        initUpdateReminderId(updateReminderPref);
+
         for (UpdateReminderPref pref: updateReminderPref) {
+            // Set an id for the update reminder that was previously saved in preferences but didn't have an ID
+            if (pref.getId() == UpdateReminderPref.DEFAULT_ID) {
+                updatePreferences = true;
+                pref.setId(getNextAvailableNotificationId());
+            }
+
             cancelAlarmForUpdateReminderNotification(context, pref);
             setAlarmForUpdateReminderNotification(context, pref);
         }
+
+        if (updatePreferences) {
+            Prefs.getInstance(context).setUpdateReminderPref(updateReminderPref);
+        }
+    }
+
+    public static int getNextAvailableNotificationId() {
+        return UPDATE_REMINDER_ID++;
     }
 }
