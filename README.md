@@ -14,7 +14,7 @@ Dr. Greger’s Daily Dozen details the healthiest foods and how many servings of
 Daily Dozen on Google Play
 ------------------
 
-<a href="https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen" alt="Download from Google Play" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png?v=1" width="200"></a>
+<a href="https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen" alt="Get it on Google Play" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="80"></a>
 
 Daily Dozen on [F-Droid](https://f-droid.org/)
 ------------------
