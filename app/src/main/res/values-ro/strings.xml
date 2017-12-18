@@ -231,10 +231,11 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Rucolă</item>
         <item>Varză chinezească</item>
-        <item>Broccoli</item>
+        <item>Broccoli (Romanesco)</item>
         <item>Varză de Bruxelles</item>
-        <item>Varză</item>
-        <item>Conopidă</item>
+        <item>Varză (verde, roșie, creață)</item>
+        <item>Conopidă (alb, verde, portocaliu, violet)</item>
+        <item>Gulii (verde, violet)</item>
         <item>Varză furajeră</item>
         <item>Hrean</item>
         <item>Varză Kale (creață, neagră, verde și roșie)</item>

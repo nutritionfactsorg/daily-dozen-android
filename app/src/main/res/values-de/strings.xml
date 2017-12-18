@@ -205,10 +205,11 @@
     <string-array name="food_info_types_cruciferous_vegetables">
          <item>Rucola</item>
          <item>Pak Choi</item>
-         <item>Brokkoli</item>
-         <item>Rosenkohl</item>
-         <item>Kohl</item>
-         <item>Blumenkohl</item>
+         <item>Brokkoli (und Romanesco)</item>
+         <item>Rosenkohl</item>
+         <item>Kohl (grün und rot, wirsingkohl)</item>
+         <item>Blumenkohl (weiß, grün, orange, lila)</item>
+         <item>Kohlrabi (grün und lila)</item>
          <item>Blattkohl</item>
          <item>Meerrettich</item>
          <item>Kohl (schwarz, grün und rot)</item>

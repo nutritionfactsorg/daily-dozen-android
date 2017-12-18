@@ -213,10 +213,11 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Ρόκα</item>
         <item>Μποκ τσόι</item>
-        <item>Μπρόκολο</item>
+        <item>Μπρόκολο (και το Romanesco)</item>
         <item>Λαχανάκια Βρυξελλών</item>
-        <item>Λάχανο</item>
-        <item>Κουνουπίδι</item>
+        <item>Λάχανο (πράσινο, κόκκινο, σπαράγγι λάχανο)</item>
+        <item>Κουνουπίδι (λευκό, πράσινο, πορτοκαλί, μοβ)</item>
+        <item>Γογγυλοκράμβες (πράσινο, μωβ)</item>
         <item>Λαχανίδες</item>
         <item>Χρένο</item>
         <item>Κέιλ (μαύρο, πράσινο και κόκκινο)</item>
