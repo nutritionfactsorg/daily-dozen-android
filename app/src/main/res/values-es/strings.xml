@@ -213,10 +213,11 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Arugula</item>
         <item>Bok choy</item>
-        <item>Brócoli</item>
+        <item>Brócoli(Romanesco)</item>
         <item>Repollos de Bruselas</item>
-        <item>Repollo</item>
-        <item>Coliflor</item>
+        <item>Repollo (verde, rojo, de Saboya)</item>
+        <item>Coliflor (blanco, verde, naranja, morado)</item>
+        <item>Colinabo (verde, morado)</item>
         <item>Berza</item>
         <item>Rábano picante</item>
         <item>Col rizada (negra, verde, y roja)</item>

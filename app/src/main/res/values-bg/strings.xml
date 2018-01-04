@@ -213,10 +213,11 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Рукола</item>
         <item>Бок чой</item>
-        <item>Броколи</item>
+        <item>Броколи (Романеско)</item>
         <item>Брюкселско зеле</item>
-        <item>Зеле</item>
-        <item>Карфиол</item>
+        <item>Зеле (зелен, червено, савойско)</item>
+        <item>Карфиол (бяло, зелено, оранжево, лилаво)</item>
+        <item>Алабаш (зелено, лилаво)</item>
         <item>Зелеви растения</item>
         <item>Хрян</item>
         <item>Кейл (черен, зелен и червен)</item>

@@ -214,10 +214,11 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Roquette</item>
         <item>Bok choy</item>
-        <item>brocoli</item>
+        <item>Brocoli (Romanesco)</item>
         <item>Choux de Bruxelles</item>
-        <item>Chou</item>
-        <item>Choufleur</item>
+        <item>Chou (vert, rouge, de savoie)</item>
+        <item>Choufleur (blanc, vert, orange, violet)</item>
+        <item>Chourave (vert, violet)</item>
         <item>Chou collard</item>
         <item>Raifort</item>
         <item>Kale (noir, vert et rouge)</item>
