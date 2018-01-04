@@ -464,13 +464,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item></item>
+        <item/>
         <item>1杯</item>
         <item>¼杯</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item></item>
+        <item/>
         <item>120克</item>
         <item>40克</item>
     </string-array>
@@ -496,13 +496,13 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½杯</item>
         <item>¼杯</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80克</item>
         <item>12克</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -534,11 +534,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
@@ -548,12 +548,12 @@
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼杯</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30克</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
@@ -562,13 +562,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
@@ -582,16 +582,16 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½杯</item>
         <item>1杯</item>
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
         <item>3杯</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100克</item>
         <item>50克</item>
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
         <item>30克</item>
     </string-array>
 
@@ -613,13 +613,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string name="error_cannot_handle_url">無法開啟網頁。請安裝瀏覽器。</string>

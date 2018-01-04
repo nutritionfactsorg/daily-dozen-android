@@ -544,12 +544,12 @@
 
     <string-array name="food_info_serving_sizes_spices_imperial">
         <item>¼ cucharadita</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
         <item>¼ cucharadita</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
