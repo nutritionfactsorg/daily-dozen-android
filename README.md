@@ -50,6 +50,12 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
+### Version 15
+- Added support for deploying to F-Droid - thanks to contributor [alibitek](https://github.com/alibitek)
+- Added Chinese translation - thanks to contributor [rahul577](https://github.com/rahul577)
+- Added Romanian translation - thanks to contributor [alibitek](https://github.com/alibitek)
+- Added Russian translation - thanks to contributor [ChadoNihi](https://github.com/ChadoNihi)
+
 ### Version 14
 - Added CheckBoxes for Vitamin B12 and Vitamin D
 
