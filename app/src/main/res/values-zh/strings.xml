@@ -230,13 +230,14 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>芝麻葉</item>
         <item>青江菜</item>
-        <item>綠色花椰菜</item>
+        <item>綠色花椰菜 (宝塔花菜)</item>
         <item>球芽甘藍</item>
-        <item>甘藍菜</item>
-        <item>白色花椰菜</item>
+        <item>甘藍 (绿, 紫, 野甘蓝)</item>
+        <item>花椰菜(白色，绿色，橙色，紫色)</item>
         <item>芥藍菜葉</item>
         <item>辣根</item>
         <item>羽衣甘藍（黑色、綠色與紅色品種）</item>
+        <item>大头菜(绿色，紫色)</item>
         <item>芥菜</item>
         <item>蘿蔔</item>
         <item>蕪菁葉</item>
@@ -463,13 +464,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item></item>
+        <item/>
         <item>1杯</item>
         <item>¼杯</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item></item>
+        <item/>
         <item>120克</item>
         <item>40克</item>
     </string-array>
@@ -495,13 +496,13 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½杯</item>
         <item>¼杯</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80克</item>
         <item>12克</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -533,11 +534,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
@@ -547,12 +548,12 @@
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼杯</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30克</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
@@ -561,13 +562,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
@@ -581,16 +582,16 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½杯</item>
         <item>1杯</item>
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
         <item>3杯</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100克</item>
         <item>50克</item>
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
         <item>30克</item>
     </string-array>
 
@@ -612,13 +613,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string name="error_cannot_handle_url">無法開啟網頁。請安裝瀏覽器。</string>

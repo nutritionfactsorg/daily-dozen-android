@@ -231,13 +231,14 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Rucolă</item>
         <item>Varză chinezească</item>
-        <item>Broccoli</item>
+        <item>Broccoli (Romanesco)</item>
         <item>Varză de Bruxelles</item>
-        <item>Varză</item>
-        <item>Conopidă</item>
+        <item>Varză (verde, roșie, creață)</item>
+        <item>Conopidă (alb, verde, portocaliu, violet)</item>
         <item>Varză furajeră</item>
         <item>Hrean</item>
         <item>Varză Kale (creață, neagră, verde și roșie)</item>
+        <item>Gulii (verde, violet)</item>
         <item>Frunze de muștar</item>
         <item>Ridichi</item>
         <item>Frunze de nap</item>
@@ -464,13 +465,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item></item>
+        <item/>
         <item>1 cană</item>
         <item>¼ cană</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item></item>
+        <item/>
         <item>120 g</item>
         <item>40 g</item>
     </string-array>
@@ -484,13 +485,13 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ cană</item>
         <item>¼ cană</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g</item>
         <item>12 g</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
@@ -534,11 +535,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
@@ -548,12 +549,12 @@
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ cup</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
@@ -562,13 +563,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
@@ -582,16 +583,16 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ cup</item>
         <item>1 cup</item>
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
         <item>3 cups</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
         <item>30 g</item>
     </string-array>
 
@@ -613,13 +614,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string name="error_cannot_handle_url">Nu s-a putut deschide adresa URL. Vă rugăm să instalați un browser.</string>

@@ -214,13 +214,14 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Roquette</item>
         <item>Bok choy</item>
-        <item>brocoli</item>
+        <item>Brocoli (Romanesco)</item>
         <item>Choux de Bruxelles</item>
-        <item>Chou</item>
-        <item>Choufleur</item>
+        <item>Chou (vert, rouge, de savoie)</item>
+        <item>Choufleur (blanc, vert, orange, violet)</item>
         <item>Chou collard</item>
         <item>Raifort</item>
         <item>Kale (noir, vert et rouge)</item>
+        <item>Chourave (vert, violet)</item>
         <item>Feuilles de moutarde</item>
         <item>Radis</item>
         <item>Feuilles de navet</item>
@@ -445,13 +446,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item></item>
+        <item/>
         <item>1 tasse</item>
         <item>¼ tasse</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item></item>
+        <item/>
         <item>120 g</item>
         <item>40 g</item>
     </string-array>
@@ -465,13 +466,13 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ tasse</item>
         <item>¼ tasse</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g</item>
         <item>12 g</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
@@ -515,11 +516,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
@@ -529,12 +530,12 @@
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ tasse</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
-        <item></item>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
@@ -543,13 +544,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
@@ -563,16 +564,16 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ tasse</item>
         <item>1 tasse</item>
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
         <item>3 tasses</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
         <item>30 g</item>
     </string-array>
 
@@ -594,13 +595,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item></item>
-        <item></item>
+        <item/>
+        <item/>
     </string-array>
 
     <string name="error_cannot_handle_url">Impossible d\'ouvrir l\'url. Veuillez installer un navigateur.</string>
