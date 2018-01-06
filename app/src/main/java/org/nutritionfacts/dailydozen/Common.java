@@ -136,8 +136,6 @@ public class Common {
     }
 
     public static void openFoodInfo(final Context context, final Food food) {
-        FoodInfo.initFoodInfo(context);
-
         if (isVitamin(food)) {
             openUrlInExternalBrowser(context, FoodInfo.getFoodTypeVideosLink(food.getName()));
         } else {

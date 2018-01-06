@@ -19,7 +19,7 @@ public class DailyDozenApplication extends Application {
 
         ensureAllFoodsExistInDatabase();
 
-        FoodInfo.initFoodIcons(this);
+        FoodInfo.init(this);
 
         NotificationUtil.initUpdateReminderNotificationAlarm(this);
     }
