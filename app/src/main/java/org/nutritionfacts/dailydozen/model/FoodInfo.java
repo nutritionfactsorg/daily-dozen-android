@@ -15,11 +15,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import hugo.weaving.DebugLog;
-
 public class FoodInfo {
-    private static boolean initializedFoodInfo;
-
     private static Map<String, Integer> foodImages;
     private static Map<String, Integer> foodIcons;
     private static Map<String, List<String>> servingSizesImperial;
@@ -43,26 +39,17 @@ public class FoodInfo {
     private static String vitaminB12;
     private static String vitaminD;
 
-    @DebugLog
-    public static void initFoodIcons(final Context context) {
-        bindFoodNames(context.getResources());
+    public static void init(final Context context) {
+        final Resources res = context.getResources();
 
+        bindFoodNames(res);
+
+        initFoodImages();
         initFoodIcons();
-    }
-
-    @DebugLog
-    public static void initFoodInfo(final Context context) {
-        if (!initializedFoodInfo) {
-            final Resources res = context.getResources();
-
-            initFoodImages();
-            initServingSizes(context);
-            initTypesOfFood(res);
-            initFoodTypeVideos(res);
-            initFoodVideos(res);
-
-            initializedFoodInfo = true;
-        }
+        initServingSizes(context);
+        initTypesOfFood(res);
+        initFoodTypeVideos(res);
+        initFoodVideos(res);
     }
 
     private static void bindFoodNames(Resources res) {

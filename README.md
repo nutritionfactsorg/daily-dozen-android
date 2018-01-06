@@ -14,7 +14,12 @@ Dr. Greger’s Daily Dozen details the healthiest foods and how many servings of
 Daily Dozen on Google Play
 ------------------
 
-<a href="https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen" alt="Download from Google Play" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png?v=1" width="200"></a>
+<a href="https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen" alt="Get it on Google Play" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="80"></a>
+
+Daily Dozen on [F-Droid](https://f-droid.org/)
+------------------
+
+<a href="https://f-droid.org/app/org.nutritionfacts.dailydozen/" alt="Get it on F-Droid" target="_blank"><img src="https://f-droid.org/badge/get-it-on.png" height="80"></a>
 
 Contribute
 ------------
@@ -44,6 +49,12 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 
 Updates
 -------
+
+### Version 15
+- Added support for deploying to F-Droid - thanks to contributor [alibitek](https://github.com/alibitek)
+- Added Chinese translation - thanks to contributor [rahul577](https://github.com/rahul577)
+- Added Romanian translation - thanks to contributor [alibitek](https://github.com/alibitek)
+- Added Russian translation - thanks to contributor [ChadoNihi](https://github.com/ChadoNihi)
 
 ### Version 14
 - Added CheckBoxes for Vitamin B12 and Vitamin D
