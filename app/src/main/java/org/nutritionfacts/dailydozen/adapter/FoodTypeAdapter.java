@@ -50,7 +50,7 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHo
     }
 
     private void setFoodVideosLink(final TextView textView, int position) {
-        if (foodVideos != null && !foodVideos.isEmpty()) {
+        if (foodVideos != null && !foodVideos.isEmpty() && position < foodVideos.size()) {
             final String link = foodVideos.get(position);
 
             if (!TextUtils.isEmpty(link)) {
