@@ -50,6 +50,9 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
+### Version 15.1
+- Fixed crash for Romanian and Chinese users when opening information for Whole Grains
+
 ### Version 15
 - Added support for deploying to F-Droid - thanks to contributor [alibitek](https://github.com/alibitek)
 - Added Chinese translation - thanks to contributor [rahul577](https://github.com/rahul577)
