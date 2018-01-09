@@ -336,7 +336,6 @@
 
     <string-array name="food_info_types_whole_grains">
         <item>大麥</item>
-        <item>糙米</item>
         <item>蕎麥</item>
         <item>小米</item>
         <item>燕麥</item>
@@ -345,7 +344,6 @@
         <item>裸麥</item>
         <item>畫眉草籽</item>
         <item>全麥義大利麵</item>
-        <item>菰米</item>
     </string-array>
 
     <string-array name="food_info_types_beverages">

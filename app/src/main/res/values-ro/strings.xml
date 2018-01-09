@@ -337,7 +337,6 @@
 
     <string-array name="food_info_types_whole_grains">
         <item>Orz</item>
-        <item>Orez brun</item>
         <item>Hrișcă</item>
         <item>Mei</item>
         <item>Ovăz</item>
@@ -346,7 +345,6 @@
         <item>Secară</item>
         <item>Taf (mei etiopian)</item>
         <item>Paste din grâu integral</item>
-        <item>Orez sălbatic</item>
     </string-array>
 
     <string-array name="food_info_types_beverages">
