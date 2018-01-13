@@ -70,11 +70,11 @@
     <string name="dialog_ask_user_to_rate_app_message">Ждём Ваших отзывов в Play Store.</string>
     <string name="rate_now">Оставить Отзыв</string>
     <string name="not_now">Не Сейчас</string>
-    <string name="format_version" formatted="false">version %s</string>
-    <string name="format_num_days" formatted="false">%d days</string>
+    <string name="format_version" formatted="false">версия %s</string>
+    <string name="format_num_days" formatted="false">%d дней</string>
     <string name="daily_reminder_title">Напоминания Daily Dozen</string>
     <string name="daily_reminder_text">Отметь сегодняшние порции</string>
-    <string name="daily_reminder_settings">Настройки Daily Reminder</string>
+    <string name="daily_reminder_settings">Настройки Ежедневных Напоминаний</string>
     <string name="enable_daily_reminder">Включить Ежедневные Напоминания</string>
     <string name="remind_me_at">Напоминать в</string>
     <string name="vibrate">Вибрацией</string>
@@ -164,18 +164,18 @@
 
     <string-array name="food_info_types_beans">
         <item>Чёрная фасоль</item>
-        <item>Спаржевая фасоль вигна (black-eyed peas)</item>
-        <item>Луновидная фасоль</item>
-        <item>Белая фасоль Каннеллини (Cannellini beans)</item>
+        <item>Черноглазая фасоль</item>
+        <item>Фасоль Лима</item>
+        <item>Белая фасоль (каннеллини)</item>
         <item>Нут</item>
         <item>Эдамамэ</item>
         <item>Садовый горох</item>
-        <item>Нут Гарбанзо (Garbanzo beans)</item>
-        <item>Белая фасоль</item>
-        <item>Красная фасоль</item>
-        <item>Чечевица (чёрная ("белуга"), французская и красная разновидности)</item>
+        <item>Нут</item>
+        <item>Белая фасоль (великая северная)</item>
+        <item>Красная фасоль (кидни)</item>
+        <item>Чечевица (чёрная "белуга", зеленая "французская", красная)</item>
         <item>Мисо</item>
-        <item>Белая фасоль "флотская" (Navy beans)</item>
+        <item>Белая фасоль (флотская)</item>
         <item>Фасоль пинто</item>
         <item>Мелкая красная фасоль</item>
         <item>Горох колотый (жёлтый или зелёный)</item>
@@ -187,7 +187,7 @@
         <item>Ягоды барбариса</item>
         <item>Ежевика</item>
         <item>Черника</item>
-        <item>Вишня (сладкая или кислая)</item>
+        <item>Вишня (или черешня)</item>
         <item>Виноград Конкорд</item>
         <item>Клюква</item>
         <item>Ягоды годжи</item>
@@ -207,7 +207,7 @@
         <item>Финики</item>
         <item>Сушёный инжир</item>
         <item>Грейпфрут</item>
-        <item>Дыня Нектар (Honeydew)</item>
+        <item>Дыня Медовая</item>
         <item>Киви</item>
         <item>Лимоны</item>
         <item>Лаймы</item>
@@ -235,23 +235,23 @@
         <item>Брюссельская капуста</item>
         <item>Капуста (белокочанная, красная и савойская)</item>
         <item>Цветная капуста (белая, зеленая, оранжевая, фиолетовая)</item>
-        <item>Зелень колларда</item>
+        <item>Листовая капуста Коллард</item>
         <item>Хрен</item>
         <item>Кудрявая капуста (тёмная, зелёная и красная)</item>
         <item>Кольраби (зеленая и фиолетовая)</item>
-        <item>Молодые листья горчицы</item>
+        <item>Горчица листовая</item>
         <item>Редис</item>
-        <item>Листья репы</item>
+        <item>Ботва репы</item>
         <item>Водяной кресс</item>
     </string-array>
 
     <string-array name="food_info_types_greens">
         <item>Руккола</item>
-        <item>Ботва свёклы</item>
-        <item>Зелень колларда</item>
+        <item>Ботва свеклы</item>
+        <item>Листовая капуста Коллард</item>
         <item>Кудрявая капуста (тёмная, зелёная и красная)</item>
         <item>Месклан (ассорти из молодых салатных листьев)</item>
-        <item>Молодые листья горчицы</item>
+        <item>Горчица листовая</item>
         <item>Щавель</item>
         <item>Шпинат</item>
         <item>Мангольд</item>
@@ -260,7 +260,7 @@
 
     <string-array name="food_info_types_other_vegetables">
         <item>Артишоки</item>
-        <item>Побеги спаржи</item>
+        <item>Спаржа</item>
         <item>Свёкла</item>
         <item>Сладкий перец</item>
         <item>Морковь</item>
@@ -273,7 +273,7 @@
         <item>Тыква</item>
         <item>Съедобные водоросли (араме, красные водоросли и нори)</item>
         <item>Стручковый горох (Snap peas)</item>
-        <item>Кабачок ("Деликатесный", молодой и "Спагетти" разновидности)</item>
+        <item>Сквош (летний и зимний, в т.ч. "деликата" и "спагетти")</item>
         <item>Батат/ямс</item>
         <item>Помидоры</item>
         <item>Цуккини</item>
@@ -400,7 +400,7 @@
         <item>Подъем в горку на велосипеде</item>
         <item>Повторяемые упражнения с весом</item>
         <item>Лыжный бег</item>
-        <item>Футбол</item>
+        <item>Американский футбол</item>
         <item>Хоккей</item>
         <item>Бег трусцой</item>
         <item>Прыжки "ноги вместе – ноги врозь"</item>
@@ -414,7 +414,7 @@
         <item>Бег</item>
         <item>Дайвинг с аквалангом</item>
         <item>Теннис</item>
-        <item>Соккер (название футбола в США)</item>
+        <item>Футбол ("соккер")</item>
         <item>Конькобежный спорт</item>
         <item>Сквош</item>
         <item>Гимнастика на степе</item>
@@ -476,7 +476,7 @@
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
         <item>%s нарубленного</item>
-        <item>%s брюссельской капусты или брокколей</item>
+        <item>%s брюссельской капусты или брокколи</item>
         <item>%s1 столовая ложка хрена</item>
     </string-array>
 
@@ -542,7 +542,7 @@
 
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s орехов или семян</item>
-        <item>%s2 столовые ложки ореховой или семечковой пасты</item>
+        <item>%s2 столовые ложки пасты из орехов или семян</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
@@ -571,7 +571,7 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s горячих хлопьев или приготовленных злаковых, макарон или кукурузных зёрен</item>
+        <item>%s горячих хлопьев или приготовленных злаков, макарон или кукурузных зёрен</item>
         <item>%s неразогретых хлопьев</item>
         <item>%s1 тортилья или ломтик хлеба</item>
         <item>%s½ бублика или английской булочки</item>
