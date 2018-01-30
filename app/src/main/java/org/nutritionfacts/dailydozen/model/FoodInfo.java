@@ -115,7 +115,7 @@ public class FoodInfo {
         foodIcons.put(exercise, R.drawable.ic_exercise);
         foodIcons.put(vitaminB12, R.drawable.ic_vitamin_b12);
         foodIcons.put(vitaminD, R.drawable.ic_vitamin_d);
-        foodIcons.put(omega3, R.drawable.ic_vitamin_b12); // TODO
+        foodIcons.put(omega3, R.drawable.ic_omega3);
     }
 
     public static List<String> getTypesOfFood(final String foodName) {
