@@ -6,8 +6,8 @@
               android:layout_height="match_parent">
 
     <com.joanzapata.iconify.widget.IconTextView
-        android:id="@+id/vitamin_divider_text"
-        android:text="@string/vitamin_divider_text"
+        android:id="@+id/omega3_divider_text"
+        android:text="@string/omega3_divider_text"
         android:layout_gravity="center"
         android:padding="10dp"
         android:layout_width="wrap_content"

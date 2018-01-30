@@ -25,6 +25,7 @@ import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.widget.DateServings;
 import org.nutritionfacts.dailydozen.widget.FoodServings;
+import org.nutritionfacts.dailydozen.widget.Omega3Divider;
 import org.nutritionfacts.dailydozen.widget.VitaminDivider;
 
 import butterknife.BindView;
@@ -94,6 +95,7 @@ public class DateFragment extends Fragment {
 
                 final Context context = getContext();
                 boolean addedVitaminDivider = false;
+                boolean addedOmega3Divider = false;
 
                 for (Food food : Food.getAllFoods()) {
                     final FoodServings foodServings = new FoodServings(context);
@@ -102,6 +104,10 @@ public class DateFragment extends Fragment {
                         if (Common.isVitamin(food) && !addedVitaminDivider) {
                             vgFoodServings.addView(new VitaminDivider(context));
                             addedVitaminDivider = true;
+                        }
+                        else if (Common.isOmega3(food) && !addedOmega3Divider) {
+                            vgFoodServings.addView(new Omega3Divider(context));
+                            addedOmega3Divider = true;
                         }
 
                         vgFoodServings.addView(foodServings);

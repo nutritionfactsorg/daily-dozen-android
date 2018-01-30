@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.support.annotation.ColorInt;
 import android.support.v4.content.ContextCompat;
@@ -31,6 +32,7 @@ public class Common {
     public static final String EXERCISE = "exercise";
     public static final String VITAMIN_B12 = "Vitamin B12";
     public static final String VITAMIN_D = "Vitamin D";
+    public static final String OMEGA3 = "Omega 3";
 
     private static boolean userIsBeingAsked;
 
@@ -136,7 +138,7 @@ public class Common {
     }
 
     public static void openFoodInfo(final Context context, final Food food) {
-        if (isVitamin(food)) {
+        if (isVitamin(food) || isOmega3(food)) {
             openUrlInExternalBrowser(context, FoodInfo.getFoodTypeVideosLink(food.getName()));
         } else {
             context.startActivity(createFoodIntent(context, FoodInfoActivity.class, food));
@@ -146,6 +148,10 @@ public class Common {
     public static boolean isVitamin(final Food food) {
         return food != null &&
                 (VITAMIN_B12.equalsIgnoreCase(food.getIdName()) || VITAMIN_D.equalsIgnoreCase(food.getIdName()));
+    }
+
+    public static boolean isOmega3(final Food food) {
+        return food != null && (OMEGA3.equalsIgnoreCase(food.getIdName()));
     }
 
     public static void openFoodHistory(final Context context, final Food food) {

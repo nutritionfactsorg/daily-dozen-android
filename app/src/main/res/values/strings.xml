@@ -15,6 +15,7 @@
     <string name="exercise">Exercise</string>
     <string name="vitamin_b12">Vitamin B12</string>
     <string name="vitamin_d">Vitamin D</string>
+    <string name="omega3">DHA and EPA</string>
     <string name="serving_sizes">Serving Sizes</string>
     <string name="types">Types</string>
     <string name="history">History</string>
@@ -113,7 +114,9 @@
     <string name="imperial">Imperial</string>
     <string name="metric">Metric</string>
     <string name="vitamin_divider_text">Vitamins</string>
+    <string name="omega3_divider_text">Omega 3 Fatty Acids</string>
     <string name="dialog_vitamin_explanation_text">Vitamin B12 and Vitamin D are essential for your health but do not count towards your daily servings.\n\nThey are included in this app to provide you with an easy way to track your intake.</string>
+    <string name="dialog_omega3_explanation_text">Omega 3 fatty acids are essential for your health but do not count towards your daily servings.\n\nThey are included in this app to provide you with an easy way to track your intake.</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
@@ -133,6 +136,7 @@
     <string name="food_info_videos_exercise" translatable="false">exercise</string>
     <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
     <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
+    <string name="food_info_videos_omega3" translatable="false">omega-3-fatty-acids</string>
 
     <!--
     NOTE: These strings should never be translated from English
@@ -153,6 +157,7 @@
         <item>Exercise</item>
         <item>Vitamin B12</item>
         <item>Vitamin D</item>
+        <item>Omega 3</item>
     </string-array>
 
     <string-array name="food_names">
@@ -170,6 +175,7 @@
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
         <item>@string/vitamin_d</item>
+        <item>@string/omega3</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">
@@ -193,6 +199,7 @@
         <item>1</item>
         <item>3</item>
         <item>5</item>
+        <item>1</item>
         <item>1</item>
         <item>1</item>
         <item>1</item>
