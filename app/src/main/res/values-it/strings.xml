@@ -153,6 +153,7 @@
         <item>Exercise</item>
         <item>Vitamin B12</item>
         <item>Vitamin D</item>
+        <item>Omega 3</item>
     </string-array>
 
     <string-array name="food_names">
@@ -170,6 +171,7 @@
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
         <item>@string/vitamin_d</item>
+        <item>@string/omega3</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">
@@ -193,6 +195,7 @@
         <item>1</item>
         <item>3</item>
         <item>5</item>
+        <item>1</item>
         <item>1</item>
         <item>1</item>
         <item>1</item>

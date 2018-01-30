@@ -101,6 +101,7 @@
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
         <item>@string/vitamin_d</item>
+        <item>@string/omega3</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">
