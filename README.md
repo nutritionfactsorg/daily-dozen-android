@@ -19,7 +19,7 @@ Daily Dozen on Google Play
 Daily Dozen on [F-Droid](https://f-droid.org/)
 ------------------
 
-<a href="https://f-droid.org/app/org.nutritionfacts.dailydozen/" alt="Get it on F-Droid" target="_blank"><img src="https://f-droid.org/badge/get-it-on.png" height="80"></a>
+<a href="https://f-droid.org/packages/org.nutritionfacts.dailydozen/" alt="Get it on F-Droid" target="_blank"><img src="https://f-droid.org/badge/get-it-on.png" height="80"></a>
 
 Contribute
 ------------
