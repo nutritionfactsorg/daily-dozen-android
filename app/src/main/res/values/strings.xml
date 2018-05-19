@@ -68,7 +68,7 @@
     <string name="food_history">Food History</string>
     <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
     <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
-    <string name="num_servings_max" translatable="false">24</string>
+    <string name="num_servings_max" translatable="false">26</string>
     <string name="icon_chart" translatable="false">{fa-bar-chart 20dp @color/gray_dark}</string>
     <string name="daily_servings_history">Daily Servings History</string>
     <string name="no_servings_recorded">You have not recorded any servings yet!</string>
@@ -193,7 +193,7 @@
         <item>1</item>
         <item>3</item>
         <item>5</item>
-        <item>1</item>
+        <item>3</item>
         <item>1</item>
         <item>1</item>
     </integer-array>
@@ -676,8 +676,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 minutes of moderate-intensity activity</item>
-        <item>%s40 minutes of vigorous-intensity activity</item>
+        <item>%s30 minutes of moderate-intensity activity</item>
+        <item>%s14 minutes of vigorous-intensity activity</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
