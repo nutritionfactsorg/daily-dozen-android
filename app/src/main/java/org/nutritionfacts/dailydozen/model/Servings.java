@@ -70,7 +70,7 @@ public class Servings extends TruncatableModel {
             final Servings servings = Servings.getByDateAndFood(day.getDayBefore(), food);
             return servings != null ? servings.getStreak() : 0;
         } catch (InvalidDateException e) {
-            Timber.e("getStreakFromDayBefore: ", e);
+            Timber.e(e, "getStreakFromDayBefore: ");
         }
 
         return 0;

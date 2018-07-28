@@ -115,7 +115,7 @@ public class FoodCheckBoxes extends LinearLayout {
 
             servings.save();
             onServingsChanged();
-            Timber.d(String.format("Increased Servings for %s", servings));
+            Timber.d("Increased Servings for %s", servings);
         }
     }
 
@@ -128,9 +128,9 @@ public class FoodCheckBoxes extends LinearLayout {
 
             if (servings.getServings() > 0) {
                 servings.save();
-                Timber.d(String.format("Decreased Servings for %s", servings));
+                Timber.d("Decreased Servings for %s", servings);
             } else {
-                Timber.d(String.format("Deleting %s", servings));
+                Timber.d("Deleting %s", servings);
                 servings.delete();
             }
 

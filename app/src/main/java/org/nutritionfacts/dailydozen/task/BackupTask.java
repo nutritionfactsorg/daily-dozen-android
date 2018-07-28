@@ -53,7 +53,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         allFoods = Food.getAllFoods();
 
         final File backupFile = params[0];
-        Timber.d("backupFilename = " + backupFile.getName());
+        Timber.d("backupFilename = %s", backupFile.getName());
 
         final int numDays = allDays.size();
 

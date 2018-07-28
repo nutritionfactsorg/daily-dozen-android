@@ -127,7 +127,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                 ActiveAndroid.setTransactionSuccessful();
             }
         } catch (InvalidDateException e) {
-            Timber.e("restoreLine: ", e);
+            Timber.e(e, "restoreLine: ");
         } finally {
             ActiveAndroid.endTransaction();
         }

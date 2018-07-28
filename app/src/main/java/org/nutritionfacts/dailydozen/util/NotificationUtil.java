@@ -61,7 +61,7 @@ public class NotificationUtil {
                     setAlarmForUpdateReminderNotification(context, updateReminderPref);
                 }
             } catch (RuntimeException e) {
-                Timber.e("Caught RuntimeException in showUpdateReminderNotification", e);
+                Timber.e(e, "Caught RuntimeException in showUpdateReminderNotification");
             }
         }
 
@@ -119,7 +119,7 @@ public class NotificationUtil {
             alarmManager.cancel(alarmPendingIntent);
 
             final long alarmTimeInMillis = pref.getAlarmTimeInMillis();
-            Timber.d(String.format("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis));
+            Timber.d("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis);
 
             setAlarm(alarmManager, alarmPendingIntent, alarmTimeInMillis);
         }

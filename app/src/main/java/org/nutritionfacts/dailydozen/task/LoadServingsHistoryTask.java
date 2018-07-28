@@ -154,8 +154,8 @@ public class LoadServingsHistoryTask
 
             final float averageTotalServingsInMonth = Servings.getAverageTotalServingsInMonth(year, monthOneBased);
 
-            Timber.d(String.format("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
-                    year, monthOneBased, averageTotalServingsInMonth));
+            Timber.d("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
+                    year, monthOneBased, averageTotalServingsInMonth);
 
             if (averageTotalServingsInMonth > 0) {
                 final int xIndex = xLabels.size();
@@ -176,10 +176,10 @@ public class LoadServingsHistoryTask
     private LoadServingsHistoryCompleteEvent getChartDataInYears() {
         final Day firstDay = Day.getFirstDay();
         final int firstYear = firstDay.getYear();
-        Timber.d(String.format("getChartDataInYears: firstYear [%s]", firstYear));
+        Timber.d("getChartDataInYears: firstYear [%s]", firstYear);
 
         final int currentYear = DateUtil.getCurrentYear();
-        Timber.d(String.format("getChartDataInYears: currentYear [%s]", currentYear));
+        Timber.d("getChartDataInYears: currentYear [%s]", currentYear);
 
         final int numYears = currentYear - firstYear;
         int i = 0;
@@ -200,8 +200,8 @@ public class LoadServingsHistoryTask
 
             final float averageTotalServingsInYear = Servings.getAverageTotalServingsInYear(year);
 
-            Timber.d(String.format("getChartDataInYears: year [%s], average [%s]",
-                    year, averageTotalServingsInYear));
+            Timber.d("getChartDataInYears: year [%s], average [%s]",
+                    year, averageTotalServingsInYear);
 
             lineEntries.add(new Entry(averageTotalServingsInYear, xIndex));
 

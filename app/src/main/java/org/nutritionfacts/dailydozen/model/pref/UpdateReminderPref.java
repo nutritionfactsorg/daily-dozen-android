@@ -74,7 +74,7 @@ public class UpdateReminderPref {
             cal.add(Calendar.HOUR, 24);
         }
 
-        Timber.d(String.format("getAlarmTimeInMillis %s = %s", cal.getTime(), cal.getTimeInMillis()));
+        Timber.d("getAlarmTimeInMillis %s = %s", cal.getTime(), cal.getTimeInMillis());
 
         return cal.getTimeInMillis();
     }

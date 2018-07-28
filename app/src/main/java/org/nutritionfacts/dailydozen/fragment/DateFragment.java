@@ -109,7 +109,7 @@ public class DateFragment extends Fragment {
                     }
                 }
             } catch (InvalidDateException e) {
-                Timber.e("displayFormForDate: ", e);
+                Timber.e(e, "displayFormForDate: ");
             }
         }
     }

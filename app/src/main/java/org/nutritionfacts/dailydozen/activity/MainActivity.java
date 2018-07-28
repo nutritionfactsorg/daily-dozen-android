@@ -389,7 +389,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setDatePagerDate(final DateTime dateTime) {
         if (dateTime != null) {
-            Timber.d("Changing displayed date to " + dateTime.toString());
+            Timber.d("Changing displayed date to %s", dateTime.toString());
             datePager.setCurrentItem(Day.getNumDaysSinceEpoch(dateTime));
         }
     }
