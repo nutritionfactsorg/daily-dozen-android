@@ -36,9 +36,9 @@ public class StreakWidget extends IconTextView {
 
             if (streak < ONE_WEEK) {
                 setBackgroundAndTextColor(R.drawable.rounded_rectangle_bronze, android.R.color.white);
-            } else if (streak >= ONE_WEEK && streak < TWO_WEEKS) {
+            } else if (streak < TWO_WEEKS) {
                 setBackgroundAndTextColor(R.drawable.rounded_rectangle_silver, android.R.color.black);
-            } else if (streak >= TWO_WEEKS) {
+            } else {
                 setBackgroundAndTextColor(R.drawable.rounded_rectangle_gold, android.R.color.black);
             }
         } else {
