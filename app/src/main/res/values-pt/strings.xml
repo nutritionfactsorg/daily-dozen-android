@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Daily Dozen</string>
 
     <string name="beans">Feijões</string>
     <string name="berries">Bagas</string>
