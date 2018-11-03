@@ -5,7 +5,7 @@
     <string name="berries">Bagas</string>
     <string name="other_fruits">Outras frutas</string>
     <string name="cruciferous_vegetables">Vegetais crucíferos</string>
-    <string name="greens">Verdes</string>
+    <string name="greens">Verduras</string>
     <string name="other_vegetables">Outros vegetais</string>
     <string name="flaxseeds">Sementes de linhaça</string>
     <string name="nuts">Nozes e sementes</string>
@@ -15,7 +15,7 @@
     <string name="exercise">Exercício</string>
     <string name="vitamin_b12">Vitamina B12</string>
     <string name="vitamin_d">Vitamina D</string>
-    <string name="serving_sizes">Tamanho das Porções</string>
+    <string name="serving_sizes">Tamanho das porções</string>
     <string name="types">Tipos</string>
     <string name="history">História</string>
     <string name="servings_some">Algumas porções</string>
@@ -50,7 +50,7 @@
     <string name="back_to_today">Voltar ao dia de hoje</string>
     <string name="debug">Depurar</string>
     <string name="debug_clear_data">Limpar todos os dados</string>
-    <string name="debug_clear_data_message">Isto excluirá todas as Porções inseridas. Deseja continuar?</string>
+    <string name="debug_clear_data_message">Isto excluirá todas as porções inseridas. Deseja continuar?</string>
     <string name="OK">OK</string>
     <string name="dialog_streaks_title">Nova funcionalidade: Sequências!</string>
     <string name="dialog_streaks_message">A sua base de dados será atualizada para suportar a nova funcionalidade de sequências.</string>
@@ -212,8 +212,8 @@
 
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Rúcula</item>
-        <item>Couve chinesa chingensai (Bok choy)</item>
-        <item>Brócolos (inclui Romanesco)</item>
+        <item>Couve chingensai (bok choy)</item>
+        <item>Brócolos/Brócolis (inclui romanesco)</item>
         <item>Couve-de-bruxelas</item>
         <item>Repolho (verde, vermelho e savoy)</item>
         <item>Couve-flor (branca, verde, laranja e roxa)</item>
@@ -407,14 +407,14 @@
 
     <string-array name="food_info_serving_sizes_beans">
         <item>%s de hummus ou molho de feijão</item>
-        <item>%s feijões cozidos, ervilhas partidas, lentilhas, tofu ou tempeh</item>
+        <item>%s de feijões cozidos, ervilhas partidas, lentilhas, tofu ou tempeh</item>
         <item>%s de ervilhas frescas ou lentilhas germinadas</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ tigela</item>
-        <item>½ tigela</item>
-        <item>1 tigela</item>
+        <item>¼ chávena</item>
+        <item>½ chávena</item>
+        <item>1 chávena</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans_metric">
@@ -424,13 +424,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries">
-        <item>%s fresco(a)s ou congelado(a)s</item>
-        <item>%s secos</item>
+        <item>%s de bagas frescas ou congeladas</item>
+        <item>%s de bagas secas</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ tigela</item>
-        <item>¼ tigela</item>
+        <item>½ chávena</item>
+        <item>¼ chávena</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_berries_metric">
@@ -446,8 +446,8 @@
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
         <item>1</item>
-        <item>1 tigela</item>
-        <item>¼ tigela</item>
+        <item>1 chávena</item>
+        <item>¼ chávena</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
@@ -457,14 +457,14 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s picados</item>
+        <item>%s de vegetais picados</item>
         <item>%s de rebentos de couve-de-bruxelas ou de brócolos</item>
-        <item>%s colher(es) de sopa de rábano</item>
+        <item>%s de rábano</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ tigela</item>
-        <item>¼ tigela</item>
+        <item>½ chávena</item>
+        <item>¼ chávena</item>
         <item>1 colher de sopa</item>
     </string-array>
 
@@ -475,13 +475,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
-        <item>%s cru(a)s</item>
-        <item>%s cozido(a)s</item>
+        <item>%s de verduras cruas</item>
+        <item>%s de verduras cozidas</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 tigela</item>
-        <item>½ tigela</item>
+        <item>1 chávena</item>
+        <item>½ chávena</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens_metric">
@@ -490,17 +490,17 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s de vegetais com folha cru(a)s</item>
-        <item>%s de vegetais sem folha cru(a)s ou cozido(a)s</item>
+        <item>%s de vegetais crus com folha</item>
+        <item>%s de vegetais crus ou cozidos sem folha</item>
         <item>%s de suco/sumo de vegetais</item>
         <item>%s de cogumelos secos</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 tigela</item>
-        <item>½ tigela</item>
-        <item>½ tigela</item>
-        <item>¼ tigela</item>
+        <item>1 chávena</item>
+        <item>½ chávena</item>
+        <item>½ chávena</item>
+        <item>¼ chávena</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
@@ -511,7 +511,7 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s colher(es) de sopa (moída)</item>
+        <item>%s (moída/triturada)</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
@@ -524,11 +524,11 @@
 
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s de nozes e sementes</item>
-        <item>%s colher(es) de sopa de manteiga de nozes ou sementes</item>
+        <item>%s de manteiga/pasta de nozes ou sementes</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ tigela</item>
+        <item>¼ chávena</item>
         <item>2 colheres de sopa</item>
     </string-array>
 
@@ -538,9 +538,8 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
-        <item>%s colher(es) de chá de cúrcuma/açafrão-da-índia
-</item>
-        <item>%s qualquer outra erva (sem sal) e especiarias que goste</item>
+        <item>%s de cúrcuma/açafrão-da-índia</item>
+        <item>%s de qualquer outra erva (sem sal) e especiarias que goste</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
@@ -557,16 +556,16 @@
         <item>%s de cereais quentes ou grãos cozidos, massas ou grãos de milho</item>
         <item>%s de cereais frios</item>
         <item>%s tortilha ou fatia de pão</item>
-        <item>%s½ de um bagel ou muffin Inglês</item>
+        <item>%s bagel ou muffin Inglês</item>
         <item>%s de pipocas abertas</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ tigela</item>
-        <item>1 tigela</item>
+        <item>½ chávena</item>
+        <item>1 chávena</item>
         <item>1</item>
         <item>½</item>
-        <item>3 tigelas</item>
+        <item>3 chávenas</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
