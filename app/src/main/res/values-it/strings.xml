@@ -203,13 +203,13 @@
         <item />
         <item>Le seguenti librerie open source sono utilizzate: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
         <item />
-        <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell'app precedente: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
+        <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell\'app precedente: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
-        <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell'app precedente</item>
+        <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell\'app precedente</item>
         <item />
-        <item>1. L'app Daily Dozen deve essere installata sul vostro telefono Android. Potete scaricarla qui: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. L\'app Daily Dozen deve essere installata sul vostro telefono Android. Potete scaricarla qui: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
         <item>2. Tocca il file di backup allegato a questa email.</item>
         <item />
@@ -252,7 +252,7 @@
     </string-array>
 
     <string-array name="food_info_types_berries">
-        <item>Bacche d'Acai</item>
+        <item>Bacche d\'Acai</item>
         <item>Berberis</item>
         <item>More</item>
         <item>Mirtilli</item>
@@ -461,7 +461,7 @@
         <item>Treading water</item>
         <item>Camminando di buon passo (6 km/h)</item>
         <item>Water aerobics</item>
-        <item>Sci d'acqua</item>
+        <item>Sci d\'acqua</item>
         <item>Cantiere di lavoro</item>
         <item>Yoga</item>
         <item>Zaino in Spalla</item>
