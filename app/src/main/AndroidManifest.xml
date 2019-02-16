@@ -125,6 +125,12 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
+        <provider
+            android:name="com.activeandroid.content.ContentProvider"
+            android:authorities="org.nutritionfacts.dailydozen"
+            android:enabled="true"
+            android:exported="false">
+        </provider>
 
     </application>
 </manifest>
