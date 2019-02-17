@@ -50,6 +50,12 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 Updates
 -------
 
+### Version 16
+- Fixed non-smooth scrolling - thanks to contributor [DJTai](https://github.com/DJTai)
+- Added Italian translation - thanks to contributor [lucab85](https://github.com/lucab85)
+- Added Portuguese translation - thanks to contributor [Armfoot](https://github.com/Armfoot)
+- Updated to target latest Android SDK
+
 ### Version 15.1
 - Fixed crash for Romanian and Chinese users when opening information for Whole Grains
 
