@@ -604,5 +604,6 @@
     </string-array>
 
     <string name="error_cannot_handle_url">Não foi possível abrir o URL. Por favor, instale um browser.</string>
+    <string name="channel_reminders_name">Lembretes</string>
 
 </resources>

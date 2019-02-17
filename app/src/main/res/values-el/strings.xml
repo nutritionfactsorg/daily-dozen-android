@@ -604,5 +604,6 @@
     </string-array>
 
     <string name="error_cannot_handle_url">Δεν ήταν δυνατό το άνοιγμα url. Παρακαλώ εγκαταστήστε ένα πρόγραμμα περιήγησης.</string>
+    <string name="channel_reminders_name">Υπενθυμίσεις</string>
 
 </resources>

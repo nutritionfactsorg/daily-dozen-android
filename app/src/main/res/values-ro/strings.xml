@@ -622,5 +622,6 @@
     </string-array>
 
     <string name="error_cannot_handle_url">Nu s-a putut deschide adresa URL. Vă rugăm să instalați un browser.</string>
+    <string name="channel_reminders_name">Mementouri</string>
 
 </resources>

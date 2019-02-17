@@ -12,6 +12,6 @@ import org.nutritionfacts.dailydozen.util.NotificationUtil;
 public class DeviceBootReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        NotificationUtil.initUpdateReminderNotificationAlarm(context);
+        NotificationUtil.init(context);
     }
 }

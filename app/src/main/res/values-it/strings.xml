@@ -26,33 +26,10 @@
     <string name="about">Riferimenti</string>
     <string name="about_this_app">A proposito di questa applicazione</string>
     <string name="latest_videos">Ultimi Video</string>
-    <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
-    <string name="book_title" translatable="false">How Not to Die</string>
-    <string name="url_book" translatable="false">http://nutritionfacts.org/book/</string>
     <string name="donate">Donare</string>
-    <string name="url_donate" translatable="false">https://nutritionfacts.org/donate/</string>
     <string name="subscribe">Sottoscrivi</string>
-    <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe/</string>
     <string name="open_source">Open Source</string>
-    <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source/</string>
-    <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
-    <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
-    <string name="name_john_slavick" translatable="false">John Slavick</string>
-    <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
-    <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
-    <string name="library_android_iconify" translatable="false">android-iconify</string>
     <string name="library_butterknife">ButterKnife</string>
-    <string name="library_caldroid" translatable="false">Caldroid</string>
-    <string name="library_eventbus" translatable="false">EventBus</string>
-    <string name="library_likeanimation" translatable="false">LikeAnimation</string>
-    <string name="library_mpandroidchart" translatable="false">MPAndroidChart</string>
-    <string name="url_activeandroid" translatable="false">https://github.com/pardom/ActiveAndroid</string>
-    <string name="url_android_iconify" translatable="false">https://github.com/JoanZapata/android-iconify</string>
-    <string name="url_butterknife" translatable="false">https://github.com/JakeWharton/butterknife</string>
-    <string name="url_caldroid" translatable="false">https://github.com/roomorama/Caldroid</string>
-    <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
-    <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
-    <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
     <string name="permission_needed_to_write_storage">Non puoi eseguire backup senza il permesso di scrittura nell\'archivio</string>
     <string name="backup_failed">Backup non riuscito</string>
     <string name="restore_failed">Ripristino fallito</string>
@@ -60,16 +37,11 @@
     <string name="restore_success">Ripristinato con successo</string>
     <string name="restore_confirm_title">Ripristinare il backup</string>
     <string name="restore_confirm_message">Tutti i dati esistenti verranno eliminati prima di ripristinare dal backup. Vuoi continuare?</string>
-    <string name="backup_mimetype" translatable="false">message/rfc822</string>
     <string name="yes">Sì</string>
     <string name="no">No</string>
     <string name="backup">Backup</string>
     <string name="food_info">Info Alimentari</string>
     <string name="food_history">Cronologia Cibo</string>
-    <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
-    <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
-    <string name="num_servings_max" translatable="false">24</string>
-    <string name="icon_chart" translatable="false">{fa-bar-chart 20dp @color/gray_dark}</string>
     <string name="daily_servings_history">Cronologia quotidiana</string>
     <string name="no_servings_recorded">Non hai ancora registrato alcuna porzione!</string>
     <string name="task_backup_title">Backup</string>
@@ -91,8 +63,6 @@
     <string name="task_loading_servings_history_title">Caricamento cronologia porzioni</string>
     <string name="time_scale">Cronologia</string>
     <string name="history_to_generate">Cronologia da generare</string>
-    <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
-    <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
     <string name="welcome_to_my_daily_dozen">Benvenuti nel mio Daily Dozen!</string>
     <string name="activity_welcome_text">Utilizzare questa applicazione su una base quotidiana per tenere traccia degli alimenti che consiglio per una salute ottimale e la longevità nel mio libro How Not to Die.</string>
     <string name="dialog_ask_user_to_rate_app_title">Ti piace questa app?</string>
@@ -114,46 +84,6 @@
     <string name="metric">Metriche</string>
     <string name="vitamin_divider_text">Vitamins</string>
     <string name="dialog_vitamin_explanation_text">La vitamina B12 e la vitamina D sono essenziali per la tua salute ma non contano per le porzioni giornaliere.\n\nSono incluse in questa app per offrirti un modo semplice per monitorarne il consumo.</string>
-
-    <!--
-    NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
-    must not be translated.
-    -->
-    <string name="food_info_videos_beans" translatable="false">beans</string>
-    <string name="food_info_videos_berries" translatable="false">berries</string>
-    <string name="food_info_videos_fruits" translatable="false">fruit</string>
-    <string name="food_info_videos_cruciferous" translatable="false">cruciferous-vegetables</string>
-    <string name="food_info_videos_greens" translatable="false">greens</string>
-    <string name="food_info_videos_vegetables" translatable="false">vegetables</string>
-    <string name="food_info_videos_flaxseeds" translatable="false">flax-seeds</string>
-    <string name="food_info_videos_nuts" translatable="false">nuts</string>
-    <string name="food_info_videos_spices" translatable="false">spices</string>
-    <string name="food_info_videos_whole_grains" translatable="false">grains</string>
-    <string name="food_info_videos_beverages" translatable="false">beverages</string>
-    <string name="food_info_videos_exercise" translatable="false">exercise</string>
-    <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
-    <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
-
-    <!--
-    NOTE: These strings should never be translated from English
-    These strings are used as the canonical names for the different foods and make it easy to switch between languages
-    -->
-    <string-array name="food_id_names" translatable="false">
-        <item>Beans</item>
-        <item>Berries</item>
-        <item>Other Fruits</item>
-        <item>Cruciferous Vegetables</item>
-        <item>Greens</item>
-        <item>Other Vegetables</item>
-        <item>Flaxseeds</item>
-        <item>Nuts</item>
-        <item>Spices</item>
-        <item>Whole Grains</item>
-        <item>Beverages</item>
-        <item>Exercise</item>
-        <item>Vitamin B12</item>
-        <item>Vitamin D</item>
-    </string-array>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -692,203 +622,6 @@
 
     <string name="error_cannot_handle_url">Impossibile aprire URL. Si prega di installare un browser.</string>
 
-    <string-array name="food_videos_beans" translatable="false">
-        <item>black-beans</item>
-        <item/>
-        <item/>
-        <item/>
-        <item>chickpeas</item>
-        <item>edamame</item>
-        <item/>
-        <item>garbanzo-beans</item>
-        <item/>
-        <item>kidney-beans</item>
-        <item>lentils</item>
-        <item>miso</item>
-        <item>navy-beans</item>
-        <item>pinto-beans</item>
-        <item/>
-        <item>split-peas</item>
-        <item>tempeh</item>
-    </string-array>
-
-    <string-array name="food_videos_berries" translatable="false">
-        <item>acai-berries</item>
-        <item>barberries</item>
-        <item>blackberries</item>
-        <item>blueberries</item>
-        <item>cherries</item>
-        <item>concord-grapes</item>
-        <item>cranberries</item>
-        <item>goji-berries</item>
-        <item/>
-        <item/>
-        <item>raspberries</item>
-        <item>strawberries</item>
-    </string-array>
-
-    <string-array name="food_videos_other_fruits" translatable="false">
-        <item>apples</item>
-        <item>apricots</item>
-        <item>avocados</item>
-        <item>bananas</item>
-        <item>cantaloupe</item>
-        <item/>
-        <item>dates</item>
-        <item>figs</item>
-        <item>grapefruit</item>
-        <item/>
-        <item>kiwifruit</item>
-        <item>lemons</item>
-        <item>limes</item>
-        <item/>
-        <item>mango</item>
-        <item/>
-        <item>oranges</item>
-        <item>papaya</item>
-        <item/>
-        <item>peaches</item>
-        <item>pears</item>
-        <item>pineapples</item>
-        <item>plums</item>
-        <item/>
-        <item>pomegranates</item>
-        <item>prunes</item>
-        <item/>
-        <item>watermelon</item>
-    </string-array>
-
-    <string-array name="food_videos_cruciferous_vegetables" translatable="false">
-        <item/>
-        <item>bok-choy</item>
-        <item>broccoli</item>
-        <item>brussels-sprouts</item>
-        <item>cabbage</item>
-        <item>cauliflower</item>
-        <item>collard-greens</item>
-        <item/>
-        <item>kale</item>
-        <item>kohlrabi</item>
-        <item>mustard-greens</item>
-        <item>radishes</item>
-        <item>turnips</item>
-        <item>watercress</item>
-    </string-array>
-
-    <string-array name="food_videos_greens" translatable="false">
-        <item/>
-        <item>beet-greens</item>
-        <item>collard-greens</item>
-        <item>kale</item>
-        <item>mesclun-mix</item>
-        <item>mustard-greens</item>
-        <item/>
-        <item>spinach</item>
-        <item>swiss-chard</item>
-        <item>turnips</item>
-    </string-array>
-
-    <string-array name="food_videos_other_vegetables" translatable="false">
-        <item>artichokes</item>
-        <item>asparagus</item>
-        <item>beets</item>
-        <item>bell-peppers</item>
-        <item>carrots</item>
-        <item>corn</item>
-        <item>garlic</item>
-        <item>mushrooms</item>
-        <item>okra</item>
-        <item>onions</item>
-        <item>purple-potatoes</item>
-        <item>pumpkin</item>
-        <item>sea-vegetables</item>
-        <item/>
-        <item>squash</item>
-        <item>sweet-potatoes</item>
-        <item>tomatoes</item>
-        <item>zucchini</item>
-    </string-array>
-
-    <string-array name="food_videos_nuts" translatable="false">
-        <item>almonds</item>
-        <item>brazil-nuts</item>
-        <item>cashews</item>
-        <item>chia-seeds</item>
-        <item>hazelnuts</item>
-        <item/>
-        <item>macadamia-nuts</item>
-        <item>pecans</item>
-        <item>pistachios</item>
-        <item>pumpkin-seeds</item>
-        <item>sesame-seeds</item>
-        <item>sunflower-seeds</item>
-        <item>walnuts</item>
-    </string-array>
-
-    <string-array name="food_videos_spices" translatable="false">
-        <item>allspice</item>
-        <item>barberries</item>
-        <item>basil</item>
-        <item/>
-        <item>cardamom</item>
-        <item/>
-        <item>cilantro</item>
-        <item>cinnamon</item>
-        <item>cloves</item>
-        <item>coriander</item>
-        <item>cumin</item>
-        <item>curry-powder</item>
-        <item/>
-        <item>fenugreek</item>
-        <item>garlic</item>
-        <item>ginger</item>
-        <item/>
-        <item>lemongrass</item>
-        <item>marjoram</item>
-        <item>mustard-powder</item>
-        <item>nutmeg</item>
-        <item>oregano</item>
-        <item/>
-        <item>parsley</item>
-        <item>pepper</item>
-        <item>peppermint</item>
-        <item>rosemary</item>
-        <item>saffron</item>
-        <item/>
-        <item>thyme</item>
-        <item>turmeric</item>
-        <item/>
-    </string-array>
-
-    <string-array name="food_videos_whole_grains" translatable="false">
-        <item>barley</item>
-        <item>buckwheat</item>
-        <item>millet</item>
-        <item>oats</item>
-        <item>popcorn</item>
-        <item>quinoa</item>
-        <item>rye</item>
-        <item>teff</item>
-        <item>pasta</item>
-    </string-array>
-
-    <string-array name="food_videos_beverages" translatable="false">
-        <item>black-tea</item>
-        <item>chai-tea</item>
-        <item>chamomile-tea</item>
-        <item>coffee</item>
-        <item>earl-grey-tea</item>
-        <item>green-tea</item>
-        <item>hibiscus-tea</item>
-        <item/>
-        <item>jasmine-tea</item>
-        <item/>
-        <item>matcha</item>
-        <item>oolong-tea</item>
-        <item/>
-        <item>rooibos-tea</item>
-        <item>water</item>
-        <item>white-tea</item>
-    </string-array>
+    <string name="channel_reminders_name">promemoria</string>
 
 </resources>

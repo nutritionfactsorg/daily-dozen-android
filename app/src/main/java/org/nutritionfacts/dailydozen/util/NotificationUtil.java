@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.util;
 
 import android.app.AlarmManager;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -30,8 +31,10 @@ public class NotificationUtil {
     private static final int UPDATE_REMINDER_ID = 1;
     private static final int NOTIFICATION_SETTINGS_ID = 2;
 
+    private static final String CHANNEL_REMINDERS = "DAILY_DOZEN_REMINDERS_CHANNEL";
+
     public static void showUpdateReminderNotification(final Context context, Intent intent) {
-        final NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
+        final NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_REMINDERS)
                 .setAutoCancel(true)
                 .setSmallIcon(getRandomNotificationIcon(context))
                 .setContentTitle(context.getString(R.string.daily_reminder_title))
@@ -150,7 +153,22 @@ public class NotificationUtil {
         return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
-    public static void initUpdateReminderNotificationAlarm(final Context context) {
+    public static void init(final Context context) {
+        initNotificationChannels(context);
+        initUpdateReminderNotificationAlarm(context);
+    }
+
+    private static void initNotificationChannels(final Context context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            getNotificationManager(context).createNotificationChannel(new NotificationChannel(
+                    CHANNEL_REMINDERS,
+                    context.getString(R.string.channel_reminders_name),
+                    NotificationManager.IMPORTANCE_DEFAULT
+            ));
+        }
+    }
+
+    private static void initUpdateReminderNotificationAlarm(final Context context) {
         final Prefs prefs = Prefs.getInstance(context);
 
         UpdateReminderPref updateReminderPref = prefs.getUpdateReminderPref();
