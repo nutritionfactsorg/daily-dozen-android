@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import org.nutritionfacts.dailydozen.Common;
@@ -15,6 +16,7 @@ import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.GenerateDataTask;
 import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
+import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,6 +25,8 @@ import butterknife.OnClick;
 public class DebugActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     @BindView(R.id.history_to_generate_spinner)
     protected Spinner historyToGenerateSpinner;
+    @BindView(R.id.debug_show_notification)
+    protected Button showNotificationButton;
 
     private int historyToGenerate;
 
@@ -130,5 +134,10 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @OnClick(R.id.debug_show_notification)
+    public void onShowNotificationClicked() {
+        NotificationUtil.showUpdateReminderNotification(DebugActivity.this, null);
     }
 }

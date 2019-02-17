@@ -87,6 +87,7 @@
     <string name="debug_generate_random_data">Generate random data</string>
     <string name="debug_generate_full_data">Generate full data</string>
     <string name="debug_generate_data_message">All existing data will be replaced. Do you wish to continue?</string>
+    <string name="debug_show_reminder_notification" translatable="false">Show Reminder Notification</string>
     <string name="task_generating_random_data">Generating random data</string>
     <string name="task_loading_servings_history_title">Loading Servings History</string>
     <string name="time_scale">Time Scale</string>
