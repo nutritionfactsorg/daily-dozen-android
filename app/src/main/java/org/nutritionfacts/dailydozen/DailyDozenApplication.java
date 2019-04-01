@@ -8,6 +8,8 @@ import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
+import timber.log.Timber;
+
 public class DailyDozenApplication extends Application {
     @Override
     public void onCreate() {
@@ -15,7 +17,9 @@ public class DailyDozenApplication extends Application {
 
         Iconify.with(new FontAwesomeModule());
 
-        CustomLogger.init(this);
+        if (BuildConfig.DEBUG) {
+            Timber.plant(new Timber.DebugTree());
+        }
 
         ensureAllFoodsExistInDatabase();
 
