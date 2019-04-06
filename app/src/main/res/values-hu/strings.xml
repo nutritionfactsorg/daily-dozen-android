@@ -1,0 +1,894 @@
+<resources>
+    <string name="app_name">Daily Dozen</string>
+
+    <string name="beans">Babfélék</string>
+    <string name="berries">Bogyós gyümölcsök</string>
+    <string name="other_fruits">Egyéb gyümölcsök</string>
+    <string name="cruciferous_vegetables">Keresztesvirágúak</string>
+    <string name="greens">Leveles zöldek</string>
+    <string name="other_vegetables">Egyéb zöldségek</string>
+    <string name="flaxseeds">Lenmag</string>
+    <string name="nuts">Diók és olajos magvak</string>
+    <string name="spices">Fűszerek</string>
+    <string name="whole_grains">Teljes kiőrlésű gabonák</string>
+    <string name="beverages">Italok</string>
+    <string name="exercise">Edzés</string>
+    <string name="vitamin_b12">B12-vitamin</string>
+    <string name="vitamin_d">D-vitamin</string>
+    <string name="serving_sizes">Adagok</string>
+    <string name="types">Típusok</string>
+    <string name="history">Előzmények</string>
+    <string name="servings_some">Több adag</string>
+    <string name="servings_all">Összes adag</string>
+    <string name="servings">Adagok</string>
+    <string name="out_of">kivéve</string>
+    <string name="moving_average">Mozgó átlag</string>
+    <string name="about">Névjegy</string>
+    <string name="about_this_app">Az alkalmazásról</string>
+    <string name="latest_videos">Legújabb videók</string>
+    <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
+    <string name="book_title" translatable="false">How Not to Die</string>
+    <string name="url_book" translatable="false">http://nutritionfacts.org/book/</string>
+    <string name="donate">Adomány</string>
+    <string name="url_donate" translatable="false">https://nutritionfacts.org/donate/</string>
+    <string name="subscribe">Feliratkozás</string>
+    <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe/</string>
+    <string name="open_source">Open Source</string>
+    <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source/</string>
+    <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
+    <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
+    <string name="name_john_slavick" translatable="false">John Slavick</string>
+    <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
+    <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
+    <string name="library_android_iconify" translatable="false">android-iconify</string>
+    <string name="library_butterknife">ButterKnife</string>
+    <string name="library_caldroid" translatable="false">Caldroid</string>
+    <string name="library_eventbus" translatable="false">EventBus</string>
+    <string name="library_likeanimation" translatable="false">LikeAnimation</string>
+    <string name="library_mpandroidchart" translatable="false">MPAndroidChart</string>
+    <string name="url_activeandroid" translatable="false">https://github.com/pardom/ActiveAndroid</string>
+    <string name="url_android_iconify" translatable="false">https://github.com/JoanZapata/android-iconify</string>
+    <string name="url_butterknife" translatable="false">https://github.com/JakeWharton/butterknife</string>
+    <string name="url_caldroid" translatable="false">https://github.com/roomorama/Caldroid</string>
+    <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
+    <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
+    <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
+    <string name="permission_needed_to_write_storage">Biztonsági mentés nem lehetséges, az adattárolóhoz a hozzáférés megtagadva!</string>
+    <string name="backup_failed">Biztonsági mentés sikertelen</string>
+    <string name="restore_failed">Visszaállítás sikertelen</string>
+    <string name="backup_success">Sikeres biztonsági mentés</string>
+    <string name="restore_success">Sikeres visszaállítás</string>
+    <string name="restore_confirm_title">Biztonsági mentés visszaállítása</string>
+    <string name="restore_confirm_message">A biztonsági másolat visszaállítása minden jelenlegi adatot törölni fog. Szeretné folytatni?</string>
+    <string name="backup_mimetype" translatable="false">message/rfc822</string>
+    <string name="yes">Igen</string>
+    <string name="no">Nem</string>
+    <string name="backup">Backup</string>
+    <string name="food_info">Élelmiszer infó</string>
+    <string name="food_history">Élelmiszer-történet</string>
+    <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
+    <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
+    <string name="num_servings_max" translatable="false">24</string>
+    <string name="icon_chart" translatable="false">{fa-bar-chart 20dp @color/gray_dark}</string>
+    <string name="daily_servings_history">Napi elfogyasztott adagok</string>
+    <string name="no_servings_recorded">Még nem rögzített adagot!</string>
+    <string name="task_backup_title">Biztonsági mentés</string>
+    <string name="task_restore_title">Mentés visszaállítása</string>
+    <string name="task_calculating_streaks_title">Streaks adatok számítása</string>
+    <string name="back_to_today">Vissza a mai napra</string>
+    <string name="debug">Hibaelhárítás</string>
+    <string name="debug_clear_data">Összes adat törlése</string>
+    <string name="debug_clear_data_message">Az összes felvett adat törlődni fog. Kínvánja folytatni?</string>
+    <string name="OK">OK</string>
+    <string name="dialog_streaks_title">Új funkció: Streaks!</string>
+    <string name="dialog_streaks_message">Az adatbázisod most frissítésre kerül, hogy támogassa az új Streaks funkciót</string>
+    <string name="dialog_no_email_apps_title">Nem található levelező program</string>
+    <string name="dialog_no_email_apps_message">A biztonsági mentéshez egy telepített levelező program email szükséges, hogy el tudd magadnak küldeni a .csv biztonsági mentés fájlt. Kérem, telepítsen egy levelező programot, és próbálja újra!</string>
+    <string name="debug_generate_random_data">Véletlen adat generálás</string>
+    <string name="debug_generate_full_data">Teljes adat generálás</string>
+    <string name="debug_generate_data_message">Minden jelenlegi adat lecserélődik. Folyatatja?</string>
+    <string name="task_generating_random_data">Véletlen adatok generálása</string>
+    <string name="task_loading_servings_history_title">Elfogyasztott adagok betöltése</string>
+    <string name="time_scale">Időrend</string>
+    <string name="history_to_generate">Generálás időrendje</string>
+    <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
+    <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
+    <string name="welcome_to_my_daily_dozen">Üdvözli a Daily Dozen!</string>
+    <string name="activity_welcome_text">Az alkalmazás napi használatával figyelemmel kísérheti, hogy az Ön által elfogyasztott ételek megfelelnek-e az optimális egészség és hosszú élet eléréséhez adott javaslataimnak, a Hogy ne halj meg című könyvem alapján.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Tetszik Önnek ez az alkalmazás?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Kérem, értékelje a Play Store-ban!</string>
+    <string name="rate_now">Értékelem</string>
+    <string name="not_now">Most nem</string>
+    <string name="format_version" formatted="false">verzió %s</string>
+    <string name="format_num_days" formatted="false">%d nap</string>
+    <string name="daily_reminder_title">Daily Dozen emlékeztető</string>
+    <string name="daily_reminder_text">Frissítse a mennyiségeket</string>
+    <string name="daily_reminder_settings">Napi emlékeztető beállítások</string>
+    <string name="enable_daily_reminder">Napi emlékeztető engedélyezése</string>
+    <string name="remind_me_at">Emlékeztessen ekkor</string>
+    <string name="vibrate">Rezgés</string>
+    <string name="play_sound">Hangjelzés</string>
+    <string name="videos">Videó</string>
+    <string name="units">Egységek</string>
+    <string name="imperial">Angolszász</string>
+    <string name="metric">Metrikus</string>
+    <string name="vitamin_divider_text">Vitaminok</string>
+    <string name="dialog_vitamin_explanation_text">A B-12 és D-vitaminok alapvető fontosságúak az egészséghez, de a napi étrendünk segítségével nem jutunk belőlük elegendő mennyiséghez.\n\nAzért szerepelnek az alkalmazásban, hogy könnyen nyomon követhetővé tegye a bevitt mennyiséget.</string>
+
+    <!--
+    NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
+    must not be translated.
+    -->
+    <string name="food_info_videos_beans" translatable="false">beans</string>
+    <string name="food_info_videos_berries" translatable="false">berries</string>
+    <string name="food_info_videos_fruits" translatable="false">fruit</string>
+    <string name="food_info_videos_cruciferous" translatable="false">cruciferous-vegetables</string>
+    <string name="food_info_videos_greens" translatable="false">greens</string>
+    <string name="food_info_videos_vegetables" translatable="false">vegetables</string>
+    <string name="food_info_videos_flaxseeds" translatable="false">flax-seeds</string>
+    <string name="food_info_videos_nuts" translatable="false">nuts</string>
+    <string name="food_info_videos_spices" translatable="false">spices</string>
+    <string name="food_info_videos_whole_grains" translatable="false">grains</string>
+    <string name="food_info_videos_beverages" translatable="false">beverages</string>
+    <string name="food_info_videos_exercise" translatable="false">exercise</string>
+    <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
+    <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
+
+    <!--
+    NOTE: These strings should never be translated from English
+    These strings are used as the canonical names for the different foods and make it easy to switch between languages
+    -->
+    <string-array name="food_id_names" translatable="false">
+        <item>Beans</item>
+        <item>Berries</item>
+        <item>Other Fruits</item>
+        <item>Cruciferous Vegetables</item>
+        <item>Greens</item>
+        <item>Other Vegetables</item>
+        <item>Flaxseeds</item>
+        <item>Nuts</item>
+        <item>Spices</item>
+        <item>Whole Grains</item>
+        <item>Beverages</item>
+        <item>Exercise</item>
+        <item>Vitamin B12</item>
+        <item>Vitamin D</item>
+    </string-array>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
+    </string-array>
+
+    <string-array name="notification_icon_food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
+    </string-array>
+
+    <integer-array name="food_quantities">
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+
+    <string-array name="about_text_lines">
+        <item>Ezt az alkalmazást John Slavick készítette.</item>
+        <item />
+        <item>A következő nyílt forráskódú könyvtárakat használjuk fel: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item />
+        <item>Külön köszönet önkéntes erőfeszítéseikért az előző app készítőinek: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>Kövesse ezeket a lépéseket a Daily Dozen alkalmazás biztonsági mentésről történő visszaállításához</item>
+        <item />
+        <item>1. A Daily Dozen alkalmazást telepítenie kell az Android készülékére. Innen töltheti le: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Érintse meg a biztonsági mentés fájlt, melyet a levélben csatoltunk!</item>
+        <item />
+        <item>3. Válassza a Megnyitás a Daily Dozen alkalmazással opciót</item>
+    </string-array>
+
+    <string-array name="servings_time_scale_choices">
+        <item>Nap</item>
+        <item>Hónap</item>
+        <item>Év</item>
+    </string-array>
+
+    <string-array name="history_to_generate_choices">
+        <item>1 hónap</item>
+        <item>3 hónap</item>
+        <item>6 hónap</item>
+        <item>1 év</item>
+        <item>2 év</item>
+        <item>5 év</item>
+    </string-array>
+
+    <string-array name="food_info_types_beans">
+        <item>Fekete bab</item>
+        <item>Szembab</item>
+        <item>Vajbab</item>
+        <item>Cannellini bab</item>
+        <item>Csicseriborsó</item>
+        <item>Zöldbab</item>
+        <item>Zöldborsó</item>
+        <item>Garbanzo bab (csicseriborsó)</item>
+        <item>Nagy északi bab</item>
+        <item>Kidney bab</item>
+        <item>Lencse (beluga, francia, vörös)</item>
+        <item>Miso</item>
+        <item>Fehér bab</item>
+        <item>Tarka bab</item>
+        <item>Apró vörösbab</item>
+        <item>Feles (sárga vagy zöld) borsó</item>
+        <item>Tempe</item>
+    </string-array>
+
+    <string-array name="food_info_types_berries">
+        <item>Acai bogyó</item>
+        <item>Borbolya</item>
+        <item>Földi szederSzeder (eperfa termés)</item>
+        <item>Áfonya</item>
+        <item>Cseresznye vagy meggy</item>
+        <item>Concord szőlő</item>
+        <item>Vörös áfonya, tözegáfonya</item>
+        <item>Goji bogyó</item>
+        <item>Kumkvat</item>
+        <item>Földi szeder</item>
+        <item>Málna (fekete vagy vörös)</item>
+        <item>Eper</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_fruits">
+        <item>Alma</item>
+        <item>Őszibarack</item>
+        <item>Avokádó</item>
+        <item>Banán</item>
+        <item>Sárgadinnye (kantalup)</item>
+        <item>Mandarin (clementine)</item>
+        <item>Datolya</item>
+        <item>Aszalt füge</item>
+        <item>Grépfrút</item>
+        <item>Sárgadinnye</item>
+        <item>Kivi</item>
+        <item>Citrom</item>
+        <item>Zöldcitrom</item>
+        <item>Licsi</item>
+        <item>Mangó</item>
+        <item>Nektarin (kopaszbarack)</item>
+        <item>Narancs</item>
+        <item>Papaja</item>
+        <item>Maracuja (passiógyümölcs)</item>
+        <item>Őszibarack</item>
+        <item>Körte</item>
+        <item>Ananász</item>
+        <item>Szilva (különösen a fekete szilva)</item>
+        <item>Ringló szilva</item>
+        <item>Gránátalma</item>
+        <item>Aszalt szilva</item>
+        <item>Mandarin (tangerine)</item>
+        <item>Görögdinnye</item>
+    </string-array>
+
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Rukkola (borsmustár)</item>
+        <item>Bokcsoj</item>
+        <item>Brokkoli (Romanesco-t is beleértve</item>
+        <item>Bimbós kel</item>
+        <item>Káposzta (zöld, vörös, és Savoy)</item>
+        <item>Karfiol (fehér, zöld, narancs, és lila)</item>
+        <item>Kelkáposzta</item>
+        <item>Torma</item>
+        <item>Fodros kel (fekete, zöld, és vörös)</item>
+        <item>Karalábé (zöld és lila)</item>
+        <item>Mustárlevél</item>
+        <item>Retek</item>
+        <item>Fehérrépa</item>
+        <item>Vízitorma</item>
+    </string-array>
+
+    <string-array name="food_info_types_greens">
+        <item>Rukkola (borsmustár)</item>
+        <item>Céklalevél</item>
+        <item>Kelkáposzta levél</item>
+        <item>Fodros kel (fekete, zöld, és vörös)</item>
+        <item>Mix Mesclun (Assortimento di insalta giovane)</item>
+        <item>Senape verde</item>
+        <item>Acetosa</item>
+        <item>Spinaci</item>
+        <item>Bietola</item>
+        <item>Fehérrépa zöldje</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_vegetables">
+        <item>Articsóka</item>
+        <item>Spárga</item>
+        <item>Cékla</item>
+        <item>Kaliforniai paprika</item>
+        <item>Sárgarépa</item>
+        <item>Kukorica</item>
+        <item>Fokhagyma</item>
+        <item>Gomba (csiperke, laska, portobello és siitake)</item>
+        <item>Okra</item>
+        <item>Hagyma</item>
+        <item>Lila burgonya</item>
+        <item>Sütőtök</item>
+        <item>Tengeri zöldségek (arame, dulse és nori)</item>
+        <item>Cukorborsó</item>
+        <item>Tök (delicata, spárga és spagetto tök)</item>
+        <item>Édesburgonya</item>
+        <item>Paradicsom</item>
+        <item>Cukkíni</item>
+    </string-array>
+
+    <string-array name="food_info_types_flaxseeds">
+        <item>Barna lenmag</item>
+        <item>Arany lenmag</item>
+    </string-array>
+
+    <string-array name="food_info_types_nuts">
+        <item>Mandula</item>
+        <item>Brazil dió (paradió) </item>
+        <item>Kesudió</item>
+        <item>Chia mag</item>
+        <item>Mogyoró (törökmogyoró)</item>
+        <item>Kendermag</item>
+        <item>Makadámdió</item>
+        <item>Pekándió</item>
+        <item>Pisztácia</item>
+        <item>Tökmag</item>
+        <item>Szezámmag</item>
+        <item>Napraforgómag</item>
+        <item>Dió</item>
+    </string-array>
+
+    <string-array name="food_info_types_spices">
+        <item>Szegfűbors</item>
+        <item>Borbolya</item>
+        <item>Bazsalikom</item>
+        <item>Babérlevél</item>
+        <item>Kardamom </item>
+        <item>Csili paprika</item>
+        <item>Koriander (levél)</item>
+        <item>Fahéj</item>
+        <item>Szegfűszeg</item>
+        <item>Koriander (mag)</item>
+        <item>Kömény</item>
+        <item>Curry (őrölt)</item>
+        <item>Kapor</item>
+        <item>Görögszéna</item>
+        <item>Fokhagyma</item>
+        <item>Gyömbér</item>
+        <item>Torma</item>
+        <item>Citromfű</item>
+        <item>Majoranna</item>
+        <item>Őrölt mustár</item>
+        <item>Szerecsendió</item>
+        <item>Origáno</item>
+        <item>Füstölt paprika</item>
+        <item>Petrezselyem</item>
+        <item>Papri</item>
+        <item>Menta piperita</item>
+        <item>Rozmaring</item>
+        <item>Sáfrány</item>
+        <item>Zsálya</item>
+        <item>Kakukkfű</item>
+        <item>Kurkuma</item>
+        <item>Vanília</item>
+    </string-array>
+
+    <string-array name="food_info_types_whole_grains">
+        <item>Árpa</item>
+        <item>Hajdina</item>
+        <item>Köles</item>
+        <item>Zab</item>
+        <item>Pattogatott kukorica</item>
+        <item>Quinoa</item>
+        <item>Rozs</item>
+        <item>Teff</item>
+        <item>Teljes kiőrlésű tészta</item>
+    </string-array>
+
+    <string-array name="food_info_types_beverages">
+        <item>Fekete tea</item>
+        <item>Chai tea</item>
+        <item>Kamilla tea</item>
+        <item>Kávé</item>
+        <item>Earl Grey tea</item>
+        <item>Zöld tea</item>
+        <item>Hibiszkusz tea</item>
+        <item>Forró csokoládé</item>
+        <item>Jázmin tea</item>
+        <item>Citromfű tea</item>
+        <item>Matcha tea</item>
+        <item>Mandulavirág tea</item>
+        <item>Borsmenta tea</item>
+        <item>Rooibos (afrikai vöröstea)</item>
+        <item>Víz</item>
+        <item>Fehér tea</item>
+    </string-array>
+
+    <string-array name="food_info_types_exercise">
+        <item>Biciklizés</item>
+        <item>Kenuzás</item>
+        <item>Tánc</item>
+        <item>Kidobós</item>
+        <item>Síelés</item>
+        <item>Vívás</item>
+        <item>Túrázás</item>
+        <item>Házimunka</item>
+        <item>Korcsolyázás</item>
+        <item>Vonalon belüli gördeszkázás</item>
+        <item>Zsonglőrködés</item>
+        <item>Trambulinon ugrálás</item>
+        <item>Evezés</item>
+        <item>Frizbizés</item>
+        <item>Görkorcsolyázás</item>
+        <item>Kosárra dobás</item>
+        <item>Könnyű hólapátolás</item>
+        <item>Gördeszkázás</item>
+        <item>Búvárkodás (könnyűbúvár)</item>
+        <item>Szörfözés</item>
+        <item>Pihentető úszás</item>
+        <item>Tenisz (páros)</item>
+        <item>Víztaposás</item>
+        <item>Tempós gyaloglás (6 km/h)</item>
+        <item>Vízi aerobic</item>
+        <item>Vizisíelés</item>
+        <item>Kerti munka</item>
+        <item>Jóga</item>
+        <item>Túrázás</item>
+        <item>Kosárlabda</item>
+        <item>Biciklizés emelkedőn</item>
+        <item>Súlyzós köredzés</item>
+        <item>Sífutás</item>
+        <item>(Amerikai) futball</item>
+        <item>Jégkorong</item>
+        <item>Kocogás</item>
+        <item>Terpeszugrás</item>
+        <item>Ugrókötelezés</item>
+        <item>Lacrosse</item>
+        <item>Fekvőtámasz</item>
+        <item>Húzódzkodás</item>
+        <item>Raketball </item>
+        <item>Sziklamászás</item>
+        <item>Rögbi</item>
+        <item>Futás</item>
+        <item>Búvárkodás (mélymerülés)</item>
+        <item>Tenisz (egyéni)</item>
+        <item>Futball</item>
+        <item>Pattinaggio veloce</item>
+        <item>Squash</item>
+        <item>Aerobic</item>
+        <item>Úszás</item>
+        <item>Gyorsgyaloglás emelkedőn</item>
+        <item>Vízi kocogás (aqua jogging)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans">
+        <item>%s humusz vagy babkrém</item>
+        <item>%s főtt bab, sárgabor, lencse, tofu, vagy tempe</item>
+        <item>%s friss borsó vagy csíráztatott lencse </item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ csésze</item>
+        <item>½ csésze</item>
+        <item>1 csésze</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g</item>
+        <item>130 g</item>
+        <item>150 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries">
+        <item>%s friss vagy fagyasztott</item>
+        <item>%s szárított</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ csésze</item>
+        <item>¼ csésze</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g</item>
+        <item>40 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>%s1 közepes méretű</item>
+        <item>%s felvágott gyümölcs</item>
+        <item>%s szárított gyümölcs</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item/>
+        <item>1 csésze</item>
+        <item>¼ csésze</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item/>
+        <item>120 g</item>
+        <item>40 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+        <item>%s szeletelt</item>
+        <item>%s bimbós kel vagy brokkoli hajtás</item>
+        <item>%s1 evőkanál torma</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ csésze</item>
+        <item>¼ csésze</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g</item>
+        <item>12 g</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens">
+        <item>%s nyers</item>
+        <item>%s főtt</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 csésze</item>
+        <item>½ csésze</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g</item>
+        <item>90 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>%s nyers leveles zöldségek</item>
+        <item>%s nyers vagy főtt nem leveles zöldségek</item>
+        <item>%s zöldséglé</item>
+        <item>%s szárított</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 csésze</item>
+        <item>½ csésze</item>
+        <item>½ csésze</item>
+        <item>¼ csésze</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 ml</item>
+        <item>7 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>%s1 evőkanál</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>%s magvak és diófélék</item>
+        <item>%s2 evőkanál dió vagy magkrém</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ csésze</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices">
+        <item>%s¼ teáskanál kurkuma</item>
+        <item>%s Bármilyen egyéb (sómentes) fűszer, amit szeretsz</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>%s forralt vagy főtt gabonák, tészták, vagy maghéj</item>
+        <item>%s hideg gabonák</item>
+        <item>%s1 tortilla, vagy kenyérszelet</item>
+        <item>%s½ bagel (bécsi kifli) vagy angol muffin</item>
+        <item>%s popcorn</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ csésze</item>
+        <item>1 csésze</item>
+        <item/>
+        <item/>
+        <item>3 csésze</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g</item>
+        <item>50 g</item>
+        <item/>
+        <item/>
+        <item>30 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages">
+        <item>Egy pohár (%s)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12 uncia</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350 ml</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>%s90 perc mérsékelt intenzitású edzés</item>
+        <item>%s40 perc nagy intenzitású edzés</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string name="error_cannot_handle_url">Az URL nem nyitható meg. Kérjük, telepítsen böngészőt!</string>
+
+    <string-array name="food_videos_beans" translatable="false">
+        <item>black-beans</item>
+        <item/>
+        <item/>
+        <item/>
+        <item>chickpeas</item>
+        <item>edamame</item>
+        <item/>
+        <item>garbanzo-beans</item>
+        <item/>
+        <item>kidney-beans</item>
+        <item>lentils</item>
+        <item>miso</item>
+        <item>navy-beans</item>
+        <item>pinto-beans</item>
+        <item/>
+        <item>split-peas</item>
+        <item>tempeh</item>
+    </string-array>
+
+    <string-array name="food_videos_berries" translatable="false">
+        <item>acai-berries</item>
+        <item>barberries</item>
+        <item>blackberries</item>
+        <item>blueberries</item>
+        <item>cherries</item>
+        <item>concord-grapes</item>
+        <item>cranberries</item>
+        <item>goji-berries</item>
+        <item/>
+        <item/>
+        <item>raspberries</item>
+        <item>strawberries</item>
+    </string-array>
+
+    <string-array name="food_videos_other_fruits" translatable="false">
+        <item>apples</item>
+        <item>apricots</item>
+        <item>avocados</item>
+        <item>bananas</item>
+        <item>cantaloupe</item>
+        <item/>
+        <item>dates</item>
+        <item>figs</item>
+        <item>grapefruit</item>
+        <item/>
+        <item>kiwifruit</item>
+        <item>lemons</item>
+        <item>limes</item>
+        <item/>
+        <item>mango</item>
+        <item/>
+        <item>oranges</item>
+        <item>papaya</item>
+        <item/>
+        <item>peaches</item>
+        <item>pears</item>
+        <item>pineapples</item>
+        <item>plums</item>
+        <item/>
+        <item>pomegranates</item>
+        <item>prunes</item>
+        <item/>
+        <item>watermelon</item>
+    </string-array>
+
+    <string-array name="food_videos_cruciferous_vegetables" translatable="false">
+        <item/>
+        <item>bok-choy</item>
+        <item>broccoli</item>
+        <item>brussels-sprouts</item>
+        <item>cabbage</item>
+        <item>cauliflower</item>
+        <item>collard-greens</item>
+        <item/>
+        <item>kale</item>
+        <item>kohlrabi</item>
+        <item>mustard-greens</item>
+        <item>radishes</item>
+        <item>turnips</item>
+        <item>watercress</item>
+    </string-array>
+
+    <string-array name="food_videos_greens" translatable="false">
+        <item/>
+        <item>beet-greens</item>
+        <item>collard-greens</item>
+        <item>kale</item>
+        <item>mesclun-mix</item>
+        <item>mustard-greens</item>
+        <item/>
+        <item>spinach</item>
+        <item>swiss-chard</item>
+        <item>turnips</item>
+    </string-array>
+
+    <string-array name="food_videos_other_vegetables" translatable="false">
+        <item>artichokes</item>
+        <item>asparagus</item>
+        <item>beets</item>
+        <item>bell-peppers</item>
+        <item>carrots</item>
+        <item>corn</item>
+        <item>garlic</item>
+        <item>mushrooms</item>
+        <item>okra</item>
+        <item>onions</item>
+        <item>purple-potatoes</item>
+        <item>pumpkin</item>
+        <item>sea-vegetables</item>
+        <item/>
+        <item>squash</item>
+        <item>sweet-potatoes</item>
+        <item>tomatoes</item>
+        <item>zucchini</item>
+    </string-array>
+
+    <string-array name="food_videos_nuts" translatable="false">
+        <item>almonds</item>
+        <item>brazil-nuts</item>
+        <item>cashews</item>
+        <item>chia-seeds</item>
+        <item>hazelnuts</item>
+        <item/>
+        <item>macadamia-nuts</item>
+        <item>pecans</item>
+        <item>pistachios</item>
+        <item>pumpkin-seeds</item>
+        <item>sesame-seeds</item>
+        <item>sunflower-seeds</item>
+        <item>walnuts</item>
+    </string-array>
+
+    <string-array name="food_videos_spices" translatable="false">
+        <item>allspice</item>
+        <item>barberries</item>
+        <item>basil</item>
+        <item/>
+        <item>cardamom</item>
+        <item/>
+        <item>cilantro</item>
+        <item>cinnamon</item>
+        <item>cloves</item>
+        <item>coriander</item>
+        <item>cumin</item>
+        <item>curry-powder</item>
+        <item/>
+        <item>fenugreek</item>
+        <item>garlic</item>
+        <item>ginger</item>
+        <item/>
+        <item>lemongrass</item>
+        <item>marjoram</item>
+        <item>mustard-powder</item>
+        <item>nutmeg</item>
+        <item>oregano</item>
+        <item/>
+        <item>parsley</item>
+        <item>pepper</item>
+        <item>peppermint</item>
+        <item>rosemary</item>
+        <item>saffron</item>
+        <item/>
+        <item>thyme</item>
+        <item>turmeric</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_videos_whole_grains" translatable="false">
+        <item>barley</item>
+        <item>buckwheat</item>
+        <item>millet</item>
+        <item>oats</item>
+        <item>popcorn</item>
+        <item>quinoa</item>
+        <item>rye</item>
+        <item>teff</item>
+        <item>pasta</item>
+    </string-array>
+
+    <string-array name="food_videos_beverages" translatable="false">
+        <item>black-tea</item>
+        <item>chai-tea</item>
+        <item>chamomile-tea</item>
+        <item>coffee</item>
+        <item>earl-grey-tea</item>
+        <item>green-tea</item>
+        <item>hibiscus-tea</item>
+        <item/>
+        <item>jasmine-tea</item>
+        <item/>
+        <item>matcha</item>
+        <item>oolong-tea</item>
+        <item/>
+        <item>rooibos-tea</item>
+        <item>water</item>
+        <item>white-tea</item>
+    </string-array>
+
+</resources>
