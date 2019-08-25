@@ -1,0 +1,660 @@
+<resources>
+    <string name="app_name">Daily Dozen</string>
+
+    <string name="beans">Llegums</string>
+    <string name="berries">Baies</string>
+    <string name="other_fruits">Altres Fruites</string>
+    <string name="cruciferous_vegetables">Verdures Crucíferes</string>
+    <string name="greens">Verdures de Fulla Verda</string>
+    <string name="other_vegetables">Altres Verdures</string>
+    <string name="flaxseeds">Llavors de lli</string>
+    <string name="nuts">Fruita seca i llavors</string>
+    <string name="spices">Espècies i herbes aromàtiques</string>
+    <string name="whole_grains">Grans Integrals</string>
+    <string name="beverages">Begudes</string>
+    <string name="exercise">Exercici</string>
+    <string name="vitamin_b12">Vitamina B12</string>
+    <string name="vitamin_d">Vitamina D</string>
+    <string name="serving_sizes">Mida de les racions</string>
+    <string name="types">Tipus</string>
+    <string name="history">Història</string>
+    <string name="servings_some">Algunes racions</string>
+    <string name="servings_all">Totes les racions</string>
+    <string name="servings">Racions</string>
+    <string name="out_of">de</string>
+    <string name="moving_average">Mitjana mòbil</string>
+    <string name="about">Sobre nosaltres</string>
+    <string name="about_this_app">Sobre aquesta app</string>
+    <string name="latest_videos">Vídeos recents</string>
+    <string name="donate">Dona</string>
+    <string name="subscribe">Subscriu-te</string>
+    <string name="open_source">Codi obert</string>
+    <string name="library_butterknife">ButterKnife</string>
+    <string name="permission_needed_to_write_storage">No es pot fer la còpia de seguretat sense donar permís a l'app per accedir al disc dur</string>
+    <string name="backup_failed">La còpia de seguretat ha fallat</string>
+    <string name="restore_failed">La restauració ha fallat</string>
+    <string name="backup_success">Còpia de seguretat realitzada amb èxit</string>
+    <string name="restore_success">S'ha restaurat correctament</string>
+    <string name="restore_confirm_title">Restaura la còpia de seguretat</string>
+    <string name="restore_confirm_message">Totes les dades existents seran eliminades abans de restaurar la còpia de seguretat. Vols continuar?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="backup">Còpia de seguretat</string>
+    <string name="food_info">Informació sobre els aliments</string>
+    <string name="food_history">Història dels aliments</string>
+    <string name="daily_servings_history">Historial de Racions Diàries</string>
+    <string name="no_servings_recorded">Encara no has registrat cap ració!</string>
+    <string name="task_backup_title">Realitzant la còpia de seguretat</string>
+    <string name="task_restore_title">Restaurant la còpia de seguretat</string>
+    <string name="task_calculating_streaks_title">Calculant la ràfega</string>
+    <string name="back_to_today">Tornar a avui</string>
+    <string name="debug">Depurar</string>
+    <string name="debug_clear_data">Elimina totes les dades</string>
+    <string name="debug_clear_data_message">S'eliminaran totes les racions registrades. Vols continuar?</string>
+    <string name="OK">D'acord</string>
+    <string name="dialog_streaks_title">Nova característica: Ràfegues!</string>
+    <string name="dialog_streaks_message">La base de dades s'actualitzarà per a incorporar la nova característica de les ràfegues</string>
+    <string name="dialog_no_email_apps_title">No s'ha trobat una app de correu electrònic</string>
+    <string name="dialog_no_email_apps_message">Per fer una còpia de seguretat, cal que tinguis una app de correu electrònic instal·lada, per tal que puguis enviar-te el fitxer .csv de la còpia de seguretat a tu mateix/a. Sisplau, instal·la una app de correu electrònic i torna-ho a intentar.</string>
+    <string name="debug_generate_random_data">Genera dades aleatòries</string>
+    <string name="debug_generate_full_data">Genera dades completes</string>
+    <string name="debug_generate_data_message">Totes les dades existents seran substituïdes. Vols continuar?</string>
+    <string name="task_generating_random_data">Generant dades aleatòries</string>
+    <string name="task_loading_servings_history_title">Carregant l'Historial de Racions</string>
+    <string name="time_scale">Escala de Temps</string>
+    <string name="history_to_generate">Historial a Generar</string>
+    <string name="welcome_to_my_daily_dozen">Benvingut/da a Daily Dozen!</string>
+    <string name="activity_welcome_text">Utilitza aquesta app diàriament per mantenir un seguiment dels aliments que recomano per a una bona salut i longevitat en el meu llibre "How Not to Die" (Com No Morir).</string>
+    <string name="dialog_ask_user_to_rate_app_title">T'agrada aquesta app?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Sisplau deixa'ns una valoració a Play Store.</string>
+    <string name="rate_now">Escriu-nos</string>
+    <string name="not_now">Ara no</string>
+    <string name="format_version" formatted="false">versió %s</string>
+    <string name="format_num_days" formatted="false">%d dies</string>
+    <string name="daily_reminder_title">Recordatori Daily Dozen</string>
+    <string name="daily_reminder_text">Actualitza les teves racions d'avui</string>
+    <string name="daily_reminder_settings">Configuració del Recordatori Diari</string>
+    <string name="enable_daily_reminder">Activa el Recordatori Diari</string>
+    <string name="remind_me_at">Avisa'm a</string>
+    <string name="vibrate">Vibra</string>
+    <string name="play_sound">Reprodueix un so</string>
+    <string name="videos">Vídeos</string>
+    <string name="units">Unitats</string>
+    <string name="imperial">Imperials</string>
+    <string name="metric">Mètriques</string>
+    <string name="vitamin_divider_text">Vitamines</string>
+    <string name="dialog_vitamin_explanation_text">La vitamina B12 i la vitamina D són essencials per a la teva salut, però no compten com a racions diàries.\n\nHan estat incloses a l'app per ajudar-te a fer un seguiment de la seva ingesta.</string>
+    <!--
+    NOTE: These strings are used to created the url to take the user to the overall food videos page. Aquestes línies no s'han de traduir
+    -->
+    <string name="food_info_videos_beans" translatable="false">beans</string>
+    <string name="food_info_videos_berries" translatable="false">berries</string>
+    <string name="food_info_videos_fruits" translatable="false">fruit</string>
+    <string name="food_info_videos_cruciferous" translatable="false">cruciferous-vegetables</string>
+    <string name="food_info_videos_greens" translatable="false">greens</string>
+    <string name="food_info_videos_vegetables" translatable="false">vegetables</string>
+    <string name="food_info_videos_flaxseeds" translatable="false">flax-seeds</string>
+    <string name="food_info_videos_nuts" translatable="false">nuts</string>
+    <string name="food_info_videos_spices" translatable="false">spices</string>
+    <string name="food_info_videos_whole_grains" translatable="false">grains</string>
+    <string name="food_info_videos_beverages" translatable="false">beverages</string>
+    <string name="food_info_videos_exercise" translatable="false">exercise</string>
+    <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
+    <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
+
+    <!--
+    NOTE: Aquestes cadenes de càracters no s'haurien de traduir mai de l'anglès.
+    These strings are used as the canonical names for the different foods and make it easy to switch between languages
+    -->
+    <string-array name="food_id_names" translatable="false">
+        <item>Beans</item>
+        <item>Berries</item>
+        <item>Other Fruits</item>
+        <item>Cruciferous Vegetables</item>
+        <item>Greens</item>
+        <item>Other Vegetables</item>
+        <item>Flaxseeds</item>
+        <item>Nuts</item>
+        <item>Spices</item>
+        <item>Whole Grains</item>
+        <item>Beverages</item>
+        <item>Exercise</item>
+        <item>Vitamin B12</item>
+        <item>Vitamin D</item>
+    </string-array>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
+    </string-array>
+
+    <string-array name="notification_icon_food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
+    </string-array>
+
+    <integer-array name="food_quantities">
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+
+    <string-array name="about_text_lines">
+        <item>Aquesta app ha estat creada per John Slavick.</item>
+        <item />
+        <item>S'utilitzen les següents llibreries de codi obert: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation i MPAndroidChart.</item>
+        <item />
+        <item>Un agraïment especial als esforços voluntaris dels creadors de l'anterior app: en Chan Kruse, l'Allan Portera i la Sangeeta Kumar.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>Segueix aquests passos per restaurar aquesta còpia de seguretat a l'app Daily Dozen</item>
+        <item />
+        <item>1. L'app Daily Dozen ha d'estar instal·lada al teu dispositiu Android. Pots descarregar-la aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Clica al fitxer adjunt d'aquest missatge electrònic.</item>
+        <item />
+        <item>3. Selecciona Obre amb Daily Dozen</item>
+    </string-array>
+
+    <string-array name="servings_time_scale_choices">
+        <item>Dia</item>
+        <item>Mes</item>
+        <item>Any</item>
+    </string-array>
+
+    <string-array name="history_to_generate_choices">
+        <item>1 mes</item>
+        <item>3 mesos</item>
+        <item>6 mesos</item>
+        <item>1 any</item>
+        <item>2 anys</item>
+        <item>5 anys</item>
+    </string-array>
+
+    <string-array name="food_info_types_beans">
+        <item>Cigrons</item>
+		<item>Edamame (beines de soja verdes)</item>
+        <item>Fesols de l'ull negre</item>
+        <item>Fesol de garrofa</item>
+        <item>Fesols blancs</item>
+		<item>Fesols negres</item>
+		<item>Fesols partits (grocs o verds)</item>
+		<item>Fesols pigall</item>
+		<item>Fesols varietat Great Northern</item>
+        <item>Fesols varietat Kidney</item>
+        <item>Fesols varietat Navy</item>
+        <item>Fesols vermells petits</item>
+		<item>Llenties (beluga, franceses i varietats roges)</item>
+		<item>Miso</item>
+        <item>Pèsols anglesos</item>
+		<item>Tempeh</item>
+
+    </string-array>
+
+    <string-array name="food_info_types_berries">
+        <item>Baies d'Acai</item>
+        <item>Coralet</item>
+        <item>Mores d'esbarzer</item>
+        <item>Nabiu de grua</item>
+        <item>Cireres (dolces o àcides)</item>
+        <item>Raïm de taula</item>
+        <item>Gerds</item>
+        <item>Baies de Goji</item>
+        <item>Cumquat</item>
+        <item>Mores de morera</item>
+        <item>Gerds (negres o vermells)</item>
+        <item>Maduixes</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_fruits">
+        <item>Albercoc sec</item>
+		<item>Alvocats</item>
+		<item>Clementina</item>
+		<item>Dàtils</item>
+		<item>Figues seques</item>
+		<item>Litxi</item>
+		<item>Llimones</item>
+        <item>Llimes</item>
+		<item>Magranes</item>
+		<item>Mandarines</item>
+        <item>Mangos</item>
+		<item>Maracujà</item>
+		<item>Meló</item>
+		<item>Meló varietat cantalup</item>
+		<item>Meló verd varietat honeydew</item>
+		<item>Nectarines</item>
+		<item>Papaies</item>
+		<item>Peres</item>
+		<item>Pinya</item>
+		<item>Plàtans</item>
+		<item>Pluots</item>
+		<item>Pomelos</item>
+		<item>Pomes</item>
+        <item>Préssecs</item>
+		<item>Prunes (especialment les negres)</item>
+		<item>Prunes de confitar</item>
+		<item>Taronges</item>
+        <item>Kiwis</item>
+    </string-array>
+
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Bledes xineses</item>
+        <item>Bròquil (inclòs el Romanesco)</item>
+		<item>Col (verda, llombarda i de Milà)</item>
+		<item>Col farratgera</item>
+		<item>Col kale (negra, verda i vermella)</item>
+		<item>Cols de Brussel·les</item>
+        <item>Coliflor (blanca, verda, taronja i morada)</item>
+		<item>Colrave (verd i morat)</item>
+        <item>Créixens</item>
+		<item>Mostassa bruna</item>
+		<item>Naps</item>
+		<item>Raves</item>
+		<item>Rave boscà</item>
+		<item>Ruca</item>
+    </string-array>
+
+    <string-array name="food_info_types_greens">
+        <item>Agrella</item>
+		<item>Bledes</item>
+		<item>Col de cabdell</item>
+        <item>Col kale (negra, verda i vermella)</item>
+        <item>Espinacs</item>
+        <item>Mesclum (barreja de fulles verdes tendres)</item>
+        <item>Mostassa bruna</item>
+        <item>Naps</item>
+		<item>Remolatxa</item>
+		<item>Ruca</item>  
+    </string-array>
+
+    <string-array name="food_info_types_other_vegetables">
+        <item>Algues (arame, dulse i nori)</item>
+		<item>All</item>
+		<item>Panís</item>
+		<item>Bolets (xampinyons, gírgola, portobel·lo i xiitake)</item>
+		<item>Carabassa</item>
+		<item>Carbassó (varietats d'estiu, delicata i espagueti)</item>
+		<item>Carxofes</item>
+		<item>Ceba</item>
+		<item>Espàrrecs</item>
+		<item>Mongeta tendra</item>
+		<item>Moniato</item>
+		<item>Nyam</item>
+		<item>Ocra</item>
+        <item>Pastanagues</item>
+        <item>Patata violeta</item>
+		<item>Remolatxa</item>
+        <item>Tomàquet</item>
+    </string-array>
+
+    <string-array name="food_info_types_flaxseeds">
+        <item>Llavors de lli marrons</item>
+        <item>Llavors de lli daurades</item>
+    </string-array>
+
+    <string-array name="food_info_types_nuts">
+        <item>Ametlles</item>
+		<item>Anacards</item>
+		<item>Avellanes</item>
+		<item>Llavors de cànem</item>
+        <item>Llavors de carabassa</item>
+		<item>Llavors de gira-sol</item>
+		<item>Llavors de sèsam</item>
+		<item>Llavors de xia</item>
+		<item>Nous</item>
+        <item>Nous de macadàmia</item>
+		<item>Nous del Brasil</item>
+        <item>Pacana</item>
+        <item>Pistatxo o festuc</item>
+    </string-array>
+
+    <string-array name="food_info_types_spices">
+        <item>Alfàbrega</item>
+        <item>All</item>
+		<item>Anet o fonoll</item>
+		<item>Canyella</item>
+		<item>Cardamom</item>
+		<item>Claus d'espècia</item>
+        <item>Comí</item>
+		<item>Coralet</item>
+		<item>Coriandre</item>
+		<item>Cúrcuma</item>
+        <item>Curri</item>
+        <item>Farigola</item>
+        <item>Fenigrec</item>
+        <item>Gingebre</item>
+        <item>Herba llimona i citronel·la</item>
+        <item>Julivert</item>
+        <item>Llorer</item>
+        <item>Marduix</item>
+		<item>Menta</item>
+		<item>Mostassa en pols</item>
+        <item>Nou moscada</item>
+		<item>Orenga</item>
+		<item>Pebre de Caiena</item>
+        <item>Pebre de Jamaica</item>
+		<item>Pebre negre o blanc</item>
+		<item>Pebre vermell</item>
+		<item>Rave rusticà o boscà</item>
+        <item>Romaní</item>
+        <item>Safrà</item>
+        <item>Sàlvia</item>
+        <item>Vainilla</item>
+    </string-array>
+
+    <string-array name="food_info_types_whole_grains">
+        <item>Civada o avena</item>
+		<item>Crispetes</item>
+		<item>Fajol</item>
+		<item>Mill</item>
+		<item>Ordi</item>
+		<item>Pasta integral</item>
+		<item>Quinoa</item>
+		<item>Sègol</item>
+		<item>Tef</item>
+
+    </string-array>
+
+    <string-array name="food_info_types_beverages">
+        <item>Aigua</item>
+		<item>Cafè</item>
+		<item>Xocolata desfeta</item>
+		<item>Infusió d'hibisc</item>
+		<item>Infusió de gessamí</item>
+		<item>Infusió de menta</item>
+		<item>Infusió de tarongina</item>
+		<item>Roibos</item>
+		<item>Te blanc</item>
+		<item>Te chai</item>
+		<item>Te de vanilla i camamilla	</item>
+		<item>Te Earl Grey</item>
+		<item>Te matxa</item>
+		<item>Te negre</item>
+		<item>Te verd</item>
+		<item>Te wulong flo d'ametller</item>
+    </string-array>
+
+    <string-array name="food_info_types_exercise">
+		<item>Aeròbic a l'aigua</item>
+		<item>Ballar</item>
+		<item>Bàsquet</item>
+		<item>Caminar ràpidament (6 km/h)</item>
+		<item>Ciclisme de muntanya</item>
+		<item>Córrer</item>
+		<item>Córrer a l’aigua (Water jogging)</item>
+		<item>Entrenament de pes</item>
+		<item>Escalada</item>
+		<item>Esgrima</item>
+		<item>Esquaix </item>
+		<item>Esquí alpí</item>
+		<item>Esquí de fons</item>
+		<item>Esquí nàutic</item>
+		<item>Excursionisme</item>
+		<item>Feines de casa</item>
+		<item>Fons de braços</item>
+		<item>Futbol</item>
+		<item>Futbol sala</item>
+		<item>Fúting</item>
+		<item>Graons (Step aerobics)</item>
+		<item>Hoquei</item>
+		<item>Ioga</item>
+		<item>Jardineria</item>
+		<item>Joc de matar</item>
+		<item>Jugar al disc volador</item>
+		<item>Jumping jacks</item>
+		<item>Lacrosse</item>
+		<item>Llevar neu</item>
+		<item>Malabars</item>
+		<item>Malabars en un trampolí elàstic</item>
+		<item>Marxa nòrdica</item>
+		<item>Nadar</item>
+		<item>Natació</item>
+		<item>Paddle boating</item>
+		<item>Patinatge de monopatí</item>
+		<item>Patinatge de velocitat</item>
+		<item>Patinatge en línia</item>
+		<item>Patinatge sobre gel</item>
+		<item>Patinatge sobre rodes</item>
+		<item>Piragüisme</item>
+		<item>Pull-ups</item>
+		<item>Raquetbol</item>
+		<item>Rugbi</item>
+		<item>Saltar corda</item>
+		<item>Snorkeling o immersió lleugera </item>
+		<item>Submarinisme</item>
+		<item>Surf</item>
+		<item>Tenis</item>
+		<item>Tenis</item>
+		<item>Tirs a cistella (bàsquet)</item>
+		<item>Turisme de motxilla</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans">
+        <item>%s d'hummus o salsa de fesol</item>
+        <item>%s de fesols cuits, pèsols partits, llenties, tofu o tempeh</item>
+        <item>%s de pèsols frescos o brots de llenties</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ tassa</item>
+        <item>½ tassa</item>
+        <item>1 tassa</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g</item>
+        <item>130 g</item>
+        <item>150 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries">
+        <item>%s frescos o congelats</item>
+        <item>%s secs</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ tassa</item>
+        <item>¼ tassa</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g</item>
+        <item>40 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>%s1 fruita de mida mitjana</item>
+        <item>%s de fruita trossejada</item>
+        <item>%s de fruita dessecada</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item/>
+        <item>1 tassa</item>
+        <item>¼ tassa</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item/>
+        <item>120 g</item>
+        <item>40 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+        <item>%s tallats</item>
+        <item>%s  cols de Brussel·les o brots de bròquil</item>
+        <item>%s1 cullerada de rave rusticà</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ tassa</item>
+        <item>¼ tassa</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g</item>
+        <item>12 g</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens">
+        <item>%s crus</item>
+        <item>%s cuits</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 tassa</item>
+        <item>½ tassa</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g</item>
+        <item>90 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>%s de verdures de fulla crua</item>
+        <item>%s de verdures sense fulla crus o cuits</item>
+        <item>%s de suc de verdures</item>
+        <item>%s de bolets assecats</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 tassa</item>
+        <item>½ tassa</item>
+        <item>½ tassa</item>
+        <item>¼ tassa</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 ml</item>
+        <item>7 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>%s1 cullerada de lli molt</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>%s de fruits secs o llavors</item>
+        <item>%s2 cullerades de mantega de fruits secs o de llavors</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ tassa</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices">
+        <item>%s¼ culleradeta de cúrcuma</item>
+        <item>%sQualsevol altra espècie i herba aromàtica (sense sal)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>%s farinetes o grans cuits, pasta o panís</item>
+        <item>%s flocs de cereals</item>
+        <item>%s1 llesca de pa o tortilla</item>
+        <item>%s½ panet</item>
+        <item>%s de crispetes</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ tassa</item>
+        <item>1 tassa</item>
+        <item/>
+        <item/>
+        <item>3 tasses</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g</item>
+        <item>50 g</item>
+        <item/>
+        <item/>
+        <item>30 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages">
+        <item>Un got (%s)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12 unces</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350 ml</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>%s90 minuts d'exercici d'intensitat moderada</item>
+        <item>%s40 minuts d'exercici d'alta intensitat</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string name="error_cannot_handle_url">No es pot obrir l'URL. Sisplau instal·la un navegador.</string>
+
+</resources>
