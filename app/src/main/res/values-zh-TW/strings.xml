@@ -79,9 +79,9 @@
     <string name="vibrate">震動</string>
     <string name="play_sound">播放聲音</string>
     <string name="videos">影片</string>
-    <string name="units">Units</string>
-    <string name="imperial">帝国</string>
-    <string name="metric">公</string>
+    <string name="units">單位</string>
+    <string name="imperial">英制</string>
+    <string name="metric">公制</string>
     <string name="vitamin_divider_text">维生素</string>
     <string name="dialog_vitamin_explanation_text">维生素B12和维生素D对您的健康至关重要，但不计入您的日常服务。\ n \ n它包含在此应用程序中，为您提供一个简单的方法来跟踪您的摄入量</string>
 
@@ -444,7 +444,7 @@
         <item>½杯新鮮或冷凍莓果</item>
         <item>¼杯莓果乾</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½杯</item>
         <item>¼杯</item>
@@ -623,5 +623,3 @@
     <string name="error_cannot_handle_url">無法開啟網頁。請安裝瀏覽器。</string>
 
 </resources> 
-
-    

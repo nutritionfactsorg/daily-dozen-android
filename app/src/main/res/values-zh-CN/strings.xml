@@ -1,0 +1,625 @@
+<resources>
+    <string name="app_name">每日十二要素</string>
+
+    <string name="beans">豆类</string>
+    <string name="berries">浆果类</string>
+    <string name="other_fruits">其他水果</string>
+    <string name="cruciferous_vegetables">十字花科蔬菜</string>
+    <string name="greens">绿色蔬菜</string>
+    <string name="other_vegetables">其他蔬菜</string>
+    <string name="flaxseeds">亚麻籽</string>
+    <string name="nuts">坚果类</string>
+    <string name="spices">香料</string>
+    <string name="whole_grains">全谷类</string>
+    <string name="beverages">饮料</string>
+    <string name="exercise">运动</string>
+    <string name="vitamin_b12">维生素B12</string>
+    <string name="vitamin_d">维生素D</string>
+    <string name="serving_sizes">份量大小</string>
+    <string name="types">种类</string>
+    <string name="history">历史纪录</string>
+    <string name="servings_some">部分份量</string>
+    <string name="servings_all">全部份量</string>
+    <string name="servings">份量</string>
+    <string name="out_of">out of</string>
+    <string name="moving_average">移动平均数</string>
+    <string name="about">关于我们</string>
+    <string name="about_this_app">关于这个应用程序</string>
+    <string name="latest_videos">最新影片</string>
+    <string name="donate">捐款</string>
+    <string name="subscribe">订阅</string>
+    <string name="open_source">免费资源</string>
+    <string name="library_butterknife">ButterKnife</string>
+    <string name="permission_needed_to_write_storage">不具权限，无法备份至记忆体</string>
+    <string name="backup_failed">备份失败</string>
+    <string name="restore_failed">还原失败</string>
+    <string name="backup_success">备份成功</string>
+    <string name="restore_success">还原成功</string>
+    <string name="restore_confirm_title">还原备份</string>
+    <string name="restore_confirm_message">在从备份资料还原前，所有现存的数据都会被删除。确定要继续吗？</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="backup">备份</string>
+    <string name="food_info">食物资讯</string>
+    <string name="food_history">食物历史纪录</string>
+    <string name="daily_servings_history">每日分量历史纪录</string>
+    <string name="no_servings_recorded">您尚未纪录任何内容！</string>
+    <string name="task_backup_title">备份中</string>
+    <string name="task_restore_title">还原中</string>
+    <string name="task_calculating_streaks_title">计算图表中</string>
+    <string name="back_to_today">回到今天</string>
+    <string name="debug">侦错</string>
+    <string name="debug_clear_data">清除所有资料</string>
+    <string name="debug_clear_data_message">这将删除所有已输入的分量。确定要继续吗？</string>
+    <string name="OK">确定</string>
+    <string name="dialog_streaks_title">新功能：趋势图</string>
+    <string name="dialog_streaks_message">现在将升级您的资料库，以支持新的趋势图功能。</string>
+    <string name="dialog_no_email_apps_title">找不到电子邮件应用程序</string>
+    <string name="dialog_no_email_apps_message">您需要安装电子邮件应用程序才能使用备份数据功能，才能将.csv的备份档案寄到自己的电子邮件信箱。请安装电子邮件应用程序后再重试。</string>
+    <string name="debug_generate_random_data">产生随机数据</string>
+    <string name="debug_generate_full_data">产生完整数据</string>
+    <string name="debug_generate_data_message">所有现存的数据都将被取代。确定要继续吗？</string>
+    <string name="task_generating_random_data">产生随机数据</string>
+    <string name="task_loading_servings_history_title">载入份量历史记录</string>
+    <string name="time_scale">时间尺度</string>
+    <string name="history_to_generate">产生历史记录</string>
+    <string name="welcome_to_my_daily_dozen">欢迎来到我的《每日十二要素》！</string>
+    <string name="activity_welcome_text">我在《食疗圣经》中推荐了能够让您健康长寿的食物，请每天使用这个应用程序来记录与追踪您对这些食物的摄取量。</string>
+    <string name="dialog_ask_user_to_rate_app_title">您喜欢这个应用程序吗？</string>
+    <string name="dialog_ask_user_to_rate_app_message">请在应用程序商店中给我们指教。</string>
+    <string name="rate_now">我有意见</string>
+    <string name="not_now">稍后再说</string>
+    <string name="format_version" formatted="false">版本 %s</string>
+    <string name="format_num_days" formatted="false">%d 天</string>
+    <string name="daily_reminder_title">每日十二要素提醒</string>
+    <string name="daily_reminder_text">更新您的今日份量</string>
+    <string name="daily_reminder_settings">每日提醒设定</string>
+    <string name="enable_daily_reminder">启用每日提醒</string>
+    <string name="remind_me_at">提醒时间</string>
+    <string name="vibrate">震动</string>
+    <string name="play_sound">播放声音</string>
+    <string name="videos">影片</string>
+    <string name="units">单位</string>
+    <string name="imperial">英制</string>
+    <string name="metric">公制</string>
+    <string name="vitamin_divider_text">维生素</string>
+    <string name="dialog_vitamin_explanation_text">维生素B12和维生素D对您的健康至关重要，但不计入您的日常服务。\ n \ n它包含在此应用程序中，为您提供一个简单的方法来跟踪您的摄入量</string>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+        <item>@string/vitamin_d</item>
+    </string-array>
+
+    <string-array name="notification_icon_food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
+    </string-array>
+
+    <integer-array name="food_quantities">
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+
+    <string-array name="about_text_lines">
+        <item>这个应用程序是由John Slavick所制作的。</item>
+        <item />
+        <item>使用了以下免费程式库: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item />
+        <item>特别感谢制作前一代应用程序志愿者所做的贡献: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>按照以下步骤在《每日十二要素》应用程序中还原此备份： </item>
+        <item />
+        <item>1. 您必须在Android手机上安装《每日十二要素》应用程序。您可以从这里下载： https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. 点击附加在此电子邮件的备份档案。</item>
+        <item />
+        <item>3. 选择以《每日十二要素》应用程序开启。</item>
+    </string-array>
+
+    <string-array name="servings_time_scale_choices">
+        <item>天</item>
+        <item>月</item>
+        <item>年</item>
+    </string-array>
+
+    <string-array name="history_to_generate_choices">
+        <item>1个月</item>
+        <item>3个月</item>
+        <item>6个月</item>
+        <item>1年</item>
+        <item>2年</item>
+        <item>5年</item>
+    </string-array>
+
+    <string-array name="food_info_types_beans">
+        <item>黑豆</item>
+        <item>黑眼豆</item>
+        <item>利马豆</item>
+        <item>白腰豆</item>
+        <item>鹰嘴豆</item>
+        <item>毛豆</item>
+        <item>麦豌豆</item>
+        <item>鹰嘴豆</item>
+        <item>北美腰豆</item>
+        <item>菜豆</item>
+        <item>扁豆（包括黑扁豆、法国扁豆与红扁豆等品种）</item>
+        <item>味噌</item>
+        <item>白豆</item>
+        <item>花豆</item>
+        <item>小红豆</item>
+        <item>豌豆（黄豌豆或绿豌豆）</item>
+        <item>天贝</item>
+    </string-array>
+
+    <string-array name="food_info_types_berries">
+        <item>巴西莓</item>
+        <item>莿莓</item>
+        <item>黑莓</item>
+        <item>蓝莓</item>
+        <item>樱桃（甜的或酸的）</item>
+        <item>康科德葡萄</item>
+        <item>蔓越莓</item>
+        <item>枸杞</item>
+        <item>金桔</item>
+        <item>桑葚</item>
+        <item>覆盆子（黑色或红色）</item>
+        <item>草莓</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_fruits">
+        <item>苹果</item>
+        <item>杏子干</item>
+        <item>牛油果</item>
+        <item>香蕉</item>
+        <item>哈密瓜</item>
+        <item>小柑橘</item>
+        <item>海枣</item>
+        <item>无花果干</item>
+        <item>葡萄柚</item>
+        <item>蜜瓜</item>
+        <item>猕猴桃</item>
+        <item>柠檬</item>
+        <item>青柠</item>
+        <item>荔枝</item>
+        <item>芒果</item>
+        <item>油桃</item>
+        <item>柳橙</item>
+        <item>木瓜</item>
+        <item>百香果</item>
+        <item>桃子</item>
+        <item>梨子</item>
+        <item>菠萝</item>
+        <item>李子（尤其是黑李）</item>
+        <item>杏李</item>
+        <item>石榴</item>
+        <item>黑枣</item>
+        <item>橘子</item>
+        <item>西瓜</item>
+    </string-array>
+
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>芝麻叶</item>
+        <item>小白菜</item>
+        <item>西兰花（包括宝塔花菜）</item>
+        <item>球芽甘蓝</item>
+        <item>甘蓝（绿、紫、野甘蓝）</item>
+        <item>花椰菜（白色、绿色、橙色、紫色）</item>
+        <item>芥蓝菜叶</item>
+        <item>辣根</item>
+        <item>羽衣甘蓝（黑色、绿色与红色品种）</item>
+        <item>大头菜（绿色、紫色)</item>
+        <item>芥菜</item>
+        <item>萝卜</item>
+        <item>芜菁叶</item>
+        <item>西洋菜</item>
+    </string-array>
+
+    <string-array name="food_info_types_greens">
+        <item>芝麻叶</item>
+        <item>甜菜叶</item>
+        <item>芥蓝菜叶</item>
+        <item>羽衣甘蓝（黑色、绿色与红色品种）</item>
+        <item>综合生菜叶（综合幼嫩绿色沙拉）</item>
+        <item>芥菜</item>
+        <item>酸模</item>
+        <item>菠菜</item>
+        <item>牛皮菜</item>
+        <item>芜菁叶</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_vegetables">
+        <item>朝鲜蓟</item>
+        <item>芦笋</item>
+        <item>甜菜</item>
+        <item>甜椒</item>
+        <item>胡萝卜</item>
+        <item>玉米</item>
+        <item>大蒜</item>
+        <item>菇类（洋菇、秀珍菇、波特菇与香菇）</item>
+        <item>秋葵</item>
+        <item>洋葱</item>
+        <item>紫薯</item>
+        <item>南瓜</item>
+        <item>海带（海藻、红藻与海苔）</item>
+        <item>甜脆豌豆</item>
+        <item>南瓜属（包括花生南瓜、夏南瓜与金线南瓜等品种）</item>
+        <item>番薯</item>
+        <item>番茄</item>
+        <item>栉瓜</item>
+    </string-array>
+
+    <string-array name="food_info_types_flaxseeds">
+        <item>棕色亚麻籽</item>
+        <item>黄金亚麻籽</item>
+    </string-array>
+
+    <string-array name="food_info_types_nuts">
+        <item>杏仁</item>
+        <item>巴西坚果</item>
+        <item>腰果</item>
+        <item>奇亚籽</item>
+        <item>榛果</item>
+        <item>大麻籽</item>
+        <item>夏威夷火山豆</item>
+        <item>胡桃</item>
+        <item>开心果</item>
+        <item>南瓜籽</item>
+        <item>芝麻籽</item>
+        <item>葵花籽</item>
+        <item>核桃</item>
+    </string-array>
+
+    <string-array name="food_info_types_spices">
+        <item>众香子</item>
+        <item>莿莓</item>
+        <item>罗勒</item>
+        <item>月桂叶</item>
+        <item>小荳蔻</item>
+        <item>辣椒粉</item>
+        <item>芫荽</item>
+        <item>肉桂</item>
+        <item>丁香</item>
+        <item>芫荽籽</item>
+        <item>小茴香</item>
+        <item>咖哩粉</item>
+        <item>莳萝</item>
+        <item>葫芦巴</item>
+        <item>大蒜</item>
+        <item>姜</item>
+        <item>辣根</item>
+        <item>香茅</item>
+        <item>墨角兰</item>
+        <item>芥末粉</item>
+        <item>肉豆蔻</item>
+        <item>牛至</item>
+        <item>匈牙利烟熏红椒粉</item>
+        <item>荷兰芹</item>
+        <item>胡椒</item>
+        <item>薄荷</item>
+        <item>迷迭香</item>
+        <item>番红花</item>
+        <item>鼠尾草</item>
+        <item>百里香</item>
+        <item>姜黄</item>
+        <item>香草</item>
+    </string-array>
+
+    <string-array name="food_info_types_whole_grains">
+        <item>大麦</item>
+        <item>荞麦</item>
+        <item>小米</item>
+        <item>燕麦</item>
+        <item>爆米花</item>
+        <item>藜麦</item>
+        <item>裸麦</item>
+        <item>画眉草籽</item>
+        <item>全麦意大利面</item>
+    </string-array>
+
+    <string-array name="food_info_types_beverages">
+        <item>红茶</item>
+        <item>印度香料奶茶</item>
+        <item>香草菊花茶</item>
+        <item>咖啡</item>
+        <item>伯爵茶</item>
+        <item>绿茶</item>
+        <item>洛神花茶</item>
+        <item>热巧克力</item>
+        <item>茉莉花茶</item>
+        <item>香蜂草茶</item>
+        <item>抹茶</item>
+        <item>杏仁花乌龙茶</item>
+        <item>薄荷茶</item>
+        <item>南非国宝茶</item>
+        <item>水</item>
+        <item>白茶</item>
+    </string-array>
+
+    <string-array name="food_info_types_exercise">
+        <item>骑自行车</item>
+        <item>划独木舟</item>
+        <item>跳舞</item>
+        <item>躲避球</item>
+        <item>下坡滑雪</item>
+        <item>击剑</item>
+        <item>健行</item>
+        <item>做家事</item>
+        <item>溜冰</item>
+        <item>溜直排轮</item>
+        <item>杂耍</item>
+        <item>跳弹簧床</item>
+        <item>踩脚踏船</item>
+        <item>玩飞盘</item>
+        <item>四轮溜冰</item>
+        <item>投篮</item>
+        <item>铲雪（轻微积雪）</item>
+        <item>玩滑板</item>
+        <item>浮潜</item>
+        <item>冲浪</item>
+        <item>休闲式游泳</item>
+        <item>网球（双打）</item>
+        <item>立泳</item>
+        <item>健走（每小时4英里）</item>
+        <item>水中有氧</item>
+        <item>滑水</item>
+        <item>整理庭院</item>
+        <item>瑜珈</item>
+        <item>背包旅行</item>
+        <item>打篮球</item>
+        <item>单车爬坡</item>
+        <item>循环重量训练</item>
+        <item>越野滑雪</item>
+        <item>美式足球</item>
+        <item>曲棍球</item>
+        <item>慢跑</item>
+        <item>开合跳</item>
+        <item>跳绳</item>
+        <item>袋棍球</item>
+        <item>俯卧撑</item>
+        <item>引体向上</item>
+        <item>短柄墙球</item>
+        <item>攀岩</item>
+        <item>橄榄球</item>
+        <item>跑步</item>
+        <item>潜水</item>
+        <item>网球（单打）</item>
+        <item>足球</item>
+        <item>竞速滑冰</item>
+        <item>壁球</item>
+        <item>阶梯有氧</item>
+        <item>来回游泳</item>
+        <item>快走上坡</item>
+        <item>水中慢跑</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans">
+        <item>¼杯鹰嘴豆泥或豆子沾酱</item>,
+        <item>½杯煮熟的豆子、豌豆、扁豆、豆腐或天贝</item>,
+        <item>1杯新鲜豌豆或扁豆芽</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼杯</item>
+        <item>½杯</item>
+        <item>1杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60克</item>
+        <item>130克</item>
+        <item>150克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries">
+        <item>½杯新鲜或冷冻莓果</item>
+        <item>¼杯莓果干</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½杯</item>
+        <item>¼杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60克</item>
+        <item>40克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>1颗中型水果</item>
+        <item>1杯水果丁</item>
+        <item>¼杯果干</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item/>
+        <item>1杯</item>
+        <item>¼杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item/>
+        <item>120克</item>
+        <item>40克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+        <item>½杯切碎的白花椰菜</item>
+        <item>¼杯球芽甘蓝或青花椰苗</item>
+        <item>1大匙辣根</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens">
+        <item>1杯生菜</item>
+        <item>½杯煮过的蔬菜</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>1杯生叶菜</item>
+        <item>½杯生或熟的非叶菜</item>
+        <item>½杯蔬菜汁</item>
+        <item>¼杯干燥菇类</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½杯</item>
+        <item>¼杯</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80克</item>
+        <item>12克</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1杯</item>
+        <item>½杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60克</item>
+        <item>90克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1杯</item>
+        <item>½杯</item>
+        <item>½杯</item>
+        <item>¼杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60克</item>
+        <item>50克</item>
+        <item>125毫升</item>
+        <item>7克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>1大匙研磨的亚麻籽</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>¼杯坚果或种籽</item>
+        <item>2大匙果仁酱或种籽酱</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼杯</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30克</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices">
+        <item>¼茶匙的姜黄</item>
+        <item>任何其他你所喜欢的（无盐）香草和香料</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>½杯热麦片或煮熟的谷物、义大利面或玉米粒</item>
+        <item>1杯冷麦片</item>
+        <item>1份墨西哥薄饼或1片面包</item>
+        <item>½个贝果或英式松饼</item>
+        <item>3杯爆好的爆米花</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½杯</item>
+        <item>1杯</item>
+        <item/>
+        <item/>
+        <item>3杯</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100克</item>
+        <item>50克</item>
+        <item/>
+        <item/>
+        <item>30克</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages">
+        <item>一杯（12盎司）</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12盎司</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350毫升</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>90分钟的中等强度运动</item>
+        <item>40分钟的剧烈运动</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string name="error_cannot_handle_url">无法开启网页。请安装浏览器。</string>
+
+</resources>
