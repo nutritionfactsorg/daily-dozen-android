@@ -29,7 +29,7 @@ public class Bus {
     }
 
     public static void foodServingsChangedEvent(Day day, Food food) {
-        post(new FoodServingsChangedEvent(day.getDateString(), food.getName(), Common.isVitamin(food)));
+        post(new FoodServingsChangedEvent(day.getDateString(), food.getName(), Common.isSupplement(food)));
     }
 
     public static void displayLatestDate() {

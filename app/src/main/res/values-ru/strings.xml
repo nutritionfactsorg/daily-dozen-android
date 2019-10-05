@@ -15,7 +15,7 @@
     <string name="beverages">Напитки</string>
     <string name="exercise">Физические Упражнения</string>
     <string name="vitamin_b12">Витамин B12</string>
-    <string name="vitamin_d">Витамин D</string>
+    <string name="omega3">Plant-based Omega 3s</string>
     <string name="serving_sizes">Размеры Порций</string>
     <string name="types">Типы</string>
     <string name="history">История</string>
@@ -83,8 +83,6 @@
     <string name="units">Единицы</string>
     <string name="imperial">Английские</string>
     <string name="metric">Метрические</string>
-    <string name="vitamin_divider_text">Витамины</string>
-    <string name="dialog_vitamin_explanation_text">Хотя и необязательны для выполнения ежедневного плана, витамин B12 и витамин D незаменимы для Вашего здоровья.\n\nОни включены в приложение для Вашего удобства.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -100,7 +98,7 @@
         <item>@string/beverages</item>
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
-        <item>@string/vitamin_d</item>
+        <item>@string/omega3</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">

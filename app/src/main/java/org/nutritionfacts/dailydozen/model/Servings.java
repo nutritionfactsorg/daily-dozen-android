@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.model;
 
-import android.support.v4.util.ArrayMap;
+import androidx.annotation.NonNull;
+import androidx.collection.ArrayMap;
 import android.text.TextUtils;
 
 import com.activeandroid.annotation.Column;
@@ -80,6 +81,7 @@ public class Servings extends TruncatableModel {
         return streak;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return String.format("[%s] [%s] [Servings %s]", food.toString(), day.toString(), getServings());
@@ -135,7 +137,7 @@ public class Servings extends TruncatableModel {
             // Calculate the total servings on a particular date, but ignore the values for Vitamins B12 and D
             numServings = SQLiteUtils.intQuery(
                     "SELECT SUM(servings) FROM servings WHERE date_id = ? AND food_id not in (SELECT Id FROM foods WHERE id_name = ? OR id_name = ?)",
-                    new String[]{day.getId().toString(), Common.VITAMIN_B12, Common.VITAMIN_D});
+                    new String[]{day.getId().toString(), Common.VITAMIN_B12, Common.OMEGA3});
         }
 
         return numServings;

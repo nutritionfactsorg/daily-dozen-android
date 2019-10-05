@@ -3,7 +3,7 @@ package org.nutritionfacts.dailydozen.task;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 import android.text.TextUtils;
 
 import com.activeandroid.ActiveAndroid;
@@ -67,21 +67,23 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                         reader = new BufferedReader(new InputStreamReader(inputStream));
 
                         String line = reader.readLine();
-                        headers = line.split(",");
+                        if (line != null) {
+                            headers = line.split(",");
 
-                        int i = 0;
+                            int i = 0;
 
-                        do {
-                            if (!isCancelled()) {
-                                line = reader.readLine();
+                            do {
+                                if (!isCancelled()) {
+                                    line = reader.readLine();
 
-                                if (!TextUtils.isEmpty(line)) {
-                                    restoreLine(line);
+                                    if (!TextUtils.isEmpty(line)) {
+                                        restoreLine(line);
+                                    }
+
+                                    publishProgress(++i, numLines);
                                 }
-
-                                publishProgress(++i, numLines);
-                            }
-                        } while (line != null);
+                            } while (line != null);
+                        }
 
                         reader.close();
                         restoreInputStream.close();
@@ -115,7 +117,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
                 // Start at 1 to skip the first header column which is "Date" and not a food
                 for (int j = 1; j < headers.length; j++) {
-                    final Integer numServings = Integer.valueOf(values[j]);
+                    final int numServings = Integer.parseInt(values[j]);
                     if (numServings > 0) {
                         final Food food = getFoodByName(headers[j]);
                         if (food != null) {

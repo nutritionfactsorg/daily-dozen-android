@@ -11,11 +11,14 @@ import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.TimeZone;
 
 import hirondelle.date4j.DateTime;
+import timber.log.Timber;
 
 @Table(name = "dates")
 public class Day extends TruncatableModel {
@@ -164,16 +167,46 @@ public class Day extends TruncatableModel {
         allDays.addAll(daysInCurrentMonth);
         allDays.addAll(daysInPreviousMonth);
 
+        // Sort the days in ascending order
         Collections.sort(allDays, new DayComparator());
 
         return allDays;
     }
 
     static List<Day> getDaysInYearAndMonth(final int year, final int monthOneBased) {
-        return new Select().from(Day.class)
+        final List<Day> daysWithServings = new Select().from(Day.class)
                 .where("year = ?", year)
                 .and("month = ?", monthOneBased)
                 .execute();
+
+        final Map<Integer, Day> daysWithServingsLookup = new HashMap<>(daysWithServings.size());
+        for (Day day :
+                daysWithServings) {
+            daysWithServingsLookup.put(day.getDayNumber(), day);
+        }
+
+        final List<Day> daysInYearAndMonth = new ArrayList<>(32);
+
+        final DateTime today = getToday();
+        boolean isCurrentMonth = today.getYear() == year && today.getMonth() == monthOneBased;
+
+        try {
+            for (int i = 1; i < 32; i++) {
+                if (isCurrentMonth && i > today.getDay()) {
+                    break;
+                }
+
+                if (daysWithServingsLookup.containsKey(i)) {
+                    daysInYearAndMonth.add(daysWithServingsLookup.get(i));
+                } else {
+                    daysInYearAndMonth.add(new Day(DateTime.forDateOnly(year, monthOneBased, i)));
+                }
+            }
+        } catch (Exception e) {
+            Timber.e(e, "Expected exception from getDaysInYearAndMonth (day-of-the-month value exceeds number of days in the month)");
+        }
+
+        return daysInYearAndMonth;
     }
 
     static List<Day> getDaysInYear(final int year) {

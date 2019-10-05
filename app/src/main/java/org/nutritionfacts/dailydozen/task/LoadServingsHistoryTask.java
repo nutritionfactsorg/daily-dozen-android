@@ -1,7 +1,7 @@
 package org.nutritionfacts.dailydozen.task;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
@@ -79,7 +79,6 @@ public class LoadServingsHistoryTask
         final List<BarEntry> barEntries = new ArrayList<>(numDaysOfServings);
         final List<Entry> lineEntries = new ArrayList<>(numDaysOfServings);
 
-        Day previousDay = null;
         float previousTrend = 0;
 
         for (int i = 0; i < numDaysOfServings; i++) {
@@ -88,8 +87,6 @@ public class LoadServingsHistoryTask
             }
 
             final Day day = history.get(i);
-
-            previousTrend = adjustTrendForMissingDays(day, previousDay, previousTrend);
 
             final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
 
@@ -111,31 +108,9 @@ public class LoadServingsHistoryTask
             }
 
             publishProgress(i + 1, numDaysOfServings);
-
-            previousDay = day;
         }
 
         return createCompleteEvent(createLineAndBarData(xLabels, lineEntries, barEntries), TimeScale.DAYS);
-    }
-
-    // This method solves the issue where the trend is calculated from a set of data that is missing
-    // some days. Missing days are now taken into account as days with 0 servings.
-    private float adjustTrendForMissingDays(final Day currentDay, final Day previousDay, final float trend) {
-        if (currentDay != null && previousDay != null) {
-            float trendIncludingMissingDays = trend;
-
-            int missingDays = Math.abs(currentDay.getNumDaysSince(previousDay));
-
-            if (missingDays > 1) {
-                for (int i = 0; i < missingDays; i++) {
-                    trendIncludingMissingDays = calculateTrend(trendIncludingMissingDays, 0);
-                }
-            }
-
-            return trendIncludingMissingDays;
-        } else {
-            return trend;
-        }
     }
 
     private LoadServingsHistoryCompleteEvent getChartDataInMonths(final LoadServingsHistoryTaskParams inputParams) {

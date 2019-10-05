@@ -53,7 +53,10 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
         int i = 0;
 
         while (current.lteq(today)) {
-            createServingsForDay(allFoods, current);
+            // Give a 20% chance of not creating servings for the day
+            if (random.nextInt(5) >= 1) {
+                createServingsForDay(allFoods, current);
+            }
 
             publishProgress(++i, numDays);
 

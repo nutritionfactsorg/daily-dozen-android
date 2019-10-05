@@ -6,10 +6,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.ColorInt;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.ColorInt;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -30,7 +30,7 @@ public class Common {
 
     public static final String EXERCISE = "exercise";
     public static final String VITAMIN_B12 = "Vitamin B12";
-    public static final String VITAMIN_D = "Vitamin D";
+    public static final String OMEGA3 = "Omega 3";
 
     private static boolean userIsBeingAsked;
 
@@ -136,16 +136,15 @@ public class Common {
     }
 
     public static void openFoodInfo(final Context context, final Food food) {
-        if (isVitamin(food)) {
+        if (isSupplement(food)) {
             openUrlInExternalBrowser(context, FoodInfo.getFoodTypeVideosLink(food.getName()));
         } else {
             context.startActivity(createFoodIntent(context, FoodInfoActivity.class, food));
         }
     }
 
-    public static boolean isVitamin(final Food food) {
-        return food != null &&
-                (VITAMIN_B12.equalsIgnoreCase(food.getIdName()) || VITAMIN_D.equalsIgnoreCase(food.getIdName()));
+    public static boolean isSupplement(final Food food) {
+        return food != null && (VITAMIN_B12.equalsIgnoreCase(food.getIdName()) || OMEGA3.equalsIgnoreCase(food.getIdName()));
     }
 
     public static void openFoodHistory(final Context context, final Food food) {

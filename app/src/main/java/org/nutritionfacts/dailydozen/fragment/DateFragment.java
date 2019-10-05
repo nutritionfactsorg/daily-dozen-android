@@ -4,8 +4,9 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.widget.DateServings;
 import org.nutritionfacts.dailydozen.widget.FoodServings;
-import org.nutritionfacts.dailydozen.widget.VitaminDivider;
+import org.nutritionfacts.dailydozen.widget.SupplementDivider;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -66,7 +67,7 @@ public class DateFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         unbinder = ButterKnife.bind(this, view);
 
@@ -93,15 +94,15 @@ public class DateFragment extends Fragment {
                 updateServingsCount();
 
                 final Context context = getContext();
-                boolean addedVitaminDivider = false;
+                boolean addedSupplementDivider = false;
 
                 for (Food food : Food.getAllFoods()) {
                     final FoodServings foodServings = new FoodServings(context);
                     final boolean success = foodServings.setDateAndFood(day, food);
                     if (success) {
-                        if (Common.isVitamin(food) && !addedVitaminDivider) {
-                            vgFoodServings.addView(new VitaminDivider(context));
-                            addedVitaminDivider = true;
+                        if (Common.isSupplement(food) && !addedSupplementDivider) {
+                            vgFoodServings.addView(new SupplementDivider(context));
+                            addedSupplementDivider = true;
                         }
 
                         vgFoodServings.addView(foodServings);

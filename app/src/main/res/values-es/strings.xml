@@ -14,7 +14,7 @@
     <string name="beverages">Bebidas</string>
     <string name="exercise">Ejercicio</string>
     <string name="vitamin_b12">Vitamina B12</string>
-    <string name="vitamin_d">Vitamina D</string>
+    <string name="omega3">Plant-based Omega 3s</string>
     <string name="serving_sizes">Tamaño de las Porciones</string>
     <string name="types">Tipos</string>
     <string name="history">Historia</string>
@@ -82,8 +82,6 @@
     <string name="units">Unidades</string>
     <string name="imperial">Imperial</string>
     <string name="metric">Métrico</string>
-    <string name="vitamin_divider_text">Vitaminas</string>
-    <string name="dialog_vitamin_explanation_text">La vitamina B12 y la vitamina D son esenciales para su salud, pero no cuentan para sus porciones diarias.\n\nSe incluyen en esta aplicación para proporcionarle una manera fácil de monitorear su ingestión.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -99,7 +97,7 @@
         <item>@string/beverages</item>
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
-        <item>@string/vitamin_d</item>
+        <item>@string/omega3</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">

@@ -15,7 +15,7 @@
     <string name="beverages">Băuturi</string>
     <string name="exercise">Exerciții fizice</string>
     <string name="vitamin_b12">Vitamina B12</string>
-    <string name="vitamin_d">Vitamina D</string>
+    <string name="omega3">Plant-based Omega 3s</string>
     <string name="serving_sizes">Dimensiunea unei porții</string>
     <string name="types">Varietăți</string>
     <string name="history">Istoric</string>
@@ -83,8 +83,6 @@
     <string name="units">Unități</string>
     <string name="imperial">Imperial</string>
     <string name="metric">Metric</string>
-    <string name="vitamin_divider_text">Vitamine</string>
-    <string name="dialog_vitamin_explanation_text">Vitamina B12 și Vitamina D sunt esențiale pentru sănătatea dumneavoastră, dar nu se iau în considerare în porțiile zilnice.\n\nEle sunt incluse în această aplicație pentru a vă oferi o modalitate ușoară de a urmări aportul dumneavoastră.</string>
 
     <string-array name="food_names">
         <item>@string/beans</item>
@@ -100,7 +98,7 @@
         <item>@string/beverages</item>
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
-        <item>@string/vitamin_d</item>
+        <item>@string/omega3</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">
