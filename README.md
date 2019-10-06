@@ -51,10 +51,12 @@ Updates
 -------
 
 ### Version 16
+- Add Plant-based Omega 3s - thanks to contributor [lucivpav](https://github.com/lucivpav)
 - Fixed non-smooth scrolling - thanks to contributor [DJTai](https://github.com/DJTai)
 - Added Italian translation - thanks to contributor [lucab85](https://github.com/lucab85)
 - Added Portuguese translation - thanks to contributor [Armfoot](https://github.com/Armfoot)
-- Updated to target latest Android SDK
+- Fixed bug on history screen where missing days weren't being shown
+- Updated icons
 
 ### Version 15.1
 - Fixed crash for Romanian and Chinese users when opening information for Whole Grains
