@@ -4,17 +4,13 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.core.content.ContextCompat;
-import androidx.collection.ArrayMap;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.roomorama.caldroid.CaldroidFragment;
-import com.roomorama.caldroid.CaldroidListener;
+import androidx.collection.ArrayMap;
+import androidx.core.content.ContextCompat;
 
 import org.nutritionfacts.dailydozen.Args;
-import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -22,7 +18,6 @@ import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -35,7 +30,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     @BindView(R.id.calendar_legend)
     protected ViewGroup vgLegend;
 
-    private CaldroidFragment caldroid;
+//    private CaldroidFragment caldroid;
 
     private Set<String> loadedMonths = new HashSet<>();
     private Map<DateTime, Drawable> datesWithEvents;
@@ -65,27 +60,27 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     private void initCalendar(final long foodId, final int recommendedServings) {
         datesWithEvents = new ArrayMap<>();
 
-        caldroid = CaldroidFragment.newInstance("", DateUtil.getCurrentMonthOneBased(), DateUtil.getCurrentYear());
-
-        caldroid.setCaldroidListener(new CaldroidListener() {
-            @Override
-            public void onSelectDate(Date date, View view) {
-                setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(date));
-                finish();
-            }
-
-            @Override
-            public void onChangeMonth(int month, int year) {
-                super.onChangeMonth(month, year);
-                displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(year, month - 1), foodId);
-            }
-        });
+//        caldroid = CaldroidFragment.newInstance("", DateUtil.getCurrentMonthOneBased(), DateUtil.getCurrentYear());
+//
+//        caldroid.setCaldroidListener(new CaldroidListener() {
+//            @Override
+//            public void onSelectDate(Date date, View view) {
+//                setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(date));
+//                finish();
+//            }
+//
+//            @Override
+//            public void onChangeMonth(int month, int year) {
+//                super.onChangeMonth(month, year);
+//                displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(year, month - 1), foodId);
+//            }
+//        });
 
         vgLegend.setVisibility(recommendedServings > 1 ? View.VISIBLE : View.GONE);
 
-        final FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-        t.replace(R.id.calendar_fragment_container, caldroid);
-        t.commit();
+//        final FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+//        t.replace(R.id.calendar_fragment_container, caldroid);
+//        t.commit();
     }
 
     private void displayEntriesForVisibleMonths(final Calendar cal, final long foodId) {
@@ -131,8 +126,8 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
 
-                caldroid.setBackgroundDrawableForDateTimes(datesWithEvents);
-                caldroid.refreshView();
+//                caldroid.setBackgroundDrawableForDateTimes(datesWithEvents);
+//                caldroid.refreshView();
             }
         }.execute();
     }
