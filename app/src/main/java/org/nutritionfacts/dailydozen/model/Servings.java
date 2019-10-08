@@ -175,11 +175,14 @@ public class Servings extends TruncatableModel {
         if (food != null) {
             final List<Day> datesInMonth = Day.getDaysInYearAndMonth(year, monthOneBased);
 
-            final String[] placeholderArray = new String[datesInMonth.size()];
-            final Long[] dateIds = new Long[datesInMonth.size()];
+            final List<String> placeholderArray = new ArrayList<>(datesInMonth.size());
+            final List<Long> dateIds = new ArrayList<>(datesInMonth.size());
             for (int i = 0; i < datesInMonth.size(); i++) {
-                placeholderArray[i] = "?";
-                dateIds[i] = datesInMonth.get(i).getId();
+                Long dateId = datesInMonth.get(i).getId();
+                if (dateId != null) {
+                    placeholderArray.add("?");
+                    dateIds.add(dateId);
+                }
             }
 
             final String placeholders = TextUtils.join(",", placeholderArray);
