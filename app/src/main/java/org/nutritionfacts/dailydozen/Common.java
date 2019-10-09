@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import androidx.annotation.ColorInt;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -108,7 +109,7 @@ public class Common {
     public static boolean loadImage(final Context context, final ImageView imageView, final Integer imageId) {
         if (imageId != null) {
             try {
-                imageView.setImageDrawable(ContextCompat.getDrawable(context, imageId));
+                imageView.setImageDrawable(AppCompatResources.getDrawable(context, imageId));
                 return true;
             } catch (OutOfMemoryError e) {
                 imageView.setVisibility(View.GONE);
