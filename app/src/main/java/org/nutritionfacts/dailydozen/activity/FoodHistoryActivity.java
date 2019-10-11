@@ -10,13 +10,18 @@ import android.view.ViewGroup;
 import androidx.collection.ArrayMap;
 import androidx.core.content.ContextCompat;
 
+import com.applandeo.materialcalendarview.CalendarView;
+import com.applandeo.materialcalendarview.listeners.OnCalendarPageChangeListener;
+
 import org.nutritionfacts.dailydozen.Args;
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Map;
@@ -24,16 +29,15 @@ import java.util.Set;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends FoodLoadingActivity {
     @BindView(R.id.calendar_legend)
     protected ViewGroup vgLegend;
-
-//    private CaldroidFragment caldroid;
+    @BindView(R.id.calendarView)
+    protected CalendarView calendarView;
 
     private Set<String> loadedMonths = new HashSet<>();
-    private Map<DateTime, Drawable> datesWithEvents;
+    private Map<Calendar, Drawable> datesWithEvents;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -44,7 +48,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
         datesWithEvents = new ArrayMap<>();
         if (savedInstanceState != null) {
-            datesWithEvents = (ArrayMap<DateTime, Drawable>) savedInstanceState.getSerializable(Args.DATES_WITH_EVENTS);
+            datesWithEvents = (ArrayMap<Calendar, Drawable>) savedInstanceState.getSerializable(Args.DATES_WITH_EVENTS);
         }
 
         displayFoodHistory();
@@ -54,33 +58,31 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
         final Food food = getFood();
         if (food != null) {
             initCalendar(food.getId(), food.getRecommendedServings());
+
+            displayEntriesForVisibleMonths(Calendar.getInstance(), food.getId());
         }
     }
 
     private void initCalendar(final long foodId, final int recommendedServings) {
         datesWithEvents = new ArrayMap<>();
 
-//        caldroid = CaldroidFragment.newInstance("", DateUtil.getCurrentMonthOneBased(), DateUtil.getCurrentYear());
-//
-//        caldroid.setCaldroidListener(new CaldroidListener() {
-//            @Override
-//            public void onSelectDate(Date date, View view) {
-//                setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(date));
-//                finish();
-//            }
-//
-//            @Override
-//            public void onChangeMonth(int month, int year) {
-//                super.onChangeMonth(month, year);
-//                displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(year, month - 1), foodId);
-//            }
-//        });
+        calendarView.setHeaderColor(R.color.colorPrimary);
+
+        calendarView.setOnDayClickListener(eventDay -> {
+            setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(eventDay.getCalendar().getTime()));
+            finish();
+        });
+
+        OnCalendarPageChangeListener onCalendarPageChangeListener = () -> displayEntriesForVisibleMonths(
+                DateUtil.getCalendarForYearAndMonth(
+                        calendarView.getCurrentPageDate().get(Calendar.YEAR),
+                        calendarView.getCurrentPageDate().get(Calendar.MONTH)),
+                foodId);
+
+        calendarView.setOnForwardPageChangeListener(onCalendarPageChangeListener);
+        calendarView.setOnPreviousPageChangeListener(onCalendarPageChangeListener);
 
         vgLegend.setVisibility(recommendedServings > 1 ? View.VISIBLE : View.GONE);
-
-//        final FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-//        t.replace(R.id.calendar_fragment_container, caldroid);
-//        t.commit();
     }
 
     private void displayEntriesForVisibleMonths(final Calendar cal, final long foodId) {
@@ -110,7 +112,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
 
                         for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
                             datesWithEvents.put(
-                                    serving.getKey().getDateTime(),
+                                    serving.getKey().getCalendar(),
                                     serving.getValue() ? bgRecServings : bgLessThanRecServings);
                         }
                     }
@@ -126,8 +128,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
 
-//                caldroid.setBackgroundDrawableForDateTimes(datesWithEvents);
-//                caldroid.refreshView();
+                calendarView.setSelectedDates(new ArrayList<>(datesWithEvents.keySet()));
             }
         }.execute();
     }

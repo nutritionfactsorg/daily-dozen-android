@@ -185,6 +185,10 @@ public class Servings extends TruncatableModel {
                 }
             }
 
+            if (placeholderArray.size() == 0) {
+                return new ArrayMap<>();
+            }
+
             final String placeholders = TextUtils.join(",", placeholderArray);
 
             final List<Servings> servings = new Select().from(Servings.class)

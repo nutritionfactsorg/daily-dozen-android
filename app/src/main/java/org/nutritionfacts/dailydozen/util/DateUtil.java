@@ -1,5 +1,7 @@
 package org.nutritionfacts.dailydozen.util;
 
+import android.widget.CalendarView;
+
 import org.nutritionfacts.dailydozen.model.Day;
 
 import java.text.SimpleDateFormat;
@@ -11,7 +13,7 @@ import java.util.TimeZone;
 import hirondelle.date4j.DateTime;
 
 public class DateUtil {
-    private static Calendar getCalendarForYearMonthAndDay(final int year,
+    public static Calendar getCalendarForYearMonthAndDay(final int year,
                                                           final int monthOneBased,
                                                           final int day) {
         // We need to subtract one to convert the one-based month arg into a zero-based month
@@ -48,8 +50,12 @@ public class DateUtil {
         return cal.get(Calendar.YEAR);
     }
 
+    public static int getMonthZeroBased(Calendar cal) {
+        return cal.get(Calendar.MONTH);
+    }
+
     public static int getMonthOneBased(Calendar cal) {
-        return cal.get(Calendar.MONTH) + 1;
+        return getMonthZeroBased(cal) + 1;
     }
 
     public static void addOneMonth(Calendar cal) {

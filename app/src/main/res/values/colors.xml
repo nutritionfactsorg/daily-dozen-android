@@ -8,6 +8,7 @@
     <color name="colorDividerColor">#B6B6B6</color>
     <color name="gray">#AAAAAA</color>
     <color name="gray_CCCCCC">#CCCCCC</color>
+    <color name="gray_D3D3D3">#D3D3D3</color>
     <color name="gray_dark">#555555</color>
     <color name="gray_light">#F2F2F2</color>
     <color name="gray_f9">#F9F9F9</color>
