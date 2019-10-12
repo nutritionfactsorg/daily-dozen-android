@@ -9,7 +9,6 @@ import com.activeandroid.query.Select;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -72,10 +71,6 @@ public class Day extends TruncatableModel {
         return getEpoch().numDaysFrom(date);
     }
 
-    public int getNumDaysSince(Day startDay) {
-        return startDay == null ? 0 : getDateTime().numDaysFrom(startDay.getDateTime());
-    }
-
     private static DateTime getEpoch() {
         return DateTime.forInstant(0, TimeZone.getDefault());
     }
@@ -88,12 +83,6 @@ public class Day extends TruncatableModel {
     public static long getMillisUntilMidnight() {
         final DateTime tomorrow = getToday().plusDays(1);
         return DateTime.now(TimeZone.getDefault()).numSecondsFrom(tomorrow) * 1000;
-    }
-
-    public Calendar getCalendar() {
-        Calendar cal = Calendar.getInstance();
-        cal.set(year, month, day, 0, 0, 0);
-        return cal;
     }
 
     public DateTime getDateTime() {
