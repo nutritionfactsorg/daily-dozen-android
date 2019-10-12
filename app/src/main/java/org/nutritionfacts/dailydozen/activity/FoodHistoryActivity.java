@@ -1,17 +1,19 @@
 package org.nutritionfacts.dailydozen.activity;
 
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.collection.ArrayMap;
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
-import com.applandeo.materialcalendarview.CalendarView;
-import com.applandeo.materialcalendarview.listeners.OnCalendarPageChangeListener;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.DayViewDecorator;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
+import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
 
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.Common;
@@ -19,25 +21,29 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.util.CalendarHistoryDecorator;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends FoodLoadingActivity {
     @BindView(R.id.calendar_legend)
     protected ViewGroup vgLegend;
     @BindView(R.id.calendarView)
-    protected CalendarView calendarView;
+    protected MaterialCalendarView calendarView;
 
     private Set<String> loadedMonths = new HashSet<>();
-    private Map<Calendar, Drawable> datesWithEvents;
+    private List<DateTime> fullServingsDates;
+    private List<DateTime> partialServingsDates;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -46,9 +52,11 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
         setContentView(R.layout.activity_food_history);
         ButterKnife.bind(this);
 
-        datesWithEvents = new ArrayMap<>();
+        fullServingsDates = new ArrayList<>();
+        partialServingsDates = new ArrayList<>();
         if (savedInstanceState != null) {
-            datesWithEvents = (ArrayMap<Calendar, Drawable>) savedInstanceState.getSerializable(Args.DATES_WITH_EVENTS);
+            fullServingsDates = (ArrayList<DateTime>) savedInstanceState.getSerializable(Args.DATES_WITH_FULL_SERVINGS);
+            partialServingsDates = (ArrayList<DateTime>) savedInstanceState.getSerializable(Args.DATES_WITH_PARTIAL_SERVINGS);
         }
 
         displayFoodHistory();
@@ -64,35 +72,38 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     }
 
     private void initCalendar(final long foodId, final int recommendedServings) {
-        datesWithEvents = new ArrayMap<>();
+        fullServingsDates = new ArrayList<>();
+        partialServingsDates = new ArrayList<>();
 
-        calendarView.setHeaderColor(R.color.colorPrimary);
-
-        calendarView.setOnDayClickListener(eventDay -> {
-            setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(eventDay.getCalendar().getTime()));
-            finish();
+        calendarView.setOnDateChangedListener(new OnDateSelectedListener() {
+            @Override
+            public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
+                setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(DateUtil.getCalendarForYearMonthAndDay(date.getYear(), date.getMonth(), date.getDay()).getTime()));
+                finish();
+            }
         });
 
-        OnCalendarPageChangeListener onCalendarPageChangeListener = () -> displayEntriesForVisibleMonths(
-                DateUtil.getCalendarForYearAndMonth(
-                        calendarView.getCurrentPageDate().get(Calendar.YEAR),
-                        calendarView.getCurrentPageDate().get(Calendar.MONTH)),
-                foodId);
-
-        calendarView.setOnForwardPageChangeListener(onCalendarPageChangeListener);
-        calendarView.setOnPreviousPageChangeListener(onCalendarPageChangeListener);
+        calendarView.setOnMonthChangedListener(new OnMonthChangedListener() {
+            @Override
+            public void onMonthChanged(MaterialCalendarView widget, CalendarDay date) {
+                displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(date.getYear(), date.getMonth()), foodId);
+            }
+        });
 
         vgLegend.setVisibility(recommendedServings > 1 ? View.VISIBLE : View.GONE);
     }
 
     private void displayEntriesForVisibleMonths(final Calendar cal, final long foodId) {
         new AsyncTask<Void, Void, Void>() {
+            ColorDrawable bgLessThanRecServings;
+            ColorDrawable bgRecServings;
+
             @Override
             protected Void doInBackground(Void... params) {
-                final ColorDrawable bgLessThanRecServings = new ColorDrawable(
+                bgLessThanRecServings = new ColorDrawable(
                         ContextCompat.getColor(FoodHistoryActivity.this, R.color.legend_less_than_recommended_servings));
 
-                final ColorDrawable bgRecServings = new ColorDrawable(
+                bgRecServings = new ColorDrawable(
                         ContextCompat.getColor(FoodHistoryActivity.this, R.color.legend_recommended_servings));
 
                 // We start 2 months in the past because this prevents "flickering" of dates when the user swipes to
@@ -111,9 +122,11 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                         loadedMonths.add(monthStr);
 
                         for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
-                            datesWithEvents.put(
-                                    serving.getKey().getCalendar(),
-                                    serving.getValue() ? bgRecServings : bgLessThanRecServings);
+                            if (serving.getValue()) {
+                                fullServingsDates.add(serving.getKey().getDateTime());
+                            } else {
+                                partialServingsDates.add(serving.getKey().getDateTime());
+                            }
                         }
                     }
 
@@ -128,7 +141,10 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
 
-                calendarView.setHighlightedDays(new ArrayList<>(datesWithEvents.keySet()));
+                ArrayList<DayViewDecorator> decorators = new ArrayList<>();
+                decorators.add(new CalendarHistoryDecorator(fullServingsDates, bgRecServings));
+                decorators.add(new CalendarHistoryDecorator(partialServingsDates, bgLessThanRecServings));
+                calendarView.addDecorators(decorators);
             }
         }.execute();
     }
