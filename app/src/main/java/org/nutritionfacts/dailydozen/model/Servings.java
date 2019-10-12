@@ -176,12 +176,12 @@ public class Servings extends TruncatableModel {
             final List<Day> datesInMonth = Day.getDaysInYearAndMonth(year, monthOneBased);
 
             final List<String> placeholderArray = new ArrayList<>(datesInMonth.size());
-            final List<Long> dateIds = new ArrayList<>(datesInMonth.size());
+            final List<String> dateIds = new ArrayList<>(datesInMonth.size());
             for (int i = 0; i < datesInMonth.size(); i++) {
                 Long dateId = datesInMonth.get(i).getId();
                 if (dateId != null) {
                     placeholderArray.add("?");
-                    dateIds.add(dateId);
+                    dateIds.add(String.valueOf(dateId));
                 }
             }
 
@@ -191,10 +191,16 @@ public class Servings extends TruncatableModel {
 
             final String placeholders = TextUtils.join(",", placeholderArray);
 
-            final List<Servings> servings = new Select().from(Servings.class)
-                    .where("food_id = ?", foodId)
-                    .and(String.format("date_id IN (%s)", placeholders), dateIds)
-                    .execute();
+            String sql = String.format("SELECT * FROM servings WHERE food_id = ? AND date_id IN (%s)", placeholders);
+            Timber.d("sql %s", sql);
+
+            ArrayList<String> args = new ArrayList<>(dateIds);
+            args.add(0, String.valueOf(foodId));
+            Timber.d("args %s", args);
+
+            String[] argsArray = new String[args.size()];
+            argsArray = args.toArray(argsArray);
+            final List<Servings> servings = SQLiteUtils.rawQuery(Servings.class, sql, argsArray);
 
             for (Servings serving : servings) {
                 servingsInMonth.put(

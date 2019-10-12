@@ -128,7 +128,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
 
-                calendarView.setSelectedDates(new ArrayList<>(datesWithEvents.keySet()));
+                calendarView.setHighlightedDays(new ArrayList<>(datesWithEvents.keySet()));
             }
         }.execute();
     }
