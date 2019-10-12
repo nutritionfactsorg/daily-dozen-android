@@ -42,14 +42,12 @@
     <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
     <string name="library_android_iconify" translatable="false">android-iconify</string>
     <string name="library_butterknife">ButterKnife</string>
-    <string name="library_caldroid" translatable="false">Caldroid</string>
     <string name="library_eventbus" translatable="false">EventBus</string>
     <string name="library_likeanimation" translatable="false">LikeAnimation</string>
     <string name="library_mpandroidchart" translatable="false">MPAndroidChart</string>
     <string name="url_activeandroid" translatable="false">https://github.com/pardom/ActiveAndroid</string>
     <string name="url_android_iconify" translatable="false">https://github.com/JoanZapata/android-iconify</string>
     <string name="url_butterknife" translatable="false">https://github.com/JakeWharton/butterknife</string>
-    <string name="url_caldroid" translatable="false">https://github.com/roomorama/Caldroid</string>
     <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
     <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
     <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
@@ -203,7 +201,7 @@
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>The following open source libraries are used: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, and MPAndroidChart.</item>
         <item />
         <item>Special thanks to the volunteer efforts of the creators of the previous app: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
     </string-array>

@@ -65,7 +65,7 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
-    implementation('com.roomorama:caldroid:3.0.1') { exclude group: "com.android.support" }
+    implementation 'com.darwinsys:hirondelle-date4j:1.5.1'
     implementation 'com.github.prolificinteractive:material-calendarview:2.0.1'
     implementation('com.joanzapata.iconify:android-iconify-fontawesome:2.2.2') { exclude group: "com.android.support" }
     implementation('com.github.PhilJay:MPAndroidChart:v2.1.6') { exclude group: "com.android.support" }

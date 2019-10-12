@@ -84,7 +84,6 @@ public class AboutActivity extends AppCompatActivity {
         initLink(aboutText, ssb, R.string.library_activeandroid, R.string.url_activeandroid);
         initLink(aboutText, ssb, R.string.library_android_iconify, R.string.url_android_iconify);
         initLink(aboutText, ssb, R.string.library_butterknife, R.string.url_butterknife);
-        initLink(aboutText, ssb, R.string.library_caldroid, R.string.url_caldroid);
         initLink(aboutText, ssb, R.string.library_eventbus, R.string.url_eventbus);
         initLink(aboutText, ssb, R.string.library_likeanimation, R.string.url_likeanimation);
         initLink(aboutText, ssb, R.string.library_mpandroidchart, R.string.url_mpandroidchart);

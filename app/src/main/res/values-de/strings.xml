@@ -104,7 +104,7 @@
     <string-array name="about_text_lines">
         <item>Diese Anwendung wurde von John Slavick erstellt.</item>
         <item />
-        <item>Die folgenden Open-Source-Bibliotheken werden verwendet: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation und MPAndroidChart.</item>
+        <item>Die folgenden Open-Source-Bibliotheken werden verwendet: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation und MPAndroidChart.</item>
         <item />
         <item>Besonderer Dank geht an die freiwilligen Ersteller der vorherigen App: Chan Kruse, Allan Portera und Sangeeta Kumar.</item>
     </string-array>

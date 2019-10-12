@@ -130,7 +130,7 @@
     <string-array name="about_text_lines">
         <item>Это приложение создано Джоном Славиком (John Slavick).</item>
         <item />
-        <item>Приложение использует следующие библиотеки с открытым исходным кодом: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Приложение использует следующие библиотеки с открытым исходным кодом: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, and MPAndroidChart.</item>
         <item />
         <item>Особая благодарность выражается волонтёрам, создавшим предыдущее приложение: Chan Kruse, Allan Portera и Sangeeta Kumar.</item>
     </string-array>

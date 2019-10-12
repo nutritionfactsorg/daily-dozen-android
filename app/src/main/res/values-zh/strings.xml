@@ -129,7 +129,7 @@
     <string-array name="about_text_lines">
         <item>這個應用程式是由John Slavick所製作的。</item>
         <item />
-        <item>使用了以下免費程式庫: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>使用了以下免費程式庫: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, and MPAndroidChart.</item>
         <item />
         <item>特別感謝製作前一代應用程式志願者所做的貢獻: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
     </string-array>

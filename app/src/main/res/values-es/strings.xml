@@ -112,7 +112,7 @@
     <string-array name="about_text_lines">
         <item>Esta app fue creada por John Slavick.</item>
         <item />
-        <item>Las siguientes open source libraries fueron utilizadas: ActiveAndroid, android-iconify, ButterKnife, Caldroid, EventBus, LikeAnimation, y MPAndroidChart.</item>
+        <item>Las siguientes open source libraries fueron utilizadas: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, y MPAndroidChart.</item>
         <item />
         <item>Agradecimiento especial a los esfuerzos de los voluntarios de la app anterior: Chan Kruse, Allan Portera, y Sangeeta Kumar.</item>
     </string-array>
