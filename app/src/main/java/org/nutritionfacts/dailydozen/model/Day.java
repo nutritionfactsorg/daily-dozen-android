@@ -92,9 +92,7 @@ public class Day extends TruncatableModel {
 
     public Calendar getCalendar() {
         Calendar cal = Calendar.getInstance();
-        cal.set(Calendar.YEAR, year);
-        cal.set(Calendar.MONTH, month);
-        cal.set(Calendar.DAY_OF_MONTH, day);
+        cal.set(year, month, day, 0, 0, 0);
         return cal;
     }
 
