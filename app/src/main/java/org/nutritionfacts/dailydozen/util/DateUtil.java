@@ -1,7 +1,5 @@
 package org.nutritionfacts.dailydozen.util;
 
-import android.widget.CalendarView;
-
 import org.nutritionfacts.dailydozen.model.Day;
 
 import java.text.SimpleDateFormat;
@@ -42,15 +40,11 @@ public class DateUtil {
         return getYear(getCalendarForToday());
     }
 
-    public static int getCurrentMonthOneBased() {
-        return getMonthOneBased(getCalendarForToday());
-    }
-
     public static int getYear(Calendar cal) {
         return cal.get(Calendar.YEAR);
     }
 
-    public static int getMonthZeroBased(Calendar cal) {
+    private static int getMonthZeroBased(Calendar cal) {
         return cal.get(Calendar.MONTH);
     }
 

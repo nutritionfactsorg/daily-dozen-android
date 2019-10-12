@@ -191,16 +191,14 @@ public class Servings extends TruncatableModel {
 
             final String placeholders = TextUtils.join(",", placeholderArray);
 
-            String sql = String.format("SELECT * FROM servings WHERE food_id = ? AND date_id IN (%s)", placeholders);
-            Timber.d("sql %s", sql);
-
             ArrayList<String> args = new ArrayList<>(dateIds);
             args.add(0, String.valueOf(foodId));
-            Timber.d("args %s", args);
-
             String[] argsArray = new String[args.size()];
             argsArray = args.toArray(argsArray);
-            final List<Servings> servings = SQLiteUtils.rawQuery(Servings.class, sql, argsArray);
+
+            final List<Servings> servings = SQLiteUtils.rawQuery(Servings.class,
+                    String.format("SELECT * FROM servings WHERE food_id = ? AND date_id IN (%s)", placeholders),
+                    argsArray);
 
             for (Servings serving : servings) {
                 servingsInMonth.put(
