@@ -31,7 +31,6 @@ public class StreakWidget extends IconTextView {
     public void setStreak(int streak) {
         if (streak > ONE_DAY) {
             setVisibility(View.VISIBLE);
-
             setText(getContext().getString(R.string.format_num_days, streak));
 
             if (streak < ONE_WEEK) {
@@ -40,6 +39,17 @@ public class StreakWidget extends IconTextView {
                 setBackgroundAndTextColor(R.drawable.rounded_rectangle_silver, android.R.color.black);
             } else {
                 setBackgroundAndTextColor(R.drawable.rounded_rectangle_gold, android.R.color.black);
+            }
+        } else if (streak < -ONE_DAY) {
+            setVisibility(View.VISIBLE);
+            setText(getContext().getString(R.string.format_num_days, streak));
+
+            if (streak > -ONE_WEEK) {
+                setBackgroundAndTextColor(R.drawable.rounded_rectangle_amber, android.R.color.black);
+            } else if (streak <= -ONE_WEEK && streak > -TWO_WEEKS) {
+                setBackgroundAndTextColor(R.drawable.rounded_rectangle_orange, android.R.color.black);
+            } else if (streak <= -TWO_WEEKS) {
+                setBackgroundAndTextColor(R.drawable.rounded_rectangle_red, android.R.color.white);
             }
         } else {
             setVisibility(View.GONE);

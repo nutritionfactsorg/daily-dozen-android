@@ -59,9 +59,13 @@ public class Servings extends TruncatableModel {
     }
 
     public void recalculateStreak() {
+        int priorStreak = getStreakFromDayBefore();
+
         if (servings == food.getRecommendedServings()) {
-            streak = getStreakFromDayBefore() + 1;
-        } else if (servings < food.getRecommendedServings()) {
+            streak = priorStreak >= 0 ? priorStreak + 1 : 1;
+        } else if (servings == 0) {
+            streak = priorStreak <= 0 ? priorStreak - 1 : 0;
+        } else {
             streak = 0;
         }
     }

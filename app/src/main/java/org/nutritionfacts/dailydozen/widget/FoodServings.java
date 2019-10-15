@@ -87,7 +87,7 @@ public class FoodServings extends LinearLayout {
 
     private void initFoodStreak(Servings servings) {
         final int streak = servings != null ? servings.getStreak() : 0;
-        if (streak > 0) {
+        if (streak != 0) {
             tvStreak.setVisibility(VISIBLE);
             tvStreak.setStreak(streak);
         } else {
