@@ -24,7 +24,9 @@ import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.Weights;
 import org.nutritionfacts.dailydozen.widget.DateServings;
+import org.nutritionfacts.dailydozen.widget.DateWeights;
 import org.nutritionfacts.dailydozen.widget.FoodServings;
 import org.nutritionfacts.dailydozen.widget.SupplementDivider;
 
@@ -38,6 +40,8 @@ import timber.log.Timber;
 public class DateFragment extends Fragment {
     @BindView(R.id.back_to_today)
     protected TextView tvBackToToday;
+    @BindView(R.id.date_weights)
+    protected DateWeights dateWeights;
     @BindView(R.id.date_servings)
     protected DateServings dateServings;
     @BindView(R.id.date_food_servings)
@@ -92,6 +96,7 @@ public class DateFragment extends Fragment {
                 initBackToTodayButton();
 
                 updateServingsCount();
+                updateWeights();
 
                 final Context context = getContext();
                 boolean addedSupplementDivider = false;
@@ -135,6 +140,7 @@ public class DateFragment extends Fragment {
         }
 
         dateServings = null;
+        dateWeights = null;
     }
 
     @Subscribe
@@ -195,5 +201,13 @@ public class DateFragment extends Fragment {
 
     private void updateServingsCount(final int numServings) {
         dateServings.setServings(numServings);
+    }
+
+    private void updateWeights() {
+        final Weights weights = Weights.getWeightsOnDay(day);
+        if (weights != null) {
+            dateWeights.setMorningWeight(weights.getMorningWeight());
+            dateWeights.setEveningWeight(weights.getEveningWeight());
+        }
     }
 }

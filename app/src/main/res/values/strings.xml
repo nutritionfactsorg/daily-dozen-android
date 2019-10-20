@@ -92,6 +92,12 @@
     <string name="history_to_generate">History to Generate</string>
     <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
     <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
+    <string name="date_weights_eye_open" translatable="false">{fa-eye 24dp @color/gray_dark}</string>
+    <string name="date_weights_eye_closed" translatable="false">{fa-eye-slash 24dp @color/gray_dark}</string>
+    <string name="date_weights_morning_weight" translatable="false">{fa-square 24dp @color/gray_dark}</string>
+    <string name="date_weights_evening_weight" translatable="false">{fa-check-square 24dp @color/gray_dark}</string>
+    <string name="unchecked" translatable="false">{fa-square 24dp @color/gray_dark}</string>
+    <string name="checked" translatable="false">{fa-check-square 24dp @color/gray_dark}</string>
     <string name="welcome_to_my_daily_dozen">Welcome to my Daily Dozen!</string>
     <string name="activity_welcome_text">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.</string>
     <string name="dialog_ask_user_to_rate_app_title">Do you like this app?</string>
@@ -111,6 +117,8 @@
     <string name="units">Units</string>
     <string name="imperial">Imperial</string>
     <string name="metric">Metric</string>
+    <string name="morning">Morning</string>
+    <string name="evening">Evening</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
