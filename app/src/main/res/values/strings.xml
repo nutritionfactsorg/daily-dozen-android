@@ -436,60 +436,60 @@
     </string-array>
 
     <string-array name="food_info_types_exercise">
+        <item>Backpacking</item>
+        <item>Basketball</item>
+        <item>Bicycling uphill</item>
         <item>Bicycling</item>
         <item>Canoeing</item>
+        <item>Circuit weight training</item>
+        <item>Cross-country skiing</item>
         <item>Dancing</item>
         <item>Dodgeball</item>
         <item>Downhill skiing</item>
         <item>Fencing</item>
+        <item>Football</item>
         <item>Hiking</item>
+        <item>Hockey</item>
         <item>Housework</item>
         <item>Ice-skating</item>
         <item>Inline skating</item>
+        <item>Jogging</item>
         <item>Juggling</item>
+        <item>Jumping jacks</item>
         <item>Jumping on a trampoline</item>
+        <item>Jumping rope</item>
+        <item>Lacrosse</item>
         <item>Paddle boating</item>
         <item>Playing frisbee</item>
+        <item>Pull-ups</item>
+        <item>Push-ups</item>
+        <item>Racquetball</item>
+        <item>Rock climbing</item>
         <item>Roller-skating</item>
+        <item>Rugby</item>
+        <item>Running</item>
+        <item>Scuba diving</item>
         <item>Shooting baskets</item>
         <item>Shoveling light snow</item>
         <item>Skateboarding</item>
         <item>Snorkeling</item>
-        <item>Surfing</item>
-        <item>Swimming recreationally</item>
-        <item>Tennis (doubles)</item>
-        <item>Treading water</item>
-        <item>Walking briskly (4 mph)</item>
-        <item>Water aerobics</item>
-        <item>Waterskiing</item>
-        <item>Yard work</item>
-        <item>Yoga</item>
-        <item>Backpacking</item>
-        <item>Basketball</item>
-        <item>Bicycling uphill</item>
-        <item>Circuit weight training</item>
-        <item>Cross-country skiing</item>
-        <item>Football</item>
-        <item>Hockey</item>
-        <item>Jogging</item>
-        <item>Jumping jacks</item>
-        <item>Jumping rope</item>
-        <item>Lacrosse</item>
-        <item>Push-ups</item>
-        <item>Pull-ups</item>
-        <item>Racquetball</item>
-        <item>Rock climbing</item>
-        <item>Rugby</item>
-        <item>Running</item>
-        <item>Scuba diving</item>
-        <item>Tennis (singles)</item>
         <item>Soccer</item>
         <item>Speed skating</item>
         <item>Squash</item>
         <item>Step aerobics</item>
+        <item>Surfing</item>
         <item>Swimming laps</item>
+        <item>Swimming recreationally</item>
+        <item>Tennis (doubles)</item>
+        <item>Tennis (singles)</item>
+        <item>Treading water</item>
+        <item>Walking briskly (4 mph)</item>
         <item>Walking briskly uphill</item>
+        <item>Water aerobics</item>
         <item>Water jogging</item>
+        <item>Waterskiing</item>
+        <item>Yard work</item>
+        <item>Yoga</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_beans">
