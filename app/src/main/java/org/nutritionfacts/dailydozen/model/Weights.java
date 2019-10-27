@@ -1,12 +1,11 @@
 package org.nutritionfacts.dailydozen.model;
 
-import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
 @Table(name = "weights")
-public class Weights extends Model {
+public class Weights extends TruncatableModel {
     @Column(name = "date_id")
     private Day day;
 
@@ -15,6 +14,16 @@ public class Weights extends Model {
 
     @Column(name = "evening_weight")
     private float eveningWeight;
+
+    private Weights weights;
+
+    public Weights() {
+    }
+
+    public Weights(Day day, Weights weights) {
+        this.day = day;
+        this.weights = weights;
+    }
 
     public Day getDay() {
         return day;
@@ -39,7 +48,12 @@ public class Weights extends Model {
     public void setEveningWeight(float eveningWeight) {
         this.eveningWeight = eveningWeight;
     }
-    
+
+    public static Weights createWeightsIfDoesNotExist(final Day day) {
+        // TODO
+        return null;
+    }
+
     public static Weights getWeightsOnDay(final Day day) {
         Weights weights = new Weights();
 

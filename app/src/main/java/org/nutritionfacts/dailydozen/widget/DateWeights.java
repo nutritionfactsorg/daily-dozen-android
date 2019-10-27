@@ -15,12 +15,15 @@ import com.joanzapata.iconify.widget.IconTextView;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.Weights;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnEditorAction;
 import butterknife.OnTextChanged;
+import timber.log.Timber;
 
 public class DateWeights extends LinearLayout {
     @BindView(R.id.header)
@@ -37,6 +40,7 @@ public class DateWeights extends LinearLayout {
     protected IconTextView tvEveningWeightHiddenIcon;
 
     private boolean showWeights = true;
+    private Day day;
 
     public DateWeights(Context context) {
         super(context);
@@ -53,6 +57,12 @@ public class DateWeights extends LinearLayout {
         ButterKnife.bind(this, view);
 
         tvHeader.setText("Weight");
+    }
+
+    public void setDay(final Day day) {
+        this.day = day;
+
+        // TODO: 2019-10-22 load weights
     }
 
     @OnClick(R.id.eye)
@@ -93,16 +103,21 @@ public class DateWeights extends LinearLayout {
         }
     }
 
-    @OnTextChanged(R.id.morning_weight)
-    public void onMorningWeightChanged() {
-        // TODO: save weight on each keypress
-        Common.showToast(getContext(), tvMorningWeight.getText().toString());
-    }
+    @OnTextChanged({R.id.morning_weight, R.id.evening_weight})
+    public void onWeightChanged() {
+        day = Day.createDayIfDoesNotExist(day);
 
-    @OnTextChanged(R.id.evening_weight)
-    public void onEveningWeightChanged() {
-        // TODO: save weight on each keypress
-        Common.showToast(getContext(), tvEveningWeight.getText().toString());
+        final Weights weights = Weights.createWeightsIfDoesNotExist(day);
+        if (weights != null) {
+            float morningWeight = Float.parseFloat(tvMorningWeight.getText().toString());
+            float eveningWeight = Float.parseFloat(tvEveningWeight.getText().toString());
+
+            weights.setMorningWeight(morningWeight);
+            weights.setEveningWeight(eveningWeight);
+
+            weights.save();
+            Timber.d("Saving morning weight [%s] and evening weight [%s]", morningWeight, eveningWeight);
+        }
     }
 
     @OnEditorAction({R.id.morning_weight,R.id.evening_weight})
