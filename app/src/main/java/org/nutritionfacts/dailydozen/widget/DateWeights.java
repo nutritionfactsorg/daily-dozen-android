@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import com.joanzapata.iconify.widget.IconTextView;
 
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Weights;
 
@@ -72,18 +73,17 @@ public class DateWeights extends LinearLayout {
             }
         }
 
+        showWeights = Prefs.getInstance(getContext()).getWeightShown();
+        updateWeights();
+
         initialized = true;
     }
 
     @OnClick(R.id.eye)
     public void onEyeClicked() {
         showWeights = !showWeights;
-
-        if (showWeights) {
-            setWeightsVisible();
-        } else {
-            setWeightsInvisible();
-        }
+        updateWeights();
+        Prefs.getInstance(getContext()).setWeightShown(showWeights);
     }
 
     private void setWeightsVisible() {
@@ -160,6 +160,14 @@ public class DateWeights extends LinearLayout {
     public void setEveningWeight(final float weight) {
         if (weight > 0) {
             tvEveningWeight.setText(String.valueOf(weight));
+        }
+    }
+
+    private void updateWeights() {
+        if (showWeights) {
+            setWeightsVisible();
+        } else {
+            setWeightsInvisible();
         }
     }
 }
