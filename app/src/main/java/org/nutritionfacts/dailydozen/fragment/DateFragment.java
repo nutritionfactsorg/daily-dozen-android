@@ -204,10 +204,6 @@ public class DateFragment extends Fragment {
     }
 
     private void updateWeights() {
-//        final Weights weights = Weights.getWeightsOnDay(day);
-//        if (weights != null) {
-//            dateWeights.setMorningWeight(weights.getMorningWeight());
-//            dateWeights.setEveningWeight(weights.getEveningWeight());
-//        }
+        dateWeights.setDay(day);
     }
 }

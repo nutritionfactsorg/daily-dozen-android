@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 
 import com.joanzapata.iconify.widget.IconTextView;
 
-import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Weights;
@@ -39,6 +38,7 @@ public class DateWeights extends LinearLayout {
     @BindView(R.id.evening_weight_hidden_icon)
     protected IconTextView tvEveningWeightHiddenIcon;
 
+    private boolean initialized = false;
     private boolean showWeights = true;
     private Day day;
 
@@ -62,7 +62,17 @@ public class DateWeights extends LinearLayout {
     public void setDay(final Day day) {
         this.day = day;
 
-        // TODO: 2019-10-22 load weights
+        final Weights weightsOnDay = Weights.getWeightsOnDay(day);
+        if (weightsOnDay != null) {
+            if (weightsOnDay.getMorningWeight() > 0) {
+                setMorningWeight(weightsOnDay.getMorningWeight());
+            }
+            if (weightsOnDay.getEveningWeight() > 0) {
+                setEveningWeight(weightsOnDay.getEveningWeight());
+            }
+        }
+
+        initialized = true;
     }
 
     @OnClick(R.id.eye)
@@ -105,18 +115,31 @@ public class DateWeights extends LinearLayout {
 
     @OnTextChanged({R.id.morning_weight, R.id.evening_weight})
     public void onWeightChanged() {
-        day = Day.createDayIfDoesNotExist(day);
+        if (!initialized) {
+            return;
+        }
 
-        final Weights weights = Weights.createWeightsIfDoesNotExist(day);
-        if (weights != null) {
-            float morningWeight = Float.parseFloat(tvMorningWeight.getText().toString());
-            float eveningWeight = Float.parseFloat(tvEveningWeight.getText().toString());
+        try {
+            float morningWeight = 0;
+            float eveningWeight = 0;
 
-            weights.setMorningWeight(morningWeight);
-            weights.setEveningWeight(eveningWeight);
+            String morningWeightStr = tvMorningWeight.getText().toString();
+            if (!TextUtils.isEmpty(morningWeightStr)) {
+                morningWeight = Float.parseFloat(morningWeightStr);
+            }
 
-            weights.save();
-            Timber.d("Saving morning weight [%s] and evening weight [%s]", morningWeight, eveningWeight);
+            String eveningWeightStr = tvEveningWeight.getText().toString();
+            if (!TextUtils.isEmpty(eveningWeightStr)) {
+                eveningWeight = Float.parseFloat(eveningWeightStr);
+            }
+
+            if (morningWeight > 0 || eveningWeight > 0) {
+                day = Day.createDayIfDoesNotExist(day);
+                Weights.createWeightsIfDoesNotExist(day, morningWeight, eveningWeight);
+                Timber.d("Saving morning weight [%s] and evening weight [%s]", morningWeight, eveningWeight);
+            }
+        } catch (NumberFormatException e) {
+            Timber.e(e);
         }
     }
 

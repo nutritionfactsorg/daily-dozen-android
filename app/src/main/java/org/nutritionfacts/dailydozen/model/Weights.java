@@ -15,14 +15,13 @@ public class Weights extends TruncatableModel {
     @Column(name = "evening_weight")
     private float eveningWeight;
 
-    private Weights weights;
-
     public Weights() {
     }
 
-    public Weights(Day day, Weights weights) {
+    public Weights(Day day, float morningWeight, float eveningWeight) {
         this.day = day;
-        this.weights = weights;
+        this.morningWeight = morningWeight;
+        this.eveningWeight = eveningWeight;
     }
 
     public Day getDay() {
@@ -49,20 +48,28 @@ public class Weights extends TruncatableModel {
         this.eveningWeight = eveningWeight;
     }
 
-    public static Weights createWeightsIfDoesNotExist(final Day day) {
-        // TODO
-        return null;
+    public static Weights createWeightsIfDoesNotExist(final Day day, float morningWeight, float eveningWeight) {
+        Weights weights = getWeightsOnDay(day);
+
+        if (weights == null) {
+            weights = new Weights(day, morningWeight, eveningWeight);
+        } else {
+            weights.setMorningWeight(morningWeight);
+            weights.setEveningWeight(eveningWeight);
+        }
+
+        weights.save();
+
+        return weights;
     }
 
     public static Weights getWeightsOnDay(final Day day) {
-        Weights weights = new Weights();
-
         if (day != null && day.getId() != null) {
-            weights = new Select().from(Weights.class)
+            return new Select().from(Weights.class)
                     .where("date_id = ?", day.getId())
                     .executeSingle();
         }
 
-        return weights;
+        return null;
     }
 }
