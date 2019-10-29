@@ -205,5 +205,6 @@ public class DateFragment extends Fragment {
 
     private void updateWeights() {
         dateWeights.setDay(day);
+        Bus.register(dateWeights);
     }
 }

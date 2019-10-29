@@ -10,6 +10,7 @@ import org.nutritionfacts.dailydozen.model.enums.Units;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 
 import hugo.weaving.DebugLog;
+import timber.log.Timber;
 
 public class Prefs {
     private static final String STREAKS_HAVE_BEEN_CALCULATED_ON_DATABASE_UPGRADE_V2 = "v2_streaks_calculated";
@@ -52,6 +53,7 @@ public class Prefs {
     }
 
     private void setBooleanPref(final String name, final boolean value) {
+        Timber.d("setBooleanPref: [%s] = [%s]", name, value);
         sharedPrefs.edit().putBoolean(name, value).apply();
     }
 
@@ -116,11 +118,11 @@ public class Prefs {
         setIntegerPref(UNIT_TYPE, getUnitTypePref() == Units.METRIC ? Units.IMPERIAL : Units.METRIC);
     }
 
-    public void setWeightShown(boolean shown) {
-        setBooleanPref(PREF_SHOW_WEIGHT, shown);
+    public void toggleWeightVisibility() {
+        setBooleanPref(PREF_SHOW_WEIGHT, !getWeightVisible());
     }
 
-    public boolean getWeightShown() {
-        return getBooleanPref(PREF_SHOW_WEIGHT);
+    public boolean getWeightVisible() {
+        return sharedPrefs.getBoolean(PREF_SHOW_WEIGHT, true);
     }
 }

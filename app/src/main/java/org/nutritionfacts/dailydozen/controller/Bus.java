@@ -12,6 +12,7 @@ import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.event.ShowExplodingStarAnimation;
 import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
 import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
+import org.nutritionfacts.dailydozen.event.WeightVisibilityChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 
@@ -62,5 +63,9 @@ public class Bus {
 
     public static void timeRangeSelectedEvent() {
         post(new TimeRangeSelectedEvent());
+    }
+
+    public static void weightVisibilityChanged() {
+        post(new WeightVisibilityChangedEvent());
     }
 }

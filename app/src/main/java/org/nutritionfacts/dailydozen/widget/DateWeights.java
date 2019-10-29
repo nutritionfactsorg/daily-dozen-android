@@ -13,8 +13,11 @@ import androidx.annotation.Nullable;
 
 import com.joanzapata.iconify.widget.IconTextView;
 
+import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.Prefs;
+import org.nutritionfacts.dailydozen.event.WeightVisibilityChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Weights;
 
@@ -40,7 +43,6 @@ public class DateWeights extends LinearLayout {
     protected IconTextView tvEveningWeightHiddenIcon;
 
     private boolean initialized = false;
-    private boolean showWeights = true;
     private Day day;
 
     public DateWeights(Context context) {
@@ -73,29 +75,35 @@ public class DateWeights extends LinearLayout {
             }
         }
 
-        showWeights = Prefs.getInstance(getContext()).getWeightShown();
         updateWeights();
 
         initialized = true;
     }
 
+    @Subscribe
+    public void onEvent(WeightVisibilityChangedEvent event) {
+        updateWeights();
+    }
+
     @OnClick(R.id.eye)
     public void onEyeClicked() {
-        showWeights = !showWeights;
-        updateWeights();
-        Prefs.getInstance(getContext()).setWeightShown(showWeights);
+        Prefs.getInstance(getContext()).toggleWeightVisibility();
+        Bus.weightVisibilityChanged();
     }
 
     private void setWeightsVisible() {
         tvEye.setText(R.string.date_weights_eye_open);
+
         tvMorningWeight.setVisibility(VISIBLE);
         tvMorningWeightHiddenIcon.setVisibility(GONE);
+
         tvEveningWeight.setVisibility(VISIBLE);
         tvEveningWeightHiddenIcon.setVisibility(GONE);
     }
 
     private void setWeightsInvisible() {
         tvEye.setText(R.string.date_weights_eye_closed);
+
         tvMorningWeight.setVisibility(GONE);
         tvMorningWeightHiddenIcon.setVisibility(VISIBLE);
         if (TextUtils.isEmpty(tvMorningWeight.getText())) {
@@ -164,7 +172,7 @@ public class DateWeights extends LinearLayout {
     }
 
     private void updateWeights() {
-        if (showWeights) {
+        if (Prefs.getInstance(getContext()).getWeightVisible()) {
             setWeightsVisible();
         } else {
             setWeightsInvisible();
