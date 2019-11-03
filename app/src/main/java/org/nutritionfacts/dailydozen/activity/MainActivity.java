@@ -6,16 +6,18 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
-import androidx.viewpager.widget.PagerTabStrip;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.PagerTabStrip;
+import androidx.viewpager.widget.ViewPager;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
@@ -23,6 +25,7 @@ import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.adapter.DatePagerAdapter;
+import org.nutritionfacts.dailydozen.adapter.TweaksPagerAdapter;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.controller.Prefs;
@@ -60,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
     private int daysSinceEpoch;
 
     private boolean alreadyHandledRestoreIntent;
+
+    private boolean inDailyDozenMode = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,8 +179,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_toggle_modes:
-                // TODO (slavick) switch between Daily Dozen and 21 Tweaks with weight tracking
-                Common.showToast(this, "TODO toggle mode");
+                inDailyDozenMode = !inDailyDozenMode;
+                initDatePager();
                 return true;
             case R.id.menu_latest_videos:
                 Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);
@@ -227,13 +232,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDatePager() {
-        final DatePagerAdapter datePagerAdapter = new DatePagerAdapter(getSupportFragmentManager());
-        datePager.setAdapter(datePagerAdapter);
+        // TODO (slavick)
+        //  rename date pager to daily dozen date pager
+        //  create tweaks date pager
+        //  when menu item tapped, swap adapters
 
-        daysSinceEpoch = datePagerAdapter.getCount();
+        final FragmentStatePagerAdapter pagerAdapter;
+        if (inDailyDozenMode) {
+            pagerAdapter = new DatePagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        } else {
+            pagerAdapter = new TweaksPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        }
+        datePager.setAdapter(pagerAdapter);
+        daysSinceEpoch = pagerAdapter.getCount();
 
         // Go to today's date by default
-        datePager.setCurrentItem(datePagerAdapter.getCount(), false);
+        datePager.setCurrentItem(pagerAdapter.getCount(), false);
     }
 
     private void initDatePagerIndicator() {
