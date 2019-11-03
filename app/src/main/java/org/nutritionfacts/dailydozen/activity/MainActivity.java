@@ -173,6 +173,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_toggle_modes:
+                // TODO (slavick) switch between Daily Dozen and 21 Tweaks with weight tracking
+                Common.showToast(this, "TODO toggle mode");
+                return true;
             case R.id.menu_latest_videos:
                 Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);
                 return true;

@@ -111,6 +111,8 @@
     <string name="units">Units</string>
     <string name="imperial">Imperial</string>
     <string name="metric">Metric</string>
+    <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
+    <string name="twenty_one" translatable="false">21</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
@@ -689,8 +691,6 @@
         <item/>
         <item/>
     </string-array>
-
-    <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
 
     <string-array name="food_videos_beans" translatable="false">
         <item>black-beans</item>
