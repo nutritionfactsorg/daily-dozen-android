@@ -35,7 +35,7 @@ import butterknife.Unbinder;
 import likeanimation.LikeButtonView;
 import timber.log.Timber;
 
-public class DateFragment extends Fragment {
+public class DailyDozenFragment extends Fragment {
     @BindView(R.id.back_to_today)
     protected TextView tvBackToToday;
     @BindView(R.id.date_servings)
@@ -51,19 +51,19 @@ public class DateFragment extends Fragment {
 
     private Day day;
 
-    public static DateFragment newInstance(final Day day) {
+    public static DailyDozenFragment newInstance(final Day day) {
         final Bundle args = new Bundle();
         args.putString(Args.DATE, day.getDateString());
 
-        final DateFragment dateFragment = new DateFragment();
-        dateFragment.setArguments(args);
-        return dateFragment;
+        final DailyDozenFragment dailyDozenFragment = new DailyDozenFragment();
+        dailyDozenFragment.setArguments(args);
+        return dailyDozenFragment;
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_date, container, false);
+        return inflater.inflate(R.layout.fragment_daily_dozen, container, false);
     }
 
     @Override

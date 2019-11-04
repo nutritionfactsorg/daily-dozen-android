@@ -5,13 +5,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import org.nutritionfacts.dailydozen.fragment.DateFragment;
+import org.nutritionfacts.dailydozen.fragment.DailyDozenFragment;
 import org.nutritionfacts.dailydozen.model.Day;
 
-public class DatePagerAdapter extends FragmentStatePagerAdapter {
+public class DailyDozenPagerAdapter extends FragmentStatePagerAdapter {
     private int numDaysSinceEpoch;
 
-    public DatePagerAdapter(@NonNull FragmentManager fm, int behavior) {
+    public DailyDozenPagerAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
 
         this.numDaysSinceEpoch = Day.getNumDaysSinceEpoch();
@@ -19,7 +19,7 @@ public class DatePagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return DateFragment.newInstance(Day.getByOffsetFromEpoch(position));
+        return DailyDozenFragment.newInstance(Day.getByOffsetFromEpoch(position));
     }
 
     @Override

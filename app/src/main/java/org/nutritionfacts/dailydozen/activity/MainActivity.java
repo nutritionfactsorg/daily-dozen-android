@@ -24,7 +24,7 @@ import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-import org.nutritionfacts.dailydozen.adapter.DatePagerAdapter;
+import org.nutritionfacts.dailydozen.adapter.DailyDozenPagerAdapter;
 import org.nutritionfacts.dailydozen.adapter.TweaksPagerAdapter;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.PermissionController;
@@ -232,14 +232,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDatePager() {
-        // TODO (slavick)
-        //  rename date pager to daily dozen date pager
-        //  create tweaks date pager
-        //  when menu item tapped, swap adapters
-
         final FragmentStatePagerAdapter pagerAdapter;
         if (inDailyDozenMode) {
-            pagerAdapter = new DatePagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+            pagerAdapter = new DailyDozenPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         } else {
             pagerAdapter = new TweaksPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         }

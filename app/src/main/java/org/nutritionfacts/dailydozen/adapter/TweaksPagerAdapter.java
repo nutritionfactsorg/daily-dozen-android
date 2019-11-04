@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
+import org.nutritionfacts.dailydozen.fragment.TweaksFragment;
 import org.nutritionfacts.dailydozen.model.Day;
 
 public class TweaksPagerAdapter extends FragmentStatePagerAdapter {
@@ -20,7 +21,7 @@ public class TweaksPagerAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return null;
+        return TweaksFragment.newInstance(Day.getByOffsetFromEpoch(position));
     }
 
     @Nullable

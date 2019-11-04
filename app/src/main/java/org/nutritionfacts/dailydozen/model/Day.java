@@ -79,7 +79,7 @@ public class Day extends TruncatableModel {
         return DateTime.today(TimeZone.getDefault());
     }
 
-    // This method is used for scheduling the reinitialization of the DatePagerAdapter
+    // This method is used for scheduling the reinitialization of the DailyDozenPagerAdapter
     public static long getMillisUntilMidnight() {
         final DateTime tomorrow = getToday().plusDays(1);
         return DateTime.now(TimeZone.getDefault()).numSecondsFrom(tomorrow) * 1000;
