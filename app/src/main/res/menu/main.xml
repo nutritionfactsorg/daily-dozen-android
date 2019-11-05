@@ -3,7 +3,7 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menu_toggle_modes"
-        android:title="@string/twenty_one"
+        android:title="@string/twenty_one_tweaks"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu_latest_videos"

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Daily Dozen</string>
+    <string name="twenty_one_tweaks">21 Tweaks</string>
 
     <string name="beans">Beans</string>
     <string name="berries">Berries</string>
@@ -113,6 +114,7 @@
     <string name="metric">Metric</string>
     <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
     <string name="twenty_one" translatable="false">21</string>
+    <string name="channel_reminders_name">Reminders</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
@@ -171,8 +173,6 @@
         <item>@string/vitamin_b12</item>
         <item>@string/omega3</item>
     </string-array>
-
-    <string name="channel_reminders_name">Reminders</string>
 
     <string-array name="notification_icon_food_names">
         <item>@string/beans</item>

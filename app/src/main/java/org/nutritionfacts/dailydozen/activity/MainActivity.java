@@ -180,6 +180,13 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.menu_toggle_modes:
                 inDailyDozenMode = !inDailyDozenMode;
+                if (inDailyDozenMode) {
+                    setTitle(R.string.app_name);
+                    item.setTitle(R.string.twenty_one_tweaks);
+                } else {
+                    setTitle(R.string.twenty_one_tweaks);
+                    item.setTitle(R.string.app_name);
+                }
                 initDatePager();
                 return true;
             case R.id.menu_latest_videos:
