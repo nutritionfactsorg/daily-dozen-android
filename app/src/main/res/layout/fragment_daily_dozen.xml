@@ -9,10 +9,29 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <org.nutritionfacts.dailydozen.widget.DateHeader
-            android:id="@+id/date_servings"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <org.nutritionfacts.dailydozen.widget.DateWeights
+                android:id="@+id/date_weights"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="@color/colorDividerColor"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+
+            <org.nutritionfacts.dailydozen.widget.DateHeader
+                android:id="@+id/date_servings"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
         <View
             android:background="@color/colorDividerColor"

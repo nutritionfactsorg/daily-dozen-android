@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<com.google.android.flexbox.FlexboxLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:padding="8dp"
+    app:flexWrap="wrap"
+    app:flexDirection="column"
+    app:alignItems="stretch"
+    app:alignContent="stretch" >
 
-    <TextView
-        android:id="@+id/header"
-        style="@style/PrimaryText"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start|center_vertical"/>
-
-    <com.joanzapata.iconify.widget.IconTextView
-        android:id="@+id/star"
-        android:text="@string/date_servings_star"
-        android:visibility="gone"
-        android:layout_gravity="center"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/header"
+            style="@style/PrimaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical" />
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="1dp" />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/date_servings_star"
+            android:visibility="gone" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/sub_header"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         android:gravity="end|bottom">
 
@@ -62,4 +77,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</com.google.android.flexbox.FlexboxLayout>

@@ -21,7 +21,7 @@
             android:value="4" />
         <meta-data
             android:name="AA_MODELS"
-            android:value="org.nutritionfacts.dailydozen.model.Day, org.nutritionfacts.dailydozen.model.Food, org.nutritionfacts.dailydozen.model.Servings" />
+            android:value="org.nutritionfacts.dailydozen.model.Day, org.nutritionfacts.dailydozen.model.Food, org.nutritionfacts.dailydozen.model.Servings, org.nutritionfacts.dailydozen.model.Weights" />
         
         <activity
             android:name=".activity.MainActivity"
