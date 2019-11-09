@@ -1,124 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.flexbox.FlexboxLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingRight="8dp"
-    android:paddingEnd="8dp"
-    android:paddingLeft="8dp"
-    android:paddingStart="8dp"
-    android:paddingTop="8dp"
-    app:flexWrap="wrap"
-    app:alignItems="stretch"
-    app:alignContent="stretch" >
+    android:orientation="horizontal">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/header"
+        style="@style/PrimaryText"
+        android:layout_width="0dp"
+        android:padding="8dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_weight="1" />
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/eye"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_gravity="center"
+        android:text="@string/date_weights_eye_open" />
 
-        <TextView
-            android:id="@+id/header"
-            style="@style/PrimaryText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|center_vertical"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
 
-        <View
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="1dp" />
-
-        <com.joanzapata.iconify.widget.IconTextView
-            android:id="@+id/eye"
-            android:text="@string/date_weights_eye_open"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/morning_weight_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/date_servings_star" />
 
     <LinearLayout
-        android:id="@+id/sub_header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/morning_weight_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:paddingRight="8dp"
+        android:paddingEnd="8dp"
         android:orientation="horizontal">
 
-        <com.joanzapata.iconify.widget.IconTextView
-            android:id="@+id/morning_weight_icon"
-            android:text="@string/date_servings_star"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <LinearLayout
-            android:id="@+id/morning_weight_container"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
-
-            <EditText
-                android:id="@+id/morning_weight"
-                style="@style/SecondaryText"
-                android:hint="@string/morning"
-                android:imeOptions="actionDone"
-                android:textAlignment="textEnd"
-                android:layout_gravity="end"
-                android:gravity="end"
-                android:inputType="numberDecimal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <com.joanzapata.iconify.widget.IconTextView
-                android:id="@+id/morning_weight_hidden_icon"
-                android:visibility="gone"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-        </LinearLayout>
+        <EditText
+            android:id="@+id/morning_weight"
+            style="@style/SecondaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:hint="@string/morning"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:textAlignment="textEnd" />
 
         <com.joanzapata.iconify.widget.IconTextView
-            android:id="@+id/evening_weight_icon"
-            android:text="@string/date_servings_star"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <LinearLayout
-            android:id="@+id/evening_weight_container"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
-
-            <EditText
-                android:id="@+id/evening_weight"
-                style="@style/SecondaryText"
-                android:hint="@string/evening"
-                android:imeOptions="actionDone"
-                android:textAlignment="textEnd"
-                android:layout_gravity="end"
-                android:gravity="end"
-                android:inputType="numberDecimal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <com.joanzapata.iconify.widget.IconTextView
-                android:id="@+id/evening_weight_hidden_icon"
-                android:visibility="gone"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-        </LinearLayout>
+            android:id="@+id/morning_weight_hidden_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone" />
 
     </LinearLayout>
 
-</com.google.android.flexbox.FlexboxLayout>
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/evening_weight_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/date_servings_star" />
+
+    <LinearLayout
+        android:id="@+id/evening_weight_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:paddingRight="8dp"
+        android:paddingEnd="8dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/evening_weight"
+            style="@style/SecondaryText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:hint="@string/evening"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:textAlignment="textEnd" />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/evening_weight_hidden_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

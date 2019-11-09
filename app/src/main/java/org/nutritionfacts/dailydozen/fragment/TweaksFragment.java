@@ -15,6 +15,7 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.widget.DateWeights;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,6 +24,8 @@ import butterknife.Unbinder;
 import timber.log.Timber;
 
 public class TweaksFragment extends Fragment {
+    @BindView(R.id.date_weights)
+    protected DateWeights dateWeights;
     @BindView(R.id.back_to_today)
     protected TextView tvBackToToday;
 
@@ -70,8 +73,8 @@ public class TweaksFragment extends Fragment {
 
                 initBackToTodayButton();
 
-//                updateServingsCount();
-//
+                updateWeights();
+
 //                final Context context = getContext();
 //                boolean addedSupplementDivider = false;
 //
@@ -112,8 +115,8 @@ public class TweaksFragment extends Fragment {
 //        for (int i = 0; i < vgFoodServings.getChildCount(); i++) {
 //            Bus.unregister(vgFoodServings.getChildAt(i));
 //        }
-//
-//        dateServings = null;
+
+        dateWeights = null;
     }
 
 //    private void updateServingsCount() {
@@ -123,4 +126,9 @@ public class TweaksFragment extends Fragment {
 //    private void updateServingsCount(final int numServings) {
 //        dateServings.setServings(numServings);
 //    }
+
+    private void updateWeights() {
+        dateWeights.setDay(day);
+        Bus.register(dateWeights);
+    }
 }

@@ -4,13 +4,14 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
@@ -24,8 +25,6 @@ import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
-import org.nutritionfacts.dailydozen.model.Weights;
-import org.nutritionfacts.dailydozen.widget.DateWeights;
 import org.nutritionfacts.dailydozen.widget.DateHeader;
 import org.nutritionfacts.dailydozen.widget.FoodServings;
 import org.nutritionfacts.dailydozen.widget.SupplementDivider;
@@ -40,8 +39,6 @@ import timber.log.Timber;
 public class DailyDozenFragment extends Fragment {
     @BindView(R.id.back_to_today)
     protected TextView tvBackToToday;
-    @BindView(R.id.date_weights)
-    protected DateWeights dateWeights;
     @BindView(R.id.date_servings)
     protected DateHeader dateHeader;
     @BindView(R.id.date_food_servings)
@@ -96,7 +93,6 @@ public class DailyDozenFragment extends Fragment {
                 initBackToTodayButton();
 
                 updateServingsCount();
-                updateWeights();
 
                 final Context context = getContext();
                 boolean addedSupplementDivider = false;
@@ -139,7 +135,6 @@ public class DailyDozenFragment extends Fragment {
             Bus.unregister(vgFoodServings.getChildAt(i));
         }
 
-        dateWeights = null;
         dateHeader = null;
     }
 
@@ -201,10 +196,5 @@ public class DailyDozenFragment extends Fragment {
 
     private void updateServingsCount(final int numServings) {
         dateHeader.setServings(numServings);
-    }
-
-    private void updateWeights() {
-        dateWeights.setDay(day);
-        Bus.register(dateWeights);
     }
 }
