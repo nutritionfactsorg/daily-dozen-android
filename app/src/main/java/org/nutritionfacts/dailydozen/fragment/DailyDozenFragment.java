@@ -24,7 +24,7 @@ import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
-import org.nutritionfacts.dailydozen.widget.DateServings;
+import org.nutritionfacts.dailydozen.widget.ServingsHeader;
 import org.nutritionfacts.dailydozen.widget.FoodServings;
 import org.nutritionfacts.dailydozen.widget.SupplementDivider;
 
@@ -39,7 +39,7 @@ public class DailyDozenFragment extends Fragment {
     @BindView(R.id.back_to_today)
     protected TextView tvBackToToday;
     @BindView(R.id.date_servings)
-    protected DateServings dateServings;
+    protected ServingsHeader servingsHeader;
     @BindView(R.id.date_food_servings)
     protected ViewGroup vgFoodServings;
     @BindView(R.id.exploding_star_container)
@@ -134,7 +134,7 @@ public class DailyDozenFragment extends Fragment {
             Bus.unregister(vgFoodServings.getChildAt(i));
         }
 
-        dateServings = null;
+        servingsHeader = null;
     }
 
     @Subscribe
@@ -194,6 +194,6 @@ public class DailyDozenFragment extends Fragment {
     }
 
     private void updateServingsCount(final int numServings) {
-        dateServings.setServings(numServings);
+        servingsHeader.setServings(numServings);
     }
 }

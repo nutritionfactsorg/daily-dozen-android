@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnLongClick;
 
-public class DateServings extends LinearLayout {
+public class ServingsHeader extends LinearLayout {
     @BindView(R.id.header)
     protected TextView tvHeader;
     @BindView(R.id.star)
@@ -24,18 +24,18 @@ public class DateServings extends LinearLayout {
     @BindView(R.id.num_servings)
     protected TextView tvNumServings;
 
-    public DateServings(Context context) {
+    public ServingsHeader(Context context) {
         super(context);
         init(context);
     }
 
-    public DateServings(Context context, AttributeSet attrs) {
+    public ServingsHeader(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
     private void init(final Context context) {
-        final View view = inflate(context, R.layout.date_servings, this);
+        final View view = inflate(context, R.layout.header_servings, this);
         ButterKnife.bind(this, view);
 
         tvHeader.setText(context.getString(R.string.servings));

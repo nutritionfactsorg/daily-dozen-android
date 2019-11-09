@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <org.nutritionfacts.dailydozen.widget.DateServings
+        <org.nutritionfacts.dailydozen.widget.ServingsHeader
             android:id="@+id/date_servings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
