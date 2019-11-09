@@ -128,5 +128,9 @@
             android:exported="false">
         </provider>
 
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="${crashlyticsCollectionEnabled}" />
+
     </application>
 </manifest>
