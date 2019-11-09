@@ -1,8 +1,16 @@
 package org.nutritionfacts.dailydozen.model;
 
+import android.text.TextUtils;
+
+import com.activeandroid.ActiveAndroid;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
+import com.activeandroid.query.Select;
+
+import java.util.List;
+
+import hugo.weaving.DebugLog;
 
 @Table(name = "tweaks")
 public class Tweak extends Model {
@@ -49,5 +57,60 @@ public class Tweak extends Model {
         return name;
     }
 
-    // TODO (slavick) use the Food class as a guide
+    @DebugLog
+    public static void ensureAllTweaksExistInDatabase(final String[] tweakNames,
+                                                      final String[] tweakIdNames,
+                                                      final int[] recommendedAmounts) {
+        ActiveAndroid.beginTransaction();
+
+        try {
+            for (int i = 0; i < tweakNames.length; i++) {
+                createTweakIfDoesNotExist(tweakNames[i], tweakIdNames[i], recommendedAmounts[i]);
+            }
+
+            ActiveAndroid.setTransactionSuccessful();
+        } finally {
+            ActiveAndroid.endTransaction();
+        }
+    }
+
+    public static Tweak getById(long tweakId) {
+        return new Select().from(Tweak.class).where("Id = ?", tweakId).executeSingle();
+    }
+
+    public static Tweak getByNameOrIdName(final String idName) {
+        return new Select().from(Tweak.class)
+                .where("id_name = ?", idName)
+                .or("name = ?", idName)
+                .executeSingle();
+    }
+
+    private static void createTweakIfDoesNotExist(final String tweakName,
+                                                  final String idName,
+                                                  final int recommendedAmount) {
+        boolean needToSave = false;
+
+        Tweak tweak = getByNameOrIdName(idName);
+
+        if (tweak == null) {
+            tweak = new Tweak(tweakName, idName, recommendedAmount);
+            needToSave = true;
+        } else if (TextUtils.isEmpty(tweak.getIdName())) {
+            tweak.setIdName(idName);
+            needToSave = true;
+        }
+
+        if (!tweak.getName().equalsIgnoreCase(tweakName)) {
+            tweak.setName(tweakName);
+            needToSave = true;
+        }
+
+        if (needToSave) {
+            tweak.save();
+        }
+    }
+
+    public static List<Tweak> getAllTweaks() {
+        return new Select().from(Tweak.class).execute();
+    }
 }

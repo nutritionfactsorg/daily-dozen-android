@@ -6,6 +6,7 @@ import com.joanzapata.iconify.fonts.FontAwesomeModule;
 
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
+import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import timber.log.Timber;
@@ -22,6 +23,7 @@ public class DailyDozenApplication extends Application {
         }
 
         ensureAllFoodsExistInDatabase();
+        ensureAllTweaksExistInDatabase();
 
         FoodInfo.init(this);
 
@@ -33,5 +35,12 @@ public class DailyDozenApplication extends Application {
                 getResources().getStringArray(R.array.food_names),
                 getResources().getStringArray(R.array.food_id_names),
                 getResources().getIntArray(R.array.food_quantities));
+    }
+    
+    private void ensureAllTweaksExistInDatabase() {
+        Tweak.ensureAllTweaksExistInDatabase(
+                getResources().getStringArray(R.array.tweak_names),
+                getResources().getStringArray(R.array.tweak_id_names),
+                getResources().getIntArray(R.array.tweak_amounts));
     }
 }
