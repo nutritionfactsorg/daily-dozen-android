@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -23,22 +24,49 @@ public class DateHeader extends LinearLayout {
     protected TextView tvStar;
     @BindView(R.id.num_servings)
     protected TextView tvNumServings;
+    @BindView(R.id.max)
+    protected TextView tvMax;
 
     public DateHeader(Context context) {
         super(context);
-        init(context);
+        init(context, null);
     }
 
     public DateHeader(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
+        init(context, attrs);
     }
 
-    private void init(final Context context) {
+    private void init(final Context context, AttributeSet attrs) {
         final View view = inflate(context, R.layout.header_date, this);
         ButterKnife.bind(this, view);
 
-        tvHeader.setText(context.getString(R.string.servings));
+        setTitle(context.getString(R.string.servings));
+
+        if (isInEditMode()) {
+            return;
+        }
+
+        if (attrs != null) {
+            handleCustomAttrs(context, attrs);
+        }
+    }
+
+    private void setTitle(final String title) {
+        tvHeader.setText(title);
+    }
+
+    private void setMax(final String max) {
+        tvMax.setText(max);
+    }
+
+    private void handleCustomAttrs(final Context context, final AttributeSet attrs) {
+        final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.DateHeader);
+        if (array != null) {
+            setTitle(array.getString(R.styleable.DateHeader_title));
+            setMax(String.valueOf(array.getInt(R.styleable.DateHeader_max, 24)));
+            array.recycle();
+        }
     }
 
     public void setServings(final int servingsOnDate) {
