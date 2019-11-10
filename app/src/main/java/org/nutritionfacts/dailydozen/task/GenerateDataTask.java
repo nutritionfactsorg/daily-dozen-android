@@ -8,6 +8,8 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.model.Weights;
 import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
 
 import java.util.List;
@@ -53,9 +55,14 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
         int i = 0;
 
         while (current.lteq(today)) {
-            // Give a 20% chance of not creating servings for the day
-            if (random.nextInt(5) >= 1) {
-                createServingsForDay(allFoods, current);
+            if (taskParams.generateRandomData()) {
+                // Give a 20% chance of not creating servings for the day
+                if (random.nextInt(5) >= 1) {
+                    createUserDataForDay(allFoods, current);
+                }
+            } else {
+                // Always generate data if generating full data
+                createUserDataForDay(allFoods, current);
             }
 
             publishProgress(++i, numDays);
@@ -67,21 +74,15 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
     }
 
     @DebugLog
-    private void createServingsForDay(List<Food> allFoods, DateTime current) {
+    private void createUserDataForDay(List<Food> allFoods, DateTime current) {
         ActiveAndroid.beginTransaction();
 
         try {
             final Day day = new Day(current);
             day.save();
 
-            for (Food food : allFoods) {
-                final int recommendedServings = food.getRecommendedServings();
-                final int numServings = taskParams.generateRandomData() ? random.nextInt(recommendedServings + 1) : recommendedServings;
-
-                if (numServings > 0) {
-                    Servings.createServingsIfDoesNotExist(day, food, numServings);
-                }
-            }
+            createDailyDozenForDay(allFoods, day);
+            createWeightsForDay(day);
 
             ActiveAndroid.setTransactionSuccessful();
         } finally {
@@ -89,8 +90,27 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
         }
     }
 
+    private void createDailyDozenForDay(List<Food> allFoods, Day day) {
+        for (Food food : allFoods) {
+            final int recommendedServings = food.getRecommendedServings();
+            final int numServings = taskParams.generateRandomData() ? random.nextInt(recommendedServings + 1) : recommendedServings;
+
+            if (numServings > 0) {
+                Servings.createServingsIfDoesNotExist(day, food, numServings);
+            }
+        }
+    }
+
+    private void createWeightsForDay(final Day day) {
+        Weights.createWeightsIfDoesNotExist(day,
+                180 + 3 * random.nextFloat(),
+                180 + 3 * random.nextFloat());
+    }
+
     private void deleteAllExistingData() {
         Servings.truncate(Servings.class);
+        Tweak.truncate(Tweak.class);
+        Weights.truncate(Weights.class);
         Day.truncate(Day.class);
     }
 

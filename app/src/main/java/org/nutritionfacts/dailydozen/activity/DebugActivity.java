@@ -47,7 +47,7 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
         historyToGenerateSpinner.setOnItemSelectedListener(this);
         historyToGenerateSpinner.setAdapter(adapter);
 
-        historyToGenerateSpinner.setSelection(3); // Select 1 year by default
+        historyToGenerateSpinner.setSelection(1); // Select 3 months by default
     }
 
     @OnClick(R.id.debug_clear_data)

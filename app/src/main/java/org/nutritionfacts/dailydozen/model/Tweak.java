@@ -13,7 +13,7 @@ import java.util.List;
 import hugo.weaving.DebugLog;
 
 @Table(name = "tweaks")
-public class Tweak extends Model {
+public class Tweak extends TruncatableModel {
     @Column(name = "name", index = true)
     private String name;
 
