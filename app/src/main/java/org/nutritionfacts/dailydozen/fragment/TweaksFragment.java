@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.widget.DateHeader;
 import org.nutritionfacts.dailydozen.widget.DateWeights;
+import org.nutritionfacts.dailydozen.widget.TweakBoxes;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -79,13 +81,13 @@ public class TweaksFragment extends Fragment {
 
                 updateHeader();
 
-//                final Context context = getContext();
+                final Context context = getContext();
 //                boolean addedSupplementDivider = false;
-//
+
                 for (Tweak tweak : Tweak.getAllTweaks()) {
-//                    final FoodServings foodServings = new FoodServings(context);
-//                    final boolean success = foodServings.setDateAndFood(day, food);
-//                    if (success) {
+                    final TweakBoxes tweakBoxes = new TweakBoxes(context);
+                    final boolean success = tweakBoxes.setDateAndTweak(day, tweak);
+                    if (success) {
 //                        if (Common.isSupplement(food) && !addedSupplementDivider) {
 //                            vgFoodServings.addView(new SupplementDivider(context));
 //                            addedSupplementDivider = true;
@@ -93,7 +95,7 @@ public class TweaksFragment extends Fragment {
 //
 //                        vgFoodServings.addView(foodServings);
 //                        Bus.register(foodServings);
-//                    }
+                    }
                 }
             } catch (InvalidDateException e) {
                 Timber.e(e, "displayFormForDate: ");

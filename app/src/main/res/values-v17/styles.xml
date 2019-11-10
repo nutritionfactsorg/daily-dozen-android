@@ -10,7 +10,7 @@
         <item name="android:paddingBottom">24dp</item>
     </style>
 
-    <style name="FoodHistoryIcon">
+    <style name="HistoryIcon">
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/colorPrimary</item>

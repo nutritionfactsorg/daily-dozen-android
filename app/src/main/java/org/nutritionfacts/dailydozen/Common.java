@@ -6,11 +6,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+
 import androidx.annotation.ColorInt;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -20,6 +22,7 @@ import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
+import org.nutritionfacts.dailydozen.model.Tweak;
 
 import java.util.Date;
 
@@ -144,12 +147,22 @@ public class Common {
         }
     }
 
+    public static void openTweakInfo(final Context context, final Tweak tweak) {
+        // TODO (slavick)
+        Common.showToast(context, "Not implemented yet");
+    }
+
     public static boolean isSupplement(final Food food) {
         return food != null && (VITAMIN_B12.equalsIgnoreCase(food.getIdName()) || OMEGA3.equalsIgnoreCase(food.getIdName()));
     }
 
     public static void openFoodHistory(final Context context, final Food food) {
         startSelectableDateActivity(context, createFoodIntent(context, FoodHistoryActivity.class, food));
+    }
+
+    public static void openTweakHistory(final Context context, final Tweak tweak) {
+        // TODO (slavick)
+        Common.showToast(context, "Not implemented yet");
     }
 
     public static void openServingsHistory(final Context context) {
