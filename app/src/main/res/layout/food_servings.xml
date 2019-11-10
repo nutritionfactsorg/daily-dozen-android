@@ -54,7 +54,7 @@
                 android:visibility="gone"
                 tools:ignore="SmallSp" />
 
-            <org.nutritionfacts.dailydozen.widget.FoodCheckBoxes
+            <org.nutritionfacts.dailydozen.widget.RDACheckBoxes
                 android:id="@+id/food_checkboxes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

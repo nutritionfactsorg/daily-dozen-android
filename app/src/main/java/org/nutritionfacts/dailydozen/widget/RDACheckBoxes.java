@@ -21,7 +21,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import timber.log.Timber;
 
-public class FoodCheckBoxes extends LinearLayout {
+public class RDACheckBoxes extends LinearLayout {
     @BindView(R.id.food_check_boxes_container)
     protected ViewGroup vgContainer;
 
@@ -30,15 +30,15 @@ public class FoodCheckBoxes extends LinearLayout {
     private Food food;
     private Day day;
 
-    public FoodCheckBoxes(Context context) {
+    public RDACheckBoxes(Context context) {
         this(context, null);
     }
 
-    public FoodCheckBoxes(Context context, AttributeSet attrs) {
+    public RDACheckBoxes(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public FoodCheckBoxes(Context context, AttributeSet attrs, int defStyleAttr) {
+    public RDACheckBoxes(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
     }
