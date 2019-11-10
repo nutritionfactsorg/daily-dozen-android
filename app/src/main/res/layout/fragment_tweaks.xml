@@ -1,60 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <org.nutritionfacts.dailydozen.widget.DateHeader
+        android:id="@+id/header_tweaks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        app:max="21"
+        app:title="@string/tweaks" />
 
-        <org.nutritionfacts.dailydozen.widget.DateHeader
-            android:id="@+id/header_tweaks"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDividerColor" />
+
+    <org.nutritionfacts.dailydozen.widget.DateWeights
+        android:id="@+id/date_weights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDividerColor" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/date_tweaks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="@string/tweaks"
-            app:max="21" />
+            android:orientation="vertical" />
 
-        <View
-            android:background="@color/colorDividerColor"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
+    </androidx.core.widget.NestedScrollView>
 
-        <org.nutritionfacts.dailydozen.widget.DateWeights
-            android:id="@+id/date_weights"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/back_to_today"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/back_to_today"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
 
-        <View
-            android:background="@color/colorDividerColor"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
-
-            <LinearLayout
-                android:id="@+id/date_tweaks"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"/>
-
-        </androidx.core.widget.NestedScrollView>
-
-        <TextView
-            android:id="@+id/back_to_today"
-            android:visibility="gone"
-            android:text="@string/back_to_today"
-            android:textColor="@android:color/white"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:padding="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
-
-</FrameLayout>
+</LinearLayout>

@@ -79,6 +79,7 @@ public class DateHeader extends LinearLayout {
     public void onSubHeaderClicked() {
         final Context context = getContext();
 
+        // TODO (slavick) this should open tweaks history when in 21 tweaks mode
         if (!Servings.isEmpty()) {
             Common.openServingsHistory(context);
         } else {

@@ -3,10 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/food_servings_background"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp"
+    android:padding="8dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="66dp"
     android:orientation="horizontal">
 
     <LinearLayout
