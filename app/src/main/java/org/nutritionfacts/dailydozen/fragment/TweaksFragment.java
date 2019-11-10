@@ -29,9 +29,11 @@ import timber.log.Timber;
 
 public class TweaksFragment extends Fragment {
     @BindView(R.id.header_tweaks)
-    protected DateHeader dateTweaks;
+    protected DateHeader dateHeader;
     @BindView(R.id.date_weights)
     protected DateWeights dateWeights;
+    @BindView(R.id.date_tweaks)
+    protected ViewGroup vgTweaks;
     @BindView(R.id.back_to_today)
     protected TextView tvBackToToday;
 
@@ -92,8 +94,8 @@ public class TweaksFragment extends Fragment {
 //                            vgFoodServings.addView(new SupplementDivider(context));
 //                            addedSupplementDivider = true;
 //                        }
-//
-//                        vgFoodServings.addView(foodServings);
+
+                        vgTweaks.addView(tweakBoxes);
 //                        Bus.register(foodServings);
                     }
                 }
@@ -122,7 +124,7 @@ public class TweaksFragment extends Fragment {
 //            Bus.unregister(vgFoodServings.getChildAt(i));
 //        }
 
-        dateTweaks = null;
+        dateHeader = null;
         dateWeights = null;
     }
 
