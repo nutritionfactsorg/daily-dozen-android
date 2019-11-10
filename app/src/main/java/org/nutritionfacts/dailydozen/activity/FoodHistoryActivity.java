@@ -65,7 +65,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     private void displayFoodHistory() {
         final Food food = getFood();
         if (food != null) {
-            initCalendar(food.getId(), food.getRecommendedServings());
+            initCalendar(food.getId(), food.getRecommendedAmount());
 
             displayEntriesForVisibleMonths(Calendar.getInstance(), food.getId());
         }

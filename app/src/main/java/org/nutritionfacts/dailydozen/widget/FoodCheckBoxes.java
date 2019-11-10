@@ -61,7 +61,7 @@ public class FoodCheckBoxes extends LinearLayout {
         createCheckBox(
                 checkBoxes,
                 servings != null ? servings.getServings() : 0,
-                food.getRecommendedServings());
+                food.getRecommendedAmount());
 
         vgContainer.removeAllViews();
 

@@ -59,9 +59,9 @@ public class Servings extends TruncatableModel {
     }
 
     public void recalculateStreak() {
-        if (servings == food.getRecommendedServings()) {
+        if (servings == food.getRecommendedAmount()) {
             streak = getStreakFromDayBefore() + 1;
-        } else if (servings < food.getRecommendedServings()) {
+        } else if (servings < food.getRecommendedAmount()) {
             streak = 0;
         }
     }
@@ -203,7 +203,7 @@ public class Servings extends TruncatableModel {
             for (Servings serving : servings) {
                 servingsInMonth.put(
                         serving.getDay(),
-                        serving.getServings() == food.getRecommendedServings());
+                        serving.getServings() == food.getRecommendedAmount());
             }
         }
 

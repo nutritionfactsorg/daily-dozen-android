@@ -92,7 +92,7 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
 
     private void createDailyDozenForDay(List<Food> allFoods, Day day) {
         for (Food food : allFoods) {
-            final int recommendedServings = food.getRecommendedServings();
+            final int recommendedServings = food.getRecommendedAmount();
             final int numServings = taskParams.generateRandomData() ? random.nextInt(recommendedServings + 1) : recommendedServings;
 
             if (numServings > 0) {

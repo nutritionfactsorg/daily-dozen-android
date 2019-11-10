@@ -8,12 +8,14 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
+import org.nutritionfacts.dailydozen.RDA;
+
 import java.util.List;
 
 import hugo.weaving.DebugLog;
 
 @Table(name = "foods")
-public class Food extends Model {
+public class Food extends Model implements RDA {
     @Column(name = "name", index = true)
     private String name;
 
@@ -39,7 +41,7 @@ public class Food extends Model {
         this.idName = idName;
     }
 
-    public int getRecommendedServings() {
+    public int getRecommendedAmount() {
         return recommendedServings;
     }
 

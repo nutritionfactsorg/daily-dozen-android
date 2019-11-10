@@ -3,17 +3,18 @@ package org.nutritionfacts.dailydozen.model;
 import android.text.TextUtils;
 
 import com.activeandroid.ActiveAndroid;
-import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
+
+import org.nutritionfacts.dailydozen.RDA;
 
 import java.util.List;
 
 import hugo.weaving.DebugLog;
 
 @Table(name = "tweaks")
-public class Tweak extends TruncatableModel {
+public class Tweak extends TruncatableModel implements RDA {
     @Column(name = "name", index = true)
     private String name;
 
