@@ -15,6 +15,8 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.widget.DateHeader;
 import org.nutritionfacts.dailydozen.widget.DateWeights;
 
 import butterknife.BindView;
@@ -24,6 +26,8 @@ import butterknife.Unbinder;
 import timber.log.Timber;
 
 public class TweaksFragment extends Fragment {
+    @BindView(R.id.header_tweaks)
+    protected DateHeader dateTweaks;
     @BindView(R.id.date_weights)
     protected DateWeights dateWeights;
     @BindView(R.id.back_to_today)
@@ -73,12 +77,12 @@ public class TweaksFragment extends Fragment {
 
                 initBackToTodayButton();
 
-                updateWeights();
+                updateHeader();
 
 //                final Context context = getContext();
 //                boolean addedSupplementDivider = false;
 //
-//                for (Food food : Food.getAllFoods()) {
+                for (Tweak tweak : Tweak.getAllTweaks()) {
 //                    final FoodServings foodServings = new FoodServings(context);
 //                    final boolean success = foodServings.setDateAndFood(day, food);
 //                    if (success) {
@@ -90,7 +94,7 @@ public class TweaksFragment extends Fragment {
 //                        vgFoodServings.addView(foodServings);
 //                        Bus.register(foodServings);
 //                    }
-//                }
+                }
             } catch (InvalidDateException e) {
                 Timber.e(e, "displayFormForDate: ");
             }
@@ -116,6 +120,7 @@ public class TweaksFragment extends Fragment {
 //            Bus.unregister(vgFoodServings.getChildAt(i));
 //        }
 
+        dateTweaks = null;
         dateWeights = null;
     }
 
@@ -127,7 +132,7 @@ public class TweaksFragment extends Fragment {
 //        dateServings.setServings(numServings);
 //    }
 
-    private void updateWeights() {
+    private void updateHeader() {
         dateWeights.setDay(day);
         Bus.register(dateWeights);
     }

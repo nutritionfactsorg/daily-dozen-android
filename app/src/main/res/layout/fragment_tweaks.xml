@@ -9,6 +9,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <org.nutritionfacts.dailydozen.widget.DateHeader
+            android:id="@+id/header_tweaks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@color/colorDividerColor"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
         <org.nutritionfacts.dailydozen.widget.DateWeights
             android:id="@+id/date_weights"
             android:layout_width="match_parent"

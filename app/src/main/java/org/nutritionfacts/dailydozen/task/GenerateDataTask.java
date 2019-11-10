@@ -102,9 +102,24 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
     }
 
     private void createWeightsForDay(final Day day) {
-        Weights.createWeightsIfDoesNotExist(day,
-                180 + 3 * random.nextFloat(),
-                180 + 3 * random.nextFloat());
+        float morningWeight = 0, eveningWeight = 0;
+
+        // Give a 80% chance of setting morning weight
+        if (random.nextInt(10) >= 2) {
+            morningWeight = round(180 + 3 * random.nextFloat(), 1);
+        }
+
+        // Give a 50% chance of setting evening weight
+        if (random.nextInt(10) >= 5) {
+            eveningWeight = round(180 + 3 * random.nextFloat(), 1);
+        }
+
+        Weights.createWeightsIfDoesNotExist(day, morningWeight, eveningWeight);
+    }
+
+    private static float round(double value, int precision) {
+        int scale = (int) Math.pow(10, precision);
+        return (float) Math.round(value * scale) / scale;
     }
 
     private void deleteAllExistingData() {

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Daily Dozen</string>
     <string name="twenty_one_tweaks">21 Tweaks</string>
+    <string name="tweaks">Tweaks</string>
 
     <string name="beans">Beans</string>
     <string name="berries">Berries</string>
