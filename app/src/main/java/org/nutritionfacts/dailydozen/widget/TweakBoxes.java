@@ -10,8 +10,8 @@ import android.widget.TextView;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
-import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.model.TweakServings;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -54,31 +54,27 @@ public class TweakBoxes extends LinearLayout {
 
         initTweakName();
 
+        final TweakServings servings = TweakServings.getByDateAndTweak(this.day, this.tweak);
+        initCheckboxes(servings);
         // TODO (slavick)
-//        final DDServings servings = getServings();
-//        initCheckboxes(servings);
 //        initTweakStreak(servings);
 
         return true;
     }
 
-//    private DDServings getServings() {
-//        return DDServings.getByDateAndFood(day, food);
-//    }
-
     private void initTweakName() {
         tvName.setText(String.format("%s %s", tweak.getName(), getContext().getString(R.string.icon_info)));
     }
 
-    private void initTweakStreak(DDServings servings) {
-        final int streak = servings != null ? servings.getStreak() : 0;
-        if (streak > 0) {
-            tvStreak.setVisibility(VISIBLE);
-            tvStreak.setStreak(streak);
-        } else {
-            tvStreak.setVisibility(GONE);
-        }
-    }
+//    private void initTweakStreak(DDServings servings) {
+//        final int streak = servings != null ? servings.getStreak() : 0;
+//        if (streak > 0) {
+//            tvStreak.setVisibility(VISIBLE);
+//            tvStreak.setStreak(streak);
+//        } else {
+//            tvStreak.setVisibility(GONE);
+//        }
+//    }
 
     @OnClick(R.id.tweak_name)
     public void onTweakNameClicked() {
@@ -90,7 +86,7 @@ public class TweakBoxes extends LinearLayout {
         Common.openTweakHistory(getContext(), tweak);
     }
 
-    private void initCheckboxes(DDServings servings) {
+    private void initCheckboxes(TweakServings servings) {
         rdaCheckBoxes.setDay(day);
         rdaCheckBoxes.setRDA(tweak);
         rdaCheckBoxes.setServings(servings);

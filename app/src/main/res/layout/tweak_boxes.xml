@@ -6,56 +6,49 @@
     android:padding="8dp"
     android:layout_width="match_parent"
     android:layout_height="66dp"
-    android:orientation="horizontal">
+    android:orientation="vertical">
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/tweak_name"
+        android:textColor="@color/colorPrimaryText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:gravity="start|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
         <com.joanzapata.iconify.widget.IconTextView
-            android:id="@+id/tweak_name"
-            android:textColor="@color/colorPrimaryText"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:id="@+id/tweak_history"
+            android:text="@string/icon_calendar"
             android:gravity="start|center_vertical"
+            style="@style/HistoryIcon" />
+
+        <org.nutritionfacts.dailydozen.widget.StreakWidget
+            android:id="@+id/tweak_streak"
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:padding="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true" />
+            android:visibility="gone"
+            tools:ignore="SmallSp" />
 
-        <LinearLayout
+        <org.nutritionfacts.dailydozen.widget.RDACheckBoxes
+            android:id="@+id/tweak_checkboxes"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <com.joanzapata.iconify.widget.IconTextView
-                android:id="@+id/tweak_history"
-                android:text="@string/icon_calendar"
-                android:gravity="start|center_vertical"
-                style="@style/HistoryIcon" />
-
-            <org.nutritionfacts.dailydozen.widget.StreakWidget
-                android:id="@+id/tweak_streak"
-                android:textSize="10sp"
-                android:layout_gravity="center"
-                android:padding="2dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                tools:ignore="SmallSp" />
-
-            <org.nutritionfacts.dailydozen.widget.RDACheckBoxes
-                android:id="@+id/tweak_checkboxes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:paddingLeft="4dp"
-                android:paddingStart="4dp"
-                android:paddingRight="4dp"
-                android:paddingEnd="4dp"
-                android:gravity="end"/>
-
-        </LinearLayout>
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:paddingLeft="4dp"
+            android:paddingStart="4dp"
+            android:paddingRight="4dp"
+            android:paddingEnd="4dp"
+            android:gravity="end"/>
 
     </LinearLayout>
 

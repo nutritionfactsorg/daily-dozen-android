@@ -2,9 +2,12 @@ package org.nutritionfacts.dailydozen.model;
 
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
+import com.activeandroid.query.Select;
+
+import org.nutritionfacts.dailydozen.Servings;
 
 @Table(name = "tweak_servings")
-public class TweakServings extends TruncatableModel {
+public class TweakServings extends TruncatableModel implements Servings {
     @Column(name = "date_id")
     private Day day;
 
@@ -39,5 +42,16 @@ public class TweakServings extends TruncatableModel {
 
     public void setServings(int servings) {
         this.servings = servings;
+    }
+
+    public static TweakServings getByDateAndTweak(Day day, Tweak tweak) {
+        if (day != null && day.getId() != null && tweak != null && tweak.getId() != null) {
+            return new Select().from(DDServings.class)
+                    .where("date_id = ?", day.getId())
+                    .and("tweak_id = ?", tweak.getId())
+                    .executeSingle();
+        }
+
+        return null;
     }
 }

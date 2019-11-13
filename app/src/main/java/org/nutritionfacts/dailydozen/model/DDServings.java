@@ -10,6 +10,7 @@ import com.activeandroid.query.Select;
 import com.activeandroid.util.SQLiteUtils;
 
 import org.nutritionfacts.dailydozen.Common;
+import org.nutritionfacts.dailydozen.Servings;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ import java.util.Map;
 import timber.log.Timber;
 
 @Table(name = "servings")
-public class DDServings extends TruncatableModel {
+public class DDServings extends TruncatableModel implements Servings {
     @Column(name = "date_id")
     private Day day;
 

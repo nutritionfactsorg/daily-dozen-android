@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.RDA;
+import org.nutritionfacts.dailydozen.Servings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.DDServings;
@@ -59,7 +60,7 @@ public class RDACheckBoxes extends LinearLayout {
         this.rda = rda;
     }
 
-    public void setServings(final DDServings servings) {
+    public void setServings(final Servings servings) {
         checkBoxes = new ArrayList<>();
         createCheckBox(
                 checkBoxes,
@@ -132,7 +133,7 @@ public class RDACheckBoxes extends LinearLayout {
     }
 
     private void handleServingUnchecked() {
-        final DDServings servings = getServings();
+        final DDServings servings = DDServings.getByDateAndFood(day, (Food) rda);
         final Integer numberOfCheckedBoxes = getNumberOfCheckedBoxes();
 
         if (servings != null && servings.getServings() != numberOfCheckedBoxes) {
@@ -158,10 +159,6 @@ public class RDACheckBoxes extends LinearLayout {
     private void handleTweakUnchecked() {
         // TODO (slavick)
         Common.showToast(getContext(), "not implemented yet");
-    }
-
-    private DDServings getServings() {
-        return DDServings.getByDateAndFood(day, (Food)rda);
     }
 
     private void onServingsChanged() {
