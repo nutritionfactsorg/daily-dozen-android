@@ -19,7 +19,7 @@ import java.util.Map;
 import timber.log.Timber;
 
 @Table(name = "servings")
-public class Servings extends TruncatableModel {
+public class DDServings extends TruncatableModel {
     @Column(name = "date_id")
     private Day day;
 
@@ -32,10 +32,10 @@ public class Servings extends TruncatableModel {
     @Column(name = "streak")
     private int streak;
 
-    public Servings() {
+    public DDServings() {
     }
 
-    public Servings(Day day, Food food) {
+    public DDServings(Day day, Food food) {
         this.day = day;
         this.food = food;
     }
@@ -68,7 +68,7 @@ public class Servings extends TruncatableModel {
 
     private int getStreakFromDayBefore() {
         try {
-            final Servings servings = Servings.getByDateAndFood(day.getDayBefore(), food);
+            final DDServings servings = DDServings.getByDateAndFood(day.getDayBefore(), food);
             return servings != null ? servings.getStreak() : 0;
         } catch (InvalidDateException e) {
             Timber.e(e, "getStreakFromDayBefore: ");
@@ -84,12 +84,12 @@ public class Servings extends TruncatableModel {
     @NonNull
     @Override
     public String toString() {
-        return String.format("[%s] [%s] [Servings %s]", food.toString(), day.toString(), getServings());
+        return String.format("[%s] [%s] [DDServings %s]", food.toString(), day.toString(), getServings());
     }
 
-    public static Servings getByDateAndFood(final Day day, final Food food) {
+    public static DDServings getByDateAndFood(final Day day, final Food food) {
         if (day != null && day.getId() != null && food != null && food.getId() != null) {
-            return new Select().from(Servings.class)
+            return new Select().from(DDServings.class)
                     .where("date_id = ?", day.getId())
                     .and("food_id = ?", food.getId())
                     .executeSingle();
@@ -98,15 +98,15 @@ public class Servings extends TruncatableModel {
         return null;
     }
 
-    public static Servings createServingsIfDoesNotExist(final Day day, final Food food) {
+    public static DDServings createServingsIfDoesNotExist(final Day day, final Food food) {
         return createServingsIfDoesNotExist(day, food, 0);
     }
 
-    public static Servings createServingsIfDoesNotExist(final Day day, final Food food, final int numServings) {
-        Servings servings = getByDateAndFood(day, food);
+    public static DDServings createServingsIfDoesNotExist(final Day day, final Food food, final int numServings) {
+        DDServings servings = getByDateAndFood(day, food);
 
         if (servings == null) {
-            servings = new Servings(day, food);
+            servings = new DDServings(day, food);
 
             if (numServings > 0) {
                 servings.setServings(numServings);
@@ -118,11 +118,11 @@ public class Servings extends TruncatableModel {
         return servings;
     }
 
-    public static List<Servings> getServingsOnDate(Day day) {
-        List<Servings> servings = new ArrayList<>();
+    public static List<DDServings> getServingsOnDate(Day day) {
+        List<DDServings> servings = new ArrayList<>();
 
         if (day != null && day.getId() != null) {
-            servings = new Select().from(Servings.class)
+            servings = new Select().from(DDServings.class)
                     .where("date_id = ?", day.getId())
                     .execute();
         }
@@ -196,11 +196,11 @@ public class Servings extends TruncatableModel {
             String[] argsArray = new String[args.size()];
             argsArray = args.toArray(argsArray);
 
-            final List<Servings> servings = SQLiteUtils.rawQuery(Servings.class,
+            final List<DDServings> servings = SQLiteUtils.rawQuery(DDServings.class,
                     String.format("SELECT * FROM servings WHERE food_id = ? AND date_id IN (%s)", placeholders),
                     argsArray);
 
-            for (Servings serving : servings) {
+            for (DDServings serving : servings) {
                 servingsInMonth.put(
                         serving.getDay(),
                         serving.getServings() == food.getRecommendedAmount());
@@ -211,6 +211,6 @@ public class Servings extends TruncatableModel {
     }
 
     public static boolean isEmpty() {
-        return new Select().from(Servings.class).count() == 0;
+        return new Select().from(DDServings.class).count() == 0;
     }
 }

@@ -11,9 +11,9 @@ import com.activeandroid.ActiveAndroid;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Servings;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -101,7 +101,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
     @DebugLog
     private void deleteAllExistingData() {
-        Servings.truncate(Servings.class);
+        DDServings.truncate(DDServings.class);
         Day.truncate(Day.class);
     }
 
@@ -121,7 +121,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                     if (numServings > 0) {
                         final Food food = getFoodByName(headers[j]);
                         if (food != null) {
-                            Servings.createServingsIfDoesNotExist(day, food, numServings);
+                            DDServings.createServingsIfDoesNotExist(day, food, numServings);
                         }
                     }
                 }

@@ -7,9 +7,9 @@ import androidx.collection.ArrayMap;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Servings;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -32,7 +32,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     protected void onPreExecute() {
         super.onPreExecute();
 
-        if (Servings.isEmpty()) {
+        if (DDServings.isEmpty()) {
             Common.showToast(getContext(), R.string.no_servings_recorded);
 
             progress.hide();
@@ -129,12 +129,12 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         return line.toString();
     }
 
-    // This method converts the List of Servings into a Map for much faster lookup.
+    // This method converts the List of DDServings into a Map for much faster lookup.
     @NonNull
     private Map<Food, Integer> createFoodServingsLookup(Day day) {
         Map<Food, Integer> foodServingsMap = new ArrayMap<>();
 
-        for (Servings servings : Servings.getServingsOnDate(day)) {
+        for (DDServings servings : DDServings.getServingsOnDate(day)) {
             foodServingsMap.put(servings.getFood(), servings.getServings());
         }
 

@@ -15,7 +15,7 @@ import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
-import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.DDServings;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -62,7 +62,7 @@ public class FoodServings extends LinearLayout {
         if (foundFoodIcon) {
             initFoodName();
 
-            final Servings servings = getServings();
+            final DDServings servings = getServings();
             initCheckboxes(servings);
             initFoodStreak(servings);
 
@@ -72,8 +72,8 @@ public class FoodServings extends LinearLayout {
         }
     }
 
-    private Servings getServings() {
-        return Servings.getByDateAndFood(day, food);
+    private DDServings getServings() {
+        return DDServings.getByDateAndFood(day, food);
     }
 
     private boolean initFoodIcon() {
@@ -85,7 +85,7 @@ public class FoodServings extends LinearLayout {
         tvName.setText(String.format("%s %s", food.getName(), getContext().getString(R.string.icon_info)));
     }
 
-    private void initFoodStreak(Servings servings) {
+    private void initFoodStreak(DDServings servings) {
         final int streak = servings != null ? servings.getStreak() : 0;
         if (streak > 0) {
             tvStreak.setVisibility(VISIBLE);
@@ -105,7 +105,7 @@ public class FoodServings extends LinearLayout {
         Common.openFoodHistory(getContext(), food);
     }
 
-    private void initCheckboxes(Servings servings) {
+    private void initCheckboxes(DDServings servings) {
         rdaCheckBoxes.setDay(day);
         rdaCheckBoxes.setRDA(food);
         rdaCheckBoxes.setServings(servings);

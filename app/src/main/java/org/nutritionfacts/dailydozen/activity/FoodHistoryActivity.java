@@ -20,7 +20,7 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.util.CalendarHistoryDecorator;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
@@ -116,7 +116,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
                     final String monthStr = DateUtil.toStringYYYYMM(cal);
 
                     if (!loadedMonths.contains(monthStr)) {
-                        final Map<Day, Boolean> servings = Servings.getServingsOfFoodInYearAndMonth(foodId,
+                        final Map<Day, Boolean> servings = DDServings.getServingsOfFoodInYearAndMonth(foodId,
                                 DateUtil.getYear(cal), DateUtil.getMonthOneBased(cal));
 
                         loadedMonths.add(monthStr);

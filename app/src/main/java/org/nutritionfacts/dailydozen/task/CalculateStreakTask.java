@@ -7,7 +7,7 @@ import com.activeandroid.ActiveAndroid;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.DDServings;
 
 import java.util.List;
 
@@ -48,7 +48,7 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
 
                 final Day day = daysToCalculate.get(i);
 
-                final Servings servingsOnDate = Servings.getByDateAndFood(day, food);
+                final DDServings servingsOnDate = DDServings.getByDateAndFood(day, food);
                 if (servingsOnDate != null) {
                     servingsOnDate.recalculateStreak();
                     servingsOnDate.save();

@@ -33,8 +33,8 @@ import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
 import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
 import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
-import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.BackupTask;
 import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
 import org.nutritionfacts.dailydozen.task.RestoreTask;
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void calculateStreaksAfterDatabaseUpgradeToV2() {
         if (!Prefs.getInstance(this).streaksHaveBeenCalculatedAfterDatabaseUpgradeToV2()) {
-            if (Servings.isEmpty()) {
+            if (DDServings.isEmpty()) {
                 Prefs.getInstance(this).setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2();
             } else {
                 new AlertDialog.Builder(this)
@@ -271,7 +271,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void backup() {
-        if (!Servings.isEmpty()) {
+        if (!DDServings.isEmpty()) {
             if (PermissionController.canWriteExternalStorage(this)) {
                 new BackupTask(this).execute(getBackupFile());
             } else {
@@ -293,7 +293,7 @@ public class MainActivity extends AppCompatActivity {
             // FIXME: 2/20/16 this should only be set to true if the RestoreTask returns true (did not fail and was not cancelled)
             alreadyHandledRestoreIntent = true;
 
-            if (!Servings.isEmpty()) {
+            if (!DDServings.isEmpty()) {
                 new AlertDialog.Builder(this)
                         .setTitle(R.string.restore_confirm_title)
                         .setMessage(R.string.restore_confirm_message)

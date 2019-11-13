@@ -6,9 +6,9 @@ import com.activeandroid.ActiveAndroid;
 
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Servings;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
     protected void onPreExecute() {
         super.onPreExecute();
 
-        if (Servings.isEmpty()) {
+        if (DDServings.isEmpty()) {
             progress.hide();
             cancel(true);
         } else {
@@ -52,7 +52,7 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
                         return false;
                     }
 
-                    final Servings servingsOnDate = Servings.getByDateAndFood(day, food);
+                    final DDServings servingsOnDate = DDServings.getByDateAndFood(day, food);
                     if (servingsOnDate != null) {
                         servingsOnDate.recalculateStreak();
                         servingsOnDate.save();

@@ -5,9 +5,9 @@ import android.content.Context;
 import com.activeandroid.ActiveAndroid;
 
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.model.Weights;
 import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
@@ -96,7 +96,7 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
             final int numServings = taskParams.generateRandomData() ? random.nextInt(recommendedServings + 1) : recommendedServings;
 
             if (numServings > 0) {
-                Servings.createServingsIfDoesNotExist(day, food, numServings);
+                DDServings.createServingsIfDoesNotExist(day, food, numServings);
             }
         }
     }
@@ -123,7 +123,7 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
     }
 
     private void deleteAllExistingData() {
-        Servings.truncate(Servings.class);
+        DDServings.truncate(DDServings.class);
         Tweak.truncate(Tweak.class);
         Weights.truncate(Weights.class);
         Day.truncate(Day.class);

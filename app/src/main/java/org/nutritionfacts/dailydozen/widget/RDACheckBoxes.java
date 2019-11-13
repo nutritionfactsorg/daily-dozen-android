@@ -11,7 +11,7 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.RDA;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.task.CalculateStreakTask;
 import org.nutritionfacts.dailydozen.task.StreakTaskInput;
@@ -59,7 +59,7 @@ public class RDACheckBoxes extends LinearLayout {
         this.rda = rda;
     }
 
-    public void setServings(final Servings servings) {
+    public void setServings(final DDServings servings) {
         checkBoxes = new ArrayList<>();
         createCheckBox(
                 checkBoxes,
@@ -119,7 +119,7 @@ public class RDACheckBoxes extends LinearLayout {
     private void handleServingChecked() {
         day = Day.createDayIfDoesNotExist(day);
 
-        final Servings servings = Servings.createServingsIfDoesNotExist(day, (Food)rda);
+        final DDServings servings = DDServings.createServingsIfDoesNotExist(day, (Food)rda);
         final Integer numberOfCheckedBoxes = getNumberOfCheckedBoxes();
 
         if (servings != null && servings.getServings() != numberOfCheckedBoxes) {
@@ -132,7 +132,7 @@ public class RDACheckBoxes extends LinearLayout {
     }
 
     private void handleServingUnchecked() {
-        final Servings servings = getServings();
+        final DDServings servings = getServings();
         final Integer numberOfCheckedBoxes = getNumberOfCheckedBoxes();
 
         if (servings != null && servings.getServings() != numberOfCheckedBoxes) {
@@ -160,8 +160,8 @@ public class RDACheckBoxes extends LinearLayout {
         Common.showToast(getContext(), "not implemented yet");
     }
 
-    private Servings getServings() {
-        return Servings.getByDateAndFood(day, (Food)rda);
+    private DDServings getServings() {
+        return DDServings.getByDateAndFood(day, (Food)rda);
     }
 
     private void onServingsChanged() {

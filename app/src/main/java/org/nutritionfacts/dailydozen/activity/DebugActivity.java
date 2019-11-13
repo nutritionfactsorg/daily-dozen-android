@@ -13,7 +13,7 @@ import android.widget.Spinner;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
-import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.task.GenerateDataTask;
 import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
@@ -58,7 +58,7 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Servings.truncate(Servings.class);
+                        DDServings.truncate(DDServings.class);
                         Day.truncate(Day.class);
 
                         dialog.dismiss();

@@ -16,8 +16,8 @@ import com.github.mikephil.charting.utils.ViewPortHandler;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
-import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.params.LoadServingsHistoryTaskParams;
 import org.nutritionfacts.dailydozen.util.DateUtil;
@@ -50,7 +50,7 @@ public class LoadServingsHistoryTask
 
     @Override
     protected LoadServingsHistoryCompleteEvent doInBackground(LoadServingsHistoryTaskParams... params) {
-        if (Servings.isEmpty() || params[0] == null) {
+        if (DDServings.isEmpty() || params[0] == null) {
             return null;
         }
 
@@ -88,7 +88,7 @@ public class LoadServingsHistoryTask
 
             final Day day = history.get(i);
 
-            final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
+            final int totalServingsOnDate = DDServings.getTotalServingsOnDate(day);
 
             previousTrend = calculateTrend(previousTrend, totalServingsOnDate);
 
@@ -127,7 +127,7 @@ public class LoadServingsHistoryTask
                 break;
             }
 
-            final float averageTotalServingsInMonth = Servings.getAverageTotalServingsInMonth(year, monthOneBased);
+            final float averageTotalServingsInMonth = DDServings.getAverageTotalServingsInMonth(year, monthOneBased);
 
             Timber.d("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
                     year, monthOneBased, averageTotalServingsInMonth);
@@ -173,7 +173,7 @@ public class LoadServingsHistoryTask
 
             xLabels.add(String.valueOf(year));
 
-            final float averageTotalServingsInYear = Servings.getAverageTotalServingsInYear(year);
+            final float averageTotalServingsInYear = DDServings.getAverageTotalServingsInYear(year);
 
             Timber.d("getChartDataInYears: year [%s], average [%s]",
                     year, averageTotalServingsInYear);

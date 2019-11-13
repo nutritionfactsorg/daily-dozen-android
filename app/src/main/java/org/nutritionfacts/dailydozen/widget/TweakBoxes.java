@@ -10,7 +10,7 @@ import android.widget.TextView;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Day;
-import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Tweak;
 
 import butterknife.BindView;
@@ -55,22 +55,22 @@ public class TweakBoxes extends LinearLayout {
         initTweakName();
 
         // TODO (slavick)
-//        final Servings servings = getServings();
+//        final DDServings servings = getServings();
 //        initCheckboxes(servings);
 //        initTweakStreak(servings);
 
         return true;
     }
 
-//    private Servings getServings() {
-//        return Servings.getByDateAndFood(day, food);
+//    private DDServings getServings() {
+//        return DDServings.getByDateAndFood(day, food);
 //    }
 
     private void initTweakName() {
         tvName.setText(String.format("%s %s", tweak.getName(), getContext().getString(R.string.icon_info)));
     }
 
-    private void initTweakStreak(Servings servings) {
+    private void initTweakStreak(DDServings servings) {
         final int streak = servings != null ? servings.getStreak() : 0;
         if (streak > 0) {
             tvStreak.setVisibility(VISIBLE);
@@ -90,7 +90,7 @@ public class TweakBoxes extends LinearLayout {
         Common.openTweakHistory(getContext(), tweak);
     }
 
-    private void initCheckboxes(Servings servings) {
+    private void initCheckboxes(DDServings servings) {
         rdaCheckBoxes.setDay(day);
         rdaCheckBoxes.setRDA(tweak);
         rdaCheckBoxes.setServings(servings);

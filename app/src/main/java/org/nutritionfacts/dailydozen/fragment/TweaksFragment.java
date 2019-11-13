@@ -129,7 +129,7 @@ public class TweaksFragment extends Fragment {
     }
 
 //    private void updateServingsCount() {
-//        updateServingsCount(Servings.getTotalServingsOnDate(day));
+//        updateServingsCount(DDServings.getTotalServingsOnDate(day));
 //    }
 //
 //    private void updateServingsCount(final int numServings) {

@@ -24,7 +24,7 @@ import org.nutritionfacts.dailydozen.event.ShowExplodingStarAnimation;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.widget.DateHeader;
 import org.nutritionfacts.dailydozen.widget.FoodServings;
 import org.nutritionfacts.dailydozen.widget.SupplementDivider;
@@ -142,7 +142,7 @@ public class DailyDozenFragment extends Fragment {
     public void onEvent(FoodServingsChangedEvent event) {
         // Vitamins do not count towards the daily servings total, so we ignore when they are checked/unchecked
         if (!event.getIsVitamin() && event.getDateString().equals(day.getDateString())) {
-            final int servingsOnDate = Servings.getTotalServingsOnDate(day);
+            final int servingsOnDate = DDServings.getTotalServingsOnDate(day);
 
             updateHeader(servingsOnDate);
 
@@ -191,7 +191,7 @@ public class DailyDozenFragment extends Fragment {
     }
 
     private void updateHeader() {
-        updateHeader(Servings.getTotalServingsOnDate(day));
+        updateHeader(DDServings.getTotalServingsOnDate(day));
     }
 
     private void updateHeader(final int numServings) {

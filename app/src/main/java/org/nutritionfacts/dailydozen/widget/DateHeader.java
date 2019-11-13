@@ -10,7 +10,7 @@ import android.widget.TextView;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
-import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.DDServings;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -80,7 +80,7 @@ public class DateHeader extends LinearLayout {
         final Context context = getContext();
 
         // TODO (slavick) this should open tweaks history when in 21 tweaks mode
-        if (!Servings.isEmpty()) {
+        if (!DDServings.isEmpty()) {
             Common.openServingsHistory(context);
         } else {
             Common.showToast(context, R.string.no_servings_recorded);
