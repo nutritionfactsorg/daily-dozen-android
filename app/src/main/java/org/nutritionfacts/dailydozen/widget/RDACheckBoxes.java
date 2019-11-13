@@ -6,10 +6,13 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.RDA;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.task.CalculateStreakTask;
 import org.nutritionfacts.dailydozen.task.StreakTaskInput;
 import org.nutritionfacts.dailydozen.view.ServingCheckBox;
@@ -27,7 +30,7 @@ public class RDACheckBoxes extends LinearLayout {
 
     private List<ServingCheckBox> checkBoxes;
 
-    private Food food;
+    private RDA rda;
     private Day day;
 
     public RDACheckBoxes(Context context) {
@@ -52,8 +55,8 @@ public class RDACheckBoxes extends LinearLayout {
         this.day = day;
     }
 
-    public void setFood(Food food) {
-        this.food = food;
+    public void setRDA(RDA rda) {
+        this.rda = rda;
     }
 
     public void setServings(final Servings servings) {
@@ -61,7 +64,7 @@ public class RDACheckBoxes extends LinearLayout {
         createCheckBox(
                 checkBoxes,
                 servings != null ? servings.getServings() : 0,
-                food.getRecommendedAmount());
+                rda.getRecommendedAmount());
 
         vgContainer.removeAllViews();
 
@@ -85,10 +88,19 @@ public class RDACheckBoxes extends LinearLayout {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 checkBox.onCheckChange(isChecked);
-                if (isChecked) {
-                    handleServingChecked();
-                } else {
-                    handleServingUnchecked();
+
+                if (rda instanceof Food) {
+                    if (isChecked) {
+                        handleServingChecked();
+                    } else {
+                        handleServingUnchecked();
+                    }
+                } else if (rda instanceof Tweak) {
+                    if (isChecked) {
+                        handleTweakChecked();
+                    } else {
+                        handleTweakUnchecked();
+                    }
                 }
             }
         };
@@ -107,7 +119,7 @@ public class RDACheckBoxes extends LinearLayout {
     private void handleServingChecked() {
         day = Day.createDayIfDoesNotExist(day);
 
-        final Servings servings = Servings.createServingsIfDoesNotExist(day, food);
+        final Servings servings = Servings.createServingsIfDoesNotExist(day, (Food)rda);
         final Integer numberOfCheckedBoxes = getNumberOfCheckedBoxes();
 
         if (servings != null && servings.getServings() != numberOfCheckedBoxes) {
@@ -138,11 +150,21 @@ public class RDACheckBoxes extends LinearLayout {
         }
     }
 
+    private void handleTweakChecked() {
+        // TODO (slavick)
+        Common.showToast(getContext(), "not implemented yet");
+    }
+
+    private void handleTweakUnchecked() {
+        // TODO (slavick)
+        Common.showToast(getContext(), "not implemented yet");
+    }
+
     private Servings getServings() {
-        return Servings.getByDateAndFood(day, food);
+        return Servings.getByDateAndFood(day, (Food)rda);
     }
 
     private void onServingsChanged() {
-        new CalculateStreakTask(getContext()).execute(new StreakTaskInput(day, food));
+        new CalculateStreakTask(getContext()).execute(new StreakTaskInput(day, (Food)rda));
     }
 }

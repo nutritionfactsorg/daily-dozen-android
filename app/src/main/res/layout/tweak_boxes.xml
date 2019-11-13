@@ -44,6 +44,17 @@
                 android:visibility="gone"
                 tools:ignore="SmallSp" />
 
+            <org.nutritionfacts.dailydozen.widget.RDACheckBoxes
+                android:id="@+id/tweak_checkboxes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:paddingLeft="4dp"
+                android:paddingStart="4dp"
+                android:paddingRight="4dp"
+                android:paddingEnd="4dp"
+                android:gravity="end"/>
+
         </LinearLayout>
 
     </LinearLayout>

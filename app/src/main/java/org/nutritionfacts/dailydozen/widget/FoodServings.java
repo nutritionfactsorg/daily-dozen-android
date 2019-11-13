@@ -32,7 +32,7 @@ public class FoodServings extends LinearLayout {
     @BindView(R.id.food_streak)
     protected StreakWidget tvStreak;
     @BindView(R.id.food_checkboxes)
-    protected RDACheckBoxes RDACheckBoxes;
+    protected RDACheckBoxes rdaCheckBoxes;
 
     public FoodServings(Context context) {
         super(context);
@@ -106,9 +106,9 @@ public class FoodServings extends LinearLayout {
     }
 
     private void initCheckboxes(Servings servings) {
-        RDACheckBoxes.setDay(day);
-        RDACheckBoxes.setFood(food);
-        RDACheckBoxes.setServings(servings);
+        rdaCheckBoxes.setDay(day);
+        rdaCheckBoxes.setRDA(food);
+        rdaCheckBoxes.setServings(servings);
     }
 
     @Subscribe

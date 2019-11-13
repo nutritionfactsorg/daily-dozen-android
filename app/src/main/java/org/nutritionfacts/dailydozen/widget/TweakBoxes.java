@@ -25,6 +25,8 @@ public class TweakBoxes extends LinearLayout {
     protected TextView tvName;
     @BindView(R.id.tweak_streak)
     protected StreakWidget tvStreak;
+    @BindView(R.id.tweak_checkboxes)
+    protected RDACheckBoxes rdaCheckBoxes;
 
     public TweakBoxes(Context context) {
         super(context);
@@ -88,11 +90,11 @@ public class TweakBoxes extends LinearLayout {
         Common.openTweakHistory(getContext(), tweak);
     }
 
-//    private void initCheckboxes(Servings servings) {
-//        foodCheckBoxes.setDay(day);
-//        foodCheckBoxes.setFood(food);
-//        foodCheckBoxes.setServings(servings);
-//    }
+    private void initCheckboxes(Servings servings) {
+        rdaCheckBoxes.setDay(day);
+        rdaCheckBoxes.setRDA(tweak);
+        rdaCheckBoxes.setServings(servings);
+    }
 
 //    @Subscribe
 //    public void onEvent(FoodServingsChangedEvent event) {
