@@ -12,9 +12,11 @@ import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.event.ShowExplodingStarAnimation;
 import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
 import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
+import org.nutritionfacts.dailydozen.event.TweakServingsChangedEvent;
 import org.nutritionfacts.dailydozen.event.WeightVisibilityChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
+import org.nutritionfacts.dailydozen.model.Tweak;
 
 public class Bus {
     public static void register(Object object) {
@@ -31,6 +33,10 @@ public class Bus {
 
     public static void foodServingsChangedEvent(Day day, Food food) {
         post(new FoodServingsChangedEvent(day.getDateString(), food.getName(), Common.isSupplement(food)));
+    }
+
+    public static void tweakServingsChangedEvent(Day day, Tweak tweak) {
+        post(new TweakServingsChangedEvent(day.getDateString(), tweak.getName()));
     }
 
     public static void displayLatestDate() {

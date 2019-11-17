@@ -7,8 +7,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.event.TweakServingsChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.model.TweakServings;
@@ -54,27 +56,30 @@ public class TweakBoxes extends LinearLayout {
 
         initTweakName();
 
-        final TweakServings servings = TweakServings.getByDateAndTweak(this.day, this.tweak);
+        final TweakServings servings = getTweakServings();
         initCheckboxes(servings);
-        // TODO (slavick)
-//        initTweakStreak(servings);
+        initTweakStreak(servings);
 
         return true;
+    }
+
+    private TweakServings getTweakServings() {
+        return TweakServings.getByDateAndTweak(day, tweak);
     }
 
     private void initTweakName() {
         tvName.setText(String.format("%s %s", tweak.getName(), getContext().getString(R.string.icon_info)));
     }
 
-//    private void initTweakStreak(DDServings servings) {
-//        final int streak = servings != null ? servings.getStreak() : 0;
-//        if (streak > 0) {
-//            tvStreak.setVisibility(VISIBLE);
-//            tvStreak.setStreak(streak);
-//        } else {
-//            tvStreak.setVisibility(GONE);
-//        }
-//    }
+    private void initTweakStreak(TweakServings servings) {
+        final int streak = servings != null ? servings.getStreak() : 0;
+        if (streak > 0) {
+            tvStreak.setVisibility(VISIBLE);
+            tvStreak.setStreak(streak);
+        } else {
+            tvStreak.setVisibility(GONE);
+        }
+    }
 
     @OnClick(R.id.tweak_name)
     public void onTweakNameClicked() {
@@ -92,10 +97,10 @@ public class TweakBoxes extends LinearLayout {
         rdaCheckBoxes.setServings(servings);
     }
 
-//    @Subscribe
-//    public void onEvent(FoodServingsChangedEvent event) {
-//        if (event.getFoodName().equals(food.getName())) {
-//            initTweakStreak(getServings());
-//        }
-//    }
+    @Subscribe
+    public void onEvent(TweakServingsChangedEvent event) {
+        if (event.getTweakName().equals(tweak.getName())) {
+            initTweakStreak(getTweakServings());
+        }
+    }
 }

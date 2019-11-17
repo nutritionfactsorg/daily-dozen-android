@@ -11,12 +11,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.event.TweakServingsChangedEvent;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.widget.DateHeader;
 import org.nutritionfacts.dailydozen.widget.DateWeights;
 import org.nutritionfacts.dailydozen.widget.TweakBoxes;
@@ -63,7 +66,7 @@ public class TweaksFragment extends Fragment {
 
         displayFormForDate();
 
-//        Bus.register(this);
+        Bus.register(this);
     }
 
     @Override
@@ -81,22 +84,16 @@ public class TweaksFragment extends Fragment {
 
                 initBackToTodayButton();
 
-                updateHeader();
+                updateHeader(TweakServings.getTotalTweakServingsOnDate(day));
 
                 final Context context = getContext();
-//                boolean addedSupplementDivider = false;
 
                 for (Tweak tweak : Tweak.getAllTweaks()) {
                     final TweakBoxes tweakBoxes = new TweakBoxes(context);
                     final boolean success = tweakBoxes.setDateAndTweak(day, tweak);
                     if (success) {
-//                        if (Common.isSupplement(food) && !addedSupplementDivider) {
-//                            vgFoodServings.addView(new SupplementDivider(context));
-//                            addedSupplementDivider = true;
-//                        }
-
                         vgTweaks.addView(tweakBoxes);
-//                        Bus.register(foodServings);
+                        Bus.register(tweakBoxes);
                     }
                 }
             } catch (InvalidDateException e) {
@@ -118,26 +115,28 @@ public class TweaksFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
 
-//        Bus.unregister(this);
+        Bus.unregister(this);
 
-//        for (int i = 0; i < vgFoodServings.getChildCount(); i++) {
-//            Bus.unregister(vgFoodServings.getChildAt(i));
-//        }
+        for (int i = 0; i < vgTweaks.getChildCount(); i++) {
+            Bus.unregister(vgTweaks.getChildAt(i));
+        }
 
         dateHeader = null;
         dateWeights = null;
     }
 
-//    private void updateServingsCount() {
-//        updateServingsCount(DDServings.getTotalServingsOnDate(day));
-//    }
-//
-//    private void updateServingsCount(final int numServings) {
-//        dateServings.setServings(numServings);
-//    }
-
-    private void updateHeader() {
+    private void updateHeader(final int numServings) {
         dateWeights.setDay(day);
+        dateHeader.setServings(numServings);
         Bus.register(dateWeights);
+    }
+
+    @Subscribe
+    public void onEvent(TweakServingsChangedEvent event) {
+        if (event.getDateString().equals(day.getDateString())) {
+            final int servingsOnDate = TweakServings.getTotalTweakServingsOnDate(day);
+
+            updateHeader(servingsOnDate);
+        }
     }
 }

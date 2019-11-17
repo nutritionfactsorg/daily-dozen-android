@@ -8,7 +8,7 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.model.Weights;
 import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
 
@@ -124,7 +124,7 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
 
     private void deleteAllExistingData() {
         DDServings.truncate(DDServings.class);
-        Tweak.truncate(Tweak.class);
+        TweakServings.truncate(TweakServings.class);
         Weights.truncate(Weights.class);
         Day.truncate(Day.class);
     }

@@ -6,15 +6,16 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 
-import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.RDA;
 import org.nutritionfacts.dailydozen.Servings;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.task.CalculateStreakTask;
+import org.nutritionfacts.dailydozen.task.CalculateTweakStreakTask;
 import org.nutritionfacts.dailydozen.task.StreakTaskInput;
 import org.nutritionfacts.dailydozen.view.ServingCheckBox;
 
@@ -152,16 +153,44 @@ public class RDACheckBoxes extends LinearLayout {
     }
 
     private void handleTweakChecked() {
-        // TODO (slavick)
-        Common.showToast(getContext(), "not implemented yet");
+        day = Day.createDayIfDoesNotExist(day);
+
+        final TweakServings servings = TweakServings.createServingsIfDoesNotExist(day, (Tweak)rda);
+        final Integer numberOfCheckedBoxes = getNumberOfCheckedBoxes();
+
+        if (servings != null && servings.getServings() != numberOfCheckedBoxes) {
+            servings.setServings(numberOfCheckedBoxes);
+
+            servings.save();
+            onTweakServingsChanged();
+            Timber.d("Increased TweakServings for %s", servings);
+        }
     }
 
     private void handleTweakUnchecked() {
-        // TODO (slavick)
-        Common.showToast(getContext(), "not implemented yet");
+        final TweakServings servings = TweakServings.getByDateAndTweak(day, (Tweak) rda);
+        final Integer numberOfCheckedBoxes = getNumberOfCheckedBoxes();
+
+        if (servings != null && servings.getServings() != numberOfCheckedBoxes) {
+            servings.setServings(numberOfCheckedBoxes);
+
+            if (servings.getServings() > 0) {
+                servings.save();
+                Timber.d("Decreased TweakServings for %s", servings);
+            } else {
+                Timber.d("Deleting %s", servings);
+                servings.delete();
+            }
+
+            onTweakServingsChanged();
+        }
     }
 
     private void onServingsChanged() {
-        new CalculateStreakTask(getContext()).execute(new StreakTaskInput(day, (Food)rda));
+        new CalculateStreakTask(getContext()).execute(new StreakTaskInput(day, rda));
+    }
+
+    private void onTweakServingsChanged() {
+        new CalculateTweakStreakTask(getContext()).execute(new StreakTaskInput(day, rda));
     }
 }

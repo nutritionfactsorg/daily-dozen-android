@@ -1,15 +1,17 @@
 package org.nutritionfacts.dailydozen.task;
 
+import org.nutritionfacts.dailydozen.RDA;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
+import org.nutritionfacts.dailydozen.model.Tweak;
 
 public class StreakTaskInput {
     private final Day startingDay;
-    private final Food food;
+    private final RDA rda;
 
-    public StreakTaskInput(final Day startingDay, final Food food) {
+    public StreakTaskInput(final Day startingDay, final RDA rda) {
         this.startingDay = startingDay;
-        this.food = food;
+        this.rda = rda;
     }
 
     Day getStartingDay() {
@@ -17,6 +19,10 @@ public class StreakTaskInput {
     }
 
     public Food getFood() {
-        return food;
+        return (Food) rda;
+    }
+
+    public Tweak getTweak() {
+        return (Tweak) rda;
     }
 }
