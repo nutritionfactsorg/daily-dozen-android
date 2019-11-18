@@ -9,7 +9,7 @@
         android:id="@+id/header_tweaks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:max="21"
+        app:max="37"
         app:title="@string/tweaks" />
 
     <View

@@ -27,6 +27,8 @@ public class DateHeader extends LinearLayout {
     @BindView(R.id.max)
     protected TextView tvMax;
 
+    private int max;
+
     public DateHeader(Context context) {
         super(context);
         init(context, null);
@@ -58,6 +60,7 @@ public class DateHeader extends LinearLayout {
 
     private void setMax(final String max) {
         tvMax.setText(max);
+        this.max = Integer.valueOf(max);
     }
 
     private void handleCustomAttrs(final Context context, final AttributeSet attrs) {
@@ -70,7 +73,10 @@ public class DateHeader extends LinearLayout {
     }
 
     public void setServings(final int servingsOnDate) {
-        tvStar.setVisibility(servingsOnDate == Common.MAX_SERVINGS ? VISIBLE : GONE);
+        // Only show the star for the Daily Dozen checklist
+        if (max == Common.MAX_SERVINGS) {
+            tvStar.setVisibility(servingsOnDate == Common.MAX_SERVINGS ? VISIBLE : GONE);
+        }
 
         tvNumServings.setText(Integer.toString(servingsOnDate));
     }
