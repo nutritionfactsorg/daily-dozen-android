@@ -22,7 +22,7 @@
         <meta-data
             android:name="AA_MODELS"
             android:value="org.nutritionfacts.dailydozen.model.Day, org.nutritionfacts.dailydozen.model.Food, org.nutritionfacts.dailydozen.model.DDServings, org.nutritionfacts.dailydozen.model.TweakServings, org.nutritionfacts.dailydozen.model.Tweak, org.nutritionfacts.dailydozen.model.Weights" />
-        
+
         <activity
             android:name=".activity.MainActivity"
             android:launchMode="singleTask"
@@ -93,6 +93,16 @@
         <activity
             android:name=".activity.DailyReminderSettingsActivity"
             android:label="@string/daily_reminder_settings"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activity.TweakHistoryActivity"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">

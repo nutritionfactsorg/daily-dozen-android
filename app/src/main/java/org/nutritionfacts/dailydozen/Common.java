@@ -6,20 +6,20 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-
-import androidx.annotation.ColorInt;
-import androidx.appcompat.content.res.AppCompatResources;
-import androidx.core.content.ContextCompat;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.ColorInt;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.core.content.ContextCompat;
+
 import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
+import org.nutritionfacts.dailydozen.activity.TweakHistoryActivity;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Tweak;
@@ -133,6 +133,12 @@ public class Common {
         return intent;
     }
 
+    private static Intent createTweakIntent(final Context context, final Class<? extends AppCompatActivity> klass, final Tweak tweak) {
+        final Intent intent = new Intent(context, klass);
+        intent.putExtra(Args.TWEAK_ID, tweak.getId());
+        return intent;
+    }
+
     public static Intent createShowDateIntent(final Date date) {
         final Intent showDateIntent = new Intent();
         showDateIntent.putExtra(Args.DATE, date);
@@ -161,8 +167,7 @@ public class Common {
     }
 
     public static void openTweakHistory(final Context context, final Tweak tweak) {
-        // TODO (slavick)
-        Common.showToast(context, "Not implemented yet");
+        startSelectableDateActivity(context, createTweakIntent(context, TweakHistoryActivity.class, tweak));
     }
 
     public static void openServingsHistory(final Context context) {
