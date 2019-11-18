@@ -18,9 +18,9 @@ import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.util.CalendarHistoryDecorator;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
@@ -49,7 +49,7 @@ public class FoodHistoryActivity extends FoodLoadingActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_history);
+        setContentView(R.layout.activity_history);
         ButterKnife.bind(this);
 
         fullServingsDates = new ArrayList<>();
