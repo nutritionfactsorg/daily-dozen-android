@@ -163,14 +163,14 @@ public class TweakServings extends TruncatableModel implements Servings {
         return (float) totalServings / days.size();
     }
 
-    // Any Dates in the return map indicate that at least one serving of the food was consumed on that date.
-    // The Boolean for the date indicates whether the number of servings equals the recommended servings of the food.
-    public static Map<Day, Boolean> getServingsOfFoodInYearAndMonth(final long foodId, final int year, final int monthOneBased) {
+    // Any Dates in the return map indicate that at least one serving of the tweak on that date.
+    // The Boolean for the date indicates whether the number of servings equals the recommended servings of the tweak.
+    public static Map<Day, Boolean> getServingsOfTweakInYearAndMonth(final long tweakId, final int year, final int monthOneBased) {
         final Map<Day, Boolean> servingsInMonth = new ArrayMap<>();
 
-        final Food food = Food.getById(foodId);
+        final Tweak tweak = Tweak.getById(tweakId);
 
-        if (food != null) {
+        if (tweak != null) {
             final List<Day> datesInMonth = Day.getDaysInYearAndMonth(year, monthOneBased);
 
             final List<String> placeholderArray = new ArrayList<>(datesInMonth.size());
@@ -190,18 +190,18 @@ public class TweakServings extends TruncatableModel implements Servings {
             final String placeholders = TextUtils.join(",", placeholderArray);
 
             ArrayList<String> args = new ArrayList<>(dateIds);
-            args.add(0, String.valueOf(foodId));
+            args.add(0, String.valueOf(tweakId));
             String[] argsArray = new String[args.size()];
             argsArray = args.toArray(argsArray);
 
             final List<TweakServings> servings = SQLiteUtils.rawQuery(TweakServings.class,
-                    String.format("SELECT * FROM servings WHERE food_id = ? AND date_id IN (%s)", placeholders),
+                    String.format("SELECT * FROM tweak_servings WHERE tweak_id = ? AND date_id IN (%s)", placeholders),
                     argsArray);
 
             for (TweakServings serving : servings) {
                 servingsInMonth.put(
                         serving.getDay(),
-                        serving.getServings() == food.getRecommendedAmount());
+                        serving.getServings() == tweak.getRecommendedAmount());
             }
         }
 
