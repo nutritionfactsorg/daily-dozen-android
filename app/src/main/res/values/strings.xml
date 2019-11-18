@@ -120,7 +120,6 @@
     <string name="imperial">Imperial</string>
     <string name="metric">Metric</string>
     <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
-    <string name="twenty_one" translatable="false">21</string>
     <string name="channel_reminders_name">Reminders</string>
     <string name="morning">Morning</string>
     <string name="evening">Evening</string>
@@ -237,7 +236,7 @@
         <item>preload with water</item>
         <item>preload with "negative calorie" foods</item>
         <item>incorporate vinegar (2 tsp with each meal)</item>
-        <item>enjoy undistracted meals</item>
+        <item>enjoy un-distracted meals</item>
         <item>follow the twenty-minute rule</item>
         <item>black cumin (1/4 tsp)</item>
         <item>garlic powder (1/4 tsp)</item>
@@ -246,10 +245,10 @@
         <item>cumin (1/2 tsp with lunch and dinner)</item>
         <item>green tea (3 cups)</item>
         <item>stay hydrated</item>
-        <item>deflour your diet</item>
+        <item>de-flour your diet</item>
         <item>front-load your calories</item>
         <item>time-restrict your eating</item>
-        <item>optimize exericising timing</item>
+        <item>optimize exercising timing</item>
         <item>weigh yourself twice a day</item>
         <item>complete your implementation intentions</item>
         <item>fast after 7:00 pm</item>
