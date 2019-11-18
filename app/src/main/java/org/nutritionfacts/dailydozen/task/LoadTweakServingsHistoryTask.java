@@ -17,8 +17,8 @@ import com.github.mikephil.charting.utils.ViewPortHandler;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
-import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 import org.nutritionfacts.dailydozen.util.DateUtil;
@@ -29,11 +29,11 @@ import java.util.List;
 
 import timber.log.Timber;
 
-public class LoadServingsHistoryTask
+public class LoadTweakServingsHistoryTask
         extends TaskWithContext<LoadHistoryTaskParams, Integer, LoadHistoryCompleteEvent> {
     private static final int MONTHS_IN_YEAR = 12;
 
-    public LoadServingsHistoryTask(Context context) {
+    public LoadTweakServingsHistoryTask(Context context) {
         super(context);
     }
 
@@ -51,7 +51,7 @@ public class LoadServingsHistoryTask
 
     @Override
     protected LoadHistoryCompleteEvent doInBackground(LoadHistoryTaskParams... params) {
-        if (DDServings.isEmpty() || params[0] == null) {
+        if (TweakServings.isEmpty() || params[0] == null) {
             return null;
         }
 
@@ -89,7 +89,7 @@ public class LoadServingsHistoryTask
 
             final Day day = history.get(i);
 
-            final int totalServingsOnDate = DDServings.getTotalServingsOnDate(day);
+            final int totalServingsOnDate = TweakServings.getTotalTweakServingsOnDate(day);
 
             previousTrend = calculateTrend(previousTrend, totalServingsOnDate);
 
@@ -128,7 +128,7 @@ public class LoadServingsHistoryTask
                 break;
             }
 
-            final float averageTotalServingsInMonth = DDServings.getAverageTotalServingsInMonth(year, monthOneBased);
+            final float averageTotalServingsInMonth = TweakServings.getAverageTotalTweakServingsInMonth(year, monthOneBased);
 
             Timber.d("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
                     year, monthOneBased, averageTotalServingsInMonth);
@@ -174,7 +174,7 @@ public class LoadServingsHistoryTask
 
             xLabels.add(String.valueOf(year));
 
-            final float averageTotalServingsInYear = DDServings.getAverageTotalServingsInYear(year);
+            final float averageTotalServingsInYear = TweakServings.getAverageTotalTweakServingsInYear(year);
 
             Timber.d("getChartDataInYears: year [%s], average [%s]",
                     year, averageTotalServingsInYear);

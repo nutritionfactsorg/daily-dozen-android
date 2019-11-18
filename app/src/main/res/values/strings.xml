@@ -71,6 +71,7 @@
     <string name="num_servings_max" translatable="false">24</string>
     <string name="icon_chart" translatable="false">{fa-bar-chart 20dp @color/gray_dark}</string>
     <string name="daily_servings_history">Daily Servings History</string>
+    <string name="daily_tweaks_history">Daily Tweaks History</string>
     <string name="no_servings_recorded">You have not recorded any servings yet!</string>
     <string name="task_backup_title">Backing up</string>
     <string name="task_restore_title">Restoring</string>

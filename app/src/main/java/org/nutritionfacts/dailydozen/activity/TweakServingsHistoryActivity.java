@@ -22,7 +22,7 @@ import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
 import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
-import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
+import org.nutritionfacts.dailydozen.task.LoadTweakServingsHistoryTask;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 import org.nutritionfacts.dailydozen.view.TimeRangeSelector;
 import org.nutritionfacts.dailydozen.view.TimeScaleSelector;
@@ -32,7 +32,7 @@ import java.util.Date;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ServingsHistoryActivity extends AppCompatActivity
+public class TweakServingsHistoryActivity extends AppCompatActivity
         implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener {
 
     @BindView(R.id.daily_servings_history_time_scale)
@@ -81,7 +81,7 @@ public class ServingsHistoryActivity extends AppCompatActivity
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
 
-            new LoadServingsHistoryTask(this).execute(new LoadHistoryTaskParams(
+            new LoadTweakServingsHistoryTask(this).execute(new LoadHistoryTaskParams(
                     timeScaleSelector.getSelectedTimeScale(),
                     timeRangeSelector.getSelectedYear(),
                     timeRangeSelector.getSelectedMonth()));
@@ -132,7 +132,7 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
         // Even though we hide the left axis, we must set its max value so that full servings days reach the top
         chart.getAxisLeft().setAxisMinValue(0);
-        chart.getAxisLeft().setAxisMaxValue(Common.MAX_SERVINGS);
+        chart.getAxisLeft().setAxisMaxValue(Common.MAX_TWEAKS_SERVINGS);
         chart.getAxisLeft().setEnabled(false);
 
         chart.getAxisRight().setEnabled(false);

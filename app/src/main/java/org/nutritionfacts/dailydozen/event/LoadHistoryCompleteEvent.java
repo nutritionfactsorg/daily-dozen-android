@@ -4,13 +4,13 @@ import com.github.mikephil.charting.data.CombinedData;
 
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 
-public class LoadServingsHistoryCompleteEvent extends BaseEvent {
+public class LoadHistoryCompleteEvent extends BaseEvent {
     private CombinedData chartData;
     @TimeScale.Interface
     private int timeScale;
 
-    public LoadServingsHistoryCompleteEvent(final CombinedData chartData,
-                                            final int timeScale) {
+    public LoadHistoryCompleteEvent(final CombinedData chartData,
+                                    final int timeScale) {
         this.chartData = chartData;
         this.timeScale = timeScale;
     }

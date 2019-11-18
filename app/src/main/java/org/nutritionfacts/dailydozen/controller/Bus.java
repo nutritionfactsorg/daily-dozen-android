@@ -7,7 +7,7 @@ import org.nutritionfacts.dailydozen.event.BaseEvent;
 import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
-import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
+import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.event.ShowExplodingStarAnimation;
 import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
@@ -59,7 +59,7 @@ public class Bus {
         post(new CalculateStreaksTaskCompleteEvent(success));
     }
 
-    public static void loadServingsHistoryCompleteEvent(final LoadServingsHistoryCompleteEvent event) {
+    public static void loadServingsHistoryCompleteEvent(final LoadHistoryCompleteEvent event) {
         post(event);
     }
 

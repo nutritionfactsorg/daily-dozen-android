@@ -20,6 +20,7 @@ import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.TweakHistoryActivity;
+import org.nutritionfacts.dailydozen.activity.TweakServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Tweak;
@@ -31,6 +32,7 @@ public class Common {
     public static final String PREFERENCES_FILE = "org.nutritionfacts.dailydozen.preferences";
 
     public static final int MAX_SERVINGS = 24;
+    public static final int MAX_TWEAKS_SERVINGS = 37;
 
     public static final String EXERCISE = "exercise";
     public static final String VITAMIN_B12 = "Vitamin B12";
@@ -172,6 +174,10 @@ public class Common {
 
     public static void openServingsHistory(final Context context) {
         startSelectableDateActivity(context, new Intent(context, ServingsHistoryActivity.class));
+    }
+
+    public static void openTweakServingsHistory(final Context context) {
+        startSelectableDateActivity(context, new Intent(context, TweakServingsHistoryActivity.class));
     }
 
     private static void startSelectableDateActivity(final Context context, final Intent intent) {

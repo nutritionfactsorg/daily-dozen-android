@@ -2,14 +2,14 @@ package org.nutritionfacts.dailydozen.task.params;
 
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 
-public class LoadServingsHistoryTaskParams {
+public class LoadHistoryTaskParams {
     @TimeScale.Interface
     private int timeScale;
 
     private int selectedYear;
     private int selectedMonth;
 
-    public LoadServingsHistoryTaskParams(@TimeScale.Interface int timeScale, int selectedYear, int selectedMonth) {
+    public LoadHistoryTaskParams(@TimeScale.Interface int timeScale, int selectedYear, int selectedMonth) {
         this.timeScale = timeScale;
         this.selectedYear = selectedYear;
         this.selectedMonth = selectedMonth;

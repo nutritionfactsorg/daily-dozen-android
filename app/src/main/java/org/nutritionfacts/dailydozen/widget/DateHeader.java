@@ -11,6 +11,7 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.DDServings;
+import org.nutritionfacts.dailydozen.model.TweakServings;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -74,22 +75,33 @@ public class DateHeader extends LinearLayout {
 
     public void setServings(final int servingsOnDate) {
         // Only show the star for the Daily Dozen checklist
-        if (max == Common.MAX_SERVINGS) {
+        if (inDailyDozenMode()) {
             tvStar.setVisibility(servingsOnDate == Common.MAX_SERVINGS ? VISIBLE : GONE);
         }
 
         tvNumServings.setText(Integer.toString(servingsOnDate));
     }
 
+    private boolean inDailyDozenMode() {
+        return max == Common.MAX_SERVINGS;
+    }
+
     @OnClick(R.id.sub_header)
     public void onSubHeaderClicked() {
         final Context context = getContext();
 
-        // TODO (slavick) this should open tweaks history when in 21 tweaks mode
-        if (!DDServings.isEmpty()) {
-            Common.openServingsHistory(context);
+        if (inDailyDozenMode()) {
+            if (!DDServings.isEmpty()) {
+                Common.openServingsHistory(context);
+            } else {
+                Common.showToast(context, R.string.no_servings_recorded);
+            }
         } else {
-            Common.showToast(context, R.string.no_servings_recorded);
+            if (!TweakServings.isEmpty()) {
+                Common.openTweakServingsHistory(context);
+            } else {
+                Common.showToast(context, R.string.no_servings_recorded);
+            }
         }
     }
 
