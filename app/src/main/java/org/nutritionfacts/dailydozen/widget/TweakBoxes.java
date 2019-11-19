@@ -54,7 +54,7 @@ public class TweakBoxes extends LinearLayout {
         this.day = day;
         this.tweak = tweak;
 
-        initTweakName();
+        tvName.setText(this.tweak.getName());
 
         final TweakServings servings = getTweakServings();
         initCheckboxes(servings);
@@ -67,10 +67,6 @@ public class TweakBoxes extends LinearLayout {
         return TweakServings.getByDateAndTweak(day, tweak);
     }
 
-    private void initTweakName() {
-        tvName.setText(String.format("%s %s", tweak.getName(), getContext().getString(R.string.icon_info)));
-    }
-
     private void initTweakStreak(TweakServings servings) {
         final int streak = servings != null ? servings.getStreak() : 0;
         if (streak > 0) {
@@ -79,11 +75,6 @@ public class TweakBoxes extends LinearLayout {
         } else {
             tvStreak.setVisibility(GONE);
         }
-    }
-
-    @OnClick(R.id.tweak_name)
-    public void onTweakNameClicked() {
-        Common.openTweakInfo(getContext(), tweak);
     }
 
     @OnClick({R.id.tweak_history, R.id.tweak_streak})

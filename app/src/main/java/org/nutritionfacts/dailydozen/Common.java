@@ -155,11 +155,6 @@ public class Common {
         }
     }
 
-    public static void openTweakInfo(final Context context, final Tweak tweak) {
-        // TODO (slavick)
-        Common.showToast(context, "Not implemented yet");
-    }
-
     public static boolean isSupplement(final Food food) {
         return food != null && (VITAMIN_B12.equalsIgnoreCase(food.getIdName()) || OMEGA3.equalsIgnoreCase(food.getIdName()));
     }
