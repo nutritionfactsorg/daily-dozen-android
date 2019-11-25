@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/date_servings_star" />
+        android:text="@string/date_weight_morning" />
 
     <LinearLayout
         android:id="@+id/morning_weight_container"
@@ -70,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/date_servings_star" />
+        android:text="@string/date_weight_evening" />
 
     <LinearLayout
         android:id="@+id/evening_weight_container"

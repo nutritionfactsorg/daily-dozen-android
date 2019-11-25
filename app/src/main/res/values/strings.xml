@@ -93,6 +93,8 @@
     <string name="task_loading_servings_history_title">Loading Servings History</string>
     <string name="time_scale">Time Scale</string>
     <string name="history_to_generate">History to Generate</string>
+    <string name="date_weight_morning" translatable="false">{fa-sun-o 22dp @color/gray_dark}</string>
+    <string name="date_weight_evening" translatable="false">{fa-moon-o 22dp @color/gray_dark}</string>
     <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
     <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
     <string name="date_weights_eye_open" translatable="false">{fa-eye 24dp @color/gray_dark}</string>
