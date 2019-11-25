@@ -3,34 +3,43 @@ package org.nutritionfacts.dailydozen.task;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
-import androidx.collection.ArrayMap;
 import android.text.TextUtils;
 
-import com.activeandroid.ActiveAndroid;
+import androidx.collection.ArrayMap;
 
+import com.activeandroid.ActiveAndroid;
+import com.google.gson.Gson;
+
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.DayEntries;
 import org.nutritionfacts.dailydozen.model.Food;
+import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.model.TweakServings;
+import org.nutritionfacts.dailydozen.model.Weights;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
+import java.util.Map;
 
 import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
 public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
-    private String[] headers;
     private ArrayMap<String, Food> foodLookup;
+    private ArrayMap<String, Tweak> tweakLookup;
 
     public RestoreTask(Context context) {
         super(context);
         foodLookup = new ArrayMap<>();
+        tweakLookup = new ArrayMap<>();
     }
 
     @Override
@@ -68,8 +77,6 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
                         String line = reader.readLine();
                         if (line != null) {
-                            headers = line.split(",");
-
                             int i = 0;
 
                             do {
@@ -101,8 +108,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
     @DebugLog
     private void deleteAllExistingData() {
-        DDServings.truncate(DDServings.class);
-        Day.truncate(Day.class);
+        Common.truncateAllDatabaseTables();
     }
 
     @DebugLog
@@ -110,24 +116,23 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         ActiveAndroid.beginTransaction();
 
         try {
-            final String[] values = line.split(",");
+            DayEntries dayEntries = new Gson().fromJson(line, DayEntries.class);
 
-            if (values.length > 0) {
-                final Day day = Day.createDayIfDoesNotExist(values[0]);
+            final Day day = Day.createDayIfDoesNotExist(dayEntries.getDate());
 
-                // Start at 1 to skip the first header column which is "Date" and not a food
-                for (int j = 1; j < headers.length; j++) {
-                    final int numServings = Integer.parseInt(values[j]);
-                    if (numServings > 0) {
-                        final Food food = getFoodByName(headers[j]);
-                        if (food != null) {
-                            DDServings.createServingsIfDoesNotExist(day, food, numServings);
-                        }
-                    }
-                }
+            Weights.createWeightsIfDoesNotExist(day,
+                    dayEntries.getMorningWeight(),
+                    dayEntries.getEveningWeight());
 
-                ActiveAndroid.setTransactionSuccessful();
+            for (Map.Entry<String, Integer> entry : dayEntries.getDailyDozen().entrySet()) {
+                DDServings.createServingsIfDoesNotExist(day, getFoodByIdName(entry.getKey()), entry.getValue());
             }
+
+            for (Map.Entry<String, Integer> entry : dayEntries.getTweaks().entrySet()) {
+                TweakServings.createServingsIfDoesNotExist(day, getTweakByIdName(entry.getKey()), entry.getValue());
+            }
+
+            ActiveAndroid.setTransactionSuccessful();
         } catch (InvalidDateException e) {
             Timber.e(e, "restoreLine: ");
         } finally {
@@ -135,12 +140,20 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         }
     }
 
-    private Food getFoodByName(String foodName) {
-        if (!foodLookup.containsKey(foodName)) {
-            foodLookup.put(foodName, Food.getByNameOrIdName(foodName));
+    private Food getFoodByIdName(String foodIdName) {
+        if (!foodLookup.containsKey(foodIdName)) {
+            foodLookup.put(foodIdName, Food.getByNameOrIdName(foodIdName));
         }
 
-        return foodLookup.get(foodName);
+        return foodLookup.get(foodIdName);
+    }
+
+    private Tweak getTweakByIdName(String tweakIdName) {
+        if (!tweakLookup.containsKey(tweakIdName)) {
+            tweakLookup.put(tweakIdName, Tweak.getByNameOrIdName(tweakIdName));
+        }
+
+        return tweakLookup.get(tweakIdName);
     }
 
     @Override

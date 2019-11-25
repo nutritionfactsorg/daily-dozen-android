@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.activeandroid.ActiveAndroid;
 
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
@@ -137,10 +138,7 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
     }
 
     private void deleteAllExistingData() {
-        DDServings.truncate(DDServings.class);
-        TweakServings.truncate(TweakServings.class);
-        Weights.truncate(Weights.class);
-        Day.truncate(Day.class);
+        Common.truncateAllDatabaseTables();
     }
 
     @Override

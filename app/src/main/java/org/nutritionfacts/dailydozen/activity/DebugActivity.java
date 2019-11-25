@@ -2,18 +2,17 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-import org.nutritionfacts.dailydozen.model.Day;
-import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.task.GenerateDataTask;
 import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
@@ -58,9 +57,7 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        DDServings.truncate(DDServings.class);
-                        Day.truncate(Day.class);
-
+                        Common.truncateAllDatabaseTables();
                         dialog.dismiss();
                     }
                 })

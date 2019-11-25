@@ -21,9 +21,13 @@ import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.TweakHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.TweakServingsHistoryActivity;
+import org.nutritionfacts.dailydozen.model.DDServings;
+import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.model.TweakServings;
+import org.nutritionfacts.dailydozen.model.Weights;
 
 import java.util.Date;
 
@@ -179,5 +183,12 @@ public class Common {
         if (context instanceof Activity) {
             ((Activity) context).startActivityForResult(intent, Args.SELECTABLE_DATE_REQUEST);
         }
+    }
+
+    public static void truncateAllDatabaseTables() {
+        DDServings.truncate(DDServings.class);
+        TweakServings.truncate(TweakServings.class);
+        Weights.truncate(Weights.class);
+        Day.truncate(Day.class);
     }
 }
