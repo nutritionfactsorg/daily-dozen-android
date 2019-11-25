@@ -106,13 +106,10 @@ public class TweakServings extends TruncatableModel implements Servings {
 
         if (servings == null) {
             servings = new TweakServings(day, tweak);
-
-            if (numServings > 0) {
-                servings.setServings(numServings);
-            }
-
-            servings.save();
         }
+
+        servings.setServings(numServings);
+        servings.save();
 
         return servings;
     }

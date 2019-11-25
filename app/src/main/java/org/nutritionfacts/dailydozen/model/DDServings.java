@@ -1,8 +1,9 @@
 package org.nutritionfacts.dailydozen.model;
 
+import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
 import androidx.collection.ArrayMap;
-import android.text.TextUtils;
 
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
@@ -108,13 +109,10 @@ public class DDServings extends TruncatableModel implements Servings {
 
         if (servings == null) {
             servings = new DDServings(day, food);
-
-            if (numServings > 0) {
-                servings.setServings(numServings);
-            }
-
-            servings.save();
         }
+
+        servings.setServings(numServings);
+        servings.save();
 
         return servings;
     }
