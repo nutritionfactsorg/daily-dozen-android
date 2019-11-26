@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -12,6 +13,7 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.event.TweakServingsChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.model.TweakServings;
 
@@ -23,6 +25,8 @@ public class TweakBoxes extends LinearLayout {
     private Day day;
     private Tweak tweak;
 
+    @BindView(R.id.tweak_icon)
+    protected ImageView ivIcon;
     @BindView(R.id.tweak_name)
     protected TextView tvName;
     @BindView(R.id.tweak_streak)
@@ -54,17 +58,27 @@ public class TweakBoxes extends LinearLayout {
         this.day = day;
         this.tweak = tweak;
 
-        tvName.setText(this.tweak.getName());
+        final boolean foundTweakIcon = initTweakIcon();
+        if (foundTweakIcon) {
+            tvName.setText(this.tweak.getName());
 
-        final TweakServings servings = getTweakServings();
-        initCheckboxes(servings);
-        initTweakStreak(servings);
+            final TweakServings servings = getTweakServings();
+            initCheckboxes(servings);
+            initTweakStreak(servings);
 
-        return true;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private TweakServings getTweakServings() {
         return TweakServings.getByDateAndTweak(day, tweak);
+    }
+
+    private boolean initTweakIcon() {
+        final Context context = getContext();
+        return Common.loadImage(context, ivIcon, FoodInfo.getTweakIcon(tweak.getName()));
     }
 
     private void initTweakStreak(TweakServings servings) {

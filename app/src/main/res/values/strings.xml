@@ -238,28 +238,50 @@
         <item>Nightly Trendelenburg</item>
     </string-array>
 
+    <string name="meal_water">Preload with Water</string>
+    <string name="meal_negcal">Preload with "Negative Calorie" Foods</string>
+    <string name="meal_vinegar">Incorporate Vinegar (2 tsp with each meal)</string>
+    <string name="meal_undistracted">Enjoy Undistracted Meals</string>
+    <string name="meal_twentyminutes">Follow the Twenty-Minute Rule</string>
+    <string name="daily_blackcumin"><![CDATA[Black Cumin (&#188; tsp)]]></string>
+    <string name="daily_garlic"><![CDATA[Garlic Powder (&#188; tsp)]]></string>
+    <string name="daily_ginger"><![CDATA[Ground Ginger (1 tsp) or Cayenne Pepper (&#189; tsp)]]></string>
+    <string name="daily_nutriyeast">Nutritional Yeast (2 tsp)</string>
+    <string name="daily_cumin"><![CDATA[Cumin (&#189; tsp with lunch and dinner)]]></string>
+    <string name="daily_greentea">Green Tea (3 cups)</string>
+    <string name="daily_hydrate">Stay Hydrated</string>
+    <string name="daily_deflourdiet">Deflour Your Diet</string>
+    <string name="daily_frontload">Front-Load Your Calories</string>
+    <string name="daily_timerestrict">Time-Restrict Your Eating</string>
+    <string name="exercise_timing">Optimize Exercise Timing</string>
+    <string name="weigh_twice">Weigh Yourself Twice a Day</string>
+    <string name="complete_intentions">Complete Your Implementation Intentions</string>
+    <string name="nightly_fast">Fast After 7:00 pm</string>
+    <string name="nightly_sleep">Get Sufficient Sleep</string>
+    <string name="nightly_trendelenburg">Experiment with Mild Trendelenburg</string>
+
     <string-array name="tweak_names" translatable="false">
-        <item>Preload with Water</item>
-        <item>Preload with "Negative Calorie" Foods</item>
-        <item>Incorporate Vinegar (2 tsp with each meal)</item>
-        <item>Enjoy Undistracted Meals</item>
-        <item>Follow the Twenty-Minute Rule</item>
-        <item>Black Cumin (1/4 tsp)</item>
-        <item>Garlic Powder (1/4 tsp)</item>
-        <item>Ground Ginger (1 tsp) or Cayenne Pepper (1/2 tsp)</item>
-        <item>Nutritional Yeast (2 tsp)</item>
-        <item>Cumin (1/2 tsp with lunch and dinner)</item>
-        <item>Green Tea (3 cups)</item>
-        <item>Stay Hydrated</item>
-        <item>Deflour Your Diet</item>
-        <item>Front-Load Your Calories</item>
-        <item>Time-Restrict Your Eating</item>
-        <item>Optimize Exercise Timing</item>
-        <item>Weigh Yourself Twice a Day</item>
-        <item>Complete Your Implementation Intentions</item>
-        <item>Fast After 7:00 pm</item>
-        <item>Get Sufficient Sleep</item>
-        <item>Experiment with Mild Trendelenburg</item>
+        <item>@string/meal_water</item>
+        <item>@string/meal_negcal</item>
+        <item>@string/meal_vinegar</item>
+        <item>@string/meal_undistracted</item>
+        <item>@string/meal_twentyminutes</item>
+        <item>@string/daily_blackcumin</item>
+        <item>@string/daily_garlic</item>
+        <item>@string/daily_ginger</item>
+        <item>@string/daily_nutriyeast</item>
+        <item>@string/daily_cumin</item>
+        <item>@string/daily_greentea</item>
+        <item>@string/daily_hydrate</item>
+        <item>@string/daily_deflourdiet</item>
+        <item>@string/daily_frontload</item>
+        <item>@string/daily_timerestrict</item>
+        <item>@string/exercise_timing</item>
+        <item>@string/weigh_twice</item>
+        <item>@string/complete_intentions</item>
+        <item>@string/nightly_fast</item>
+        <item>@string/nightly_sleep</item>
+        <item>@string/nightly_trendelenburg</item>
     </string-array>
 
     <integer-array name="tweak_amounts" translatable="false">

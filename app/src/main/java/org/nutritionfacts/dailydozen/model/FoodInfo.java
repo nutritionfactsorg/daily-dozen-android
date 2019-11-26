@@ -2,9 +2,10 @@ package org.nutritionfacts.dailydozen.model;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.text.TextUtils;
+
 import androidx.annotation.DrawableRes;
 import androidx.collection.ArrayMap;
-import android.text.TextUtils;
 
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.enums.Units;
@@ -18,6 +19,7 @@ import java.util.Map;
 public class FoodInfo {
     private static Map<String, Integer> foodImages;
     private static Map<String, Integer> foodIcons;
+    private static Map<String, Integer> tweakIcons;
     private static Map<String, List<String>> servingSizesImperial;
     private static Map<String, List<String>> servingSizesMetric;
     private static Map<String, List<String>> typesOfFood;
@@ -39,13 +41,37 @@ public class FoodInfo {
     private static String vitaminB12;
     private static String omega3;
 
+    private static String tweakMealWater;
+    private static String tweakMealNegCal;
+    private static String tweakMealVinegar;
+    private static String tweakMealUndistracted;
+    private static String tweakMealTwentyMinutes;
+    private static String tweakDailyBlackCumin;
+    private static String tweakDailyGarlic;
+    private static String tweakDailyGinger;
+    private static String tweakDailyNutriYeast;
+    private static String tweakDailyCumin;
+    private static String tweakDailyGreenTea;
+    private static String tweakDailyHydrate;
+    private static String tweakDailyDeflourDiet;
+    private static String tweakDailyFrontLoad;
+    private static String tweakDailyTimeRestrict;
+    private static String tweakExerciseTiming;
+    private static String tweakWeighTwice;
+    private static String tweakCompleteIntentions;
+    private static String tweakNightlyFast;
+    private static String tweakNightlySleep;
+    private static String tweakNightlyTrendelenburg;
+
     public static void init(final Context context) {
         final Resources res = context.getResources();
 
         bindFoodNames(res);
+        bindTweakNames(res);
 
         initFoodImages();
         initFoodIcons();
+        initTweakIcons();
         initServingSizes(context);
         initTypesOfFood(res);
         initFoodTypeVideos(res);
@@ -67,6 +93,30 @@ public class FoodInfo {
         exercise = res.getString(R.string.exercise);
         vitaminB12 = res.getString(R.string.vitamin_b12);
         omega3 = res.getString(R.string.omega3);
+    }
+
+    private static void bindTweakNames(Resources res) {
+        tweakMealWater = res.getString(R.string.meal_water);
+        tweakMealNegCal = res.getString(R.string.meal_negcal);
+        tweakMealVinegar = res.getString(R.string.meal_vinegar);
+        tweakMealUndistracted = res.getString(R.string.meal_undistracted);
+        tweakMealTwentyMinutes = res.getString(R.string.meal_twentyminutes);
+        tweakDailyBlackCumin = res.getString(R.string.daily_blackcumin);
+        tweakDailyGarlic = res.getString(R.string.daily_garlic);
+        tweakDailyGinger = res.getString(R.string.daily_ginger);
+        tweakDailyNutriYeast = res.getString(R.string.daily_nutriyeast);
+        tweakDailyCumin = res.getString(R.string.daily_cumin);
+        tweakDailyGreenTea = res.getString(R.string.daily_greentea);
+        tweakDailyHydrate = res.getString(R.string.daily_hydrate);
+        tweakDailyDeflourDiet = res.getString(R.string.daily_deflourdiet);
+        tweakDailyFrontLoad = res.getString(R.string.daily_frontload);
+        tweakDailyTimeRestrict = res.getString(R.string.daily_timerestrict);
+        tweakExerciseTiming = res.getString(R.string.exercise_timing);
+        tweakWeighTwice = res.getString(R.string.weigh_twice);
+        tweakCompleteIntentions = res.getString(R.string.complete_intentions);
+        tweakNightlyFast = res.getString(R.string.nightly_fast);
+        tweakNightlySleep = res.getString(R.string.nightly_sleep);
+        tweakNightlyTrendelenburg = res.getString(R.string.nightly_trendelenburg);
     }
 
     @DrawableRes
@@ -113,6 +163,37 @@ public class FoodInfo {
         foodIcons.put(exercise, R.drawable.ic_exercise);
         foodIcons.put(vitaminB12, R.drawable.ic_vitamin_b12);
         foodIcons.put(omega3, R.drawable.ic_omega_3);
+    }
+
+    @DrawableRes
+    public static Integer getTweakIcon(final String tweakName) {
+        return tweakIcons.get(tweakName);
+    }
+
+    private static void initTweakIcons() {
+        tweakIcons = new ArrayMap<>();
+
+        tweakIcons.put(tweakMealWater, R.drawable.ic_meal_water);
+        tweakIcons.put(tweakMealNegCal, R.drawable.ic_meal_negcal);
+        tweakIcons.put(tweakMealVinegar, R.drawable.ic_meal_vinegar);
+        tweakIcons.put(tweakMealUndistracted, R.drawable.ic_meal_undistracted);
+        tweakIcons.put(tweakMealTwentyMinutes, R.drawable.ic_meal_20_minutes);
+        tweakIcons.put(tweakDailyBlackCumin, R.drawable.ic_daily_black_cumin);
+        tweakIcons.put(tweakDailyGarlic, R.drawable.ic_daily_garlic);
+        tweakIcons.put(tweakDailyGinger, R.drawable.ic_daily_ginger);
+        tweakIcons.put(tweakDailyNutriYeast, R.drawable.ic_daily_nutriyeast);
+        tweakIcons.put(tweakDailyCumin, R.drawable.ic_daily_cumin);
+        tweakIcons.put(tweakDailyGreenTea, R.drawable.ic_daily_green_tea);
+        tweakIcons.put(tweakDailyHydrate, R.drawable.ic_daily_hydrate);
+        tweakIcons.put(tweakDailyDeflourDiet, R.drawable.ic_daily_deflour_diet);
+        tweakIcons.put(tweakDailyFrontLoad, R.drawable.ic_daily_front_load);
+        tweakIcons.put(tweakDailyTimeRestrict, R.drawable.ic_daily_time_restrict);
+        tweakIcons.put(tweakExerciseTiming, R.drawable.ic_exercise_timing);
+        tweakIcons.put(tweakWeighTwice, R.drawable.ic_weigh_twice);
+        tweakIcons.put(tweakCompleteIntentions, R.drawable.ic_complete_intentions);
+        tweakIcons.put(tweakNightlyFast, R.drawable.ic_nightly_fast);
+        tweakIcons.put(tweakNightlySleep, R.drawable.ic_nightly_sleep);
+        tweakIcons.put(tweakNightlyTrendelenburg, R.drawable.ic_nightly_trendelenburg);
     }
 
     public static List<String> getTypesOfFood(final String foodName) {
