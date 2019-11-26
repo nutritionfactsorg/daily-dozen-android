@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import com.joanzapata.iconify.widget.IconTextView;
 
 import org.greenrobot.eventbus.Subscribe;
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.Prefs;
@@ -59,7 +60,7 @@ public class DateWeights extends LinearLayout {
         final View view = inflate(context, R.layout.date_weights, this);
         ButterKnife.bind(this, view);
 
-        tvHeader.setText("Weight");
+        tvHeader.setText(R.string.weight);
     }
 
     public void setDay(final Day day) {
@@ -89,6 +90,16 @@ public class DateWeights extends LinearLayout {
     public void onEyeClicked() {
         Prefs.getInstance(getContext()).toggleWeightVisibility();
         Bus.weightVisibilityChanged();
+    }
+
+    @OnClick(R.id.weight_history)
+    public void onWeightHistoryClicked() {
+        final Context context = getContext();
+        if (!Weights.isEmpty()) {
+            Common.openWeightHistory(context);
+        } else {
+            Common.showToast(context, R.string.no_weights_recorded);
+        }
     }
 
     private void setWeightsVisible() {
@@ -151,7 +162,7 @@ public class DateWeights extends LinearLayout {
         }
     }
 
-    @OnEditorAction({R.id.morning_weight,R.id.evening_weight})
+    @OnEditorAction({R.id.morning_weight, R.id.evening_weight})
     public boolean onMorningWeightEditorAction(EditText et, int actionId) {
         if (actionId == EditorInfo.IME_ACTION_DONE) {
             et.clearFocus();

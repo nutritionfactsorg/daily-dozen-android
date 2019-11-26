@@ -72,4 +72,8 @@ public class Weights extends TruncatableModel {
 
         return null;
     }
+
+    public static boolean isEmpty() {
+        return new Select().from(Weights.class).count() == 0;
+    }
 }

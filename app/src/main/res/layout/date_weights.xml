@@ -7,14 +7,14 @@
     <TextView
         android:id="@+id/header"
         style="@style/PrimaryText"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:padding="8dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="start|center_vertical"
-        android:layout_weight="1" />
+        android:layout_gravity="start|center_vertical"/>
 
     <com.joanzapata.iconify.widget.IconTextView
         android:id="@+id/eye"
+        style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -34,9 +34,8 @@
 
     <LinearLayout
         android:id="@+id/morning_weight_container"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:paddingLeft="8dp"
         android:paddingStart="8dp"
         android:paddingRight="8dp"
@@ -46,7 +45,7 @@
         <EditText
             android:id="@+id/morning_weight"
             style="@style/SecondaryText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:gravity="end"
@@ -57,8 +56,8 @@
 
         <com.joanzapata.iconify.widget.IconTextView
             android:id="@+id/morning_weight_hidden_icon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
             android:visibility="gone" />
@@ -74,9 +73,8 @@
 
     <LinearLayout
         android:id="@+id/evening_weight_container"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:paddingLeft="8dp"
         android:paddingStart="8dp"
         android:paddingRight="8dp"
@@ -86,7 +84,7 @@
         <EditText
             android:id="@+id/evening_weight"
             style="@style/SecondaryText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="end"
             android:gravity="end"
@@ -97,12 +95,21 @@
 
         <com.joanzapata.iconify.widget.IconTextView
             android:id="@+id/evening_weight_hidden_icon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
             android:visibility="gone" />
 
     </LinearLayout>
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/weight_history"
+        style="@style/SecondaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:text="@string/icon_chart" />
 
 </LinearLayout>

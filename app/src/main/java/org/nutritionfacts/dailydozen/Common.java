@@ -179,6 +179,10 @@ public class Common {
         startSelectableDateActivity(context, new Intent(context, TweakServingsHistoryActivity.class));
     }
 
+    public static void openWeightHistory(final Context context) {
+        showToast(context, "not implemented yet");
+    }
+
     private static void startSelectableDateActivity(final Context context, final Intent intent) {
         if (context instanceof Activity) {
             ((Activity) context).startActivityForResult(intent, Args.SELECTABLE_DATE_REQUEST);
