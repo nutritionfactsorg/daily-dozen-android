@@ -154,5 +154,6 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
     @Override
     protected void onPostExecute(Boolean aBoolean) {
         super.onPostExecute(aBoolean);
+        new CalculateStreaksTask(getContext()).execute();
     }
 }
