@@ -31,14 +31,14 @@ import butterknife.Unbinder;
 import timber.log.Timber;
 
 public class TweaksFragment extends Fragment {
+    @BindView(R.id.back_to_today)
+    protected TextView tvBackToToday;
     @BindView(R.id.header_tweaks)
     protected DateHeader dateHeader;
     @BindView(R.id.date_weights)
     protected DateWeights dateWeights;
     @BindView(R.id.date_tweaks)
     protected ViewGroup vgTweaks;
-    @BindView(R.id.back_to_today)
-    protected TextView tvBackToToday;
 
     private Unbinder unbinder;
 
@@ -84,7 +84,7 @@ public class TweaksFragment extends Fragment {
 
                 initBackToTodayButton();
 
-                updateHeader(TweakServings.getTotalTweakServingsOnDate(day));
+                updateHeader();
 
                 final Context context = getContext();
 
@@ -125,18 +125,16 @@ public class TweaksFragment extends Fragment {
         dateWeights = null;
     }
 
-    private void updateHeader(final int numServings) {
+    private void updateHeader() {
+        dateHeader.setServings(TweakServings.getTotalTweakServingsOnDate(day));
         dateWeights.setDay(day);
-        dateHeader.setServings(numServings);
         Bus.register(dateWeights);
     }
 
     @Subscribe
     public void onEvent(TweakServingsChangedEvent event) {
         if (event.getDateString().equals(day.getDateString())) {
-            final int servingsOnDate = TweakServings.getTotalTweakServingsOnDate(day);
-
-            updateHeader(servingsOnDate);
+            updateHeader();
         }
     }
 }
