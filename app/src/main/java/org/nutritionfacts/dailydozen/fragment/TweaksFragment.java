@@ -122,6 +122,8 @@ public class TweaksFragment extends Fragment {
         }
 
         dateHeader = null;
+
+        Bus.unregister(dateWeights);
         dateWeights = null;
     }
 
