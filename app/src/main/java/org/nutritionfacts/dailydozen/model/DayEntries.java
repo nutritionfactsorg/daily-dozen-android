@@ -4,8 +4,8 @@ import java.util.Map;
 
 public class DayEntries {
     private String Date;
-    private Float morningWeight;
-    private Float eveningWeight;
+    private float morningWeight;
+    private float eveningWeight;
     private Map<String, Integer> dailyDozen;
     private Map<String, Integer> tweaks;
 
@@ -18,15 +18,17 @@ public class DayEntries {
     }
 
     public void setWeights(Weights weights) {
-        morningWeight = weights.getMorningWeight();
-        eveningWeight = weights.getEveningWeight();
+        if (weights != null) {
+            morningWeight = weights.getMorningWeight();
+            eveningWeight = weights.getEveningWeight();
+        }
     }
 
-    public Float getMorningWeight() {
+    public float getMorningWeight() {
         return morningWeight;
     }
 
-    public Float getEveningWeight() {
+    public float getEveningWeight() {
         return eveningWeight;
     }
 
