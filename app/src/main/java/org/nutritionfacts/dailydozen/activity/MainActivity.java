@@ -37,7 +37,7 @@ import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.task.BackupTask;
 import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
-import org.nutritionfacts.dailydozen.task.RestoreTaskJSON;
+import org.nutritionfacts.dailydozen.task.RestoreTask;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
@@ -319,8 +319,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void restore(final Uri restoreFileUri) {
-        // TODO (slavick) switch between csv and json backup file handlers
-        new RestoreTaskJSON(this).execute(restoreFileUri);
+        new RestoreTask(this).execute(restoreFileUri);
     }
 
     public File getBackupFile() {
