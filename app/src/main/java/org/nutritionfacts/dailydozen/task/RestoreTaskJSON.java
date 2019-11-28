@@ -32,11 +32,11 @@ import java.util.Map;
 import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
-public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
+public class RestoreTaskJSON extends TaskWithContext<Uri, Integer, Boolean> {
     private ArrayMap<String, Food> foodLookup;
     private ArrayMap<String, Tweak> tweakLookup;
 
-    public RestoreTask(Context context) {
+    public RestoreTaskJSON(Context context) {
         super(context);
         foodLookup = new ArrayMap<>();
         tweakLookup = new ArrayMap<>();
