@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.view;
 
 import android.content.Context;
+
 import androidx.appcompat.widget.AppCompatCheckBox;
 
 public class ServingCheckBox extends AppCompatCheckBox {

@@ -2,9 +2,10 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.MenuItem;
 
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.model.Food;

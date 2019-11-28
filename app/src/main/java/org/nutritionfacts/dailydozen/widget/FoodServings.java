@@ -12,10 +12,10 @@ import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
-import org.nutritionfacts.dailydozen.model.DDServings;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

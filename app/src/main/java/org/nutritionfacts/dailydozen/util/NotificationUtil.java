@@ -9,9 +9,10 @@ import android.content.Intent;
 import android.media.RingtoneManager;
 import android.os.Build;
 import android.os.Vibrator;
+import android.text.TextUtils;
+
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.TaskStackBuilder;
-import android.text.TextUtils;
 
 import com.google.gson.Gson;
 

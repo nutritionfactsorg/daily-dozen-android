@@ -1,11 +1,12 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+
 import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.core.content.ContextCompat;
-import android.util.AttributeSet;
-import android.view.View;
 
 import com.joanzapata.iconify.widget.IconTextView;
 

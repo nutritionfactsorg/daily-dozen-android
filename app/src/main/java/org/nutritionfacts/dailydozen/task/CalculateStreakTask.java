@@ -5,9 +5,9 @@ import android.content.Context;
 import com.activeandroid.ActiveAndroid;
 
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.DDServings;
 
 import java.util.List;
 
