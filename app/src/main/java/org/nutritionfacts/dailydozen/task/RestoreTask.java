@@ -33,6 +33,7 @@ import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
 public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
+    private String[] headers;
     private ArrayMap<String, Food> foodLookup;
     private ArrayMap<String, Tweak> tweakLookup;
 
@@ -56,7 +57,9 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
             final ContentResolver contentResolver = getContext().getContentResolver();
 
             if (params != null && params.length > 0) {
-                InputStream restoreInputStream = contentResolver.openInputStream(params[0]);
+                final Uri restoreFileUri = params[0];
+                final String restoreFileType = contentResolver.getType(restoreFileUri);
+                InputStream restoreInputStream = contentResolver.openInputStream(restoreFileUri);
 
                 if (restoreInputStream != null) {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
@@ -67,7 +70,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                     lineNumberReader.close();
 
                     // Need to recreate the InputStream and BufferedReader after closing LineNumberReader
-                    final InputStream inputStream = contentResolver.openInputStream(params[0]);
+                    final InputStream inputStream = contentResolver.openInputStream(restoreFileUri);
 
                     if (inputStream != null) {
                         // Only delete all existing data if we are sure we have an input stream
@@ -79,17 +82,25 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                         if (line != null) {
                             int i = 0;
 
-                            do {
-                                if (!isCancelled()) {
-                                    line = reader.readLine();
+                            if ("text/csv".equals(restoreFileType)) {
+                                headers = line.split(",");
 
-                                    if (!TextUtils.isEmpty(line)) {
-                                        restoreLine(line);
+                                do {
+                                    if (!isCancelled()) {
+                                        line = reader.readLine();
+                                        restoreLineCSV(headers, line);
+                                        publishProgress(++i, numLines);
                                     }
-
-                                    publishProgress(++i, numLines);
-                                }
-                            } while (line != null);
+                                } while (line != null);
+                            } else {
+                                do {
+                                    if (!isCancelled()) {
+                                        line = reader.readLine();
+                                        restoreLineJSON(line);
+                                        publishProgress(++i, numLines);
+                                    }
+                                } while (line != null);
+                            }
                         }
 
                         reader.close();
@@ -112,7 +123,44 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
     }
 
     @DebugLog
-    private void restoreLine(String line) {
+    private void restoreLineCSV(final String[] headers, final String line) {
+        if (TextUtils.isEmpty(line)) {
+            return;
+        }
+
+        ActiveAndroid.beginTransaction();
+
+        try {
+            final String[] values = line.split(",");
+
+            if (values.length > 0) {
+                final Day day = Day.createDayIfDoesNotExist(values[0]);
+
+                // Start at 1 to skip the first header column which is "Date" and not a food
+                for (int j = 1; j < headers.length; j++) {
+                    final int numServings = Integer.parseInt(values[j]);
+                    if (numServings > 0) {
+                        final Food food = getFoodByIdName(headers[j]);
+                        if (food != null) {
+                            DDServings.createServingsIfDoesNotExist(day, food, numServings);
+                        }
+                    }
+                }
+
+                ActiveAndroid.setTransactionSuccessful();
+            }
+        } catch (InvalidDateException e) {
+            Timber.e(e, "restoreLine: ");
+        } finally {
+            ActiveAndroid.endTransaction();
+        }
+    }
+    @DebugLog
+    private void restoreLineJSON(final String line) {
+        if (TextUtils.isEmpty(line)) {
+            return;
+        }
+
         ActiveAndroid.beginTransaction();
 
         try {

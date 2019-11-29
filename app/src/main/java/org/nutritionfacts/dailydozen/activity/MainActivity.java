@@ -323,7 +323,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public File getBackupFile() {
-        return new File(getFilesDir(), "dailydozen_backup.csv");
+        return new File(getFilesDir(), "dailydozen_backup.json");
     }
 
     private void shareBackupFile() {
