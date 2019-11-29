@@ -23,6 +23,10 @@ import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.widget.DateHeader;
 import org.nutritionfacts.dailydozen.widget.DateWeights;
 import org.nutritionfacts.dailydozen.widget.TweakBoxes;
+import org.nutritionfacts.dailydozen.widget.TweakGroupHeader;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -88,7 +92,17 @@ public class TweaksFragment extends Fragment {
 
                 final Context context = getContext();
 
+                final Set<String> headersAdded = new HashSet<>();
+
                 for (Tweak tweak : Tweak.getAllTweaks()) {
+                    final String tweakGroup = getTweakGroup(tweak);
+                    if (!headersAdded.contains(tweakGroup)) {
+                        final TweakGroupHeader groupHeader = new TweakGroupHeader(context);
+                        groupHeader.setTweakGroup(tweakGroup);
+                        vgTweaks.addView(groupHeader);
+                        headersAdded.add(tweakGroup);
+                    }
+
                     final TweakBoxes tweakBoxes = new TweakBoxes(context);
                     final boolean success = tweakBoxes.setDateAndTweak(day, tweak);
                     if (success) {
@@ -100,6 +114,10 @@ public class TweaksFragment extends Fragment {
                 Timber.e(e, "displayFormForDate: ");
             }
         }
+    }
+
+    private String getTweakGroup(final Tweak tweak) {
+        return tweak.getIdName().split(" ")[0];
     }
 
     private void initBackToTodayButton() {
