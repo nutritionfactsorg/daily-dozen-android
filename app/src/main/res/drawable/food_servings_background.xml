@@ -17,7 +17,7 @@
                 android:dashGap="6dp"
                 android:dashWidth="2dp"
                 android:width="1dp"
-                android:color="@color/gray_CCCCCC" />
+                android:color="@color/gray_D3D3D3" />
         </shape>
     </item>
 
