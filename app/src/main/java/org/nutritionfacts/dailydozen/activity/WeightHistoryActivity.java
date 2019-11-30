@@ -130,13 +130,7 @@ public class WeightHistoryActivity extends AppCompatActivity
         // Prevents the value for each bar from drawing over the labels at the top
         chart.setDrawValueAboveBar(false);
 
-        // TODO (slavick) needs to adapt to a close vertical range so the difference between days can be seen
-
-        // Even though we hide the left axis, we must set its max value so that full servings days reach the top
-//        chart.getAxisLeft().setAxisMinValue(0);
-//        chart.getAxisLeft().setAxisMaxValue(Common.MAX_SERVINGS);
         chart.getAxisLeft().setEnabled(false);
-
         chart.getAxisRight().setEnabled(false);
 
         // Disable all zooming and interacting with the chart

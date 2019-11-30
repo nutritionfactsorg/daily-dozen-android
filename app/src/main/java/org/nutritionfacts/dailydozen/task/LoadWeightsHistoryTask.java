@@ -27,8 +27,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import timber.log.Timber;
-
 public class LoadWeightsHistoryTask
         extends TaskWithContext<LoadHistoryTaskParams, Integer, LoadHistoryCompleteEvent> {
     private static final int MONTHS_IN_YEAR = 12;
@@ -90,12 +88,14 @@ public class LoadWeightsHistoryTask
             final Day day = history.get(i);
 
             Weights weightsOnDay = Weights.getWeightsOnDay(day);
-            Float averageWeight = null;
+            Float averageWeight;
+            Float barEntryVal = null;
 
             if (weightsOnDay != null) {
                 averageWeight = weightsOnDay.getAverageWeight();
                 if (averageWeight != null) {
                     previousTrend = calculateTrend(previousTrend, averageWeight);
+                    barEntryVal = averageWeight;
                 }
             }
 
@@ -105,7 +105,9 @@ public class LoadWeightsHistoryTask
 
                 xLabels.add(day.getDayOfWeek());
 
-                barEntries.add(new BarEntry(averageWeight != null ? averageWeight : 0, xIndex));
+                if (barEntryVal != null) {
+                    barEntries.add(new BarEntry(barEntryVal, xIndex));
+                }
 
                 final Entry lineEntry = new Entry(previousTrend, xIndex);
                 // Here we set the optional data field on the Entry class. This gives the user the
