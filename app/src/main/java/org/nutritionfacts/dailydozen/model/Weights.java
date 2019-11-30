@@ -94,6 +94,10 @@ public class Weights extends TruncatableModel {
         return getAverageWeightForDays(Day.getDaysInYearAndMonth(year, monthOneBased));
     }
 
+    public static float getAverageWeightInYear(final int year) {
+        return getAverageWeightForDays(Day.getDaysInYear(year));
+    }
+
     private static float getAverageWeightForDays(final List<Day> days) {
         if (days == null || days.isEmpty()) {
             return 0;

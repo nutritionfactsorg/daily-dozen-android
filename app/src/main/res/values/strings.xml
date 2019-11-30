@@ -263,6 +263,7 @@
     <string name="nightly_fast">Fast After 7:00 pm</string>
     <string name="nightly_sleep">Get Sufficient Sleep</string>
     <string name="nightly_trendelenburg">Experiment with Mild Trendelenburg</string>
+    <string name="debug_generate_weight_data">Generate Weight Data</string>
 
     <string-array name="tweak_names" translatable="false">
         <item>@string/meal_water</item>

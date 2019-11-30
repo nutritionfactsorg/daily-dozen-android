@@ -160,44 +160,43 @@ public class LoadWeightsHistoryTask
     }
 
     private LoadHistoryCompleteEvent getChartDataInYears() {
-//        final Day firstDay = Day.getFirstDay();
-//        final int firstYear = firstDay.getYear();
-//        Timber.d("getChartDataInYears: firstYear [%s]", firstYear);
-//
-//        final int currentYear = DateUtil.getCurrentYear();
-//        Timber.d("getChartDataInYears: currentYear [%s]", currentYear);
-//
-//        final int numYears = currentYear - firstYear;
-//        int i = 0;
-//
-//        int year = firstYear;
-//
-//        final List<String> xLabels = new ArrayList<>();
-//        final List<Entry> lineEntries = new ArrayList<>();
-//
-//        while (year <= currentYear) {
-//            if (isCancelled()) {
-//                break;
-//            }
-//
-//            final int xIndex = xLabels.size();
-//
-//            xLabels.add(String.valueOf(year));
-//
-//            final float averageTotalServingsInYear = DDServings.getAverageTotalServingsInYear(year);
-//
-//            Timber.d("getChartDataInYears: year [%s], average [%s]",
-//                    year, averageTotalServingsInYear);
-//
-//            lineEntries.add(new Entry(averageTotalServingsInYear, xIndex));
-//
-//            year++;
-//
-//            publishProgress(i++, numYears);
-//        }
-//
-//        return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.YEARS);
-        return null;
+        final Day firstDay = Day.getFirstDay();
+        final int firstYear = firstDay.getYear();
+        Timber.d("getChartDataInYears: firstYear [%s]", firstYear);
+
+        final int currentYear = DateUtil.getCurrentYear();
+        Timber.d("getChartDataInYears: currentYear [%s]", currentYear);
+
+        final int numYears = currentYear - firstYear;
+        int i = 0;
+
+        int year = firstYear;
+
+        final List<String> xLabels = new ArrayList<>();
+        final List<Entry> lineEntries = new ArrayList<>();
+
+        while (year <= currentYear) {
+            if (isCancelled()) {
+                break;
+            }
+
+            final int xIndex = xLabels.size();
+
+            xLabels.add(String.valueOf(year));
+
+            final float averageWeightInYear = Weights.getAverageWeightInYear(year);
+
+            Timber.d("getChartDataInYears: year [%s], average weight [%s]",
+                    year, averageWeightInYear);
+
+            lineEntries.add(new Entry(averageWeightInYear, xIndex));
+
+            year++;
+
+            publishProgress(i++, numYears);
+        }
+
+        return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.YEARS);
     }
 
     private LoadHistoryCompleteEvent createCompleteEvent(final CombinedData combinedData,
