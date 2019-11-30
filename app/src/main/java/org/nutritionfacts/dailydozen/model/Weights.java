@@ -48,6 +48,17 @@ public class Weights extends TruncatableModel {
         this.eveningWeight = eveningWeight;
     }
 
+    public Float getAverageWeight() {
+        if (morningWeight != 0 && eveningWeight != 0) {
+            return (morningWeight + eveningWeight) / 2;
+        } else if (morningWeight != 0) {
+            return morningWeight;
+        } else if (eveningWeight != 0) {
+            return eveningWeight;
+        }
+        return null;
+    }
+
     public static Weights createWeightsIfDoesNotExist(final Day day, float morningWeight, float eveningWeight) {
         Weights weights = getWeightsOnDay(day);
 

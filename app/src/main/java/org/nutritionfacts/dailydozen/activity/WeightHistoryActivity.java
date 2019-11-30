@@ -22,7 +22,7 @@ import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
 import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
-import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
+import org.nutritionfacts.dailydozen.task.LoadWeightsHistoryTask;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 import org.nutritionfacts.dailydozen.view.TimeRangeSelector;
 import org.nutritionfacts.dailydozen.view.TimeScaleSelector;
@@ -81,8 +81,7 @@ public class WeightHistoryActivity extends AppCompatActivity
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
 
-            // TODO (slavick)  
-            new LoadServingsHistoryTask(this).execute(new LoadHistoryTaskParams(
+            new LoadWeightsHistoryTask(this).execute(new LoadHistoryTaskParams(
                     timeScaleSelector.getSelectedTimeScale(),
                     timeRangeSelector.getSelectedYear(),
                     timeRangeSelector.getSelectedMonth()));
@@ -131,9 +130,11 @@ public class WeightHistoryActivity extends AppCompatActivity
         // Prevents the value for each bar from drawing over the labels at the top
         chart.setDrawValueAboveBar(false);
 
+        // TODO (slavick) needs to adapt to a close vertical range so the difference between days can be seen
+
         // Even though we hide the left axis, we must set its max value so that full servings days reach the top
-        chart.getAxisLeft().setAxisMinValue(0);
-        chart.getAxisLeft().setAxisMaxValue(Common.MAX_SERVINGS);
+//        chart.getAxisLeft().setAxisMinValue(0);
+//        chart.getAxisLeft().setAxisMaxValue(Common.MAX_SERVINGS);
         chart.getAxisLeft().setEnabled(false);
 
         chart.getAxisRight().setEnabled(false);

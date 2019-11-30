@@ -93,6 +93,7 @@
     <string name="debug_show_reminder_notification" translatable="false">Show Reminder Notification</string>
     <string name="task_generating_random_data">Generating random data</string>
     <string name="task_loading_servings_history_title">Loading Servings History</string>
+    <string name="task_loading_weights_history_title">Loading Weights History</string>
     <string name="time_scale">Time Scale</string>
     <string name="history_to_generate">History to Generate</string>
     <string name="date_weight_morning" translatable="false">{fa-sun-o 22dp @color/gray_dark}</string>
