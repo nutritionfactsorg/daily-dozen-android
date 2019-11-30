@@ -27,6 +27,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import timber.log.Timber;
+
 public class LoadWeightsHistoryTask
         extends TaskWithContext<LoadHistoryTaskParams, Integer, LoadHistoryCompleteEvent> {
     private static final int MONTHS_IN_YEAR = 12;
@@ -123,39 +125,38 @@ public class LoadWeightsHistoryTask
     }
 
     private LoadHistoryCompleteEvent getChartDataInMonths(final LoadHistoryTaskParams inputParams) {
-//        int i = 0;
-//
-//        int year = inputParams.getSelectedYear();
-//        int monthOneBased = 1;
-//
-//        final List<String> xLabels = new ArrayList<>();
-//        final List<Entry> lineEntries = new ArrayList<>();
-//
-//        while (monthOneBased <= MONTHS_IN_YEAR) {
-//            if (isCancelled()) {
-//                break;
-//            }
-//
-//            final float averageTotalServingsInMonth = DDServings.getAverageTotalServingsInMonth(year, monthOneBased);
-//
-//            Timber.d("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
-//                    year, monthOneBased, averageTotalServingsInMonth);
-//
-//            if (averageTotalServingsInMonth > 0) {
-//                final int xIndex = xLabels.size();
-//
-//                xLabels.add(DateUtil.getShortNameOfMonth(monthOneBased));
-//
-//                lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
-//            }
-//
-//            monthOneBased++;
-//
-//            publishProgress(i++, MONTHS_IN_YEAR);
-//        }
-//
-//        return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.MONTHS);
-        return null;
+        int i = 0;
+
+        int year = inputParams.getSelectedYear();
+        int monthOneBased = 1;
+
+        final List<String> xLabels = new ArrayList<>();
+        final List<Entry> lineEntries = new ArrayList<>();
+
+        while (monthOneBased <= MONTHS_IN_YEAR) {
+            if (isCancelled()) {
+                break;
+            }
+
+            final float averageWeightInMonth = Weights.getAverageWeightInMonth(year, monthOneBased);
+
+            Timber.d("getChartDataInMonths: year [%s], monthOneBased [%s], average weight [%s]",
+                    year, monthOneBased, averageWeightInMonth);
+
+            if (averageWeightInMonth > 0) {
+                final int xIndex = xLabels.size();
+
+                xLabels.add(DateUtil.getShortNameOfMonth(monthOneBased));
+
+                lineEntries.add(new Entry(averageWeightInMonth, xIndex));
+            }
+
+            monthOneBased++;
+
+            publishProgress(i++, MONTHS_IN_YEAR);
+        }
+
+        return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.MONTHS);
     }
 
     private LoadHistoryCompleteEvent getChartDataInYears() {
