@@ -293,7 +293,7 @@ public class LoadWeightsHistoryTask
         private DecimalFormat decimalFormat;
 
         BarChartValueFormatter() {
-            decimalFormat = new DecimalFormat("#");
+            decimalFormat = new DecimalFormat("#.0");
         }
 
         @Override
