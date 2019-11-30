@@ -21,6 +21,7 @@ import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.TweakHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.TweakServingsHistoryActivity;
+import org.nutritionfacts.dailydozen.activity.WeightHistoryActivity;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -180,7 +181,7 @@ public class Common {
     }
 
     public static void openWeightHistory(final Context context) {
-        showToast(context, "not implemented yet");
+        startSelectableDateActivity(context, new Intent(context, WeightHistoryActivity.class));
     }
 
     private static void startSelectableDateActivity(final Context context, final Intent intent) {
