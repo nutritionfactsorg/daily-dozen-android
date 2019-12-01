@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 
 import butterknife.BindView;
@@ -42,17 +43,17 @@ public class TweakGroupHeader extends LinearLayout {
 
     public void setTweakGroup(final String tweakGroup) {
         switch (tweakGroup) {
-            case "meal":
+            case Common.MEAL:
                 tvTitle.setText(R.string.tweak_group_meal);
                 break;
-            case "daily":
+            case Common.DAILY:
                 tvTitle.setText(R.string.tweak_group_daily);
                 break;
-            case "dailydose":
+            case Common.DAILY_DOSE:
                 vIndent.setVisibility(VISIBLE);
                 tvTitle.setText(R.string.tweak_group_dailydoses);
                 break;
-            case "nightly":
+            case Common.NIGHTLY:
                 tvTitle.setText(R.string.tweak_group_nightly);
                 break;
         }

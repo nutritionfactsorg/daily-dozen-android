@@ -43,6 +43,11 @@ public class Common {
     public static final String VITAMIN_B12 = "Vitamin B12";
     public static final String OMEGA3 = "Omega 3";
 
+    public static final String MEAL = "meal";
+    public static final String DAILY_DOSE = "dailydose";
+    public static final String DAILY = "daily";
+    public static final String NIGHTLY = "nightly";
+
     private static boolean userIsBeingAsked;
 
     private Common() {

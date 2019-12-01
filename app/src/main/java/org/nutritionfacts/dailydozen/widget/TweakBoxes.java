@@ -68,7 +68,7 @@ public class TweakBoxes extends LinearLayout {
             initCheckboxes(servings);
             initTweakStreak(servings);
 
-            if (tweak.getTweakGroup().equals("dailydose")) {
+            if (tweak.getTweakGroup().equals(Common.DAILY_DOSE)) {
                 vIndent.setVisibility(VISIBLE);
             }
 

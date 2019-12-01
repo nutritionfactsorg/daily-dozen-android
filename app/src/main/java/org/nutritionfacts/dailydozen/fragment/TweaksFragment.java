@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.TweakServingsChangedEvent;
@@ -97,11 +98,11 @@ public class TweaksFragment extends Fragment {
                 for (Tweak tweak : Tweak.getAllTweaks()) {
                     final String tweakGroup = tweak.getTweakGroup();
                     if (!headersAdded.contains(tweakGroup)) {
-                        if (tweakGroup.equals("dailydose")) {
+                        if (tweakGroup.equals(Common.DAILY_DOSE)) {
                             final TweakGroupHeader groupHeader = new TweakGroupHeader(context);
-                            groupHeader.setTweakGroup("daily");
+                            groupHeader.setTweakGroup(Common.DAILY);
                             vgTweaks.addView(groupHeader);
-                            headersAdded.add("daily");
+                            headersAdded.add(Common.DAILY);
                         }
 
                         final TweakGroupHeader groupHeader = new TweakGroupHeader(context);
