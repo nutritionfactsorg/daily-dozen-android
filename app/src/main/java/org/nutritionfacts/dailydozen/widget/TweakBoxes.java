@@ -25,6 +25,8 @@ public class TweakBoxes extends LinearLayout {
     private Day day;
     private Tweak tweak;
 
+    @BindView(R.id.tweak_indent)
+    protected View vIndent;
     @BindView(R.id.tweak_icon)
     protected ImageView ivIcon;
     @BindView(R.id.tweak_name)
@@ -65,6 +67,10 @@ public class TweakBoxes extends LinearLayout {
             final TweakServings servings = getTweakServings();
             initCheckboxes(servings);
             initTweakStreak(servings);
+
+            if (tweak.getTweakGroup().equals("dailydose")) {
+                vIndent.setVisibility(VISIBLE);
+            }
 
             return true;
         } else {

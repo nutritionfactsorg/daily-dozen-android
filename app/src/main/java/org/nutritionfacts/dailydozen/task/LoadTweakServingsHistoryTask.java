@@ -226,7 +226,7 @@ public class LoadTweakServingsHistoryTask
     }
 
     private BarData getBarData(List<String> xVals, List<BarEntry> barEntries) {
-        final BarDataSet dataSet = new BarDataSet(barEntries, getContext().getString(R.string.servings));
+        final BarDataSet dataSet = new BarDataSet(barEntries, getContext().getString(R.string.tweaks));
 
         dataSet.setColor(ContextCompat.getColor(getContext(), R.color.colorPrimary));
         dataSet.setValueTextColor(ContextCompat.getColor(getContext(), android.R.color.white));

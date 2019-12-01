@@ -95,8 +95,15 @@ public class TweaksFragment extends Fragment {
                 final Set<String> headersAdded = new HashSet<>();
 
                 for (Tweak tweak : Tweak.getAllTweaks()) {
-                    final String tweakGroup = getTweakGroup(tweak);
+                    final String tweakGroup = tweak.getTweakGroup();
                     if (!headersAdded.contains(tweakGroup)) {
+                        if (tweakGroup.equals("dailydose")) {
+                            final TweakGroupHeader groupHeader = new TweakGroupHeader(context);
+                            groupHeader.setTweakGroup("daily");
+                            vgTweaks.addView(groupHeader);
+                            headersAdded.add("daily");
+                        }
+
                         final TweakGroupHeader groupHeader = new TweakGroupHeader(context);
                         groupHeader.setTweakGroup(tweakGroup);
                         vgTweaks.addView(groupHeader);
@@ -114,10 +121,6 @@ public class TweaksFragment extends Fragment {
                 Timber.e(e, "displayFormForDate: ");
             }
         }
-    }
-
-    private String getTweakGroup(final Tweak tweak) {
-        return tweak.getIdName().split(" ")[0];
     }
 
     private void initBackToTodayButton() {

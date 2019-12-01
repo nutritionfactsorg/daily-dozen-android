@@ -152,6 +152,7 @@
     <string name="weight">Weight</string>
     <string name="tweak_group_meal">At Each Meal</string>
     <string name="tweak_group_daily">Every Day</string>
+    <string name="tweak_group_dailydoses">Take your daily doses</string>
     <string name="tweak_group_nightly">Every Night</string>
 
     <!--
@@ -224,12 +225,12 @@
         <item>meal vinegar</item>
         <item>meal undistracted</item>
         <item>meal twenty minutes</item>
-        <item>daily dose black cumin</item>
-        <item>daily dose garlic</item>
-        <item>daily dose ginger</item>
-        <item>daily dose nutritional yeast</item>
-        <item>daily dose cumin</item>
-        <item>daily dose green tea</item>
+        <item>dailydose black cumin</item>
+        <item>dailydose garlic</item>
+        <item>dailydose ginger</item>
+        <item>dailydose nutritional yeast</item>
+        <item>dailydose cumin</item>
+        <item>dailydose green tea</item>
         <item>daily hydrate</item>
         <item>daily deflour diet</item>
         <item>daily front load</item>
@@ -264,6 +265,7 @@
     <string name="nightly_sleep">Get Sufficient Sleep</string>
     <string name="nightly_trendelenburg">Experiment with Mild Trendelenburg</string>
     <string name="debug_generate_weight_data">Generate Weight Data</string>
+    <string name="average_weight_on_day">Average weight on day</string>
 
     <string-array name="tweak_names" translatable="false">
         <item>@string/meal_water</item>

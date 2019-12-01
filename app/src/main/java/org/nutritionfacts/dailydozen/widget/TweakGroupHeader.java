@@ -15,6 +15,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class TweakGroupHeader extends LinearLayout {
+    @BindView(R.id.tweak_group_indent)
+    protected View vIndent;
     @BindView(R.id.tweak_group_title)
     protected TextView tvTitle;
 
@@ -45,6 +47,10 @@ public class TweakGroupHeader extends LinearLayout {
                 break;
             case "daily":
                 tvTitle.setText(R.string.tweak_group_daily);
+                break;
+            case "dailydose":
+                vIndent.setVisibility(VISIBLE);
+                tvTitle.setText(R.string.tweak_group_dailydoses);
                 break;
             case "nightly":
                 tvTitle.setText(R.string.tweak_group_nightly);

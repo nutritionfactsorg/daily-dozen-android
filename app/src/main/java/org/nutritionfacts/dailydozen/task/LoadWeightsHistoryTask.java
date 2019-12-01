@@ -236,7 +236,7 @@ public class LoadWeightsHistoryTask
     }
 
     private BarData getBarData(List<String> xVals, List<BarEntry> barEntries) {
-        final BarDataSet dataSet = new BarDataSet(barEntries, getContext().getString(R.string.servings));
+        final BarDataSet dataSet = new BarDataSet(barEntries, getContext().getString(R.string.average_weight_on_day));
 
         dataSet.setColor(ContextCompat.getColor(getContext(), R.color.colorPrimary));
         dataSet.setValueTextColor(ContextCompat.getColor(getContext(), android.R.color.white));

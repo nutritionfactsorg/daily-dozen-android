@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/food_servings_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
-    android:orientation="vertical">
+    android:background="@drawable/food_servings_background"
+    android:orientation="horizontal">
 
-<TextView
+    <View
+        android:id="@+id/tweak_group_indent"
+        android:background="@color/green_faint"
+        android:visibility="gone"
+        android:layout_width="12dp"
+        android:layout_height="match_parent" />
+
+    <TextView
         android:id="@+id/tweak_group_title"
         style="@style/PrimaryText"
+        android:padding="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
