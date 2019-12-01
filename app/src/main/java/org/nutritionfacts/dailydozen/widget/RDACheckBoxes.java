@@ -62,10 +62,7 @@ public class RDACheckBoxes extends LinearLayout {
     }
 
     public void setServings(final Servings servings) {
-        setServings(servings != null ? servings.getServings() : 0);
-    }
-
-    public void setServings(final int numServings) {
+        final int numServings = servings != null ? servings.getServings() : 0;
         checkBoxes = new ArrayList<>();
         createCheckBox(checkBoxes, numServings, rda.getRecommendedAmount());
 
