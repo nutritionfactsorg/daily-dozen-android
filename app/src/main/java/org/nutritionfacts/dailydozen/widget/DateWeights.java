@@ -69,10 +69,10 @@ public class DateWeights extends LinearLayout {
         final Weights weightsOnDay = Weights.getWeightsOnDay(day);
         if (weightsOnDay != null) {
             if (weightsOnDay.getMorningWeight() > 0) {
-                setMorningWeight(weightsOnDay.getMorningWeight());
+                tvMorningWeight.setText(String.valueOf(weightsOnDay.getMorningWeight()));
             }
             if (weightsOnDay.getEveningWeight() > 0) {
-                setEveningWeight(weightsOnDay.getEveningWeight());
+                tvEveningWeight.setText(String.valueOf(weightsOnDay.getEveningWeight()));
             }
         }
 
@@ -168,18 +168,6 @@ public class DateWeights extends LinearLayout {
             et.clearFocus();
         }
         return false;
-    }
-
-    public void setMorningWeight(final float weight) {
-        if (weight > 0) {
-            tvMorningWeight.setText(String.valueOf(weight));
-        }
-    }
-
-    public void setEveningWeight(final float weight) {
-        if (weight > 0) {
-            tvEveningWeight.setText(String.valueOf(weight));
-        }
     }
 
     private void updateWeights() {
