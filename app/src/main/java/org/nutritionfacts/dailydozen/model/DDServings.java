@@ -56,8 +56,6 @@ public class DDServings extends TruncatableModel implements Servings {
 
     public void setServings(int servings) {
         this.servings = servings;
-
-        recalculateStreak();
     }
 
     public void recalculateStreak() {
