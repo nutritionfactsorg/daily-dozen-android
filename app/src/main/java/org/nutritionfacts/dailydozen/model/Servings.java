@@ -9,6 +9,7 @@ import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 import com.activeandroid.util.SQLiteUtils;
 
+import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
@@ -21,7 +22,7 @@ import timber.log.Timber;
 @Table(name = "servings")
 public class Servings extends TruncatableModel {
     @Column(name = "date_id")
-    private Day day;
+    private static Day day;
 
     @Column(name = "food_id")
     private Food food;
@@ -212,5 +213,19 @@ public class Servings extends TruncatableModel {
 
     public static boolean isEmpty() {
         return new Select().from(Servings.class).count() == 0;
+    }
+    
+    public static int getCorrectNotificationReminder() {
+        int numberOfServings = Servings.getTotalServingsOnDate(day);
+
+        if (numberOfServings >= 20) {
+            return R.string.daily_reminder_text_3;
+        }
+        if (numberOfServings >= 10) {
+            return R.string.daily_reminder_text_2;
+        }
+        else {
+            return R.string.daily_reminder_text_1;
+        }
     }
 }
