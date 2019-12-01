@@ -89,7 +89,7 @@ public class TweaksFragment extends Fragment {
 
                 initBackToTodayButton();
 
-                updateHeader();
+                dateHeader.setServings(TweakServings.getTotalTweakServingsOnDate(day));
 
                 dateWeights.setDay(day);
                 Bus.register(dateWeights);
@@ -152,14 +152,11 @@ public class TweaksFragment extends Fragment {
         dateWeights = null;
     }
 
-    private void updateHeader() {
-        dateHeader.setServings(TweakServings.getTotalTweakServingsOnDate(day));
-    }
-
     @Subscribe
     public void onEvent(TweakServingsChangedEvent event) {
         if (event.getDateString().equals(day.getDateString())) {
-            updateHeader();
+            Timber.d("onEvent(TweakServingsChangedEvent): dateString [%s] tweakName [%s]", event.getDateString(), event.getTweakName());
+            dateHeader.setServings(TweakServings.getTotalTweakServingsOnDate(day));
         }
     }
 }

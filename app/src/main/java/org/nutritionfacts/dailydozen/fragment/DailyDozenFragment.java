@@ -92,7 +92,7 @@ public class DailyDozenFragment extends Fragment {
 
                 initBackToTodayButton();
 
-                updateHeader();
+                dateHeader.setServings(DDServings.getTotalServingsOnDate(day));
 
                 final Context context = getContext();
                 boolean addedSupplementDivider = false;
@@ -144,7 +144,8 @@ public class DailyDozenFragment extends Fragment {
         if (!event.getIsVitamin() && event.getDateString().equals(day.getDateString())) {
             final int servingsOnDate = DDServings.getTotalServingsOnDate(day);
 
-            updateHeader(servingsOnDate);
+            Timber.d("onEvent(FoodServingsChangedEvent): dateString [%s] foodName [%s]", event.getDateString(), event.getFoodName());
+            dateHeader.setServings(servingsOnDate);
 
             if (servingsOnDate == Common.MAX_SERVINGS) {
                 showExplodingStarAnimation();
@@ -188,13 +189,5 @@ public class DailyDozenFragment extends Fragment {
 
             prefs.setUserHasSeenFirstStarExplosion();
         }
-    }
-
-    private void updateHeader() {
-        updateHeader(DDServings.getTotalServingsOnDate(day));
-    }
-
-    private void updateHeader(final int numServings) {
-        dateHeader.setServings(numServings);
     }
 }
