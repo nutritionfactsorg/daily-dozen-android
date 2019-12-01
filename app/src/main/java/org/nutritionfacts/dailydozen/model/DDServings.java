@@ -107,10 +107,13 @@ public class DDServings extends TruncatableModel implements Servings {
 
         if (servings == null) {
             servings = new DDServings(day, food);
-        }
 
-        servings.setServings(numServings);
-        servings.save();
+            if (numServings > 0) {
+                servings.setServings(numServings);
+            }
+
+            servings.save();
+        }
 
         return servings;
     }
