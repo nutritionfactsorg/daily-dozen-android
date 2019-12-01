@@ -232,6 +232,7 @@
     </string-array>
 
     <string-array name="food_info_types_beans">
+        <item>Baked beans</item>
         <item>Black beans</item>
         <item>Black-eyed peas</item>
         <item>Butter beans</item>
@@ -693,6 +694,7 @@
     <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
 
     <string-array name="food_videos_beans" translatable="false">
+        <item>baked-beans</item>
         <item>black-beans</item>
         <item/>
         <item/>
@@ -848,7 +850,7 @@
         <item>mustard-powder</item>
         <item>nutmeg</item>
         <item>oregano</item>
-        <item/>
+        <item>paprika</item>
         <item>parsley</item>
         <item>pepper</item>
         <item>peppermint</item>
@@ -882,7 +884,7 @@
         <item>hibiscus-tea</item>
         <item/>
         <item>jasmine-tea</item>
-        <item/>
+        <item>jasmine-tea</item>
         <item>matcha</item>
         <item>oolong-tea</item>
         <item/>
