@@ -91,6 +91,9 @@ public class TweaksFragment extends Fragment {
 
                 updateHeader();
 
+                dateWeights.setDay(day);
+                Bus.register(dateWeights);
+
                 final Context context = getContext();
 
                 final Set<String> headersAdded = new HashSet<>();
@@ -151,8 +154,6 @@ public class TweaksFragment extends Fragment {
 
     private void updateHeader() {
         dateHeader.setServings(TweakServings.getTotalTweakServingsOnDate(day));
-        dateWeights.setDay(day);
-        Bus.register(dateWeights);
     }
 
     @Subscribe
