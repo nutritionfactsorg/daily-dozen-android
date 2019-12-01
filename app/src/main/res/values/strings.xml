@@ -102,6 +102,9 @@
     <string name="format_num_days" formatted="false">%d days</string>
     <string name="daily_reminder_title">Daily Dozen Reminder</string>
     <string name="daily_reminder_text">Update your servings for today</string>
+    <string name="daily_reminder_text_3">Almost at all 24, keep up the good work!</string>
+    <string name="daily_reminder_text_2">Update your servings for today</string>
+    <string name="daily_reminder_text_1">Looks like you haven\'t updated your servings for today yet</string>
     <string name="daily_reminder_settings">Daily Reminder Settings</string>
     <string name="enable_daily_reminder">Enable Daily Reminder</string>
     <string name="remind_me_at">Remind me at</string>
