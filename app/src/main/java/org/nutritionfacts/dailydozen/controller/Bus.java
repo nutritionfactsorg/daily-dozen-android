@@ -20,11 +20,17 @@ import org.nutritionfacts.dailydozen.model.Tweak;
 
 public class Bus {
     public static void register(Object object) {
-        EventBus.getDefault().register(object);
+        final EventBus bus = EventBus.getDefault();
+        if (!bus.isRegistered(object)) {
+            bus.register(object);
+        }
     }
 
     public static void unregister(Object object) {
-        EventBus.getDefault().unregister(object);
+        final EventBus bus = EventBus.getDefault();
+        if (bus.isRegistered(object)) {
+            bus.unregister(object);
+        }
     }
 
     private static void post(BaseEvent event) {
