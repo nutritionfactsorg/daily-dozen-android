@@ -44,10 +44,6 @@ public class Tweak extends TruncatableModel implements RDA {
         return recommendedAmount;
     }
 
-    public String getTweakGroup() {
-        return idName.split(" ")[0];
-    }
-
     public Tweak() {
     }
 

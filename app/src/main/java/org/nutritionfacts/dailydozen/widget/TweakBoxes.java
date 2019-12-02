@@ -68,13 +68,27 @@ public class TweakBoxes extends LinearLayout {
             initCheckboxes(servings);
             initTweakStreak(servings);
 
-            if (tweak.getTweakGroup().equals(Common.DAILY_DOSE)) {
+            if (isDailyDoseTweak(tweak.getIdName())) {
                 vIndent.setVisibility(VISIBLE);
             }
 
             return true;
         } else {
             return false;
+        }
+    }
+
+    private boolean isDailyDoseTweak(final String tweakIdName) {
+        switch (tweakIdName) {
+            case "Daily Black Cumin":
+            case "Daily Garlic":
+            case "Daily Ginger":
+            case "Daily NutriYeast":
+            case "Daily Cumin":
+            case "Daily Green Tea":
+                return true;
+            default:
+                return false;
         }
     }
 

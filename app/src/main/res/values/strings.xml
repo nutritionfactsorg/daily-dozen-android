@@ -220,27 +220,27 @@
     </integer-array>
 
     <string-array name="tweak_id_names" translatable="false">
-        <item>meal water</item>
-        <item>meal negative calories</item>
-        <item>meal vinegar</item>
-        <item>meal undistracted</item>
-        <item>meal twenty minutes</item>
-        <item>dailydose black cumin</item>
-        <item>dailydose garlic</item>
-        <item>dailydose ginger</item>
-        <item>dailydose nutritional yeast</item>
-        <item>dailydose cumin</item>
-        <item>dailydose green tea</item>
-        <item>daily hydrate</item>
-        <item>daily deflour diet</item>
-        <item>daily front load</item>
-        <item>daily time restrict</item>
-        <item>daily exercise timing</item>
-        <item>daily weigh twice</item>
-        <item>daily complete intentions</item>
-        <item>nightly fast</item>
-        <item>nightly sleep</item>
-        <item>nightly trendelenburg</item>
+        <item>Meal Water</item>
+        <item>Meal NegCal</item>
+        <item>Meal Vinegar</item>
+        <item>Meal Undistracted</item>
+        <item>Meal 20 Minutes</item>
+        <item>Daily Black Cumin</item>
+        <item>Daily Garlic</item>
+        <item>Daily Ginger</item>
+        <item>Daily NutriYeast</item>
+        <item>Daily Cumin</item>
+        <item>Daily Green Tea</item>
+        <item>Daily Hydrate</item>
+        <item>Daily Deflour Diet</item>
+        <item>Daily Front-Load</item>
+        <item>Daily Time-Restrict</item>
+        <item>Exercise Timing</item>
+        <item>Weigh Twice</item>
+        <item>Complete Intentions</item>
+        <item>Nightly Fast</item>
+        <item>Nightly Sleep</item>
+        <item>Nightly Trendelenburg</item>
     </string-array>
 
     <string name="meal_water">Preload with Water</string>

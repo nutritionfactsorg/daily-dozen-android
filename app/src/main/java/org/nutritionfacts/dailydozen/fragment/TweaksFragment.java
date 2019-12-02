@@ -26,9 +26,6 @@ import org.nutritionfacts.dailydozen.widget.DateWeights;
 import org.nutritionfacts.dailydozen.widget.TweakBoxes;
 import org.nutritionfacts.dailydozen.widget.TweakGroupHeader;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -96,22 +93,20 @@ public class TweaksFragment extends Fragment {
 
                 final Context context = getContext();
 
-                final Set<String> headersAdded = new HashSet<>();
-
                 for (Tweak tweak : Tweak.getAllTweaks()) {
-                    final String tweakGroup = tweak.getTweakGroup();
-                    if (!headersAdded.contains(tweakGroup)) {
-                        if (tweakGroup.equals(Common.DAILY_DOSE)) {
-                            final TweakGroupHeader groupHeader = new TweakGroupHeader(context);
-                            groupHeader.setTweakGroup(Common.DAILY);
-                            vgTweaks.addView(groupHeader);
-                            headersAdded.add(Common.DAILY);
-                        }
-
-                        final TweakGroupHeader groupHeader = new TweakGroupHeader(context);
-                        groupHeader.setTweakGroup(tweakGroup);
-                        vgTweaks.addView(groupHeader);
-                        headersAdded.add(tweakGroup);
+                    switch (tweak.getIdName()) {
+                        case "Meal Water":
+                            vgTweaks.addView(createGroupHeader(context, Common.MEAL));
+                            break;
+                        case "Daily Black Cumin":
+                            vgTweaks.addView(createGroupHeader(context, Common.DAILY));
+                            vgTweaks.addView(createGroupHeader(context, Common.DAILY_DOSE));
+                            break;
+                        case "Nightly Fast":
+                            vgTweaks.addView(createGroupHeader(context, Common.NIGHTLY));
+                            break;
+                        default:
+                            break;
                     }
 
                     final TweakBoxes tweakBoxes = new TweakBoxes(context);
@@ -125,6 +120,12 @@ public class TweaksFragment extends Fragment {
                 Timber.e(e, "displayFormForDate: ");
             }
         }
+    }
+
+    private TweakGroupHeader createGroupHeader(final Context context, final String group) {
+        final TweakGroupHeader groupHeader = new TweakGroupHeader(context);
+        groupHeader.setTweakGroup(group);
+        return groupHeader;
     }
 
     private void initBackToTodayButton() {
