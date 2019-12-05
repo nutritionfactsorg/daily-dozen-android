@@ -9,12 +9,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.model.Food;
+import org.nutritionfacts.dailydozen.model.Tweak;
 
-public abstract class FoodLoadingActivity extends AppCompatActivity {
+public abstract class InfoActivity extends AppCompatActivity {
     private Food food;
+    private Tweak tweak;
 
     public Food getFood() {
         return food;
+    }
+
+    public Tweak getTweak() {
+        return tweak;
     }
 
     @Override
@@ -23,9 +29,9 @@ public abstract class FoodLoadingActivity extends AppCompatActivity {
 
         initActionBar();
 
-        loadFoodFromIntent();
+        loadFoodOrTweakFromIntent();
 
-        if (food == null) {
+        if (food == null && tweak == null) {
             finish();
         }
     }
@@ -48,13 +54,18 @@ public abstract class FoodLoadingActivity extends AppCompatActivity {
         }
     }
 
-    private void loadFoodFromIntent() {
+    private void loadFoodOrTweakFromIntent() {
         final Intent intent = getIntent();
         if (intent != null) {
             food = Food.getById(intent.getLongExtra(Args.FOOD_ID, -1));
-
             if (food != null) {
                 setTitle(food.getName());
+                return;
+            }
+
+            tweak = Tweak.getById(intent.getLongExtra(Args.TWEAK_ID, -1));
+            if (tweak != null) {
+                setTitle(tweak.getName());
             }
         }
     }

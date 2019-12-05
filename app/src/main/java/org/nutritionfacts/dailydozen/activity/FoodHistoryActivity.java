@@ -35,7 +35,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import hirondelle.date4j.DateTime;
 
-public class FoodHistoryActivity extends FoodLoadingActivity {
+public class FoodHistoryActivity extends InfoActivity {
     @BindView(R.id.calendar_legend)
     protected ViewGroup vgLegend;
     @BindView(R.id.calendarView)

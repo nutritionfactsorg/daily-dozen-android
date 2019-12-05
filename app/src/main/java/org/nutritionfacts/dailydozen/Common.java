@@ -20,6 +20,7 @@ import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.TweakHistoryActivity;
+import org.nutritionfacts.dailydozen.activity.TweakInfoActivity;
 import org.nutritionfacts.dailydozen.activity.TweakServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.WeightHistoryActivity;
 import org.nutritionfacts.dailydozen.model.DDServings;
@@ -163,6 +164,10 @@ public class Common {
         } else {
             context.startActivity(createFoodIntent(context, FoodInfoActivity.class, food));
         }
+    }
+
+    public static void openTweakInfo(final Context context, final Tweak tweak) {
+        context.startActivity(createTweakIntent(context, TweakInfoActivity.class, tweak));
     }
 
     public static boolean isSupplement(final Food food) {

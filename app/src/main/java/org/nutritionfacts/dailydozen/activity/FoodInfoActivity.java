@@ -27,7 +27,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class FoodInfoActivity extends FoodLoadingActivity {
+public class FoodInfoActivity extends InfoActivity {
     @BindView(R.id.food_info_image)
     protected ImageView ivFood;
     @BindView(R.id.change_units_container)

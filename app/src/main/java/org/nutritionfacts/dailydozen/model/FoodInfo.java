@@ -20,6 +20,7 @@ public class FoodInfo {
     private static Map<String, Integer> foodImages;
     private static Map<String, Integer> foodIcons;
     private static Map<String, Integer> tweakIcons;
+    private static Map<String, String> tweakTexts;
     private static Map<String, List<String>> servingSizesImperial;
     private static Map<String, List<String>> servingSizesMetric;
     private static Map<String, List<String>> typesOfFood;
@@ -72,6 +73,7 @@ public class FoodInfo {
         initFoodImages();
         initFoodIcons();
         initTweakIcons();
+        initTweakTexts(res);
         initServingSizes(context);
         initTypesOfFood(res);
         initFoodTypeVideos(res);
@@ -170,6 +172,10 @@ public class FoodInfo {
         return tweakIcons.get(tweakName);
     }
 
+    public static String getTweakText(final String tweakName) {
+        return tweakTexts.get(tweakName);
+    }
+
     private static void initTweakIcons() {
         tweakIcons = new ArrayMap<>();
 
@@ -194,6 +200,32 @@ public class FoodInfo {
         tweakIcons.put(tweakNightlyFast, R.drawable.ic_nightly_fast);
         tweakIcons.put(tweakNightlySleep, R.drawable.ic_nightly_sleep);
         tweakIcons.put(tweakNightlyTrendelenburg, R.drawable.ic_nightly_trendelenburg);
+    }
+
+    private static void initTweakTexts(final Resources res) {
+        tweakTexts = new ArrayMap<>();
+
+        tweakTexts.put(tweakMealWater, res.getString(R.string.meal_water_text));
+        tweakTexts.put(tweakMealNegCal, res.getString(R.string.meal_negcal_text));
+        tweakTexts.put(tweakMealVinegar, res.getString(R.string.meal_vinegar_text));
+        tweakTexts.put(tweakMealUndistracted, res.getString(R.string.meal_undistracted_text));
+        tweakTexts.put(tweakMealTwentyMinutes, res.getString(R.string.meal_twentyminutes_text));
+        tweakTexts.put(tweakDailyBlackCumin, res.getString(R.string.daily_blackcumin_text));
+        tweakTexts.put(tweakDailyGarlic, res.getString(R.string.daily_garlic_text));
+        tweakTexts.put(tweakDailyGinger, res.getString(R.string.daily_ginger_text));
+        tweakTexts.put(tweakDailyNutriYeast, res.getString(R.string.daily_nutriyeast_text));
+        tweakTexts.put(tweakDailyCumin, res.getString(R.string.daily_cumin_text));
+        tweakTexts.put(tweakDailyGreenTea, res.getString(R.string.daily_greentea_text));
+        tweakTexts.put(tweakDailyHydrate, res.getString(R.string.daily_hydrate_text));
+        tweakTexts.put(tweakDailyDeflourDiet, res.getString(R.string.daily_deflourdiet_text));
+        tweakTexts.put(tweakDailyFrontLoad, res.getString(R.string.daily_frontload_text));
+        tweakTexts.put(tweakDailyTimeRestrict, res.getString(R.string.daily_timerestrict_text));
+        tweakTexts.put(tweakExerciseTiming, res.getString(R.string.exercise_timing_text));
+        tweakTexts.put(tweakWeighTwice, res.getString(R.string.weigh_twice_text));
+        tweakTexts.put(tweakCompleteIntentions, res.getString(R.string.complete_intentions_text));
+        tweakTexts.put(tweakNightlyFast, res.getString(R.string.nightly_fast_text));
+        tweakTexts.put(tweakNightlySleep, res.getString(R.string.nightly_sleep_text));
+        tweakTexts.put(tweakNightlyTrendelenburg, res.getString(R.string.nightly_trendelenburg_text));
     }
 
     public static List<String> getTypesOfFood(final String foodName) {
