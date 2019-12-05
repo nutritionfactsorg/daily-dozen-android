@@ -97,8 +97,7 @@ public class TweakBoxes extends LinearLayout {
     }
 
     private boolean initTweakIcon() {
-        final Context context = getContext();
-        return Common.loadImage(context, ivIcon, FoodInfo.getTweakIcon(tweak.getName()));
+        return Common.loadImage(getContext(), ivIcon, FoodInfo.getTweakIcon(tweak.getName()));
     }
 
     private void initTweakStreak(TweakServings servings) {

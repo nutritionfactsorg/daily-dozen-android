@@ -77,8 +77,7 @@ public class FoodServings extends LinearLayout {
     }
 
     private boolean initFoodIcon() {
-        final Context context = getContext();
-        return Common.loadImage(context, ivIcon, FoodInfo.getFoodIcon(food.getName()));
+        return Common.loadImage(getContext(), ivIcon, FoodInfo.getFoodIcon(food.getName()));
     }
 
     private void initFoodName() {
