@@ -160,6 +160,7 @@
     <string name="tweak_group_daily">Every Day</string>
     <string name="tweak_group_dailydoses">Take your daily doses</string>
     <string name="tweak_group_nightly">Every Night</string>
+    <string name="about_tweak">About Tweak</string>
 
     <!--
     NOTE: These strings should never be translated from English

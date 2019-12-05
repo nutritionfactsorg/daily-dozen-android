@@ -8,6 +8,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.nutritionfacts.dailydozen.Args;
+import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Tweak;
 
@@ -64,9 +65,7 @@ public abstract class InfoActivity extends AppCompatActivity {
             }
 
             tweak = Tweak.getById(intent.getLongExtra(Args.TWEAK_ID, -1));
-            if (tweak != null) {
-                setTitle(tweak.getName());
-            }
+            setTitle(R.string.about_tweak);
         }
     }
 }
