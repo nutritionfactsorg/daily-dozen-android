@@ -16,6 +16,8 @@ import butterknife.ButterKnife;
 public class TweakInfoActivity extends InfoActivity {
     @BindView(R.id.tweak_info_image)
     protected ImageView ivTweak;
+    @BindView(R.id.tweak_short)
+    protected TextView tvTweakShort;
     @BindView(R.id.tweak_text)
     protected TextView tvTweakText;
 
@@ -33,12 +35,17 @@ public class TweakInfoActivity extends InfoActivity {
 
         if (tweak != null && !TextUtils.isEmpty(tweak.getName())) {
             initImage(tweak.getName());
+            initTweakShort(tweak.getName());
             initTweakText(tweak.getName());
         }
     }
 
     private void initImage(String foodName) {
         Common.loadImage(this, ivTweak, FoodInfo.getFoodImage(foodName));
+    }
+
+    private void initTweakShort(String tweakName) {
+        tvTweakShort.setText(FoodInfo.getTweakShort(tweakName));
     }
 
     private void initTweakText(String tweakName) {

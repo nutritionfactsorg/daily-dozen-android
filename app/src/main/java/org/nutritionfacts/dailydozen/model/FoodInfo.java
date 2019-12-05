@@ -20,6 +20,7 @@ public class FoodInfo {
     private static Map<String, Integer> foodImages;
     private static Map<String, Integer> foodIcons;
     private static Map<String, Integer> tweakIcons;
+    private static Map<String, String> tweakShorts;
     private static Map<String, String> tweakTexts;
     private static Map<String, List<String>> servingSizesImperial;
     private static Map<String, List<String>> servingSizesMetric;
@@ -73,6 +74,7 @@ public class FoodInfo {
         initFoodImages();
         initFoodIcons();
         initTweakIcons();
+        initTweakShorts(res);
         initTweakTexts(res);
         initServingSizes(context);
         initTypesOfFood(res);
@@ -172,6 +174,10 @@ public class FoodInfo {
         return tweakIcons.get(tweakName);
     }
 
+    public static String getTweakShort(final String tweakName) {
+        return tweakShorts.get(tweakName);
+    }
+
     public static String getTweakText(final String tweakName) {
         return tweakTexts.get(tweakName);
     }
@@ -200,6 +206,32 @@ public class FoodInfo {
         tweakIcons.put(tweakNightlyFast, R.drawable.ic_nightly_fast);
         tweakIcons.put(tweakNightlySleep, R.drawable.ic_nightly_sleep);
         tweakIcons.put(tweakNightlyTrendelenburg, R.drawable.ic_nightly_trendelenburg);
+    }
+
+    private static void initTweakShorts(final Resources res) {
+        tweakShorts = new ArrayMap<>();
+
+        tweakShorts.put(tweakMealWater, res.getString(R.string.meal_water_short));
+        tweakShorts.put(tweakMealNegCal, res.getString(R.string.meal_negcal_short));
+        tweakShorts.put(tweakMealVinegar, res.getString(R.string.meal_vinegar_short));
+        tweakShorts.put(tweakMealUndistracted, res.getString(R.string.meal_undistracted_short));
+        tweakShorts.put(tweakMealTwentyMinutes, res.getString(R.string.meal_twentyminutes_short));
+        tweakShorts.put(tweakDailyBlackCumin, res.getString(R.string.daily_blackcumin_short));
+        tweakShorts.put(tweakDailyGarlic, res.getString(R.string.daily_garlic_short));
+        tweakShorts.put(tweakDailyGinger, res.getString(R.string.daily_ginger_short));
+        tweakShorts.put(tweakDailyNutriYeast, res.getString(R.string.daily_nutriyeast_short));
+        tweakShorts.put(tweakDailyCumin, res.getString(R.string.daily_cumin_short));
+        tweakShorts.put(tweakDailyGreenTea, res.getString(R.string.daily_greentea_short));
+        tweakShorts.put(tweakDailyHydrate, res.getString(R.string.daily_hydrate_short));
+        tweakShorts.put(tweakDailyDeflourDiet, res.getString(R.string.daily_deflourdiet_short));
+        tweakShorts.put(tweakDailyFrontLoad, res.getString(R.string.daily_frontload_short));
+        tweakShorts.put(tweakDailyTimeRestrict, res.getString(R.string.daily_timerestrict_short));
+        tweakShorts.put(tweakExerciseTiming, res.getString(R.string.exercise_timing_short));
+        tweakShorts.put(tweakWeighTwice, res.getString(R.string.weigh_twice_short));
+        tweakShorts.put(tweakCompleteIntentions, res.getString(R.string.complete_intentions_short));
+        tweakShorts.put(tweakNightlyFast, res.getString(R.string.nightly_fast_short));
+        tweakShorts.put(tweakNightlySleep, res.getString(R.string.nightly_sleep_short));
+        tweakShorts.put(tweakNightlyTrendelenburg, res.getString(R.string.nightly_trendelenburg_short));
     }
 
     private static void initTweakTexts(final Resources res) {

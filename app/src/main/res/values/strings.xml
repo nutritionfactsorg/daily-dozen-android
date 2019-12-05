@@ -297,6 +297,28 @@
         <item>@string/nightly_trendelenburg</item>
     </string-array>
 
+    <string name="meal_water_short">Preload with Water</string>
+    <string name="meal_negcal_short">Preload with "Negative Calorie" Foods</string>
+    <string name="meal_vinegar_short">Incorporate Vinegar (2 tsp with each meal)</string>
+    <string name="meal_undistracted_short">Enjoy Undistracted Meals</string>
+    <string name="meal_twentyminutes_short">Follow the Twenty-Minute Rule</string>
+    <string name="daily_blackcumin_short">Black Cumin (Nigella sativa) (¼ tsp)</string>
+    <string name="daily_garlic_short">Garlic Powder (¼ tsp)</string>
+    <string name="daily_ginger_short">Ground Ginger (1 tsp) or Cayenne Pepper (½ tsp)</string>
+    <string name="daily_nutriyeast_short">Nutritional Yeast (2 tsp)</string>
+    <string name="daily_cumin_short">Cumin (Cuminum cyminum) (½ tsp with lunch and dinner)</string>
+    <string name="daily_greentea_short">Green Tea (3 cups)</string>
+    <string name="daily_hydrate_short">Stay Hydrated</string>
+    <string name="daily_deflourdiet_short">Deflour Your Diet</string>
+    <string name="daily_frontload_short">Front-Load Your Calories</string>
+    <string name="daily_timerestrict_short">Time-Restrict Your Eating</string>
+    <string name="exercise_timing_short">Optimize Exercise Timing</string>
+    <string name="weigh_twice_short">Weigh Yourself Twice a Day</string>
+    <string name="complete_intentions_short">Complete Your Implementation Intentions</string>
+    <string name="nightly_fast_short">Fast After 7:00 p.m.</string>
+    <string name="nightly_sleep_short">Get Sufficient Sleep</string>
+    <string name="nightly_trendelenburg_short">Experiment with Mild Trendelenburg</string>
+
     <string name="meal_water_text">Time your metabolism-boosting two cups of cool or cold unflavored water before each meal to also take advantage of its preload benefits.</string>
     <string name="meal_negcal_text">As the first course, start each meal with an apple or a Green Light soup or salad containing fewer than one hundred calories per cup.</string>
     <string name="meal_vinegar_text">Never drink vinegar straight. Instead, flavor meals or dress a side salad with any of the sweet and savory vinegars out there. If you want to drink it, make sure to mix it in a glass of water and, afterward, be sure to rinse your mouth out with water to protect your tooth enamel.</string>
