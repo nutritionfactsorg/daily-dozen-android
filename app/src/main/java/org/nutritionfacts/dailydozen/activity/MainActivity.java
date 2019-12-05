@@ -193,7 +193,16 @@ public class MainActivity extends AppCompatActivity {
                 Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);
                 return true;
             case R.id.menu_how_not_to_die:
-                Common.openUrlInExternalBrowser(this, R.string.url_book);
+                Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_die);
+                return true;
+            case R.id.menu_cookbook:
+                Common.openUrlInExternalBrowser(this, R.string.url_cookbook);
+                return true;
+            case R.id.menu_how_not_to_diet:
+                Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_diet);
+                return true;
+            case R.id.menu_daily_dozen_challenge:
+                Common.openUrlInExternalBrowser(this, R.string.url_daily_dozen_challenge);
                 return true;
             case R.id.menu_donate:
                 Common.openUrlInExternalBrowser(this, R.string.url_donate);

@@ -70,7 +70,7 @@ public class AboutActivity extends AppCompatActivity {
         final String welcomeText = getString(R.string.activity_welcome_text);
         final SpannableStringBuilder ssb = new SpannableStringBuilder(welcomeText);
 
-        initLink(welcomeText, ssb, R.string.book_title, R.string.url_book);
+        initLink(welcomeText, ssb, R.string.title_how_not_to_die, R.string.url_how_not_to_die);
 
         tvWelcome.setMovementMethod(LinkMovementMethod.getInstance());
         tvWelcome.setText(ssb, TextView.BufferType.SPANNABLE);
