@@ -161,6 +161,8 @@
     <string name="tweak_group_dailydoses">Take your daily doses</string>
     <string name="tweak_group_nightly">Every Night</string>
     <string name="about_tweak">About Tweak</string>
+    <string name="daily_dozen_and_tweaks">For Health and Weight Loss\nDaily Dozen + 21 Tweaks</string>
+    <string name="daily_dozen_only">For Health Alone\nDaily Dozen Only</string>
 
     <!--
     NOTE: These strings should never be translated from English
@@ -341,6 +343,7 @@
     <string name="nightly_fast_text">Due to our circadian rhythms, food eaten at night is more fattening than the exact same food eaten earlier in the day, so fast every night for at least twelve hours starting before 7:00 p.m. The fewer calories after sundown, the better.</string>
     <string name="nightly_sleep_text">Check this box if you get at least seven hours of sleep at your regular bedtime.</string>
     <string name="nightly_trendelenburg_text">Try spending at least four hours a night lying with your body tilted head-down six degrees by elevating the posts at the foot of your bed by eight inches (or by nine inches if you have a California king). Be extremely careful when you get out of bed, as this causes orthostatic intolerance in most people, even if you\'re young and healthy—meaning if you get up too fast, you can feel dizzy, faint, or light-headed and could fall and hurt yourself. So get up slowly. Drinking two cups of cold water thirty minutes before rising may also help prevent this potentially hazardous side effect.\n*IMPORTANT: Do not try this at home at all if you have any heart or lung issues, acid reflux, or problems with your brain (like head trauma) or eyes (even a family history of glaucoma disqualifies you). Also do not try this until you ask your physician if they think it\'s safe for you to sleep in mild Trendelenburg.*</string>
+    <string name="or">OR</string>
 
     <integer-array name="tweak_amounts" translatable="false">
         <item>3</item>
