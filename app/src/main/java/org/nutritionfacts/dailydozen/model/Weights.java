@@ -117,7 +117,10 @@ public class Weights extends TruncatableModel {
             }
         }
 
-        // TODO (slavick) check if daysWithWeights > 0
-        return (float) totalWeight / daysWithWeights;
+        if (daysWithWeights == 0) {
+            return 0;
+        } else {
+            return (float) totalWeight / daysWithWeights;
+        }
     }
 }
