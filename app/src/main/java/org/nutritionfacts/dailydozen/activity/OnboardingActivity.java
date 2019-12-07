@@ -25,18 +25,18 @@ public class OnboardingActivity extends AppCompatActivity {
     public void onDailyDozenAndTweaksClicked() {
         final Prefs prefs = Prefs.getInstance(this);
         prefs.setAppModeToDailyDozenAndTweaks();
-        prefs.setUserHasSeenOnboardingScreen();
-
-        setResult(Args.ONBOARDING_SCREEN);
-        finish();
+        userHasMadeSelection(prefs);
     }
 
     @OnClick(R.id.button_daily_dozen_only)
     public void onDailyDozenOnlyClicked() {
         final Prefs prefs = Prefs.getInstance(this);
         prefs.setAppModeToDailyDozenOnly();
-        prefs.setUserHasSeenOnboardingScreen();
+        userHasMadeSelection(prefs);
+    }
 
+    private void userHasMadeSelection(final Prefs prefs) {
+        prefs.setUserHasSeenOnboardingScreen();
         setResult(Args.ONBOARDING_SCREEN);
         finish();
     }
