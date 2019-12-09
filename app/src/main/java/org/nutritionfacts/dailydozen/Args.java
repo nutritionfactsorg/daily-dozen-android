@@ -12,5 +12,4 @@ public class Args {
     // These values are used in calls to startActivityForResult
     public static final int DEBUG_SETTINGS_REQUEST = 1;
     public static final int SELECTABLE_DATE_REQUEST = 2;
-    public static final int ONBOARDING_SCREEN = 3;
 }

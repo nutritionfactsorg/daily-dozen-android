@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.date_pager_indicator)
     protected PagerTabStrip datePagerIndicator;
 
-    private MenuItem menuToggleModes;
-
     private Handler dayChangeHandler;
     private Runnable dayChangeRunnable;
 
@@ -80,10 +78,6 @@ public class MainActivity extends AppCompatActivity {
         calculateStreaksAfterDatabaseUpgradeToV2();
 
         handleIntentIfNecessary();
-
-        if (!Prefs.getInstance(this).userHasSeenOnboardingScreen()) {
-            this.startActivityForResult(new Intent(this, OnboardingActivity.class), Args.ONBOARDING_SCREEN);
-        }
     }
 
     private void handleIntentIfNecessary() {
@@ -178,24 +172,7 @@ public class MainActivity extends AppCompatActivity {
         // Only show the debug menu option if the apk is a debug build
         menu.findItem(R.id.menu_debug).setVisible(BuildConfig.DEBUG);
 
-        menuToggleModes = menu.findItem(R.id.menu_toggle_modes);
-
         return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        toggleTweaksMenuItemVisibility();
-        return super.onPrepareOptionsMenu(menu);
-    }
-
-    private void toggleTweaksMenuItemVisibility() {
-        if (menuToggleModes != null) {
-            menuToggleModes.setShowAsAction(
-                    Prefs.getInstance(this).isAppModeDailyDozenOnly() ?
-                            MenuItem.SHOW_AS_ACTION_NEVER :
-                            MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        }
     }
 
     @Override
@@ -266,9 +243,6 @@ public class MainActivity extends AppCompatActivity {
                 if (data != null && data.hasExtra(Args.DATE)) {
                     setDatePagerDate(DateUtil.convertDateToDateTime((Date) data.getSerializableExtra(Args.DATE)));
                 }
-                break;
-            case Args.ONBOARDING_SCREEN:
-                invalidateOptionsMenu();
                 break;
         }
     }
