@@ -40,8 +40,8 @@ public class TweakInfoActivity extends InfoActivity {
         }
     }
 
-    private void initImage(String foodName) {
-        Common.loadImage(this, ivTweak, FoodInfo.getFoodImage(foodName));
+    private void initImage(String tweakName) {
+        Common.loadImage(this, ivTweak, FoodInfo.getTweakImage(tweakName));
     }
 
     private void initTweakShort(String tweakName) {

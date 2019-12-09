@@ -20,6 +20,7 @@ public class FoodInfo {
     private static Map<String, Integer> foodImages;
     private static Map<String, Integer> foodIcons;
     private static Map<String, Integer> tweakIcons;
+    private static Map<String, Integer> tweakImages;
     private static Map<String, String> tweakShorts;
     private static Map<String, String> tweakTexts;
     private static Map<String, List<String>> servingSizesImperial;
@@ -74,6 +75,7 @@ public class FoodInfo {
         initFoodImages();
         initFoodIcons();
         initTweakIcons();
+        initTweakImages();
         initTweakShorts(res);
         initTweakTexts(res);
         initServingSizes(context);
@@ -174,6 +176,11 @@ public class FoodInfo {
         return tweakIcons.get(tweakName);
     }
 
+    @DrawableRes
+    public static Integer getTweakImage(final String tweakName) {
+        return tweakImages.get(tweakName);
+    }
+
     public static String getTweakShort(final String tweakName) {
         return tweakShorts.get(tweakName);
     }
@@ -206,6 +213,33 @@ public class FoodInfo {
         tweakIcons.put(tweakNightlyFast, R.drawable.ic_nightly_fast);
         tweakIcons.put(tweakNightlySleep, R.drawable.ic_nightly_sleep);
         tweakIcons.put(tweakNightlyTrendelenburg, R.drawable.ic_nightly_trendelenburg);
+    }
+
+    private static void initTweakImages() {
+        tweakImages = new ArrayMap<>();
+
+        tweakImages.put(tweakMealWater, R.drawable.meal_water_image);
+        tweakImages.put(tweakMealNegCal, R.drawable.meal_negcal_image);
+        tweakImages.put(tweakMealVinegar, R.drawable.mean_vinegar_image);
+        tweakImages.put(tweakMealUndistracted, R.drawable.meal_undistracted_image);
+        tweakImages.put(tweakMealTwentyMinutes, R.drawable.meal_20_minutes_image);
+        tweakImages.put(tweakDailyBlackCumin, R.drawable.daily_black_cumin_image);
+        tweakImages.put(tweakDailyGarlic, R.drawable.daily_garlic_image);
+        tweakImages.put(tweakDailyGinger, R.drawable.daily_ginger_image);
+        tweakImages.put(tweakDailyNutriYeast, R.drawable.daily_nutriyeast_image);
+        tweakImages.put(tweakDailyCumin, R.drawable.daily_cumin_image);
+        tweakImages.put(tweakDailyGreenTea, R.drawable.daily_green_tea_image);
+        tweakImages.put(tweakDailyHydrate, R.drawable.daily_hydrate_image);
+        tweakImages.put(tweakDailyDeflourDiet, R.drawable.daily_deflour_diet_image);
+        tweakImages.put(tweakDailyFrontLoad, R.drawable.daily_front_load_image);
+        tweakImages.put(tweakDailyTimeRestrict, R.drawable.daily_time_restrict_image);
+        tweakImages.put(tweakExerciseTiming, R.drawable.exercise_timing_image);
+        tweakImages.put(tweakWeighTwice, R.drawable.weigh_twice_image);
+        tweakImages.put(tweakCompleteIntentions, R.drawable.complete_intentions_image);
+        tweakImages.put(tweakNightlyFast, R.drawable.nightly_fast_image);
+        tweakImages.put(tweakNightlySleep, R.drawable.nightly_sleep_image);
+        // Do not have an image for the following tweak, so reusing an appropriate image
+        tweakImages.put(tweakNightlyTrendelenburg, R.drawable.nightly_sleep_image);
     }
 
     private static void initTweakShorts(final Resources res) {
