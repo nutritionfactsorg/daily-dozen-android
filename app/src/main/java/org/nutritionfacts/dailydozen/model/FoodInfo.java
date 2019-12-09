@@ -42,7 +42,6 @@ public class FoodInfo {
     private static String beverages;
     private static String exercise;
     private static String vitaminB12;
-    private static String omega3;
 
     private static String tweakMealWater;
     private static String tweakMealNegCal;
@@ -98,7 +97,6 @@ public class FoodInfo {
         beverages = res.getString(R.string.beverages);
         exercise = res.getString(R.string.exercise);
         vitaminB12 = res.getString(R.string.vitamin_b12);
-        omega3 = res.getString(R.string.omega3);
     }
 
     private static void bindTweakNames(Resources res) {
@@ -168,7 +166,6 @@ public class FoodInfo {
         foodIcons.put(beverages, R.drawable.ic_beverages);
         foodIcons.put(exercise, R.drawable.ic_exercise);
         foodIcons.put(vitaminB12, R.drawable.ic_vitamin_b12);
-        foodIcons.put(omega3, R.drawable.ic_omega_3);
     }
 
     @DrawableRes
@@ -383,8 +380,8 @@ public class FoodInfo {
             servingSizesImperial.put(foodIdName, imperial);
             servingSizesMetric.put(foodIdName, metric);
         } catch (Resources.NotFoundException e) {
-            // Vitamin B12 and Omega 3 don't need the above functionality and therefore
-            // don't have the required resource ids for the above code to function correctly
+            // Vitamin B12 doesn't need the above functionality and therefore doesn't have the
+            // required resource ids for the above code to function correctly
         }
     }
 
@@ -412,7 +409,6 @@ public class FoodInfo {
         putFoodTypeVideos(res, beverages, R.string.food_info_videos_beverages);
         putFoodTypeVideos(res, exercise, R.string.food_info_videos_exercise);
         putFoodTypeVideos(res, vitaminB12, R.string.food_info_videos_vitamin_b12);
-        putFoodTypeVideos(res, omega3, R.string.food_info_videos_omega3);
     }
 
     public static List<String> getFoodVideosLink(final String foodName) {

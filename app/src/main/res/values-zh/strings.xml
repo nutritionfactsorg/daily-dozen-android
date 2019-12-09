@@ -14,7 +14,6 @@
     <string name="beverages">飲料</string>
     <string name="exercise">運動</string>
     <string name="vitamin_b12">维生素B12</string>
-    <string name="omega3">Plant-based Omega 3s</string>
     <string name="serving_sizes">份量大小</string>
     <string name="types">種類</string>
     <string name="history">歷史紀錄</string>
@@ -97,7 +96,6 @@
         <item>@string/beverages</item>
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
-        <item>@string/omega3</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">

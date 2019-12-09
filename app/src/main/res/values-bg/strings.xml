@@ -14,7 +14,6 @@
     <string name="beverages">Напитки</string>
     <string name="exercise">Упражнения</string>
     <string name="vitamin_b12">Витамин B12</string>
-    <string name="omega3">Plant-based Omega 3s</string>
     <string name="serving_sizes">Порции</string>
     <string name="types">Видове</string>
     <string name="history">История</string>
@@ -97,7 +96,6 @@
         <item>@string/beverages</item>
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
-        <item>@string/omega3</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">

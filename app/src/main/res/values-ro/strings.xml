@@ -15,7 +15,6 @@
     <string name="beverages">Băuturi</string>
     <string name="exercise">Exerciții fizice</string>
     <string name="vitamin_b12">Vitamina B12</string>
-    <string name="omega3">Plant-based Omega 3s</string>
     <string name="serving_sizes">Dimensiunea unei porții</string>
     <string name="types">Varietăți</string>
     <string name="history">Istoric</string>
@@ -98,7 +97,6 @@
         <item>@string/beverages</item>
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
-        <item>@string/omega3</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">

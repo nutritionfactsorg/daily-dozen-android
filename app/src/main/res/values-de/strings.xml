@@ -49,7 +49,6 @@
     <string name="flaxseeds">Leinsamen</string>
     <string name="exercise">Sport</string>
     <string name="vitamin_b12">Vitamin B12</string>
-    <string name="omega3">Plant-based Omega 3s</string>
     <string name="enable_daily_reminder">Tägliche Benachrichtigung aktivieren</string>
     <string name="donate">Spenden</string>
     <string name="dialog_streaks_title">Neue Funktion: Streaks!</string>
@@ -98,7 +97,6 @@
         <item>@string/beverages</item>
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
-        <item>@string/omega3</item>
     </string-array>
     
     <string-array name="about_text_lines">

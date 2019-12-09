@@ -14,7 +14,6 @@
     <string name="beverages">Beverages</string>
     <string name="exercise">Exercise</string>
     <string name="vitamin_b12">Vitamin B12</string>
-    <string name="omega3">Plant-based Omega 3s</string>
     <string name="serving_sizes">Serving Sizes</string>
     <string name="types">Types</string>
     <string name="history">History</string>
@@ -226,7 +225,6 @@
     <string name="food_info_videos_exercise" translatable="false">exercise</string>
     <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
     <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
-    <string name="food_info_videos_omega3" translatable="false">omega-3-fatty-acids</string>
 
     <!--
     NOTE: These strings should never be translated from English
@@ -246,7 +244,6 @@
         <item>Beverages</item>
         <item>Exercise</item>
         <item>Vitamin B12</item>
-        <item>Omega 3</item>
     </string-array>
 
     <string-array name="food_names">
@@ -263,7 +260,6 @@
         <item>@string/beverages</item>
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
-        <item>@string/omega3</item>
     </string-array>
 
     <string-array name="notification_icon_food_names">

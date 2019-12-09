@@ -134,10 +134,10 @@ public class DDServings extends TruncatableModel implements Servings {
         int numServings = 0;
 
         if (day != null && day.getId() != null) {
-            // Calculate the total servings on a particular date, but ignore the values for Vitamins B12 and D
+            // Calculate the total servings on a particular date, but ignore the values for Vitamin B12
             numServings = SQLiteUtils.intQuery(
-                    "SELECT SUM(servings) FROM servings WHERE date_id = ? AND food_id not in (SELECT Id FROM foods WHERE id_name = ? OR id_name = ?)",
-                    new String[]{day.getId().toString(), Common.VITAMIN_B12, Common.OMEGA3});
+                    "SELECT SUM(servings) FROM servings WHERE date_id = ? AND food_id not in (SELECT Id FROM foods WHERE id_name = ?)",
+                    new String[]{day.getId().toString(), Common.VITAMIN_B12});
         }
 
         return numServings;

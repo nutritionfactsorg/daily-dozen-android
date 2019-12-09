@@ -42,7 +42,6 @@ public class Common {
 
     public static final String EXERCISE = "exercise";
     public static final String VITAMIN_B12 = "Vitamin B12";
-    public static final String OMEGA3 = "Omega 3";
 
     public static final String MEAL = "meal";
     public static final String DAILY_DOSE = "dailydose";
@@ -171,7 +170,7 @@ public class Common {
     }
 
     public static boolean isSupplement(final Food food) {
-        return food != null && (VITAMIN_B12.equalsIgnoreCase(food.getIdName()) || OMEGA3.equalsIgnoreCase(food.getIdName()));
+        return food != null && VITAMIN_B12.equalsIgnoreCase(food.getIdName());
     }
 
     public static void openFoodHistory(final Context context, final Food food) {
