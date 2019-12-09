@@ -132,8 +132,10 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         final Set<Food> missingFoodsOnDay = new HashSet<>(allFoods);
 
         for (DDServings servings : DDServings.getServingsOnDate(day)) {
-            foodServingsMap.put(servings.getFood().getIdName(), servings.getServings());
-            missingFoodsOnDay.remove(servings.getFood());
+            if (servings.getFood() != null) {
+                foodServingsMap.put(servings.getFood().getIdName(), servings.getServings());
+                missingFoodsOnDay.remove(servings.getFood());
+            }
         }
 
         for (Food missedFood : missingFoodsOnDay) {
