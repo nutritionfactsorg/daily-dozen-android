@@ -40,6 +40,7 @@ import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
 import org.nutritionfacts.dailydozen.task.RestoreTask;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
+import org.nutritionfacts.dailydozen.view.AppModeBottomSheet;
 
 import java.io.File;
 import java.util.Date;
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         handleIntentIfNecessary();
 
         if (!Prefs.getInstance(this).userHasSeenOnboardingScreen()) {
-            this.startActivityForResult(new Intent(this, OnboardingActivity.class), Args.ONBOARDING_SCREEN);
+            AppModeBottomSheet.newInstance().show(getSupportFragmentManager(), AppModeBottomSheet.TAG);
         }
     }
 
