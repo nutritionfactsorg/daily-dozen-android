@@ -94,12 +94,6 @@
         </activity>
 
         <activity
-            android:name=".activity.OnboardingActivity"
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden" >
-        </activity>
-
-        <activity
             android:name=".activity.ServingsHistoryActivity"
             android:label="@string/daily_servings_history"
             android:screenOrientation="portrait"

@@ -268,9 +268,6 @@ public class MainActivity extends AppCompatActivity {
                     setDatePagerDate(DateUtil.convertDateToDateTime((Date) data.getSerializableExtra(Args.DATE)));
                 }
                 break;
-            case Args.ONBOARDING_SCREEN:
-                invalidateOptionsMenu();
-                break;
         }
     }
 
