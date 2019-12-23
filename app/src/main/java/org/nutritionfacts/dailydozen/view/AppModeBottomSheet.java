@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen.view;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +12,15 @@ import androidx.annotation.Nullable;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.activity.MainActivity;
 import org.nutritionfacts.dailydozen.controller.Prefs;
+
+import java.util.Objects;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import timber.log.Timber;
 
 public class AppModeBottomSheet extends BottomSheetDialogFragment {
     public static final String TAG = "ActionBottomDialog";
@@ -42,15 +47,25 @@ public class AppModeBottomSheet extends BottomSheetDialogFragment {
         unbinder.unbind();
     }
 
+    @Override
+    public void onDismiss(@NonNull DialogInterface dialog) {
+        super.onDismiss(dialog);
+        try {
+            ((MainActivity) Objects.requireNonNull(getContext())).invalidateOptionsMenu();
+        } catch (Exception e) {
+            Timber.e(e);
+        }
+    }
+
     @OnClick(R.id.button_daily_dozen_and_tweaks)
-    public void onDailyDozenAndTweaksClicked() {
+    void onDailyDozenAndTweaksClicked() {
         final Prefs prefs = Prefs.getInstance(getContext());
         prefs.setAppModeToDailyDozenAndTweaks();
         userHasMadeSelection(prefs);
     }
 
     @OnClick(R.id.button_daily_dozen_only)
-    public void onDailyDozenOnlyClicked() {
+    void onDailyDozenOnlyClicked() {
         final Prefs prefs = Prefs.getInstance(getContext());
         prefs.setAppModeToDailyDozenOnly();
         userHasMadeSelection(prefs);

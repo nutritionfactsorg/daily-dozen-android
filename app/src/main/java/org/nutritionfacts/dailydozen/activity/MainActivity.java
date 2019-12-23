@@ -83,7 +83,9 @@ public class MainActivity extends AppCompatActivity {
         handleIntentIfNecessary();
 
         if (!Prefs.getInstance(this).userHasSeenOnboardingScreen()) {
-            AppModeBottomSheet.newInstance().show(getSupportFragmentManager(), AppModeBottomSheet.TAG);
+            final AppModeBottomSheet appModeBottomSheet = AppModeBottomSheet.newInstance();
+            appModeBottomSheet.setCancelable(false);
+            appModeBottomSheet.show(getSupportFragmentManager(), AppModeBottomSheet.TAG);
         }
     }
 
