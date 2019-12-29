@@ -671,5 +671,9 @@
     <string name="nightly_fast_text">Aufgrund unseres Tagesrhythmus ist das Essen nachts fetter als genau dasselbe Essen, das früher am Tag gegessen wird, also schnell jede Nacht für mindestens zwölf Stunden, beginnend vor 19:00 Uhr. Je weniger Kalorien nach Sonnenuntergang, desto besser.</string>
     <string name="nightly_sleep_text">Aktivieren Sie dieses Kontrollkästchen, wenn Sie bei normaler Schlafenszeit mindestens sieben Stunden Schlaf haben.</string>
     <string name="nightly_trendelenburg_text">Versuchen Sie, mindestens vier Stunden pro Nacht mit um sechs Grad nach unten geneigtem Körper zu liegen, indem Sie die Pfosten am Fuß Ihres Bettes um acht Zoll (oder um neun Zoll, wenn Sie einen kalifornischen König haben) anheben. Seien Sie beim Aufstehen äußerst vorsichtig, da dies bei den meisten Menschen zu einer orthostatischen Unverträglichkeit führt, auch wenn Sie jung und gesund sind. Wenn Sie also zu schnell aufstehen, können Sie sich schwindelig, ohnmächtig oder benommen fühlen und könnten falle und verletze dich. Also steh langsam auf. Das Trinken von zwei Tassen kaltem Wasser 30 Minuten vor dem Aufstehen kann ebenfalls dazu beitragen, diese potenziell gefährliche Nebenwirkung zu vermeiden. \ N * WICHTIG: Versuchen Sie dies nicht zu Hause, wenn Sie Herz- oder Lungenprobleme, sauren Reflux oder Probleme mit Ihrem Gehirn haben (wie ein Kopftrauma) oder Augen (selbst eine familiäre Glaukomerkrankung disqualifiziert Sie). Versuchen Sie dies auch nicht, bevor Sie Ihren Arzt gefragt haben, ob er der Meinung ist, dass Sie in mildem Trendelenburg sicher schlafen können. *</string>
+    <string name="for_health_and_weight_loss">Für Gesundheit und Gewichtsverlust</string>
+    <string name="for_health_alone">Für die Gesundheit allein</string>
+    <string name="daily_dozen_and_tweaks">Täglich ein Dutzend 21 Tweaks</string>
+    <string name="daily_dozen_only">Täglich nur ein Dutzend</string>
 
 </resources>

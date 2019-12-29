@@ -204,7 +204,6 @@
     <string name="for_health_alone">For Health Alone</string>
     <string name="daily_dozen_and_tweaks">Daily Dozen + 21 Tweaks</string>
     <string name="daily_dozen_only">Daily Dozen Only</string>
-    <string name="or">OR</string>
 
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
