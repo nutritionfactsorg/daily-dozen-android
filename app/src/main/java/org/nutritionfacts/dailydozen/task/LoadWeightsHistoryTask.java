@@ -81,6 +81,8 @@ public class LoadWeightsHistoryTask
         final List<Entry> lineEntries = new ArrayList<>(numDaysOfWeights);
 
         float previousTrend = 0;
+        float minWeight = Float.MAX_VALUE;
+        float maxWeight = Float.MIN_VALUE;
 
         for (int i = 0; i < numDaysOfWeights; i++) {
             if (isCancelled()) {
@@ -98,6 +100,13 @@ public class LoadWeightsHistoryTask
                 if (averageWeight != null) {
                     previousTrend = calculateTrend(previousTrend, averageWeight);
                     barEntryVal = averageWeight;
+
+                    if (averageWeight > 0 && averageWeight < minWeight) {
+                        minWeight = averageWeight;
+                    }
+                    if (averageWeight > maxWeight) {
+                        maxWeight = averageWeight;
+                    }
                 }
             }
 
@@ -121,7 +130,10 @@ public class LoadWeightsHistoryTask
             publishProgress(i + 1, numDaysOfWeights);
         }
 
-        return createCompleteEvent(createLineAndBarData(xLabels, lineEntries, barEntries), TimeScale.DAYS);
+        final LoadHistoryCompleteEvent weightHistory = createCompleteEvent(createLineAndBarData(xLabels, lineEntries, barEntries), TimeScale.DAYS);
+        weightHistory.setMinVal(minWeight);
+        weightHistory.setMaxVal(maxWeight);
+        return weightHistory;
     }
 
     private LoadHistoryCompleteEvent getChartDataInMonths(final LoadHistoryTaskParams inputParams) {

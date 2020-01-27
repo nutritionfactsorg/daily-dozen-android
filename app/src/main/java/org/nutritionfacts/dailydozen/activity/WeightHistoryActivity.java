@@ -130,8 +130,10 @@ public class WeightHistoryActivity extends AppCompatActivity
         // Prevents the value for each bar from drawing over the labels at the top
         chart.setDrawValueAboveBar(false);
 
-        chart.getAxisLeft().setEnabled(false);
         chart.getAxisRight().setEnabled(false);
+
+        chart.getAxisLeft().setAxisMaxValue(event.getMaxVal() + 5);
+        chart.getAxisLeft().setAxisMinValue(event.getMinVal() - 5);
 
         // Disable all zooming and interacting with the chart
         chart.setScaleEnabled(false);
