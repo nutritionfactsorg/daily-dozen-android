@@ -50,6 +50,7 @@ public class WeightHistoryActivity extends AppCompatActivity
         setContentView(R.layout.activity_servings_history);
         ButterKnife.bind(this);
 
+        timeScaleSelector.setVisibility(View.GONE);
         initTimeRangeSelector();
 
         loadData();
@@ -86,7 +87,7 @@ public class WeightHistoryActivity extends AppCompatActivity
             alreadyLoadingData = true;
 
             new LoadWeightsHistoryTask(this).execute(new LoadHistoryTaskParams(
-                    timeScaleSelector.getSelectedTimeScale(),
+                    TimeScale.DAYS,
                     timeRangeSelector.getSelectedYear(),
                     timeRangeSelector.getSelectedMonth()));
         }
