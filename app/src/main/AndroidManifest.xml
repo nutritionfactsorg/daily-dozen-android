@@ -58,6 +58,17 @@
             android:label="@string/about_this_app"/>
 
         <activity
+            android:name=".activity.DailyReminderSettingsActivity"
+            android:label="@string/daily_reminder_settings"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
+        <activity
             android:name=".activity.DebugActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
@@ -85,17 +96,6 @@
         <activity
             android:name=".activity.ServingsHistoryActivity"
             android:label="@string/daily_servings_history"
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity"/>
-        </activity>
-
-        <activity
-            android:name=".activity.DailyReminderSettingsActivity"
-            android:label="@string/daily_reminder_settings"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">

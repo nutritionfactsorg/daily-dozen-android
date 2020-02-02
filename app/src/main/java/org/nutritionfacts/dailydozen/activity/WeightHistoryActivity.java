@@ -50,6 +50,7 @@ public class WeightHistoryActivity extends AppCompatActivity
         setContentView(R.layout.activity_servings_history);
         ButterKnife.bind(this);
 
+        timeScaleSelector.setVisibility(View.GONE);
         initTimeRangeSelector();
 
         loadData();
@@ -58,9 +59,13 @@ public class WeightHistoryActivity extends AppCompatActivity
     private void initTimeRangeSelector() {
         final Day firstDay = Day.getFirstDay();
         final Day lastDay = Day.getLastDay();
-        timeRangeSelector.setStartAndEnd(
-                firstDay.getYear(), firstDay.getMonth(),
-                lastDay.getYear(), lastDay.getMonth());
+        if (firstDay != null && lastDay != null) {
+            timeRangeSelector.setStartAndEnd(
+                    firstDay.getYear(), firstDay.getMonth(),
+                    lastDay.getYear(), lastDay.getMonth());
+        } else {
+            finish();
+        }
     }
 
     @Override
@@ -82,7 +87,7 @@ public class WeightHistoryActivity extends AppCompatActivity
             alreadyLoadingData = true;
 
             new LoadWeightsHistoryTask(this).execute(new LoadHistoryTaskParams(
-                    timeScaleSelector.getSelectedTimeScale(),
+                    TimeScale.DAYS,
                     timeRangeSelector.getSelectedYear(),
                     timeRangeSelector.getSelectedMonth()));
         }
@@ -130,8 +135,10 @@ public class WeightHistoryActivity extends AppCompatActivity
         // Prevents the value for each bar from drawing over the labels at the top
         chart.setDrawValueAboveBar(false);
 
-        chart.getAxisLeft().setEnabled(false);
         chart.getAxisRight().setEnabled(false);
+
+        chart.getAxisLeft().setAxisMaxValue(event.getMaxVal() + 5);
+        chart.getAxisLeft().setAxisMinValue(event.getMinVal() - 5);
 
         // Disable all zooming and interacting with the chart
         chart.setScaleEnabled(false);
