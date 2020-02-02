@@ -92,7 +92,7 @@ public class Prefs {
     }
 
     public boolean isAppModeDailyDozenOnly() {
-        return sharedPrefs.getBoolean(Prefs.APP_MODE_DAILY_DOZEN_ONLY, true);
+        return sharedPrefs.getBoolean(Prefs.APP_MODE_DAILY_DOZEN_ONLY, false);
     }
 
     public void setAppModeToDailyDozenOnly() {

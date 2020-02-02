@@ -82,11 +82,11 @@ public class MainActivity extends AppCompatActivity {
 
         handleIntentIfNecessary();
 
-        if (!Prefs.getInstance(this).userHasSeenOnboardingScreen()) {
-            final AppModeBottomSheet appModeBottomSheet = AppModeBottomSheet.newInstance();
-            appModeBottomSheet.setCancelable(false);
-            appModeBottomSheet.show(getSupportFragmentManager(), AppModeBottomSheet.TAG);
-        }
+//        if (!Prefs.getInstance(this).userHasSeenOnboardingScreen()) {
+//            final AppModeBottomSheet appModeBottomSheet = AppModeBottomSheet.newInstance();
+//            appModeBottomSheet.setCancelable(false);
+//            appModeBottomSheet.show(getSupportFragmentManager(), AppModeBottomSheet.TAG);
+//        }
     }
 
     private void handleIntentIfNecessary() {
