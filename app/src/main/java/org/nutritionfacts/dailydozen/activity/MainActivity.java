@@ -40,6 +40,7 @@ import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
 import org.nutritionfacts.dailydozen.task.RestoreTask;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
+import org.nutritionfacts.dailydozen.view.AppModeBottomSheet;
 
 import java.io.File;
 import java.util.Date;
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
     protected ViewPager datePager;
     @BindView(R.id.date_pager_indicator)
     protected PagerTabStrip datePagerIndicator;
+
+    private MenuItem menuToggleModes;
 
     private Handler dayChangeHandler;
     private Runnable dayChangeRunnable;
@@ -78,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
         calculateStreaksAfterDatabaseUpgradeToV2();
 
         handleIntentIfNecessary();
+
+//        if (!Prefs.getInstance(this).userHasSeenOnboardingScreen()) {
+//            final AppModeBottomSheet appModeBottomSheet = AppModeBottomSheet.newInstance();
+//            appModeBottomSheet.setCancelable(false);
+//            appModeBottomSheet.show(getSupportFragmentManager(), AppModeBottomSheet.TAG);
+//        }
     }
 
     private void handleIntentIfNecessary() {
@@ -172,7 +181,24 @@ public class MainActivity extends AppCompatActivity {
         // Only show the debug menu option if the apk is a debug build
         menu.findItem(R.id.menu_debug).setVisible(BuildConfig.DEBUG);
 
+        menuToggleModes = menu.findItem(R.id.menu_toggle_modes);
+
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        toggleTweaksMenuItemVisibility();
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    private void toggleTweaksMenuItemVisibility() {
+        if (menuToggleModes != null) {
+            menuToggleModes.setShowAsAction(
+                    Prefs.getInstance(this).isAppModeDailyDozenOnly() ?
+                            MenuItem.SHOW_AS_ACTION_NEVER :
+                            MenuItem.SHOW_AS_ACTION_IF_ROOM);
+        }
     }
 
     @Override

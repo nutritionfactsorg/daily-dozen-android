@@ -118,6 +118,23 @@ public class DDServings extends TruncatableModel implements Servings {
         return servings;
     }
 
+    public static DDServings createServingsAndRecalculateStreak(final Day day, final Food food, final int numServings) {
+        DDServings servings = getByDateAndFood(day, food);
+
+        if (servings == null) {
+            servings = new DDServings(day, food);
+
+            if (numServings > 0) {
+                servings.setServings(numServings);
+                servings.recalculateStreak();
+            }
+
+            servings.save();
+        }
+
+        return servings;
+    }
+
     public static List<DDServings> getServingsOnDate(Day day) {
         List<DDServings> servings = new ArrayList<>();
 

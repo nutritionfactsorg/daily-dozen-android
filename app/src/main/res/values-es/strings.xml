@@ -681,5 +681,9 @@
     <string name="nightly_fast_text">Debido a nuestros ritmos circadianos, la comida que se come por la noche engorda más que la misma comida que se come más temprano en el día, tan rápido todas las noches durante al menos doce horas a partir de las 7:00 p.m. Cuantas menos calorías después de la puesta del sol, mejor.</string>
     <string name="nightly_sleep_text">Marque esta casilla si duerme al menos siete horas antes de acostarse.</string>
     <string name="nightly_trendelenburg_text">Intenta pasar al menos cuatro horas por noche acostado con tu cuerpo inclinado hacia abajo seis grados elevando los postes al pie de tu cama por ocho pulgadas (o nueve pulgadas si tienes un rey de California). Tenga mucho cuidado cuando salga de la cama, ya que esto causa intolerancia ortostática en la mayoría de las personas, incluso si es joven y saludable, lo que significa que si se levanta demasiado rápido, puede sentirse mareado, desmayado o aturdido y podría caer y lastimarse. Así que levántate lentamente. Beber dos tazas de agua fría treinta minutos antes de levantarse también puede ayudar a prevenir este efecto secundario potencialmente peligroso. \ N * IMPORTANTE: no intente esto en casa si tiene problemas cardíacos o pulmonares, reflujo ácido o problemas con su cerebro (como traumatismo craneal) u ojos (incluso un historial familiar de glaucoma lo descalifica). Además, no intente esto hasta que le pregunte a su médico si cree que es seguro para usted dormir en Trendelenburg leve. *</string>
+    <string name="for_health_and_weight_loss">Para la salud y la pérdida de peso</string>
+    <string name="for_health_alone">Para la salud sola</string>
+    <string name="daily_dozen_and_tweaks">Docena diaria 21 ajustes</string>
+    <string name="daily_dozen_only">Docena diaria solamente</string>
 
 </resources>

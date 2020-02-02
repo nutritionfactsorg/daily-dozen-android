@@ -142,7 +142,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                     if (numServings > 0) {
                         final Food food = getFoodByIdName(headers[j]);
                         if (food != null) {
-                            DDServings.createServingsIfDoesNotExist(day, food, numServings);
+                            DDServings.createServingsAndRecalculateStreak(day, food, numServings);
                         }
                     }
                 }
@@ -173,7 +173,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                     dayEntries.getEveningWeight());
 
             for (Map.Entry<String, Integer> entry : dayEntries.getDailyDozen().entrySet()) {
-                DDServings.createServingsIfDoesNotExist(day, getFoodByIdName(entry.getKey()), entry.getValue());
+                DDServings.createServingsAndRecalculateStreak(day, getFoodByIdName(entry.getKey()), entry.getValue());
             }
 
             for (Map.Entry<String, Integer> entry : dayEntries.getTweaks().entrySet()) {
