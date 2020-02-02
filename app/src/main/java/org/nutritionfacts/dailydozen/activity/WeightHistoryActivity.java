@@ -58,9 +58,13 @@ public class WeightHistoryActivity extends AppCompatActivity
     private void initTimeRangeSelector() {
         final Day firstDay = Day.getFirstDay();
         final Day lastDay = Day.getLastDay();
-        timeRangeSelector.setStartAndEnd(
-                firstDay.getYear(), firstDay.getMonth(),
-                lastDay.getYear(), lastDay.getMonth());
+        if (firstDay != null && lastDay != null) {
+            timeRangeSelector.setStartAndEnd(
+                    firstDay.getYear(), firstDay.getMonth(),
+                    lastDay.getYear(), lastDay.getMonth());
+        } else {
+            finish();
+        }
     }
 
     @Override
