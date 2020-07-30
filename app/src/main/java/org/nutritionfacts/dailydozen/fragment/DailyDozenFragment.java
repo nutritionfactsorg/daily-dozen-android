@@ -95,17 +95,11 @@ public class DailyDozenFragment extends Fragment {
                 dateHeader.setServings(DDServings.getTotalServingsOnDate(day));
 
                 final Context context = getContext();
-                boolean addedSupplementDivider = false;
 
                 for (Food food : Food.getAllFoods()) {
                     final FoodServings foodServings = new FoodServings(context);
                     final boolean success = foodServings.setDateAndFood(day, food);
                     if (success) {
-                        if (Common.isSupplement(food) && !addedSupplementDivider) {
-                            vgFoodServings.addView(new SupplementDivider(context));
-                            addedSupplementDivider = true;
-                        }
-
                         vgFoodServings.addView(foodServings);
                         Bus.register(foodServings);
                     }
