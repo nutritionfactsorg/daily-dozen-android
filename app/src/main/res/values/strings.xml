@@ -145,13 +145,13 @@
     <string name="daily_ginger">Ground Ginger (1 tsp) or Cayenne Pepper (½ tsp)</string>
     <string name="daily_nutriyeast">Nutritional Yeast (2 tsp)</string>
     <string name="daily_cumin">Cumin (½ tsp with lunch and dinner)</string>
-    <string name="daily_greentea">Green Tea (3 cups)</string>
+    <string name="daily_greentea">Green Tea (350ml)</string>
     <string name="daily_hydrate">Stay Hydrated</string>
     <string name="daily_deflourdiet">Deflour Your Diet</string>
     <string name="daily_frontload">Front-Load Your Calories</string>
     <string name="daily_timerestrict">Time-Restrict Your Eating</string>
     <string name="exercise_timing">Optimize Exercise Timing</string>
-    <string name="weigh_twice">Weigh Yourself Twice a Day</string>
+    <string name="weigh_twice">Weigh Yourself Twice per day</string>
     <string name="complete_intentions">Complete Your Implementation Intentions</string>
     <string name="nightly_fast">Fast After 7:00 pm</string>
     <string name="nightly_sleep">Get Sufficient Sleep</string>
@@ -160,7 +160,7 @@
     <string name="average_weight_on_day">Average weight on day</string>
     <string name="meal_water_short">Preload with Water</string>
     <string name="meal_negcal_short">Preload with "Negative Calorie" Foods</string>
-    <string name="meal_vinegar_short">Incorporate Vinegar (2 tsp with each meal)</string>
+    <string name="meal_vinegar_short">Incorporate Vinegar (2 tsp)</string>
     <string name="meal_undistracted_short">Enjoy Undistracted Meals</string>
     <string name="meal_twentyminutes_short">Follow the Twenty-Minute Rule</string>
     <string name="daily_blackcumin_short">Black Cumin (Nigella sativa) (¼ tsp)</string>
@@ -174,7 +174,7 @@
     <string name="daily_frontload_short">Front-Load Your Calories</string>
     <string name="daily_timerestrict_short">Time-Restrict Your Eating</string>
     <string name="exercise_timing_short">Optimize Exercise Timing</string>
-    <string name="weigh_twice_short">Weigh Yourself Twice a Day</string>
+    <string name="weigh_twice_short">Weigh Yourself Twice per day</string>
     <string name="complete_intentions_short">Complete Your Implementation Intentions</string>
     <string name="nightly_fast_short">Fast After 7:00 p.m.</string>
     <string name="nightly_sleep_short">Get Sufficient Sleep</string>
@@ -183,31 +183,31 @@
     <string name="meal_negcal_text">As the first course, start each meal with an apple or a Green Light soup or salad containing fewer than one hundred calories per cup.</string>
     <string name="meal_vinegar_text">Never drink vinegar straight. Instead, flavor meals or dress a side salad with any of the sweet and savory vinegars out there. If you want to drink it, make sure to mix it in a glass of water and, afterward, be sure to rinse your mouth out with water to protect your tooth enamel.</string>
     <string name="meal_undistracted_text">Don\'t eat while watching TV or playing on your phone. Give yourself a check for each meal you\'re able to eat without distraction.</string>
-    <string name="meal_twentyminutes_text">Whether through increasing viscosity or the number of chews, or decreasing bite size and eating rate, dozens of studies have demonstrated that no matter how we boost the amount of time food is in our mouths, it can result in lower caloric intake. So extend meal duration to at least twenty minutes to allow your natural satiety signals to take full effect. How? By choosing foods that take longer to eat and eating them in a way that prolongs the time they stay in your mouth. Think bulkier, hardier, chewier foods in smaller, well-chewed bites.</string>
+    <string name="meal_twentyminutes_text">Take at least 20 minutes to eat. Whether through increasing viscosity or the number of chews, or decreasing bite size and eating rate, dozens of studies have demonstrated that no matter how we boost the amount of time food is in our mouths, it can result in lower caloric intake. So extend meal duration to at least twenty minutes to allow your natural satiety signals to take full effect. How? By choosing foods that take longer to eat and eating them in a way that prolongs the time they stay in your mouth. Think bulkier, hardier, chewier foods in smaller, well-chewed bites.</string>
     <string name="daily_blackcumin_text">As noted in the Appetite Suppression section, a systematic review and meta-analysis of randomized, controlled weight-loss trials found that about a quarter teaspoon of black cumin powder every day appears to reduce body mass index within a span of a couple of months. Note that black cumin is different from regular cumin, for which the dosing is different.</string>
-    <string name="daily_garlic_text">Randomized, double-blind, placebo-controlled studies have found that as little as a daily quarter teaspoon of garlic powder can reduce body fat at a cost of perhaps two cents a day.</string>
-    <string name="daily_ginger_text">Randomized controlled trials have found that ¼ teaspoon to 1½ teaspoons a day of ground ginger significantly decreased body weight for just pennies a day. It can be as easy as stirring the ground spice into a cup of hot water. Note: Ginger may work better in the morning than evening. Chai tea is a tasty way to combine the green tea and ginger tricks into a single beverage. Alternately, for BAT activation, you can add one raw jalapeño pepper or a half teaspoon of red pepper powder (or, presumably, crushed red pepper flakes) into your daily diet. To help beat the heat, you can very thinly slice or finely chop the jalapeño to reduce its bite to little prickles, or mix the red pepper into soup or the whole-food vegetable smoothie I featured in one of my cooking videos on NutritionFacts.org.</string>
+    <string name="daily_garlic_text">Randomized, double-blind, placebo-controlled studies have found that as little as a daily quarter teaspoon of garlic powder can reduce body fat at a cost of perhaps two cents per day.</string>
+    <string name="daily_ginger_text">Randomized controlled trials have found that ¼ teaspoon to 1½ teaspoons per day of ground ginger significantly decreased body weight for just pennies per day. It can be as easy as stirring the ground spice into a cup of hot water. Note: Ginger may work better in the morning than evening. Chai tea is a tasty way to combine the green tea and ginger tricks into a single beverage. Alternately, for BAT activation, you can add one raw jalapeño pepper or a half teaspoon of red pepper powder (or, presumably, crushed red pepper flakes) into your daily diet. To help beat the heat, you can very thinly slice or finely chop the jalapeño to reduce its bite to little prickles, or mix the red pepper into soup or the whole-food vegetable smoothie I featured in one of my cooking videos on NutritionFacts.org.</string>
     <string name="daily_nutriyeast_text">Two teaspoons of baker\'s, brewer\'s, or nutritional yeast contains roughly the amount of beta 1,3/1,6 glucans found in randomized, double-blind, placebo-controlled clinical trials to facilitate weight loss.</string>
-    <string name="daily_cumin_text">Overweight women randomized to add a half teaspoon of cumin to their lunches and dinners beat out the control group by four more pounds and an extra inch off their waists. There is also evidence to support the use of the spice saffron, but a pinch a day would cost a dollar, whereas a teaspoon of cumin costs less than ten cents.</string>
-    <string name="daily_greentea_text">Drink three cups a day between meals (waiting at least an hour after a meal so as to not interfere with iron absorption). During meals, drink water, black coffee, or hibiscus tea mixed 6:1 with lemon verbena, but never exceed three cups of fluid an hour (important given my water preloading advice). Take advantage of the reinforcing effect of caffeine by drinking your green tea along with something healthy you wish you liked more, but don\'t consume large amounts of caffeine within six hours of bedtime. Taking your tea without sweetener is best, but if you typically sweeten your tea with honey or sugar, try yacon syrup instead.</string>
-    <string name="daily_hydrate_text">Check this box if your urine never appears darker than a pale yellow. Note that if you\'re eating riboflavin-fortified foods (such as nutritional yeast), then base this instead on getting nine cups of unsweetened beverages a day for women (which would be taken care of by the green tea and water preloading recommendations) or thirteen cups a day for men. If you have heart or kidney issues, don\'t increase fluid intake at all without first talking with your physician. Remember, diet soda may be calorie-free, but it\'s not consequence-free, as we learned in the Low in Added Sugar section.</string>
+    <string name="daily_cumin_text">Overweight women randomized to add a half teaspoon of cumin to their lunches and dinners beat out the control group by four more pounds and an extra inch off their waists. There is also evidence to support the use of the spice saffron, but a pinch per day would cost a dollar, whereas a teaspoon of cumin costs less than ten cents.</string>
+    <string name="daily_greentea_text">Drink three cups per day between meals (waiting at least an hour after a meal so as to not interfere with iron absorption). During meals, drink water, black coffee, or hibiscus tea mixed 6:1 with lemon verbena, but never exceed three cups of fluid an hour (important given my water preloading advice). Take advantage of the reinforcing effect of caffeine by drinking your green tea along with something healthy you wish you liked more, but don\'t consume large amounts of caffeine within six hours of bedtime. Taking your tea without sweetener is best, but if you typically sweeten your tea with honey or sugar, try yacon syrup instead.</string>
+    <string name="daily_hydrate_text">Check this box if your urine never appears darker than a pale yellow. Note that if you\'re eating riboflavin-fortified foods (such as nutritional yeast), then base this instead on getting nine cups of unsweetened beverages per day for women (which would be taken care of by the green tea and water preloading recommendations) or thirteen cups per day for men. If you have heart or kidney issues, don\'t increase fluid intake at all without first talking with your physician. Remember, diet soda may be calorie-free, but it\'s not consequence-free, as we learned in the Low in Added Sugar section.</string>
     <string name="daily_deflourdiet_text">Check this box every day your whole grain servings are in the form of intact grains. The powdering of even 100 percent whole grains robs our microbiomes of the starch that would otherwise be ferried down to our colons enclosed in unbroken cell walls.</string>
     <string name="daily_frontload_text">There are metabolic benefits to distributing more calories to earlier in the day, so make breakfast (ideally) or lunch your largest meal of the day in true king/prince/pauper style.</string>
     <string name="daily_timerestrict_text">Confine eating to a daily window of time of your choosing under twelve hours in length that you can stick to consistently, seven days a week. Given the circadian benefits of reducing evening food intake, the window should end before 7:00 p.m.</string>
-    <string name="exercise_timing_text">The Daily Dozen\'s recommendation for optimum exercise duration for longevity is ninety minutes of moderately intense activity a day, which is also the optimum exercise duration for weight loss. Anytime is good, and the more, the better, but there may be an advantage to exercising in a fasted state, at least six hours after your last meal. Typically, this would mean before breakfast, but if you timed it right, you could exercise midday before a late lunch or, if lunch is eaten early enough, before dinner. This is the timing for nondiabetics. Diabetics and prediabetics should instead start exercising thirty minutes after the start of a meal and ideally go for at least an hour to completely straddle the blood sugar peak. If you had to choose a single meal to exercise after, it would be dinner, due to the circadian rhythm of blood sugar control that wanes throughout the day. Ideally, though, breakfast would be the largest meal of the day, and you\'d exercise after that—or, even better, after every meal.</string>
-    <string name="weigh_twice_text">Regular self-weighing is considered crucial for long-term weight control, but there is insufficient evidence to support a specific frequency of weighing. My recommendation is based on the one study that found that twice daily—upon waking and right before bed—appeared superior to once a day (about six versus two pounds of weight loss over twelve weeks).</string>
-    <string name="complete_intentions_text">Every two months, create three new implementation intentions—"if X, then Y" plans to perform a particular behavior in a specific context—and check each one of them off as you complete them every day.</string>
+    <string name="exercise_timing_text">The Daily Dozen\'s recommendation for optimum exercise duration for longevity is ninety minutes of moderately intense activity per day, which is also the optimum exercise duration for weight loss. Anytime is good, and the more, the better, but there may be an advantage to exercising in a fasted state, at least six hours after your last meal. Typically, this would mean before breakfast, but if you timed it right, you could exercise midday before a late lunch or, if lunch is eaten early enough, before dinner. This is the timing for nondiabetics. Diabetics and prediabetics should instead start exercising thirty minutes after the start of a meal and ideally go for at least an hour to completely straddle the blood sugar peak. If you had to choose a single meal to exercise after, it would be dinner, due to the circadian rhythm of blood sugar control that wanes throughout the day. Ideally, though, breakfast would be the largest meal of the day, and you\'d exercise after that—or, even better, after every meal.</string>
+    <string name="weigh_twice_text">Regular self-weighing is considered crucial for long-term weight control, but there is insufficient evidence to support a specific frequency of weighing. My recommendation is based on the one study that found that twice daily—upon waking and right before bed—appeared superior to once per day (about six versus two pounds of weight loss over twelve weeks).</string>
+    <string name="complete_intentions_text">Every two months, create three new implementation intentions—\'if X, then Y\' plans to perform a particular behavior in a specific context—and check each one of them off as you complete them every day.</string>
     <string name="nightly_fast_text">Due to our circadian rhythms, food eaten at night is more fattening than the exact same food eaten earlier in the day, so fast every night for at least twelve hours starting before 7:00 p.m. The fewer calories after sundown, the better.</string>
     <string name="nightly_sleep_text">Check this box if you get at least seven hours of sleep at your regular bedtime.</string>
-    <string name="nightly_trendelenburg_text">Try spending at least four hours a night lying with your body tilted head-down six degrees by elevating the posts at the foot of your bed by eight inches (or by nine inches if you have a California king). Be extremely careful when you get out of bed, as this causes orthostatic intolerance in most people, even if you\'re young and healthy—meaning if you get up too fast, you can feel dizzy, faint, or light-headed and could fall and hurt yourself. So get up slowly. Drinking two cups of cold water thirty minutes before rising may also help prevent this potentially hazardous side effect.\n*IMPORTANT: Do not try this at home at all if you have any heart or lung issues, acid reflux, or problems with your brain (like head trauma) or eyes (even a family history of glaucoma disqualifies you). Also do not try this until you ask your physician if they think it\'s safe for you to sleep in mild Trendelenburg.*</string>
+    <string name="nightly_trendelenburg_text">Trendelenburg pulls more blood into the heart and encourages it to release a fat-burning hormone. Try spending at least four hours a night lying with your body tilted head-down six degrees by elevating the posts at the foot of your bed by eight inches (or by nine inches if you have a California king). \n\nBe extremely careful when you get out of bed, as this causes orthostatic intolerance in most people, even if you\'re young and healthy—meaning if you get up too fast, you can feel dizzy, faint, or light-headed and could fall and hurt yourself. So get up slowly. Drinking two cups of cold water thirty minutes before rising may also help prevent this potentially hazardous side effect.\n\n*IMPORTANT: Do not try this at home at all if you have any heart or lung issues, acid reflux, or problems with your brain (like head trauma) or eyes (even a family history of glaucoma disqualifies you). Also do not try this until you ask your physician if they think it\'s safe for you to sleep in mild Trendelenburg.*</string>
     <string name="for_health_and_weight_loss">For Health and Weight Loss</string>
     <string name="for_health_alone">For Health Alone</string>
     <string name="daily_dozen_and_tweaks">Daily Dozen + 21 Tweaks</string>
     <string name="daily_dozen_only">Daily Dozen Only</string>
 
     <!--
-    NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
-    must not be translated.
+    NOTE: These strings are used to create the url to take the user to the website topic page. 
+    These strings must not be translated.
     -->
     <string name="food_info_videos_beans" translatable="false">beans</string>
     <string name="food_info_videos_berries" translatable="false">berries</string>
@@ -252,19 +252,19 @@
     </string-array>
 
     <string-array name="food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/greens</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/flaxseeds</item>
-        <item>@string/nuts</item>
-        <item>@string/spices</item>
-        <item>@string/whole_grains</item>
-        <item>@string/beverages</item>
-        <item>@string/exercise</item>
-        <item>@string/vitamin_b12</item>
+        <item>@string/beans</item> <!-- Beans -->
+        <item>@string/berries</item> <!-- Berries -->
+        <item>@string/other_fruits</item> <!-- Other Fruits -->
+        <item>@string/cruciferous_vegetables</item> <!-- Cruciferous Vegetables -->
+        <item>@string/greens</item> <!-- Greens -->
+        <item>@string/other_vegetables</item> <!-- Other Vegetables -->
+        <item>@string/flaxseeds</item> <!-- Flaxseeds -->
+        <item>@string/nuts</item> <!-- Nuts -->
+        <item>@string/spices</item> <!-- Spices -->
+        <item>@string/whole_grains</item> <!-- Whole Grains -->
+        <item>@string/beverages</item> <!-- Beverages -->
+        <item>@string/exercise</item> <!-- Exercise -->
+        <item>@string/vitamin_b12</item> <!-- Vitamin B12 -->
     </string-array>
 
     <string-array name="notification_icon_food_names">
@@ -277,20 +277,20 @@
     </string-array>
 
     <integer-array name="food_quantities">
-        <item>3</item>
-        <item>1</item>
-        <item>3</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>3</item>
-        <item>5</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
+        <item>3</item> <!-- Beans -->
+        <item>1</item> <!-- Berries -->
+        <item>3</item> <!-- Other Fruits -->
+        <item>1</item> <!-- Cruciferous Vegetables -->
+        <item>2</item> <!-- Greens -->
+        <item>2</item> <!-- Other Vegetables -->
+        <item>1</item> <!-- Flaxseeds -->
+        <item>1</item> <!-- Nuts -->
+        <item>1</item> <!-- Spices -->
+        <item>3</item> <!-- Whole Grains -->
+        <item>5</item> <!-- Beverages -->
+        <item>1</item> <!-- Exercise -->
+        <item>1</item> <!-- Vitamin B12 -->
+        <item>1</item> <!-- What is this? -->
     </integer-array>
 
     <string-array name="tweak_id_names" translatable="false">
@@ -342,27 +342,27 @@
     </string-array>
 
     <integer-array name="tweak_amounts" translatable="false">
-        <item>3</item>
-        <item>3</item>
-        <item>3</item>
-        <item>3</item>
-        <item>3</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
+        <item>3</item> <!-- Meal Water -->
+        <item>3</item> <!-- Meal NegCal -->
+        <item>3</item> <!-- Meal Vinegar -->
+        <item>3</item> <!-- Meal Undistracted -->
+        <item>3</item> <!-- Meal 20 Minutes -->
+        <item>1</item> <!-- Daily Black Cumin -->
+        <item>1</item> <!-- Daily Garlic -->
+        <item>1</item> <!-- Daily Ginger -->
+        <item>1</item> <!-- Daily NutriYeast -->
+        <item>2</item> <!-- Daily Cumin -->
+        <item>3</item> <!-- Daily Green Tea -->
+        <item>1</item> <!-- Daily Hydrate -->
+        <item>1</item> <!-- Daily Deflour Diet -->
+        <item>1</item> <!-- Daily Front-Load -->
+        <item>1</item> <!-- Daily Time-Restrict -->
+        <item>1</item> <!-- Exercise Timing -->
+        <item>2</item> <!-- Weigh Twice -->
+        <item>3</item> <!-- Complete Intentions -->
+        <item>1</item> <!-- Nightly Fast -->
+        <item>1</item> <!-- Nightly Sleep -->
+        <item>1</item> <!-- Nightly Trendelenburg -->
     </integer-array>
 
     <string-array name="about_text_lines">
