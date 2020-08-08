@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Daily Dozen</string>
 
-    <string name="beans">Frijoles</string>
+    <string name="beans">Legumbres</string>
     <string name="berries">Bayas</string>
     <string name="other_fruits">Otras Frutas</string>
     <string name="cruciferous_vegetables">Vegetales Crucíferos</string>
