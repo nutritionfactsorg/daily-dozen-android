@@ -1,84 +1,84 @@
 <resources>
-    <string name="app_name">Daily Dozen</string>
+    <string name="app_name">Docena Diaria</string>
 
     <string name="beans">Legumbres</string>
-    <string name="berries">Bayas</string>
-    <string name="other_fruits">Otras Frutas</string>
-    <string name="cruciferous_vegetables">Vegetales Crucíferos</string>
-    <string name="greens">Vegetales de Hoja Verde</string>
-    <string name="other_vegetables">Otros Vegetales</string>
+    <string name="berries">Frutos rojos</string>
+    <string name="other_fruits">Otras frutas</string>
+    <string name="cruciferous_vegetables">Crucíferas</string>
+    <string name="greens">Verduras de hoja verde</string>
+    <string name="other_vegetables">Otras verduras</string>
     <string name="flaxseeds">Linaza</string>
-    <string name="nuts">Nueces</string>
+    <string name="nuts">Frutos secos</string>
     <string name="spices">Especias</string>
-    <string name="whole_grains">Granos Integrales</string>
+    <string name="whole_grains">Cereales integrales</string>
     <string name="beverages">Bebidas</string>
     <string name="exercise">Ejercicio</string>
     <string name="vitamin_b12">Vitamina B12</string>
-    <string name="serving_sizes">Tamaño de las Porciones</string>
+    <string name="serving_sizes">Tamaño de las porciones</string>
     <string name="types">Tipos</string>
-    <string name="history">Historia</string>
-    <string name="servings_some">Algunas Porciones</string>
-    <string name="servings_all">Todas las Porciones</string>
+    <string name="history">Historial</string>
+    <string name="servings_some">Algunas porciones</string>
+    <string name="servings_all">Todas las porciones</string>
     <string name="servings">Porciones</string>
     <string name="out_of">de</string>
     <string name="moving_average">Media Móvil</string>
     <string name="about">Conócenos</string>
-    <string name="about_this_app">Acerca de Esta App</string>
-    <string name="latest_videos">Videos más Recientes</string>
-    <string name="donate">Dona</string>
+    <string name="about_this_app">Sobre esta app</string>
+    <string name="latest_videos">Videos más recientes</string>
+    <string name="donate">Donación</string>
     <string name="subscribe">Suscríbete</string>
-    <string name="open_source">Código Abierto</string>
+    <string name="open_source">Código abierto</string>
     <string name="library_butterknife">ButterKnife</string>
-    <string name="permission_needed_to_write_storage">No puedes hacer copias de respaldo sin permiso para guardar en el disco duro</string>
-    <string name="backup_failed">Falla en la copia de respaldo</string>
-    <string name="restore_failed">Falla en restaurar</string>
-    <string name="backup_success">Respaldo exitoso</string>
-    <string name="restore_success">Restauración exitosa</string>
-    <string name="restore_confirm_title">Restaura el respaldo</string>
-    <string name="restore_confirm_message">Todos los datos existentes seran borrados antes de restaurar el respaldo. ¿Deseas continuar?</string>
+    <string name="permission_needed_to_write_storage">No puedes hacer copias de seguridad si no tienes permiso para guardarlas en el disco duro</string>
+    <string name="backup_failed">Copia de seguridad fallida</string>
+    <string name="restore_failed">Restauración fallida</string>
+    <string name="backup_success">Copia de seguridad efectuada</string>
+    <string name="restore_success">Restauración efectuada</string>
+    <string name="restore_confirm_title">Restaurar la copia de seguridad</string>
+    <string name="restore_confirm_message">Todos los datos existentes serán borrados antes de restaurar la copia de seguridad. ¿Deseas continuar?</string>
     <string name="yes">Sí</string>
     <string name="no">No</string>
-    <string name="backup">Respaldo</string>
-    <string name="food_info">Información sobre los Alimentos</string>
-    <string name="food_history">Historia Alimenticia</string>
-    <string name="daily_servings_history">Historial de Porciones Diarias</string>
-    <string name="no_servings_recorded">¡Todavía no has registrado ninguna porción!</string>
-    <string name="task_backup_title">Respaldando</string>
+    <string name="backup">Copia de seguridad</string>
+    <string name="food_info">Información alimenticia</string>
+    <string name="food_history">Historial alimenticio</string>
+    <string name="daily_servings_history">Historial de porciones diarias</string>
+    <string name="no_servings_recorded">Todavía no has registrado ninguna porción</string>
+    <string name="task_backup_title">Creando copia de seguridad</string>
     <string name="task_restore_title">Restaurando</string>
-    <string name="task_calculating_streaks_title">Calculando la racha</string>
-    <string name="back_to_today">Volver al día de hoy</string>
+    <string name="task_calculating_streaks_title">Calculando tu racha de porciones</string>
+    <string name="back_to_today">Volver a hoy</string>
     <string name="debug">Depurar</string>
     <string name="debug_clear_data">Borrar todos los datos</string>
     <string name="debug_clear_data_message">Esto borrará todas las porciones registradas. ¿Deseas continuar?</string>
-    <string name="OK">OK</string>
+    <string name="OK">Vale</string>
     <string name="dialog_streaks_title">Nueva característica: ¡Rachas!</string>
-    <string name="dialog_streaks_message">Tu base de datos será actualizada para sostener la nueva característica de rachas.</string>
-    <string name="dialog_no_email_apps_title">No se encontraron email apps</string>
-    <string name="dialog_no_email_apps_message">El respaldo de tu data requiere que tengas instalada un app de email para que puedas mandarte a ti mismo el archivo de respaldo .csv vía email. Por favor instala una app de email y trata de nuevo.</string>
-    <string name="debug_generate_random_data">Genera data al azar</string>
-    <string name="debug_generate_full_data">Genera data completa</string>
-    <string name="debug_generate_data_message">Toda la data existente será reemplazada. ¿Deseas continuar?</string>
-    <string name="task_generating_random_data">Generando data al azar</string>
-    <string name="task_loading_servings_history_title">Cargando Historial de Porciones</string>
-    <string name="time_scale">Escala de Tiempo</string>
-    <string name="history_to_generate">Historial a Generarse</string>
-    <string name="welcome_to_my_daily_dozen">¡Bienvenido a Mi Docena Diaria!</string>
-    <string name="activity_welcome_text">Utiliza esta app a diario para llevar un registro de los alimentos que recomiendo para salud óptima y longevidad en mi libro Como no Morir.</string>
+    <string name="dialog_streaks_message">Se actualizará la base de datos para incluir la nueva característica de rachas.</string>
+    <string name="dialog_no_email_apps_title">No se encontró ninguna aplicación de correo electrónico</string>
+    <string name="dialog_no_email_apps_message">Para crear una copia de seguridad, debes tener una aplicación de correo electrónico instalada, lo que te permitirá mandarte a ti mismo el archivo .csv por email. Instala una applicación de correo electrónico e inténtalo de nuevo.</string>
+    <string name="debug_generate_random_data">Generar datos al azar</string>
+    <string name="debug_generate_full_data">Generar datos completos</string>
+    <string name="debug_generate_data_message">Todos los datos existentes serán reemplazados. ¿Deseas continuar?</string>
+    <string name="task_generating_random_data">Generando datos al azar</string>
+    <string name="task_loading_servings_history_title">Cargando historial de porciones</string>
+    <string name="time_scale">Escala temporal</string>
+    <string name="history_to_generate">Historial a generar</string>
+    <string name="welcome_to_my_daily_dozen">¡Bienvenido a mi Docena Diaria!</string>
+    <string name="activity_welcome_text">Utiliza esta aplicación a diario para llevar un registro de los alimentos que recomiendo para una salud y longevidad óptimas en mi libro Comer para no morir.</string>
     <string name="dialog_ask_user_to_rate_app_title">¿Te gusta esta app?</string>
-    <string name="dialog_ask_user_to_rate_app_message">Por favor danos tus comentarios en el Play Store.</string>
-    <string name="rate_now">Danos tus Comentarios</string>
-    <string name="not_now">No en este momento</string>
+    <string name="dialog_ask_user_to_rate_app_message">Danos tu opinión en la Play Store.</string>
+    <string name="rate_now">Dar mi opinión</string>
+    <string name="not_now">Ahora no</string>
     <string name="format_version" formatted="false">versión %s</string>
     <string name="format_num_days" formatted="false">%d días</string>
     <string name="daily_reminder_title">Recordatorio de la Docena Diaria</string>
-    <string name="daily_reminder_text">Actualiza tus porciones de hoy</string>
-    <string name="daily_reminder_settings">Configuración del Recordatorio Diario</string>
-    <string name="enable_daily_reminder">Activa el Recordatorio Diario</string>
-    <string name="remind_me_at">Recuerdame a las</string>
-    <string name="vibrate">Vibra</string>
+    <string name="daily_reminder_text">Actualiza las porciones de hoy</string>
+    <string name="daily_reminder_settings">Ajustes del recordatorio diario</string>
+    <string name="enable_daily_reminder">Activad el recordatorio diario</string>
+    <string name="remind_me_at">Recuérdamelo a las</string>
+    <string name="vibrate">Vibración</string>
     <string name="play_sound">Sonido</string>
     <string name="videos">Videos</string>
-    <string name="units">Unidades</string>
+    <string name="units">Sistema</string>
     <string name="imperial">Imperial</string>
     <string name="metric">Métrico</string>
 
@@ -110,19 +110,19 @@
     <string-array name="about_text_lines">
         <item>Esta app fue creada por John Slavick.</item>
         <item />
-        <item>Las siguientes open source libraries fueron utilizadas: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, y MPAndroidChart.</item>
+        <item>Se utilizaron estas librerías de código abierto: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation y MPAndroidChart.</item>
         <item />
-        <item>Agradecimiento especial a los esfuerzos de los voluntarios de la app anterior: Chan Kruse, Allan Portera, y Sangeeta Kumar.</item>
+        <item>Muchas gracias a los voluntarios que ayudaron con la versión anterior de la app: Chan Kruse, Allan Portera y Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
-        <item>Sigue estos pasos para restaurar el respaldo en la Daily Dozen app</item>
+        <item>Sigue estos pasos para restaurar la copia de seguridad de la aplicación Dr. Greger's Daily Dozen.</item>
         <item />
-        <item>1. La Daily Dozen app debe estar instalada en tu telefono Android. La puedes accesar aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. Debes tener la aplicación Dr. Greger's Daily Dozen instalada en tu teléfono Android. Puedes acceder a ella aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
-        <item>2. Dale clic al archivo de respaldo anexado a este correo electronico.</item>
+        <item>2. Haz clic en la copia de seguridad anexada a este correo electronico.</item>
         <item />
-        <item>3. Selecciona Open with Daily Dozen</item>
+        <item>3. Selecciona la opción de abrir con Dr. Greger's Daily Dozen.</item>
     </string-array>
 
     <string-array name="servings_time_scale_choices">
@@ -599,11 +599,11 @@
         <item>40</item>
     </string-array>
 
-    <string name="error_cannot_handle_url">No puedes abrir el url. Por favor instala un browser.</string>
+    <string name="error_cannot_handle_url">No se puede abrir la URL. Debes instalar un navegador.</string>
     <string name="channel_reminders_name">Recordatorios</string>
 
-    <string name="twenty_one_tweaks">21 ajustes</string>
-    <string name="tweaks">Ajustes</string>
+    <string name="twenty_one_tweaks">21 potenciadores</string>
+    <string name="tweaks">Potenciadores</string>
     <string name="daily_tweaks_history">Historial de ajustes diarios</string>
     <string name="weight_history">Historia de peso</string>
     <string name="no_weights_recorded">¡Aún no has registrado ningún peso!</string>
