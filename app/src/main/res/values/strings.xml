@@ -205,6 +205,13 @@
     <string name="daily_dozen_and_tweaks">Daily Dozen + 21 Tweaks</string>
     <string name="daily_dozen_only">Daily Dozen Only</string>
 
+    <string name="theme" translatable="false">Theme</string>
+    <string-array name="theme_options" translatable="false">
+        <item>System Default</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
     must not be translated.
