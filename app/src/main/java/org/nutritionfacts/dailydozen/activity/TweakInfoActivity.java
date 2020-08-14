@@ -12,6 +12,7 @@ import org.nutritionfacts.dailydozen.model.Tweak;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import timber.log.Timber;
 
 public class TweakInfoActivity extends InfoActivity {
     @BindView(R.id.tweak_info_image)
@@ -24,6 +25,13 @@ public class TweakInfoActivity extends InfoActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (getTweak() == null) {
+            Timber.e("Could not open activity: getTweak returned null");
+            finish();
+            return;
+        }
+
         setContentView(R.layout.activity_tweak_info);
         ButterKnife.bind(this);
 
