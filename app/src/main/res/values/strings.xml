@@ -399,7 +399,6 @@
     </string-array>
 
     <string-array name="food_info_types_beans">
-        <item>Baked beans</item>
         <item>Black beans</item>
         <item>Black-eyed peas</item>
         <item>Butter beans</item>
@@ -859,7 +858,6 @@
     </string-array>
 
     <string-array name="food_videos_beans" translatable="false">
-        <item>baked-beans</item>
         <item>black-beans</item>
         <item/>
         <item/>
