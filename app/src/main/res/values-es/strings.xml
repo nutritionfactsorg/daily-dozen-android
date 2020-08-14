@@ -116,13 +116,13 @@
     </string-array>
 
     <string-array name="backup_instructions_lines">
-        <item>Sigue estos pasos para restaurar la copia de seguridad de la aplicación Dr. Greger's Daily Dozen.</item>
+        <item>Sigue estos pasos para restaurar la copia de seguridad de la aplicación Dr. Greger\'s Daily Dozen.</item>
         <item />
-        <item>1. Debes tener la aplicación Dr. Greger's Daily Dozen instalada en tu teléfono Android. Puedes acceder a ella aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. Debes tener la aplicación Dr. Greger\'s Daily Dozen instalada en tu teléfono Android. Puedes acceder a ella aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
         <item>2. Haz clic en la copia de seguridad anexada a este correo electronico.</item>
         <item />
-        <item>3. Selecciona la opción de abrir con Dr. Greger's Daily Dozen.</item>
+        <item>3. Selecciona la opción de abrir con Dr. Greger\'s Daily Dozen.</item>
     </string-array>
 
     <string-array name="servings_time_scale_choices">
