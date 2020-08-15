@@ -25,7 +25,7 @@ configurations {
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     buildToolsVersion '28.0.3'
 
     compileOptions {
@@ -35,10 +35,10 @@ android {
     defaultConfig {
         applicationId "org.nutritionfacts.dailydozen"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 29
         vectorDrawables.useSupportLibrary = true
-        versionCode 52
-        versionName "17.1"
+        versionCode 54
+        versionName "17.2"
     }
     buildTypes {
         debug {

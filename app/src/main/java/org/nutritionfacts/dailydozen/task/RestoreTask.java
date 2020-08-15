@@ -9,6 +9,7 @@ import androidx.collection.ArrayMap;
 
 import com.activeandroid.ActiveAndroid;
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
@@ -150,11 +151,12 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                 ActiveAndroid.setTransactionSuccessful();
             }
         } catch (InvalidDateException e) {
-            Timber.e(e, "restoreLine: ");
+            Timber.e(e, "restoreLineCSV: ");
         } finally {
             ActiveAndroid.endTransaction();
         }
     }
+
     @DebugLog
     private void restoreLineJSON(final String line) {
         if (TextUtils.isEmpty(line)) {
@@ -182,7 +184,9 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
             ActiveAndroid.setTransactionSuccessful();
         } catch (InvalidDateException e) {
-            Timber.e(e, "restoreLine: ");
+            Timber.e(e, "restoreLineJSON: ");
+        } catch (JsonSyntaxException e) {
+            Timber.e(e, "restoreLineJSON: ");
         } finally {
             ActiveAndroid.endTransaction();
         }
