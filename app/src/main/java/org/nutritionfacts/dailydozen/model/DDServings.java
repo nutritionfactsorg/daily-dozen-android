@@ -218,9 +218,11 @@ public class DDServings extends TruncatableModel implements Servings {
                     argsArray);
 
             for (DDServings serving : servings) {
-                servingsInMonth.put(
-                        serving.getDay(),
-                        serving.getServings() == food.getRecommendedAmount());
+                if (serving.getServings() > 0) {
+                    servingsInMonth.put(
+                            serving.getDay(),
+                            serving.getServings() == food.getRecommendedAmount());
+                }
             }
         }
 

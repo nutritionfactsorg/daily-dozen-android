@@ -26,6 +26,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import timber.log.Timber;
 
 public class FoodInfoActivity extends InfoActivity {
     @BindView(R.id.food_info_image)
@@ -42,6 +43,13 @@ public class FoodInfoActivity extends InfoActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (getFood() == null) {
+            Timber.e("Could not open activity: getFood returned null");
+            finish();
+            return;
+        }
+
         setContentView(R.layout.activity_food_info);
         ButterKnife.bind(this);
 
