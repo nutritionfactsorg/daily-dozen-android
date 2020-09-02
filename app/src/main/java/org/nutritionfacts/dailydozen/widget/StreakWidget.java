@@ -31,6 +31,7 @@ public class StreakWidget extends IconTextView {
 
     public void setStreak(int streak) {
         if (streak > ONE_DAY) {
+            setForceDarkAllowed(false);
             setVisibility(View.VISIBLE);
 
             setText(getContext().getString(R.string.format_num_days, streak));
