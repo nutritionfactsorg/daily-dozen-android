@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_toggle_modes"
+        android:title="@string/twenty_one_tweaks"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_latest_videos"
+        android:title="@string/latest_videos"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_how_not_to_die"
+        android:title="@string/title_how_not_to_die"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_cookbook"
+        android:title="@string/title_cookbook"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_how_not_to_diet"
+        android:title="@string/title_how_not_to_diet"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_daily_dozen_challenge"
+        android:title="@string/daily_dozen_challenge"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_donate"
+        android:title="@string/donate"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_subscribe"
+        android:title="@string/subscribe"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_open_source"
+        android:title="@string/open_source"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_daily_reminder_settings"
+        android:title="@string/daily_reminder_settings"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_theme"
+        android:title="@string/theme"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_backup"
+        android:title="@string/backup"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_about"
+        android:title="@string/about"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_debug"
+        android:title="@string/debug"
+        app:showAsAction="never" />
+</menu>

@@ -21,6 +21,7 @@ public class Prefs {
     private static final String PREF_UPDATE_REMINDER = "pref_update_reminder";
     private static final String DEFAULT_UPDATE_REMINDER_CREATED = "default_update_reminder_created";
     private static final String UNIT_TYPE = "unit_type";
+    private static final String THEME = "theme_pref";
 
     private static Prefs instance;
 
@@ -146,5 +147,13 @@ public class Prefs {
 
     public boolean getWeightVisible() {
         return sharedPrefs.getBoolean(PREF_SHOW_WEIGHT, true);
+    }
+
+    public void setThemePref(int theme) {
+        setIntegerPref(THEME, theme);
+    }
+
+    public int getThemePref() {
+        return getIntegerPref(THEME);
     }
 }
