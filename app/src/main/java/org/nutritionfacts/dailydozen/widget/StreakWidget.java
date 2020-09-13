@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -31,6 +32,10 @@ public class StreakWidget extends IconTextView {
 
     public void setStreak(int streak) {
         if (streak > ONE_DAY) {
+            if (Build.VERSION.SDK_INT >= 29) {
+                setForceDarkAllowed(false);
+            }
+
             setVisibility(View.VISIBLE);
 
             setText(getContext().getString(R.string.format_num_days, streak));

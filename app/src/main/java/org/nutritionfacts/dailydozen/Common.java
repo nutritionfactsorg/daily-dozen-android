@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
@@ -204,5 +205,9 @@ public class Common {
         TweakServings.truncate(TweakServings.class);
         Weights.truncate(Weights.class);
         Day.truncate(Day.class);
+    }
+
+    public static boolean isAppInDarkMode(final Context context) {
+        return (context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
     }
 }
