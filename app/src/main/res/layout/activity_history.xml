@@ -10,6 +10,7 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/history_card_container"
             app:cardElevation="6dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
