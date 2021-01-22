@@ -4,8 +4,9 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 public class PermissionController {
     private static final int WRITE_EXTERNAL_STORAGE_REQUEST = 1;
@@ -22,7 +23,7 @@ public class PermissionController {
                 WRITE_EXTERNAL_STORAGE_REQUEST);
     }
 
-    public static boolean grantedWriteExternalStorage(int requestCode, String[] permissions, int[] grantResults) {
+    public static boolean grantedWriteExternalStorage(int requestCode, int[] grantResults) {
         boolean permissionGranted = false;
 
         switch (requestCode) {

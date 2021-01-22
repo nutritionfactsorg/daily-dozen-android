@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.joanzapata.iconify.widget.IconButton
+        android:id="@+id/time_range_selector_earliest"
+        android:text="{fa-step-backward 14dp}"
+        android:layout_width="48dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/time_range_selector_year_container"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.joanzapata.iconify.widget.IconButton
+                android:id="@+id/time_range_selector_previous_year"
+                style="@style/TimeRangeSelector.PreviousButton" />
+
+            <TextView
+                android:id="@+id/time_range_selector_selected_year"
+                style="@style/TimeRangeSelector.Selected" />
+
+            <com.joanzapata.iconify.widget.IconButton
+                android:id="@+id/time_range_selector_next_year"
+                style="@style/TimeRangeSelector.NextButton" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/time_range_selector_month_container"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.joanzapata.iconify.widget.IconButton
+                android:id="@+id/time_range_selector_previous_month"
+                style="@style/TimeRangeSelector.PreviousButton" />
+
+            <TextView
+                android:id="@+id/time_range_selector_selected_month"
+                style="@style/TimeRangeSelector.Selected" />
+
+            <com.joanzapata.iconify.widget.IconButton
+                android:id="@+id/time_range_selector_next_month"
+                style="@style/TimeRangeSelector.NextButton" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.joanzapata.iconify.widget.IconButton
+        android:id="@+id/time_range_selector_latest"
+        android:text="{fa-step-forward 14dp}"
+        android:layout_width="48dp"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

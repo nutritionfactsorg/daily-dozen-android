@@ -2,19 +2,20 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-import org.nutritionfacts.dailydozen.model.Day;
-import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.GenerateDataTask;
-import org.nutritionfacts.dailydozen.task.GenerateDataTaskInput;
+import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
+import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,6 +24,8 @@ import butterknife.OnClick;
 public class DebugActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     @BindView(R.id.history_to_generate_spinner)
     protected Spinner historyToGenerateSpinner;
+    @BindView(R.id.debug_show_notification)
+    protected Button showNotificationButton;
 
     private int historyToGenerate;
 
@@ -43,7 +46,7 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
         historyToGenerateSpinner.setOnItemSelectedListener(this);
         historyToGenerateSpinner.setAdapter(adapter);
 
-        historyToGenerateSpinner.setSelection(3); // Select 1 year by default
+        historyToGenerateSpinner.setSelection(1); // Select 3 months by default
     }
 
     @OnClick(R.id.debug_clear_data)
@@ -54,9 +57,7 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Servings.truncate(Servings.class);
-                        Day.truncate(Day.class);
-
+                        Common.truncateAllDatabaseTables();
                         dialog.dismiss();
                     }
                 })
@@ -81,14 +82,14 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
 
     private void generateData(final boolean generateRandomData) {
         new AlertDialog.Builder(DebugActivity.this)
-                .setTitle(R.string.debug_generate_random_data)
+                .setTitle(generateRandomData ? R.string.debug_generate_random_data : R.string.debug_generate_full_data)
                 .setMessage(R.string.debug_generate_data_message)
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        final GenerateDataTaskInput taskInput = new GenerateDataTaskInput(historyToGenerate, generateRandomData);
+                        final GenerateDataTaskParams taskParams = new GenerateDataTaskParams(historyToGenerate, generateRandomData);
 
-                        new GenerateDataTask(DebugActivity.this).execute(taskInput);
+                        new GenerateDataTask(DebugActivity.this).execute(taskParams);
 
                         dialog.dismiss();
                     }
@@ -130,5 +131,10 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @OnClick(R.id.debug_show_notification)
+    public void onShowNotificationClicked() {
+        NotificationUtil.showUpdateReminderNotification(DebugActivity.this, null);
     }
 }

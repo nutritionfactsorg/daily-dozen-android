@@ -6,23 +6,26 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.FileProvider;
-import android.support.v4.view.PagerTabStrip;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.PagerTabStrip;
+import androidx.viewpager.widget.ViewPager;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-import org.nutritionfacts.dailydozen.adapter.DatePagerAdapter;
+import org.nutritionfacts.dailydozen.adapter.DailyDozenPagerAdapter;
+import org.nutritionfacts.dailydozen.adapter.TweaksPagerAdapter;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.controller.Prefs;
@@ -30,27 +33,32 @@ import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
 import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
 import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
-import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.task.BackupTask;
 import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
 import org.nutritionfacts.dailydozen.task.RestoreTask;
+import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
+import org.nutritionfacts.dailydozen.view.AppModeBottomSheet;
 
 import java.io.File;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import hirondelle.date4j.DateTime;
+import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
-
-    private static final int DEBUG_SETTINGS_REQUEST = 1;
 
     @BindView(R.id.date_pager)
     protected ViewPager datePager;
     @BindView(R.id.date_pager_indicator)
     protected PagerTabStrip datePagerIndicator;
+
+    private MenuItem menuToggleModes;
 
     private Handler dayChangeHandler;
     private Runnable dayChangeRunnable;
@@ -58,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
     private int daysSinceEpoch;
 
     private boolean alreadyHandledRestoreIntent;
+
+    private boolean inDailyDozenMode = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
         calculateStreaksAfterDatabaseUpgradeToV2();
 
         handleIntentIfNecessary();
+
+//        if (!Prefs.getInstance(this).userHasSeenOnboardingScreen()) {
+//            final AppModeBottomSheet appModeBottomSheet = AppModeBottomSheet.newInstance();
+//            appModeBottomSheet.setCancelable(false);
+//            appModeBottomSheet.show(getSupportFragmentManager(), AppModeBottomSheet.TAG);
+//        }
     }
 
     private void handleIntentIfNecessary() {
@@ -81,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
 
             if (extras != null) {
                 if (extras.getBoolean(Args.OPEN_NOTIFICATION_SETTINGS, false)) {
-                    NotificationUtil.dismissUpdateReminderNotification(this);
                     startActivity(new Intent(this, DailyReminderSettingsActivity.class));
                 }
             }
@@ -90,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void calculateStreaksAfterDatabaseUpgradeToV2() {
         if (!Prefs.getInstance(this).streaksHaveBeenCalculatedAfterDatabaseUpgradeToV2()) {
-            if (Servings.isEmpty()) {
+            if (DDServings.isEmpty()) {
                 Prefs.getInstance(this).setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2();
             } else {
                 new AlertDialog.Builder(this)
@@ -112,6 +127,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Bus.register(this);
+
+        NotificationUtil.dismissUpdateReminderNotification(this);
 
         // If the app is sent to the background and brought back to the foreground the next day, a crash results when
         // the adapter is found to return a different value from getCount() without notifyDataSetChanged() having been
@@ -164,17 +181,54 @@ public class MainActivity extends AppCompatActivity {
         // Only show the debug menu option if the apk is a debug build
         menu.findItem(R.id.menu_debug).setVisible(BuildConfig.DEBUG);
 
+        menuToggleModes = menu.findItem(R.id.menu_toggle_modes);
+
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        toggleTweaksMenuItemVisibility();
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    private void toggleTweaksMenuItemVisibility() {
+        if (menuToggleModes != null) {
+            menuToggleModes.setShowAsAction(
+                    Prefs.getInstance(this).isAppModeDailyDozenOnly() ?
+                            MenuItem.SHOW_AS_ACTION_NEVER :
+                            MenuItem.SHOW_AS_ACTION_IF_ROOM);
+        }
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_toggle_modes:
+                inDailyDozenMode = !inDailyDozenMode;
+                if (inDailyDozenMode) {
+                    setTitle(R.string.app_name);
+                    item.setTitle(R.string.twenty_one_tweaks);
+                } else {
+                    setTitle(R.string.twenty_one_tweaks);
+                    item.setTitle(R.string.app_name);
+                }
+                initDatePager();
+                return true;
             case R.id.menu_latest_videos:
                 Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);
                 return true;
             case R.id.menu_how_not_to_die:
-                Common.openUrlInExternalBrowser(this, R.string.url_book);
+                Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_die);
+                return true;
+            case R.id.menu_cookbook:
+                Common.openUrlInExternalBrowser(this, R.string.url_cookbook);
+                return true;
+            case R.id.menu_how_not_to_diet:
+                Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_diet);
+                return true;
+            case R.id.menu_daily_dozen_challenge:
+                Common.openUrlInExternalBrowser(this, R.string.url_daily_dozen_challenge);
                 return true;
             case R.id.menu_donate:
                 Common.openUrlInExternalBrowser(this, R.string.url_donate);
@@ -195,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, AboutActivity.class));
                 return true;
             case R.id.menu_debug:
-                startActivityForResult(new Intent(this, DebugActivity.class), DEBUG_SETTINGS_REQUEST);
+                startActivityForResult(new Intent(this, DebugActivity.class), Args.DEBUG_SETTINGS_REQUEST);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -207,21 +261,30 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         switch (requestCode) {
-            case DEBUG_SETTINGS_REQUEST:
+            case Args.DEBUG_SETTINGS_REQUEST:
                 // Always refresh the data shown when returning from the Debug Activity
                 initDatePager();
+                break;
+            case Args.SELECTABLE_DATE_REQUEST:
+                if (data != null && data.hasExtra(Args.DATE)) {
+                    setDatePagerDate(DateUtil.convertDateToDateTime((Date) data.getSerializableExtra(Args.DATE)));
+                }
                 break;
         }
     }
 
     private void initDatePager() {
-        final DatePagerAdapter datePagerAdapter = new DatePagerAdapter(getSupportFragmentManager());
-        datePager.setAdapter(datePagerAdapter);
-
-        daysSinceEpoch = datePagerAdapter.getCount();
+        final FragmentStatePagerAdapter pagerAdapter;
+        if (inDailyDozenMode) {
+            pagerAdapter = new DailyDozenPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        } else {
+            pagerAdapter = new TweaksPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        }
+        datePager.setAdapter(pagerAdapter);
+        daysSinceEpoch = pagerAdapter.getCount();
 
         // Go to today's date by default
-        datePager.setCurrentItem(datePagerAdapter.getCount(), false);
+        datePager.setCurrentItem(pagerAdapter.getCount(), false);
     }
 
     private void initDatePagerIndicator() {
@@ -235,7 +298,7 @@ public class MainActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        if (PermissionController.grantedWriteExternalStorage(requestCode, permissions, grantResults)) {
+        if (PermissionController.grantedWriteExternalStorage(requestCode, grantResults)) {
             backup();
         } else {
             Common.showToast(this, R.string.permission_needed_to_write_storage);
@@ -243,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void backup() {
-        if (!Servings.isEmpty()) {
+        if (!DDServings.isEmpty()) {
             if (PermissionController.canWriteExternalStorage(this)) {
                 new BackupTask(this).execute(getBackupFile());
             } else {
@@ -265,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
             // FIXME: 2/20/16 this should only be set to true if the RestoreTask returns true (did not fail and was not cancelled)
             alreadyHandledRestoreIntent = true;
 
-            if (!Servings.isEmpty()) {
+            if (!DDServings.isEmpty()) {
                 new AlertDialog.Builder(this)
                         .setTitle(R.string.restore_confirm_title)
                         .setMessage(R.string.restore_confirm_message)
@@ -295,7 +358,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public File getBackupFile() {
-        return new File(getFilesDir(), "dailydozen_backup.csv");
+        return new File(getFilesDir(), "dailydozen_backup.json");
     }
 
     private void shareBackupFile() {
@@ -376,6 +439,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Subscribe
     public void onEvent(DisplayDateEvent event) {
-        datePager.setCurrentItem(Day.getNumDaysSinceEpoch(event.getDate()));
+        setDatePagerDate(event.getDate());
+    }
+
+    private void setDatePagerDate(final DateTime dateTime) {
+        if (dateTime != null) {
+            Timber.d("Changing displayed date to %s", dateTime.toString());
+            datePager.setCurrentItem(Day.getNumDaysSinceEpoch(dateTime));
+        }
     }
 }

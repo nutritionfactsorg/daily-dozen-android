@@ -1,30 +1,38 @@
 package org.nutritionfacts.dailydozen.task;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v4.util.ArrayMap;
-import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.collection.ArrayMap;
+
+import com.google.gson.Gson;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.DayEntries;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.model.TweakServings;
+import org.nutritionfacts.dailydozen.model.Weights;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import hugo.weaving.DebugLog;
+import timber.log.Timber;
 
 public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
-    private final static String TAG = BackupTask.class.getSimpleName();
-
     private List<Day> allDays;
     private List<Food> allFoods;
+    private List<Tweak> allTweaks;
 
     public BackupTask(Context context) {
         super(context);
@@ -34,7 +42,7 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     protected void onPreExecute() {
         super.onPreExecute();
 
-        if (Servings.isEmpty()) {
+        if (DDServings.isEmpty()) {
             Common.showToast(getContext(), R.string.no_servings_recorded);
 
             progress.hide();
@@ -53,19 +61,20 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
 
         allDays = Day.getAllDays();
         allFoods = Food.getAllFoods();
+        allTweaks = Tweak.getAllTweaks();
 
         final File backupFile = params[0];
-        Log.d(TAG, "backupFilename = " + backupFile.getName());
+        Timber.d("backupFilename = %s", backupFile.getName());
 
         final int numDays = allDays.size();
 
         final String lineSeparator = Common.getLineSeparator();
 
-        final StringBuilder csvLines = new StringBuilder(getHeadersLine());
+        final StringBuilder jsonLines = new StringBuilder();
 
         for (int i = 0; i < numDays; i++) {
             if (!isCancelled()) {
-                csvLines.append(String.format("%s%s", lineSeparator, getDayLine(allDays.get(i))));
+                jsonLines.append(String.format("%s%s", lineSeparator, getDayJsonLine(allDays.get(i))));
 
                 publishProgress(i + 1, numDays);
             }
@@ -74,10 +83,10 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         if (!isCancelled()) {
             try {
                 final FileWriter fileWriter = new FileWriter(backupFile);
-                fileWriter.write(csvLines.toString());
+                fileWriter.write(jsonLines.toString());
                 fileWriter.close();
 
-                Log.d(TAG, "backup file successfully written");
+                Timber.d("backup file successfully written");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -107,39 +116,50 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
     }
 
     @DebugLog
-    private String getHeadersLine() {
-        final StringBuilder headers = new StringBuilder("Date");
-
-        for (Food food : allFoods) {
-            headers.append(String.format(",%s", food.getIdName()));
-        }
-
-        return headers.toString();
+    private String getDayJsonLine(Day day) {
+        final DayEntries dayEntries = new DayEntries();
+        dayEntries.setDate(day.getDateString());
+        dayEntries.setWeights(Weights.getWeightsOnDay(day));
+        dayEntries.setDailyDozen(createFoodServingsLookup(day));
+        dayEntries.setTweaks(createTweakServingsLookup(day));
+        return new Gson().toJson(dayEntries);
     }
 
-    @DebugLog
-    private String getDayLine(Day day) {
-        Map<Food, Integer> foodServingsMap = createFoodServingsLookup(day);
-
-        final StringBuilder line = new StringBuilder(String.valueOf(day.getDate()));
-
-        for (Food food : allFoods) {
-            line.append(String.format(",%s",
-                    foodServingsMap.containsKey(food) ? String.valueOf(foodServingsMap.get(food)) : "0"));
-        }
-
-        return line.toString();
-    }
-
-    // This method converts the List of Servings into a Map for much faster lookup.
     @NonNull
-    private Map<Food, Integer> createFoodServingsLookup(Day day) {
-        Map<Food, Integer> foodServingsMap = new ArrayMap<>();
+    private Map<String, Integer> createFoodServingsLookup(Day day) {
+        Map<String, Integer> foodServingsMap = new ArrayMap<>();
 
-        for (Servings servings : Servings.getServingsOnDate(day)) {
-            foodServingsMap.put(servings.getFood(), servings.getServings());
+        final Set<Food> missingFoodsOnDay = new HashSet<>(allFoods);
+
+        for (DDServings servings : DDServings.getServingsOnDate(day)) {
+            if (servings.getFood() != null) {
+                foodServingsMap.put(servings.getFood().getIdName(), servings.getServings());
+                missingFoodsOnDay.remove(servings.getFood());
+            }
+        }
+
+        for (Food missedFood : missingFoodsOnDay) {
+            foodServingsMap.put(missedFood.getIdName(), 0);
         }
 
         return foodServingsMap;
+    }
+
+    @NonNull
+    private Map<String, Integer> createTweakServingsLookup(Day day) {
+        Map<String, Integer> tweakServingsMap = new ArrayMap<>();
+
+        final Set<Tweak> missingTweaksOnDay = new HashSet<>(allTweaks);
+
+        for (TweakServings servings : TweakServings.getServingsOnDate(day)) {
+            tweakServingsMap.put(servings.getTweak().getIdName(), servings.getServings());
+            missingTweaksOnDay.remove(servings.getTweak());
+        }
+
+        for (Tweak missedTweak : missingTweaksOnDay) {
+            tweakServingsMap.put(missedTweak.getIdName(), 0);
+        }
+
+        return tweakServingsMap;
     }
 }

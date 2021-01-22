@@ -1,0 +1,689 @@
+<resources>
+    <string name="app_name">Daily Dozen</string>
+
+    <string name="beans">Όσπρια</string>
+    <string name="berries">Μούρα</string>
+    <string name="other_fruits">Άλλα Φρούτα</string>
+    <string name="cruciferous_vegetables">Σταυρανθή Λαχανικά</string>
+    <string name="greens">Πράσινα Φυλλώδη</string>
+    <string name="other_vegetables">Άλλα Λαχανικά</string>
+    <string name="flaxseeds">Λιναρόσπορος</string>
+    <string name="nuts">Ξηροί Καρποί</string>
+    <string name="spices">Μπαχαρικά</string>
+    <string name="whole_grains">Ολικής Αλέσεως</string>
+    <string name="beverages">Ροφήματα</string>
+    <string name="exercise">Γυμναστική</string>
+    <string name="vitamin_b12">Βιταμίνη B12</string>
+    <string name="serving_sizes">Μερίδα</string>
+    <string name="types">Τύποι</string>
+    <string name="history">Ιστορικό</string>
+    <string name="servings_some">Μερικές Μερίδες</string>
+    <string name="servings_all">Όλες οι μερίδες</string>
+    <string name="servings">Μερίδες</string>
+    <string name="out_of">από τις</string>
+    <string name="moving_average">Κινητός Μέσος Όρος</string>
+    <string name="about">Σχετικά</string>
+    <string name="about_this_app">Σχετικά με την εφαρμογή</string>
+    <string name="latest_videos">Τελευταία Βίντεο</string>
+    <string name="donate">Δωρεά</string>
+    <string name="subscribe">Εγγραφή</string>
+    <string name="open_source">Ανοιχτός Κώδικας</string>
+    <string name="library_butterknife">Μαχαίρι Βουτύρου</string>
+    <string name="permission_needed_to_write_storage">Αδύνατη η δημιουργία αντιγράφου ασφαλείας χωρίς δικαιώματα εγγραφής στον αποθηκευτικό χώρο</string>
+    <string name="backup_failed">Απέτυχε το αντίγραφο ασφαλείας</string>
+    <string name="restore_failed">Απέτυχε η επαναφορά αντιγράφου ασφαλείας</string>
+    <string name="backup_success">Επιτυχία αντιγράφου ασφαλείας</string>
+    <string name="restore_success">Επιτυχία επαναφοράς αντιγράφου ασφαλείας</string>
+    <string name="restore_confirm_title">Επαναφορά αντιγράφου ασφαλείας</string>
+    <string name="restore_confirm_message">Τυχόν υπάρχοντα δεδομένα θα διαγραφούν πριν από την επαναφορά του αντιγράφου ασφαλείας. Θέλετε να συνεχίσετε;</string>
+    <string name="yes">Ναι</string>
+    <string name="no">Όχι</string>
+    <string name="backup">Αντίγραφο Ασφαλείας</string>
+    <string name="food_info">Πληροφορίες Τροφίμων</string>
+    <string name="food_history">Ιστορικό Τροφίμων</string>
+    <string name="daily_servings_history">Ιστορικό Ημερήσιων Μερίδων</string>
+    <string name="no_servings_recorded">Δεν έχετε καταγράψει καμία μερίδα ακόμα!</string>
+    <string name="task_backup_title">Δημιουργείται αντίγραφο ασφαλείας</string>
+    <string name="task_restore_title">Γίνεται επαναφορά</string>
+    <string name="task_calculating_streaks_title">Calculating streaks</string>
+    <string name="back_to_today">Επιστροφή στο σήμερα</string>
+    <string name="debug">Εντοπισμός σφαλμάτων</string>
+    <string name="debug_clear_data">Διαγραφή όλων των δεδομένων</string>
+    <string name="debug_clear_data_message">Αυτό θα διαγράψει όλες τις Μερίδες που έχετε εισάγει. Θέλετε να συνεχίσετε;</string>
+    <string name="OK">OK</string>
+    <string name="dialog_streaks_title">Νέα λειτουργία: Σερί!</string>
+    <string name="dialog_streaks_message">Η βάση δεδομένων σας θα πρέπει τώρα να αναβαθμιστεί για να υποστηρίζει τη νέα λειτουργία για τα σερί.</string>
+    <string name="dialog_no_email_apps_title">Δεν βρέθηκαν εφαρμογές ηλεκτρονικού ταχυδρομείου</string>
+    <string name="dialog_no_email_apps_message">Η δημιουργία αντιγράφων ασφαλείας των δεδομένων σας απαιτεί να έχετε εγκαταστήσει μια εφαρμογή ηλεκτρονικού ταχυδρομείου, ώστε να μπορείτε να στείλετε το αρχείο .csv αντιγράφων ασφαλείας στον εαυτό σας. Παρακαλώ εγκαταστήστε μια εφαρμογή ηλεκτρονικού ταχυδρομείου και δοκιμάστε ξανά.</string>
+    <string name="debug_generate_random_data">Παραγωγή τυχαίων δεδομένων</string>
+    <string name="debug_generate_full_data">Παραγωγή πλήρων στοιχείων</string>
+    <string name="debug_generate_data_message">Όλα τα υπάρχοντα δεδομένα θα αντικατασταθούν. Θέλετε να συνεχίσετε;</string>
+    <string name="task_generating_random_data">Παράγονται τυχαία δεδομένα</string>
+    <string name="task_loading_servings_history_title">Φορτώνεται το Ιστορικό Μερίδων</string>
+    <string name="time_scale">Χρονοδιάγραμμα</string>
+    <string name="history_to_generate">Ιστορικό προς Παραγωγή</string>
+    <string name="welcome_to_my_daily_dozen">Καλωσορίσατε στο Daily Dozen!</string>
+    <string name="activity_welcome_text">Χρησιμοποιήστε αυτή την εφαρμογή σε καθημερινή βάση για να παρακολουθείτε τα τρόφιμα που συστήνω για τη βέλτιστη υγεία και μακροζωία στο βιβλίο μου How Not to Die.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Σας αρέσει αυτή η εφαρμογή;</string>
+    <string name="dialog_ask_user_to_rate_app_message">Παρακαλώ δώστε μας τα σχόλιά στο Play Store.</string>
+    <string name="rate_now">Αποστολή σχολίων</string>
+    <string name="not_now">Όχι τώρα</string>
+    <string formatted="false" name="format_version">εκδοχή %s</string>
+    <string formatted="false" name="format_num_days">%d ημέρες</string>
+    <string name="daily_reminder_title">Υπενθύμιση Daily Dozen</string>
+    <string name="daily_reminder_text">Ενημερώστε τις μερίδες σας για σήμερα</string>
+    <string name="daily_reminder_settings">Ρυθμίσεις Καθημερινής Υπενθύμισης</string>
+    <string name="enable_daily_reminder">Ενεργοποίηση Καθημερινής Υπενθύμισης</string>
+    <string name="remind_me_at">Θύμισέ μου στις</string>
+    <string name="vibrate">Δόνηση</string>
+    <string name="play_sound">Αναπαραγωγή ήχου</string>
+    <string name="videos">Βίντεο</string>
+    <string name="units">Μονάδες</string>
+    <string name="imperial">Αγγλοσαξονικό</string>
+    <string name="metric">Μετρικό</string>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+    </string-array>
+
+    <string-array name="notification_icon_food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
+    </string-array>
+
+    <string-array name="about_text_lines">
+        <item>Η εφαρμογή δημιουργήθηκε από τον John Slavick.</item>
+        <item/>
+        <item>Χρησιμοποιούνται οι ακόλουθες βιβλιοθήκες ανοικτού κώδικα: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation και MPAndroidChart.</item>
+        <item/>
+        <item>Ιδιαίτερες ευχαριστίες προς τις εθελοντικές προσπάθειες των δημιουργών της προηγούμενης εφαρμογής: Chan Kruse, Allan Portera και Sangeeta Kumar.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>Ακολουθήστε τα παρακάτω βήματα για να επαναφέρετε αυτό το αντίγραφο ασφαλείας στην εφαρμογή Daily Dozen</item>
+        <item/>
+        <item>1. Η εφαρμογή Daily Dozen πρέπει να εγκατασταθεί στο Android κινητό σας τηλέφωνο. Μπορείτε να τη κατεβάσετε από εδώ: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item/>
+        <item>2. Πατήστε στο αρχείο αντιγράφου ασφαλείας που επισυνάπτεται σε αυτό το email.</item>
+        <item/>
+        <item>3. Επιλέξτε Άνοιγμα με Daily Dozen</item>
+    </string-array>
+
+    <string-array name="servings_time_scale_choices">
+        <item>Ημέρα</item>
+        <item>Μήνας</item>
+        <item>Έτος</item>
+    </string-array>
+
+    <string-array name="history_to_generate_choices">
+        <item>1 μήνα</item>
+        <item>3 μήνες</item>
+        <item>6 μήνες</item>
+        <item>1 έτος</item>
+        <item>2 έτη</item>
+        <item>5 έτη</item>
+    </string-array>
+
+    <string-array name="food_info_types_beans">
+        <item>Μαύρα</item>
+        <item>Μαυρομάτικα</item>
+        <item>Χάντρες (μπαρμπούνια)</item>
+        <item>Γίγαντες</item>
+        <item>Ρεβίθια</item>
+        <item>Ενταμάμε</item>
+        <item>Αρακάς</item>
+        <item>Ρεβίθια</item>
+        <item>Μεγάλα βόρεια</item>
+        <item>Κόκκινα</item>
+        <item>Φακές (μαύρες beluga, γαλλικές, και κόκκινες ποικιλίες)</item>
+        <item>Μίσο</item>
+        <item>Νέιβι</item>
+        <item>Πίντο</item>
+        <item>Μικρά κόκκινα</item>
+        <item>Φάβα (κίτρινη ή πράσινη)</item>
+        <item>Τέμπε</item>
+    </string-array>
+
+    <string-array name="food_info_types_berries">
+        <item>Ασάι</item>
+        <item>Βερβερίς</item>
+        <item>Βατόμουρα</item>
+        <item>Μύρτιλα</item>
+        <item>Κεράσια (γλυκά ή ξινά)</item>
+        <item>Κονκόρντ σταφύλια</item>
+        <item>Φίγγι</item>
+        <item>Γκότζι μπέρι</item>
+        <item>Φορτουνέλλα</item>
+        <item>Μορέα</item>
+        <item>Βατόμουρα (μαύρα ή κόκκινα)</item>
+        <item>Φράουλες</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_fruits">
+        <item>Μήλα</item>
+        <item>Αποξηραμένα βερίκοκα</item>
+        <item>Αβοκάντο</item>
+        <item>Μπανάνες</item>
+        <item>Πεπονάκι</item>
+        <item>Κλημεντίνες</item>
+        <item>Dates</item>
+        <item>Ξερά σύκα</item>
+        <item>Φράπα</item>
+        <item>Χάνεϊντιου</item>
+        <item>Ακτινίδια</item>
+        <item>Λεμόνια</item>
+        <item>Λάιμ</item>
+        <item>Λίτσι</item>
+        <item>Μάνγκο</item>
+        <item>Νεκταρίνια</item>
+        <item>Πορτοκάλια</item>
+        <item>Παπάγια</item>
+        <item>Φρούτο του πάθους</item>
+        <item>Ροδάκινα</item>
+        <item>Αχλάδια</item>
+        <item>Ανανάς</item>
+        <item>Δαμάσκηνα (ειδικά μαύρα δαμάσκηνα)</item>
+        <item>Δαμασκηνοβερίκοκα</item>
+        <item>Ρόδια</item>
+        <item>Ξερά δαμάσκηνα</item>
+        <item>Μανταρίνια</item>
+        <item>Καρπούζι</item>
+    </string-array>
+
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Ρόκα</item>
+        <item>Μποκ τσόι</item>
+        <item>Μπρόκολο (και το Romanesco)</item>
+        <item>Λαχανάκια Βρυξελλών</item>
+        <item>Λάχανο (πράσινο, κόκκινο, σπαράγγι λάχανο)</item>
+        <item>Κουνουπίδι (λευκό, πράσινο, πορτοκαλί, μοβ)</item>
+        <item>Λαχανίδες</item>
+        <item>Χρένο</item>
+        <item>Κέιλ (μαύρο, πράσινο και κόκκινο)</item>
+        <item>Γογγυλοκράμβες (πράσινο, μωβ)</item>
+        <item>Πράσινα μουστάρδας</item>
+        <item>Ραπανάκια</item>
+        <item>Πράσινα γογγύλια</item>
+        <item>Κάρδαμο</item>
+    </string-array>
+
+    <string-array name="food_info_types_greens">
+        <item>Ρόκα</item>
+        <item>Χόρτα τεύτλων</item>
+        <item>Φύλλα Λαχανίδας</item>
+        <item>Κέιλ (μαύρο, πράσινο και κόκκινο)</item>
+        <item>Σαλάτα μείγμα (διάφορα είδη πράσινων)</item>
+        <item>Φύλλα μουστάρδας</item>
+        <item>Λάπαθο</item>
+        <item>Σπανάκι</item>
+        <item>Σέσκουλο</item>
+        <item>Φύλλα γογγύλιων</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_vegetables">
+        <item>Αγκινάρες</item>
+        <item>Σπαράγγια</item>
+        <item>Παντζάρια</item>
+        <item>Πιπεριές</item>
+        <item>Καρότα</item>
+        <item>Καλαμπόκι</item>
+        <item>Σκόρδο</item>
+        <item>Μανιτάρια (κουμπί, στρείδι, πόρτομπέλο, και σιτάκε)</item>
+        <item>Μπάμιες</item>
+        <item>Κρεμμύδια</item>
+        <item>Μωβ πατάτες</item>
+        <item>Κολοκύθα</item>
+        <item>Φύκια (arame, κόκκινο φύκι, και Νόρι)</item>
+        <item>Αρακάς</item>
+        <item>Κολοκύθα (delicata, καλοκαιρινή, και ποικιλίες μακαρονιών κολοκύθας)</item>
+        <item>Γλυκοπατάτες</item>
+        <item>Ντομάτες</item>
+        <item>Κολοκυθάκι</item>
+    </string-array>
+
+    <string-array name="food_info_types_flaxseeds">
+        <item>Λιναρόσπορος καφέ</item>
+        <item>Λιναρόσπορος χρυσός</item>
+    </string-array>
+
+    <string-array name="food_info_types_nuts">
+        <item>Αμύγδαλα</item>
+        <item>Καρυδιά Βραζιλίας</item>
+        <item>Κάσιους</item>
+        <item>Σπόροι τσία</item>
+        <item>Φουντούκια</item>
+        <item>Σπόροι κάνναβης</item>
+        <item>Μακαδάμια</item>
+        <item>Πεκάν</item>
+        <item>Φιστίκια Αιγίνης</item>
+        <item>Κολοκυθόσποροι</item>
+        <item>Σουσάμι</item>
+        <item>Ηλιόσποροι</item>
+        <item>Καρύδια</item>
+    </string-array>
+
+    <string-array name="food_info_types_spices">
+        <item>Μπαχάρι</item>
+        <item>Βερβερίς</item>
+        <item>Βασίλικος</item>
+        <item>Φύλλα δάφνης</item>
+        <item>Κάρδαμο</item>
+        <item>Τσίλι σε σκόνη</item>
+        <item>Κόλιαντρο</item>
+        <item>Κανέλα</item>
+        <item>Γαρίφαλο</item>
+        <item>Κολίανδρο</item>
+        <item>Κύμινο</item>
+        <item>Κάρυ</item>
+        <item>Άνηθος</item>
+        <item>Τριγωνέλλα</item>
+        <item>Σκόρδο</item>
+        <item>Τζίντζερ</item>
+        <item>Χρένο</item>
+        <item>Κυμβοπώγων</item>
+        <item>Μαντζουράνα</item>
+        <item>Σκόνη μουστάρδας</item>
+        <item>Μοσχοκάρυδο</item>
+        <item>Ρίγανη</item>
+        <item>Καπνιστή πάπρικα</item>
+        <item>Μαϊντανός</item>
+        <item>Πιπέρι</item>
+        <item>Μέντα</item>
+        <item>Δενδρολίβανο</item>
+        <item>Σαφράνι</item>
+        <item>Φασκόμηλο</item>
+        <item>Θυμάρι</item>
+        <item>Κουρκουμάς</item>
+        <item>Βανίλια</item>
+    </string-array>
+
+    <string-array name="food_info_types_whole_grains">
+        <item>Κριθάρι</item>
+        <item>Φαγόπυρο</item>
+        <item>Κεχρί</item>
+        <item>Βρώμη</item>
+        <item>Ποπ κορν</item>
+        <item>Κινόα</item>
+        <item>Σίκαλη</item>
+        <item>Τεφ</item>
+        <item>Ζυμαρικά ολικής αλέσεως</item>
+    </string-array>
+
+    <string-array name="food_info_types_beverages">
+        <item>Μαύρο τσάι</item>
+        <item>Τσάι μασάλα</item>
+        <item>Βανίλια χαμομήλι</item>
+        <item>Καφές</item>
+        <item>Τσάι Earl Grey</item>
+        <item>Πράσινο τσάι</item>
+        <item>Τσάι υβίσκου</item>
+        <item>Ζεστή σοκολάτα</item>
+        <item>Τσάι γιασεμί</item>
+        <item>Τσάι με λεμόνι βάλσαμο</item>
+        <item>Τσάι μάτσα</item>
+        <item>Τσάι ούλονγκ</item>
+        <item>Τσάι μίνθη</item>
+        <item>Τσάι Ρόιμπος</item>
+        <item>Νερό</item>
+        <item>Λευκό τσάι</item>
+    </string-array>
+
+    <string-array name="food_info_types_exercise">
+        <item>Ποδηλασία</item>
+        <item>Κωπηλασία με κανό</item>
+        <item>Χορός</item>
+        <item>Ντότζμπολ</item>
+        <item>Κατάβαση</item>
+        <item>Ξιφασκία</item>
+        <item>Πεζοπορία</item>
+        <item>Δουλειες του σπιτιού</item>
+        <item>Σκέϊτ στον πάγο</item>
+        <item>Πατίνια ρόλλερ</item>
+        <item>Ζογκλερικά</item>
+        <item>Άλματα σε τραμπολίνο</item>
+        <item>Κουπί βαρκάδα</item>
+        <item>Φρίσμπι</item>
+        <item>Ρόλερ Πατινάζ</item>
+        <item>Kαλάθια Σκοποβολή</item>
+        <item>Ελαφρύ φτυαρίσμα χιονιού</item>
+        <item>Σκέιτμπορντ</item>
+        <item>Περιήγηση επιφανείας</item>
+        <item>Σέρφινγκ</item>
+        <item>Κολύμβηση αναψυχής</item>
+        <item>Τένις (διπλό)</item>
+        <item>Όρθιο κολύμπι</item>
+        <item>Ζωηρό βάδισμα (6 χλμ)</item>
+        <item>Αεροβική στο νερό</item>
+        <item>Θαλάσσιο σκι</item>
+        <item>Δουλειά κήπου</item>
+        <item>Γιόγκα</item>
+        <item>Σακίδιο στην πλάτη</item>
+        <item>Καλαθοσφαίρηση</item>
+        <item>Ποδηλασία σε ανηφόρα</item>
+        <item>Κυκλική προπόνηση με βάρη</item>
+        <item>Σκι cross-country</item>
+        <item>Ποδόσφαιρο</item>
+        <item>Χόκεϊ</item>
+        <item>Στίβος</item>
+        <item>Άλματα</item>
+        <item>Σχοινάκι</item>
+        <item>Λακρός</item>
+        <item>Κάμψεις</item>
+        <item>Έλξεις</item>
+        <item>Ράκετμπολ</item>
+        <item>Αναρρίχηση</item>
+        <item>Ράγκμπι</item>
+        <item>Τρέξιμο</item>
+        <item>Κατάδυση</item>
+        <item>Τένις (μονό)</item>
+        <item>Ποδόσφαιρο</item>
+        <item>Πατινάζ ταχύτητας</item>
+        <item>Καθίσματα</item>
+        <item>Αεροβική step</item>
+        <item>Γύροι κολύμβησης</item>
+        <item>Ζωηρό βάδισμα σε ανηφόρα</item>
+        <item>Τζόκινγκ νερού</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans">
+        <item>%s χούμους ή ντιπ φασολιού</item>
+        <item>%s μαγειρεμένα φασόλια, φάβα, φακές, τόφου, ή τέμπε</item>
+        <item>%s αρακά ή φακές φυτρωμένες</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ φλιτζάνι</item>
+        <item>½ φλιτζάνι</item>
+        <item>1 φλιτζάνι</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 γραμμάρια</item>
+        <item>130 γραμμάρια</item>
+        <item>150 γραμμάρια</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries">
+        <item>%s φρέσκα ή κατεψυγμένα</item>
+        <item>%s αποξηραμένα</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ φλιτζάνι</item>
+        <item>¼ φλιτζανιού</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 γραμμάρια</item>
+        <item>40 γραμμάρια</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>%s1 μεσαίου μεγέθους φρούτο</item>
+        <item>%s κομμένο φρούτο</item>
+        <item>%s αποξηραμένο φρούτο</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item/>
+        <item>1 φλυτζάνι</item>
+        <item>¼ φλιτζάνι</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item/>
+        <item>120 γραμμάρια</item>
+        <item>40 γραμμάρια</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+        <item>%s ψιλοκομμένα</item>
+        <item>%s λαχανάκι Βρυξέλλών ή φύτρα μπρόκολου</item>
+        <item>%s1 κουταλιά της σούπας χρένο</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ φλιτζάνι</item>
+        <item>¼ φλιτζάνι</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 γραμμάρια</item>
+        <item>12 γραμμάρια</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens">
+        <item>%s ωμά</item>
+        <item>%s μαγειρεμένα</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 φλιτζάνι</item>
+        <item>½ φλιτζάνι</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 γραμμάρια</item>
+        <item>90 γραμμάρια</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>%s ωμά φυλλώδη λαχανικά</item>
+        <item>%s ωμά ή μαγειρεμένα μη φυλλώδη λαχανικά</item>
+        <item>%s χυμό λαχανικών</item>
+        <item>%s αποξηραμένα μανιτάρια</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 φλιτζάνι</item>
+        <item>½ φλιτζάνι</item>
+        <item>½ φλιτζάνι</item>
+        <item>¼ φλιτζάνι</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 γραμμάρια</item>
+        <item>50 γραμμάρια</item>
+        <item>125 ml</item>
+        <item>7 γραμμάρια</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>%s1 κουταλιά της σούπας αλεσμένο</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>%s ξηρούς καρπούς ή σπόρους</item>
+        <item>%s2 κουταλιές βούτηρο ξηρών καρπών ή σπόρων</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ φλιτζάνι</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 γραμμάρια</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices">
+        <item>%s¼ κουταλάκι του γλυκού κουρκουμά</item>
+        <item>%sΌτι άλλο (χωρίς αλάτι) βότανο και μπαχαρικό σας αρέσει</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>%s ζεστά δημητριακά ή μαγειρεμένα, ζυμαρικά, ή πυρήνες καλαμποκιού</item>
+        <item>%s κρύα δημητριακά</item>
+        <item>%s1 τορτίγια ή φέτα ψωμί</item>
+        <item>%s½ κουλούρι ή αγγλικό μάφιν</item>
+        <item>%s ποπ κορν</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ φλιτζάνι</item>
+        <item>1 φλιτζάνι</item>
+        <item/>
+        <item/>
+        <item>3 φλιτζάνια</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 γραμμάρια</item>
+        <item>50 γραμμάρια</item>
+        <item/>
+        <item/>
+        <item>30 γραμμάρια</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages">
+        <item>Ένα ποτήρι (%s)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12 Ουγγιές</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350 ml</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>%s90 λεπτά δραστηριότητα μέτριας έντασης</item>
+        <item>%s40 λεπτά δραστηριότητα έντονης έντασης</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string name="error_cannot_handle_url">Δεν ήταν δυνατό το άνοιγμα url. Παρακαλώ εγκαταστήστε ένα πρόγραμμα περιήγησης.</string>
+    <string name="channel_reminders_name">Υπενθυμίσεις</string>
+
+    <string name="twenty_one_tweaks">21 Τσίμπημα</string>
+    <string name="tweaks">Βελτιώσεις</string>
+    <string name="daily_tweaks_history">Ημερήσια ιστορία tweaks</string>
+    <string name="weight_history">Βάρος Ιστορία</string>
+    <string name="no_weights_recorded">Δεν έχετε καταγράψει ακόμα βάρη!</string>
+    <string name="task_loading_weights_history_title">Φόρτωση Ιστορικού Βάσεων</string>
+    <string name="morning">Πρωί</string>
+    <string name="evening">Απόγευμα</string>
+    <string name="weight">Βάρος</string>
+    <string name="tweak_group_meal">Σε κάθε γεύμα</string>
+    <string name="tweak_group_daily">Κάθε μέρα</string>
+    <string name="tweak_group_dailydoses">Πάρτε τις ημερήσιες δόσεις σας</string>
+    <string name="tweak_group_nightly">Κάθε βράδυ</string>
+    <string name="about_tweak">Σχετικά με το Tweak</string>
+    <string name="meal_water">Προφόρτιση με νερό</string>
+    <string name="meal_negcal">Προεφοδιασμός με τρόφιμα με αρνητική θερμίδα</string>
+    <string name="meal_vinegar">Ενσωματώστε ξίδι (2 κουταλιές της σούπας με κάθε γεύμα)</string>
+    <string name="meal_undistracted">Απολαύστε ανεπιθύμητα γεύματα</string>
+    <string name="meal_twentyminutes">Ακολουθήστε τον κανόνα είκοσι λεπτών</string>
+    <string name="daily_blackcumin">Μαύρο Κύμινο (¼ κουταλάκι κλπ)</string>
+    <string name="daily_garlic">Σκόνη σκόρδου (¼ κουταλάκι σούπας)</string>
+    <string name="daily_ginger">Ground Ginger (1 κουταλάκι του γλυκού) ή πιπέρι Cayenne (½ κουταλάκι του γλυκού)</string>
+    <string name="daily_nutriyeast">Διατροφική ζύμη (2 κουταλιές της σούπας)</string>
+    <string name="daily_cumin">Κύμινο (½ κουταλάκι με μεσημεριανό γεύμα και δείπνο)</string>
+    <string name="daily_greentea">Πράσινο Τσάι (3 φλιτζάνια)</string>
+    <string name="daily_hydrate">Μείνετε ενυδατωμένοι</string>
+    <string name="daily_deflourdiet">Ξεχώρα τη διατροφή σας</string>
+    <string name="daily_frontload">Μπροστά-Φορτώστε τις θερμίδες σας</string>
+    <string name="daily_timerestrict">Χρόνος-Περιορισμός της κατανάλωσης</string>
+    <string name="exercise_timing">Βελτιστοποιήστε το χρονικό διάστημα άσκησης</string>
+    <string name="weigh_twice">Ζυγίστε τον εαυτό σας δύο φορές την ημέρα</string>
+    <string name="complete_intentions">Συμπληρώστε τις Προθέσεις σας εφαρμογής</string>
+    <string name="nightly_fast">Γρήγορα μετά τις 7:00 μ.μ.</string>
+    <string name="nightly_sleep">Αποκτήστε επαρκή ύπνο</string>
+    <string name="nightly_trendelenburg">Πειραματιστείτε με το Mild Trendelenburg</string>
+    <string name="debug_generate_weight_data">Δημιουργία δεδομένων βάρους</string>
+    <string name="average_weight_on_day">Μέσο βάρος την ημέρα</string>
+    <string name="meal_water_short">Προφόρτιση με νερό</string>
+    <string name="meal_negcal_short">Προεφοδιασμός με τρόφιμα με αρνητική θερμίδα</string>
+    <string name="meal_vinegar_short">Ενσωματώστε ξίδι (2 κουταλιές της σούπας με κάθε γεύμα)</string>
+    <string name="meal_undistracted_short">Απολαύστε ανεπιθύμητα γεύματα</string>
+    <string name="meal_twentyminutes_short">Ακολουθήστε τον κανόνα είκοσι λεπτών</string>
+    <string name="daily_blackcumin_short">Μαύρη Κύμινο (Nigella sativa) (¼ κουταλάκι του γλυκού)</string>
+    <string name="daily_garlic_short">Σκόνη σκόρδου (¼ κουταλάκι σούπας)</string>
+    <string name="daily_ginger_short">Ground Ginger (1 κουταλάκι του γλυκού) ή πιπέρι Cayenne (½ κουταλάκι του γλυκού)</string>
+    <string name="daily_nutriyeast_short">Διατροφική ζύμη (2 κουταλιές της σούπας)</string>
+    <string name="daily_cumin_short">Κύμινο (Cumin cyminum) (½ κουταλάκι του γλυκού με μεσημεριανό γεύμα και δείπνο)</string>
+    <string name="daily_greentea_short">Πράσινο Τσάι (3 φλιτζάνια)</string>
+    <string name="daily_hydrate_short">Μείνετε ενυδατωμένοι</string>
+    <string name="daily_deflourdiet_short">Ξεχώρα τη διατροφή σας</string>
+    <string name="daily_frontload_short">Μπροστά-Φορτώστε τις θερμίδες σας</string>
+    <string name="daily_timerestrict_short">Χρόνος-Περιορισμός της κατανάλωσης</string>
+    <string name="exercise_timing_short">Βελτιστοποιήστε το χρονικό διάστημα άσκησης</string>
+    <string name="weigh_twice_short">Ζυγίστε τον εαυτό σας δύο φορές την ημέρα</string>
+    <string name="complete_intentions_short">Συμπληρώστε τις Προθέσεις σας εφαρμογής</string>
+    <string name="nightly_fast_short">Γρήγορα μετά τις 7:00 μ.μ.</string>
+    <string name="nightly_sleep_short">Αποκτήστε επαρκή ύπνο</string>
+    <string name="nightly_trendelenburg_short">Πειραματιστείτε με το Mild Trendelenburg</string>
+    <string name="meal_water_text">Προχωρήστε στο μεταβολισμό σας-ενισχύοντας δύο φλιτζάνια δροσερό ή κρύο αρωματισμένο νερό πριν από κάθε γεύμα για να επωφεληθείτε επίσης από τα προφορικά του οφέλη.</string>
+    <string name="meal_negcal_text">Ως πρώτη σειρά μαθημάτων, ξεκινήστε κάθε γεύμα με μήλο ή σούπα πράσινου φωτός ή σαλάτα που περιέχει λιγότερες από εκατό θερμίδες ανά φλιτζάνι.</string>
+    <string name="meal_vinegar_text">Ποτέ μην πίνετε ξύδι ευθεία. Αντ \'αυτού, τα γεύματα γεύσης ή ντύνονται μια πλευρά σαλάτα με οποιοδήποτε από τα γλυκά και αλμυρά ξίδια από εκεί έξω. Αν θέλετε να το πιείτε, βεβαιωθείτε ότι το ανακατεύετε σε ένα ποτήρι νερό και, στη συνέχεια, φροντίστε να ξεπλύνετε το στόμα σας με νερό για να προστατέψετε το σμάλτο των δοντιών σας.</string>
+    <string name="meal_undistracted_text">Μην τρώτε ενώ παρακολουθείτε τηλεόραση ή παίζετε στο τηλέφωνό σας. Δώστε στον εαυτό σας μια επιταγή για κάθε γεύμα που μπορείτε να φάτε χωρίς να ξεσκεπάζετε.</string>
+    <string name="meal_twentyminutes_text">Είτε με την αύξηση του ιξώδους ή τον αριθμό των μασών, είτε με το μειωμένο μέγεθος τσιμπήματος και με το ρυθμό κατανάλωσης, δεκάδες μελέτες έχουν αποδείξει ότι ανεξάρτητα από το πόσο αυξάνουμε την ποσότητα του χρόνου που υπάρχει στο στόμα μας, μπορεί να οδηγήσει σε χαμηλότερη θερμιδική πρόσληψη. Συνεπώς, παρατείνετε τη διάρκεια του γεύματος σε τουλάχιστον είκοσι λεπτά για να επιτρέψετε στα φυσικά σας σήματα κορεσμού να αποδώσουν πλήρως αποτελέσματα. Πως? Επιλέγοντας τρόφιμα που χρειάζονται περισσότερο χρόνο για φαγητό και φαγητό με τρόπο που παρατείνει το χρόνο που μένουν στο στόμα σας. Σκεφτείτε τα ογκώδη, σκληρότερα, chewier τρόφιμα σε μικρότερα, καλά-μασή δαγκώματα.</string>
+    <string name="daily_blackcumin_text">Όπως αναφέρθηκε στην ενότητα Καταστολής της όρεξης, μια συστηματική ανασκόπηση και μετα-ανάλυση τυχαιοποιημένων, ελεγχόμενων δοκιμών απώλειας βάρους διαπίστωσε ότι περίπου το ένα τέταρτο κουταλάκι του γλυκού σκόνη μαύρου κύμινο κάθε μέρα φαίνεται ότι μειώνει τον δείκτη μάζας σώματος μέσα σε ένα διάστημα δύο μηνών. Σημειώστε ότι το μαύρο κύμινο είναι διαφορετικό από το κανονικό κύμινο, για το οποίο η δοσολογία είναι διαφορετική.</string>
+    <string name="daily_garlic_text">Οι τυχαιοποιημένες, διπλά τυφλές, ελεγχόμενες με εικονικό φάρμακο μελέτες έχουν διαπιστώσει ότι μόλις ένα κουταλάκι του γλυκού σκόνη σκόρδου ημερησίως μπορεί να μειώσει το σωματικό λίπος με κόστος περίπου δύο λεπτών την ημέρα.</string>
+    <string name="daily_ginger_text">Οι τυχαίες ελεγχόμενες δοκιμές έχουν διαπιστώσει ότι ¼ κουταλάκι του γλυκού έως 1½ κουταλάκια του γλυκού την ημέρα από το τζίντζερ εδάφους μειώνει σημαντικά το σωματικό βάρος μόνο για τις πένες την ημέρα. Μπορεί να είναι τόσο εύκολη όσο η ανάδευση του αλεσμένου μπαχαρικού σε ένα φλιτζάνι ζεστό νερό. Σημείωση: Το τζίντζερ μπορεί να λειτουργεί καλύτερα το πρωί από το βράδυ. Το τσάι Chai είναι ένας νόστιμος τρόπος για να συνδυάσετε το πράσινο τσάι και τα κόλπα τζίντζερ σε ένα μόνο ποτό. Εναλλακτικά, για την ενεργοποίηση των ΒΔΤ, μπορείτε να προσθέσετε ένα ασήμι jalapeño ή μισό κουταλάκι του γλυκού σκόνη κόκκινου πιπεριού (ή, ενδεχομένως, θρυμματισμένες νιφάδες κόκκινου πιπεριού) στην καθημερινή διατροφή σας. Για να βοηθήσετε να χτυπήσετε τη θερμότητα, μπορείτε να κόψετε πολύ ή να ψιλοκόψετε το jalapeño για να μειώσετε το δάγκωμά του σε μικρές τσιμπήματα ή να αναμίξετε το κόκκινο πιπέρι με τη σούπα ή με το λαχανικό λαχανικών ολόκληρου του τροφίμου που έχω δει σε ένα από τα μαγείρεμα βίντεο στο NutritionFacts.org .</string>
+    <string name="daily_nutriyeast_text">Δύο κουταλάκια του γλυκού ζύμης, ζυθοποιίας ή θρεπτικής ζύμης περιέχουν περίπου την ποσότητα βήτα 1,3 / 1,6 γλυκανών που βρέθηκαν σε τυχαιοποιημένες, διπλά τυφλές, ελεγχόμενες με εικονικό φάρμακο κλινικές δοκιμές για τη διευκόλυνση της απώλειας βάρους.</string>
+    <string name="daily_cumin_text">Οι υπερβολικές γυναίκες που τυχαιοποιήθηκαν για να προσθέσουν μισό κουταλάκι του γλυκού κύμινο στα γεύματα και τα δείπνα τους χτύπησαν την ομάδα ελέγχου κατά τέσσερα κιλά περισσότερο και μια επιπλέον ίντσα από τις μέσες τους. Υπάρχουν επίσης στοιχεία που υποστηρίζουν τη χρήση του σαφράν μπαχαρικών, αλλά ένα τσίμπημα την ημέρα θα κοστίσει ένα δολάριο, ενώ ένα κουταλάκι του κουταλιού κοστίζει λιγότερο από δέκα λεπτά.</string>
+    <string name="daily_greentea_text">Πίνετε τρία φλιτζάνια την ημέρα μεταξύ των γευμάτων (περιμένετε τουλάχιστον μία ώρα μετά το γεύμα, ώστε να μην παρεμβαίνει στην απορρόφηση του σιδήρου). Κατά τη διάρκεια των γευμάτων, πίνετε νερό, μαύρο καφέ ή τσάι ιβίσκου που αναμιγνύεται 6: 1 με λεβέντα, αλλά ποτέ δεν υπερβαίνει τα τρία φλιτζάνια υγρών την ώρα. Επωφεληθείτε από την ενισχυτική επίδραση της καφεΐνης πίνοντας το πράσινο τσάι σας μαζί με κάτι υγιές που σας αρέσει να σας αρέσει περισσότερο, αλλά μην καταναλώνετε μεγάλες ποσότητες καφεΐνης μέσα σε έξι ώρες από την ώρα του ύπνου. Λαμβάνοντας το τσάι σας χωρίς γλυκαντικές ουσίες είναι καλύτερο, αλλά εάν τυπικά γλυκάτε το τσάι σας με μέλι ή ζάχαρη, δοκιμάστε το σιρόπι γιάκον.</string>
+    <string name="daily_hydrate_text">Επιλέξτε αυτό το πλαίσιο εάν τα ούρα σας δεν εμφανίζονται ποτέ πιο σκούρα από ένα ανοιχτό κίτρινο. Σημειώστε ότι εάν τρώτε εμπλουτισμένα με ριβοφλαβίνη τρόφιμα (όπως θρεπτική ζύμη), στη συνέχεια στηρίξτε αυτή την ουσία για να πάρετε εννέα φλυτζάνια ποτών χωρίς ζάχαρη ημερησίως για τις γυναίκες (οι οποίες θα ληφθούν μέριμνα από τις συστάσεις για την προφόρτιση του πράσινου τσαγιού και του νερού) ή δεκατρία φλιτζάνια την ημέρα για τους άνδρες. Εάν έχετε προβλήματα με την καρδιά ή τα νεφρά, μην αυξάνετε καθόλου την πρόσληψη υγρών χωρίς να μιλήσετε πρώτα με τον γιατρό σας. Θυμηθείτε ότι η σόδα διατροφής μπορεί να είναι χωρίς θερμίδες, αλλά δεν είναι χωρίς συνέπειες, όπως μάθαμε στο τμήμα Low in Sugar.</string>
+    <string name="daily_deflourdiet_text">Ελέγξτε αυτό το κουτί κάθε μέρα οι ολόκληρες μερίδες σιτηρών σας έχουν τη μορφή άθικτων κόκκων. Η κονιοποίηση ακόμη και 100 τοις εκατό ολικής αλέσεως σκουπίζει τα μικροβιακά μας αμύλου τα οποία διαφορετικά θα μεταφερθούν προς τα κάτω στους πυρήνες μας που περικλείονται σε αδιαίρετα κυτταρικά τοιχώματα.</string>
+    <string name="daily_frontload_text">Υπάρχουν μεταβολικά οφέλη για τη διανομή περισσότερων θερμίδων για νωρίτερα την ημέρα, ώστε να κάνετε το πρωινό (ιδανικά) ή το μεσημεριανό γεύμα σας το μεγαλύτερο γεύμα της ημέρας σε πραγματικό βασιλιά / πρίγκιπα / σμήνος.</string>
+    <string name="daily_timerestrict_text">Περιορίστε το φαγητό σε ένα ημερήσιο παράθυρο χρόνου της επιλογής σας κάτω από δώδεκα ώρες σε μήκος που μπορείτε να κολλήσετε με συνέπεια, επτά ημέρες την εβδομάδα. Λαμβάνοντας υπόψη τα ημερήσια οφέλη από τη μείωση της πρόσληψης βραδινών τροφίμων, το παράθυρο πρέπει να λήξει πριν τις 7:00 μ.μ.</string>
+    <string name="exercise_timing_text">Η σύσταση του Daily Dozen για τη βέλτιστη διάρκεια άσκησης για τη μακροζωία είναι εννέα λεπτά μέτρια έντονη δραστηριότητα την ημέρα, η οποία είναι επίσης η βέλτιστη διάρκεια άσκησης για την απώλεια βάρους. Οποτεδήποτε είναι καλός, και τόσο περισσότερο, τόσο καλύτερα, αλλά μπορεί να υπάρξει πλεονέκτημα για την άσκηση σε κατάσταση νηστείας, τουλάχιστον έξι ώρες μετά το τελευταίο σας γεύμα. Συνήθως, αυτό θα σήμαινε πριν από το πρωινό, αλλά εάν το χρονομετρήσατε σωστά, θα μπορούσατε να ασκείτε το μεσημέρι πριν από ένα γεύμα αργά ή, εάν το μεσημεριανό φάτε αρκετά νωρίς, πριν το δείπνο. Αυτός είναι ο χρόνος για τη μη διαβητική. Οι διαβητικοί και οι prediabetics θα πρέπει να ξεκινήσουν να ασκούν τριάντα λεπτά μετά την έναρξη ενός γεύματος και ιδανικά να ακολουθήσουν τουλάχιστον μία ώρα για να ξεπεράσουν πλήρως την αιχμή του σακχάρου στο αίμα. Αν έπρεπε να επιλέξετε ένα μόνο γεύμα για να ασκήσετε μετά, θα ήταν δείπνο, λόγω του κιρκαδικού ρυθμού του ελέγχου του σακχάρου στο αίμα που πέφτει καθ \'όλη τη διάρκεια της ημέρας. Ιδανικά, όμως, το πρωινό θα ήταν το μεγαλύτερο γεύμα της ημέρας και θα ασκούσατε μετά από αυτό - ή ακόμα καλύτερα μετά από κάθε γεύμα.</string>
+    <string name="weigh_twice_text">Η τακτική αυτοβαρύτητα θεωρείται κρίσιμη για τον μακροπρόθεσμο έλεγχο βάρους, αλλά δεν υπάρχουν επαρκή στοιχεία για να υποστηριχθεί μια συγκεκριμένη συχνότητα ζύγισης. Η σύστασή μου βασίζεται στη μία μελέτη που διαπίστωσε ότι δύο φορές την ημέρα - κατά το ξύπνημα και αμέσως πριν από το κρεβάτι - εμφανίστηκε ανώτερη από μία φορά την ημέρα (περίπου έξι έναντι δύο κιλών απώλειας βάρους πάνω από δώδεκα εβδομάδες).</string>
+    <string name="complete_intentions_text">Κάθε δύο μήνες, δημιουργήστε τρεις νέες προθέσεις υλοποίησης - "εάν το X, τότε το Y" σχεδιάζει να εκτελέσει μια συγκεκριμένη συμπεριφορά σε ένα συγκεκριμένο πλαίσιο - και ελέγξτε τον καθένα από αυτούς καθώς τις ολοκληρώνετε κάθε μέρα.</string>
+    <string name="nightly_fast_text">Λόγω των κιρκαδικών μας ρυθμών, τα τρόφιμα που καταναλώνονται τη νύχτα είναι πιο παχύρρευστα από το ίδιο ακριβώς φαγητό που καταναλώνεται νωρίτερα την ημέρα, τόσο γρήγορα κάθε βράδυ για τουλάχιστον δώδεκα ώρες πριν από τις 7:00 μ.μ. Όσο λιγότερες θερμίδες μετά την δύση του ηλίου, τόσο το καλύτερο.</string>
+    <string name="nightly_sleep_text">Επιλέξτε αυτό το κουτάκι αν έχετε τουλάχιστον επτά ώρες ύπνου στον κανονικό ύπνο σας.</string>
+    <string name="nightly_trendelenburg_text">Δοκιμάστε να ξοδέψετε τουλάχιστον τέσσερις ώρες μια νύχτα που βρίσκεται με το σώμα σας κεκλιμένο κεφάλι-κάτω έξι βαθμούς ανυψώνοντας τις θέσεις στους πρόποδες του κρεβατιού σας με οκτώ ίντσες (ή με εννέα ίντσες αν έχετε έναν βασιλιά της Καλιφόρνιας). Να είστε εξαιρετικά προσεκτικοί όταν παίρνετε από το κρεβάτι, καθώς αυτό προκαλεί ορθοστατική δυσανεξία στους περισσότερους ανθρώπους, ακόμη και αν είστε νέοι και υγιείς, δηλαδή εάν σηκωθείτε πολύ γρήγορα, μπορείτε να αισθανθείτε ζάλη, λιποθυμία ή φως πτώση και κακό. Έτσι σηκωθείτε αργά. Το να πίνετε δύο φλιτζάνια κρύο νερό τριάντα λεπτά πριν την άνοδο μπορεί επίσης να βοηθήσει στην πρόληψη αυτής της δυνητικά επικίνδυνης παρενέργειας. \ N * ΣΗΜΑΝΤΙΚΟ: Μην δοκιμάζετε αυτό στο σπίτι καθόλου εάν έχετε προβλήματα με την καρδιά ή το πνεύμονα, παλινδρόμηση οξέος ή προβλήματα με το μυαλό σας (όπως τραύμα του κεφαλιού) ή τα μάτια (ακόμη και ένα οικογενειακό ιστορικό γλαυκώματος σας αποκλείει). Επίσης, μην το δοκιμάζετε μέχρι να ρωτήσετε τον γιατρό σας εάν πιστεύουν ότι είναι ασφαλές για εσάς να κοιμηθείτε στο ήπιο Trendelenburg. *</string>
+    <string name="for_health_and_weight_loss">Για την υγεία και την απώλεια βάρους</string>
+    <string name="for_health_alone">Για την υγεία μόνο</string>
+    <string name="daily_dozen_and_tweaks">Ημερήσια Dozen 21 Tweaks</string>
+    <string name="daily_dozen_only">Καθημερινή μόνο δωδεκάδα</string>
+
+</resources>

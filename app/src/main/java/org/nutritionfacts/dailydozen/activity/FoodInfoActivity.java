@@ -1,43 +1,64 @@
 package org.nutritionfacts.dailydozen.activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.adapter.FoodServingsAdapter;
 import org.nutritionfacts.dailydozen.adapter.FoodTypeAdapter;
+import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
+import org.nutritionfacts.dailydozen.model.enums.Units;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import timber.log.Timber;
 
-public class FoodInfoActivity extends FoodLoadingActivity {
-    private final static String TAG = FoodInfoActivity.class.getSimpleName();
-
+public class FoodInfoActivity extends InfoActivity {
     @BindView(R.id.food_info_image)
     protected ImageView ivFood;
+    @BindView(R.id.change_units_container)
+    protected ViewGroup vgChangeUnits;
+    @BindView(R.id.change_units_button)
+    protected Button btnChangeUnits;
     @BindView(R.id.food_serving_sizes)
     protected RecyclerView lvFoodServingSizes;
     @BindView(R.id.food_types)
     protected RecyclerView lvFoodTypes;
 
-    @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (getFood() == null) {
+            Timber.e("Could not open activity: getFood returned null");
+            finish();
+            return;
+        }
+
         setContentView(R.layout.activity_food_info);
         ButterKnife.bind(this);
 
         displayFoodInfo();
+
+        // Don't show the change units button when displaying info for exercise
+        if (Common.EXERCISE.equalsIgnoreCase(getFood().getIdName())) {
+            vgChangeUnits.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -64,7 +85,7 @@ public class FoodInfoActivity extends FoodLoadingActivity {
             final String foodName = food.getName();
 
             initImage(foodName);
-            initServingTypes(foodName);
+            initServingTypes(food);
             initFoodTypes(foodName);
         }
     }
@@ -73,11 +94,18 @@ public class FoodInfoActivity extends FoodLoadingActivity {
         Common.loadImage(this, ivFood, FoodInfo.getFoodImage(foodName));
     }
 
-    private void initServingTypes(String foodName) {
-        final List<String> servingSizes = FoodInfo.getServingSizes(foodName);
+    private void initServingTypes(final Food food) {
+        final List<String> servingSizes = FoodInfo.getServingSizes(food.getIdName(),
+                Prefs.getInstance(this).getUnitTypePref());
         final FoodServingsAdapter adapter = new FoodServingsAdapter(servingSizes);
 
+        initChangeUnitsButton();
         initList(lvFoodServingSizes, adapter);
+    }
+
+    private void initChangeUnitsButton() {
+        btnChangeUnits.setText(Prefs.getInstance(this).getUnitTypePref() == Units.IMPERIAL ?
+                R.string.imperial : R.string.metric);
     }
 
     private void initFoodTypes(String foodName) {
@@ -99,5 +127,12 @@ public class FoodInfoActivity extends FoodLoadingActivity {
         if (food != null && !TextUtils.isEmpty(food.getName())) {
             Common.openUrlInExternalBrowser(this, FoodInfo.getFoodTypeVideosLink(food.getName()));
         }
+    }
+
+    @OnClick(R.id.change_units_button)
+    public void onChangeUnitsClicked() {
+        Prefs.getInstance(this).toggleUnitType();
+
+        initServingTypes(getFood());
     }
 }

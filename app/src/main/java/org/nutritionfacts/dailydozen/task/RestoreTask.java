@@ -3,36 +3,45 @@ package org.nutritionfacts.dailydozen.task;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
-import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
-import android.util.Log;
+
+import androidx.collection.ArrayMap;
 
 import com.activeandroid.ActiveAndroid;
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.DayEntries;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.model.Servings;
+import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.model.TweakServings;
+import org.nutritionfacts.dailydozen.model.Weights;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
+import java.util.Map;
 
 import hugo.weaving.DebugLog;
+import timber.log.Timber;
 
 public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
-    private final static String TAG = RestoreTask.class.getSimpleName();
-
     private String[] headers;
     private ArrayMap<String, Food> foodLookup;
+    private ArrayMap<String, Tweak> tweakLookup;
 
     public RestoreTask(Context context) {
         super(context);
         foodLookup = new ArrayMap<>();
+        tweakLookup = new ArrayMap<>();
     }
 
     @Override
@@ -49,7 +58,9 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
             final ContentResolver contentResolver = getContext().getContentResolver();
 
             if (params != null && params.length > 0) {
-                InputStream restoreInputStream = contentResolver.openInputStream(params[0]);
+                final Uri restoreFileUri = params[0];
+                final String restoreFileType = contentResolver.getType(restoreFileUri);
+                InputStream restoreInputStream = contentResolver.openInputStream(restoreFileUri);
 
                 if (restoreInputStream != null) {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
@@ -60,7 +71,7 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                     lineNumberReader.close();
 
                     // Need to recreate the InputStream and BufferedReader after closing LineNumberReader
-                    final InputStream inputStream = contentResolver.openInputStream(params[0]);
+                    final InputStream inputStream = contentResolver.openInputStream(restoreFileUri);
 
                     if (inputStream != null) {
                         // Only delete all existing data if we are sure we have an input stream
@@ -69,21 +80,29 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
                         reader = new BufferedReader(new InputStreamReader(inputStream));
 
                         String line = reader.readLine();
-                        headers = line.split(",");
+                        if (line != null) {
+                            int i = 0;
 
-                        int i = 0;
+                            if ("text/csv".equals(restoreFileType)) {
+                                headers = line.split(",");
 
-                        do {
-                            if (!isCancelled()) {
-                                line = reader.readLine();
-
-                                if (!TextUtils.isEmpty(line)) {
-                                    restoreLine(line);
-                                }
-
-                                publishProgress(++i, numLines);
+                                do {
+                                    if (!isCancelled()) {
+                                        line = reader.readLine();
+                                        restoreLineCSV(headers, line);
+                                        publishProgress(++i, numLines);
+                                    }
+                                } while (line != null);
+                            } else {
+                                do {
+                                    if (!isCancelled()) {
+                                        line = reader.readLine();
+                                        restoreLineJSON(line);
+                                        publishProgress(++i, numLines);
+                                    }
+                                } while (line != null);
                             }
-                        } while (line != null);
+                        }
 
                         reader.close();
                         restoreInputStream.close();
@@ -101,12 +120,15 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
     @DebugLog
     private void deleteAllExistingData() {
-        Servings.truncate(Servings.class);
-        Day.truncate(Day.class);
+        Common.truncateAllDatabaseTables();
     }
 
     @DebugLog
-    private void restoreLine(String line) {
+    private void restoreLineCSV(final String[] headers, final String line) {
+        if (TextUtils.isEmpty(line)) {
+            return;
+        }
+
         ActiveAndroid.beginTransaction();
 
         try {
@@ -117,27 +139,73 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
 
                 // Start at 1 to skip the first header column which is "Date" and not a food
                 for (int j = 1; j < headers.length; j++) {
-                    final Integer numServings = Integer.valueOf(values[j]);
+                    final int numServings = Integer.parseInt(values[j]);
                     if (numServings > 0) {
-                        Servings.createServingsIfDoesNotExist(day, getFoodByName(headers[j]), numServings);
+                        final Food food = getFoodByIdName(headers[j]);
+                        if (food != null) {
+                            DDServings.createServingsAndRecalculateStreak(day, food, numServings);
+                        }
                     }
                 }
 
                 ActiveAndroid.setTransactionSuccessful();
             }
         } catch (InvalidDateException e) {
-            Log.e(TAG, "restoreLine: ", e);
+            Timber.e(e, "restoreLineCSV: ");
         } finally {
             ActiveAndroid.endTransaction();
         }
     }
 
-    private Food getFoodByName(String foodName) {
-        if (!foodLookup.containsKey(foodName)) {
-            foodLookup.put(foodName, Food.getByNameOrIdName(foodName));
+    @DebugLog
+    private void restoreLineJSON(final String line) {
+        if (TextUtils.isEmpty(line)) {
+            return;
         }
 
-        return foodLookup.get(foodName);
+        ActiveAndroid.beginTransaction();
+
+        try {
+            DayEntries dayEntries = new Gson().fromJson(line, DayEntries.class);
+
+            final Day day = Day.createDayIfDoesNotExist(dayEntries.getDate());
+
+            Weights.createWeightsIfDoesNotExist(day,
+                    dayEntries.getMorningWeight(),
+                    dayEntries.getEveningWeight());
+
+            for (Map.Entry<String, Integer> entry : dayEntries.getDailyDozen().entrySet()) {
+                DDServings.createServingsAndRecalculateStreak(day, getFoodByIdName(entry.getKey()), entry.getValue());
+            }
+
+            for (Map.Entry<String, Integer> entry : dayEntries.getTweaks().entrySet()) {
+                TweakServings.createServingsIfDoesNotExist(day, getTweakByIdName(entry.getKey()), entry.getValue());
+            }
+
+            ActiveAndroid.setTransactionSuccessful();
+        } catch (InvalidDateException e) {
+            Timber.e(e, "restoreLineJSON: ");
+        } catch (JsonSyntaxException e) {
+            Timber.e(e, "restoreLineJSON: ");
+        } finally {
+            ActiveAndroid.endTransaction();
+        }
+    }
+
+    private Food getFoodByIdName(String foodIdName) {
+        if (!foodLookup.containsKey(foodIdName)) {
+            foodLookup.put(foodIdName, Food.getByNameOrIdName(foodIdName));
+        }
+
+        return foodLookup.get(foodIdName);
+    }
+
+    private Tweak getTweakByIdName(String tweakIdName) {
+        if (!tweakLookup.containsKey(tweakIdName)) {
+            tweakLookup.put(tweakIdName, Tweak.getByNameOrIdName(tweakIdName));
+        }
+
+        return tweakLookup.get(tweakIdName);
     }
 
     @Override

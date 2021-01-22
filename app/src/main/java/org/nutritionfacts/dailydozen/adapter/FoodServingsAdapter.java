@@ -1,11 +1,12 @@
 package org.nutritionfacts.dailydozen.adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.nutritionfacts.dailydozen.Common;
 
@@ -50,11 +51,11 @@ public class FoodServingsAdapter extends RecyclerView.Adapter<FoodServingsAdapte
         return servingSizes.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(android.R.id.text1)
-        protected TextView servingSize;
+        TextView servingSize;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

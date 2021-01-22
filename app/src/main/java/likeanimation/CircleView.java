@@ -43,11 +43,6 @@ public class CircleView extends View {
         init();
     }
 
-    public CircleView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init();
-    }
-
     private void init() {
         circlePaint.setStyle(Paint.Style.FILL);
         maskPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));

@@ -1,5 +1,6 @@
 <manifest package="org.nutritionfacts.dailydozen"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:installLocation="auto">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -17,7 +18,10 @@
             android:value="dailydozen.db" />
         <meta-data
             android:name="AA_DB_VERSION"
-            android:value="3" />
+            android:value="4" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="org.nutritionfacts.dailydozen.model.Day, org.nutritionfacts.dailydozen.model.Food, org.nutritionfacts.dailydozen.model.DDServings, org.nutritionfacts.dailydozen.model.TweakServings, org.nutritionfacts.dailydozen.model.Tweak, org.nutritionfacts.dailydozen.model.Weights" />
 
         <activity
             android:name=".activity.MainActivity"
@@ -39,8 +43,11 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
 
                 <data
-                    android:mimeType="text/*"
+                    android:mimeType="text/csv"
                     android:pathPattern="dailydozen_backup_\\.csv"/>
+                <data
+                    android:mimeType="application/json"
+                    android:pathPattern="dailydozen_backup_\\.json"/>
             </intent-filter>
         </activity>
 
@@ -49,6 +56,17 @@
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/about_this_app"/>
+
+        <activity
+            android:name=".activity.DailyReminderSettingsActivity"
+            android:label="@string/daily_reminder_settings"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
 
         <activity
             android:name=".activity.DebugActivity"
@@ -87,8 +105,39 @@
         </activity>
 
         <activity
-            android:name=".activity.DailyReminderSettingsActivity"
-            android:label="@string/daily_reminder_settings"
+            android:name=".activity.TweakHistoryActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activity.TweakInfoActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activity.TweakServingsHistoryActivity"
+            android:label="@string/daily_tweaks_history"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activity.WeightHistoryActivity"
+            android:label="@string/weight_history"
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
@@ -107,12 +156,8 @@
             </intent-filter>
         </receiver>
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="d542627abc7aba7245e85330a3f392d5cf858690" />
-
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="org.nutritionfacts.dailydozen.fileprovider"
             android:grantUriPermissions="true"
             android:exported="false">
@@ -121,6 +166,16 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
+        <provider
+            android:name="com.activeandroid.content.ContentProvider"
+            android:authorities="org.nutritionfacts.dailydozen"
+            android:enabled="true"
+            android:exported="false">
+        </provider>
+
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="${crashlyticsCollectionEnabled}" />
 
     </application>
 </manifest>

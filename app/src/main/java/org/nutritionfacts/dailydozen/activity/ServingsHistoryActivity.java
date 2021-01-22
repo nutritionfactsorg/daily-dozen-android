@@ -1,30 +1,44 @@
 package org.nutritionfacts.dailydozen.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.highlight.Highlight;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import org.greenrobot.eventbus.Subscribe;
+import org.nutritionfacts.dailydozen.Args;
+import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
-import org.nutritionfacts.dailydozen.event.LoadServingsHistoryCompleteEvent;
+import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
+import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
+import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
+import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
+import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
+import org.nutritionfacts.dailydozen.view.TimeRangeSelector;
+import org.nutritionfacts.dailydozen.view.TimeScaleSelector;
+
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ServingsHistoryActivity extends AppCompatActivity
-        implements AdapterView.OnItemSelectedListener {
+        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener {
 
-    @BindView(R.id.daily_servings_spinner)
-    protected Spinner historySpinner;
+    @BindView(R.id.daily_servings_history_time_scale)
+    protected TimeScaleSelector timeScaleSelector;
+    @BindView(R.id.daily_servings_history_time_range)
+    protected TimeRangeSelector timeRangeSelector;
     @BindView(R.id.daily_servings_chart)
     protected CombinedChart chart;
 
@@ -36,53 +50,60 @@ public class ServingsHistoryActivity extends AppCompatActivity
         setContentView(R.layout.activity_servings_history);
         ButterKnife.bind(this);
 
-        initHistorySpinner();
+        initTimeRangeSelector();
+
         loadData();
+    }
+
+    private void initTimeRangeSelector() {
+        final Day firstDay = Day.getFirstDay();
+        final Day lastDay = Day.getLastDay();
+        if (firstDay != null && lastDay != null) {
+            timeRangeSelector.setStartAndEnd(
+                    firstDay.getYear(), firstDay.getMonth(),
+                    lastDay.getYear(), lastDay.getMonth());
+        } else {
+            finish();
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         Bus.register(this);
+        Bus.register(timeRangeSelector);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Bus.unregister(this);
+        Bus.unregister(timeRangeSelector);
     }
 
     private void loadData() {
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
-            new LoadServingsHistoryTask(this).execute(getSelectedDaysOfHistory());
+
+            new LoadServingsHistoryTask(this).execute(new LoadHistoryTaskParams(
+                    timeScaleSelector.getSelectedTimeScale(),
+                    timeRangeSelector.getSelectedYear(),
+                    timeRangeSelector.getSelectedMonth()));
         }
-    }
-
-    @TimeScale.Interface
-    private int getSelectedDaysOfHistory() {
-        switch (historySpinner.getSelectedItemPosition()) {
-            case 0:
-            default:
-                return TimeScale.DAYS;
-            case 1:
-                return TimeScale.MONTHS;
-            case 2:
-                return TimeScale.YEARS;
-        }
-    }
-
-    private void initHistorySpinner() {
-        final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.servings_time_scale_choices, android.R.layout.simple_list_item_1);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        historySpinner.setOnItemSelectedListener(this);
-        historySpinner.setAdapter(adapter);
     }
 
     @Subscribe
-    public void onEvent(LoadServingsHistoryCompleteEvent event) {
+    public void onEvent(TimeRangeSelectedEvent event) {
+        loadData();
+    }
+
+    @Subscribe
+    public void onEvent(TimeScaleSelectedEvent event) {
+        loadData();
+    }
+
+    @Subscribe
+    public void onEvent(LoadHistoryCompleteEvent event) {
         final CombinedData chartData = event.getChartData();
         if (chartData == null) {
             finish();
@@ -102,6 +123,9 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
         chart.getXAxis().setDrawLabels(true);
 
+        // Without this line, MPAndroidChart v2.1.6 cuts off the tops of the X-axis date labels
+        chart.setExtraTopOffset(4f);
+
         // Start the chart with the latest day in view
         chart.moveViewToX(chart.getXChartMax());
 
@@ -111,7 +135,8 @@ public class ServingsHistoryActivity extends AppCompatActivity
         chart.setDrawValueAboveBar(false);
 
         // Even though we hide the left axis, we must set its max value so that full servings days reach the top
-        chart.getAxisLeft().setAxisMaxValue(24);
+        chart.getAxisLeft().setAxisMinValue(0);
+        chart.getAxisLeft().setAxisMaxValue(Common.MAX_SERVINGS);
         chart.getAxisLeft().setEnabled(false);
 
         chart.getAxisRight().setEnabled(false);
@@ -121,7 +146,11 @@ public class ServingsHistoryActivity extends AppCompatActivity
         chart.setPinchZoom(false);
         chart.setDoubleTapToZoomEnabled(false);
         chart.setHighlightPerDragEnabled(false);
-        chart.setHighlightPerTapEnabled(false);
+
+        chart.setOnChartValueSelectedListener(this);
+
+        // Only enable jumping to dates if the user is viewing daily data
+        chart.setHighlightPerTapEnabled(event.getTimeScale() == TimeScale.DAYS);
 
         alreadyLoadingData = false;
     }
@@ -133,6 +162,17 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    @Override
+    public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
+        setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent((Date) e.getData()));
+        finish();
+    }
+
+    @Override
+    public void onNothingSelected() {
 
     }
 }

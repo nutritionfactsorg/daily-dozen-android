@@ -1,15 +1,13 @@
 package org.nutritionfacts.dailydozen.model.pref;
 
-import android.util.Log;
-
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Calendar;
 import java.util.Locale;
 
-public class UpdateReminderPref {
-    private final static String TAG = UpdateReminderPref.class.getSimpleName();
+import timber.log.Timber;
 
+public class UpdateReminderPref {
     // The default Update Reminder notification vibrates the phone and plays a sound at 8pm
     @SerializedName("hourOfDay")
     private int hourOfDay = 20; // Default to 8pm
@@ -76,7 +74,7 @@ public class UpdateReminderPref {
             cal.add(Calendar.HOUR, 24);
         }
 
-        Log.d(TAG, String.format("getAlarmTimeInMillis %s = %s", cal.getTime(), cal.getTimeInMillis()));
+        Timber.d("getAlarmTimeInMillis %s = %s", cal.getTime(), cal.getTimeInMillis());
 
         return cal.getTimeInMillis();
     }

@@ -2,12 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/menu_toggle_modes"
+        android:title="@string/twenty_one_tweaks"
+        app:showAsAction="ifRoom" />
+    <item
         android:id="@+id/menu_latest_videos"
         android:title="@string/latest_videos"
         app:showAsAction="never"/>
     <item
         android:id="@+id/menu_how_not_to_die"
-        android:title="@string/book_title"
+        android:title="@string/title_how_not_to_die"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_cookbook"
+        android:title="@string/title_cookbook"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_how_not_to_diet"
+        android:title="@string/title_how_not_to_diet"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_daily_dozen_challenge"
+        android:title="@string/daily_dozen_challenge"
         app:showAsAction="never"/>
     <item
         android:id="@+id/menu_donate"

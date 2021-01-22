@@ -1,8 +1,6 @@
 package org.nutritionfacts.dailydozen.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
@@ -10,6 +8,9 @@ import android.text.style.ClickableSpan;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
@@ -62,14 +63,14 @@ public class AboutActivity extends AppCompatActivity {
 
     private void initHeader() {
         tvHeader.setText(getString(R.string.app_name));
-        tvVersion.setText(String.format(getString(R.string.format_version), BuildConfig.VERSION_NAME));
+        tvVersion.setText(getString(R.string.format_version, BuildConfig.VERSION_NAME));
     }
 
     private void initLinksInWelcome() {
         final String welcomeText = getString(R.string.activity_welcome_text);
         final SpannableStringBuilder ssb = new SpannableStringBuilder(welcomeText);
 
-        initLink(welcomeText, ssb, R.string.book_title, R.string.url_book);
+        initLink(welcomeText, ssb, R.string.title_how_not_to_die, R.string.url_how_not_to_die);
 
         tvWelcome.setMovementMethod(LinkMovementMethod.getInstance());
         tvWelcome.setText(ssb, TextView.BufferType.SPANNABLE);
@@ -84,7 +85,6 @@ public class AboutActivity extends AppCompatActivity {
         initLink(aboutText, ssb, R.string.library_activeandroid, R.string.url_activeandroid);
         initLink(aboutText, ssb, R.string.library_android_iconify, R.string.url_android_iconify);
         initLink(aboutText, ssb, R.string.library_butterknife, R.string.url_butterknife);
-        initLink(aboutText, ssb, R.string.library_caldroid, R.string.url_caldroid);
         initLink(aboutText, ssb, R.string.library_eventbus, R.string.url_eventbus);
         initLink(aboutText, ssb, R.string.library_likeanimation, R.string.url_likeanimation);
         initLink(aboutText, ssb, R.string.library_mpandroidchart, R.string.url_mpandroidchart);

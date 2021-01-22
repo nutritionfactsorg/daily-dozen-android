@@ -1,8 +1,6 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,16 +9,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.greenrobot.eventbus.Subscribe;
-import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
-import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
-import org.nutritionfacts.dailydozen.model.Servings;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,7 +32,7 @@ public class FoodServings extends LinearLayout {
     @BindView(R.id.food_streak)
     protected StreakWidget tvStreak;
     @BindView(R.id.food_checkboxes)
-    protected FoodCheckBoxes foodCheckBoxes;
+    protected RDACheckBoxes rdaCheckBoxes;
 
     public FoodServings(Context context) {
         super(context);
@@ -67,7 +62,7 @@ public class FoodServings extends LinearLayout {
         if (foundFoodIcon) {
             initFoodName();
 
-            final Servings servings = getServings();
+            final DDServings servings = getServings();
             initCheckboxes(servings);
             initFoodStreak(servings);
 
@@ -77,20 +72,19 @@ public class FoodServings extends LinearLayout {
         }
     }
 
-    private Servings getServings() {
-        return Servings.getByDateAndFood(day, food);
+    private DDServings getServings() {
+        return DDServings.getByDateAndFood(day, food);
     }
 
     private boolean initFoodIcon() {
-        final Context context = getContext();
-        return Common.loadImage(context, ivIcon, FoodInfo.getFoodIcon(food.getName()));
+        return Common.loadImage(getContext(), ivIcon, FoodInfo.getFoodIcon(food.getName()));
     }
 
     private void initFoodName() {
         tvName.setText(String.format("%s %s", food.getName(), getContext().getString(R.string.icon_info)));
     }
 
-    private void initFoodStreak(Servings servings) {
+    private void initFoodStreak(DDServings servings) {
         final int streak = servings != null ? servings.getStreak() : 0;
         if (streak > 0) {
             tvStreak.setVisibility(VISIBLE);
@@ -102,24 +96,18 @@ public class FoodServings extends LinearLayout {
 
     @OnClick({R.id.food_icon, R.id.food_name})
     public void onFoodNameClicked() {
-        getContext().startActivity(createFoodIntent(FoodInfoActivity.class, food));
+        Common.openFoodInfo(getContext(), food);
     }
 
-    @OnClick(R.id.food_history)
+    @OnClick({R.id.food_history, R.id.food_streak})
     public void onFoodHistoryClicked() {
-        getContext().startActivity(createFoodIntent(FoodHistoryActivity.class, food));
+        Common.openFoodHistory(getContext(), food);
     }
 
-    private Intent createFoodIntent(final Class<? extends AppCompatActivity> klass, final Food food) {
-        final Intent intent = new Intent(getContext(), klass);
-        intent.putExtra(Args.FOOD_ID, food.getId());
-        return intent;
-    }
-
-    private void initCheckboxes(Servings servings) {
-        foodCheckBoxes.setDay(day);
-        foodCheckBoxes.setFood(food);
-        foodCheckBoxes.setServings(servings);
+    private void initCheckboxes(DDServings servings) {
+        rdaCheckBoxes.setDay(day);
+        rdaCheckBoxes.setRDA(food);
+        rdaCheckBoxes.setServings(servings);
     }
 
     @Subscribe

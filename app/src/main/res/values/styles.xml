@@ -10,21 +10,18 @@
 
     <style name="Widget.CardContent" parent="android:Widget">
         <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingStart">16dp</item>
         <item name="android:paddingRight">16dp</item>
-        <item name="android:paddingEnd">16dp</item>
         <item name="android:paddingTop">24dp</item>
         <item name="android:paddingBottom">24dp</item>
     </style>
 
-    <style name="FoodHistoryIcon">
+    <style name="HistoryIcon">
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingRight">8dp</item>
     </style>
 
     <style name="PrimaryText">
@@ -35,6 +32,25 @@
     <style name="SecondaryText">
         <item name="android:textColor">@color/colorSecondaryText</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+    </style>
+
+    <style name="TimeRangeSelector">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="TimeRangeSelector.PreviousButton">
+        <item name="android:text">{fa-chevron-left 14dp}</item>
+    </style>
+
+    <style name="TimeRangeSelector.NextButton">
+        <item name="android:text">{fa-chevron-right 14dp}</item>
+    </style>
+
+    <style name="TimeRangeSelector.Selected">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
     </style>
 
 </resources>

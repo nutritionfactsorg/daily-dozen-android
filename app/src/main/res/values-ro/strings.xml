@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Daily Dozen</string>
+
+    <string name="beans">Leguminoase boabe</string>
+    <string name="berries">Fructe de pădure</string>
+    <string name="other_fruits">Alte fructe</string>
+    <string name="cruciferous_vegetables">Legume crucifere</string>
+    <string name="greens">Verdețuri</string>
+    <string name="other_vegetables">Alte legume</string>
+    <string name="flaxseeds">Semințe de in</string>
+    <string name="nuts">Nuci</string>
+    <string name="spices">Condimente</string>
+    <string name="whole_grains">Cereale integrale</string>
+    <string name="beverages">Băuturi</string>
+    <string name="exercise">Exerciții fizice</string>
+    <string name="vitamin_b12">Vitamina B12</string>
+    <string name="serving_sizes">Dimensiunea unei porții</string>
+    <string name="types">Varietăți</string>
+    <string name="history">Istoric</string>
+    <string name="servings_some">Unele porții</string>
+    <string name="servings_all">Toate porțiile</string>
+    <string name="servings">Porții</string>
+    <string name="out_of">din</string>
+    <string name="moving_average">Media mișcării</string>
+    <string name="about">Despre</string>
+    <string name="about_this_app">Despre această aplicație</string>
+    <string name="latest_videos">Ultimele videoclipuri</string>
+    <string name="donate">Donați</string>
+    <string name="subscribe">Abonați-vă</string>
+    <string name="open_source">Sursă deschisă</string>
+    <string name="library_butterknife">ButterKnife</string>
+    <string name="permission_needed_to_write_storage">Nu se poate face copie de rezervă a datelor fără permisiunea de a scrie în spațiul de stocare</string>
+    <string name="backup_failed">Efectuarea copiei de rezervă a datelor a eşuat</string>
+    <string name="restore_failed">Restaurarea copiei de rezervă datelor a eşuat</string>
+    <string name="backup_success">Copia de rezervă a datelor a fost efectuată cu succes</string>
+    <string name="restore_success">Restaurarea copiei de rezervă a datelor a fost efectuată cu succes</string>
+    <string name="restore_confirm_title">Restaurează date din copia de rezervă a datelor</string>
+    <string name="restore_confirm_message">Orice date existente vor fi șterse înainte de a fi restaurate din copia de rezervă. Doriți să continuați?</string>
+    <string name="yes">Da</string>
+    <string name="no">Nu</string>
+    <string name="backup">Copie de rezervă</string>
+    <string name="food_info">Informații alimentare</string>
+    <string name="food_history">Informații istorice</string>
+    <string name="daily_servings_history">Istoricul zilnic al porțiilor</string>
+    <string name="no_servings_recorded">Nu ați înregistrat încă porții!</string>
+    <string name="task_backup_title">Se efectuează copie de rezervă a datelor</string>
+    <string name="task_restore_title">Restaurare</string>
+    <string name="task_calculating_streaks_title">Se calculează zilele consecutive</string>
+    <string name="back_to_today">Înapoi la ziua de azi</string>
+    <string name="debug">Depanare</string>
+    <string name="debug_clear_data">Ștergeți toate datele</string>
+    <string name="debug_clear_data_message">Această acțiune va șterge toate intrările introduse. Doriți să continuați?</string>
+    <string name="OK">Bine</string>
+    <string name="dialog_streaks_title">Caracteristică nouă: Secvenţe consecutive!</string>
+    <string name="dialog_streaks_message">Baza dvs. de date va fi acum actualizată pentru a accepta caracteristica nouă de secvenţe consecutive.</string>
+    <string name="dialog_no_email_apps_title">Nu au fost găsite aplicații de e-mail</string>
+    <string name="dialog_no_email_apps_message">Copia de rezervă a datelor dvs. necesită instalarea unei aplicații de e-mail, astfel încât să puteți trimite fișierul de rezervă .csv prin e-mail. Instalați o aplicație de e-mail și încercați din nou.</string>
+    <string name="debug_generate_random_data">Generează date aleatorii</string>
+    <string name="debug_generate_full_data">Generează date complete</string>
+    <string name="debug_generate_data_message">Toate datele existente vor fi înlocuite. Doriți să continuați?</string>
+    <string name="task_generating_random_data">Se generează date aleatorii</string>
+    <string name="task_loading_servings_history_title">Încărcarea istoricului de porții</string>
+    <string name="time_scale">Scală de timp</string>
+    <string name="history_to_generate">Istoric pentru generare</string>
+    <string name="welcome_to_my_daily_dozen">Bine ați venit în Daily Dozen!</string>
+    <string name="activity_welcome_text">Utilizați această aplicație zilnic pentru a urmări alimentele pe care le recomand pentru o sănătate optimă și longevitate în cartea mea Cum să nu mori.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Îți place această aplicație?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Spuneți-ne părerea în Magazinul Play.</string>
+    <string name="rate_now">Trimiteți părerea</string>
+    <string name="not_now">Nu acum</string>
+    <string name="format_version" formatted="false">versiune %s</string>
+    <string name="format_num_days" formatted="false">%d zile</string>
+    <string name="daily_reminder_title">Daily Dozen memento</string>
+    <string name="daily_reminder_text">Actualizați-vă porțile pentru ziua de azi</string>
+    <string name="daily_reminder_settings">Setările pentru mementourile zilnice</string>
+    <string name="enable_daily_reminder">Activați mementoul zilnic</string>
+    <string name="remind_me_at">Amintiți-mi la</string>
+    <string name="vibrate">Vibrează</string>
+    <string name="play_sound">Redați sunetul</string>
+    <string name="videos">Videoclipuri</string>
+    <string name="units">Unități</string>
+    <string name="imperial">Imperial</string>
+    <string name="metric">Metric</string>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+    </string-array>
+
+    <string-array name="notification_icon_food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
+    </string-array>
+
+    <integer-array name="food_quantities">
+        <item>3</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+
+    <string-array name="about_text_lines">
+        <item>Această aplicație a fost creată de John Slavick.</item>
+        <item />
+        <item>Următoarele biblioteci cu sursă deschisă sunt utilizate în crearea aplicației: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, și MPAndroidChart.</item>
+        <item />
+        <item>Mulțumiri speciale sunt aduse eforturilor de voluntariat ale creatorilor aplicației anterioare: Chan Kruse, Allan Portera, și Sangeeta Kumar.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>Urmați acești pași pentru a restaura copia de siguranță a datelor în aplicația Daily Dozen</item>
+        <item />
+        <item>1. Aplicația Daily Dozen trebuie instalată pe telefonul tău cu Android. Puteți să o descărcați aici: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Atingeți fișierul atașat la acest e-mail.</item>
+        <item />
+        <item>3. Selectați deschidere cu Daily Dozen</item>
+    </string-array>
+
+    <string-array name="servings_time_scale_choices">
+        <item>Zi</item>
+        <item>Lună</item>
+        <item>An</item>
+    </string-array>
+
+    <string-array name="history_to_generate_choices">
+        <item>1 lună</item>
+        <item>3 luni</item>
+        <item>6 luni</item>
+        <item>1 an</item>
+        <item>2 ani</item>
+        <item>5 ani</item>
+    </string-array>
+
+    <string-array name="food_info_types_beans">
+        <item>Fasole neagră</item>
+        <item>Fasole ochi negru</item>
+        <item>Fasole untoasă</item>
+        <item>Fasole cannellini</item>
+        <item>Năut</item>
+        <item>Edamame (păstăi verzi de soia)</item>
+        <item>Mazăre englezească</item>
+        <item>Năut garbanzo</item>
+        <item>Fasole nordică cu bobul mare</item>
+        <item>Fasole roșie cu bob în formă de rinichi</item>
+        <item>Linte (beluga, franceză și roșie)</item>
+        <item>Miso</item>
+        <item>Fasole albă</item>
+        <item>Fasole pinto</item>
+        <item>Fasole roșie cu bobul mic</item>
+        <item>Mazăre uscată (galbenă sau verde)</item>
+        <item>Tempeh</item>
+    </string-array>
+
+    <string-array name="food_info_types_berries">
+        <item>Acai</item>
+        <item>Agrișe</item>
+        <item>Mure</item>
+        <item>Afine</item>
+        <item>Cireșe dulci sau vișine</item>
+        <item>Struguri violet</item>
+        <item>Merișoare</item>
+        <item>Goji (Cătină de garduri)</item>
+        <item>Kumquat</item>
+        <item>Dude</item>
+        <item>Zmeură (neagră sau roșie)</item>
+        <item>Căpșuni</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_fruits">
+        <item>Mere</item>
+        <item>Caise uscate</item>
+        <item>Avocado</item>
+        <item>Banane</item>
+        <item>Pepeni galbeni Cantalup</item>
+        <item>Clementine</item>
+        <item>Curmale</item>
+        <item>Smochine uscate</item>
+        <item>Grepfrut</item>
+        <item>Pepeni galbeni Honeydew</item>
+        <item>Kiwi</item>
+        <item>Lămâi galbene</item>
+        <item>Lămâi verzi</item>
+        <item>Litchi</item>
+        <item>Mango</item>
+        <item>Nectarine</item>
+        <item>Portocale</item>
+        <item>Papaya</item>
+        <item>Fructul pasiunii</item>
+        <item>Piersici</item>
+        <item>Pere</item>
+        <item>Ananas</item>
+        <item>Prune (în special cele negre sau vineții închise)</item>
+        <item>Renglote</item>
+        <item>Rodii</item>
+        <item>Prune uscate</item>
+        <item>Mandarine</item>
+        <item>Pepeni roșii</item>
+    </string-array>
+
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Rucolă</item>
+        <item>Varză chinezească</item>
+        <item>Broccoli (Romanesco)</item>
+        <item>Varză de Bruxelles</item>
+        <item>Varză (verde, roșie, creață)</item>
+        <item>Conopidă (alb, verde, portocaliu, violet)</item>
+        <item>Varză furajeră</item>
+        <item>Hrean</item>
+        <item>Varză Kale (creață, neagră, verde și roșie)</item>
+        <item>Gulii (verde, violet)</item>
+        <item>Frunze de muștar</item>
+        <item>Ridichi</item>
+        <item>Frunze de nap</item>
+        <item>Năsturel (Creson de apă)</item>
+    </string-array>
+
+    <string-array name="food_info_types_greens">
+        <item>Rucolă</item>
+        <item>Frunze de sfeclă</item>
+        <item>Varză furajeră</item>
+        <item>Varză Kale (creață, neagră, verde și roșie)</item>
+        <item>Amestec de salate tinere</item>
+        <item>Frunze de muștar</item>
+        <item>Măcriș</item>
+        <item>Spanac</item>
+        <item>Mangold (Sfeclă elvețiană)</item>
+        <item>Frunze de nap</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_vegetables">
+        <item>Anghinare</item>
+        <item>Sparanghel</item>
+        <item>Sfeclă roșie</item>
+        <item>Ardei grași</item>
+        <item>Morcovi</item>
+        <item>Porumb</item>
+        <item>Usturoi</item>
+        <item>Ciuperci (champignon, pleurotus, portobello și shiitake)</item>
+        <item>Bame</item>
+        <item>Ceapă</item>
+        <item>Cartofi mov</item>
+        <item>Dovleci</item>
+        <item>Alge (arame, dulse și nori)</item>
+        <item>Păstăi de mazăre</item>
+        <item>Bostani (delicata, de vară, spaghetti)</item>
+        <item>Cartofi dulci</item>
+        <item>Roșii</item>
+        <item>Dovlecei</item>
+    </string-array>
+
+    <string-array name="food_info_types_flaxseeds">
+        <item>Semințe de in brune</item>
+        <item>Semințe de in aurii</item>
+    </string-array>
+
+    <string-array name="food_info_types_nuts">
+        <item>Migdale</item>
+        <item>Nuci braziliene</item>
+        <item>Caju</item>
+        <item>Semințe de chia</item>
+        <item>Alune de pădure</item>
+        <item>Semințe de cânepă</item>
+        <item>Nuci macadamia</item>
+        <item>Nuci pecan</item>
+        <item>Fistic</item>
+        <item>Semințe de dovleac</item>
+        <item>Semințe de susan</item>
+        <item>Semințe de floarea soarelui</item>
+        <item>Nuci</item>
+    </string-array>
+
+    <string-array name="food_info_types_spices">
+        <item>Ienibahar</item>
+        <item>Dracila</item>
+        <item>Busuioc</item>
+        <item>Frunze de dafin</item>
+        <item>Cardamom</item>
+        <item>Pulbere de chili</item>
+        <item>Frunze de coriandru</item>
+        <item>Scorţişoară</item>
+        <item>Cuișoare</item>
+        <item>Boabe de coriandru</item>
+        <item>Chimion</item>
+        <item>Pulbere de curry</item>
+        <item>Mărar</item>
+        <item>Schinduf</item>
+        <item>Usturoi</item>
+        <item>Ghimbir</item>
+        <item>Hrean</item>
+        <item>Lemongrass</item>
+        <item>Maghiran</item>
+        <item>Pulbere din semințe de muștar</item>
+        <item>Nucșoară</item>
+        <item>Oregano</item>
+        <item>Boia afumată</item>
+        <item>Pătrunjel</item>
+        <item>Piper</item>
+        <item>Mentă</item>
+        <item>Rozmarin</item>
+        <item>Şofran</item>
+        <item>Salvie</item>
+        <item>Cimbru</item>
+        <item>Turmeric</item>
+        <item>Vanilie</item>
+    </string-array>
+
+    <string-array name="food_info_types_whole_grains">
+        <item>Orz</item>
+        <item>Hrișcă</item>
+        <item>Mei</item>
+        <item>Ovăz</item>
+        <item>Floricele de porumb (pop-corn)</item>
+        <item>Quinoa</item>
+        <item>Secară</item>
+        <item>Taf (mei etiopian)</item>
+        <item>Paste din grâu integral</item>
+    </string-array>
+
+    <string-array name="food_info_types_beverages">
+        <item>Ceai negru</item>
+        <item>Ceai condimentat</item>
+        <item>Ceai de mușețel cu vanilie</item>
+        <item>Cafea</item>
+        <item>Ceai earl grey</item>
+        <item>Ceai verde</item>
+        <item>Ceai de hibiscus</item>
+        <item>Ciocolată caldă</item>
+        <item>Ceai de iasomie</item>
+        <item>Ceai de roiniță</item>
+        <item>Ceai matcha</item>
+        <item>Ceai (oolong) din floare de migdale</item>
+        <item>Ceai de mentă</item>
+        <item>Ceai de rooibos</item>
+        <item>Apă</item>
+        <item>Ceai alb</item>
+    </string-array>
+
+    <string-array name="food_info_types_exercise">
+        <item>Mers pe bicicletă</item>
+        <item>Canotaj</item>
+        <item>Dans</item>
+        <item>Dodgeball</item>
+        <item>Schiat în pantă</item>
+        <item>Scrimă</item>
+        <item>Drumeție</item>
+        <item>Muncă în gospodărie</item>
+        <item>Patinaj pe gheață</item>
+        <item>Patinaj cu role de viteză (role în linie)</item>
+        <item>Jonglat</item>
+        <item>Sărituri pe o trambulină elastică</item>
+        <item>Vâslit</item>
+        <item>Frisbee</item>
+        <item>Patinaj cu role (patine cu 4 role)</item>
+        <item>Aruncări la un coș de baschet</item>
+        <item>Curățarea zăpezii cu lopata</item>
+        <item>Skateboarding</item>
+        <item>Snorkeling</item>
+        <item>Surfing</item>
+        <item>Înot recreațional</item>
+        <item>Tenis (la dublu)</item>
+        <item>Căratul apei</item>
+        <item>Mers rapid (6,5 km pe oră)</item>
+        <item>Aerobică în apă</item>
+        <item>Schi nautic</item>
+        <item>Grădinărit</item>
+        <item>Yoga</item>
+        <item>Cărat în cârcâ</item>
+        <item>Baschet</item>
+        <item>Mers pe bicicletă la deal</item>
+        <item>Antrenament cu greutăți</item>
+        <item>Schi fond</item>
+        <item>Fotbal american</item>
+        <item>Hochei</item>
+        <item>Jogging</item>
+        <item>Sărituri</item>
+        <item>Sărituri cu coarda</item>
+        <item>Lacrosse</item>
+        <item>Flotări</item>
+        <item>Tracțiuni</item>
+        <item>Racquetball</item>
+        <item>Alpinism</item>
+        <item>Rugbi</item>
+        <item>Alergat</item>
+        <item>Scufundări</item>
+        <item>Tenis (simplu, fară partener)</item>
+        <item>Fotbal european</item>
+        <item>Patinaj viteză</item>
+        <item>Squash</item>
+        <item>Exerciții aerobice</item>
+        <item>Înot profesionist (Ture de bazin)</item>
+        <item>Mers rapid la deal</item>
+        <item>Jogging acvatic</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans">
+        <item>%s humus sau de fasole frecată</item>
+        <item>%s fasole gătită, mazăre uscată (galbenă sau verde), linte, tofu sau tempeh</item>
+        <item>%s mazăre proaspată sau linte încolțită</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ cană</item>
+        <item>½ cană</item>
+        <item>1 cană</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g</item>
+        <item>130 g</item>
+        <item>150 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries">
+        <item>%s proaspete sau congelate</item>
+        <item>%s uscate</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ cană</item>
+        <item>¼ cană</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g</item>
+        <item>40 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>%s1 fruct de mărime medie</item>
+        <item>%s fructe tăiate</item>
+        <item>%s fructe uscate</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item/>
+        <item>1 cană</item>
+        <item>¼ cană</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item/>
+        <item>120 g</item>
+        <item>40 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+        <item>%s tocate</item>
+        <item>%s germeni de varză de Bruxelles sau de broccoli</item>
+        <item>%s1 lingură de hrean</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ cană</item>
+        <item>¼ cană</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g</item>
+        <item>12 g</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens">
+        <item>%s crude</item>
+        <item>%s gătite</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 cană</item>
+        <item>½ cană</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g</item>
+        <item>90 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>%s legume frunzoase, crude</item>
+        <item>%s legume fară frunze, crude sau gătite</item>
+        <item>%s suc de legume</item>
+        <item>%s ciuperci uscate</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 cană</item>
+        <item>½ cană</item>
+        <item>½ cană</item>
+        <item>¼ cană</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 ml</item>
+        <item>7 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>%s1 lingură măcinate</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>%s nuci sau semințe</item>
+        <item>%s2 linguri unt de nuci sau de semințe</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ cup</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices">
+        <item>%s¼ linguriță de turmeric</item>
+        <item>%sOrice alte plante aromatice și condimente (fără sare) care vă plac</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>%s cereale calde sau cereale gătite, paste, sau boabe de porumb</item>
+        <item>%s cereale reci</item>
+        <item>%s1 tortilla sau felie de pâine</item>
+        <item>%s½ o baghetă sau brioșă englezească</item>
+        <item>%s floricele de porumb (pop-corn)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ cup</item>
+        <item>1 cup</item>
+        <item/>
+        <item/>
+        <item>3 cups</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g</item>
+        <item>50 g</item>
+        <item/>
+        <item/>
+        <item>30 g</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages">
+        <item>Un pahar (%s)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12 ounces</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350 ml</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>%s90 de minute de activitate cu un grad moderat de intensitate</item>
+        <item>%s40 de minute de activitate viguroasă</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string name="error_cannot_handle_url">Nu s-a putut deschide adresa URL. Vă rugăm să instalați un browser.</string>
+    <string name="channel_reminders_name">Mementouri</string>
+
+    <string name="twenty_one_tweaks">21 Tweaks</string>
+    <string name="tweaks">tweaks</string>
+    <string name="daily_tweaks_history">Istoricul Daily Tweaks</string>
+    <string name="weight_history">Istoricul greutății</string>
+    <string name="no_weights_recorded">Încă nu ați înregistrat greutăți!</string>
+    <string name="task_loading_weights_history_title">Se încarcă istoricul greutăților</string>
+    <string name="morning">Dimineaţă</string>
+    <string name="evening">Seară</string>
+    <string name="weight">Greutate</string>
+    <string name="tweak_group_meal">La fiecare masă</string>
+    <string name="tweak_group_daily">In fiecare zi</string>
+    <string name="tweak_group_dailydoses">Luați-vă dozele zilnice</string>
+    <string name="tweak_group_nightly">In fiecare noapte</string>
+    <string name="about_tweak">Despre Tweak</string>
+    <string name="meal_water">Preîncărcați cu apă</string>
+    <string name="meal_negcal">Preîncărcați cu alimente „calorii negative”</string>
+    <string name="meal_vinegar">Se încorporează oțet (2 lingurițe cu fiecare masă)</string>
+    <string name="meal_undistracted">Bucurați-vă de mesele nedistractate</string>
+    <string name="meal_twentyminutes">Urmați regula celor douăzeci de minute</string>
+    <string name="daily_blackcumin">Cumin negru (¼ lingură)</string>
+    <string name="daily_garlic">Usturoi praf (¼ lingură)</string>
+    <string name="daily_ginger">Ghimbir măcinat (1 lingură) sau ardei Cayenne (½ linguriță)</string>
+    <string name="daily_nutriyeast">Drojdie nutritivă (2 lingurițe)</string>
+    <string name="daily_cumin">Cumin (½ linguriță cu prânz și cină)</string>
+    <string name="daily_greentea">Ceai verde (3 căni)</string>
+    <string name="daily_hydrate">Stai hidratat</string>
+    <string name="daily_deflourdiet">Deflorește-ți dieta</string>
+    <string name="daily_frontload">Încărcați-vă caloriile din față</string>
+    <string name="daily_timerestrict">Limitați-vă mâncarea în timp</string>
+    <string name="exercise_timing">Optimizați cronometrarea exercițiilor</string>
+    <string name="weigh_twice">Cântărește-te de două ori pe zi</string>
+    <string name="complete_intentions">Completați-vă intențiile de implementare</string>
+    <string name="nightly_fast">Repede după ora 19:00</string>
+    <string name="nightly_sleep">Adormi-te suficient</string>
+    <string name="nightly_trendelenburg">Experiment cu Mild Trendelenburg</string>
+    <string name="debug_generate_weight_data">Generați date privind greutatea</string>
+    <string name="average_weight_on_day">Greutate medie pe zi</string>
+    <string name="meal_water_short">Preîncărcați cu apă</string>
+    <string name="meal_negcal_short">Preîncărcați cu alimente „calorii negative”</string>
+    <string name="meal_vinegar_short">Se încorporează oțet (2 lingurițe cu fiecare masă)</string>
+    <string name="meal_undistracted_short">Bucurați-vă de mesele nedistractate</string>
+    <string name="meal_twentyminutes_short">Urmați regula celor douăzeci de minute</string>
+    <string name="daily_blackcumin_short">Cumin negru (Nigella sativa) (¼ lingură)</string>
+    <string name="daily_garlic_short">Usturoi praf (¼ lingură)</string>
+    <string name="daily_ginger_short">Ghimbir măcinat (1 lingură) sau ardei Cayenne (½ linguriță)</string>
+    <string name="daily_nutriyeast_short">Drojdie nutritivă (2 lingurițe)</string>
+    <string name="daily_cumin_short">Cumin (Cuminum cyminum) (½ linguriță cu prânz și cină)</string>
+    <string name="daily_greentea_short">Ceai verde (3 căni)</string>
+    <string name="daily_hydrate_short">Stai hidratat</string>
+    <string name="daily_deflourdiet_short">Deflorește-ți dieta</string>
+    <string name="daily_frontload_short">Încărcați-vă caloriile din față</string>
+    <string name="daily_timerestrict_short">Limitați-vă mâncarea în timp</string>
+    <string name="exercise_timing_short">Optimizați cronometrarea exercițiilor</string>
+    <string name="weigh_twice_short">Cântărește-te de două ori pe zi</string>
+    <string name="complete_intentions_short">Completați-vă intențiile de implementare</string>
+    <string name="nightly_fast_short">Repede după ora 19:00</string>
+    <string name="nightly_sleep_short">Adormi-te suficient</string>
+    <string name="nightly_trendelenburg_short">Experiment cu Mild Trendelenburg</string>
+    <string name="meal_water_text">Înaintea fiecărei mese, intensificați-vă metabolismul cu două căni de apă răcoroasă sau rece neflavată, pentru a profita de beneficiile sale de preîncărcare.</string>
+    <string name="meal_negcal_text">Ca prim fel, începe fiecare masă cu un măr sau o supă sau o salată Green Light care conține mai puțin de o sută de calorii pe cană.</string>
+    <string name="meal_vinegar_text">Nu bea niciodată oțet drept. În schimb, aromează mesele sau îmbracă o salată laterală cu oricare dintre oțetele dulci și sărate de acolo. Dacă doriți să o beți, asigurați-vă că o amestecați într-un pahar cu apă și, apoi, asigurați-vă că vă clătiți gura cu apă pentru a vă proteja smalțul dinților.</string>
+    <string name="meal_undistracted_text">Nu mâncați în timp ce vizionați televizorul sau vă jucați pe telefon. Dă-ți un cec pentru fiecare masă pe care poți să-l mănânci fără distragere.</string>
+    <string name="meal_twentyminutes_text">Indiferent dacă prin creșterea vâscozității sau a numărului de mestecări sau prin scăderea dimensiunii mușcăturilor și a vitezei de alimentație, zeci de studii au demonstrat că, indiferent de modul în care vom stimula cantitatea de timp în care se află mâncarea în gură, aceasta poate duce la un aport caloric mai mic. Așadar, prelungiți durata mesei până la cel puțin douăzeci de minute pentru a permite semnalelor tale naturale de sațietate să aibă efect complet. Cum? Alegând alimente care durează mai mult timp și le consumi într-un mod care prelungește timpul în care rămân în gură. Gândiți-vă la mâncărurile mai vrac, mai dure, mai fragede, în mușcăturile mai mici, bine mestecate.</string>
+    <string name="daily_blackcumin_text">După cum s-a menționat în secțiunea Supresia apetitului, o revizuire sistematică și meta-analiză a studiilor randomizate, controlate de pierdere în greutate, a constatat că aproximativ un sfert de linguriță de pulbere de chimen negru în fiecare zi pare să reducă indicele de masă corporală într-o perioadă de câteva luni. Rețineți că chimenul negru este diferit de chimenul obișnuit, pentru care dozarea este diferită.</string>
+    <string name="daily_garlic_text">Studiile randomizate, dublu-orb, controlate cu placebo au descoperit că doar un sfert de linguriță zilnic de praf de usturoi poate reduce grăsimea corporală cu un cost de aproximativ doi centi pe zi.</string>
+    <string name="daily_ginger_text">Studiile controlate la întâmplare au descoperit că ¼ linguriță la 1½ linguriță pe zi de ghimbir măcinat a scăzut semnificativ greutatea corporală doar pentru un ban pe zi. Poate fi la fel de ușor ca agitarea condimentului măcinat într-o cană cu apă fierbinte. Notă: Ghimbirul poate funcționa mai bine dimineața decât seara. Ceaiul Chai este o modalitate gustoasă de a combina ceaiul verde și trucurile de ghimbir într-o singură băutură. În mod alternativ, pentru activarea BAT, puteți adăuga un ardei iute de jalapeño sau o jumătate de linguriță de piper roșu (sau, probabil, fulgi de ardei roșu zdrobit) în dieta zilnică. Pentru a ajuta la bătaia căldurii, puteți felia foarte subțire sau toca fin jalapeño pentru a-i reduce mușcăturile la micile gălbenușuri sau amesteca ardeiul roșu în ciorbă sau smoothie-ul cu legume cu alimente întregi pe care l-am prezentat într-unul dintre videoclipurile mele de gătit de pe NutritionFacts.org .</string>
+    <string name="daily_nutriyeast_text">Două lingurițe de panificatoare, de bere sau de drojdie nutrițională conțin aproximativ cantitatea de beta 1,3 / 1,6 glucane găsite în studii clinice randomizate, dublu-orb, controlate cu placebo, pentru a facilita pierderea în greutate.</string>
+    <string name="daily_cumin_text">Femeile supraponderale au intamplat la intamplare sa adauge o jumatate de lingurita de chimen la prânzurile lor, iar cina au bătut grupul de control cu încă patru kilograme și un centimetru suplimentar de la talie. Există, de asemenea, dovezi care să sprijine utilizarea șofranului de condimente, dar o ciupire pe zi ar costa un dolar, în timp ce o linguriță de chimen costă mai puțin de zece centi.</string>
+    <string name="daily_greentea_text">Bea trei căni pe zi între mese (așteptați cel puțin o oră după masă, pentru a nu interfera cu absorbția fierului). În timpul meselor, bea apă, cafea neagră sau ceai de hibiscus amestecat 6: 1 cu verbena de lămâie, dar nu depășește niciodată trei căni de lichid pe oră (important având în vedere sfaturile mele de preîncărcare a apei). Profitați de efectul de consolidare al cofeinei, consumând ceaiul verde împreună cu ceva sănătos pe care doriți să vă fi plăcut mai mult, dar nu consumați cantități mari de cofeină în șase ore de la culcare. A lua ceai fără îndulcitor este cel mai bine, dar dacă în mod obișnuit îndulciți ceaiul cu miere sau zahăr, încercați în schimb siropul de yacon.</string>
+    <string name="daily_hydrate_text">Bifează această casetă dacă urina ta nu apare niciodată mai închisă decât un galben pal. Rețineți că, dacă mâncați alimente fortificate cu riboflavină (cum ar fi drojdia nutrițională), atunci bazați-o în loc să obțineți nouă căni de băuturi neîndulcite pe zi pentru femei (care ar fi îngrijite de recomandările de preîncărcare a ceaiului verde și a apei) sau treisprezece căni pe zi pentru bărbați. Dacă aveți probleme cu inima sau rinichii, nu creșteți deloc aportul de lichide fără să discutați mai întâi cu medicul dumneavoastră. Amintiți-vă, sodă dietetică poate fi fără calorii, dar nu este fără consecințe, așa cum am învățat în secțiunea Scăzut de zahăr adăugat.</string>
+    <string name="daily_deflourdiet_text">Bifează această casetă în fiecare zi, porțiile întregi de cereale sunt sub formă de boabe intacte. Praful de chiar 100 de procente de cereale integrale ne furișează microbiomii de amidon, care altfel ar fi transportați până la coloanele noastre închise în pereții celulelor neîntrerupte.</string>
+    <string name="daily_frontload_text">Există avantaje metabolice pentru a distribui mai multe calorii la începutul zilei, așa că faceți micul dejun (ideal) sau prânzul cea mai mare masă a zilei în stilul rege / prinț / sărăcitor.</string>
+    <string name="daily_timerestrict_text">Încercați să mâncați într-o fereastră zilnică de timp pe care o alegeți sub douăsprezece ore în lungime la care puteți rămâne constant, șapte zile pe săptămână. Având în vedere beneficiile circadiene ale reducerii aportului alimentar de seară, fereastra ar trebui să se încheie înainte de ora 19:00.</string>
+    <string name="exercise_timing_text">Recomandarea Daily Dozen pentru o durată optimă de exercitare pentru longevitate este de nouăzeci de minute de activitate moderat intensă pe zi, care este, de asemenea, durata optimă de exercițiu pentru pierderea în greutate. Oricând este bine, și cu atât mai mult, cu atât mai bine, dar poate exista un avantaj pentru a face exerciții în post, cel puțin șase ore după ultima masă. De obicei, acest lucru ar însemna înainte de micul dejun, dar dacă o cronometrați corect, puteți să faceți exerciții de prânz înainte de un prânz târziu sau, dacă prânzul este mâncat suficient de devreme, înainte de cină. Acesta este momentul pentru nondiabetici. Diabeticii și prediabeticii ar trebui să înceapă să facă exerciții fizice la treizeci de minute după începerea unei mese și, în mod ideal, să meargă cel puțin o oră pentru a depăși complet vârful de zahăr din sânge. Dacă ar trebui să alegeți o singură masă pentru a face exerciții fizice, ar fi cina, datorită ritmului circadian de control al zahărului din sânge care se stinge pe parcursul zilei. În mod ideal, micul dejun ar fi cea mai mare masă a zilei și ar trebui să exersezi după asta - sau, chiar mai bine, după fiecare masă.</string>
+    <string name="weigh_twice_text">Auto-cântărirea este considerată crucială pentru controlul greutății pe termen lung, dar nu există dovezi suficiente pentru a susține o frecvență specifică de cântărire. Recomandarea mea se bazează pe un singur studiu care a constatat că de două ori pe zi - la trezire și chiar înainte de culcare - apărea superioară o dată pe zi (aproximativ șase versus două kilograme de pierdere în greutate pe parcursul a douăsprezece săptămâni).</string>
+    <string name="complete_intentions_text">La fiecare două luni, creați trei noi intenții de implementare - „dacă X, apoi Y” intenționează să efectueze un anumit comportament într-un context specific - și verificați fiecare dintre ele în timp ce le completați în fiecare zi.</string>
+    <string name="nightly_fast_text">Datorită ritmurilor noastre circadiene, mâncarea mâncată noaptea este mai îngrășată decât aceeași mâncare mâncată mai devreme în timpul zilei, atât de rapid în fiecare seară timp de cel puțin douăsprezece ore începând înainte de ora 19:00. Cu cât mai puține calorii după apusul soarelui, cu atât mai bine.</string>
+    <string name="nightly_sleep_text">Bifează această casetă dacă ai cel puțin șapte ore de somn la culcare obișnuită.</string>
+    <string name="nightly_trendelenburg_text">Încercați să petreceți cel puțin patru ore pe noapte culcată cu corpul înclinat cu capul în jos cu șase grade, ridicând posturile de la poalele patului dvs. cu opt centimetri (sau cu nouă centimetri dacă aveți un rege din California). Fii extrem de atent când te ridici din pat, deoarece acest lucru provoacă intoleranță ortostatică la majoritatea oamenilor, chiar dacă ești tânăr și sănătos - adică dacă te ridici prea repede, te poți simți amețit, leșin sau cap deschis cădeați și răniți-vă. Deci ridicați-vă încet. Consumul a două căni de apă rece cu treizeci de minute înainte de creștere poate ajuta, de asemenea, la prevenirea acestui efect secundar potențial periculos. \ N * IMPORTANT: Nu încercați deloc acasă dacă aveți probleme cu inima sau cu plămânii, refluxul acid sau probleme cu creierul. (ca trauma capului) sau ochii (chiar și un istoric familial de glaucom te descalifică). De asemenea, nu încercați acest lucru până când nu întrebați medicul dvs. dacă consideră că este sigur să dormiți în Trendelenburg ușor. *</string>
+    <string name="for_health_and_weight_loss">Pentru sănătate și pierdere în greutate</string>
+    <string name="for_health_alone">Pentru sănătate singur</string>
+    <string name="daily_dozen_and_tweaks">Ziua zilnică 21 Tweaks</string>
+    <string name="daily_dozen_only">Doar zilnic Dozen</string>
+
+</resources>

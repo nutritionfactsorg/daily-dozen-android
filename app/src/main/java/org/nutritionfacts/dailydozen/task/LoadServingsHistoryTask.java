@@ -1,8 +1,8 @@
 package org.nutritionfacts.dailydozen.task;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
-import android.util.Log;
+
+import androidx.core.content.ContextCompat;
 
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
@@ -11,22 +11,27 @@ import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
-import org.nutritionfacts.dailydozen.model.Servings;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
+import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
-public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, CombinedData> {
-    private static final String TAG = LoadServingsHistoryTask.class.getSimpleName();
+import timber.log.Timber;
+
+public class LoadServingsHistoryTask
+        extends TaskWithContext<LoadHistoryTaskParams, Integer, LoadHistoryCompleteEvent> {
+    private static final int MONTHS_IN_YEAR = 12;
 
     public LoadServingsHistoryTask(Context context) {
         super(context);
@@ -38,27 +43,36 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
 
         progress.setTitle(R.string.task_loading_servings_history_title);
         progress.show();
+
+        // This prevents ServingsHistoryActivity from being closed when the user taps to go to the next/previous
+        // month/year before the progress dialog has closed (before this task has completed)
+        progress.setCancelable(false);
     }
 
     @Override
-    protected CombinedData doInBackground(Integer... params) {
-        if (Servings.isEmpty()) {
+    protected LoadHistoryCompleteEvent doInBackground(LoadHistoryTaskParams... params) {
+        if (DDServings.isEmpty() || params[0] == null) {
             return null;
         }
 
-        switch (params[0]) {
+        final LoadHistoryTaskParams inputParams = params[0];
+
+        switch (inputParams.getTimeScale()) {
             default:
             case TimeScale.DAYS:
-                return getChartDataInDays();
+                return getChartDataInDays(inputParams);
             case TimeScale.MONTHS:
-                return getChartDataInMonths();
+                return getChartDataInMonths(inputParams);
             case TimeScale.YEARS:
                 return getChartDataInYears();
         }
     }
 
-    private CombinedData getChartDataInDays() {
-        final List<Day> history = Day.getAllDays();
+    // This method loads the last two months of servings into memory, but only shows the selected
+    // month. This is because it needs to use the data from the month before to calculate the
+    // starting moving average.
+    private LoadHistoryCompleteEvent getChartDataInDays(final LoadHistoryTaskParams inputParams) {
+        final List<Day> history = Day.getLastTwoMonths(inputParams.getSelectedYear(), inputParams.getSelectedMonth());
 
         final int numDaysOfServings = history.size();
 
@@ -73,80 +87,75 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
                 break;
             }
 
-            final int xIndex = xLabels.size();
-
             final Day day = history.get(i);
-            xLabels.add(day.getDayOfWeek());
 
-            final int totalServingsOnDate = Servings.getTotalServingsOnDate(day);
-
-            barEntries.add(new BarEntry(totalServingsOnDate, xIndex));
+            final int totalServingsOnDate = DDServings.getTotalServingsOnDate(day);
 
             previousTrend = calculateTrend(previousTrend, totalServingsOnDate);
-            lineEntries.add(new Entry(previousTrend, xIndex));
+
+            // Only show the past days of servings in the selected month and year
+            if (day.getYear() == inputParams.getSelectedYear() && day.getMonth() == inputParams.getSelectedMonth()) {
+                final int xIndex = xLabels.size();
+
+                xLabels.add(day.getDayOfWeek());
+
+                barEntries.add(new BarEntry(totalServingsOnDate, xIndex));
+
+                final Entry lineEntry = new Entry(previousTrend, xIndex);
+                // Here we set the optional data field on the Entry class. This gives the user the
+                // ability to tap on a value in the ServingsHistoryActivity and be taken to that date
+                lineEntry.setData(DateUtil.convertDayToDate(day));
+                lineEntries.add(lineEntry);
+            }
 
             publishProgress(i + 1, numDaysOfServings);
         }
 
-        return createLineAndBarData(xLabels, lineEntries, barEntries);
+        return createCompleteEvent(createLineAndBarData(xLabels, lineEntries, barEntries), TimeScale.DAYS);
     }
 
-    private CombinedData getChartDataInMonths() {
-        final Day firstDay = Day.getFirstDay();
-        final int firstYear = firstDay.getYear();
-        final int firstMonthOneBased = firstDay.getMonth();
-        Log.d(TAG, String.format("getChartDataInMonths: firstYear [%s], firstMonthOneBased [%s]",
-                firstYear, firstMonthOneBased));
-
-        final int currentYear = DateUtil.getCurrentYear();
-        final int currentMonthOneBased = DateUtil.getCurrentMonthOneBased();
-        Log.d(TAG, String.format("getChartDataInMonths: currentYear [%s], currentMonthOneBased [%s]",
-                currentYear, currentMonthOneBased));
-
-        final Calendar cal = DateUtil.getCalendarForYearAndMonth(firstYear, firstMonthOneBased - 1);
-
-        final int numMonths = DateUtil.monthsSince(cal);
+    private LoadHistoryCompleteEvent getChartDataInMonths(final LoadHistoryTaskParams inputParams) {
         int i = 0;
 
-        int year = firstYear;
-        int monthOneBased = firstMonthOneBased;
+        int year = inputParams.getSelectedYear();
+        int monthOneBased = 1;
 
         final List<String> xLabels = new ArrayList<>();
         final List<Entry> lineEntries = new ArrayList<>();
 
-        while (year < currentYear || (year == currentYear && monthOneBased <= currentMonthOneBased)) {
+        while (monthOneBased <= MONTHS_IN_YEAR) {
             if (isCancelled()) {
                 break;
             }
 
-            final int xIndex = xLabels.size();
+            final float averageTotalServingsInMonth = DDServings.getAverageTotalServingsInMonth(year, monthOneBased);
 
-            xLabels.add(String.format("%s/%s", monthOneBased, year));
+            Timber.d("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
+                    year, monthOneBased, averageTotalServingsInMonth);
 
-            final float averageTotalServingsInMonth = Servings.getAverageTotalServingsInMonth(year, monthOneBased);
+            if (averageTotalServingsInMonth > 0) {
+                final int xIndex = xLabels.size();
 
-            Log.d(TAG, String.format("getChartDataInMonths: year [%s], monthOneBased [%s], average [%s]",
-                    year, monthOneBased, averageTotalServingsInMonth));
+                xLabels.add(DateUtil.getShortNameOfMonth(monthOneBased));
 
-            lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
+                lineEntries.add(new Entry(averageTotalServingsInMonth, xIndex));
+            }
 
-            DateUtil.addOneMonth(cal);
-            year = DateUtil.getYear(cal);
-            monthOneBased = DateUtil.getMonthOneBased(cal);
+            monthOneBased++;
 
-            publishProgress(i++, numMonths);
+            publishProgress(i++, MONTHS_IN_YEAR);
         }
 
-        return createLineData(xLabels, lineEntries);
+        return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.MONTHS);
     }
 
-    private CombinedData getChartDataInYears() {
+    private LoadHistoryCompleteEvent getChartDataInYears() {
         final Day firstDay = Day.getFirstDay();
         final int firstYear = firstDay.getYear();
-        Log.d(TAG, String.format("getChartDataInYears: firstYear [%s]", firstYear));
+        Timber.d("getChartDataInYears: firstYear [%s]", firstYear);
 
         final int currentYear = DateUtil.getCurrentYear();
-        Log.d(TAG, String.format("getChartDataInYears: currentYear [%s]", currentYear));
+        Timber.d("getChartDataInYears: currentYear [%s]", currentYear);
 
         final int numYears = currentYear - firstYear;
         int i = 0;
@@ -165,10 +174,10 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
 
             xLabels.add(String.valueOf(year));
 
-            final float averageTotalServingsInYear = Servings.getAverageTotalServingsInYear(year);
+            final float averageTotalServingsInYear = DDServings.getAverageTotalServingsInYear(year);
 
-            Log.d(TAG, String.format("getChartDataInYears: year [%s], average [%s]",
-                    year, averageTotalServingsInYear));
+            Timber.d("getChartDataInYears: year [%s], average [%s]",
+                    year, averageTotalServingsInYear);
 
             lineEntries.add(new Entry(averageTotalServingsInYear, xIndex));
 
@@ -177,7 +186,12 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
             publishProgress(i++, numYears);
         }
 
-        return createLineData(xLabels, lineEntries);
+        return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.YEARS);
+    }
+
+    private LoadHistoryCompleteEvent createCompleteEvent(final CombinedData combinedData,
+                                                         @TimeScale.Interface final int timeScale) {
+        return new LoadHistoryCompleteEvent(combinedData, timeScale);
     }
 
     private CombinedData createLineAndBarData(List<String> xLabels, List<Entry> lineEntries, List<BarEntry> barEntries) {
@@ -212,7 +226,7 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
     }
 
     private BarData getBarData(List<String> xVals, List<BarEntry> barEntries) {
-        final BarDataSet dataSet = new BarDataSet(barEntries, "Servings");
+        final BarDataSet dataSet = new BarDataSet(barEntries, getContext().getString(R.string.servings));
 
         dataSet.setColor(ContextCompat.getColor(getContext(), R.color.colorPrimary));
         dataSet.setValueTextColor(ContextCompat.getColor(getContext(), android.R.color.white));
@@ -225,9 +239,9 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
     }
 
     private LineData getLineData(List<String> xVals, List<Entry> lineEntries) {
-        final LineDataSet dataSet = new LineDataSet(lineEntries, "Moving Average");
+        final LineDataSet dataSet = new LineDataSet(lineEntries, getContext().getString(R.string.moving_average));
 
-        final int color = ContextCompat.getColor(getContext(), R.color.colorAccent);
+        final int color = ContextCompat.getColor(getContext(), R.color.brown);
 
         dataSet.setColor(color);
         dataSet.setLineWidth(2.5f);
@@ -236,6 +250,9 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
         dataSet.setDrawValues(true);
         dataSet.setValueTextSize(12);
         dataSet.setValueTextColor(color);
+
+        // Format the value labels to two decimal places
+        dataSet.setValueFormatter(new LineChartValueFormatter());
 
         return new LineData(xVals, dataSet);
     }
@@ -257,16 +274,29 @@ public class LoadServingsHistoryTask extends TaskWithContext<Integer, Integer, C
     }
 
     @Override
-    protected void onPostExecute(CombinedData chartData) {
-        super.onPostExecute(chartData);
-        Bus.loadServingsHistoryCompleteEvent(chartData);
+    protected void onPostExecute(LoadHistoryCompleteEvent event) {
+        super.onPostExecute(event);
+        Bus.loadServingsHistoryCompleteEvent(event);
     }
 
-    private class BarChartValueFormatter implements com.github.mikephil.charting.formatter.ValueFormatter {
+    private class BarChartValueFormatter implements ValueFormatter {
         private DecimalFormat decimalFormat;
 
-        public BarChartValueFormatter() {
+        BarChartValueFormatter() {
             decimalFormat = new DecimalFormat("#");
+        }
+
+        @Override
+        public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+            return decimalFormat.format(value);
+        }
+    }
+
+    private class LineChartValueFormatter implements ValueFormatter {
+        private final DecimalFormat decimalFormat;
+
+        LineChartValueFormatter() {
+            decimalFormat = new DecimalFormat("#.00");
         }
 
         @Override

@@ -6,16 +6,18 @@
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#727272</color>
     <color name="colorDividerColor">#B6B6B6</color>
-
     <color name="gray">#AAAAAA</color>
+    <color name="gray_CCCCCC">#CCCCCC</color>
+    <color name="gray_D3D3D3">#D3D3D3</color>
     <color name="gray_dark">#555555</color>
     <color name="gray_light">#F2F2F2</color>
+    <color name="gray_f9">#F9F9F9</color>
     <color name="green_faint">#CCFFCC</color>
     <color name="green">#00CC00</color>
-
     <color name="legend_less_than_recommended_servings">@color/green_faint</color>
     <color name="legend_recommended_servings">@color/green</color>
     <color name="gold">#FFD700</color>
     <color name="silver">#C0C0C0</color>
     <color name="bronze">#8C7853</color>
+    <color name="brown">#A52A2A</color>
 </resources>

@@ -1,11 +1,12 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
+import androidx.core.content.ContextCompat;
 
 import com.joanzapata.iconify.widget.IconTextView;
 
@@ -32,13 +33,13 @@ public class StreakWidget extends IconTextView {
         if (streak > ONE_DAY) {
             setVisibility(View.VISIBLE);
 
-            setText(String.format(getContext().getString(R.string.format_num_days), streak));
+            setText(getContext().getString(R.string.format_num_days, streak));
 
             if (streak < ONE_WEEK) {
                 setBackgroundAndTextColor(R.drawable.rounded_rectangle_bronze, android.R.color.white);
-            } else if (streak >= ONE_WEEK && streak < TWO_WEEKS) {
+            } else if (streak < TWO_WEEKS) {
                 setBackgroundAndTextColor(R.drawable.rounded_rectangle_silver, android.R.color.black);
-            } else if (streak >= TWO_WEEKS) {
+            } else {
                 setBackgroundAndTextColor(R.drawable.rounded_rectangle_gold, android.R.color.black);
             }
         } else {

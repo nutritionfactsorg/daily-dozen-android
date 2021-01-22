@@ -1,11 +1,12 @@
 package org.nutritionfacts.dailydozen.adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
@@ -50,7 +51,7 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHo
     }
 
     private void setFoodVideosLink(final TextView textView, int position) {
-        if (foodVideos != null && !foodVideos.isEmpty()) {
+        if (foodVideos != null && !foodVideos.isEmpty() && position < foodVideos.size()) {
             final String link = foodVideos.get(position);
 
             if (!TextUtils.isEmpty(link)) {
@@ -73,13 +74,13 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHo
         return foodTypes.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.food_name)
-        protected TextView foodName;
+        TextView foodName;
         @BindView(R.id.food_videos)
-        protected TextView foodVideos;
+        TextView foodVideos;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

@@ -1,2 +1,5 @@
 /build
 /.idea
+*.apk
+output.json
+google-services.json

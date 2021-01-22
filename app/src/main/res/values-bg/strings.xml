@@ -1,0 +1,689 @@
+<resources>
+    <string name="app_name">Daily Dozen</string>
+
+    <string name="beans">Бобови</string>
+    <string name="berries">Горски плодове</string>
+    <string name="other_fruits">Други плодове</string>
+    <string name="cruciferous_vegetables">Кръстоцветни зеленчуци</string>
+    <string name="greens">Зеленолистни зеленчуци</string>
+    <string name="other_vegetables">Други зеленчуци</string>
+    <string name="flaxseeds">Ленено семе</string>
+    <string name="nuts">Ядки</string>
+    <string name="spices">Подправки</string>
+    <string name="whole_grains">Пълнозърнести</string>
+    <string name="beverages">Напитки</string>
+    <string name="exercise">Упражнения</string>
+    <string name="vitamin_b12">Витамин B12</string>
+    <string name="serving_sizes">Порции</string>
+    <string name="types">Видове</string>
+    <string name="history">История</string>
+    <string name="servings_some">Някои порции</string>
+    <string name="servings_all">Всички порции</string>
+    <string name="servings">Порция</string>
+    <string name="out_of">от</string>
+    <string name="moving_average">плъзгаща се средна</string>
+    <string name="about">Относно</string>
+    <string name="about_this_app">Информация за приложението</string>
+    <string name="latest_videos">Най-новите видео клипове</string>
+    <string name="donate">Направете дарение</string>
+    <string name="subscribe">Абонирай се</string>
+    <string name="open_source">Отворен код</string>
+    <string name="library_butterknife">ButterKnife</string>
+    <string name="permission_needed_to_write_storage">Не може да направите резервно копие без да имате права за писане върху паметта</string>
+    <string name="backup_failed">Задачата за създаване на архив е неуспешна</string>
+    <string name="restore_failed">Процесът по възстановяване на информация от архив е неуспешен</string>
+    <string name="backup_success">Архивът е успешно създаден</string>
+    <string name="restore_success">Процесът по възстановяване на информация от архив е успешен</string>
+    <string name="restore_confirm_title">Възстанови архива</string>
+    <string name="restore_confirm_message">Всички съществуващи данни ще бъдат изтрити преди възстановяване от архив. Желаете ли да продължите?</string>
+    <string name="yes">Да</string>
+    <string name="no">Не</string>
+    <string name="backup">Архивиране</string>
+    <string name="food_info">Информация за храните</string>
+    <string name="food_history">История на храните</string>
+    <string name="daily_servings_history">История на отбелязаните дневни порции</string>
+    <string name="no_servings_recorded">Все още не сте отбелязали порции!</string>
+    <string name="task_backup_title">Архивиране</string>
+    <string name="task_restore_title">Възстановяване</string>
+    <string name="task_calculating_streaks_title">Статистическите линии се изчисляват</string>
+    <string name="back_to_today">Върнете се към днешната дата</string>
+    <string name="debug">Отстраняване на грешки</string>
+    <string name="debug_clear_data">Изчистване на всички данни</string>
+    <string name="debug_clear_data_message">Това ще изтрие всички въведени порции. Желаете ли да продължите?</string>
+    <string name="OK">ОК</string>
+    <string name="dialog_streaks_title">Нова функция: Линии!</string>
+    <string name="dialog_streaks_message">Вашата база данни ще бъде обновена, за да поддържа новата функция „линии“.</string>
+    <string name="dialog_no_email_apps_title">Няма намерени имейл приложения</string>
+    <string name="dialog_no_email_apps_message">Архивирането на данни изисква да имате инсталирано приложение за имейл, за да можете да изпратите csv файл по пощата. Моля инсталирайте имейл клиент и опитайте отново.</string>
+    <string name="debug_generate_random_data">Генериране на случайни данни</string>
+    <string name="debug_generate_full_data">Генериране на пълна информация</string>
+    <string name="debug_generate_data_message">Всички съществуващи данни ще бъдат заменени. Желаете ли да продължите?</string>
+    <string name="task_generating_random_data">Генериране на случайни данни</string>
+    <string name="task_loading_servings_history_title">Зареждане на историята на дозите</string>
+    <string name="time_scale">Времева скала</string>
+    <string name="history_to_generate">Генериране на история</string>
+    <string name="welcome_to_my_daily_dozen">Добре дошли в моя Daily Dozen!</string>
+    <string name="activity_welcome_text">Използвайте това приложение на дневна база, за да следите храните, които аз препоръчвам за оптимално здраве и дълголетие в книгата си „Как да не умрем“.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Харесвате ли това приложение?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Моля, дайте ни обратна връзка в Google Play Store.</string>
+    <string name="rate_now">Изпратете обратна информация</string>
+    <string name="not_now">Пропусни</string>
+    <string formatted="false" name="format_version">версия %s</string>
+    <string formatted="false" name="format_num_days">%d дни</string>
+    <string name="daily_reminder_title">Напомняне за Daily Dozen</string>
+    <string name="daily_reminder_text">Актуализиране на вашите порции за днес</string>
+    <string name="daily_reminder_settings">Настройки за напомняне</string>
+    <string name="enable_daily_reminder">Активиране на напомнянето</string>
+    <string name="remind_me_at">Напомни ми на</string>
+    <string name="vibrate">Вибрация</string>
+    <string name="play_sound">Възпроизвеждане на звук</string>
+    <string name="videos">Видео клипове</string>
+    <string name="units">единици</string>
+    <string name="imperial">имперски</string>
+    <string name="metric">метричен</string>
+
+    <string-array name="food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+    </string-array>
+
+    <string-array name="notification_icon_food_names">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/spices</item>
+    </string-array>
+
+    <string-array name="about_text_lines">
+        <item>Това приложение е създадено от John Slavick.</item>
+        <item/>
+        <item>Използват се следните библиотеки с отворен код: ActiveAndroid, Android-iconify, ButterKnife, EventBus, LikeAnimation, и MPAndroidChart.</item>
+        <item/>
+        <item>Специални благодарности за усилията положени от създателите на първата версия на приложението: Chan Kruse, Allan Portera, и Sangeeta Kumar.</item>
+    </string-array>
+
+    <string-array name="backup_instructions_lines">
+        <item>Следвайте тези стъпки, за да възстановите Daily Dozen от резервно копие</item>
+        <item/>
+        <item>1. Приложението Daily Dozen трябва да се инсталира на вашия телефон с Андроид. Можете да го изтеглите от тук: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item/>
+        <item>2. Изберете архивния файл, прикачен към този имейл.</item>
+        <item/>
+        <item>3. Изберете „Отвори“ с Daily Dozen</item>
+    </string-array>
+
+    <string-array name="servings_time_scale_choices">
+        <item>Ден</item>
+        <item>Месец</item>
+        <item>Година</item>
+    </string-array>
+
+    <string-array name="history_to_generate_choices">
+        <item>1 месец</item>
+        <item>3 месеца</item>
+        <item>6 месеца</item>
+        <item>1 година</item>
+        <item>2 години</item>
+        <item>5 години</item>
+    </string-array>
+
+    <string-array name="food_info_types_beans">
+        <item>Черен боб</item>
+        <item>Папуда</item>
+        <item>Жълт боб</item>
+        <item>Бял боб</item>
+        <item>Нахут</item>
+        <item>Едамаме</item>
+        <item>Английски грах</item>
+        <item>Нахут тип Гарбанзо</item>
+        <item>Едър боб</item>
+        <item>Бъбрековиден боб</item>
+        <item>Леща (белуга, френска и червени сортове)</item>
+        <item>Мисо</item>
+        <item>Дребен боб</item>
+        <item>Боб Пинто</item>
+        <item>Дребен червен боб</item>
+        <item>Белен грах (жълт или зелен)</item>
+        <item>Темпе</item>
+    </string-array>
+
+    <string-array name="food_info_types_berries">
+        <item>Акаи плодове</item>
+        <item>Кисел трън</item>
+        <item>Къпини</item>
+        <item>Боровинки</item>
+        <item>Череши (сладки или кисели)</item>
+        <item>Американски грозде („Конкорд“)</item>
+        <item>Червени боровинки</item>
+        <item>Годжи Бери</item>
+        <item>Кумкуат</item>
+        <item>Черници</item>
+        <item>Малини (черни или червени)</item>
+        <item>Ягоди</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_fruits">
+        <item>Ябълки</item>
+        <item>Сушени кайсии</item>
+        <item>Авокадо</item>
+        <item>Банани</item>
+        <item>Пъпеш</item>
+        <item>Мандарини</item>
+        <item>Фурми</item>
+        <item>Сушени смокини</item>
+        <item>Грейпфрут</item>
+        <item>Пъпеш („Медена роса“)</item>
+        <item>Киви</item>
+        <item>Лимони</item>
+        <item>Лайм</item>
+        <item>Личии</item>
+        <item>Манго</item>
+        <item>Нектарини</item>
+        <item>Портокали</item>
+        <item>Папая</item>
+        <item>Маракуя</item>
+        <item>Праскови</item>
+        <item>Круши</item>
+        <item>Ананас</item>
+        <item>Сливи (особено черни сливи)</item>
+        <item>Едри сини сливи</item>
+        <item>Нар</item>
+        <item>Сушени сливи</item>
+        <item>Мандарини</item>
+        <item>Диня</item>
+    </string-array>
+
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Рукола</item>
+        <item>Бок чой</item>
+        <item>Броколи (Романеско)</item>
+        <item>Брюкселско зеле</item>
+        <item>Зеле (зелен, червено, савойско)</item>
+        <item>Карфиол (бяло, зелено, оранжево, лилаво)</item>
+        <item>Зелеви растения</item>
+        <item>Хрян</item>
+        <item>Кейл (черен, зелен и червен)</item>
+        <item>Алабаш (зелено, лилаво)</item>
+        <item>Сарепска горчица</item>
+        <item>Репички</item>
+        <item>Ряпа</item>
+        <item>Кресон</item>
+    </string-array>
+
+    <string-array name="food_info_types_greens">
+        <item>Рукола</item>
+        <item>Цвекло</item>
+        <item>Зелеви растения</item>
+        <item>Кейл/Къдраво зеле (черно, зелено и червено)</item>
+        <item>Микс от млади салатни зеленчуци</item>
+        <item>Сарепска горчица</item>
+        <item>Киселец</item>
+        <item>Спанак</item>
+        <item>Манголд</item>
+        <item>Ряпа</item>
+    </string-array>
+
+    <string-array name="food_info_types_other_vegetables">
+        <item>Артишок</item>
+        <item>Аспержи</item>
+        <item>Цвекло</item>
+        <item>Камби</item>
+        <item>Моркови</item>
+        <item>Царевица</item>
+        <item>Чесън</item>
+        <item>Гъби (печурки, кладница и шийтаке)</item>
+        <item>Бамя</item>
+        <item>Лук</item>
+        <item>Лилави картофи</item>
+        <item>Тиква</item>
+        <item>Морски зеленчуци (араме, дулсе и нори)</item>
+        <item>Грах</item>
+        <item>Тиква „Скуош“ (деликата, лято и скуош „спагети“)</item>
+        <item>Сладки картофи</item>
+        <item>Домати</item>
+        <item>Тиквички</item>
+    </string-array>
+
+    <string-array name="food_info_types_flaxseeds">
+        <item>Кафяво лененото семе</item>
+        <item>Златно лененото семе</item>
+    </string-array>
+
+    <string-array name="food_info_types_nuts">
+        <item>Бадеми</item>
+        <item>Бразилски орех</item>
+        <item>Кашу</item>
+        <item>Семена от чиа</item>
+        <item>Лешници</item>
+        <item>Конопени семена</item>
+        <item>Макадамия</item>
+        <item>Пекан</item>
+        <item>Шамфъстък</item>
+        <item>Тиквени семена</item>
+        <item>Сусам</item>
+        <item>Слънчогледови семки</item>
+        <item>Орехи</item>
+    </string-array>
+
+    <string-array name="food_info_types_spices">
+        <item>Бахар</item>
+        <item>Кисел трън</item>
+        <item>Босилек</item>
+        <item>Дафинови листа</item>
+        <item>Кардамон</item>
+        <item>Чили на прах</item>
+        <item>Силантро</item>
+        <item>Канела</item>
+        <item>Карамфил</item>
+        <item>Кориандър</item>
+        <item>Кимион</item>
+        <item>Къри на прах</item>
+        <item>Копър</item>
+        <item>Сминдух</item>
+        <item>Чесън</item>
+        <item>Джинджифил</item>
+        <item>Хрян</item>
+        <item>Лимонена трева</item>
+        <item>Риган</item>
+        <item>Горчица на прах</item>
+        <item>Индийско орехче</item>
+        <item>Риган</item>
+        <item>Пушен червен пипер</item>
+        <item>Магданоз</item>
+        <item>Пипер</item>
+        <item>Мента</item>
+        <item>Розмарин</item>
+        <item>Шафран</item>
+        <item>Градински чай</item>
+        <item>Мащерка</item>
+        <item>Куркума</item>
+        <item>Ванилия</item>
+    </string-array>
+
+    <string-array name="food_info_types_whole_grains">
+        <item>Ечемик</item>
+        <item>Елда</item>
+        <item>Просо</item>
+        <item>Овесени ядки</item>
+        <item>Пуканки</item>
+        <item>Киноа</item>
+        <item>Ръж</item>
+        <item>Теф</item>
+        <item>Пълнозърнеста паста</item>
+    </string-array>
+
+    <string-array name="food_info_types_beverages">
+        <item>Черен чай</item>
+        <item>Чаи чай</item>
+        <item>Ванилово-лайков чай</item>
+        <item>Кафе</item>
+        <item>„Ърл Грей“ чай</item>
+        <item>Зелен чай</item>
+        <item>Чай от хибискус</item>
+        <item>Горещ шоколад</item>
+        <item>Жасминов чай</item>
+        <item>Чай от маточина</item>
+        <item>Матча чай</item>
+        <item>Чай „цъфнали бадеми оолонг“</item>
+        <item>Чай от мента</item>
+        <item>Ройбос чай</item>
+        <item>Вода</item>
+        <item>Бял чай</item>
+    </string-array>
+
+    <string-array name="food_info_types_exercise">
+        <item>Колоездене</item>
+        <item>Гребане</item>
+        <item>Танцуване</item>
+        <item>Народна топка</item>
+        <item>Спускане ски</item>
+        <item>Фехтовка</item>
+        <item>Туризъм</item>
+        <item>Домакинска работа</item>
+        <item>Фигурно пързаляне</item>
+        <item>Каране на ролери</item>
+        <item>Жонглиране</item>
+        <item>Скокове на батут</item>
+        <item>Каране на водно колело</item>
+        <item>Игра с фризби</item>
+        <item>Каране на кънки</item>
+        <item>Баскетбол</item>
+        <item>Изгребване на сняг</item>
+        <item>Каране на скейтборд</item>
+        <item>Плуване с шнорхел</item>
+        <item>Сърфиране</item>
+        <item>Плуване</item>
+        <item>Тенис на двойки</item>
+        <item>Синхронно плуване</item>
+        <item>Бързо ходене (6,4 км/ч)</item>
+        <item>Водна аеробика</item>
+        <item>Каране на водни ски</item>
+        <item>Градинарство</item>
+        <item>Йога</item>
+        <item>Туризъм</item>
+        <item>Баскетбол</item>
+        <item>Планинско колоездене</item>
+        <item>Вдигане на тежести</item>
+        <item>Ски бягане</item>
+        <item>Футбол</item>
+        <item>Хокей</item>
+        <item>Джогинг</item>
+        <item>Подскоци</item>
+        <item>Скачането на въже</item>
+        <item>Игра на топка</item>
+        <item>Лицеви опори</item>
+        <item>Набирания</item>
+        <item>Ракетбол</item>
+        <item>Скално катерене</item>
+        <item>Ръгби</item>
+        <item>Тичане</item>
+        <item>Гмуркане</item>
+        <item>Тенис на корд</item>
+        <item>Футбол</item>
+        <item>Пързаляне с кънки</item>
+        <item>Скуош</item>
+        <item>Аеробика</item>
+        <item>Плуване</item>
+        <item>Планинско тичане</item>
+        <item>Воден джогинг</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans">
+        <item>%s хумус или бобова разядка</item>
+        <item>%s сварен боб, грах, леща, тофу или темпе</item>
+        <item>%s пресен грах или покълнала леща</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ чаша</item>
+        <item>½ чаша</item>
+        <item>1 чаша</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 грам</item>
+        <item>130 грам</item>
+        <item>150 грам</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries">
+        <item>%s пресни или замразени боровинки</item>
+        <item>%s изсушени боровинки</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ чаша</item>
+        <item>¼ чаша</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 грам</item>
+        <item>40 грам</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>%s средно голям плод</item>
+        <item>%s нарязани плодове</item>
+        <item>%s сушени плодове</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item>1</item>
+        <item>1 чаша</item>
+        <item>¼ чаша</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item>1</item>
+        <item>120 грам</item>
+        <item>40 грам</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+        <item>%s нарязани цветнолистни</item>
+        <item>%s брюкселско зеле или броколи</item>
+        <item>%s супена лъжица хрян</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ чаша</item>
+        <item>¼ чаша</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 грам</item>
+        <item>12 грам</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens">
+        <item>%s сурови зеленолистни</item>
+        <item>%s варени зеленолистни</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 чаша</item>
+        <item>½ чаша</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 грам</item>
+        <item>90 грам</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>%s сурови листни зеленчуци</item>
+        <item>%s сурови или варени зеленчуци</item>
+        <item>%s зеленчуков сок</item>
+        <item>%s сушени гъби</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 чаша</item>
+        <item>½ чаша</item>
+        <item>½ чаша</item>
+        <item>¼ чаша</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 грам</item>
+        <item>50 грам</item>
+        <item>125 мл.</item>
+        <item>7 грам</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>%s1 супена лъжица ленено семе</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>%s ядки или семена</item>
+        <item>%s2 супени лъжици ядки или масло от семена</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ чаша</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 грам</item>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices">
+        <item>%s¼ чаена лъжичка куркума</item>
+        <item>%sВсякакви други безсолни билки и подправки, които обичате</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>%s топла зърнена закуска или сварени зърна, паста или царевица</item>
+        <item>%s студена зърнена закуска</item>
+        <item>%s1 тортила или филия хляб</item>
+        <item>%s½ поничка или английски мъфин</item>
+        <item>%s пуканки</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ чаша</item>
+        <item>1 чаша</item>
+        <item/>
+        <item/>
+        <item>3 чаши</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 грам</item>
+        <item>50 грам</item>
+        <item/>
+        <item/>
+        <item>30 грам</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages">
+        <item>Една чаша (%s)</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12 унции</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350 мл.</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>%s90 минути умерена интензивност на физическа дейност</item>
+        <item>%s40 минути енергично интензивност дейност</item>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item/>
+        <item/>
+    </string-array>
+
+    <string name="error_cannot_handle_url">Връзката не може да се отвори. Моля, инсталирайте браузър.</string>
+    <string name="channel_reminders_name">Напомняния</string>
+
+    <string name="twenty_one_tweaks">21 ощипвания</string>
+    <string name="tweaks">Фини настройки</string>
+    <string name="daily_tweaks_history">Ежедневна история за ощипване</string>
+    <string name="weight_history">История на теглото</string>
+    <string name="no_weights_recorded">Все още не сте записали тежести!</string>
+    <string name="task_loading_weights_history_title">Зареждане на историята на теглата</string>
+    <string name="morning">Сутрин</string>
+    <string name="evening">вечер</string>
+    <string name="weight">тегло</string>
+    <string name="tweak_group_meal">При всяко хранене</string>
+    <string name="tweak_group_daily">Всеки ден</string>
+    <string name="tweak_group_dailydoses">Вземете дневните си дози</string>
+    <string name="tweak_group_nightly">Всяка нощ</string>
+    <string name="about_tweak">Относно ощипване</string>
+    <string name="meal_water">Предварително заредете с вода</string>
+    <string name="meal_negcal">Предварително заредете с храни с отрицателни калории</string>
+    <string name="meal_vinegar">Включете оцет (2 ч.л. с всяко хранене)</string>
+    <string name="meal_undistracted">Насладете се на неразделени ястия</string>
+    <string name="meal_twentyminutes">Следвайте двадесетминутното правило</string>
+    <string name="daily_blackcumin">Черен кимион (¼ ч.л.)</string>
+    <string name="daily_garlic">Чесън на прах (¼ ч.л.)</string>
+    <string name="daily_ginger">Млян джинджифил (1 ч.л.) или кайенски пипер (½ ч.л.)</string>
+    <string name="daily_nutriyeast">Хранителна мая (2 ч.л.)</string>
+    <string name="daily_cumin">Кимион (½ ч.л. с обяд и вечеря)</string>
+    <string name="daily_greentea">Зелен чай (3 чаши)</string>
+    <string name="daily_hydrate">Останете хидратирани</string>
+    <string name="daily_deflourdiet">Обезцветете диетата си</string>
+    <string name="daily_frontload">Предварително заредете калориите си</string>
+    <string name="daily_timerestrict">Ограничете времето за хранене</string>
+    <string name="exercise_timing">Оптимизирайте времето за упражнения</string>
+    <string name="weigh_twice">Претегляйте се два пъти на ден</string>
+    <string name="complete_intentions">Изпълнете намеренията си за внедряване</string>
+    <string name="nightly_fast">Бързо след 19:00 ч</string>
+    <string name="nightly_sleep">Получете достатъчно сън</string>
+    <string name="nightly_trendelenburg">Експериментирайте с лекия трендленбург</string>
+    <string name="debug_generate_weight_data">Генериране на данни за теглото</string>
+    <string name="average_weight_on_day">Средно тегло на ден</string>
+    <string name="meal_water_short">Предварително заредете с вода</string>
+    <string name="meal_negcal_short">Предварително заредете с храни с отрицателни калории</string>
+    <string name="meal_vinegar_short">Включете оцет (2 ч.л. с всяко хранене)</string>
+    <string name="meal_undistracted_short">Насладете се на неразделени ястия</string>
+    <string name="meal_twentyminutes_short">Следвайте двадесетминутното правило</string>
+    <string name="daily_blackcumin_short">Черен кимион (Nigella sativa) (¼ ч.л.)</string>
+    <string name="daily_garlic_short">Чесън на прах (¼ ч.л.)</string>
+    <string name="daily_ginger_short">Млян джинджифил (1 ч.л.) или кайенски пипер (½ ч.л.)</string>
+    <string name="daily_nutriyeast_short">Хранителна мая (2 ч.л.)</string>
+    <string name="daily_cumin_short">Кимион (цилуминов цимин) (½ ч.л. с обяд и вечеря)</string>
+    <string name="daily_greentea_short">Зелен чай (3 чаши)</string>
+    <string name="daily_hydrate_short">Останете хидратирани</string>
+    <string name="daily_deflourdiet_short">Обезцветете диетата си</string>
+    <string name="daily_frontload_short">Предварително заредете калориите си</string>
+    <string name="daily_timerestrict_short">Ограничете времето за хранене</string>
+    <string name="exercise_timing_short">Оптимизирайте времето за упражнения</string>
+    <string name="weigh_twice_short">Претегляйте се два пъти на ден</string>
+    <string name="complete_intentions_short">Изпълнете намеренията си за внедряване</string>
+    <string name="nightly_fast_short">Бързо след 7:00 ч.</string>
+    <string name="nightly_sleep_short">Получете достатъчно сън</string>
+    <string name="nightly_trendelenburg_short">Експериментирайте с лекия трендленбург</string>
+    <string name="meal_water_text">Отделете време, за да стимулирате метаболизма си две чаши студена или студена не ароматизирана вода преди всяко хранене, за да се възползвате и от предимствата му.</string>
+    <string name="meal_negcal_text">Като първи курс започнете всяко хранене с ябълка или супа или салата Green Light, съдържащи по-малко от сто калории на чаша.</string>
+    <string name="meal_vinegar_text">Никога не пийте направо оцет. Вместо това овкусете ястия или обличайте странична салата с някой от сладките и пикантни оцети там. Ако искате да го изпиете, не забравяйте да го смесите в чаша вода и след това не забравяйте да изплакнете устата си с вода, за да защитите зъбния си емайл.</string>
+    <string name="meal_undistracted_text">Не яжте, докато гледате телевизия или играете на телефона си. Дайте си чек за всяко хранене, което можете да ядете, без да се разсейвате.</string>
+    <string name="meal_twentyminutes_text">Независимо дали чрез увеличаване на вискозитета или броя на дъвченето или намаляване на размера на захапката и скоростта на хранене, десетки проучвания показват, че колкото и да увеличаваме времето, през което храната е в устата ни, това може да доведе до по-нисък прием на калории. Затова удължете продължителността на хранене до поне двадесет минути, за да позволите на вашите естествени сигнали за ситост да влязат в пълна сила. Как? Избирайки храни, които отнемат по-дълго време за ядене, и ги ядете по начин, който удължава времето, което остават в устата ви. Помислете за по-малки, добре дъвчени хапки по-обемни, по-твърди и по-чисти храни.</string>
+    <string name="daily_blackcumin_text">Както бе отбелязано в раздела за потискане на апетита, систематичен преглед и мета-анализ на рандомизирани, контролирани изпитвания за отслабване установяват, че около четвърт чаена лъжичка прах от черен кимион всеки ден се появява за намаляване на индекса на телесната маса в рамките на период от няколко месеца. Обърнете внимание, че черният кимион е различен от обикновения кимион, при който дозирането е различно.</string>
+    <string name="daily_garlic_text">Рандомизирани, двойно-слепи, плацебо-контролирани проучвания са установили, че толкова малко, колкото дневна четвърт чаена лъжичка чесън на прах може да намали телесните мазнини с цената на може би две стотинки на ден.</string>
+    <string name="daily_ginger_text">Рандомизирани контролирани проучвания установяват, че ¼ чаена лъжичка до 1½ чаена лъжичка на ден смлян джинджифил значително намалява телесното тегло само за стотинки на ден. Може да бъде толкова лесно, колкото да разбъркате смлената подправка в чаша гореща вода. Забележка: Джинджифилът може да действа по-добре сутрин, отколкото вечер. Чай чай е вкусен начин за комбиниране на трикове със зелен чай и джинджифил в една напитка. Алтернативно, за активиране на НДНТ, можете да добавите една сурова червена чушка или половин чаена лъжичка червен пипер на прах (или, вероятно, натрошени люспи от червен пипер) в ежедневната си диета. За да помогнете да победите топлината, можете много тънко да нарязвате или нарязвате на ситно джалапеньото, за да намалите хапката му до малки бодли, или да смесите червения пипер в супа или пълнозърнест зеленчуков пюре, което представих в едно от моите видеоклипове за готвене на NutritionFacts.org ,</string>
+    <string name="daily_nutriyeast_text">Две чаени лъжички хлебна, пивоварна или хранителна мая съдържат приблизително количеството бета 1,3 / 1,6 глюкани, открити в рандомизирани, двойно-слепи, плацебо-контролирани клинични изпитвания за улесняване на загубата на тегло.</string>
+    <string name="daily_cumin_text">Жените с наднормено тегло се рандомизират, за да добавят половин чаена лъжичка кимион към обедите и вечерите си, избивайки контролната група с още четири килограма и допълнителен инч от талията си. Има и доказателства в подкрепа на употребата на шафран с подправки, но една щипка на ден би струвала долар, докато една чаена лъжичка кимион струва по-малко от десет цента.</string>
+    <string name="daily_greentea_text">Пийте три чаши на ден между храненията (изчаквайте поне час след хранене, така че да не пречи на усвояването на желязо). По време на хранене пийте вода, черно кафе или чай от хибискус, смесени 6: 1 с лимонена върбена, но никога не надвишавайте три чаши течност на час (важно, предвид моите съвети за предварително зареждане с вода). Възползвайте се от подсилващия ефект на кофеина, като пиете зеления си чай заедно с нещо здравословно, което желаете да ви хареса повече, но не консумирайте големи количества кофеин в рамките на шест часа преди лягане. Приемът на вашия чай без подсладител е най-добре, но ако обикновено подслаждате чая си с мед или захар, опитайте вместо това сироп от Якон.</string>
+    <string name="daily_hydrate_text">Поставете отметка в това квадратче, ако урината ви никога не изглежда по-тъмна от бледо жълто. Обърнете внимание, че ако ядете обогатени с рибофлавин храни (като хранителни дрожди), вместо това основавайте това да получавате девет чаши неподсладени напитки на ден за жени (за което бихте се погрижили препоръките за зелен чай и предварително зареждане) или тринадесет чаши на ден за мъже. Ако имате проблеми със сърцето или бъбреците, изобщо не увеличавайте приема на течности, без първо да говорите с вашия лекар. Не забравяйте, че диетичната сода може да е без калории, но не е без последствия, както научихме в раздела с ниско съдържание на добавена захар.</string>
+    <string name="daily_deflourdiet_text">Поставете отметка в това поле всеки ден, когато порциите от пълнозърнести храни са под формата на непокътнати зърна. Прахът на дори 100 процента пълнозърнести храни ограбва нашите микробиоми от нишестето, които иначе биха се пренесли до колоните ни, затворени в неразрушени клетъчни стени.</string>
+    <string name="daily_frontload_text">Има метаболитни ползи за разпределянето на повече калории по-рано през деня, така че направете закуска (в идеалния случай) или обяд най-голямата храна за деня в истински стил крал / принц / бедняк.</string>
+    <string name="daily_timerestrict_text">Ограничете храненето до дневен период от време, по ваш избор, с дължина под дванадесет часа, на която можете да се придържате последователно, седем дни в седмицата. Като се имат предвид циркадните предимства за намаляване на приема на вечерна храна, прозорецът трябва да приключи преди 19:00 ч.</string>
+    <string name="exercise_timing_text">Препоръката на ежедневната дузина за оптимална продължителност на тренировките за дълголетие е деветдесет минути умерено интензивна активност на ден, което е и оптималната продължителност на упражненията за отслабване. По всяко време е добре и колкото повече, толкова по-добре, но може да има предимство да упражнявате на гладно, поне шест часа след последното си хранене. Обикновено това би означавало преди закуска, но ако сте я присвоили правилно, можете да упражнявате обед преди късен обяд или, ако обядът е изяден достатъчно рано, преди вечеря. Това е времето за недиабетици. Вместо това диабетиците и предиабетиците трябва да започнат да спортуват тридесет минути след началото на хранене и в идеалния случай да продължат поне час, за да разграбят напълно пика на кръвната захар. Ако трябва да изберете едно хранене, за да упражнявате след това, това ще бъде вечеря, поради циркадния ритъм на контрол на кръвната захар, който намалява през целия ден. В идеалния случай обаче закуската би била най-голямото хранене за деня, а вие бихте тренирали след това - или още по-добре - след всяко хранене.</string>
+    <string name="weigh_twice_text">Редовното самопретегляне се счита за решаващо за дългосрочния контрол на теглото, но няма достатъчно доказателства в подкрепа на конкретна честота на претегляне. Моята препоръка се основава на едно проучване, което установи, че два пъти дневно - след събуждане и непосредствено преди лягане - изглежда по-добър от веднъж на ден (около шест срещу два килограма загуба на тегло за дванадесет седмици).</string>
+    <string name="complete_intentions_text">На всеки два месеца създавайте три нови намерения за внедряване - „ако X, тогава Y“ планира да изпълнява определено поведение в конкретен контекст - и проверявайте всяко едно от тях, докато ги изпълнявате всеки ден.</string>
+    <string name="nightly_fast_text">Поради нашите циркадни ритми, храната, изядена през нощта, е по-угояваща от същата същата храна, изядена по-рано през деня, толкова бърза всяка вечер в продължение на поне дванадесет часа, като се започне преди 19:00 ч. Колкото по-малко калории след залеза, толкова по-добре.</string>
+    <string name="nightly_sleep_text">Поставете отметка в това поле, ако получавате поне седем часа сън в редовното си лягане.</string>
+    <string name="nightly_trendelenburg_text">Опитайте да прекарвате поне четири часа на нощ в легнало с наклонено тяло с главата надолу шест градуса, като повдигнете стълбовете в подножието на леглото си с осем инча (или с девет инча, ако имате крал на Калифорния). Бъдете изключително внимателни, когато ставате от леглото, тъй като това причинява ортостатична непоносимост при повечето хора, дори и да сте млади и здрави - което означава, че ако станете твърде бързо, можете да почувствате замаяност, припадък или светлоглаза и може падайте и се наранявайте. Затова станете бавно. Пиенето на две чаши студена вода тридесет минути преди втасване също може да помогне за предотвратяване на този потенциално опасен страничен ефект. \ N * ВАЖНО: Не опитвайте това у дома изобщо, ако имате проблеми със сърцето или белите дробове, рефлукс с киселина или проблеми с мозъка ви (като травма на главата) или очите (дори фамилна анамнеза за глаукома ви дисквалифицира). Също така не опитвайте това, докато не попитате лекаря си, ако те мислят, че е безопасно за вас да спите в мек Трендленбург. *</string>
+    <string name="for_health_and_weight_loss">За здраве и отслабване</string>
+    <string name="for_health_alone">За самото здраве</string>
+    <string name="daily_dozen_and_tweaks">Ежедневна дузина + 21 ощипвания</string>
+    <string name="daily_dozen_only">Ежедневно само десетина</string>
+
+</resources>

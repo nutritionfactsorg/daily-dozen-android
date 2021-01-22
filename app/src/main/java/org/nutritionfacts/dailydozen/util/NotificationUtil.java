@@ -1,6 +1,7 @@
 package org.nutritionfacts.dailydozen.util;
 
 import android.app.AlarmManager;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -8,10 +9,10 @@ import android.content.Intent;
 import android.media.RingtoneManager;
 import android.os.Build;
 import android.os.Vibrator;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
 import android.text.TextUtils;
-import android.util.Log;
+
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.TaskStackBuilder;
 
 import com.google.gson.Gson;
 
@@ -25,14 +26,16 @@ import org.nutritionfacts.dailydozen.receiver.AlarmReceiver;
 
 import java.util.Random;
 
-public class NotificationUtil {
-    private final static String TAG = NotificationUtil.class.getSimpleName();
+import timber.log.Timber;
 
+public class NotificationUtil {
     private static final int UPDATE_REMINDER_ID = 1;
     private static final int NOTIFICATION_SETTINGS_ID = 2;
 
+    private static final String CHANNEL_REMINDERS = "DAILY_DOZEN_REMINDERS_CHANNEL";
+
     public static void showUpdateReminderNotification(final Context context, Intent intent) {
-        final NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
+        final NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_REMINDERS)
                 .setAutoCancel(true)
                 .setSmallIcon(getRandomNotificationIcon(context))
                 .setContentTitle(context.getString(R.string.daily_reminder_title))
@@ -62,7 +65,7 @@ public class NotificationUtil {
                     setAlarmForUpdateReminderNotification(context, updateReminderPref);
                 }
             } catch (RuntimeException e) {
-                Log.e(TAG, "Caught RuntimeException in showUpdateReminderNotification", e);
+                Timber.e(e, "Caught RuntimeException in showUpdateReminderNotification");
             }
         }
 
@@ -120,7 +123,7 @@ public class NotificationUtil {
             alarmManager.cancel(alarmPendingIntent);
 
             final long alarmTimeInMillis = pref.getAlarmTimeInMillis();
-            Log.d(TAG, String.format("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis));
+            Timber.d("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis);
 
             setAlarm(alarmManager, alarmPendingIntent, alarmTimeInMillis);
         }
@@ -137,7 +140,7 @@ public class NotificationUtil {
     }
 
     public static void cancelAlarmForUpdateReminderNotification(final Context context, UpdateReminderPref pref) {
-        Log.d(TAG, "cancelAlarmForUpdateReminderNotification");
+        Timber.d("cancelAlarmForUpdateReminderNotification");
         getAlarmManager(context).cancel(getAlarmPendingIntent(context, pref));
     }
 
@@ -151,13 +154,28 @@ public class NotificationUtil {
         return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
-    public static void initUpdateReminderNotificationAlarm(final Context context) {
+    public static void init(final Context context) {
+        initNotificationChannels(context);
+        initUpdateReminderNotificationAlarm(context);
+    }
+
+    private static void initNotificationChannels(final Context context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            getNotificationManager(context).createNotificationChannel(new NotificationChannel(
+                    CHANNEL_REMINDERS,
+                    context.getString(R.string.channel_reminders_name),
+                    NotificationManager.IMPORTANCE_DEFAULT
+            ));
+        }
+    }
+
+    private static void initUpdateReminderNotificationAlarm(final Context context) {
         final Prefs prefs = Prefs.getInstance(context);
 
         UpdateReminderPref updateReminderPref = prefs.getUpdateReminderPref();
 
         if (updateReminderPref == null && !prefs.defaultUpdateReminderHasBeenCreated()) {
-            Log.d(TAG, "initUpdateReminderNotificationAlarm: Creating default update reminder");
+            Timber.d("initUpdateReminderNotificationAlarm: Creating default update reminder");
 
             updateReminderPref = new UpdateReminderPref();
             prefs.setUpdateReminderPref(updateReminderPref);
