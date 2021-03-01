@@ -28,7 +28,6 @@
     <string name="donate">Donare</string>
     <string name="subscribe">Sottoscrivi</string>
     <string name="open_source">Open Source</string>
-    <string name="library_butterknife">ButterKnife</string>
     <string name="permission_needed_to_write_storage">Non puoi eseguire backup senza il permesso di scrittura nell\'archivio</string>
     <string name="backup_failed">Backup non riuscito</string>
     <string name="restore_failed">Ripristino fallito</string>

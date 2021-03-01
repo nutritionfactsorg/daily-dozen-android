@@ -28,7 +28,6 @@
     <string name="donate">捐款</string>
     <string name="subscribe">訂閱</string>
     <string name="open_source">免費資源</string>
-    <string name="library_butterknife">ButterKnife</string>
     <string name="permission_needed_to_write_storage">不具權限，無法備份至記憶體</string>
     <string name="backup_failed">備份失敗</string>
     <string name="restore_failed">還原失敗</string>

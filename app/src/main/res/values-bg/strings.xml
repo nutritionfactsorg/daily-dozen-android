@@ -28,7 +28,6 @@
     <string name="donate">Направете дарение</string>
     <string name="subscribe">Абонирай се</string>
     <string name="open_source">Отворен код</string>
-    <string name="library_butterknife">ButterKnife</string>
     <string name="permission_needed_to_write_storage">Не може да направите резервно копие без да имате права за писане върху паметта</string>
     <string name="backup_failed">Задачата за създаване на архив е неуспешна</string>
     <string name="restore_failed">Процесът по възстановяване на информация от архив е неуспешен</string>

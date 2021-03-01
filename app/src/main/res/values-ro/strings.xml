@@ -29,7 +29,6 @@
     <string name="donate">Donați</string>
     <string name="subscribe">Abonați-vă</string>
     <string name="open_source">Sursă deschisă</string>
-    <string name="library_butterknife">ButterKnife</string>
     <string name="permission_needed_to_write_storage">Nu se poate face copie de rezervă a datelor fără permisiunea de a scrie în spațiul de stocare</string>
     <string name="backup_failed">Efectuarea copiei de rezervă a datelor a eşuat</string>
     <string name="restore_failed">Restaurarea copiei de rezervă datelor a eşuat</string>

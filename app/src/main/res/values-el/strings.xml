@@ -28,7 +28,6 @@
     <string name="donate">Δωρεά</string>
     <string name="subscribe">Εγγραφή</string>
     <string name="open_source">Ανοιχτός Κώδικας</string>
-    <string name="library_butterknife">Μαχαίρι Βουτύρου</string>
     <string name="permission_needed_to_write_storage">Αδύνατη η δημιουργία αντιγράφου ασφαλείας χωρίς δικαιώματα εγγραφής στον αποθηκευτικό χώρο</string>
     <string name="backup_failed">Απέτυχε το αντίγραφο ασφαλείας</string>
     <string name="restore_failed">Απέτυχε η επαναφορά αντιγράφου ασφαλείας</string>

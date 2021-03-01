@@ -28,7 +28,6 @@
     <string name="donate">Doar</string>
     <string name="subscribe">Subscrever</string>
     <string name="open_source">Open Source (Código Aberto)</string>
-    <string name="library_butterknife">ButterKnife</string>
     <string name="permission_needed_to_write_storage">O backup não é possível sem permissões para gravar no armazenamento do dispositivo</string>
     <string name="backup_failed">Falha no backup</string>
     <string name="restore_failed">Restauração falhou</string>

@@ -46,7 +46,7 @@
     <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
     <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
     <string name="library_android_iconify" translatable="false">android-iconify</string>
-    <string name="library_butterknife">ButterKnife</string>
+    <string name="library_butterknife" translatable="false">ButterKnife</string>
     <string name="library_eventbus" translatable="false">EventBus</string>
     <string name="library_likeanimation" translatable="false">LikeAnimation</string>
     <string name="library_mpandroidchart" translatable="false">MPAndroidChart</string>

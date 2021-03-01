@@ -29,7 +29,6 @@
     <string name="donate">Поддержать</string>
     <string name="subscribe">Подписаться</string>
     <string name="open_source">Open Source</string>
-    <string name="library_butterknife">ButterKnife</string>
     <string name="permission_needed_to_write_storage">Не могу сделать резервную копию без права на запись в хранилище телефона</string>
     <string name="backup_failed">Резервное копирование не удалось</string>
     <string name="restore_failed">Не удалось восстановить данные</string>
