@@ -81,31 +81,6 @@
     <string name="imperial">Αγγλοσαξονικό</string>
     <string name="metric">Μετρικό</string>
 
-    <string-array name="food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/greens</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/flaxseeds</item>
-        <item>@string/nuts</item>
-        <item>@string/spices</item>
-        <item>@string/whole_grains</item>
-        <item>@string/beverages</item>
-        <item>@string/exercise</item>
-        <item>@string/vitamin_b12</item>
-    </string-array>
-
-    <string-array name="notification_icon_food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/spices</item>
-    </string-array>
-
     <string-array name="about_text_lines">
         <item>Η εφαρμογή δημιουργήθηκε από τον John Slavick.</item>
         <item/>
@@ -147,7 +122,6 @@
         <item>Ρεβίθια</item>
         <item>Ενταμάμε</item>
         <item>Αρακάς</item>
-        <item>Ρεβίθια</item>
         <item>Μεγάλα βόρεια</item>
         <item>Κόκκινα</item>
         <item>Φακές (μαύρες beluga, γαλλικές, και κόκκινες ποικιλίες)</item>

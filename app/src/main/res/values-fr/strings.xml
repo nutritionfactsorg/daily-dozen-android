@@ -82,31 +82,6 @@
     <string name="imperial">Impérial</string>
     <string name="metric">Métrique</string>
 
-    <string-array name="food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/greens</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/flaxseeds</item>
-        <item>@string/nuts</item>
-        <item>@string/spices</item>
-        <item>@string/whole_grains</item>
-        <item>@string/beverages</item>
-        <item>@string/exercise</item>
-        <item>@string/vitamin_b12</item>
-    </string-array>
-
-    <string-array name="notification_icon_food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/spices</item>
-    </string-array>
-
     <string-array name="about_text_lines">
         <item>Cette application a été créée par John Slavick.</item>
         <item />
@@ -148,7 +123,6 @@
         <item>Pois chiches</item>
         <item>Edamame</item>
         <item>Pois à écosser</item>
-        <item>Pois chiches</item>
         <item>Haricots blancs</item>
         <item>Haricots rouges</item>
         <item>Lentilles (variétés beluga, françaises et rouges)</item>

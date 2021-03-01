@@ -213,8 +213,10 @@
     </string-array>
 
     <!--
-    NOTE: These strings are used to created the url to take the user to the overall food videos page. These strings
-    must not be translated.
+    NOTE: These strings are used to created the url to take the user to the overall food videos page. 
+    These strings are to not be literial language translations.
+    These strings must be valid existing url addition to "http://nutritionfacts.org/".
+    If the language is not present on nutritionfacts.org, then the default English url is used.
     -->
     <string name="food_info_videos_beans" translatable="false">beans</string>
     <string name="food_info_videos_berries" translatable="false">berries</string>
@@ -231,6 +233,7 @@
     <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
     <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
     <string name="food_info_videos_omega3" translatable="false">omega-3-fatty-acids</string>
+
     <string name="weight">Weight</string>
     <string name="tweak_group_meal">At Each Meal</string>
     <string name="tweak_group_daily">Every Day</string>
@@ -258,7 +261,7 @@
         <item>Vitamin B12</item>
     </string-array>
 
-    <string-array name="food_names">
+    <string-array name="food_names" translatable="false">
         <item>@string/beans</item>
         <item>@string/berries</item>
         <item>@string/other_fruits</item>
@@ -274,7 +277,7 @@
         <item>@string/vitamin_b12</item>
     </string-array>
 
-    <string-array name="notification_icon_food_names">
+    <string-array name="notification_icon_food_names" translatable="false">
         <item>@string/beans</item>
         <item>@string/berries</item>
         <item>@string/other_fruits</item>
@@ -410,10 +413,9 @@
         <item>Black-eyed peas</item>
         <item>Butter beans</item>
         <item>Cannellini beans</item>
-        <item>Chickpeas</item>
+        <item>Chickpeas/Garbanzo beans</item>
         <item>Edamame</item>
         <item>English peas</item>
-        <item>Garbanzo beans</item>
         <item>Great northern beans</item>
         <item>Kidney beans</item>
         <item>Lentils (beluga, french, and red varieties)</item>
@@ -864,6 +866,13 @@
         <item/>
     </string-array>
 
+    <!--
+    NOTE: These strings are used to created the url to take the user to the overall food videos page. 
+    These strings are to not be literial language translations.
+    These strings must be valid existing url addition to "http://nutritionfacts.org/".
+    If the language is not present on nutritionfacts.org, then the default English url is used.
+    -->
+
     <string-array name="food_videos_beans" translatable="false">
         <item>black-beans</item>
         <item/>
@@ -872,7 +881,6 @@
         <item>chickpeas</item>
         <item>edamame</item>
         <item/>
-        <item>garbanzo-beans</item>
         <item/>
         <item>kidney-beans</item>
         <item>lentils</item>

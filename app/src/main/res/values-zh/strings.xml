@@ -81,31 +81,6 @@
     <string name="imperial">英制</string>
     <string name="metric">公制</string>
 
-    <string-array name="food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/greens</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/flaxseeds</item>
-        <item>@string/nuts</item>
-        <item>@string/spices</item>
-        <item>@string/whole_grains</item>
-        <item>@string/beverages</item>
-        <item>@string/exercise</item>
-        <item>@string/vitamin_b12</item>
-    </string-array>
-
-    <string-array name="notification_icon_food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/spices</item>
-    </string-array>
-
     <integer-array name="food_quantities">
         <item>3</item>
         <item>1</item>
@@ -164,7 +139,6 @@
         <item>鷹嘴豆</item>
         <item>毛豆</item>
         <item>麥豌豆</item>
-        <item>鷹嘴豆</item>
         <item>北美腰豆</item>
         <item>菜豆</item>
         <item>扁豆（包括黑扁豆、法國扁豆與紅扁豆等品種）</item>
