@@ -13,10 +13,8 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerTabStrip;
 import androidx.viewpager.widget.ViewPager;
@@ -35,7 +33,6 @@ import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
 import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
 import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
-import org.nutritionfacts.dailydozen.fragment.ThemeFragment;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.task.BackupTask;
@@ -80,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
         initDatePager();
         initDatePagerIndicator();
-        initTheme();
 
         calculateStreaksAfterDatabaseUpgradeToV2();
 
@@ -246,10 +242,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_daily_reminder_settings:
                 startActivity(new Intent(this, DailyReminderSettingsActivity.class));
                 return true;
-            case R.id.menu_theme:
-                DialogFragment newThemeFragment = new ThemeFragment();
-                newThemeFragment.show(getSupportFragmentManager(), "theme_picker");
-                return true;
             case R.id.menu_backup:
                 backup();
                 return true;
@@ -300,20 +292,6 @@ public class MainActivity extends AppCompatActivity {
         datePagerIndicator.setBackgroundResource(R.color.colorPrimary);
         datePagerIndicator.setTabIndicatorColorResource(R.color.colorAccent);
         datePagerIndicator.setDrawFullUnderline(false);
-    }
-
-    private void initTheme() {
-        int theme = Prefs.getInstance(this).getThemePref();
-        switch (theme) {
-            case 1:
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                return;
-            case 2:
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                return;
-            default:
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
-        }
     }
 
     @Override
