@@ -29,7 +29,6 @@
     <string name="donate">Donați</string>
     <string name="subscribe">Abonați-vă</string>
     <string name="open_source">Sursă deschisă</string>
-    <string name="library_butterknife">ButterKnife</string>
     <string name="permission_needed_to_write_storage">Nu se poate face copie de rezervă a datelor fără permisiunea de a scrie în spațiul de stocare</string>
     <string name="backup_failed">Efectuarea copiei de rezervă a datelor a eşuat</string>
     <string name="restore_failed">Restaurarea copiei de rezervă datelor a eşuat</string>
@@ -82,31 +81,6 @@
     <string name="units">Unități</string>
     <string name="imperial">Imperial</string>
     <string name="metric">Metric</string>
-
-    <string-array name="food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/greens</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/flaxseeds</item>
-        <item>@string/nuts</item>
-        <item>@string/spices</item>
-        <item>@string/whole_grains</item>
-        <item>@string/beverages</item>
-        <item>@string/exercise</item>
-        <item>@string/vitamin_b12</item>
-    </string-array>
-
-    <string-array name="notification_icon_food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/spices</item>
-    </string-array>
 
     <integer-array name="food_quantities">
         <item>3</item>
@@ -166,7 +140,6 @@
         <item>Năut</item>
         <item>Edamame (păstăi verzi de soia)</item>
         <item>Mazăre englezească</item>
-        <item>Năut garbanzo</item>
         <item>Fasole nordică cu bobul mare</item>
         <item>Fasole roșie cu bob în formă de rinichi</item>
         <item>Linte (beluga, franceză și roșie)</item>
