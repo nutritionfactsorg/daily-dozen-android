@@ -14,7 +14,6 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
-import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
@@ -242,8 +241,7 @@ public class LoadServingsHistoryTask
     private LineData getLineData(List<String> xVals, List<Entry> lineEntries) {
         final LineDataSet dataSet = new LineDataSet(lineEntries, getContext().getString(R.string.moving_average));
 
-        final int color = ContextCompat.getColor(getContext(),
-                Common.isAppInDarkMode(getContext()) ? R.color.gold : R.color.brown);
+        final int color = ContextCompat.getColor(getContext(), R.color.brown);
 
         dataSet.setColor(color);
         dataSet.setLineWidth(2.5f);

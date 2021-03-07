@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 
 import com.prolificinteractive.materialcalendarview.CalendarDay;
@@ -37,8 +36,6 @@ import butterknife.ButterKnife;
 import hirondelle.date4j.DateTime;
 
 public class TweakHistoryActivity extends TweakLoadingActivity {
-    @BindView(R.id.history_card_container)
-    protected CardView cardView;
     @BindView(R.id.calendar_legend)
     protected ViewGroup vgLegend;
     @BindView(R.id.calendarView)
@@ -71,11 +68,6 @@ public class TweakHistoryActivity extends TweakLoadingActivity {
             initCalendar(tweak.getId(), tweak.getRecommendedAmount());
 
             displayEntriesForVisibleMonths(Calendar.getInstance(), tweak.getId());
-
-            if (Common.isAppInDarkMode(this)) {
-                cardView.setForceDarkAllowed(false);
-                cardView.setCardBackgroundColor(ContextCompat.getColor(this, R.color.gray));
-            }
         }
     }
 
