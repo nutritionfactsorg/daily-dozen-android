@@ -28,7 +28,6 @@
     <string name="donate">Donación</string>
     <string name="subscribe">Suscríbete</string>
     <string name="open_source">Código abierto</string>
-    <string name="library_butterknife">ButterKnife</string>
     <string name="permission_needed_to_write_storage">No puedes hacer copias de seguridad si no tienes permiso para guardarlas en el disco duro.</string>
     <string name="backup_failed">Copia de seguridad fallida</string>
     <string name="restore_failed">Restauración fallida</string>
@@ -82,31 +81,6 @@
     <string name="imperial">Imperial</string>
     <string name="metric">Métrico</string>
 
-    <string-array name="food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/greens</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/flaxseeds</item>
-        <item>@string/nuts</item>
-        <item>@string/spices</item>
-        <item>@string/whole_grains</item>
-        <item>@string/beverages</item>
-        <item>@string/exercise</item>
-        <item>@string/vitamin_b12</item>
-    </string-array>
-
-    <string-array name="notification_icon_food_names">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/spices</item>
-    </string-array>
-
     <string-array name="about_text_lines">
         <item>Esta app fue creada por John Slavick.</item>
         <item />
@@ -148,7 +122,6 @@
         <item>Garbanzos</item>
         <item>Edamame</item>
         <item>Guisantes</item>
-        <item>Garbanzos</item>
         <item>Frijoles Great Northern</item>
         <item>Frijoles rojos</item>
         <item>Lentejas (beluga, francesa, roja)</item>
