@@ -270,15 +270,6 @@
         <item>@string/vitamin_b12</item>
     </string-array>
 
-    <string-array name="notification_icon_food_names" translatable="false">
-        <item>@string/beans</item>
-        <item>@string/berries</item>
-        <item>@string/other_fruits</item>
-        <item>@string/cruciferous_vegetables</item>
-        <item>@string/other_vegetables</item>
-        <item>@string/spices</item>
-    </string-array>
-
     <integer-array name="food_quantities">
         <item>3</item>
         <item>1</item>

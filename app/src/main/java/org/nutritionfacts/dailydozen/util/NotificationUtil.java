@@ -20,11 +20,8 @@ import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.activity.MainActivity;
 import org.nutritionfacts.dailydozen.controller.Prefs;
-import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 import org.nutritionfacts.dailydozen.receiver.AlarmReceiver;
-
-import java.util.Random;
 
 import timber.log.Timber;
 
@@ -37,7 +34,7 @@ public class NotificationUtil {
     public static void showUpdateReminderNotification(final Context context, Intent intent) {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_REMINDERS)
                 .setAutoCancel(true)
-                .setSmallIcon(getRandomNotificationIcon(context))
+                .setSmallIcon(R.drawable.ic_other_fruits)
                 .setContentTitle(context.getString(R.string.daily_reminder_title))
                 .setContentText(context.getString(R.string.daily_reminder_text))
                 .setContentIntent(getUpdateReminderClickedIntent(context))
@@ -105,13 +102,6 @@ public class NotificationUtil {
         return TaskStackBuilder.create(context)
                 .addNextIntent(openNotificationSettingsIntent)
                 .getPendingIntent(NOTIFICATION_SETTINGS_ID, PendingIntent.FLAG_UPDATE_CURRENT);
-    }
-
-    private static int getRandomNotificationIcon(final Context context) {
-        // Only certain icons look good as notification icons, so we randomly choose between those.
-        final String[] foodNames = context.getResources().getStringArray(R.array.notification_icon_food_names);
-
-        return FoodInfo.getFoodIcon(foodNames[new Random().nextInt(foodNames.length)]);
     }
 
     public static void setAlarmForUpdateReminderNotification(final Context context, final UpdateReminderPref pref) {
