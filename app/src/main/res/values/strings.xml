@@ -206,7 +206,7 @@
     <string name="daily_dozen_only">Daily Dozen Only</string>
 
     <!--
-    NOTE: These strings are used to created the url to take the user to the overall food videos page. 
+    NOTE: These strings are used to created the url to take the user to the overall food videos page.
     These strings are to not be literial language translations.
     These strings must be valid existing url addition to "http://nutritionfacts.org/".
     If the language is not present on nutritionfacts.org, then the default English url is used.
@@ -851,7 +851,7 @@
     </string-array>
 
     <!--
-    NOTE: These strings are used to created the url to take the user to the overall food videos page. 
+    NOTE: These strings are used to created the url to take the user to the overall food videos page.
     These strings are to not be literial language translations.
     These strings must be valid existing url addition to "http://nutritionfacts.org/".
     If the language is not present on nutritionfacts.org, then the default English url is used.
