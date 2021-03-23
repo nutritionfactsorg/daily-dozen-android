@@ -112,6 +112,7 @@ public class NotificationUtil {
 
             alarmManager.cancel(alarmPendingIntent);
 
+            // TODO (slavick) getNextAlarmTimeInMillis
             final long alarmTimeInMillis = pref.getAlarmTimeInMillis();
             Timber.d("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis);
 

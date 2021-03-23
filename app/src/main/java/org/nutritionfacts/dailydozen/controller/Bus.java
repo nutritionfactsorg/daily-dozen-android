@@ -8,6 +8,7 @@ import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
 import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
+import org.nutritionfacts.dailydozen.event.ReminderRemovedEvent;
 import org.nutritionfacts.dailydozen.event.RestoreCompleteEvent;
 import org.nutritionfacts.dailydozen.event.ShowExplodingStarAnimation;
 import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
@@ -79,5 +80,9 @@ public class Bus {
 
     public static void weightVisibilityChanged() {
         post(new WeightVisibilityChangedEvent());
+    }
+
+    public static void reminderRemovedEvent(int adapterPosition) {
+        post(new ReminderRemovedEvent(adapterPosition));
     }
 }
