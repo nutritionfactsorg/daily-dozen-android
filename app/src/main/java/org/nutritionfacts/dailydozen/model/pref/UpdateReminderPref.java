@@ -73,8 +73,8 @@ public class UpdateReminderPref {
         Collections.sort(reminderTimes, new TimeStringComparator());
     }
 
-    public String deleteReminderTime(int position) {
-        return reminderTimes.remove(position);
+    public void deleteReminderTime(int position) {
+        reminderTimes.remove(position);
     }
 
     public List<String> getReminderTimes() {
@@ -95,8 +95,7 @@ public class UpdateReminderPref {
         return String.format(Locale.getDefault(), "%s:%02d %s", hour, minute, hourOfDay < 12 ? "AM" : "PM");
     }
 
-    // TODO (slavick) refactor to get next alarm time
-    public long getAlarmTimeInMillis() {
+    private long getAlarmTimeInMillis() {
         final Calendar cal = Calendar.getInstance();
         final int currentHourOfDay = cal.get(Calendar.HOUR_OF_DAY);
         final int currentMinute = cal.get(Calendar.MINUTE);
@@ -113,6 +112,40 @@ public class UpdateReminderPref {
         Timber.d("getAlarmTimeInMillis %s = %s", cal.getTime(), cal.getTimeInMillis());
 
         return cal.getTimeInMillis();
+    }
+
+    public long getNextAlarmTimeInMillis() {
+        final Calendar cal = Calendar.getInstance();
+
+        // Convert current calendar time into string format to compare against reminderTimes
+        final String currentTime = formatTime(cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE));
+        Timber.d("currentTime: %s", currentTime);
+
+        String nextAlarmTime = "";
+        for (String reminderTime : reminderTimes) {
+            Timber.d("comparing against %s", reminderTime);
+            if (new TimeStringComparator().compare(currentTime, reminderTime) < 0) {
+                nextAlarmTime = reminderTime;
+                break;
+            }
+        }
+
+        if (nextAlarmTime.isEmpty() && !reminderTimes.isEmpty()) {
+            // nextAlarmTime is empty when the current time is greater than all reminderTimes.
+            // This means the next alarm is the first reminder time of the next day.
+            nextAlarmTime = reminderTimes.get(0);
+        }
+
+        Timber.d("next alarm time: %s", nextAlarmTime);
+
+        final Calendar nextAlarmCal = Calendar.getInstance();
+        nextAlarmCal.setTimeInMillis(new TimeStringComparator().timeInMillis(nextAlarmTime));
+
+        // Set the UpdateReminderPref's properties to the next alarm hour and minute
+        setHourOfDay(nextAlarmCal.get(Calendar.HOUR_OF_DAY));
+        setMinute(nextAlarmCal.get(Calendar.MINUTE));
+
+        return getAlarmTimeInMillis();
     }
 
     private static class TimeStringComparator implements Comparator<String> {

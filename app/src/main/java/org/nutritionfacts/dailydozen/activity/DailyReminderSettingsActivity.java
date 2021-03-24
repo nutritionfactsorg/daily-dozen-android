@@ -173,20 +173,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
 
     @Subscribe
     public void onEvent(ReminderRemovedEvent event) {
-//        // Convert Set to List and sort reminders by time
-//        List<UpdateReminderPref> updateReminderPrefList = new ArrayList<>(updateReminderPrefs);
-//        Collections.sort(updateReminderPrefList);
-//
-//        // Remove and cancel reminder from list
-//        UpdateReminderPref removedReminder = updateReminderPrefList.remove(event.getAdapterPosition());
-//        NotificationUtil.cancelAlarmForUpdateReminderNotification(this, removedReminder);
-//
-//        // Create Set of remaining reminders and update
-//        updateReminderPrefs = new HashSet<>(updateReminderPrefList);
-//        setUpdateReminder();
-//        updateReminders();
-
-        String deletedReminderTime = updateReminderPref.deleteReminderTime(event.getAdapterPosition());
+        updateReminderPref.deleteReminderTime(event.getAdapterPosition());
         // TODO (slavick) cancel deleted reminder
         reminderAdapter.setReminders(updateReminderPref.getReminderTimes());
         setUpdateReminder();

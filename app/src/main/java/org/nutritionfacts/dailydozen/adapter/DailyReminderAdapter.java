@@ -55,7 +55,7 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
         notifyDataSetChanged();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         @Nullable
         @BindView(R.id.reminder_time)
         TextView tvTime;
