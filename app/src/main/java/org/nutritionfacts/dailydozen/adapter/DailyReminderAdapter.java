@@ -21,7 +21,7 @@ import butterknife.OnClick;
 import butterknife.Optional;
 
 public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdapter.ViewHolder> {
-    private Context context;
+    final private Context context;
     private List<String> reminderTimes;
 
     public DailyReminderAdapter(Context context, List<String> reminderTimes) {

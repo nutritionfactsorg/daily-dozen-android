@@ -130,9 +130,12 @@ public class UpdateReminderPref {
             }
         }
 
-        if (nextAlarmTime.isEmpty() && !reminderTimes.isEmpty()) {
-            // nextAlarmTime is empty when the current time is greater than all reminderTimes.
-            // This means the next alarm is the first reminder time of the next day.
+        // nextAlarmTime is empty when the current time is greater than all reminderTimes
+        if (nextAlarmTime.isEmpty()) {
+            if (reminderTimes.isEmpty()) {
+                // Use the default reminder time if the user hasn't configured any custom times
+                reminderTimes.add(formatTime(getHourOfDay(), getMinute()));
+            }
             nextAlarmTime = reminderTimes.get(0);
         }
 
