@@ -38,7 +38,7 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        if (reminderTimes.isEmpty()) {
+        if (reminderTimes == null || reminderTimes.isEmpty()) {
             return;
         }
 
@@ -47,7 +47,7 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
 
     @Override
     public int getItemCount() {
-        return reminderTimes.size();
+        return reminderTimes != null ? reminderTimes.size() : 0;
     }
 
     public void setReminders(List<String> reminderTimes) {

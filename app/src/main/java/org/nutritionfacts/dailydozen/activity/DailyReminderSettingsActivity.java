@@ -73,10 +73,6 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
     private void init() {
         updateReminderPref = Prefs.getInstance(this).getUpdateReminderPref();
 
-        reminderAdapter = new DailyReminderAdapter(this, updateReminderPref.getReminderTimes());
-        reminderTimesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        reminderTimesRecyclerView.setAdapter(reminderAdapter);
-
         if (updateReminderPref != null) {
             initUpdateReminderPrefConfig();
         } else {
@@ -92,7 +88,9 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
             updateReminderPref = new UpdateReminderPref();
         }
 
-        reminderAdapter.setReminders(updateReminderPref.getReminderTimes());
+        reminderAdapter = new DailyReminderAdapter(this, updateReminderPref.getReminderTimes());
+        reminderTimesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        reminderTimesRecyclerView.setAdapter(reminderAdapter);
 
         initVibratePref();
 
@@ -174,8 +172,13 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
     @Subscribe
     public void onEvent(ReminderRemovedEvent event) {
         updateReminderPref.deleteReminderTime(event.getAdapterPosition());
-        // TODO (slavick) cancel deleted reminder
         reminderAdapter.setReminders(updateReminderPref.getReminderTimes());
-        setUpdateReminder();
+
+        if (updateReminderPref.getReminderTimes().isEmpty()) {
+            // Disable the notification if the last reminder time has been removed
+            disableUpdateReminderPref();
+        } else {
+            setUpdateReminder();
+        }
     }
 }
