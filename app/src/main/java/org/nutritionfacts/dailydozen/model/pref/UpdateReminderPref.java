@@ -30,7 +30,7 @@ public class UpdateReminderPref {
     @SerializedName("playSound")
     private boolean playSound = true;
     @SerializedName("reminderTimes")
-    private List<String> reminderTimes;
+    private List<String> reminderTimes = new ArrayList<>();
 
     public void setHourOfDay(int hourOfDay) {
         this.hourOfDay = hourOfDay;
@@ -62,11 +62,6 @@ public class UpdateReminderPref {
 
     public void setPlaySound(boolean playSound) {
         this.playSound = playSound;
-    }
-
-    public UpdateReminderPref() {
-        reminderTimes = new ArrayList<>();
-        addReminderTime(getHourOfDay(), getMinute());
     }
 
     public void addReminderTime(int hourOfDay, int minute) {
