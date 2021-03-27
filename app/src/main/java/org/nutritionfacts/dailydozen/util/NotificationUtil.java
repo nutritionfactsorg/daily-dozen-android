@@ -34,7 +34,7 @@ public class NotificationUtil {
     public static void showUpdateReminderNotification(final Context context, Intent intent) {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_REMINDERS)
                 .setAutoCancel(true)
-                .setSmallIcon(R.drawable.ic_other_fruits)
+                .setSmallIcon(R.drawable.ic_reminder)
                 .setContentTitle(context.getString(R.string.daily_reminder_title))
                 .setContentText(context.getString(R.string.daily_reminder_text))
                 .setContentIntent(getUpdateReminderClickedIntent(context))
