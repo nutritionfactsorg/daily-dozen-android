@@ -1,8 +1,11 @@
 package org.nutritionfacts.dailydozen.model.pref;
 
+import android.content.Context;
 import android.text.TextUtils;
 
 import com.google.gson.annotations.SerializedName;
+
+import org.nutritionfacts.dailydozen.util.DateUtil;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -64,10 +67,10 @@ public class UpdateReminderPref {
         this.playSound = playSound;
     }
 
-    public void addReminderTime(int hourOfDay, int minute) {
+    public void addReminderTime(Context context, int hourOfDay, int minute) {
         // Add new reminder to set to eliminate duplicates
         Set<String> reminderTimesSet = new HashSet<>(reminderTimes);
-        reminderTimesSet.add(formatTime(hourOfDay, minute));
+        reminderTimesSet.add(DateUtil.formatTime(context, hourOfDay, minute));
         reminderTimes = new ArrayList<>(reminderTimesSet);
 
         Collections.sort(reminderTimes, new TimeStringComparator());
@@ -84,15 +87,6 @@ public class UpdateReminderPref {
     @Override
     public String toString() {
         return TextUtils.join(", ", reminderTimes);
-    }
-
-    private String formatTime(int hourOfDay, int minute) {
-        int hour = hourOfDay < 12 ? hourOfDay : hourOfDay % 12;
-        if (hour == 0) {
-            hour = 12;
-        }
-
-        return String.format(Locale.getDefault(), "%s:%02d %s", hour, minute, hourOfDay < 12 ? "AM" : "PM");
     }
 
     private long getAlarmTimeInMillis() {
@@ -114,11 +108,11 @@ public class UpdateReminderPref {
         return cal.getTimeInMillis();
     }
 
-    public long getNextAlarmTimeInMillis() {
+    public long getNextAlarmTimeInMillis(Context context) {
         final Calendar cal = Calendar.getInstance();
 
         // Convert current calendar time into string format to compare against reminderTimes
-        final String currentTime = formatTime(cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE));
+        final String currentTime = DateUtil.formatTime(context, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE));
         Timber.d("currentTime: %s", currentTime);
 
         String nextAlarmTime = "";
@@ -134,7 +128,7 @@ public class UpdateReminderPref {
         if (nextAlarmTime.isEmpty()) {
             if (reminderTimes.isEmpty()) {
                 // Use the default reminder time if the user hasn't configured any custom times
-                reminderTimes.add(formatTime(getHourOfDay(), getMinute()));
+                reminderTimes.add(DateUtil.formatTime(context, getHourOfDay(), getMinute()));
             }
             nextAlarmTime = reminderTimes.get(0);
         }

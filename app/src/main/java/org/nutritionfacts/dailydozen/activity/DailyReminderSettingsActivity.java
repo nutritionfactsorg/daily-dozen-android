@@ -21,6 +21,7 @@ import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.event.ReminderRemovedEvent;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
+import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import butterknife.BindView;
@@ -153,7 +154,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
         updateReminderPref.setHourOfDay(hourOfDay);
         updateReminderPref.setMinute(minute);
 
-        updateReminderPref.addReminderTime(hourOfDay, minute);
+        updateReminderPref.addReminderTime(getApplicationContext(), hourOfDay, minute);
 
         initUpdateReminderPrefConfig();
     }
@@ -165,7 +166,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
                 DailyReminderSettingsActivity.this,
                 updateReminderPref.getHourOfDay(),
                 updateReminderPref.getMinute(),
-                false)
+                DateUtil.is24HourTimeFormat(getApplicationContext()))
                 .show();
     }
 

@@ -112,7 +112,7 @@ public class NotificationUtil {
 
             alarmManager.cancel(alarmPendingIntent);
 
-            final long alarmTimeInMillis = pref.getNextAlarmTimeInMillis();
+            final long alarmTimeInMillis = pref.getNextAlarmTimeInMillis(context);
             Timber.d("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis);
 
             setAlarm(alarmManager, alarmPendingIntent, alarmTimeInMillis);
