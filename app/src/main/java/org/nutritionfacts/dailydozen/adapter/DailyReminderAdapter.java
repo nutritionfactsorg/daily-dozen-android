@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.nutritionfacts.dailydozen.R;
@@ -56,7 +55,6 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        @Nullable
         @BindView(R.id.reminder_time)
         TextView tvTime;
 
