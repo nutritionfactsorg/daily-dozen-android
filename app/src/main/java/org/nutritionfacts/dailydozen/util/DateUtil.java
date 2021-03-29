@@ -1,5 +1,8 @@
 package org.nutritionfacts.dailydozen.util;
 
+import android.content.Context;
+import android.text.format.DateFormat;
+
 import org.nutritionfacts.dailydozen.model.Day;
 
 import java.text.SimpleDateFormat;
@@ -75,5 +78,22 @@ public class DateUtil {
 
     public static Date convertDayToDate(final Day day) {
         return day != null ? getCalendarForYearMonthAndDay(day.getYear(), day.getMonth(), day.getDayNumber()).getTime() : null;
+    }
+
+    public static boolean is24HourTimeFormat(final Context context) {
+        return DateFormat.is24HourFormat(context);
+    }
+
+    public static String formatTime(final Context context, int hourOfDay, int minute) {
+        if (is24HourTimeFormat(context)) {
+            return String.format(Locale.getDefault(), "%02d:%02d", hourOfDay, minute);
+        } else {
+            int hour = hourOfDay < 12 ? hourOfDay : hourOfDay % 12;
+            if (hour == 0) {
+                hour = 12;
+            }
+
+            return String.format(Locale.getDefault(), "%s:%02d %s", hour, minute, hourOfDay < 12 ? "AM" : "PM");
+        }
     }
 }

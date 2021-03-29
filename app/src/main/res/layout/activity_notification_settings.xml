@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
               android:animateLayoutChanges="true"
               android:orientation="vertical"
@@ -7,6 +7,7 @@
               android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/reminder_control_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
@@ -21,20 +22,23 @@
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/daily_reminder_switch"
+            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        app:cardElevation="6dp"
+        android:id="@+id/reminder_times_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/reminder_control_container"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+        android:layout_marginRight="20dp"
+        app:cardElevation="6dp">
 
         <LinearLayout
-            android:id="@+id/daily_reminder_config_container"
             style="@style/Widget.CardContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,73 +48,37 @@
             android:paddingStart="4dp"
             android:paddingRight="4dp"
             android:paddingEnd="4dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:baselineAligned="false">
 
-            <LinearLayout
-                android:id="@+id/daily_reminder_set_time"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+            <TextView
+                android:id="@+id/remind_me_at_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/remind_me_at" />
 
-                <TextView
-                    android:text="@string/remind_me_at"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <Button
-                    android:id="@+id/daily_reminder_time"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:text="@string/play_sound"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/daily_reminder_play_sound"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/daily_reminder_vibrate_container"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:text="@string/vibrate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/daily_reminder_vibrate"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
-
-            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reminder_times_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_reminder_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white"
+        app:fabSize="normal" />
+
+</RelativeLayout>

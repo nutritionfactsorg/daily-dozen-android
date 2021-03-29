@@ -74,8 +74,6 @@
     <string name="daily_reminder_settings">Настройки за напомняне</string>
     <string name="enable_daily_reminder">Активиране на напомнянето</string>
     <string name="remind_me_at">Напомни ми на</string>
-    <string name="vibrate">Вибрация</string>
-    <string name="play_sound">Възпроизвеждане на звук</string>
     <string name="videos">Видео клипове</string>
     <string name="units">единици</string>
     <string name="imperial">имперски</string>

@@ -118,8 +118,6 @@
     <string name="daily_reminder_settings">Daily Reminder Settings</string>
     <string name="enable_daily_reminder">Enable Daily Reminder</string>
     <string name="remind_me_at">Remind me at</string>
-    <string name="vibrate">Vibrate</string>
-    <string name="play_sound">Play Sound</string>
     <string name="videos">Videos</string>
     <string name="units">Units</string>
     <string name="imperial">Imperial</string>

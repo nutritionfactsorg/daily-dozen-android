@@ -74,8 +74,6 @@
     <string name="daily_reminder_settings">Ustawienia codziennych przypomnień</string>
     <string name="enable_daily_reminder">Włącz codzienne przypomnienia</string>
     <string name="remind_me_at">Przypomnij o:</string>
-    <string name="vibrate">Wibracje</string>
-    <string name="play_sound">Włącz dźwięk</string>
     <string name="videos">Filmy</string>
     <string name="units">Jednostki:</string>
     <string name="imperial">imperialne</string>

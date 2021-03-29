@@ -4,16 +4,24 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TimePicker;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.adapter.DailyReminderAdapter;
+import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.Prefs;
+import org.nutritionfacts.dailydozen.event.ReminderRemovedEvent;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
+import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import butterknife.BindView;
@@ -24,16 +32,14 @@ import butterknife.OnClick;
 public class DailyReminderSettingsActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     @BindView(R.id.daily_reminder_switch)
     protected SwitchCompat dailyReminderSwitch;
-    @BindView(R.id.daily_reminder_config_container)
-    protected ViewGroup vgDailyReminderConfig;
-    @BindView(R.id.daily_reminder_time)
-    protected Button tvTime;
-    @BindView(R.id.daily_reminder_vibrate_container)
-    protected ViewGroup vgVibrate;
-    @BindView(R.id.daily_reminder_vibrate)
-    protected SwitchCompat vibrateSwitch;
-    @BindView(R.id.daily_reminder_play_sound)
-    protected SwitchCompat playSoundSwitch;
+    @BindView(R.id.reminder_times_container)
+    protected ViewGroup vgReminderTimes;
+    @BindView(R.id.reminder_times_recycler_view)
+    protected RecyclerView reminderTimesRecyclerView;
+    @BindView(R.id.add_reminder_button)
+    protected FloatingActionButton btnAddReminder;
+
+    protected DailyReminderAdapter reminderAdapter;
 
     private UpdateReminderPref updateReminderPref;
 
@@ -43,6 +49,18 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
         setContentView(R.layout.activity_notification_settings);
         ButterKnife.bind(this);
         init();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Bus.register(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Bus.unregister(this);
     }
 
     private void init() {
@@ -57,24 +75,17 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
 
     private void initUpdateReminderPrefConfig() {
         dailyReminderSwitch.setChecked(true);
-        vgDailyReminderConfig.setVisibility(View.VISIBLE);
+        toggleReminderViews();
 
         if (updateReminderPref == null) {
             updateReminderPref = new UpdateReminderPref();
         }
 
-        tvTime.setText(updateReminderPref.toString());
-
-        initVibratePref();
-
-        playSoundSwitch.setChecked(updateReminderPref.isPlaySound());
+        reminderAdapter = new DailyReminderAdapter(this, updateReminderPref.getReminderTimes());
+        reminderTimesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        reminderTimesRecyclerView.setAdapter(reminderAdapter);
 
         setUpdateReminder();
-    }
-
-    private void initVibratePref() {
-        vgVibrate.setVisibility(NotificationUtil.deviceHasVibrator(this) ? View.VISIBLE : View.GONE);
-        vibrateSwitch.setChecked(updateReminderPref.isVibrate());
     }
 
     private void setUpdateReminder() {
@@ -85,28 +96,15 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
 
     private void disableUpdateReminderPref() {
         dailyReminderSwitch.setChecked(false);
-        vgDailyReminderConfig.setVisibility(View.GONE);
+        toggleReminderViews();
 
         NotificationUtil.cancelAlarmForUpdateReminderNotification(this, updateReminderPref);
 
         Prefs.getInstance(this).removeUpdateReminderPref();
     }
 
-    @OnClick({R.id.daily_reminder_set_time, R.id.daily_reminder_time})
-    public void onUpdateReminderSetTimeClicked() {
-        new TimePickerDialog(
-                DailyReminderSettingsActivity.this,
-                DailyReminderSettingsActivity.this,
-                updateReminderPref.getHourOfDay(),
-                updateReminderPref.getMinute(),
-                false)
-                .show();
-    }
-
     @OnCheckedChanged(R.id.daily_reminder_switch)
     public void onDailyReminderSwitchToggled(final boolean isChecked) {
-        vgDailyReminderConfig.setVisibility(isChecked ? View.VISIBLE : View.GONE);
-
         if (isChecked) {
             initUpdateReminderPrefConfig();
         } else {
@@ -114,18 +112,9 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
         }
     }
 
-    @OnCheckedChanged(R.id.daily_reminder_vibrate)
-    public void onVibrateSwitchToggled(final boolean isChecked) {
-        updateReminderPref.setVibrate(isChecked);
-
-        initUpdateReminderPrefConfig();
-    }
-
-    @OnCheckedChanged(R.id.daily_reminder_play_sound)
-    public void onPlaySoundSwitchToggled(final boolean isChecked) {
-        updateReminderPref.setPlaySound(isChecked);
-
-        initUpdateReminderPrefConfig();
+    private void toggleReminderViews() {
+        vgReminderTimes.setVisibility(dailyReminderSwitch.isChecked() ? View.VISIBLE : View.GONE);
+        btnAddReminder.setVisibility(dailyReminderSwitch.isChecked() ? View.VISIBLE : View.GONE);
     }
 
     @Override
@@ -133,6 +122,32 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
         updateReminderPref.setHourOfDay(hourOfDay);
         updateReminderPref.setMinute(minute);
 
+        updateReminderPref.addReminderTime(getApplicationContext(), hourOfDay, minute);
+
         initUpdateReminderPrefConfig();
+    }
+
+    @OnClick(R.id.add_reminder_button)
+    public void onAddReminderClicked() {
+        new TimePickerDialog(
+                DailyReminderSettingsActivity.this,
+                DailyReminderSettingsActivity.this,
+                updateReminderPref.getHourOfDay(),
+                updateReminderPref.getMinute(),
+                DateUtil.is24HourTimeFormat(getApplicationContext()))
+                .show();
+    }
+
+    @Subscribe
+    public void onEvent(ReminderRemovedEvent event) {
+        updateReminderPref.deleteReminderTime(event.getAdapterPosition());
+        reminderAdapter.setReminders(updateReminderPref.getReminderTimes());
+
+        if (updateReminderPref.getReminderTimes().isEmpty()) {
+            // Disable the notification if the last reminder time has been removed
+            disableUpdateReminderPref();
+        } else {
+            setUpdateReminder();
+        }
     }
 }

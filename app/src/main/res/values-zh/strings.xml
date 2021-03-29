@@ -74,8 +74,6 @@
     <string name="daily_reminder_settings">每日提醒設定</string>
     <string name="enable_daily_reminder">啟用每日提醒</string>
     <string name="remind_me_at">提醒時間</string>
-    <string name="vibrate">震動</string>
-    <string name="play_sound">播放聲音</string>
     <string name="videos">影片</string>
     <string name="units">單位</string>
     <string name="imperial">英制</string>

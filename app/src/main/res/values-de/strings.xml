@@ -6,7 +6,6 @@
     <string name="whole_grains">Vollkorn</string>
     <string name="videos">Videos</string>
     <string name="welcome_to_my_daily_dozen">Willkommen zu meinen Daily Dozen!</string>
-    <string name="vibrate">Vibrieren</string>
     <string name="types">Typen</string>
     <string name="time_scale">Zeitraum</string>
     <string name="task_restore_title">Wiederherstellen</string>
@@ -28,7 +27,6 @@
     <string name="restore_confirm_message">Bereits existierende Daten werden bei der Sicherung überschrieben. Möchtest du fortfahren?</string>
     <string name="remind_me_at">Erinnere mich um</string>
     <string name="rate_now">Feedback geben</string>
-    <string name="play_sound">Ton abspielen</string>
     <string name="permission_needed_to_write_storage">Für das Erstellen einer Sicherung ist ein Schreibzugriff erforderlich</string>
     <string name="other_vegetables">Anderes Gemüse</string>
     <string name="other_fruits">Anderes Obst</string>

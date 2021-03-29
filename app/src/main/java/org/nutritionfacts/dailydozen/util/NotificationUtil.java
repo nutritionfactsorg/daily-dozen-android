@@ -6,9 +6,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.media.RingtoneManager;
 import android.os.Build;
-import android.os.Vibrator;
 import android.text.TextUtils;
 
 import androidx.core.app.NotificationCompat;
@@ -34,7 +32,7 @@ public class NotificationUtil {
     public static void showUpdateReminderNotification(final Context context, Intent intent) {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_REMINDERS)
                 .setAutoCancel(true)
-                .setSmallIcon(R.drawable.ic_other_fruits)
+                .setSmallIcon(R.drawable.ic_reminder)
                 .setContentTitle(context.getString(R.string.daily_reminder_title))
                 .setContentText(context.getString(R.string.daily_reminder_text))
                 .setContentIntent(getUpdateReminderClickedIntent(context))
@@ -46,18 +44,6 @@ public class NotificationUtil {
 
                 if (!TextUtils.isEmpty(updateReminderPrefJson)) {
                     final UpdateReminderPref updateReminderPref = new Gson().fromJson(updateReminderPrefJson, UpdateReminderPref.class);
-
-                    if (updateReminderPref.isVibrate()) {
-                        final Vibrator vibratorService = getVibratorService(context);
-
-                        if (vibratorService.hasVibrator()) {
-                            vibratorService.vibrate(150);
-                        }
-                    }
-
-                    if (updateReminderPref.isPlaySound()) {
-                        builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
-                    }
 
                     setAlarmForUpdateReminderNotification(context, updateReminderPref);
                 }
@@ -79,14 +65,6 @@ public class NotificationUtil {
 
     private static NotificationManager getNotificationManager(final Context context) {
         return (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-    }
-
-    private static Vibrator getVibratorService(final Context context) {
-        return (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-    }
-
-    public static boolean deviceHasVibrator(final Context context) {
-        return getVibratorService(context).hasVibrator();
     }
 
     private static PendingIntent getUpdateReminderClickedIntent(final Context context) {
@@ -112,7 +90,7 @@ public class NotificationUtil {
 
             alarmManager.cancel(alarmPendingIntent);
 
-            final long alarmTimeInMillis = pref.getAlarmTimeInMillis();
+            final long alarmTimeInMillis = pref.getNextAlarmTimeInMillis(context);
             Timber.d("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis);
 
             setAlarm(alarmManager, alarmPendingIntent, alarmTimeInMillis);
