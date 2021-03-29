@@ -75,8 +75,6 @@
     <string name="daily_reminder_settings">Paramètres du rappel quotidien</string>
     <string name="enable_daily_reminder">Activer le rappel quotidien</string>
     <string name="remind_me_at">Rappelez-moi à</string>
-    <string name="vibrate">Vibrer</string>
-    <string name="play_sound">Jouer un son</string>
     <string name="videos">Vidéos</string>
     <string name="units">Unités</string>
     <string name="imperial">Impérial</string>

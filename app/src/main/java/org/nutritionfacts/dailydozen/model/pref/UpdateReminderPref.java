@@ -23,15 +23,11 @@ import java.util.Set;
 import timber.log.Timber;
 
 public class UpdateReminderPref {
-    // The default Update Reminder notification vibrates the phone and plays a sound at 8pm
+    // The default Update Reminder notification displays at 8pm
     @SerializedName("hourOfDay")
     private int hourOfDay = 20; // Default to 8pm
     @SerializedName("minute")
     private int minute = 0;
-    @SerializedName("vibrate")
-    private boolean vibrate = true;
-    @SerializedName("playSound")
-    private boolean playSound = true;
     @SerializedName("reminderTimes")
     private List<String> reminderTimes = new ArrayList<>();
 
@@ -49,22 +45,6 @@ public class UpdateReminderPref {
 
     public int getMinute() {
         return minute;
-    }
-
-    public boolean isVibrate() {
-        return vibrate;
-    }
-
-    public void setVibrate(boolean vibrate) {
-        this.vibrate = vibrate;
-    }
-
-    public boolean isPlaySound() {
-        return playSound;
-    }
-
-    public void setPlaySound(boolean playSound) {
-        this.playSound = playSound;
     }
 
     public void addReminderTime(Context context, int hourOfDay, int minute) {

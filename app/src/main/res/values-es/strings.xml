@@ -74,8 +74,6 @@
     <string name="daily_reminder_settings">Ajustes del recordatorio diario</string>
     <string name="enable_daily_reminder">Activar el recordatorio diario</string>
     <string name="remind_me_at">Recuérdamelo a las</string>
-    <string name="vibrate">Vibración</string>
-    <string name="play_sound">Sonido</string>
     <string name="videos">Videos</string>
     <string name="units">Sistema</string>
     <string name="imperial">Imperial</string>

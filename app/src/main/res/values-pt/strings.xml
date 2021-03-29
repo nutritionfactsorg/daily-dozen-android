@@ -74,8 +74,6 @@
     <string name="daily_reminder_settings">Configurações do Lembrete Diário</string>
     <string name="enable_daily_reminder">Ativar Lembrete Diário</string>
     <string name="remind_me_at">Lembre-me às</string>
-    <string name="vibrate">Vibrar</string>
-    <string name="play_sound">Som</string>
     <string name="videos">Vídeos</string>
     <string name="units">Unidades</string>
     <string name="imperial">Imperial</string>

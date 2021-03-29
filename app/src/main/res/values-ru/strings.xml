@@ -75,8 +75,6 @@
     <string name="daily_reminder_settings">Настройки Ежедневных Напоминаний</string>
     <string name="enable_daily_reminder">Включить Ежедневные Напоминания</string>
     <string name="remind_me_at">Напоминать в</string>
-    <string name="vibrate">Вибрацией</string>
-    <string name="play_sound">Звуком</string>
     <string name="videos">Видео</string>
     <string name="units">Единицы</string>
     <string name="imperial">Английские</string>

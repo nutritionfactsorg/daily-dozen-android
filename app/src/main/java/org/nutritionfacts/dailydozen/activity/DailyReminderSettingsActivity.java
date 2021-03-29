@@ -32,16 +32,8 @@ import butterknife.OnClick;
 public class DailyReminderSettingsActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     @BindView(R.id.daily_reminder_switch)
     protected SwitchCompat dailyReminderSwitch;
-    @BindView(R.id.sound_and_vibration_container)
-    protected ViewGroup vgSoundAndVibration;
     @BindView(R.id.reminder_times_container)
     protected ViewGroup vgReminderTimes;
-    @BindView(R.id.daily_reminder_vibrate_container)
-    protected ViewGroup vgVibrate;
-    @BindView(R.id.daily_reminder_vibrate)
-    protected SwitchCompat vibrateSwitch;
-    @BindView(R.id.daily_reminder_play_sound)
-    protected SwitchCompat playSoundSwitch;
     @BindView(R.id.reminder_times_recycler_view)
     protected RecyclerView reminderTimesRecyclerView;
     @BindView(R.id.add_reminder_button)
@@ -93,16 +85,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
         reminderTimesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         reminderTimesRecyclerView.setAdapter(reminderAdapter);
 
-        initVibratePref();
-
-        playSoundSwitch.setChecked(updateReminderPref.isPlaySound());
-
         setUpdateReminder();
-    }
-
-    private void initVibratePref() {
-        vgVibrate.setVisibility(NotificationUtil.deviceHasVibrator(this) ? View.VISIBLE : View.GONE);
-        vibrateSwitch.setChecked(updateReminderPref.isVibrate());
     }
 
     private void setUpdateReminder() {
@@ -130,23 +113,8 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
     }
 
     private void toggleReminderViews() {
-        vgSoundAndVibration.setVisibility(dailyReminderSwitch.isChecked() ? View.VISIBLE : View.GONE);
         vgReminderTimes.setVisibility(dailyReminderSwitch.isChecked() ? View.VISIBLE : View.GONE);
         btnAddReminder.setVisibility(dailyReminderSwitch.isChecked() ? View.VISIBLE : View.GONE);
-    }
-
-    @OnCheckedChanged(R.id.daily_reminder_vibrate)
-    public void onVibrateSwitchToggled(final boolean isChecked) {
-        updateReminderPref.setVibrate(isChecked);
-
-        initUpdateReminderPrefConfig();
-    }
-
-    @OnCheckedChanged(R.id.daily_reminder_play_sound)
-    public void onPlaySoundSwitchToggled(final boolean isChecked) {
-        updateReminderPref.setPlaySound(isChecked);
-
-        initUpdateReminderPrefConfig();
     }
 
     @Override

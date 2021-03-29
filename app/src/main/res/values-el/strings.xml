@@ -74,8 +74,6 @@
     <string name="daily_reminder_settings">Ρυθμίσεις Καθημερινής Υπενθύμισης</string>
     <string name="enable_daily_reminder">Ενεργοποίηση Καθημερινής Υπενθύμισης</string>
     <string name="remind_me_at">Θύμισέ μου στις</string>
-    <string name="vibrate">Δόνηση</string>
-    <string name="play_sound">Αναπαραγωγή ήχου</string>
     <string name="videos">Βίντεο</string>
     <string name="units">Μονάδες</string>
     <string name="imperial">Αγγλοσαξονικό</string>

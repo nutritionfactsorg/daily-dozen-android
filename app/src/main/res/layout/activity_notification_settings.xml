@@ -29,78 +29,10 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/sound_and_vibration_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/reminder_control_container"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        app:cardElevation="6dp">
-
-        <LinearLayout
-            android:id="@+id/daily_reminder_config_container"
-            style="@style/Widget.CardContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="4dp"
-            android:paddingStart="4dp"
-            android:paddingRight="4dp"
-            android:paddingEnd="4dp"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
-
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:text="@string/play_sound"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/daily_reminder_play_sound"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/daily_reminder_vibrate_container"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:text="@string/vibrate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/daily_reminder_vibrate"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
         android:id="@+id/reminder_times_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sound_and_vibration_container"
+        android:layout_below="@id/reminder_control_container"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
