@@ -5,14 +5,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
-import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;
-import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
-import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
-import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
 
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.Common;
@@ -70,20 +65,12 @@ public class TweakHistoryActivity extends TweakLoadingActivity {
         fullServingsDates = new ArrayList<>();
         partialServingsDates = new ArrayList<>();
 
-        binding.calendarView.setOnDateChangedListener(new OnDateSelectedListener() {
-            @Override
-            public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
-                setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(DateUtil.getCalendarForYearMonthAndDay(date.getYear(), date.getMonth(), date.getDay()).getTime()));
-                finish();
-            }
+        binding.calendarView.setOnDateChangedListener((widget, date, selected) -> {
+            setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(DateUtil.getCalendarForYearMonthAndDay(date.getYear(), date.getMonth(), date.getDay()).getTime()));
+            finish();
         });
 
-        binding.calendarView.setOnMonthChangedListener(new OnMonthChangedListener() {
-            @Override
-            public void onMonthChanged(MaterialCalendarView widget, CalendarDay date) {
-                displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(date.getYear(), date.getMonth()), tweakId);
-            }
-        });
+        binding.calendarView.setOnMonthChangedListener((widget, date) -> displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(date.getYear(), date.getMonth()), tweakId));
 
         binding.calendarLegend.setVisibility(recommendedServings > 1 ? View.VISIBLE : View.GONE);
     }

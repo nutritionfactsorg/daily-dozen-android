@@ -3,7 +3,6 @@ package org.nutritionfacts.dailydozen;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
@@ -83,25 +82,12 @@ public class Common {
             new AlertDialog.Builder(context)
                     .setTitle(R.string.dialog_ask_user_to_rate_app_title)
                     .setMessage(R.string.dialog_ask_user_to_rate_app_message)
-                    .setPositiveButton(R.string.rate_now, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Common.openPlayStore(context);
-                            dialog.dismiss();
-                        }
+                    .setPositiveButton(R.string.rate_now, (dialog, which) -> {
+                        Common.openPlayStore(context);
+                        dialog.dismiss();
                     })
-                    .setNegativeButton(R.string.not_now, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    })
-                    .setOnDismissListener(new DialogInterface.OnDismissListener() {
-                        @Override
-                        public void onDismiss(DialogInterface dialog) {
-                            userIsBeingAsked = false;
-                        }
-                    })
+                    .setNegativeButton(R.string.not_now, (dialog, which) -> dialog.dismiss())
+                    .setOnDismissListener(dialog -> userIsBeingAsked = false)
                     .create().show();
 
             userIsBeingAsked = true;

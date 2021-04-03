@@ -53,12 +53,7 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHo
             if (!TextUtils.isEmpty(link)) {
                 textView.setVisibility(View.VISIBLE);
 
-                textView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Common.openUrlInExternalBrowser(textView.getContext(), link);
-                    }
-                });
+                textView.setOnClickListener(v -> Common.openUrlInExternalBrowser(textView.getContext(), link));
             } else {
                 textView.setVisibility(View.GONE);
             }
