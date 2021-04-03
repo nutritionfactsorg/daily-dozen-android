@@ -669,9 +669,5 @@
     <string name="nightly_fast_text">由於我們的晝夜節律，晚上進食的食物比白天早些時候吃的完全相同的食物更容易發胖，所以每天晚上7:00之前開始，至少每晚要快十二個小時。日落後卡路里越少越好。</string>
     <string name="nightly_sleep_text">如果您在正常就寢時間至少有七個小時的睡眠時間，請選中此框。</string>
     <string name="nightly_trendelenburg_text">嘗試將您的身體的頭部向下傾斜6度，使您的牀頭的牀頭擡高八英寸（如果您有加利福尼亞國王，則擡高九英寸），每晚至少花四個小時。起牀時要格外小心，因爲這會導致大多數人直立不寬容，即使您年輕又健康-這意味着如果您起得太快，您可能會感到頭暈，暈眩或頭昏眼花，並且可能跌倒傷害自己。所以慢慢起來。在升起前30分鐘喝兩杯冷水也可能有助於防止這種潛在的有害副作用。\n *重要提示：如果您有心臟或肺部問題，胃酸反流或大腦有問題，請不要在家嘗試（例如頭部外傷）或眼睛（甚至是青光眼的家族病史也會使您失去資格）。也不要嘗試此操作，除非您詢問您的醫生是否認爲您在輕度的特倫德倫伯臥位安全無事。*</string>
-    <string name="for_health_and_weight_loss">为了健康和减肥</string>
-    <string name="for_health_alone">为了健康</string>
-    <string name="daily_dozen_and_tweaks">每日十二次调整</string>
-    <string name="daily_dozen_only">仅限每日一打</string>
 
 </resources>

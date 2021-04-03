@@ -653,9 +653,5 @@
     <string name="nightly_fast_text">En raison de nos rythmes circadiens, les aliments consommés la nuit sont plus gras que les mêmes aliments consommés plus tôt dans la journée, donc jeûne tous les soirs pendant au moins douze heures à partir de 19h00. Moins il y a de calories après le coucher du soleil, mieux c\'est.</string>
     <string name="nightly_sleep_text">Cochez cette case si vous dormez au moins sept heures à l\'heure du coucher habituelle.</string>
     <string name="nightly_trendelenburg_text">Essayez de passer au moins quatre heures par nuit allongé avec votre corps incliné de 6 degrés vers le bas en élevant les montants au pied de votre lit de huit pouces (ou de neuf pouces si vous avez un roi de Californie). Soyez extrêmement prudent lorsque vous sortez du lit, car cela provoque une intolérance orthostatique chez la plupart des gens, même si vous êtes jeune et en bonne santé - ce qui signifie que si vous vous levez trop vite, vous pouvez vous sentir étourdi, faible ou étourdi et tomber et vous blesser. Alors lève-toi lentement. Boire deux tasses d\'eau froide trente minutes avant de se lever peut également aider à prévenir cet effet secondaire potentiellement dangereux. \ N * IMPORTANT: N\'essayez pas du tout à la maison si vous avez des problèmes cardiaques ou pulmonaires, un reflux acide ou des problèmes avec votre cerveau (comme un traumatisme crânien) ou des yeux (même une histoire familiale de glaucome vous disqualifie). N\'essayez pas non plus avant d\'avoir demandé à votre médecin s\'il pense qu\'il est sûr pour vous de dormir à Trendelenburg doux. *</string>
-    <string name="for_health_and_weight_loss">Pour la santé et la perte de poids</string>
-    <string name="for_health_alone">Pour la santé seule</string>
-    <string name="daily_dozen_and_tweaks">Douzaine quotidienne 21 réglages</string>
-    <string name="daily_dozen_only">Douzaine quotidienne seulement</string>
 
 </resources>

@@ -73,12 +73,6 @@ public class MainActivity extends AppCompatActivity {
         calculateStreaksAfterDatabaseUpgradeToV2();
 
         handleIntentIfNecessary();
-
-//        if (!Prefs.getInstance(this).userHasSeenOnboardingScreen()) {
-//            final AppModeBottomSheet appModeBottomSheet = AppModeBottomSheet.newInstance();
-//            appModeBottomSheet.setCancelable(false);
-//            appModeBottomSheet.show(getSupportFragmentManager(), AppModeBottomSheet.TAG);
-//        }
     }
 
     private void handleIntentIfNecessary() {
@@ -181,10 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void toggleTweaksMenuItemVisibility() {
         if (menuToggleModes != null) {
-            menuToggleModes.setShowAsAction(
-                    Prefs.getInstance(this).isAppModeDailyDozenOnly() ?
-                            MenuItem.SHOW_AS_ACTION_NEVER :
-                            MenuItem.SHOW_AS_ACTION_IF_ROOM);
+            menuToggleModes.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         }
     }
 
