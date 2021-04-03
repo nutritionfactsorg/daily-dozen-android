@@ -3,23 +3,16 @@ package org.nutritionfacts.dailydozen.widget;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import org.nutritionfacts.dailydozen.databinding.HeaderTweakGroupBinding;
 
 public class TweakGroupHeader extends LinearLayout {
-    @BindView(R.id.tweak_group_indent)
-    protected View vIndent;
-    @BindView(R.id.tweak_group_title)
-    protected TextView tvTitle;
+    private HeaderTweakGroupBinding binding;
 
     public TweakGroupHeader(Context context) {
         super(context);
@@ -37,24 +30,23 @@ public class TweakGroupHeader extends LinearLayout {
     }
 
     private void init(final Context context) {
-        final View view = LayoutInflater.from(context).inflate(R.layout.header_tweak_group, this);
-        ButterKnife.bind(this, view);
+        binding = HeaderTweakGroupBinding.inflate(LayoutInflater.from(context), this, true);
     }
 
     public void setTweakGroup(final String tweakGroup) {
         switch (tweakGroup) {
             case Common.MEAL:
-                tvTitle.setText(R.string.tweak_group_meal);
+                binding.tweakGroupTitle.setText(R.string.tweak_group_meal);
                 break;
             case Common.DAILY:
-                tvTitle.setText(R.string.tweak_group_daily);
+                binding.tweakGroupTitle.setText(R.string.tweak_group_daily);
                 break;
             case Common.DAILY_DOSE:
-                vIndent.setVisibility(VISIBLE);
-                tvTitle.setText(R.string.tweak_group_dailydoses);
+                binding.tweakGroupIndent.setVisibility(VISIBLE);
+                binding.tweakGroupTitle.setText(R.string.tweak_group_dailydoses);
                 break;
             case Common.NIGHTLY:
-                tvTitle.setText(R.string.tweak_group_nightly);
+                binding.tweakGroupTitle.setText(R.string.tweak_group_nightly);
                 break;
         }
     }
