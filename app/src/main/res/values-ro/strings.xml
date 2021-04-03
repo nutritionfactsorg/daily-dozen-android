@@ -100,7 +100,7 @@
     <string-array name="about_text_lines">
         <item>Această aplicație a fost creată de John Slavick.</item>
         <item />
-        <item>Următoarele biblioteci cu sursă deschisă sunt utilizate în crearea aplicației: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, și MPAndroidChart.</item>
+        <item>Următoarele biblioteci cu sursă deschisă sunt utilizate în crearea aplicației: ActiveAndroid, android-iconify, EventBus, LikeAnimation, și MPAndroidChart.</item>
         <item />
         <item>Mulțumiri speciale sunt aduse eforturilor de voluntariat ale creatorilor aplicației anterioare: Chan Kruse, Allan Portera, și Sangeeta Kumar.</item>
     </string-array>
