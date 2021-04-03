@@ -4,20 +4,15 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
-import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;
-import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
-import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
-import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
 
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.databinding.ActivityHistoryBinding;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -31,15 +26,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends InfoActivity {
-    @BindView(R.id.calendar_legend)
-    protected ViewGroup vgLegend;
-    @BindView(R.id.calendarView)
-    protected MaterialCalendarView calendarView;
+    private ActivityHistoryBinding binding;
 
     private Set<String> loadedMonths = new HashSet<>();
     private List<DateTime> fullServingsDates;
@@ -49,8 +39,8 @@ public class FoodHistoryActivity extends InfoActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history);
-        ButterKnife.bind(this);
+        binding = ActivityHistoryBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         fullServingsDates = new ArrayList<>();
         partialServingsDates = new ArrayList<>();
@@ -75,22 +65,14 @@ public class FoodHistoryActivity extends InfoActivity {
         fullServingsDates = new ArrayList<>();
         partialServingsDates = new ArrayList<>();
 
-        calendarView.setOnDateChangedListener(new OnDateSelectedListener() {
-            @Override
-            public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
-                setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(DateUtil.getCalendarForYearMonthAndDay(date.getYear(), date.getMonth(), date.getDay()).getTime()));
-                finish();
-            }
+        binding.calendarView.setOnDateChangedListener((widget, date, selected) -> {
+            setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(DateUtil.getCalendarForYearMonthAndDay(date.getYear(), date.getMonth(), date.getDay()).getTime()));
+            finish();
         });
 
-        calendarView.setOnMonthChangedListener(new OnMonthChangedListener() {
-            @Override
-            public void onMonthChanged(MaterialCalendarView widget, CalendarDay date) {
-                displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(date.getYear(), date.getMonth()), foodId);
-            }
-        });
+        binding.calendarView.setOnMonthChangedListener((widget, date) -> displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(date.getYear(), date.getMonth()), foodId));
 
-        vgLegend.setVisibility(recommendedServings > 1 ? View.VISIBLE : View.GONE);
+        binding.calendarLegend.setVisibility(recommendedServings > 1 ? View.VISIBLE : View.GONE);
     }
 
     private void displayEntriesForVisibleMonths(final Calendar cal, final long foodId) {
@@ -144,7 +126,7 @@ public class FoodHistoryActivity extends InfoActivity {
                 ArrayList<DayViewDecorator> decorators = new ArrayList<>();
                 decorators.add(new CalendarHistoryDecorator(fullServingsDates, bgRecServings));
                 decorators.add(new CalendarHistoryDecorator(partialServingsDates, bgLessThanRecServings));
-                calendarView.addDecorators(decorators);
+                binding.calendarView.addDecorators(decorators);
             }
         }.execute();
     }
