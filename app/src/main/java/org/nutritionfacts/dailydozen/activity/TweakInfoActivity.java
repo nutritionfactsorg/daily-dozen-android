@@ -2,25 +2,16 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import org.nutritionfacts.dailydozen.Common;
-import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.databinding.ActivityTweakInfoBinding;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Tweak;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import timber.log.Timber;
 
 public class TweakInfoActivity extends InfoActivity {
-    @BindView(R.id.tweak_info_image)
-    protected ImageView ivTweak;
-    @BindView(R.id.tweak_short)
-    protected TextView tvTweakShort;
-    @BindView(R.id.tweak_text)
-    protected TextView tvTweakText;
+    private ActivityTweakInfoBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +23,8 @@ public class TweakInfoActivity extends InfoActivity {
             return;
         }
 
-        setContentView(R.layout.activity_tweak_info);
-        ButterKnife.bind(this);
+        binding = ActivityTweakInfoBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         displayTweakInfo();
     }
@@ -49,14 +40,14 @@ public class TweakInfoActivity extends InfoActivity {
     }
 
     private void initImage(String tweakName) {
-        Common.loadImage(this, ivTweak, FoodInfo.getTweakImage(tweakName));
+        Common.loadImage(this, binding.tweakInfoImage, FoodInfo.getTweakImage(tweakName));
     }
 
     private void initTweakShort(String tweakName) {
-        tvTweakShort.setText(FoodInfo.getTweakShort(tweakName));
+        binding.tweakShort.setText(FoodInfo.getTweakShort(tweakName));
     }
 
     private void initTweakText(String tweakName) {
-        tvTweakText.setText(FoodInfo.getTweakText(tweakName));
+        binding.tweakText.setText(FoodInfo.getTweakText(tweakName));
     }
 }
