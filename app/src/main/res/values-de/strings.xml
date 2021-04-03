@@ -84,8 +84,6 @@
         <item>Diese Anwendung wurde von John Slavick erstellt.</item>
         <item />
         <item>Die folgenden Open-Source-Bibliotheken werden verwendet: ActiveAndroid, android-iconify, EventBus, LikeAnimation und MPAndroidChart.</item>
-        <item />
-        <item>Besonderer Dank geht an die freiwilligen Ersteller der vorherigen App: Chan Kruse, Allan Portera und Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">

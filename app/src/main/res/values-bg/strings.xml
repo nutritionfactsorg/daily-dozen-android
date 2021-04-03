@@ -83,8 +83,6 @@
         <item>Това приложение е създадено от John Slavick.</item>
         <item/>
         <item>Използват се следните библиотеки с отворен код: ActiveAndroid, Android-iconify, EventBus, LikeAnimation, и MPAndroidChart.</item>
-        <item/>
-        <item>Специални благодарности за усилията положени от създателите на първата версия на приложението: Chan Kruse, Allan Portera, и Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">

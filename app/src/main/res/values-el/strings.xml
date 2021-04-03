@@ -83,8 +83,6 @@
         <item>Η εφαρμογή δημιουργήθηκε από τον John Slavick.</item>
         <item/>
         <item>Χρησιμοποιούνται οι ακόλουθες βιβλιοθήκες ανοικτού κώδικα: ActiveAndroid, android-iconify, EventBus, LikeAnimation και MPAndroidChart.</item>
-        <item/>
-        <item>Ιδιαίτερες ευχαριστίες προς τις εθελοντικές προσπάθειες των δημιουργών της προηγούμενης εφαρμογής: Chan Kruse, Allan Portera και Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">

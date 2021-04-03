@@ -101,8 +101,6 @@
         <item>Это приложение создано Джоном Славиком (John Slavick).</item>
         <item />
         <item>Приложение использует следующие библиотеки с открытым исходным кодом: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
-        <item />
-        <item>Особая благодарность выражается волонтёрам, создавшим предыдущее приложение: Chan Kruse, Allan Portera и Sangeeta Kumar.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
