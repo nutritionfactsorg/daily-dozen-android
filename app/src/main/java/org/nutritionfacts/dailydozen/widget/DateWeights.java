@@ -1,47 +1,30 @@
 package org.nutritionfacts.dailydozen.widget;
 
 import android.content.Context;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.AttributeSet;
-import android.view.View;
+import android.view.LayoutInflater;
 import android.view.inputmethod.EditorInfo;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-
-import com.joanzapata.iconify.widget.IconTextView;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.Prefs;
+import org.nutritionfacts.dailydozen.databinding.DateWeightsBinding;
 import org.nutritionfacts.dailydozen.event.WeightVisibilityChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Weights;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.OnEditorAction;
-import butterknife.OnTextChanged;
 import timber.log.Timber;
 
 public class DateWeights extends LinearLayout {
-    @BindView(R.id.header)
-    protected TextView tvHeader;
-    @BindView(R.id.eye)
-    protected TextView tvEye;
-    @BindView(R.id.morning_weight)
-    protected TextView tvMorningWeight;
-    @BindView(R.id.morning_weight_hidden_icon)
-    protected IconTextView tvMorningWeightHiddenIcon;
-    @BindView(R.id.evening_weight)
-    protected TextView tvEveningWeight;
-    @BindView(R.id.evening_weight_hidden_icon)
-    protected IconTextView tvEveningWeightHiddenIcon;
+    private DateWeightsBinding binding;
 
     private boolean initialized = false;
     private Day day;
@@ -57,10 +40,14 @@ public class DateWeights extends LinearLayout {
     }
 
     private void init(final Context context) {
-        final View view = inflate(context, R.layout.date_weights, this);
-        ButterKnife.bind(this, view);
+        binding = DateWeightsBinding.inflate(LayoutInflater.from(context), this, true);
 
-        tvHeader.setText(R.string.weight);
+        binding.header.setText(R.string.weight);
+        
+        onEyeClicked();
+        onWeightHistoryClicked();
+        onWeightEditorAction();
+        onWeightChanged();
     }
 
     public void setDay(final Day day) {
@@ -69,10 +56,10 @@ public class DateWeights extends LinearLayout {
         final Weights weightsOnDay = Weights.getWeightsOnDay(day);
         if (weightsOnDay != null) {
             if (weightsOnDay.getMorningWeight() > 0) {
-                tvMorningWeight.setText(String.valueOf(weightsOnDay.getMorningWeight()));
+                binding.morningWeight.setText(String.valueOf(weightsOnDay.getMorningWeight()));
             }
             if (weightsOnDay.getEveningWeight() > 0) {
-                tvEveningWeight.setText(String.valueOf(weightsOnDay.getEveningWeight()));
+                binding.eveningWeight.setText(String.valueOf(weightsOnDay.getEveningWeight()));
             }
         }
 
@@ -86,88 +73,114 @@ public class DateWeights extends LinearLayout {
         updateWeights();
     }
 
-    @OnClick(R.id.eye)
     public void onEyeClicked() {
-        Prefs.getInstance(getContext()).toggleWeightVisibility();
-        Bus.weightVisibilityChanged();
+        binding.eye.setOnClickListener(v -> {
+            Prefs.getInstance(getContext()).toggleWeightVisibility();
+            Bus.weightVisibilityChanged();
+        });
     }
 
-    @OnClick(R.id.weight_history)
     public void onWeightHistoryClicked() {
-        final Context context = getContext();
-        if (!Weights.isEmpty()) {
-            Common.openWeightHistory(context);
-        } else {
-            Common.showToast(context, R.string.no_weights_recorded);
-        }
+        binding.weightHistory.setOnClickListener(v -> {
+            final Context context = getContext();
+            if (!Weights.isEmpty()) {
+                Common.openWeightHistory(context);
+            } else {
+                Common.showToast(context, R.string.no_weights_recorded);
+            }
+        });
     }
 
     private void setWeightsVisible() {
-        tvEye.setText(R.string.date_weights_eye_open);
+        binding.eye.setText(R.string.date_weights_eye_open);
 
-        tvMorningWeight.setVisibility(VISIBLE);
-        tvMorningWeightHiddenIcon.setVisibility(GONE);
+        binding.morningWeight.setVisibility(VISIBLE);
+        binding.morningWeightHiddenIcon.setVisibility(GONE);
 
-        tvEveningWeight.setVisibility(VISIBLE);
-        tvEveningWeightHiddenIcon.setVisibility(GONE);
+        binding.eveningWeight.setVisibility(VISIBLE);
+        binding.eveningWeightHiddenIcon.setVisibility(GONE);
     }
 
     private void setWeightsInvisible() {
-        tvEye.setText(R.string.date_weights_eye_closed);
+        binding.eye.setText(R.string.date_weights_eye_closed);
 
-        tvMorningWeight.setVisibility(GONE);
-        tvMorningWeightHiddenIcon.setVisibility(VISIBLE);
-        if (TextUtils.isEmpty(tvMorningWeight.getText())) {
-            tvMorningWeightHiddenIcon.setText(R.string.unchecked);
+        binding.morningWeight.setVisibility(GONE);
+        binding.morningWeightHiddenIcon.setVisibility(VISIBLE);
+        if (TextUtils.isEmpty(binding.morningWeight.getText())) {
+            binding.morningWeightHiddenIcon.setText(R.string.unchecked);
         } else {
-            tvMorningWeightHiddenIcon.setText(R.string.checked);
+            binding.morningWeightHiddenIcon.setText(R.string.checked);
         }
 
-        tvEveningWeight.setVisibility(GONE);
-        tvEveningWeightHiddenIcon.setVisibility(VISIBLE);
-        if (TextUtils.isEmpty(tvEveningWeight.getText())) {
-            tvEveningWeightHiddenIcon.setText(R.string.unchecked);
+        binding.eveningWeight.setVisibility(GONE);
+        binding.eveningWeightHiddenIcon.setVisibility(VISIBLE);
+        if (TextUtils.isEmpty(binding.eveningWeight.getText())) {
+            binding.eveningWeightHiddenIcon.setText(R.string.unchecked);
         } else {
-            tvEveningWeightHiddenIcon.setText(R.string.checked);
+            binding.eveningWeightHiddenIcon.setText(R.string.checked);
         }
     }
 
-    @OnTextChanged({R.id.morning_weight, R.id.evening_weight})
     public void onWeightChanged() {
-        if (!initialized) {
-            return;
-        }
+        TextWatcher weightTextWatcher = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        try {
-            float morningWeight = 0;
-            float eveningWeight = 0;
-
-            String morningWeightStr = tvMorningWeight.getText().toString();
-            if (!TextUtils.isEmpty(morningWeightStr)) {
-                morningWeight = Float.parseFloat(morningWeightStr);
             }
 
-            String eveningWeightStr = tvEveningWeight.getText().toString();
-            if (!TextUtils.isEmpty(eveningWeightStr)) {
-                eveningWeight = Float.parseFloat(eveningWeightStr);
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (!initialized) {
+                    return;
+                }
+
+                try {
+                    float morningWeight = 0;
+                    float eveningWeight = 0;
+
+                    String morningWeightStr = binding.morningWeight.getText().toString();
+                    if (!TextUtils.isEmpty(morningWeightStr)) {
+                        morningWeight = Float.parseFloat(morningWeightStr);
+                    }
+
+                    String eveningWeightStr = binding.eveningWeight.getText().toString();
+                    if (!TextUtils.isEmpty(eveningWeightStr)) {
+                        eveningWeight = Float.parseFloat(eveningWeightStr);
+                    }
+
+                    if (morningWeight > 0 || eveningWeight > 0) {
+                        day = Day.createDayIfDoesNotExist(day);
+                        Weights.createWeightsIfDoesNotExist(day, morningWeight, eveningWeight);
+                        Timber.d("Saving morning weight [%s] and evening weight [%s]", morningWeight, eveningWeight);
+                    }
+                } catch (NumberFormatException e) {
+                    Timber.e(e);
+                }
             }
 
-            if (morningWeight > 0 || eveningWeight > 0) {
-                day = Day.createDayIfDoesNotExist(day);
-                Weights.createWeightsIfDoesNotExist(day, morningWeight, eveningWeight);
-                Timber.d("Saving morning weight [%s] and evening weight [%s]", morningWeight, eveningWeight);
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
-        } catch (NumberFormatException e) {
-            Timber.e(e);
-        }
+        };
+        binding.morningWeight.addTextChangedListener(weightTextWatcher);
+        binding.eveningWeight.addTextChangedListener(weightTextWatcher);
     }
 
-    @OnEditorAction({R.id.morning_weight, R.id.evening_weight})
-    public boolean onMorningWeightEditorAction(EditText et, int actionId) {
-        if (actionId == EditorInfo.IME_ACTION_DONE) {
-            et.clearFocus();
-        }
-        return false;
+    public void onWeightEditorAction() {
+        binding.morningWeight.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                v.clearFocus();
+            }
+            return false;
+        });
+
+        binding.eveningWeight.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                v.clearFocus();
+            }
+            return false;
+        });
     }
 
     private void updateWeights() {
