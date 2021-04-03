@@ -2,13 +2,12 @@ package org.nutritionfacts.dailydozen.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.databinding.ReminderTimeBinding;
 
@@ -26,8 +25,7 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View root = LayoutInflater.from(context).inflate(R.layout.reminder_time, parent, false);
-        return new ViewHolder(root);
+        return new ViewHolder(ReminderTimeBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
@@ -36,7 +34,7 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
             return;
         }
 
-        holder.setTime(reminderTimes.get(position));
+        holder.reminderTime.setText(reminderTimes.get(position));
     }
 
     @Override
@@ -50,19 +48,11 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private ReminderTimeBinding binding;
+        TextView reminderTime;
 
-        public void setTime(String time) {
-            binding.reminderTime.setText(time);
-        }
-
-        ViewHolder(View itemView) {
-            super(itemView);
-            binding = ReminderTimeBinding.inflate(LayoutInflater.from(itemView.getContext()));
-            onDeleteReminderClicked();
-        }
-
-        public void onDeleteReminderClicked() {
+        ViewHolder(ReminderTimeBinding binding) {
+            super(binding.getRoot());
+            reminderTime = binding.reminderTime;
             binding.reminderDelete.setOnClickListener(v -> Bus.reminderRemovedEvent(getAdapterPosition()));
         }
     }
