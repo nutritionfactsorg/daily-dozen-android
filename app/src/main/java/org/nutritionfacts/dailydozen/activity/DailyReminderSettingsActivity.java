@@ -67,7 +67,7 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
             updateReminderPref = new UpdateReminderPref();
         }
 
-        reminderAdapter = new DailyReminderAdapter(this, updateReminderPref.getReminderTimes());
+        reminderAdapter = new DailyReminderAdapter(updateReminderPref.getReminderTimes());
         binding.reminderTimesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.reminderTimesRecyclerView.setAdapter(reminderAdapter);
 

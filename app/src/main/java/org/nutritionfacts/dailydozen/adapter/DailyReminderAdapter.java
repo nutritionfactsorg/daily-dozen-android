@@ -1,6 +1,5 @@
 package org.nutritionfacts.dailydozen.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -14,11 +13,9 @@ import org.nutritionfacts.dailydozen.databinding.ReminderTimeBinding;
 import java.util.List;
 
 public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdapter.ViewHolder> {
-    final private Context context;
     private List<String> reminderTimes;
 
-    public DailyReminderAdapter(Context context, List<String> reminderTimes) {
-        this.context = context;
+    public DailyReminderAdapter(List<String> reminderTimes) {
         this.reminderTimes = reminderTimes;
     }
 
