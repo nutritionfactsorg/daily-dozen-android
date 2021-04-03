@@ -2,7 +2,6 @@ package org.nutritionfacts.dailydozen.task;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
 
 import timber.log.Timber;
@@ -30,12 +29,7 @@ abstract class TaskWithContext<Params, Progress, Result> extends AsyncTask<Param
 
         // This will cancel the running AsyncTask
         progress.setCancelable(true);
-        progress.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                cancel(true);
-            }
-        });
+        progress.setOnDismissListener(dialog -> cancel(true));
     }
 
     @Override

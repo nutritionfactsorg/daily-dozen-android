@@ -74,8 +74,6 @@
     <string name="daily_reminder_settings">Configurações do Lembrete Diário</string>
     <string name="enable_daily_reminder">Ativar Lembrete Diário</string>
     <string name="remind_me_at">Lembre-me às</string>
-    <string name="vibrate">Vibrar</string>
-    <string name="play_sound">Som</string>
     <string name="videos">Vídeos</string>
     <string name="units">Unidades</string>
     <string name="imperial">Imperial</string>
@@ -84,9 +82,7 @@
     <string-array name="about_text_lines">
         <item>Esta app foi criada por John Slavick.</item>
         <item />
-        <item>As seguintes bibliotecas Open Source foram utilizadas: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, e MPAndroidChart.</item>
-        <item />
-        <item>Agradecimento especial aos esforços dos voluntários da app anterior: Chan Kruse, Allan Portera, y Sangeeta Kumar.</item>
+        <item>As seguintes bibliotecas Open Source foram utilizadas: ActiveAndroid, android-iconify, EventBus, LikeAnimation, e MPAndroidChart.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
@@ -654,9 +650,5 @@
     <string name="nightly_fast_text">Devido aos nossos ritmos circadianos, os alimentos consumidos à noite engordam mais do que exatamente os mesmos alimentos ingeridos no início do dia, tão rápido todas as noites por pelo menos doze horas, começando antes das 19h. Quanto menos calorias após o pôr do sol, melhor.</string>
     <string name="nightly_sleep_text">Marque esta caixa se você tiver pelo menos sete horas de sono ao deitar regularmente.</string>
     <string name="nightly_trendelenburg_text">Tente passar pelo menos quatro horas por noite deitado com o corpo inclinado para baixo seis graus, elevando os postes ao pé da cama em 20 cm (ou 20 cm se você tiver um rei da Califórnia). Seja extremamente cuidadoso ao sair da cama, pois isso causa intolerância ortostática na maioria das pessoas, mesmo se você for jovem e saudável - ou seja, se você acordar rápido demais, poderá sentir tonturas, desmaios ou tonturas e pode cair e se machucar. Então levante-se devagar. Beber duas xícaras de água fria trinta minutos antes de subir também pode ajudar a evitar esse efeito colateral potencialmente perigoso. \ N * IMPORTANTE: Não tente fazer isso em casa se você tiver problemas cardíacos ou pulmonares, refluxo ácido ou problemas no cérebro (como traumatismo craniano) ou olhos (até um histórico familiar de glaucoma o desqualifica). Além disso, não tente fazer isso até que você pergunte ao seu médico se ele acha seguro dormir em Trendelenburg leve. *</string>
-    <string name="for_health_and_weight_loss">Para saúde e perda de peso</string>
-    <string name="for_health_alone">Para a saúde sozinho</string>
-    <string name="daily_dozen_and_tweaks">Dúzia diária 21 ajustes</string>
-    <string name="daily_dozen_only">Apenas dúzia diária</string>
 
 </resources>

@@ -75,8 +75,6 @@
     <string name="daily_reminder_settings">Setările pentru mementourile zilnice</string>
     <string name="enable_daily_reminder">Activați mementoul zilnic</string>
     <string name="remind_me_at">Amintiți-mi la</string>
-    <string name="vibrate">Vibrează</string>
-    <string name="play_sound">Redați sunetul</string>
     <string name="videos">Videoclipuri</string>
     <string name="units">Unități</string>
     <string name="imperial">Imperial</string>
@@ -102,9 +100,7 @@
     <string-array name="about_text_lines">
         <item>Această aplicație a fost creată de John Slavick.</item>
         <item />
-        <item>Următoarele biblioteci cu sursă deschisă sunt utilizate în crearea aplicației: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, și MPAndroidChart.</item>
-        <item />
-        <item>Mulțumiri speciale sunt aduse eforturilor de voluntariat ale creatorilor aplicației anterioare: Chan Kruse, Allan Portera, și Sangeeta Kumar.</item>
+        <item>Următoarele biblioteci cu sursă deschisă sunt utilizate în crearea aplicației: ActiveAndroid, android-iconify, EventBus, LikeAnimation, și MPAndroidChart.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
@@ -672,9 +668,5 @@
     <string name="nightly_fast_text">Datorită ritmurilor noastre circadiene, mâncarea mâncată noaptea este mai îngrășată decât aceeași mâncare mâncată mai devreme în timpul zilei, atât de rapid în fiecare seară timp de cel puțin douăsprezece ore începând înainte de ora 19:00. Cu cât mai puține calorii după apusul soarelui, cu atât mai bine.</string>
     <string name="nightly_sleep_text">Bifează această casetă dacă ai cel puțin șapte ore de somn la culcare obișnuită.</string>
     <string name="nightly_trendelenburg_text">Încercați să petreceți cel puțin patru ore pe noapte culcată cu corpul înclinat cu capul în jos cu șase grade, ridicând posturile de la poalele patului dvs. cu opt centimetri (sau cu nouă centimetri dacă aveți un rege din California). Fii extrem de atent când te ridici din pat, deoarece acest lucru provoacă intoleranță ortostatică la majoritatea oamenilor, chiar dacă ești tânăr și sănătos - adică dacă te ridici prea repede, te poți simți amețit, leșin sau cap deschis cădeați și răniți-vă. Deci ridicați-vă încet. Consumul a două căni de apă rece cu treizeci de minute înainte de creștere poate ajuta, de asemenea, la prevenirea acestui efect secundar potențial periculos. \ N * IMPORTANT: Nu încercați deloc acasă dacă aveți probleme cu inima sau cu plămânii, refluxul acid sau probleme cu creierul. (ca trauma capului) sau ochii (chiar și un istoric familial de glaucom te descalifică). De asemenea, nu încercați acest lucru până când nu întrebați medicul dvs. dacă consideră că este sigur să dormiți în Trendelenburg ușor. *</string>
-    <string name="for_health_and_weight_loss">Pentru sănătate și pierdere în greutate</string>
-    <string name="for_health_alone">Pentru sănătate singur</string>
-    <string name="daily_dozen_and_tweaks">Ziua zilnică 21 Tweaks</string>
-    <string name="daily_dozen_only">Doar zilnic Dozen</string>
 
 </resources>

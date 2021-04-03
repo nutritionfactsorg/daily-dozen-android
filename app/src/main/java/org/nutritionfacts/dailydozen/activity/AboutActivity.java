@@ -15,25 +15,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import org.nutritionfacts.dailydozen.databinding.ActivityAboutBinding;
 
 public class AboutActivity extends AppCompatActivity {
-    @BindView(R.id.about_welcome)
-    protected TextView tvWelcome;
-    @BindView(R.id.about_header)
-    protected TextView tvHeader;
-    @BindView(R.id.about_version)
-    protected TextView tvVersion;
-    @BindView(R.id.about_text)
-    protected TextView tvAbout;
+    private ActivityAboutBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
-        ButterKnife.bind(this);
+        binding = ActivityAboutBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         initActionBar();
 
@@ -62,8 +53,8 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     private void initHeader() {
-        tvHeader.setText(getString(R.string.app_name));
-        tvVersion.setText(getString(R.string.format_version, BuildConfig.VERSION_NAME));
+        binding.aboutHeader.setText(getString(R.string.app_name));
+        binding.aboutVersion.setText(getString(R.string.format_version, BuildConfig.VERSION_NAME));
     }
 
     private void initLinksInWelcome() {
@@ -72,8 +63,8 @@ public class AboutActivity extends AppCompatActivity {
 
         initLink(welcomeText, ssb, R.string.title_how_not_to_die, R.string.url_how_not_to_die);
 
-        tvWelcome.setMovementMethod(LinkMovementMethod.getInstance());
-        tvWelcome.setText(ssb, TextView.BufferType.SPANNABLE);
+        binding.aboutWelcome.setMovementMethod(LinkMovementMethod.getInstance());
+        binding.aboutWelcome.setText(ssb, TextView.BufferType.SPANNABLE);
     }
 
     private void initLinksInText() {
@@ -84,13 +75,12 @@ public class AboutActivity extends AppCompatActivity {
         initLink(aboutText, ssb, R.string.name_john_slavick, R.string.url_john_slavick);
         initLink(aboutText, ssb, R.string.library_activeandroid, R.string.url_activeandroid);
         initLink(aboutText, ssb, R.string.library_android_iconify, R.string.url_android_iconify);
-        initLink(aboutText, ssb, R.string.library_butterknife, R.string.url_butterknife);
         initLink(aboutText, ssb, R.string.library_eventbus, R.string.url_eventbus);
         initLink(aboutText, ssb, R.string.library_likeanimation, R.string.url_likeanimation);
         initLink(aboutText, ssb, R.string.library_mpandroidchart, R.string.url_mpandroidchart);
 
-        tvAbout.setMovementMethod(LinkMovementMethod.getInstance());
-        tvAbout.setText(ssb, TextView.BufferType.SPANNABLE);
+        binding.aboutText.setMovementMethod(LinkMovementMethod.getInstance());
+        binding.aboutText.setText(ssb, TextView.BufferType.SPANNABLE);
     }
 
     private void initLink(final String textToSearch, final SpannableStringBuilder ssb, final int textToFindId, final int urlId) {

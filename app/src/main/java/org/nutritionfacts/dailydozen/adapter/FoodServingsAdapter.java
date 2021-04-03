@@ -12,9 +12,6 @@ import org.nutritionfacts.dailydozen.Common;
 
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 public class FoodServingsAdapter extends RecyclerView.Adapter<FoodServingsAdapter.ViewHolder> {
     private List<String> servingSizes;
 
@@ -52,12 +49,11 @@ public class FoodServingsAdapter extends RecyclerView.Adapter<FoodServingsAdapte
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(android.R.id.text1)
         TextView servingSize;
 
         ViewHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this, itemView);
+            servingSize = itemView.findViewById(android.R.id.text1);
         }
     }
 }

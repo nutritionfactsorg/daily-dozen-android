@@ -6,7 +6,6 @@
     <string name="whole_grains">Vollkorn</string>
     <string name="videos">Videos</string>
     <string name="welcome_to_my_daily_dozen">Willkommen zu meinen Daily Dozen!</string>
-    <string name="vibrate">Vibrieren</string>
     <string name="types">Typen</string>
     <string name="time_scale">Zeitraum</string>
     <string name="task_restore_title">Wiederherstellen</string>
@@ -28,7 +27,6 @@
     <string name="restore_confirm_message">Bereits existierende Daten werden bei der Sicherung überschrieben. Möchtest du fortfahren?</string>
     <string name="remind_me_at">Erinnere mich um</string>
     <string name="rate_now">Feedback geben</string>
-    <string name="play_sound">Ton abspielen</string>
     <string name="permission_needed_to_write_storage">Für das Erstellen einer Sicherung ist ein Schreibzugriff erforderlich</string>
     <string name="other_vegetables">Anderes Gemüse</string>
     <string name="other_fruits">Anderes Obst</string>
@@ -85,9 +83,7 @@
     <string-array name="about_text_lines">
         <item>Diese Anwendung wurde von John Slavick erstellt.</item>
         <item />
-        <item>Die folgenden Open-Source-Bibliotheken werden verwendet: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation und MPAndroidChart.</item>
-        <item />
-        <item>Besonderer Dank geht an die freiwilligen Ersteller der vorherigen App: Chan Kruse, Allan Portera und Sangeeta Kumar.</item>
+        <item>Die folgenden Open-Source-Bibliotheken werden verwendet: ActiveAndroid, android-iconify, EventBus, LikeAnimation und MPAndroidChart.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
@@ -653,8 +649,4 @@
     <string name="nightly_fast_text">Aufgrund unseres Biorhytmus begünstigt das Essen am Abend eine Gewichtszunahme mehr als die gleiche Anzahl an Kalorien früher am Tag. Faste also jeden Abend für mindestens zwölf Stunden, beginnend spätestens um 19 Uhr. Je weniger Kalorien nach Sonnenuntergang, desto besser.</string>
     <string name="nightly_sleep_text">Setze dieses Häkchen, wenn du mindestens 7 Stunden geschlafen hast und zur üblichen Zeit ins Bett gegangen bist.</string>
     <string name="nightly_trendelenburg_text">Versuche, mindestens vier Stunden pro Nacht so zu liegen, dass dein Körper von Fuß bis Kopf um etwa sechs Grad geneigt ist, indem du das Bett am Fußende um 20 Zentimeter anhebst (bzw. um 23 Zentimeter bei einer Bettlänge von mehr als 210 Zentimeter). Sei beim Aufstehen jedoch äußerst vorsichtig, da dies bei den meisten Menschen zu einer orthostatischen Unverträglichkeit führt, auch wenn sie jung und gesund sind. Wenn du also zu schnell aufstehst, kannst du dich schwindelig, ohnmächtig oder benommen fühlen und könntest fallen und dich verletzen. Stehe also langsam auf. Zwei Tassen kaltes Wasser 30 Minuten vor dem Aufstehen können auch dazu beitragen, diese potenziell gefährliche Nebenwirkung zu vermeiden. \n*WICHTIG: Versuche dies auf keinen Fall zu Hause, wenn du Herz- oder Lungenprobleme haben, an gastroösophagealem Reflux leidest oder Probleme mit deinem Gehirn (z.B. Schädel-Hirn-Trauma) oder deinen Augen hast (eine Glaukom-Erkrankung in der Familie genügt bereits). Versuche dies auch nicht, ohne deinen Arzt zu fragen, ob er der Meinung ist, dass du in leichter Trendelenburg-Lage sicher schlafen kannst.*</string>
-    <string name="for_health_and_weight_loss">Für Gesundheit und Gewichtsverlust</string>
-    <string name="for_health_alone">Für die Gesundheit allein</string>
-    <string name="daily_dozen_and_tweaks">Täglich ein Dutzend 21 Tweaks</string>
-    <string name="daily_dozen_only">Täglich nur ein Dutzend</string>
 </resources>

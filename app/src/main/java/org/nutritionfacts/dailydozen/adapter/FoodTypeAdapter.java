@@ -9,12 +9,9 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.nutritionfacts.dailydozen.Common;
-import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.databinding.FoodTypeItemBinding;
 
 import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHolder> {
     private final List<String> foodTypes;
@@ -27,8 +24,7 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHo
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_type_item, parent, false);
-        return new ViewHolder(view);
+        return new ViewHolder(FoodTypeItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
@@ -57,12 +53,7 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHo
             if (!TextUtils.isEmpty(link)) {
                 textView.setVisibility(View.VISIBLE);
 
-                textView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Common.openUrlInExternalBrowser(textView.getContext(), link);
-                    }
-                });
+                textView.setOnClickListener(v -> Common.openUrlInExternalBrowser(textView.getContext(), link));
             } else {
                 textView.setVisibility(View.GONE);
             }
@@ -75,14 +66,13 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHo
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.food_name)
         TextView foodName;
-        @BindView(R.id.food_videos)
         TextView foodVideos;
 
-        ViewHolder(View itemView) {
-            super(itemView);
-            ButterKnife.bind(this, itemView);
+        ViewHolder(FoodTypeItemBinding binding) {
+            super(binding.getRoot());
+            foodName = binding.foodName;
+            foodVideos = binding.foodVideos;
         }
     }
 }
