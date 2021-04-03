@@ -2,43 +2,18 @@ package org.nutritionfacts.dailydozen.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.LayoutInflater;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import org.greenrobot.eventbus.Subscribe;
-import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.databinding.TimeRangeSelectorBinding;
 import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-
 public class TimeRangeSelector extends LinearLayout {
-    @BindView(R.id.time_range_selector_earliest)
-    protected View btnEarliest;
-    @BindView(R.id.time_range_selector_latest)
-    protected View btnLatest;
-    @BindView(R.id.time_range_selector_year_container)
-    protected ViewGroup vgYearContainer;
-    @BindView(R.id.time_range_selector_previous_year)
-    protected TextView btnPreviousYear;
-    @BindView(R.id.time_range_selector_selected_year)
-    protected TextView tvSelectedYear;
-    @BindView(R.id.time_range_selector_next_year)
-    protected TextView btnNextYear;
-    @BindView(R.id.time_range_selector_month_container)
-    protected ViewGroup vgMonthContainer;
-    @BindView(R.id.time_range_selector_previous_month)
-    protected TextView btnPreviousMonth;
-    @BindView(R.id.time_range_selector_selected_month)
-    protected TextView tvSelectedMonth;
-    @BindView(R.id.time_range_selector_next_month)
-    protected TextView btnNextMonth;
+    private TimeRangeSelectorBinding binding;
 
     private int minYear;
     private int maxYear;
@@ -90,11 +65,11 @@ public class TimeRangeSelector extends LinearLayout {
     }
 
     private void updateYearDisplay() {
-        tvSelectedYear.setText(String.valueOf(this.selectedYear));
+        binding.timeRangeSelectorSelectedYear.setText(String.valueOf(this.selectedYear));
 
         // Disable previous or next buttons if we are at the min or max year for entries
-        btnPreviousYear.setVisibility(this.selectedYear == minYear ? INVISIBLE : VISIBLE);
-        btnNextYear.setVisibility(this.selectedYear == maxYear ? INVISIBLE : VISIBLE);
+        binding.timeRangeSelectorPreviousYear.setVisibility(this.selectedYear == minYear ? INVISIBLE : VISIBLE);
+        binding.timeRangeSelectorNextYear.setVisibility(this.selectedYear == maxYear ? INVISIBLE : VISIBLE);
     }
 
     public int getSelectedMonth() {
@@ -128,23 +103,23 @@ public class TimeRangeSelector extends LinearLayout {
     }
 
     private void updateMonthDisplay() {
-        tvSelectedMonth.setText(DateUtil.getShortNameOfMonth(this.selectedMonth));
+        binding.timeRangeSelectorSelectedMonth.setText(DateUtil.getShortNameOfMonth(this.selectedMonth));
 
         // Disable previous or next buttons if we are at the min or max month for entries
-        btnPreviousMonth.setVisibility(this.selectedYear == minYear && this.selectedMonth == minMonthOfMinYear ? INVISIBLE : VISIBLE);
-        btnNextMonth.setVisibility(this.selectedYear == maxYear && this.selectedMonth == maxMonthOfMaxYear ? INVISIBLE : VISIBLE);
+        binding.timeRangeSelectorPreviousMonth.setVisibility(this.selectedYear == minYear && this.selectedMonth == minMonthOfMinYear ? INVISIBLE : VISIBLE);
+        binding.timeRangeSelectorNextMonth.setVisibility(this.selectedYear == maxYear && this.selectedMonth == maxMonthOfMaxYear ? INVISIBLE : VISIBLE);
 
         // Here we show/hide the go to earliest and go latest buttons. The go to earliest button is only shown if
         // there is at least one month or one year in the past from the currently selected time.
-        if (vgMonthContainer.getVisibility() == VISIBLE) {
-            btnEarliest.setVisibility(btnPreviousMonth.getVisibility());
-            btnLatest.setVisibility(btnNextMonth.getVisibility());
-        } else if (vgYearContainer.getVisibility() == VISIBLE) {
-            btnEarliest.setVisibility(btnPreviousYear.getVisibility());
-            btnLatest.setVisibility(btnNextYear.getVisibility());
+        if (binding.timeRangeSelectorMonthContainer.getVisibility() == VISIBLE) {
+            binding.timeRangeSelectorEarliest.setVisibility(binding.timeRangeSelectorPreviousMonth.getVisibility());
+            binding.timeRangeSelectorLatest.setVisibility(binding.timeRangeSelectorNextMonth.getVisibility());
+        } else if (binding.timeRangeSelectorYearContainer.getVisibility() == VISIBLE) {
+            binding.timeRangeSelectorEarliest.setVisibility(binding.timeRangeSelectorPreviousYear.getVisibility());
+            binding.timeRangeSelectorLatest.setVisibility(binding.timeRangeSelectorNextYear.getVisibility());
         } else {
-            btnEarliest.setVisibility(GONE);
-            btnLatest.setVisibility(GONE);
+            binding.timeRangeSelectorEarliest.setVisibility(GONE);
+            binding.timeRangeSelectorLatest.setVisibility(GONE);
         }
     }
 
@@ -162,32 +137,42 @@ public class TimeRangeSelector extends LinearLayout {
     }
 
     private void init(final Context context) {
-        inflate(context, R.layout.time_range_selector, this);
-        ButterKnife.bind(this);
+        binding = TimeRangeSelectorBinding.inflate(LayoutInflater.from(context), this, true);
+
+        onPreviousYearClicked();
+        onNextYearClicked();
+        onPreviousMonthClicked();
+        onNextMonthClicked();
+        onEarliestClicked();
+        onLatestClicked();
     }
 
-    @OnClick(R.id.time_range_selector_previous_year)
     public void onPreviousYearClicked() {
-        decreaseYear();
-        postTimeRangeSelectedEvent();
+        binding.timeRangeSelectorPreviousYear.setOnClickListener(v -> {
+            decreaseYear();
+            postTimeRangeSelectedEvent();
+        });
     }
 
-    @OnClick(R.id.time_range_selector_next_year)
     public void onNextYearClicked() {
-        increaseYear();
-        postTimeRangeSelectedEvent();
+        binding.timeRangeSelectorNextYear.setOnClickListener(v -> {
+            increaseYear();
+            postTimeRangeSelectedEvent();
+        });
     }
 
-    @OnClick(R.id.time_range_selector_previous_month)
     public void onPreviousMonthClicked() {
-        decreaseMonth();
-        postTimeRangeSelectedEvent();
+        binding.timeRangeSelectorPreviousMonth.setOnClickListener(v -> {
+            decreaseMonth();
+            postTimeRangeSelectedEvent();
+        });
     }
 
-    @OnClick(R.id.time_range_selector_next_month)
     public void onNextMonthClicked() {
-        increaseMonth();
-        postTimeRangeSelectedEvent();
+        binding.timeRangeSelectorNextMonth.setOnClickListener(v -> {
+            increaseMonth();
+            postTimeRangeSelectedEvent();
+        });
     }
 
     private void postTimeRangeSelectedEvent() {
@@ -196,19 +181,19 @@ public class TimeRangeSelector extends LinearLayout {
 
     @Subscribe
     public void onEvent(TimeScaleSelectedEvent event) {
-        vgYearContainer.setVisibility(VISIBLE);
-        vgMonthContainer.setVisibility(VISIBLE);
+        binding.timeRangeSelectorYearContainer.setVisibility(VISIBLE);
+        binding.timeRangeSelectorMonthContainer.setVisibility(VISIBLE);
 
         switch (event.getSelectedTimeScale()) {
             case TimeScale.DAYS:
             default:
                 break;
             case TimeScale.MONTHS:
-                vgMonthContainer.setVisibility(GONE);
+                binding.timeRangeSelectorMonthContainer.setVisibility(GONE);
                 break;
             case TimeScale.YEARS:
-                vgYearContainer.setVisibility(GONE);
-                vgMonthContainer.setVisibility(GONE);
+                binding.timeRangeSelectorYearContainer.setVisibility(GONE);
+                binding.timeRangeSelectorMonthContainer.setVisibility(GONE);
                 break;
         }
 
@@ -216,17 +201,19 @@ public class TimeRangeSelector extends LinearLayout {
         updateMonthDisplay();
     }
 
-    @OnClick(R.id.time_range_selector_earliest)
     public void onEarliestClicked() {
-        setSelectedYear(minYear);
-        setSelectedMonth(minMonthOfMinYear);
-        postTimeRangeSelectedEvent();
+        binding.timeRangeSelectorEarliest.setOnClickListener(v -> {
+            setSelectedYear(minYear);
+            setSelectedMonth(minMonthOfMinYear);
+            postTimeRangeSelectedEvent();
+        });
     }
 
-    @OnClick(R.id.time_range_selector_latest)
     public void onLatestClicked() {
-        setSelectedYear(maxYear);
-        setSelectedMonth(maxMonthOfMaxYear);
-        postTimeRangeSelectedEvent();
+        binding.timeRangeSelectorLatest.setOnClickListener(v -> {
+            setSelectedYear(maxYear);
+            setSelectedMonth(maxMonthOfMaxYear);
+            postTimeRangeSelectedEvent();
+        });
     }
 }

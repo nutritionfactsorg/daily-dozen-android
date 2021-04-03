@@ -153,10 +153,6 @@
     <string name="nightly_fast_text">Ze względu na nasz rytm dobowy, jedzenie spożywane w nocy jest bardziej tuczące niż dokładnie to samo jedzenie spożywane wcześniej w ciągu dnia, więc pość co najmniej 12 godzin przed godziną 19:00. Im mniej kalorii po zachodzie słońca, tym lepiej.</string>
     <string name="nightly_sleep_text">Zaznacz to pole, jeśli śpisz przynajmniej siedem godzin w swojej zwykłej porze snu.</string>
     <string name="nightly_trendelenburg_text">Spróbuj spędzać co najmniej cztery godziny w nocy, leżąc nachylonym/-ną pod kątem sześć stopni - głową w dół, poprzez podwyższenie dolnych nóg łóżka o 20 cm (lub o 23 cm, jeśli masz łóżko California king). Należy zachować szczególną ostrożność, gdy wstajesz z łóżka, ponieważ powoduje to ortostatyczną nietolerancję u większości ludzi, nawet jeśli jesteś młody/-a i zdrowy/-a - co oznacza, że jeśli wstaniesz zbyt szybko, możesz odczuć zawroty głowy, słabość lub oszołomienie i upaść i zranić się. Więc wstań powoli. Wypicie dwóch szklanek zimnej wody na trzydzieści minut przed wstawaniem może również pomóc w zapobiegnięciu temu potencjalnie niebezpiecznemu efektowi ubocznemu. \n*WAŻNE: nie próbuj tego w domu w ogóle, jeśli masz problemy z sercem lub płucami, refluks żołądkowy lub problemy z mózgiem (np. uraz głowy) lub oczu (nawet historia jaskry w rodzinie Cię dyskwalifikuje). Nie próbuj tego także, dopóki nie zapytasz swojego lekarza, czy uważa, że spanie w łagodnym Trendelenburgu jest bezpieczne.</string>
-    <string name="for_health_and_weight_loss">Dla zdrowia i utraty wagi</string>
-    <string name="for_health_alone">Tylko dla zdrowia</string>
-    <string name="daily_dozen_and_tweaks">Codzienny Tuzin + 21 Adaptacji</string>
-    <string name="daily_dozen_only">Tylko Codzienny Tuzin</string>
     <string name="weight">Waga</string>
     <string name="tweak_group_meal">Przy każdym posiłku</string>
     <string name="tweak_group_daily">Każdego dnia</string>
@@ -182,9 +178,7 @@
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
         <item/>
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, and MPAndroidChart.</item>
-        <item/>
-        <item>Special thanks to the volunteer efforts of the creators of the previous app: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
+        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Wykonaj następujące kroki, aby przywrócić swoją kopię zapasową w aplikacji Codzienny Tuzin.</item>

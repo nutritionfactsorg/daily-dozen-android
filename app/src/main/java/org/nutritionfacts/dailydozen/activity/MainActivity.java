@@ -1,7 +1,6 @@
 package org.nutritionfacts.dailydozen.activity;
 
 import android.content.ActivityNotFoundException;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,8 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.PagerTabStrip;
-import androidx.viewpager.widget.ViewPager;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
@@ -29,6 +26,7 @@ import org.nutritionfacts.dailydozen.adapter.TweaksPagerAdapter;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.controller.Prefs;
+import org.nutritionfacts.dailydozen.databinding.ActivityMainBinding;
 import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
 import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
@@ -40,23 +38,17 @@ import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
 import org.nutritionfacts.dailydozen.task.RestoreTask;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
-import org.nutritionfacts.dailydozen.view.AppModeBottomSheet;
 
 import java.io.File;
 import java.util.Date;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import hirondelle.date4j.DateTime;
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
-    @BindView(R.id.date_pager)
-    protected ViewPager datePager;
-    @BindView(R.id.date_pager_indicator)
-    protected PagerTabStrip datePagerIndicator;
+    private ActivityMainBinding binding;
 
     private MenuItem menuToggleModes;
 
@@ -72,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         initDatePager();
         initDatePagerIndicator();
@@ -81,12 +73,6 @@ public class MainActivity extends AppCompatActivity {
         calculateStreaksAfterDatabaseUpgradeToV2();
 
         handleIntentIfNecessary();
-
-//        if (!Prefs.getInstance(this).userHasSeenOnboardingScreen()) {
-//            final AppModeBottomSheet appModeBottomSheet = AppModeBottomSheet.newInstance();
-//            appModeBottomSheet.setCancelable(false);
-//            appModeBottomSheet.show(getSupportFragmentManager(), AppModeBottomSheet.TAG);
-//        }
     }
 
     private void handleIntentIfNecessary() {
@@ -112,12 +98,7 @@ public class MainActivity extends AppCompatActivity {
                         .setCancelable(false)
                         .setTitle(R.string.dialog_streaks_title)
                         .setMessage(R.string.dialog_streaks_message)
-                        .setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                new CalculateStreaksTask(MainActivity.this).execute();
-                            }
-                        })
+                        .setPositiveButton(R.string.OK, (dialog, which) -> new CalculateStreaksTask(MainActivity.this).execute())
                         .create().show();
             }
         }
@@ -194,10 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void toggleTweaksMenuItemVisibility() {
         if (menuToggleModes != null) {
-            menuToggleModes.setShowAsAction(
-                    Prefs.getInstance(this).isAppModeDailyDozenOnly() ?
-                            MenuItem.SHOW_AS_ACTION_NEVER :
-                            MenuItem.SHOW_AS_ACTION_IF_ROOM);
+            menuToggleModes.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         }
     }
 
@@ -280,18 +258,18 @@ public class MainActivity extends AppCompatActivity {
         } else {
             pagerAdapter = new TweaksPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         }
-        datePager.setAdapter(pagerAdapter);
+        binding.datePager.setAdapter(pagerAdapter);
         daysSinceEpoch = pagerAdapter.getCount();
 
         // Go to today's date by default
-        datePager.setCurrentItem(pagerAdapter.getCount(), false);
+        binding.datePager.setCurrentItem(pagerAdapter.getCount(), false);
     }
 
     private void initDatePagerIndicator() {
-        datePagerIndicator.setTextColor(ContextCompat.getColor(this, android.R.color.white));
-        datePagerIndicator.setBackgroundResource(R.color.colorPrimary);
-        datePagerIndicator.setTabIndicatorColorResource(R.color.colorAccent);
-        datePagerIndicator.setDrawFullUnderline(false);
+        binding.datePagerIndicator.setTextColor(ContextCompat.getColor(this, android.R.color.white));
+        binding.datePagerIndicator.setBackgroundResource(R.color.colorPrimary);
+        binding.datePagerIndicator.setTabIndicatorColorResource(R.color.colorAccent);
+        binding.datePagerIndicator.setDrawFullUnderline(false);
     }
 
     @Override
@@ -332,19 +310,11 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(this)
                         .setTitle(R.string.restore_confirm_title)
                         .setMessage(R.string.restore_confirm_message)
-                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                restore(restoreFileUri);
-                                dialog.dismiss();
-                            }
+                        .setPositiveButton(R.string.yes, (dialog, which) -> {
+                            restore(restoreFileUri);
+                            dialog.dismiss();
                         })
-                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        })
+                        .setNegativeButton(R.string.no, (dialog, which) -> dialog.dismiss())
                         .create()
                         .show();
             } else {
@@ -379,12 +349,7 @@ public class MainActivity extends AppCompatActivity {
                     .setCancelable(false)
                     .setTitle(R.string.dialog_no_email_apps_title)
                     .setMessage(R.string.dialog_no_email_apps_message)
-                    .setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    })
+                    .setPositiveButton(R.string.OK, (dialog, which) -> dialog.dismiss())
                     .create().show();
         }
     }
@@ -415,12 +380,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void startDayChangeHandler() {
         if (dayChangeRunnable == null) {
-            dayChangeRunnable = new Runnable() {
-                @Override
-                public void run() {
-                    initDatePager();
-                    startDayChangeHandler();
-                }
+            dayChangeRunnable = () -> {
+                initDatePager();
+                startDayChangeHandler();
             };
         }
 
@@ -445,7 +407,7 @@ public class MainActivity extends AppCompatActivity {
     private void setDatePagerDate(final DateTime dateTime) {
         if (dateTime != null) {
             Timber.d("Changing displayed date to %s", dateTime.toString());
-            datePager.setCurrentItem(Day.getNumDaysSinceEpoch(dateTime));
+            binding.datePager.setCurrentItem(Day.getNumDaysSinceEpoch(dateTime));
         }
     }
 }

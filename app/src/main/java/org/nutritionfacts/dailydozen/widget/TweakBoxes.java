@@ -3,38 +3,22 @@ package org.nutritionfacts.dailydozen.widget;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.databinding.TweakBoxesBinding;
 import org.nutritionfacts.dailydozen.event.TweakServingsChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.model.TweakServings;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-
 public class TweakBoxes extends LinearLayout {
+    private TweakBoxesBinding binding;
     private Day day;
     private Tweak tweak;
-
-    @BindView(R.id.tweak_indent)
-    protected View vIndent;
-    @BindView(R.id.tweak_icon)
-    protected ImageView ivIcon;
-    @BindView(R.id.tweak_name)
-    protected TextView tvName;
-    @BindView(R.id.tweak_streak)
-    protected StreakWidget tvStreak;
-    @BindView(R.id.tweak_checkboxes)
-    protected RDACheckBoxes rdaCheckBoxes;
 
     public TweakBoxes(Context context) {
         super(context);
@@ -52,8 +36,9 @@ public class TweakBoxes extends LinearLayout {
     }
 
     private void init(final Context context) {
-        final View view = LayoutInflater.from(context).inflate(R.layout.tweak_boxes, this);
-        ButterKnife.bind(this, view);
+        binding = TweakBoxesBinding.inflate(LayoutInflater.from(context), this, true);
+        onTweakNameClicked();
+        onTweakHistoryClicked();
     }
 
     public boolean setDateAndTweak(final Day day, final Tweak tweak) {
@@ -69,7 +54,7 @@ public class TweakBoxes extends LinearLayout {
             initTweakStreak(servings);
 
             if (isDailyDoseTweak(tweak.getIdName())) {
-                vIndent.setVisibility(VISIBLE);
+                binding.tweakIndent.setVisibility(VISIBLE);
             }
 
             return true;
@@ -97,37 +82,37 @@ public class TweakBoxes extends LinearLayout {
     }
 
     private boolean initTweakIcon() {
-        return Common.loadImage(getContext(), ivIcon, FoodInfo.getTweakIcon(tweak.getName()));
+        return Common.loadImage(getContext(), binding.tweakIcon, FoodInfo.getTweakIcon(tweak.getName()));
     }
 
     private void initTweakName() {
-        tvName.setText(String.format("%s %s", tweak.getName(), getContext().getString(R.string.icon_info)));
+        binding.tweakName.setText(String.format("%s %s", tweak.getName(), getContext().getString(R.string.icon_info)));
     }
 
     private void initTweakStreak(TweakServings servings) {
         final int streak = servings != null ? servings.getStreak() : 0;
         if (streak > 0) {
-            tvStreak.setVisibility(VISIBLE);
-            tvStreak.setStreak(streak);
+            binding.tweakStreak.setVisibility(VISIBLE);
+            binding.tweakStreak.setStreak(streak);
         } else {
-            tvStreak.setVisibility(GONE);
+            binding.tweakStreak.setVisibility(GONE);
         }
     }
 
-    @OnClick({R.id.tweak_icon, R.id.tweak_name})
     public void onTweakNameClicked() {
-        Common.openTweakInfo(getContext(), tweak);
+        binding.tweakName.setOnClickListener(v -> Common.openTweakInfo(getContext(), tweak));
+        binding.tweakIcon.setOnClickListener(v -> Common.openTweakInfo(getContext(), tweak));
     }
 
-    @OnClick({R.id.tweak_history, R.id.tweak_streak})
     public void onTweakHistoryClicked() {
-        Common.openTweakHistory(getContext(), tweak);
+        binding.tweakHistory.setOnClickListener(v -> Common.openTweakHistory(getContext(), tweak));
+        binding.tweakStreak.setOnClickListener(v -> Common.openTweakHistory(getContext(), tweak));
     }
 
     private void initCheckboxes(TweakServings servings) {
-        rdaCheckBoxes.setDay(day);
-        rdaCheckBoxes.setRDA(tweak);
-        rdaCheckBoxes.setServings(servings);
+        binding.tweakCheckboxes.setDay(day);
+        binding.tweakCheckboxes.setRDA(tweak);
+        binding.tweakCheckboxes.setServings(servings);
     }
 
     @Subscribe

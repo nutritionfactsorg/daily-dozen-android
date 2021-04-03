@@ -1,38 +1,28 @@
 package org.nutritionfacts.dailydozen.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.databinding.ReminderTimeBinding;
 
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Optional;
-
 public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdapter.ViewHolder> {
-    final private Context context;
     private List<String> reminderTimes;
 
-    public DailyReminderAdapter(Context context, List<String> reminderTimes) {
-        this.context = context;
+    public DailyReminderAdapter(List<String> reminderTimes) {
         this.reminderTimes = reminderTimes;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View root = LayoutInflater.from(context).inflate(R.layout.reminder_time, parent, false);
-        return new ViewHolder(root);
+        return new ViewHolder(ReminderTimeBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
@@ -41,7 +31,7 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
             return;
         }
 
-        holder.setTime(reminderTimes.get(position));
+        holder.reminderTime.setText(reminderTimes.get(position));
     }
 
     @Override
@@ -55,22 +45,12 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.reminder_time)
-        TextView tvTime;
+        TextView reminderTime;
 
-        public void setTime(String time) {
-            tvTime.setText(time);
-        }
-
-        ViewHolder(View itemView) {
-            super(itemView);
-            ButterKnife.bind(this, itemView);
-        }
-
-        @Optional
-        @OnClick(R.id.reminder_delete)
-        public void onDeleteReminderClicked() {
-            Bus.reminderRemovedEvent(getAdapterPosition());
+        ViewHolder(ReminderTimeBinding binding) {
+            super(binding.getRoot());
+            reminderTime = binding.reminderTime;
+            binding.reminderDelete.setOnClickListener(v -> Bus.reminderRemovedEvent(getAdapterPosition()));
         }
     }
 }

@@ -1,32 +1,21 @@
 package org.nutritionfacts.dailydozen.widget;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.view.View;
+import android.view.LayoutInflater;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.databinding.HeaderDateBinding;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.TweakServings;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.OnLongClick;
-
 public class DateHeader extends LinearLayout {
-    @BindView(R.id.header)
-    protected TextView tvHeader;
-    @BindView(R.id.star)
-    protected TextView tvStar;
-    @BindView(R.id.num_servings)
-    protected TextView tvNumServings;
-    @BindView(R.id.max)
-    protected TextView tvMax;
+    private HeaderDateBinding binding;
 
     private int max;
 
@@ -41,8 +30,10 @@ public class DateHeader extends LinearLayout {
     }
 
     private void init(final Context context, AttributeSet attrs) {
-        final View view = inflate(context, R.layout.header_date, this);
-        ButterKnife.bind(this, view);
+        binding = HeaderDateBinding.inflate(LayoutInflater.from(context), this, true);
+
+        onSubHeaderClicked();
+        onStarLongClicked();
 
         setTitle(context.getString(R.string.servings));
 
@@ -56,12 +47,12 @@ public class DateHeader extends LinearLayout {
     }
 
     private void setTitle(final String title) {
-        tvHeader.setText(title);
+        binding.header.setText(title);
     }
 
     private void setMax(final String max) {
-        tvMax.setText(max);
-        this.max = Integer.valueOf(max);
+        binding.max.setText(max);
+        this.max = Integer.parseInt(max);
     }
 
     private void handleCustomAttrs(final Context context, final AttributeSet attrs) {
@@ -73,41 +64,44 @@ public class DateHeader extends LinearLayout {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     public void setServings(final int servingsOnDate) {
         // Only show the star for the Daily Dozen checklist
         if (inDailyDozenMode()) {
-            tvStar.setVisibility(servingsOnDate == Common.MAX_SERVINGS ? VISIBLE : GONE);
+            binding.star.setVisibility(servingsOnDate == Common.MAX_SERVINGS ? VISIBLE : GONE);
         }
 
-        tvNumServings.setText(Integer.toString(servingsOnDate));
+        binding.numServings.setText(Integer.toString(servingsOnDate));
     }
 
     private boolean inDailyDozenMode() {
         return max == Common.MAX_SERVINGS;
     }
 
-    @OnClick(R.id.sub_header)
     public void onSubHeaderClicked() {
-        final Context context = getContext();
+        binding.subHeader.setOnClickListener(v -> {
+            final Context context = getContext();
 
-        if (inDailyDozenMode()) {
-            if (!DDServings.isEmpty()) {
-                Common.openServingsHistory(context);
+            if (inDailyDozenMode()) {
+                if (!DDServings.isEmpty()) {
+                    Common.openServingsHistory(context);
+                } else {
+                    Common.showToast(context, R.string.no_servings_recorded);
+                }
             } else {
-                Common.showToast(context, R.string.no_servings_recorded);
+                if (!TweakServings.isEmpty()) {
+                    Common.openTweakServingsHistory(context);
+                } else {
+                    Common.showToast(context, R.string.no_servings_recorded);
+                }
             }
-        } else {
-            if (!TweakServings.isEmpty()) {
-                Common.openTweakServingsHistory(context);
-            } else {
-                Common.showToast(context, R.string.no_servings_recorded);
-            }
-        }
+        });
     }
 
-    @OnLongClick(R.id.star)
-    public boolean onStarLongClicked() {
-        Bus.showExplodingStarAnimation();
-        return true;
+    public void onStarLongClicked() {
+        binding.star.setOnLongClickListener(v -> {
+            Bus.showExplodingStarAnimation();
+            return true;
+        });
     }
 }

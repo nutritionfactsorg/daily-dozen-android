@@ -99,9 +99,7 @@
     <string-array name="about_text_lines">
         <item>Questa applicazione è stata creata da John Slavick.</item>
         <item />
-        <item>Le seguenti librerie open source sono utilizzate: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation, and MPAndroidChart.</item>
-        <item />
-        <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell\'app precedente: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
+        <item>Le seguenti librerie open source sono utilizzate: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
@@ -670,9 +668,5 @@
     <string name="nightly_fast_text">A causa dei nostri ritmi circadiani, il cibo consumato durante la notte è più ingrassante rispetto allo stesso cibo consumato all\'inizio della giornata, così veloce ogni notte per almeno dodici ore a partire dalle 19:00. Meno calorie dopo il tramonto, meglio è.</string>
     <string name="nightly_sleep_text">Seleziona questa casella se dormi almeno sette ore al momento di coricarti.</string>
     <string name="nightly_trendelenburg_text">Prova a passare almeno quattro ore a notte sdraiato con il corpo inclinato a testa in giù di sei gradi sollevando i pali ai piedi del letto di otto pollici (o di nove pollici se hai un re della California). Fai molta attenzione quando ti alzi dal letto, poiché ciò causa intolleranza ortostatica nella maggior parte delle persone, anche se sei giovane e in buona salute, il che significa che se ti alzi troppo in fretta, puoi sentire vertigini, svenimento o stordimento e potresti cadere e farti del male. Quindi alzati lentamente. Bere due tazze di acqua fredda trenta minuti prima di alzarsi può anche aiutare a prevenire questo effetto collaterale potenzialmente pericoloso. \ N * IMPORTANTE: non provarlo affatto a casa se hai problemi cardiaci o polmonari, reflusso acido o problemi al cervello (come il trauma cranico) o gli occhi (anche una storia familiare di glaucoma ti squalifica). Inoltre, non provare questo fino a quando non chiedi al tuo medico se pensano che sia sicuro per te dormire nella lieve Trendelenburg. *</string>
-    <string name="for_health_and_weight_loss">Per la salute e la perdita di peso</string>
-    <string name="for_health_alone">Solo per la salute</string>
-    <string name="daily_dozen_and_tweaks">Dozzina giornaliera di 21 modifiche</string>
-    <string name="daily_dozen_only">Solo una dozzina al giorno</string>
 
 </resources>

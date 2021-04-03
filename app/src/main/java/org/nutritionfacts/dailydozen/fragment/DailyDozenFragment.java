@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,39 +15,22 @@ import androidx.fragment.app.Fragment;
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.Common;
-import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.Prefs;
+import org.nutritionfacts.dailydozen.databinding.FragmentDailyDozenBinding;
 import org.nutritionfacts.dailydozen.event.FoodServingsChangedEvent;
 import org.nutritionfacts.dailydozen.event.ShowExplodingStarAnimation;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
-import org.nutritionfacts.dailydozen.widget.DateHeader;
 import org.nutritionfacts.dailydozen.widget.FoodServings;
 import org.nutritionfacts.dailydozen.widget.SupplementDivider;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Unbinder;
-import likeanimation.LikeButtonView;
 import timber.log.Timber;
 
 public class DailyDozenFragment extends Fragment {
-    @BindView(R.id.back_to_today)
-    protected TextView tvBackToToday;
-    @BindView(R.id.date_servings)
-    protected DateHeader dateHeader;
-    @BindView(R.id.date_food_servings)
-    protected ViewGroup vgFoodServings;
-    @BindView(R.id.exploding_star_container)
-    protected ViewGroup vgExplodingStar;
-    @BindView(R.id.exploding_star)
-    protected LikeButtonView explodingStar;
-
-    private Unbinder unbinder;
+    private FragmentDailyDozenBinding binding;
 
     private Day day;
 
@@ -64,23 +46,19 @@ public class DailyDozenFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_daily_dozen, container, false);
+        binding = FragmentDailyDozenBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        unbinder = ButterKnife.bind(this, view);
 
         displayFormForDate();
 
-        Bus.register(this);
-    }
+        onBackToTodayClicked();
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        unbinder.unbind();
+        Bus.register(this);
     }
 
     private void displayFormForDate() {
@@ -92,7 +70,7 @@ public class DailyDozenFragment extends Fragment {
 
                 initBackToTodayButton();
 
-                dateHeader.setServings(DDServings.getTotalServingsOnDate(day));
+                binding.dateServings.setServings(DDServings.getTotalServingsOnDate(day));
 
                 final Context context = getContext();
                 boolean addedSupplementDivider = false;
@@ -102,11 +80,11 @@ public class DailyDozenFragment extends Fragment {
                     final boolean success = foodServings.setDateAndFood(day, food);
                     if (success) {
                         if (Common.isSupplement(food) && !addedSupplementDivider) {
-                            vgFoodServings.addView(new SupplementDivider(context));
+                            binding.dateFoodServings.addView(new SupplementDivider(context));
                             addedSupplementDivider = true;
                         }
 
-                        vgFoodServings.addView(foodServings);
+                        binding.dateFoodServings.addView(foodServings);
                         Bus.register(foodServings);
                     }
                 }
@@ -117,12 +95,11 @@ public class DailyDozenFragment extends Fragment {
     }
 
     private void initBackToTodayButton() {
-        tvBackToToday.setVisibility(Day.isToday(day) ? View.GONE : View.VISIBLE);
+        binding.backToToday.setVisibility(Day.isToday(day) ? View.GONE : View.VISIBLE);
     }
 
-    @OnClick(R.id.back_to_today)
     public void onBackToTodayClicked() {
-        Bus.displayLatestDate();
+        binding.backToToday.setOnClickListener(v -> Bus.displayLatestDate());
     }
 
     @Override
@@ -131,11 +108,9 @@ public class DailyDozenFragment extends Fragment {
 
         Bus.unregister(this);
 
-        for (int i = 0; i < vgFoodServings.getChildCount(); i++) {
-            Bus.unregister(vgFoodServings.getChildAt(i));
+        for (int i = 0; i < binding.dateFoodServings.getChildCount(); i++) {
+            Bus.unregister(binding.dateFoodServings.getChildAt(i));
         }
-
-        dateHeader = null;
     }
 
     @Subscribe
@@ -145,7 +120,7 @@ public class DailyDozenFragment extends Fragment {
             final int servingsOnDate = DDServings.getTotalServingsOnDate(day);
 
             Timber.d("onEvent(FoodServingsChangedEvent): dateString [%s] foodName [%s]", event.getDateString(), event.getFoodName());
-            dateHeader.setServings(servingsOnDate);
+            binding.dateServings.setServings(servingsOnDate);
 
             if (servingsOnDate == Common.MAX_SERVINGS) {
                 showExplodingStarAnimation();
@@ -159,12 +134,12 @@ public class DailyDozenFragment extends Fragment {
     }
 
     private void showExplodingStarAnimation() {
-        vgExplodingStar.setVisibility(View.VISIBLE);
-        explodingStar.runAnimation(new AnimatorListenerAdapter() {
+        binding.explodingStarContainer.setVisibility(View.VISIBLE);
+        binding.explodingStar.runAnimation(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationCancel(Animator animation) {
-                if (explodingStar != null) {
-                    explodingStar.cancelAnimation();
+                if (binding.explodingStar != null) {
+                    binding.explodingStar.cancelAnimation();
                 }
             }
 
@@ -172,8 +147,8 @@ public class DailyDozenFragment extends Fragment {
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
 
-                if (vgExplodingStar != null) {
-                    vgExplodingStar.setVisibility(View.GONE);
+                if (binding.explodingStarContainer != null) {
+                    binding.explodingStarContainer.setVisibility(View.GONE);
                 }
 
                 askUserToRateAfterFirstStarExplosion();

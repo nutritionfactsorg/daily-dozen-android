@@ -82,9 +82,7 @@
     <string-array name="about_text_lines">
         <item>Esta app fue creada por John Slavick.</item>
         <item />
-        <item>Se utilizaron estas librerías de código abierto: ActiveAndroid, android-iconify, ButterKnife, EventBus, LikeAnimation y MPAndroidChart.</item>
-        <item />
-        <item>Muchas gracias a los voluntarios que ayudaron con la versión anterior de la app: Chan Kruse, Allan Portera y Sangeeta Kumar.</item>
+        <item>Se utilizaron estas librerías de código abierto: ActiveAndroid, android-iconify, EventBus, LikeAnimation y MPAndroidChart.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
@@ -657,9 +655,4 @@
     <string name="nightly_sleep_text">Puedes marcar esta casilla si has dormido al menos siete horas y te has ido a la cama a tu hora normal.</string>
     <string name="nightly_trendelenburg_text">Prueba a estar al menos cuatro horas cada noche con el cuerpo inclinado seis grados. Para conseguirlo, debes elevar los postes del pie de la cama unos 20 centímetros. Ten mucho cuidado al levantarte, ya que esta postura causa intolerancia ortostática para casi todo el mundo, aunque seas joven y estés saludable, así que, si te levantas demasiado rápido, puedes marearte, desmayarte o incluso caerte y hacerte daño. Por lo tanto, levántate lentamente. Beber dos tazas de agua fría treinta minutos antes de levantarte también podría ayudar a prevenir este efecto secundario potencialmente peligroso.\n\nIMPORTANTE: no intentes esto en casa si tienes problemas cardiacos o pulmonares, reflujo ácido, problemas cerebrales (como traumatismo craneal) u oculares (incluso un historial familiar de glaucoma lo descalifica). Si tienes cualquier duda, no lo intentes sin preguntarle a tu médico antes.*</string>
     
-    <string name="for_health_and_weight_loss">Para ganar salud y perder peso</string>
-    <string name="for_health_alone">Solo para ganar salud</string>
-    <string name="daily_dozen_and_tweaks">Docena Diaria y 21 potenciadores</string>
-    <string name="daily_dozen_only">Solo Docena Diaria</string>
-
 </resources>
