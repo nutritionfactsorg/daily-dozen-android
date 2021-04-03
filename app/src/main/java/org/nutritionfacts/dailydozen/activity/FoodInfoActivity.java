@@ -5,9 +5,6 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,28 +14,17 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.adapter.FoodServingsAdapter;
 import org.nutritionfacts.dailydozen.adapter.FoodTypeAdapter;
 import org.nutritionfacts.dailydozen.controller.Prefs;
+import org.nutritionfacts.dailydozen.databinding.ActivityFoodInfoBinding;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.enums.Units;
 
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import timber.log.Timber;
 
 public class FoodInfoActivity extends InfoActivity {
-    @BindView(R.id.food_info_image)
-    protected ImageView ivFood;
-    @BindView(R.id.change_units_container)
-    protected ViewGroup vgChangeUnits;
-    @BindView(R.id.change_units_button)
-    protected Button btnChangeUnits;
-    @BindView(R.id.food_serving_sizes)
-    protected RecyclerView lvFoodServingSizes;
-    @BindView(R.id.food_types)
-    protected RecyclerView lvFoodTypes;
+    private ActivityFoodInfoBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +36,16 @@ public class FoodInfoActivity extends InfoActivity {
             return;
         }
 
-        setContentView(R.layout.activity_food_info);
-        ButterKnife.bind(this);
+        binding = ActivityFoodInfoBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        onChangeUnitsClicked();
 
         displayFoodInfo();
 
         // Don't show the change units button when displaying info for exercise
         if (Common.EXERCISE.equalsIgnoreCase(getFood().getIdName())) {
-            vgChangeUnits.setVisibility(View.GONE);
+            binding.changeUnitsContainer.setVisibility(View.GONE);
         }
     }
 
@@ -91,7 +79,7 @@ public class FoodInfoActivity extends InfoActivity {
     }
 
     private void initImage(String foodName) {
-        Common.loadImage(this, ivFood, FoodInfo.getFoodImage(foodName));
+        Common.loadImage(this, binding.foodInfoImage, FoodInfo.getFoodImage(foodName));
     }
 
     private void initServingTypes(final Food food) {
@@ -100,11 +88,11 @@ public class FoodInfoActivity extends InfoActivity {
         final FoodServingsAdapter adapter = new FoodServingsAdapter(servingSizes);
 
         initChangeUnitsButton();
-        initList(lvFoodServingSizes, adapter);
+        initList(binding.foodServingSizes, adapter);
     }
 
     private void initChangeUnitsButton() {
-        btnChangeUnits.setText(Prefs.getInstance(this).getUnitTypePref() == Units.IMPERIAL ?
+        binding.changeUnitsButton.setText(Prefs.getInstance(this).getUnitTypePref() == Units.IMPERIAL ?
                 R.string.imperial : R.string.metric);
     }
 
@@ -113,7 +101,7 @@ public class FoodInfoActivity extends InfoActivity {
         final List<String> videos = FoodInfo.getFoodVideosLink(foodName);
         final RecyclerView.Adapter adapter = new FoodTypeAdapter(foods, videos);
 
-        initList(lvFoodTypes, adapter);
+        initList(binding.foodTypes, adapter);
     }
 
     private void initList(final RecyclerView list, final RecyclerView.Adapter adapter) {
@@ -129,10 +117,11 @@ public class FoodInfoActivity extends InfoActivity {
         }
     }
 
-    @OnClick(R.id.change_units_button)
     public void onChangeUnitsClicked() {
-        Prefs.getInstance(this).toggleUnitType();
+        binding.changeUnitsButton.setOnClickListener(v -> {
+            Prefs.getInstance(v.getContext()).toggleUnitType();
 
-        initServingTypes(getFood());
+            initServingTypes(getFood());
+        });
     }
 }
