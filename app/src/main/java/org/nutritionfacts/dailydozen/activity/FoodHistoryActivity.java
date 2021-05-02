@@ -1,8 +1,9 @@
 package org.nutritionfacts.dailydozen.activity;
 
 import android.graphics.drawable.ColorDrawable;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 
 import androidx.core.content.ContextCompat;
@@ -25,13 +26,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import hirondelle.date4j.DateTime;
 
 public class FoodHistoryActivity extends InfoActivity {
     private ActivityHistoryBinding binding;
 
-    private Set<String> loadedMonths = new HashSet<>();
+    private final Set<String> loadedMonths = new HashSet<>();
     private List<DateTime> fullServingsDates;
     private List<DateTime> partialServingsDates;
 
@@ -76,58 +79,50 @@ public class FoodHistoryActivity extends InfoActivity {
     }
 
     private void displayEntriesForVisibleMonths(final Calendar cal, final long foodId) {
-        new AsyncTask<Void, Void, Void>() {
-            ColorDrawable bgLessThanRecServings;
-            ColorDrawable bgRecServings;
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        Handler handler = new Handler(Looper.getMainLooper());
 
-            @Override
-            protected Void doInBackground(Void... params) {
-                bgLessThanRecServings = new ColorDrawable(
-                        ContextCompat.getColor(FoodHistoryActivity.this, R.color.legend_less_than_recommended_servings));
+        executor.execute(() -> {
+            ColorDrawable bgLessThanRecServings = new ColorDrawable(
+                    ContextCompat.getColor(FoodHistoryActivity.this, R.color.legend_less_than_recommended_servings));
 
-                bgRecServings = new ColorDrawable(
-                        ContextCompat.getColor(FoodHistoryActivity.this, R.color.legend_recommended_servings));
+            ColorDrawable bgRecServings = new ColorDrawable(
+                    ContextCompat.getColor(FoodHistoryActivity.this, R.color.legend_recommended_servings));
 
-                // We start 2 months in the past because this prevents "flickering" of dates when the user swipes to
-                // the previous month. For instance, starting in February and swiping to January, the dates from
-                // December that are shown in the January calendar will have their backgrounds noticeably flicker on.
-                DateUtil.subtractTwoMonths(cal);
+            // We start 2 months in the past because this prevents "flickering" of dates when the user swipes to
+            // the previous month. For instance, starting in February and swiping to January, the dates from
+            // December that are shown in the January calendar will have their backgrounds noticeably flicker on.
+            DateUtil.subtractTwoMonths(cal);
 
-                int i = 0;
-                do {
-                    final String monthStr = DateUtil.toStringYYYYMM(cal);
+            int i = 0;
+            do {
+                final String monthStr = DateUtil.toStringYYYYMM(cal);
 
-                    if (!loadedMonths.contains(monthStr)) {
-                        final Map<Day, Boolean> servings = DDServings.getServingsOfFoodInYearAndMonth(foodId,
-                                DateUtil.getYear(cal), DateUtil.getMonthOneBased(cal));
+                if (!loadedMonths.contains(monthStr)) {
+                    final Map<Day, Boolean> servings = DDServings.getServingsOfFoodInYearAndMonth(foodId,
+                            DateUtil.getYear(cal), DateUtil.getMonthOneBased(cal));
 
-                        loadedMonths.add(monthStr);
+                    loadedMonths.add(monthStr);
 
-                        for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
-                            if (serving.getValue()) {
-                                fullServingsDates.add(serving.getKey().getDateTime());
-                            } else {
-                                partialServingsDates.add(serving.getKey().getDateTime());
-                            }
+                    for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
+                        if (serving.getValue()) {
+                            fullServingsDates.add(serving.getKey().getDateTime());
+                        } else {
+                            partialServingsDates.add(serving.getKey().getDateTime());
                         }
                     }
+                }
 
-                    DateUtil.addOneMonth(cal);
-                    i++;
-                } while (i < 3);
+                DateUtil.addOneMonth(cal);
+                i++;
+            } while (i < 3);
 
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(Void aVoid) {
-                super.onPostExecute(aVoid);
-
+            handler.post(() -> {
                 ArrayList<DayViewDecorator> decorators = new ArrayList<>();
                 decorators.add(new CalendarHistoryDecorator(fullServingsDates, bgRecServings));
                 decorators.add(new CalendarHistoryDecorator(partialServingsDates, bgLessThanRecServings));
                 binding.calendarView.addDecorators(decorators);
-            }
-        }.execute();
+            });
+        });
     }
 }
