@@ -66,25 +66,6 @@ public class LoadServingsHistoryTask extends BaseTask<LoadHistoryCompleteEvent> 
         Bus.loadServingsHistoryCompleteEvent(event);
     }
 
-//    @Override
-//    protected LoadHistoryCompleteEvent doInBackground(LoadHistoryTaskParams... params) {
-//        if (DDServings.isEmpty() || params[0] == null) {
-//            return null;
-//        }
-//
-//        final LoadHistoryTaskParams inputParams = params[0];
-//
-//        switch (inputParams.getTimeScale()) {
-//            default:
-//            case TimeScale.DAYS:
-//                return getChartDataInDays(inputParams);
-//            case TimeScale.MONTHS:
-//                return getChartDataInMonths(inputParams);
-//            case TimeScale.YEARS:
-//                return getChartDataInYears();
-//        }
-//    }
-
     // This method loads the last two months of servings into memory, but only shows the selected
     // month. This is because it needs to use the data from the month before to calculate the
     // starting moving average.
