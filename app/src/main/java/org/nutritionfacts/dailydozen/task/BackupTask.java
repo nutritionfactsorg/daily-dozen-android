@@ -80,10 +80,10 @@ public class BackupTask extends BaseTask<Boolean> {
     }
 
     @Override
-    public void setDataAfterLoading(Boolean result) {
+    public void setDataAfterLoading(Boolean success) {
         progressListener.hideProgressBar();
 
-        Bus.backupCompleteEvent(result);
+        Bus.backupCompleteEvent(success);
     }
 
     @DebugLog

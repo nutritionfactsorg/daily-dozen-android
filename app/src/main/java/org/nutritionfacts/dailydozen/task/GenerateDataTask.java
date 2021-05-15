@@ -69,10 +69,12 @@ public class GenerateDataTask extends BaseTask<Boolean> {
     }
 
     @Override
-    public void setDataAfterLoading(Boolean result) {
+    public void setDataAfterLoading(Boolean success) {
         progressListener.hideProgressBar();
 
-        new TaskRunner().executeAsync(new CalculateStreaksTask(progressListener));
+        if (success) {
+            new TaskRunner().executeAsync(new CalculateStreaksTask(progressListener));
+        }
     }
 
     @DebugLog

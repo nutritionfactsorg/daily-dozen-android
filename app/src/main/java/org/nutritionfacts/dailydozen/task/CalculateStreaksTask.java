@@ -35,10 +35,10 @@ public class CalculateStreaksTask extends BaseTask<Boolean> {
     }
 
     @Override
-    public void setDataAfterLoading(Boolean result) {
+    public void setDataAfterLoading(Boolean success) {
         progressListener.hideProgressBar();
 
-        Bus.calculateStreaksComplete(result);
+        Bus.calculateStreaksComplete(success);
     }
 
     @NotNull
