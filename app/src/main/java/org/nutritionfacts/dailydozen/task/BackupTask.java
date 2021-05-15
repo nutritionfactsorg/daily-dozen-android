@@ -27,7 +27,7 @@ import java.util.Set;
 import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
-public class BackupTask extends BaseTask {
+public class BackupTask extends BaseTask<Boolean> {
     private final ProgressListener progressListener;
     private final File backupFile;
 
@@ -41,7 +41,7 @@ public class BackupTask extends BaseTask {
     }
 
     @Override
-    public Object call() throws Exception {
+    public Boolean call() throws Exception {
         allDays = Day.getAllDays();
         allFoods = Food.getAllFoods();
         allTweaks = Tweak.getAllTweaks();
@@ -80,10 +80,10 @@ public class BackupTask extends BaseTask {
     }
 
     @Override
-    public void setDataAfterLoading(Object result) {
+    public void setDataAfterLoading(Boolean result) {
         progressListener.hideProgressBar();
 
-        Bus.backupCompleteEvent((boolean) result);
+        Bus.backupCompleteEvent(result);
     }
 
     @DebugLog

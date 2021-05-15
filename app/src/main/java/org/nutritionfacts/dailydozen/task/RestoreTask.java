@@ -32,7 +32,7 @@ import java.util.Map;
 import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
-public class RestoreTask extends BaseTask {
+public class RestoreTask extends BaseTask<Boolean> {
     private final ProgressListener progressListener;
     private final Uri restoreFileUri;
     private final ContentResolver contentResolver;
@@ -50,7 +50,7 @@ public class RestoreTask extends BaseTask {
     }
 
     @Override
-    public Object call() throws Exception {
+    public Boolean call() throws Exception {
         try {
             final String restoreFileType = contentResolver.getType(restoreFileUri);
             InputStream restoreInputStream = contentResolver.openInputStream(restoreFileUri);
@@ -112,10 +112,10 @@ public class RestoreTask extends BaseTask {
     }
 
     @Override
-    public void setDataAfterLoading(Object result) {
+    public void setDataAfterLoading(Boolean result) {
         progressListener.hideProgressBar();
 
-        Bus.restoreCompleteEvent((boolean) result);
+        Bus.restoreCompleteEvent(result);
     }
 
     @DebugLog
