@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
                         .setCancelable(false)
                         .setTitle(R.string.dialog_streaks_title)
                         .setMessage(R.string.dialog_streaks_message)
-                        .setPositiveButton(R.string.OK, (dialog, which) -> new CalculateStreaksTask(MainActivity.this).execute())
+                        .setPositiveButton(R.string.OK, (dialog, which) -> new TaskRunner().executeAsync(new CalculateStreaksTask(this)))
                         .create().show();
             }
         }
@@ -442,6 +442,5 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         } finally {
             progressDialog = null;
         }
-
     }
 }

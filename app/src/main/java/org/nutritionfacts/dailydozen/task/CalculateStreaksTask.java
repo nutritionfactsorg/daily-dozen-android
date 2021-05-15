@@ -1,7 +1,5 @@
 package org.nutritionfacts.dailydozen.task;
 
-import android.content.Context;
-
 import com.activeandroid.ActiveAndroid;
 
 import org.jetbrains.annotations.NotNull;
@@ -15,35 +13,32 @@ import org.nutritionfacts.dailydozen.model.TweakServings;
 
 import java.util.List;
 
-public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean> {
-    public CalculateStreaksTask(Context context) {
-        super(context);
+public class CalculateStreaksTask extends BaseTask<Boolean> {
+    private final ProgressListener progressListener;
+
+    public CalculateStreaksTask(ProgressListener progressListener) {
+        this.progressListener = progressListener;
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-
-        if (DDServings.isEmpty() || TweakServings.isEmpty()) {
-            progress.hide();
-            cancel(true);
-        } else {
-            progress.setTitle(R.string.task_calculating_streaks_title);
-            progress.show();
-        }
-    }
-
-    @Override
-    protected Boolean doInBackground(Void... params) {
-        if (isCancelled()) {
-            return false;
-        }
-
+    public Boolean call() {
         final List<Day> allDays = Day.getAllDays();
 
         boolean calcFoodStreaksResult = calculateFoodStreaks(allDays);
         boolean calcTweakStreaksResult = calculateTweakStreaks(allDays);
         return calcFoodStreaksResult && calcTweakStreaksResult;
+    }
+
+    @Override
+    public void setUiForLoading() {
+        progressListener.showProgressBar(R.string.task_calculating_streaks_title);
+    }
+
+    @Override
+    public void setDataAfterLoading(Boolean result) {
+        progressListener.hideProgressBar();
+
+        Bus.calculateStreaksComplete(result);
     }
 
     @NotNull
@@ -58,10 +53,6 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
 
             try {
                 for (Day day : allDays) {
-                    if (isCancelled()) {
-                        return false;
-                    }
-
                     final DDServings servingsOnDate = DDServings.getByDateAndFood(day, food);
                     if (servingsOnDate != null) {
                         servingsOnDate.recalculateStreak();
@@ -74,7 +65,7 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
                 ActiveAndroid.endTransaction();
             }
 
-            publishProgress(i + 1, numFoods);
+            progressListener.updateProgressBar(i + 1, numFoods);
         }
 
         return true;
@@ -92,10 +83,6 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
 
             try {
                 for (Day day : allDays) {
-                    if (isCancelled()) {
-                        return false;
-                    }
-
                     final TweakServings servingsOnDate = TweakServings.getByDateAndTweak(day, tweak);
                     if (servingsOnDate != null) {
                         servingsOnDate.recalculateStreak();
@@ -108,25 +95,9 @@ public class CalculateStreaksTask extends TaskWithContext<Void, Integer, Boolean
                 ActiveAndroid.endTransaction();
             }
 
-            publishProgress(i + 1, numTweaks);
+            progressListener.updateProgressBar(i + 1, numTweaks);
         }
 
         return true;
-    }
-
-    @Override
-    protected void onProgressUpdate(Integer... values) {
-        super.onProgressUpdate(values);
-
-        if (values.length == 2) {
-            progress.setProgress(values[0]);
-            progress.setMax(values[1]);
-        }
-    }
-
-    @Override
-    protected void onPostExecute(Boolean success) {
-        super.onPostExecute(success);
-        Bus.calculateStreaksComplete(success);
     }
 }
