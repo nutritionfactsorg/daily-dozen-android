@@ -23,12 +23,14 @@ import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
+import org.nutritionfacts.dailydozen.task.ProgressListener;
+import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 
 import java.util.Date;
 
 public class ServingsHistoryActivity extends AppCompatActivity
-        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener {
+        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener, ProgressListener {
     private ActivityServingsHistoryBinding binding;
 
     private boolean alreadyLoadingData;
@@ -74,10 +76,11 @@ public class ServingsHistoryActivity extends AppCompatActivity
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
 
-            new LoadServingsHistoryTask(this).execute(new LoadHistoryTaskParams(
+            LoadHistoryTaskParams loadHistoryTaskParams = new LoadHistoryTaskParams(
                     binding.dailyServingsHistoryTimeScale.getSelectedTimeScale(),
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
-                    binding.dailyServingsHistoryTimeRange.getSelectedMonth()));
+                    binding.dailyServingsHistoryTimeRange.getSelectedMonth());
+            new TaskRunner().executeAsync(new LoadServingsHistoryTask(this, this, loadHistoryTaskParams));
         }
     }
 
@@ -162,6 +165,21 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
     @Override
     public void onNothingSelected() {
+
+    }
+
+    @Override
+    public void showProgressBar(int titleId) {
+
+    }
+
+    @Override
+    public void updateProgressBar(int current, int total) {
+
+    }
+
+    @Override
+    public void hideProgressBar() {
 
     }
 }
