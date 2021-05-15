@@ -17,6 +17,7 @@ import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.task.CalculateStreakTask;
 import org.nutritionfacts.dailydozen.task.CalculateTweakStreakTask;
 import org.nutritionfacts.dailydozen.task.StreakTaskInput;
+import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.view.ServingCheckBox;
 
 import java.util.ArrayList;
@@ -115,7 +116,7 @@ public class RDACheckBoxes extends LinearLayout {
         final DDServings servings = DDServings.createServingsIfDoesNotExist(day, (Food)rda);
         final Integer numberOfCheckedBoxes = getNumberOfCheckedBoxes();
 
-        if (servings != null && servings.getServings() != numberOfCheckedBoxes) {
+        if (servings.getServings() != numberOfCheckedBoxes) {
             servings.setServings(numberOfCheckedBoxes);
 
             servings.save();
@@ -149,7 +150,7 @@ public class RDACheckBoxes extends LinearLayout {
         final TweakServings servings = TweakServings.createServingsIfDoesNotExist(day, (Tweak)rda);
         final Integer numberOfCheckedBoxes = getNumberOfCheckedBoxes();
 
-        if (servings != null && servings.getServings() != numberOfCheckedBoxes) {
+        if (servings.getServings() != numberOfCheckedBoxes) {
             servings.setServings(numberOfCheckedBoxes);
 
             servings.save();
@@ -178,7 +179,7 @@ public class RDACheckBoxes extends LinearLayout {
     }
 
     private void onServingsChanged() {
-        new CalculateStreakTask(getContext()).execute(new StreakTaskInput(day, rda));
+        new TaskRunner().executeAsync(new CalculateStreakTask(new StreakTaskInput(day, rda)));
     }
 
     private void onTweakServingsChanged() {
