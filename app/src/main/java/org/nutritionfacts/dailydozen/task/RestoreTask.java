@@ -1,7 +1,6 @@
 package org.nutritionfacts.dailydozen.task;
 
 import android.content.ContentResolver;
-import android.content.Context;
 import android.net.Uri;
 import android.text.TextUtils;
 
@@ -33,89 +32,90 @@ import java.util.Map;
 import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
-public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
+public class RestoreTask extends BaseTask {
+    private final ProgressListener progressListener;
+    private final Uri restoreFileUri;
+    private final ContentResolver contentResolver;
+
     private String[] headers;
     private ArrayMap<String, Food> foodLookup;
     private ArrayMap<String, Tweak> tweakLookup;
 
-    public RestoreTask(Context context) {
-        super(context);
+    public RestoreTask(ProgressListener progressListener, Uri restoreFileUri, ContentResolver contentResolver) {
+        this.progressListener = progressListener;
+        this.restoreFileUri = restoreFileUri;
+        this.contentResolver = contentResolver;
         foodLookup = new ArrayMap<>();
         tweakLookup = new ArrayMap<>();
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-
-        progress.setTitle(R.string.task_restore_title);
-        progress.show();
-    }
-
-    @Override
-    protected Boolean doInBackground(Uri... params) {
+    public Object call() throws Exception {
         try {
-            final ContentResolver contentResolver = getContext().getContentResolver();
+            final String restoreFileType = contentResolver.getType(restoreFileUri);
+            InputStream restoreInputStream = contentResolver.openInputStream(restoreFileUri);
 
-            if (params != null && params.length > 0) {
-                final Uri restoreFileUri = params[0];
-                final String restoreFileType = contentResolver.getType(restoreFileUri);
-                InputStream restoreInputStream = contentResolver.openInputStream(restoreFileUri);
+            if (restoreInputStream != null) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
 
-                if (restoreInputStream != null) {
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(restoreInputStream));
+                final LineNumberReader lineNumberReader = new LineNumberReader(reader);
+                lineNumberReader.skip(Integer.MAX_VALUE);
+                final int numLines = lineNumberReader.getLineNumber() + 1;
+                lineNumberReader.close();
 
-                    final LineNumberReader lineNumberReader = new LineNumberReader(reader);
-                    lineNumberReader.skip(Integer.MAX_VALUE);
-                    final int numLines = lineNumberReader.getLineNumber() + 1;
-                    lineNumberReader.close();
+                // Need to recreate the InputStream and BufferedReader after closing LineNumberReader
+                final InputStream inputStream = contentResolver.openInputStream(restoreFileUri);
 
-                    // Need to recreate the InputStream and BufferedReader after closing LineNumberReader
-                    final InputStream inputStream = contentResolver.openInputStream(restoreFileUri);
+                if (inputStream != null) {
+                    // Only delete all existing data if we are sure we have an input stream
+                    deleteAllExistingData();
 
-                    if (inputStream != null) {
-                        // Only delete all existing data if we are sure we have an input stream
-                        deleteAllExistingData();
+                    reader = new BufferedReader(new InputStreamReader(inputStream));
 
-                        reader = new BufferedReader(new InputStreamReader(inputStream));
+                    String line = reader.readLine();
+                    if (line != null) {
+                        int i = 0;
 
-                        String line = reader.readLine();
-                        if (line != null) {
-                            int i = 0;
+                        if ("text/csv".equals(restoreFileType)) {
+                            headers = line.split(",");
 
-                            if ("text/csv".equals(restoreFileType)) {
-                                headers = line.split(",");
-
-                                do {
-                                    if (!isCancelled()) {
-                                        line = reader.readLine();
-                                        restoreLineCSV(headers, line);
-                                        publishProgress(++i, numLines);
-                                    }
-                                } while (line != null);
-                            } else {
-                                do {
-                                    if (!isCancelled()) {
-                                        line = reader.readLine();
-                                        restoreLineJSON(line);
-                                        publishProgress(++i, numLines);
-                                    }
-                                } while (line != null);
-                            }
+                            do {
+                                line = reader.readLine();
+                                restoreLineCSV(headers, line);
+                                progressListener.updateProgressBar(++i, numLines);
+                            } while (line != null);
+                        } else {
+                            do {
+                                line = reader.readLine();
+                                restoreLineJSON(line);
+                                progressListener.updateProgressBar(++i, numLines);
+                            } while (line != null);
                         }
-
-                        reader.close();
-                        restoreInputStream.close();
                     }
 
-                    return !isCancelled();
+                    reader.close();
+                    restoreInputStream.close();
                 }
+
+                return true;
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         return false;
+    }
+
+    @Override
+    public void setUiForLoading() {
+        progressListener.showProgressBar(R.string.task_restore_title);
+    }
+
+    @Override
+    public void setDataAfterLoading(Object result) {
+        progressListener.hideProgressBar();
+
+        Bus.restoreCompleteEvent((boolean) result);
     }
 
     @DebugLog
@@ -206,21 +206,5 @@ public class RestoreTask extends TaskWithContext<Uri, Integer, Boolean> {
         }
 
         return tweakLookup.get(tweakIdName);
-    }
-
-    @Override
-    protected void onProgressUpdate(Integer... values) {
-        super.onProgressUpdate(values);
-
-        if (values.length == 2) {
-            progress.setProgress(values[0]);
-            progress.setMax(values[1]);
-        }
-    }
-
-    @Override
-    protected void onPostExecute(Boolean success) {
-        super.onPostExecute(success);
-        Bus.restoreCompleteEvent(success);
     }
 }

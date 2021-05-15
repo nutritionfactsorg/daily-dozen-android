@@ -329,7 +329,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     }
 
     private void restore(final Uri restoreFileUri) {
-        new RestoreTask(this).execute(restoreFileUri);
+        new TaskRunner().executeAsync(new RestoreTask(this, restoreFileUri, getContentResolver()));
     }
 
     public File getBackupFile() {
