@@ -41,7 +41,7 @@ public class BackupTask extends BaseTask<Boolean> {
     }
 
     @Override
-    public Boolean call() throws Exception {
+    public Boolean call() {
         allDays = Day.getAllDays();
         allFoods = Food.getAllFoods();
         allTweaks = Tweak.getAllTweaks();

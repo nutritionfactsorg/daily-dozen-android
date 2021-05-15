@@ -50,7 +50,7 @@ public class RestoreTask extends BaseTask<Boolean> {
     }
 
     @Override
-    public Boolean call() throws Exception {
+    public Boolean call() {
         try {
             final String restoreFileType = contentResolver.getType(restoreFileUri);
             InputStream restoreInputStream = contentResolver.openInputStream(restoreFileUri);
