@@ -29,34 +29,20 @@ import java.util.List;
 
 import timber.log.Timber;
 
-public class LoadWeightsHistoryTask
-        extends TaskWithContext<LoadHistoryTaskParams, Integer, LoadHistoryCompleteEvent> {
+public class LoadWeightsHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
     private static final int MONTHS_IN_YEAR = 12;
+    private final ProgressListener progressListener;
+    private final Context context;
+    private final LoadHistoryTaskParams inputParams;
 
-    public LoadWeightsHistoryTask(Context context) {
-        super(context);
+    public LoadWeightsHistoryTask(ProgressListener progressListener, Context context, LoadHistoryTaskParams inputParams) {
+        this.progressListener = progressListener;
+        this.context = context;
+        this.inputParams = inputParams;
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-
-        progress.setTitle(R.string.task_loading_servings_history_title);
-        progress.show();
-
-        // This prevents LoadWeightsHistoryTask from being closed when the user taps to go to the next/previous
-        // month/year before the progress dialog has closed (before this task has completed)
-        progress.setCancelable(false);
-    }
-
-    @Override
-    protected LoadHistoryCompleteEvent doInBackground(LoadHistoryTaskParams... params) {
-        if (Weights.isEmpty() || params[0] == null) {
-            return null;
-        }
-
-        final LoadHistoryTaskParams inputParams = params[0];
-
+    public LoadHistoryCompleteEvent call() {
         switch (inputParams.getTimeScale()) {
             default:
             case TimeScale.DAYS:
@@ -66,6 +52,18 @@ public class LoadWeightsHistoryTask
             case TimeScale.YEARS:
                 return getChartDataInYears();
         }
+    }
+
+    @Override
+    public void setUiForLoading() {
+        progressListener.showProgressBar(R.string.task_loading_servings_history_title);
+    }
+
+    @Override
+    public void setDataAfterLoading(LoadHistoryCompleteEvent event) {
+        progressListener.hideProgressBar();
+
+        Bus.loadServingsHistoryCompleteEvent(event);
     }
 
     // This method loads the last two months of servings into memory, but only shows the selected
@@ -85,10 +83,6 @@ public class LoadWeightsHistoryTask
         float maxWeight = Float.MIN_VALUE;
 
         for (int i = 0; i < numDaysOfWeights; i++) {
-            if (isCancelled()) {
-                break;
-            }
-
             final Day day = history.get(i);
 
             Weights weightsOnDay = Weights.getWeightsOnDay(day);
@@ -127,7 +121,7 @@ public class LoadWeightsHistoryTask
                 lineEntries.add(lineEntry);
             }
 
-            publishProgress(i + 1, numDaysOfWeights);
+            progressListener.updateProgressBar(i + 1, numDaysOfWeights);
         }
 
         final LoadHistoryCompleteEvent weightHistory = createCompleteEvent(createLineAndBarData(xLabels, lineEntries, barEntries), TimeScale.DAYS);
@@ -146,10 +140,6 @@ public class LoadWeightsHistoryTask
         final List<Entry> lineEntries = new ArrayList<>();
 
         while (monthOneBased <= MONTHS_IN_YEAR) {
-            if (isCancelled()) {
-                break;
-            }
-
             final float averageWeightInMonth = Weights.getAverageWeightInMonth(year, monthOneBased);
 
             Timber.d("getChartDataInMonths: year [%s], monthOneBased [%s], average weight [%s]",
@@ -165,7 +155,7 @@ public class LoadWeightsHistoryTask
 
             monthOneBased++;
 
-            publishProgress(i++, MONTHS_IN_YEAR);
+            progressListener.updateProgressBar(i++, MONTHS_IN_YEAR);
         }
 
         return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.MONTHS);
@@ -188,10 +178,6 @@ public class LoadWeightsHistoryTask
         final List<Entry> lineEntries = new ArrayList<>();
 
         while (year <= currentYear) {
-            if (isCancelled()) {
-                break;
-            }
-
             final int xIndex = xLabels.size();
 
             xLabels.add(String.valueOf(year));
@@ -205,7 +191,7 @@ public class LoadWeightsHistoryTask
 
             year++;
 
-            publishProgress(i++, numYears);
+            progressListener.updateProgressBar(i++, numYears);
         }
 
         return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.YEARS);
@@ -218,20 +204,14 @@ public class LoadWeightsHistoryTask
 
     private CombinedData createLineAndBarData(List<String> xLabels, List<Entry> lineEntries, List<BarEntry> barEntries) {
         final CombinedData combinedData = createLineData(xLabels, lineEntries);
-        if (combinedData != null) {
-            combinedData.setData(getBarData(xLabels, barEntries));
-        }
+        combinedData.setData(getBarData(xLabels, barEntries));
         return combinedData;
     }
 
     private CombinedData createLineData(final List<String> xLabels, final List<Entry> lineEntries) {
-        if (isCancelled()) {
-            return null;
-        } else {
-            final CombinedData combinedData = new CombinedData(xLabels);
-            combinedData.setData(getLineData(xLabels, lineEntries));
-            return combinedData;
-        }
+        final CombinedData combinedData = new CombinedData(xLabels);
+        combinedData.setData(getLineData(xLabels, lineEntries));
+        return combinedData;
     }
 
     // Calculates an exponentially smoothed moving average with 10% smoothing
@@ -248,10 +228,10 @@ public class LoadWeightsHistoryTask
     }
 
     private BarData getBarData(List<String> xVals, List<BarEntry> barEntries) {
-        final BarDataSet dataSet = new BarDataSet(barEntries, getContext().getString(R.string.average_weight_on_day));
+        final BarDataSet dataSet = new BarDataSet(barEntries, context.getString(R.string.average_weight_on_day));
 
-        dataSet.setColor(ContextCompat.getColor(getContext(), R.color.colorPrimary));
-        dataSet.setValueTextColor(ContextCompat.getColor(getContext(), android.R.color.white));
+        dataSet.setColor(ContextCompat.getColor(context, R.color.colorPrimary));
+        dataSet.setValueTextColor(ContextCompat.getColor(context, android.R.color.white));
         dataSet.setValueTextSize(14);
 
         // We just want the value as an integer
@@ -261,9 +241,9 @@ public class LoadWeightsHistoryTask
     }
 
     private LineData getLineData(List<String> xVals, List<Entry> lineEntries) {
-        final LineDataSet dataSet = new LineDataSet(lineEntries, getContext().getString(R.string.moving_average));
+        final LineDataSet dataSet = new LineDataSet(lineEntries, context.getString(R.string.moving_average));
 
-        final int color = ContextCompat.getColor(getContext(), R.color.brown);
+        final int color = ContextCompat.getColor(context, R.color.brown);
 
         dataSet.setColor(color);
         dataSet.setLineWidth(2.5f);
@@ -279,30 +259,8 @@ public class LoadWeightsHistoryTask
         return new LineData(xVals, dataSet);
     }
 
-    @Override
-    protected void onProgressUpdate(Integer... values) {
-        super.onProgressUpdate(values);
-
-        if (values.length == 2) {
-            progress.setProgress(values[0]);
-            progress.setMax(values[1]);
-        }
-    }
-
-    @Override
-    protected void onCancelled() {
-        super.onCancelled();
-        Bus.loadServingsHistoryCompleteEvent(null);
-    }
-
-    @Override
-    protected void onPostExecute(LoadHistoryCompleteEvent event) {
-        super.onPostExecute(event);
-        Bus.loadServingsHistoryCompleteEvent(event);
-    }
-
-    private class BarChartValueFormatter implements ValueFormatter {
-        private DecimalFormat decimalFormat;
+    private static class BarChartValueFormatter implements ValueFormatter {
+        private final DecimalFormat decimalFormat;
 
         BarChartValueFormatter() {
             decimalFormat = new DecimalFormat("#.0");
@@ -314,7 +272,7 @@ public class LoadWeightsHistoryTask
         }
     }
 
-    private class LineChartValueFormatter implements ValueFormatter {
+    private static class LineChartValueFormatter implements ValueFormatter {
         private final DecimalFormat decimalFormat;
 
         LineChartValueFormatter() {
