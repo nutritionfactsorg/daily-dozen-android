@@ -60,7 +60,7 @@ public class GenerateDataTask extends BaseTask<Boolean> {
             current = current.plusDays(1);
         }
 
-        return null;
+        return true;
     }
 
     @Override
