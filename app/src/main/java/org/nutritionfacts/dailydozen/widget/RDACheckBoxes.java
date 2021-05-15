@@ -183,6 +183,6 @@ public class RDACheckBoxes extends LinearLayout {
     }
 
     private void onTweakServingsChanged() {
-        new CalculateTweakStreakTask(getContext()).execute(new StreakTaskInput(day, rda));
+        new TaskRunner().executeAsync(new CalculateTweakStreakTask(new StreakTaskInput(day, rda)));
     }
 }
