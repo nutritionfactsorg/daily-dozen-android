@@ -43,14 +43,18 @@ Contributors
 
 * [John Slavick][slavick] (Maintainer)
 * [Christi Richards][christirichards]
-* [Lauren Hacker][laurenhacker]
 * [Armfoot][Armfoot]
+* [Lauren Hacker][laurenhacker]
 * [MovGP0][MovGP0]
-* [notmypassword][notmypassword]
 * [alibitek][alibitek]
+* [angelagvarela][angelagvarela]
 * [caugner][caugner]
-* [myang310][myang310]
+* [jordansieve][jordansieve]
+* [josephkelemen97][josephkelemen97]
 * [lucab85][lucab85]
+* [marc-medley][marc-medley]
+* [myang310][myang310]
+* [notmypassword][notmypassword]
 * [qyearsley][qyearsley]
 
 [nutritionfacts.org]: http://nutritionfacts.org "NutritionFacts.org - The Latest in Nutrition Research"
@@ -68,3 +72,7 @@ Contributors
 [myang310]: https://github.com/myang310 "myang310 on GitHub"
 [lucab85]: https://github.com/lucab85 "lucab85 on GitHub"
 [qyearsley]: https://github.com/qyearsley "qyearsley on GitHub"
+[jordansieve]: https://github.com/jordansieve "jordansieve on GitHub"
+[angelagvarela]: https://github.com/angelagvarela "angelagvarela on GitHub"
+[josephkelemen97]: https://github.com/josephkelemen97 "josephkelemen97 on GitHub"
+[marc-medley]: https://github.com/marc-medley "marc-medley on GitHub"
