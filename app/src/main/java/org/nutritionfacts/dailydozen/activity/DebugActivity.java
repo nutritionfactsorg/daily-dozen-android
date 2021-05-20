@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,11 +13,17 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.databinding.ActivityDebugBinding;
 import org.nutritionfacts.dailydozen.task.GenerateDataTask;
+import org.nutritionfacts.dailydozen.task.ProgressListener;
+import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
-public class DebugActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+import timber.log.Timber;
+
+public class DebugActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, ProgressListener {
     private ActivityDebugBinding binding;
+
+    private ProgressDialog progressDialog;
 
     private int historyToGenerate;
 
@@ -72,7 +79,7 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
                 .setPositiveButton(R.string.yes, (dialog, which) -> {
                     final GenerateDataTaskParams taskParams = new GenerateDataTaskParams(historyToGenerate, generateRandomData);
 
-                    new GenerateDataTask(DebugActivity.this).execute(taskParams);
+                    new TaskRunner().executeAsync(new GenerateDataTask(this, taskParams));
 
                     dialog.dismiss();
                 })
@@ -112,5 +119,33 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
 
     public void onShowNotificationClicked() {
         binding.debugShowNotification.setOnClickListener(v -> NotificationUtil.showUpdateReminderNotification(DebugActivity.this, null));
+    }
+
+    @Override
+    public void showProgressBar(int titleId) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setIndeterminate(false);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        progressDialog.setTitle(titleId);
+        progressDialog.show();
+    }
+
+    @Override
+    public void updateProgressBar(int current, int total) {
+        progressDialog.setProgress(current);
+        progressDialog.setMax(total);
+    }
+
+    @Override
+    public void hideProgressBar() {
+        try {
+            if (progressDialog != null && progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
+        } catch (Exception e) {
+            Timber.e("hideProgressBar: Exception while trying to dismiss progress dialog");
+        } finally {
+            progressDialog = null;
+        }
     }
 }

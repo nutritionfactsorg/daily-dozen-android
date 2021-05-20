@@ -43,9 +43,19 @@ Contributors
 
 * [John Slavick][slavick] (Maintainer)
 * [Christi Richards][christirichards]
+* [Armfoot][Armfoot]
 * [Lauren Hacker][laurenhacker]
-
-Special thanks to the volunteer efforts of the creators of the previous app: Chan Kruse, Allan Portera, and Sangeeta Kumar
+* [MovGP0][MovGP0]
+* [alibitek][alibitek]
+* [angelagvarela][angelagvarela]
+* [caugner][caugner]
+* [jordansieve][jordansieve]
+* [josephkelemen97][josephkelemen97]
+* [lucab85][lucab85]
+* [marc-medley][marc-medley]
+* [myang310][myang310]
+* [notmypassword][notmypassword]
+* [qyearsley][qyearsley]
 
 [nutritionfacts.org]: http://nutritionfacts.org "NutritionFacts.org - The Latest in Nutrition Research"
 [contribute]: https://github.com/nutritionfactsorg/daily-dozen-android/blob/master/CONTRIBUTING.md "Contribute to the Daily Dozen Android App"
@@ -54,3 +64,15 @@ Special thanks to the volunteer efforts of the creators of the previous app: Cha
 [slavick]: http://github.com/slavick "John Slavick on GitHub"
 [christirichards]: http://github.com/christirichards "Christi Richards on GitHub"
 [laurenhacker]: http://github.com/lahacker "Lauren Hacker on GitHub"
+[Armfoot]: https://github.com/Armfoot "Armfoot on GitHub"
+[MovGP0]: https://github.com/MovGP0 "MovGP0 on GitHub"
+[notmypassword]: https://github.com/notmypassword "notmypassword on GitHub"
+[alibitek]: https://github.com/alibitek "alibitek on GitHub"
+[caugner]: https://github.com/caugner "caugner on GitHub"
+[myang310]: https://github.com/myang310 "myang310 on GitHub"
+[lucab85]: https://github.com/lucab85 "lucab85 on GitHub"
+[qyearsley]: https://github.com/qyearsley "qyearsley on GitHub"
+[jordansieve]: https://github.com/jordansieve "jordansieve on GitHub"
+[angelagvarela]: https://github.com/angelagvarela "angelagvarela on GitHub"
+[josephkelemen97]: https://github.com/josephkelemen97 "josephkelemen97 on GitHub"
+[marc-medley]: https://github.com/marc-medley "marc-medley on GitHub"

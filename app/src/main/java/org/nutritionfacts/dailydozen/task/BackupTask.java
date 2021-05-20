@@ -1,7 +1,5 @@
 package org.nutritionfacts.dailydozen.task;
 
-import android.content.Context;
-
 import androidx.annotation.NonNull;
 import androidx.collection.ArrayMap;
 
@@ -29,41 +27,25 @@ import java.util.Set;
 import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
-public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
+public class BackupTask extends BaseTask<Boolean> {
+    private final ProgressListener progressListener;
+    private final File backupFile;
+
     private List<Day> allDays;
     private List<Food> allFoods;
     private List<Tweak> allTweaks;
 
-    public BackupTask(Context context) {
-        super(context);
+    public BackupTask(ProgressListener progressListener, File backupFile) {
+        this.progressListener = progressListener;
+        this.backupFile = backupFile;
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-
-        if (DDServings.isEmpty()) {
-            Common.showToast(getContext(), R.string.no_servings_recorded);
-
-            progress.hide();
-            cancel(true);
-        } else {
-            progress.setTitle(R.string.task_backup_title);
-            progress.show();
-        }
-    }
-
-    @Override
-    protected Boolean doInBackground(File... params) {
-        if (isCancelled()) {
-            return false;
-        }
-
+    public Boolean call() {
         allDays = Day.getAllDays();
         allFoods = Food.getAllFoods();
         allTweaks = Tweak.getAllTweaks();
 
-        final File backupFile = params[0];
         Timber.d("backupFilename = %s", backupFile.getName());
 
         final int numDays = allDays.size();
@@ -73,44 +55,33 @@ public class BackupTask extends TaskWithContext<File, Integer, Boolean> {
         final StringBuilder jsonLines = new StringBuilder();
 
         for (int i = 0; i < numDays; i++) {
-            if (!isCancelled()) {
-                jsonLines.append(String.format("%s%s", lineSeparator, getDayJsonLine(allDays.get(i))));
+            jsonLines.append(String.format("%s%s", lineSeparator, getDayJsonLine(allDays.get(i))));
 
-                publishProgress(i + 1, numDays);
-            }
+            progressListener.updateProgressBar(i + 1, numDays);
         }
 
-        if (!isCancelled()) {
-            try {
-                final FileWriter fileWriter = new FileWriter(backupFile);
-                fileWriter.write(jsonLines.toString());
-                fileWriter.close();
+        try {
+            final FileWriter fileWriter = new FileWriter(backupFile);
+            fileWriter.write(jsonLines.toString());
+            fileWriter.close();
 
-                Timber.d("backup file successfully written");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            Timber.d("backup file successfully written");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
         }
 
-        return !isCancelled();
+        return true;
     }
 
     @Override
-    protected void onProgressUpdate(Integer... values) {
-        super.onProgressUpdate(values);
-
-        if (values.length == 2) {
-            progress.setProgress(values[0]);
-            progress.setMax(values[1]);
-        }
+    public void setUiForLoading() {
+        progressListener.showProgressBar(R.string.task_backup_title);
     }
 
     @Override
-    protected void onPostExecute(Boolean success) {
-        super.onPostExecute(success);
-
-        final Context context = getContext();
-        Common.showToast(context, success ? R.string.backup_success : R.string.backup_failed);
+    public void setDataAfterLoading(Boolean success) {
+        progressListener.hideProgressBar();
 
         Bus.backupCompleteEvent(success);
     }
