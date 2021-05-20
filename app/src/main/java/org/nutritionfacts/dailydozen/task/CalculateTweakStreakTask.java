@@ -1,7 +1,5 @@
 package org.nutritionfacts.dailydozen.task;
 
-import android.content.Context;
-
 import com.activeandroid.ActiveAndroid;
 
 import org.nutritionfacts.dailydozen.controller.Bus;
@@ -11,30 +9,17 @@ import org.nutritionfacts.dailydozen.model.TweakServings;
 
 import java.util.List;
 
-public class CalculateTweakStreakTask extends TaskWithContext<StreakTaskInput, Integer, Boolean> {
-    private Day startingDay;
-    private Tweak tweak;
+public class CalculateTweakStreakTask extends BaseTask<Boolean> {
+    private final Day startingDay;
+    private final Tweak tweak;
 
-    public CalculateTweakStreakTask(Context context) {
-        super(context);
+    public CalculateTweakStreakTask(StreakTaskInput input) {
+        this.startingDay = input.getStartingDay();
+        this.tweak = input.getTweak();
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-        progress.hide();
-    }
-
-    @Override
-    protected Boolean doInBackground(StreakTaskInput... params) {
-        final StreakTaskInput input = params[0];
-        if (input == null) {
-            return false;
-        }
-
-        startingDay = input.getStartingDay();
-        tweak = input.getTweak();
-
+    public Boolean call() {
         final List<Day> daysToCalculate = startingDay.getDaysAfter();
         final int numDays = daysToCalculate.size();
 
@@ -42,10 +27,6 @@ public class CalculateTweakStreakTask extends TaskWithContext<StreakTaskInput, I
 
         try {
             for (int i = 0; i < numDays; i++) {
-                if (isCancelled()) {
-                    return false;
-                }
-
                 final Day day = daysToCalculate.get(i);
 
                 final TweakServings servingsOnDate = TweakServings.getByDateAndTweak(day, tweak);
@@ -64,9 +45,7 @@ public class CalculateTweakStreakTask extends TaskWithContext<StreakTaskInput, I
     }
 
     @Override
-    protected void onPostExecute(Boolean success) {
-        super.onPostExecute(success);
-
+    public void setDataAfterLoading(Boolean success) {
         if (success) {
             Bus.tweakServingsChangedEvent(startingDay, tweak);
         }

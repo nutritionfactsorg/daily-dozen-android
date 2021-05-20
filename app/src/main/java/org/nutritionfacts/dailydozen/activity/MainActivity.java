@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -35,7 +36,9 @@ import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.task.BackupTask;
 import org.nutritionfacts.dailydozen.task.CalculateStreaksTask;
+import org.nutritionfacts.dailydozen.task.ProgressListener;
 import org.nutritionfacts.dailydozen.task.RestoreTask;
+import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
@@ -45,10 +48,12 @@ import java.util.Date;
 import hirondelle.date4j.DateTime;
 import timber.log.Timber;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ProgressListener {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     private ActivityMainBinding binding;
+
+    private ProgressDialog progressDialog;
 
     private MenuItem menuToggleModes;
 
@@ -98,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         .setCancelable(false)
                         .setTitle(R.string.dialog_streaks_title)
                         .setMessage(R.string.dialog_streaks_message)
-                        .setPositiveButton(R.string.OK, (dialog, which) -> new CalculateStreaksTask(MainActivity.this).execute())
+                        .setPositiveButton(R.string.OK, (dialog, which) -> new TaskRunner().executeAsync(new CalculateStreaksTask(this)))
                         .create().show();
             }
         }
@@ -286,7 +291,7 @@ public class MainActivity extends AppCompatActivity {
     private void backup() {
         if (!DDServings.isEmpty()) {
             if (PermissionController.canWriteExternalStorage(this)) {
-                new BackupTask(this).execute(getBackupFile());
+                new TaskRunner().executeAsync(new BackupTask(this, getBackupFile()));
             } else {
                 PermissionController.askForWriteExternalStorage(this);
             }
@@ -324,7 +329,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void restore(final Uri restoreFileUri) {
-        new RestoreTask(this).execute(restoreFileUri);
+        new TaskRunner().executeAsync(new RestoreTask(this, restoreFileUri, getContentResolver()));
     }
 
     public File getBackupFile() {
@@ -408,6 +413,34 @@ public class MainActivity extends AppCompatActivity {
         if (dateTime != null) {
             Timber.d("Changing displayed date to %s", dateTime.toString());
             binding.datePager.setCurrentItem(Day.getNumDaysSinceEpoch(dateTime));
+        }
+    }
+
+    @Override
+    public void showProgressBar(int titleId) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setIndeterminate(false);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        progressDialog.setTitle(titleId);
+        progressDialog.show();
+    }
+
+    @Override
+    public void updateProgressBar(int current, int total) {
+        progressDialog.setProgress(current);
+        progressDialog.setMax(total);
+    }
+
+    @Override
+    public void hideProgressBar() {
+        try {
+            if (progressDialog != null && progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
+        } catch (Exception e) {
+            Timber.e("hideProgressBar: Exception while trying to dismiss progress dialog");
+        } finally {
+            progressDialog = null;
         }
     }
 }

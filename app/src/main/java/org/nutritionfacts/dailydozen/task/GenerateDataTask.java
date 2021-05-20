@@ -1,7 +1,5 @@
 package org.nutritionfacts.dailydozen.task;
 
-import android.content.Context;
-
 import com.activeandroid.ActiveAndroid;
 
 import org.nutritionfacts.dailydozen.Common;
@@ -21,30 +19,19 @@ import java.util.TimeZone;
 import hirondelle.date4j.DateTime;
 import hugo.weaving.DebugLog;
 
-public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, Integer, Boolean> {
-    private GenerateDataTaskParams taskParams;
-    private Random random;
+public class GenerateDataTask extends BaseTask<Boolean> {
+    private final ProgressListener progressListener;
+    private final GenerateDataTaskParams taskParams;
+    private final Random random;
 
-    public GenerateDataTask(Context context) {
-        super(context);
-
+    public GenerateDataTask(ProgressListener progressListener, GenerateDataTaskParams taskParams) {
+        this.progressListener = progressListener;
+        this.taskParams = taskParams;
         random = new Random();
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-
-        progress.setTitle(R.string.task_generating_random_data);
-        progress.show();
-    }
-
-    @Override
-    protected Boolean doInBackground(GenerateDataTaskParams... params) {
-        if (params != null && params.length > 0) {
-            taskParams = params[0];
-        }
-
+    public Boolean call() {
         deleteAllExistingData();
 
         final List<Food> allFoods = Food.getAllFoods();
@@ -68,12 +55,26 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
                 createUserDataForDay(allFoods, allTweaks, current);
             }
 
-            publishProgress(++i, numDays);
+            progressListener.updateProgressBar(++i, numDays);
 
             current = current.plusDays(1);
         }
 
-        return null;
+        return true;
+    }
+
+    @Override
+    public void setUiForLoading() {
+        progressListener.showProgressBar(R.string.task_generating_random_data);
+    }
+
+    @Override
+    public void setDataAfterLoading(Boolean success) {
+        progressListener.hideProgressBar();
+
+        if (success) {
+            new TaskRunner().executeAsync(new CalculateStreaksTask(progressListener));
+        }
     }
 
     @DebugLog
@@ -121,39 +122,23 @@ public class GenerateDataTask extends TaskWithContext<GenerateDataTaskParams, In
 
         // Give a 80% chance of setting morning weight
         if (random.nextInt(10) >= 2) {
-            morningWeight = round(180 + 3 * random.nextFloat(), 1);
+            morningWeight = round(180 + 3 * random.nextFloat());
         }
 
         // Give a 50% chance of setting evening weight
         if (random.nextInt(10) >= 5) {
-            eveningWeight = round(180 + 3 * random.nextFloat(), 1);
+            eveningWeight = round(180 + 3 * random.nextFloat());
         }
 
         Weights.createWeightsIfDoesNotExist(day, morningWeight, eveningWeight);
     }
 
-    private static float round(double value, int precision) {
-        int scale = (int) Math.pow(10, precision);
+    private static float round(double value) {
+        int scale = (int) Math.pow(10, 1);
         return (float) Math.round(value * scale) / scale;
     }
 
     private void deleteAllExistingData() {
         Common.truncateAllDatabaseTables();
-    }
-
-    @Override
-    protected void onProgressUpdate(Integer... values) {
-        super.onProgressUpdate(values);
-
-        if (values.length == 2) {
-            progress.setProgress(values[0]);
-            progress.setMax(values[1]);
-        }
-    }
-
-    @Override
-    protected void onPostExecute(Boolean aBoolean) {
-        super.onPostExecute(aBoolean);
-        new CalculateStreaksTask(getContext()).execute();
     }
 }

@@ -1,7 +1,5 @@
 package org.nutritionfacts.dailydozen.task;
 
-import android.content.Context;
-
 import com.activeandroid.ActiveAndroid;
 
 import org.nutritionfacts.dailydozen.controller.Bus;
@@ -11,30 +9,17 @@ import org.nutritionfacts.dailydozen.model.Food;
 
 import java.util.List;
 
-public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Integer, Boolean> {
-    private Day startingDay;
-    private Food food;
+public class CalculateStreakTask extends BaseTask<Boolean> {
+    private final Day startingDay;
+    private final Food food;
 
-    public CalculateStreakTask(Context context) {
-        super(context);
+    public CalculateStreakTask(StreakTaskInput input) {
+        this.startingDay = input.getStartingDay();
+        this.food = input.getFood();
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-        progress.hide();
-    }
-
-    @Override
-    protected Boolean doInBackground(StreakTaskInput... params) {
-        final StreakTaskInput input = params[0];
-        if (input == null) {
-            return false;
-        }
-
-        startingDay = input.getStartingDay();
-        food = input.getFood();
-
+    public Boolean call() {
         final List<Day> daysToCalculate = startingDay.getDaysAfter();
         final int numDays = daysToCalculate.size();
 
@@ -42,10 +27,6 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
 
         try {
             for (int i = 0; i < numDays; i++) {
-                if (isCancelled()) {
-                    return false;
-                }
-
                 final Day day = daysToCalculate.get(i);
 
                 final DDServings servingsOnDate = DDServings.getByDateAndFood(day, food);
@@ -64,9 +45,7 @@ public class CalculateStreakTask extends TaskWithContext<StreakTaskInput, Intege
     }
 
     @Override
-    protected void onPostExecute(Boolean success) {
-        super.onPostExecute(success);
-
+    public void setDataAfterLoading(Boolean success) {
         if (success) {
             Bus.foodServingsChangedEvent(startingDay, food);
         }
