@@ -925,7 +925,7 @@
         <item>kohlrabi</item>
         <item>mustard-greens</item>
         <item>radishes</item>
-        <item>turnips</item>
+        <item/>
         <item>watercress</item>
     </string-array>
 
@@ -939,7 +939,7 @@
         <item/>
         <item>spinach</item>
         <item>swiss-chard</item>
-        <item>turnips</item>
+        <item/>
     </string-array>
 
     <string-array name="food_videos_other_vegetables" translatable="false">
