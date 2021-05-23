@@ -67,8 +67,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Παρακαλώ δώστε μας τα σχόλιά στο Play Store.</string>
     <string name="rate_now">Αποστολή σχολίων</string>
     <string name="not_now">Όχι τώρα</string>
-    <string formatted="false" name="format_version">εκδοχή %s</string>
-    <string formatted="false" name="format_num_days">%d ημέρες</string>
+    <string name="format_version" formatted="false">εκδοχή %s</string>
+    <string name="format_num_days" formatted="false">%d ημέρες</string>
     <string name="daily_reminder_title">Υπενθύμιση Daily Dozen</string>
     <string name="daily_reminder_text">Ενημερώστε τις μερίδες σας για σήμερα</string>
     <string name="daily_reminder_settings">Ρυθμίσεις Καθημερινής Υπενθύμισης</string>
@@ -81,17 +81,17 @@
 
     <string-array name="about_text_lines">
         <item>Η εφαρμογή δημιουργήθηκε από τον John Slavick.</item>
-        <item/>
+        <item />
         <item>Χρησιμοποιούνται οι ακόλουθες βιβλιοθήκες ανοικτού κώδικα: ActiveAndroid, android-iconify, EventBus, LikeAnimation και MPAndroidChart.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
         <item>Ακολουθήστε τα παρακάτω βήματα για να επαναφέρετε αυτό το αντίγραφο ασφαλείας στην εφαρμογή Daily Dozen</item>
-        <item/>
+        <item />
         <item>1. Η εφαρμογή Daily Dozen πρέπει να εγκατασταθεί στο Android κινητό σας τηλέφωνο. Μπορείτε να τη κατεβάσετε από εδώ: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
-        <item/>
+        <item />
         <item>2. Πατήστε στο αρχείο αντιγράφου ασφαλείας που επισυνάπτεται σε αυτό το email.</item>
-        <item/>
+        <item />
         <item>3. Επιλέξτε Άνοιγμα με Daily Dozen</item>
     </string-array>
 
@@ -410,13 +410,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item/>
+        <item />
         <item>1 φλυτζάνι</item>
         <item>¼ φλιτζάνι</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item/>
+        <item />
         <item>120 γραμμάρια</item>
         <item>40 γραμμάρια</item>
     </string-array>
@@ -430,13 +430,13 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ φλιτζάνι</item>
         <item>¼ φλιτζάνι</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 γραμμάρια</item>
         <item>12 γραμμάρια</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
@@ -480,11 +480,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
@@ -494,12 +494,12 @@
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ φλιτζάνι</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 γραμμάρια</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
@@ -508,13 +508,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
@@ -528,16 +528,16 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ φλιτζάνι</item>
         <item>1 φλιτζάνι</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>3 φλιτζάνια</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 γραμμάρια</item>
         <item>50 γραμμάρια</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>30 γραμμάρια</item>
     </string-array>
 
@@ -559,13 +559,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string name="error_cannot_handle_url">Δεν ήταν δυνατό το άνοιγμα url. Παρακαλώ εγκαταστήστε ένα πρόγραμμα περιήγησης.</string>

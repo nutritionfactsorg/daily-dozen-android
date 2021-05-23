@@ -509,12 +509,12 @@
 
     <string-array name="food_info_serving_sizes_spices_imperial">
         <item>¼ cucharadita</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
         <item>¼ cucharadita</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
@@ -585,7 +585,7 @@
     <string name="tweak_group_dailydoses">Toma la dosis diaria</string>
     <string name="tweak_group_nightly">Cada noche</string>
     <string name="about_tweak">Sobre este potenciador</string>
-    
+
     <string name="meal_water">Empezar con agua</string>
     <string name="meal_negcal">Empezar con alimentos de calorías negativas"</string>
     <string name="meal_vinegar">Vinagre (2 ctda. cada comida)</string>
@@ -607,10 +607,10 @@
     <string name="nightly_fast">Ayuno después de las 7 P.M.</string>
     <string name="nightly_sleep">Dormir lo suficiente</string>
     <string name="nightly_trendelenburg">Trendelenburg</string>
-    
+
     <string name="debug_generate_weight_data">Generar datos de peso</string>
     <string name="average_weight_on_day">Peso promedio en el día</string>
-    
+
     <string name="meal_water_short">Empezar con agua</string>
     <string name="meal_negcal_short">Empezar con alimentos de calorías negativas</string>
     <string name="meal_vinegar_short">Vinagre (2 ctda. cada comida)</string>
@@ -632,7 +632,7 @@
     <string name="nightly_fast_short">Ayuno después de las 7 P.M.</string>
     <string name="nightly_sleep_short">Dormir lo suficiente</string>
     <string name="nightly_trendelenburg_short">Trendelenburg</string>
-    
+
     <string name="meal_water_text">Toma dos tazas de agua sin sabor, fría o del tiempo, antes de cada comida para acelerar tu metabolismo y aprovechar sus beneficios.</string>
     <string name="meal_negcal_text">Como entrante, puedes comerte una manzana, una sopa o una ensalada con alimentos de luz verde que contenga menos de cien calorías por taza.</string>
     <string name="meal_vinegar_text">Nunca bebas vinagre solo. Puedes usarlo para condimentar las comidas o aderezar una ensalada. Puedes usar cualquier tipo de vinagre, dulce o salado. Si quieres beberlo, debes mezclarlo con un vaso de agua y enjuagarte la boca justo después para proteger el esmalte dental.</string>
@@ -654,5 +654,5 @@
     <string name="nightly_fast_text">Debido a la influencia de los ritmos circadianos, lo que comes por la noche engorda más que si comieras eso mismo pero más temprano en el día, así que intenta ayunar todas las noches durante al menos doce horas a partir de las 7 P.M. Cuantas menos calorías consumas después de que se ponga el sol, mejor.</string>
     <string name="nightly_sleep_text">Puedes marcar esta casilla si has dormido al menos siete horas y te has ido a la cama a tu hora normal.</string>
     <string name="nightly_trendelenburg_text">Prueba a estar al menos cuatro horas cada noche con el cuerpo inclinado seis grados. Para conseguirlo, debes elevar los postes del pie de la cama unos 20 centímetros. Ten mucho cuidado al levantarte, ya que esta postura causa intolerancia ortostática para casi todo el mundo, aunque seas joven y estés saludable, así que, si te levantas demasiado rápido, puedes marearte, desmayarte o incluso caerte y hacerte daño. Por lo tanto, levántate lentamente. Beber dos tazas de agua fría treinta minutos antes de levantarte también podría ayudar a prevenir este efecto secundario potencialmente peligroso.\n\nIMPORTANTE: no intentes esto en casa si tienes problemas cardiacos o pulmonares, reflujo ácido, problemas cerebrales (como traumatismo craneal) u oculares (incluso un historial familiar de glaucoma lo descalifica). Si tienes cualquier duda, no lo intentes sin preguntarle a tu médico antes.*</string>
-    
+
 </resources>

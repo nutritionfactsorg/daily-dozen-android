@@ -682,13 +682,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item/>
+        <item />
         <item>1 cup</item>
         <item>¼ cup</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item/>
+        <item />
         <item>120 g</item>
         <item>40 g</item>
     </string-array>
@@ -702,13 +702,13 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ cup</item>
         <item>¼ cup</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g</item>
         <item>12 g</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
@@ -752,11 +752,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
@@ -766,12 +766,12 @@
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ cup</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
@@ -780,13 +780,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
@@ -800,16 +800,16 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ cup</item>
         <item>1 cup</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>3 cups</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>30 g</item>
     </string-array>
 
@@ -831,13 +831,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <!--
@@ -849,19 +849,19 @@
 
     <string-array name="food_videos_beans" translatable="false">
         <item>black-beans</item>
-        <item/>
-        <item/>
-        <item/>
+        <item />
+        <item />
+        <item />
         <item>chickpeas</item>
         <item>edamame</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>kidney-beans</item>
         <item>lentils</item>
         <item>miso</item>
         <item>navy-beans</item>
         <item>pinto-beans</item>
-        <item/>
+        <item />
         <item>split-peas</item>
         <item>tempeh</item>
     </string-array>
@@ -872,11 +872,11 @@
         <item>blackberries</item>
         <item>blueberries</item>
         <item>cherries</item>
-        <item>concord-grapes</item>
+        <item>grapes</item>
         <item>cranberries</item>
         <item>goji-berries</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>raspberries</item>
         <item>strawberries</item>
     </string-array>
@@ -887,59 +887,59 @@
         <item>avocados</item>
         <item>bananas</item>
         <item>cantaloupe</item>
-        <item/>
+        <item />
         <item>dates</item>
-        <item>figs</item>
+        <item />
         <item>grapefruit</item>
-        <item/>
+        <item />
         <item>kiwifruit</item>
         <item>lemons</item>
         <item>limes</item>
-        <item/>
+        <item />
         <item>mango</item>
-        <item/>
+        <item />
         <item>oranges</item>
-        <item>papaya</item>
-        <item/>
+        <item />
+        <item />
         <item>peaches</item>
         <item>pears</item>
-        <item>pineapples</item>
+        <item />
         <item>plums</item>
-        <item/>
+        <item />
         <item>pomegranates</item>
         <item>prunes</item>
-        <item/>
+        <item />
         <item>watermelon</item>
     </string-array>
 
     <string-array name="food_videos_cruciferous_vegetables" translatable="false">
-        <item/>
+        <item />
         <item>bok-choy</item>
         <item>broccoli</item>
         <item>brussels-sprouts</item>
         <item>cabbage</item>
         <item>cauliflower</item>
         <item>collard-greens</item>
-        <item/>
+        <item />
         <item>kale</item>
-        <item>kohlrabi</item>
+        <item />
         <item>mustard-greens</item>
-        <item>radishes</item>
-        <item/>
+        <item />
+        <item />
         <item>watercress</item>
     </string-array>
 
     <string-array name="food_videos_greens" translatable="false">
-        <item/>
-        <item>beet-greens</item>
+        <item />
+        <item>beets</item>
         <item>collard-greens</item>
         <item>kale</item>
-        <item>mesclun-mix</item>
+        <item />
         <item>mustard-greens</item>
-        <item/>
+        <item />
         <item>spinach</item>
         <item>swiss-chard</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_videos_other_vegetables" translatable="false">
@@ -953,10 +953,10 @@
         <item>mushrooms</item>
         <item>okra</item>
         <item>onions</item>
-        <item>purple-potatoes</item>
+        <item>potatoes</item>
         <item>pumpkin</item>
         <item>sea-vegetables</item>
-        <item/>
+        <item />
         <item>squash</item>
         <item>sweet-potatoes</item>
         <item>tomatoes</item>
@@ -969,7 +969,7 @@
         <item>cashews</item>
         <item>chia-seeds</item>
         <item>hazelnuts</item>
-        <item/>
+        <item />
         <item>macadamia-nuts</item>
         <item>pecans</item>
         <item>pistachios</item>
@@ -983,35 +983,35 @@
         <item>allspice</item>
         <item>barberries</item>
         <item>basil</item>
-        <item/>
-        <item>cardamom</item>
-        <item/>
+        <item />
+        <item />
+        <item />
         <item>cilantro</item>
         <item>cinnamon</item>
         <item>cloves</item>
-        <item>coriander</item>
+        <item />
         <item>cumin</item>
         <item>curry-powder</item>
-        <item/>
+        <item />
         <item>fenugreek</item>
         <item>garlic</item>
         <item>ginger</item>
-        <item/>
-        <item>lemongrass</item>
+        <item />
+        <item />
         <item>marjoram</item>
         <item>mustard-powder</item>
         <item>nutmeg</item>
         <item>oregano</item>
-        <item>paprika</item>
+        <item />
         <item>parsley</item>
         <item>pepper</item>
         <item>peppermint</item>
         <item>rosemary</item>
         <item>saffron</item>
-        <item/>
-        <item>thyme</item>
+        <item />
+        <item />
         <item>turmeric</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_videos_whole_grains" translatable="false">
@@ -1022,7 +1022,7 @@
         <item>popcorn</item>
         <item>quinoa</item>
         <item>rye</item>
-        <item>teff</item>
+        <item />
         <item>pasta</item>
     </string-array>
 
@@ -1034,12 +1034,12 @@
         <item>earl-grey-tea</item>
         <item>green-tea</item>
         <item>hibiscus-tea</item>
-        <item/>
-        <item>jasmine-tea</item>
+        <item />
+        <item />
         <item>lemon-balm</item>
         <item>matcha</item>
         <item>oolong-tea</item>
-        <item/>
+        <item>peppermint</item>
         <item>rooibos-tea</item>
         <item>water</item>
         <item>white-tea</item>

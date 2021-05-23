@@ -427,13 +427,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item/>
+        <item />
         <item>1 tazza</item>
         <item>¼ tazza</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item/>
+        <item />
         <item>120 g</item>
         <item>40 g</item>
     </string-array>
@@ -447,13 +447,13 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ tazza</item>
         <item>¼ tazza</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g</item>
         <item>12 g</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
@@ -497,11 +497,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
@@ -511,12 +511,12 @@
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ tazza</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
@@ -525,13 +525,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
@@ -545,16 +545,16 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ tazza</item>
         <item>1 tazza</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>3 tazze</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>30 g</item>
     </string-array>
 
@@ -576,13 +576,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string name="error_cannot_handle_url">Impossibile aprire URL. Si prega di installare un browser.</string>

@@ -1,4 +1,3 @@
-
 <resources>
     <string name="app_name">Codzienny Tuzin</string>
     <string name="beans">Rośliny strączkowe</string>
@@ -177,16 +176,16 @@
     </integer-array>
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
-        <item/>
+        <item />
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Wykonaj następujące kroki, aby przywrócić swoją kopię zapasową w aplikacji Codzienny Tuzin.</item>
-        <item></item>
+        <item />
         <item>1. Aplikacja Codzienny Tuzin musi być zainstalowana na telefonie z systemem Android. Możesz ją pobrać tutaj: : https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
-        <item></item>
+        <item />
         <item>2. Stuknij w plik kopii zapasowej załączony w tym e-mailu.</item>
-        <item></item>
+        <item />
         <item>3. Wybierz opcję „Otwórz przy pomocy Codzienny Tuzin”.</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
@@ -483,12 +482,12 @@
         <item>%s suszonych owoców</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item></item>
+        <item />
         <item> szklanka</item>
         <item>¼ szklanki</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item></item>
+        <item />
         <item>20 g</item>
         <item>40 g</item>
     </string-array>
@@ -500,12 +499,12 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ szklanki</item>
         <item>¼ szklanki</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g</item>
         <item>12 g</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_greens">
         <item>%s surowych</item>
@@ -541,10 +540,10 @@
         <item>%s1 łyżka mielonych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s orzechów lub nasion</item>
@@ -552,23 +551,23 @@
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ szklanki</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_spices">
         <item>%s¼ łyżeczki kurkumy</item>
         <item>%sWszelkie inne (pozbawione soli) zioła i przyprawy, które lubisz</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains">
         <item>%s gorących płatków zbożowych lub gotowanych ziaren, makaronu lub ziaren kukurydzy</item>
@@ -580,15 +579,15 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ szklanki</item>
         <item>1 szklanka</item>
-        <item></item>
-        <item></item>
+        <item />
+        <item />
         <item> szklanki</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
-        <item></item>
-        <item></item>
+        <item />
+        <item />
         <item>0 g</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages">
@@ -605,11 +604,11 @@
         <item>%s40 minut intensywnej aktywności</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
 </resources>
