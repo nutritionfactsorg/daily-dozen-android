@@ -889,7 +889,7 @@
         <item>cantaloupe</item>
         <item/>
         <item>dates</item>
-        <item>figs</item>
+        <item/>
         <item>grapefruit</item>
         <item/>
         <item>kiwifruit</item>
@@ -899,11 +899,11 @@
         <item>mango</item>
         <item/>
         <item>oranges</item>
-        <item>papaya</item>
+        <item/>
         <item/>
         <item>peaches</item>
         <item>pears</item>
-        <item>pineapples</item>
+        <item/>
         <item>plums</item>
         <item/>
         <item>pomegranates</item>
@@ -922,9 +922,9 @@
         <item>collard-greens</item>
         <item/>
         <item>kale</item>
-        <item>kohlrabi</item>
+        <item/>
         <item>mustard-greens</item>
-        <item>radishes</item>
+        <item/>
         <item/>
         <item>watercress</item>
     </string-array>
@@ -934,7 +934,7 @@
         <item>beet-greens</item>
         <item>collard-greens</item>
         <item>kale</item>
-        <item>mesclun-mix</item>
+        <item/>
         <item>mustard-greens</item>
         <item/>
         <item>spinach</item>
@@ -984,12 +984,12 @@
         <item>barberries</item>
         <item>basil</item>
         <item/>
-        <item>cardamom</item>
+        <item/>
         <item/>
         <item>cilantro</item>
         <item>cinnamon</item>
         <item>cloves</item>
-        <item>coriander</item>
+        <item/>
         <item>cumin</item>
         <item>curry-powder</item>
         <item/>
@@ -997,19 +997,19 @@
         <item>garlic</item>
         <item>ginger</item>
         <item/>
-        <item>lemongrass</item>
+        <item/>
         <item>marjoram</item>
         <item>mustard-powder</item>
         <item>nutmeg</item>
         <item>oregano</item>
-        <item>paprika</item>
+        <item/>
         <item>parsley</item>
         <item>pepper</item>
         <item>peppermint</item>
         <item>rosemary</item>
         <item>saffron</item>
         <item/>
-        <item>thyme</item>
+        <item/>
         <item>turmeric</item>
         <item/>
     </string-array>
@@ -1022,7 +1022,7 @@
         <item>popcorn</item>
         <item>quinoa</item>
         <item>rye</item>
-        <item>teff</item>
+        <item/>
         <item>pasta</item>
     </string-array>
 
@@ -1035,7 +1035,7 @@
         <item>green-tea</item>
         <item>hibiscus-tea</item>
         <item/>
-        <item>jasmine-tea</item>
+        <item/>
         <item>lemon-balm</item>
         <item>matcha</item>
         <item>oolong-tea</item>
