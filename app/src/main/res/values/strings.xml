@@ -872,7 +872,7 @@
         <item>blackberries</item>
         <item>blueberries</item>
         <item>cherries</item>
-        <item>concord-grapes</item>
+        <item>grapes</item>
         <item>cranberries</item>
         <item>goji-berries</item>
         <item/>
@@ -931,7 +931,7 @@
 
     <string-array name="food_videos_greens" translatable="false">
         <item/>
-        <item>beet-greens</item>
+        <item>beets</item>
         <item>collard-greens</item>
         <item>kale</item>
         <item/>
@@ -953,7 +953,7 @@
         <item>mushrooms</item>
         <item>okra</item>
         <item>onions</item>
-        <item>purple-potatoes</item>
+        <item>potatoes</item>
         <item>pumpkin</item>
         <item>sea-vegetables</item>
         <item/>
@@ -1039,7 +1039,7 @@
         <item>lemon-balm</item>
         <item>matcha</item>
         <item>oolong-tea</item>
-        <item/>
+        <item>peppermint</item>
         <item>rooibos-tea</item>
         <item>water</item>
         <item>white-tea</item>
