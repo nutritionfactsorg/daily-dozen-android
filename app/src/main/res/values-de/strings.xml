@@ -79,7 +79,7 @@
     <string name="units">Einheiten</string>
     <string name="imperial">Englisch</string>
     <string name="metric">Metrisch</string>
-    
+
     <string-array name="about_text_lines">
         <item>Diese Anwendung wurde von John Slavick erstellt.</item>
         <item />
@@ -113,264 +113,264 @@
 
     <string-array name="food_info_types_beans">
         <item>Schwarze Bohnen</item>
-        <item>Schwarze-Augen-Bohnen</item>
-        <item>Butterbohnen</item>
-        <item>Cannellini</item>
-        <item>Kichererbsen</item>
-        <item>Edamame</item>
-        <item>Englische Erbsen</item>
-        <item>Great Northern Bohnen</item>
-        <item>Kidney-Bohnen</item>
-        <item>Linsen (Beluga, französisch, oder rote Sorten)</item>
-        <item>Miso</item>
-        <item>Navy-Bohnen</item>
-        <item>Pintobohnen</item>
-        <item>Kleine rote Bohnen</item>
-        <item>Spalterbsen (gelb oder grün)</item>
-        <item>Tempeh</item>
+        <item>Schwarze-Augen-Bohnen</item>
+        <item>Butterbohnen</item>
+        <item>Cannellini</item>
+        <item>Kichererbsen</item>
+        <item>Edamame</item>
+        <item>Englische Erbsen</item>
+        <item>Great Northern Bohnen</item>
+        <item>Kidney-Bohnen</item>
+        <item>Linsen (Beluga, französisch, oder rote Sorten)</item>
+        <item>Miso</item>
+        <item>Navy-Bohnen</item>
+        <item>Pintobohnen</item>
+        <item>Kleine rote Bohnen</item>
+        <item>Spalterbsen (gelb oder grün)</item>
+        <item>Tempeh</item>
     </string-array>
 
     <string-array name="food_info_types_berries">
         <item>Acai Beeren</item>
-        <item>Berberitzen</item>
-        <item>Brombeeren</item>
-        <item>Heidelbeeren</item>
-        <item>Kirschen oder Weichseln</item>
-        <item>Concord-Trauben</item>
-        <item>Cranberries</item>
-        <item>Goji-Beeren</item>
-        <item>Kumquats</item>
+        <item>Berberitzen</item>
+        <item>Brombeeren</item>
+        <item>Heidelbeeren</item>
+        <item>Kirschen oder Weichseln</item>
+        <item>Concord-Trauben</item>
+        <item>Cranberries</item>
+        <item>Goji-Beeren</item>
+        <item>Kumquats</item>
         <item>Maulbeeren</item>
         <item>Himbeeren (schwarz oder rot)</item>
         <item>Erdbeeren</item>
     </string-array>
-    
+
     <string-array name="food_info_types_other_fruits">
         <item>Äpfel</item>
-        <item>Getrocknete Aprikosen</item>
-        <item>Avocados</item>
-        <item>Bananen</item>
-        <item>Cantaloup-Melone</item>
-        <item>Clementinen</item>
-        <item>Datteln</item>
-        <item>Getrocknete Feigen</item>
-        <item>Grapefruit</item>
-        <item>Honigtau</item>
-        <item>Kiwi</item>
-        <item>Zitronen</item>
+        <item>Getrocknete Aprikosen</item>
+        <item>Avocados</item>
+        <item>Bananen</item>
+        <item>Cantaloup-Melone</item>
+        <item>Clementinen</item>
+        <item>Datteln</item>
+        <item>Getrocknete Feigen</item>
+        <item>Grapefruit</item>
+        <item>Honigtau</item>
+        <item>Kiwi</item>
+        <item>Zitronen</item>
         <item>Limette</item>
-        <item>Lychees</item>
-        <item>Mangos</item>
-        <item>Nektarinen</item>
-        <item>Orangen</item>
-        <item>Papaya</item>
-        <item>Passionsfrucht</item>
-        <item>Pfirsiche</item>
-        <item>Birnen</item>
-        <item>Ananas</item>
-        <item>Pflaumen (vor allem schwarze Pflaumen)</item>
-        <item>Pluots</item>
-        <item>Granatäpfel</item>
-        <item>Backpflaumen</item>
-        <item>Mandarinen</item>
-        <item>Wassermelone</item>
+        <item>Lychees</item>
+        <item>Mangos</item>
+        <item>Nektarinen</item>
+        <item>Orangen</item>
+        <item>Papaya</item>
+        <item>Passionsfrucht</item>
+        <item>Pfirsiche</item>
+        <item>Birnen</item>
+        <item>Ananas</item>
+        <item>Pflaumen (vor allem schwarze Pflaumen)</item>
+        <item>Pluots</item>
+        <item>Granatäpfel</item>
+        <item>Backpflaumen</item>
+        <item>Mandarinen</item>
+        <item>Wassermelone</item>
     </string-array>
-    
+
     <string-array name="food_info_types_cruciferous_vegetables">
-         <item>Rucola</item>
-         <item>Pak Choi</item>
-         <item>Brokkoli (und Romanesco)</item>
-         <item>Rosenkohl</item>
-         <item>Kohl (grün und rot, wirsingkohl)</item>
-         <item>Blumenkohl (weiß, grün, orange, lila)</item>
-         <item>Blattkohl</item>
-         <item>Meerrettich</item>
-         <item>Kohl (schwarz, grün und rot)</item>
+        <item>Rucola</item>
+        <item>Pak Choi</item>
+        <item>Brokkoli (und Romanesco)</item>
+        <item>Rosenkohl</item>
+        <item>Kohl (grün und rot, wirsingkohl)</item>
+        <item>Blumenkohl (weiß, grün, orange, lila)</item>
+        <item>Blattkohl</item>
+        <item>Meerrettich</item>
+        <item>Kohl (schwarz, grün und rot)</item>
         <item>Kohlrabi (grün und lila)</item>
-         <item>Senfkörner</item>
-         <item>Radieschen</item>
-         <item>Kohlrabi</item>
-         <item>Kresse</item>
+        <item>Senfkörner</item>
+        <item>Radieschen</item>
+        <item>Kohlrabi</item>
+        <item>Kresse</item>
     </string-array>
-    
+
     <string-array name="food_info_types_greens">
         <item>Rucola</item>
-        <item>Rüben</item>
-        <item>Blattkohl</item>
-        <item>Kohl (schwarz, grün und rot)</item>
-        <item>Mesclun-Mix (gemischte junge Blattsalate)</item>
-        <item>Senfkörner</item> 
-        <item>Sauerampfer</item>
-        <item>Spinat</item>
-        <item>Mangold</item>
-        <item>Kohlrabi</item>
+        <item>Rüben</item>
+        <item>Blattkohl</item>
+        <item>Kohl (schwarz, grün und rot)</item>
+        <item>Mesclun-Mix (gemischte junge Blattsalate)</item>
+        <item>Senfkörner</item>
+        <item>Sauerampfer</item>
+        <item>Spinat</item>
+        <item>Mangold</item>
+        <item>Kohlrabi</item>
     </string-array>
-    
+
     <string-array name="food_info_types_other_vegetables">
         <item>Artischocken</item>
-        <item>Spargel</item>
-        <item>Rüben</item>
-        <item>Paprika</item>
-        <item>Möhren</item>
-        <item>Mais</item>
-        <item>Knoblauch</item>
-        <item>Pilze (Champignon, Austern-, Portobello- oder Shiitakepilze)</item>
-        <item>Okra</item>
-        <item>Zwiebeln</item>
-        <item>Lila Kartoffeln</item>
-        <item>Kürbis</item>
-        <item>Algen (Arame, Rotalgen oder Nori)</item>
-        <item>Knackerbsen</item> 
-        <item>Kürbis (Delicata, Sommer- und Spaghettikürbis-Sorten)</item>
-        <item>Süßkartoffeln / Yams</item>
-        <item>Tomaten</item>
-        <item>Zucchini</item>
+        <item>Spargel</item>
+        <item>Rüben</item>
+        <item>Paprika</item>
+        <item>Möhren</item>
+        <item>Mais</item>
+        <item>Knoblauch</item>
+        <item>Pilze (Champignon, Austern-, Portobello- oder Shiitakepilze)</item>
+        <item>Okra</item>
+        <item>Zwiebeln</item>
+        <item>Lila Kartoffeln</item>
+        <item>Kürbis</item>
+        <item>Algen (Arame, Rotalgen oder Nori)</item>
+        <item>Knackerbsen</item>
+        <item>Kürbis (Delicata, Sommer- und Spaghettikürbis-Sorten)</item>
+        <item>Süßkartoffeln / Yams</item>
+        <item>Tomaten</item>
+        <item>Zucchini</item>
     </string-array>
-    
+
     <string-array name="food_info_types_flaxseeds">
         <item>Braune Leinsamen</item>
         <item>Goldleinsamen</item>
     </string-array>
-    
+
     <string-array name="food_info_types_nuts">
         <item>Mandeln</item>
-        <item>Paranüsse</item>
-        <item>Cashewkerne</item>
-        <item>Chia-Samen</item>
-        <item>Haselnüsse</item>
-        <item>Hanfsamen</item>
-        <item>Macadamianüsse</item>
-        <item>Pecannüsse</item>
-        <item>Pistazien</item>
-        <item>Kürbiskerne</item>
-        <item>Sesamsamen</item>
-        <item>Sonnenblumenkerne</item>
-        <item>Walnüsse</item>
+        <item>Paranüsse</item>
+        <item>Cashewkerne</item>
+        <item>Chia-Samen</item>
+        <item>Haselnüsse</item>
+        <item>Hanfsamen</item>
+        <item>Macadamianüsse</item>
+        <item>Pecannüsse</item>
+        <item>Pistazien</item>
+        <item>Kürbiskerne</item>
+        <item>Sesamsamen</item>
+        <item>Sonnenblumenkerne</item>
+        <item>Walnüsse</item>
     </string-array>
-    
+
     <string-array name="food_info_types_spices">
         <item>Piment (Nelkenpfeffer)</item>
-        <item>Berberitzen</item>
-        <item>Basilikum</item>
-        <item>Lorbeerblätter</item>
-        <item>Kardamom</item>
-        <item>Chili-Pulver</item>
-        <item>Cilantro</item>
-        <item>Zimt</item>
-        <item>Gewürznelken</item>
-        <item>Koriander</item>
-        <item>Kreuzkümmel</item>
-        <item>Curry-Pulver</item>
-        <item>Dill</item>
-        <item>Bockshornklee</item>
-        <item>Knoblauch</item>
-        <item>Ingwer</item>
-        <item>Meerrettich</item>
-        <item>Zitronengras</item>
-        <item>Majoran</item>
-        <item>Senfpulver</item>
-        <item>Muskatnuss</item>
-        <item>Oregano</item>
-        <item>Geräucherte Paprika</item>
-        <item>Petersilie</item>
-        <item>Pfeffer</item>
-        <item>Pfefferminze</item>
-        <item>Rosmarin</item>
-        <item>Safran</item>
-        <item>Salbei</item>
-        <item>Thymian</item>
-        <item>Kurkuma</item>
-        <item>Vanille</item>
+        <item>Berberitzen</item>
+        <item>Basilikum</item>
+        <item>Lorbeerblätter</item>
+        <item>Kardamom</item>
+        <item>Chili-Pulver</item>
+        <item>Cilantro</item>
+        <item>Zimt</item>
+        <item>Gewürznelken</item>
+        <item>Koriander</item>
+        <item>Kreuzkümmel</item>
+        <item>Curry-Pulver</item>
+        <item>Dill</item>
+        <item>Bockshornklee</item>
+        <item>Knoblauch</item>
+        <item>Ingwer</item>
+        <item>Meerrettich</item>
+        <item>Zitronengras</item>
+        <item>Majoran</item>
+        <item>Senfpulver</item>
+        <item>Muskatnuss</item>
+        <item>Oregano</item>
+        <item>Geräucherte Paprika</item>
+        <item>Petersilie</item>
+        <item>Pfeffer</item>
+        <item>Pfefferminze</item>
+        <item>Rosmarin</item>
+        <item>Safran</item>
+        <item>Salbei</item>
+        <item>Thymian</item>
+        <item>Kurkuma</item>
+        <item>Vanille</item>
     </string-array>
-    
+
     <string-array name="food_info_types_whole_grains">
         <item>Gerste</item>
-        <item>Buchweizen</item>
-        <item>Hirse</item>
-        <item>Hafer</item>
-        <item>Popcorn</item>
-        <item>Andenhirse</item>
-        <item>Roggen</item>
-        <item>Teff</item>
-        <item>Vollkornnudeln</item>
+        <item>Buchweizen</item>
+        <item>Hirse</item>
+        <item>Hafer</item>
+        <item>Popcorn</item>
+        <item>Andenhirse</item>
+        <item>Roggen</item>
+        <item>Teff</item>
+        <item>Vollkornnudeln</item>
     </string-array>
-    
+
     <string-array name="food_info_types_beverages">
         <item>Schwarzer Tee</item>
-        <item>Chai-Tee</item>
-        <item>Kamillentee</item>
-        <item>Kaffee</item>
-        <item>Earl-Grey-Tee</item>
-        <item>Grüner Tee</item>
-        <item>Hibiskustee</item>
-        <item>Heiße Schokolade</item>
-        <item>Jasmintee</item>
-        <item>Zitronenmelisse-Tee</item>
-        <item>Matcha-Tee</item>
-        <item>Mandelblüte Oolong-Tee</item>
-        <item>Pfefferminztee</item>
-        <item>Roibuschtee</item>
-        <item>Wasser</item>
-        <item>Weißer Tee</item>
+        <item>Chai-Tee</item>
+        <item>Kamillentee</item>
+        <item>Kaffee</item>
+        <item>Earl-Grey-Tee</item>
+        <item>Grüner Tee</item>
+        <item>Hibiskustee</item>
+        <item>Heiße Schokolade</item>
+        <item>Jasmintee</item>
+        <item>Zitronenmelisse-Tee</item>
+        <item>Matcha-Tee</item>
+        <item>Mandelblüte Oolong-Tee</item>
+        <item>Pfefferminztee</item>
+        <item>Roibuschtee</item>
+        <item>Wasser</item>
+        <item>Weißer Tee</item>
     </string-array>
-    
+
     <string-array name="food_info_types_exercise">
         <item>Radfahren</item>
-        <item>Kanusport</item>
-        <item>Tanzen</item>
-        <item>Völkerball</item>
-        <item>Abfahrtslauf</item>
-        <item>Fechten</item>
-        <item>Wandern</item>
-        <item>Hausarbeit</item>
-        <item>Eislaufen</item>
-        <item>Inlineskating</item>
-        <item>Jonglieren</item>
-        <item>Trampolinspringen</item>
-        <item>Paddelboot fahren</item>
-        <item>Frisbee spielen</item>
-        <item>Rollschuhlaufen</item>
-        <item>Korbwerfen</item>
-        <item>Schneeschaufeln (leichter Schneefall)</item>
-        <item>Skateboardfahren</item>
-        <item>Schnorcheln</item>
-        <item>Surfen</item>
-        <item>Schwimmen (entspannt)</item>
-        <item>Tennis (Doppel)</item>
-        <item>Wassertreten</item>
-        <item>Rasches Gehen (6 km/h)</item>
-        <item>Wassergymnastik</item>
-        <item>Wasserski</item>
-        <item>Gartenarbeit</item>
-        <item>Yoga</item>
-        <item>Backpacking</item>
-        <item>Basketball</item>
-        <item>Radfahren (bergauf)</item>
-        <item>Zirkeltraining</item>
-        <item>Skilanglauf</item>
-        <item>Fußball</item>
-        <item>Eishockey</item>
-        <item>Jogging</item>
-        <item>Hampelmann (Gymnastik)</item>
-        <item>Seilspringen</item>
-        <item>Lacrosse</item>
-        <item>Liegestütze</item>
-        <item>Klimmzüge</item>
-        <item>Racquetball</item>
-        <item>Felsklettern</item>
-        <item>Rugby</item>
-        <item>Laufen</item>
-        <item>Gerätetauchen</item>
-        <item>Tennis (Einzel)</item>
-        <item>Fußball</item>
-        <item>Eisschnelllauf</item>
-        <item>Squash</item>
-        <item>Step-Aerobic</item>
-        <item>Schwimmen (Runden)</item>
-        <item>Flottes Bergaufgehen</item>
-        <item>Wasserjogging</item>
+        <item>Kanusport</item>
+        <item>Tanzen</item>
+        <item>Völkerball</item>
+        <item>Abfahrtslauf</item>
+        <item>Fechten</item>
+        <item>Wandern</item>
+        <item>Hausarbeit</item>
+        <item>Eislaufen</item>
+        <item>Inlineskating</item>
+        <item>Jonglieren</item>
+        <item>Trampolinspringen</item>
+        <item>Paddelboot fahren</item>
+        <item>Frisbee spielen</item>
+        <item>Rollschuhlaufen</item>
+        <item>Korbwerfen</item>
+        <item>Schneeschaufeln (leichter Schneefall)</item>
+        <item>Skateboardfahren</item>
+        <item>Schnorcheln</item>
+        <item>Surfen</item>
+        <item>Schwimmen (entspannt)</item>
+        <item>Tennis (Doppel)</item>
+        <item>Wassertreten</item>
+        <item>Rasches Gehen (6 km/h)</item>
+        <item>Wassergymnastik</item>
+        <item>Wasserski</item>
+        <item>Gartenarbeit</item>
+        <item>Yoga</item>
+        <item>Backpacking</item>
+        <item>Basketball</item>
+        <item>Radfahren (bergauf)</item>
+        <item>Zirkeltraining</item>
+        <item>Skilanglauf</item>
+        <item>Fußball</item>
+        <item>Eishockey</item>
+        <item>Jogging</item>
+        <item>Hampelmann (Gymnastik)</item>
+        <item>Seilspringen</item>
+        <item>Lacrosse</item>
+        <item>Liegestütze</item>
+        <item>Klimmzüge</item>
+        <item>Racquetball</item>
+        <item>Felsklettern</item>
+        <item>Rugby</item>
+        <item>Laufen</item>
+        <item>Gerätetauchen</item>
+        <item>Tennis (Einzel)</item>
+        <item>Fußball</item>
+        <item>Eisschnelllauf</item>
+        <item>Squash</item>
+        <item>Step-Aerobic</item>
+        <item>Schwimmen (Runden)</item>
+        <item>Flottes Bergaufgehen</item>
+        <item>Wasserjogging</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_beans">
         <item>%s Hummus oder Bohnendip</item>
         <item>%s gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
@@ -388,7 +388,7 @@
         <item>130 g</item>
         <item>150 g</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_berries">
         <item>%s frisch oder gefroren</item>
         <item>%s getrocknet</item>
@@ -411,13 +411,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item/>
+        <item />
         <item>1 Tasse</item>
         <item>¼ Tasse</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item/>
+        <item />
         <item>120 g</item>
         <item>60 g</item>
     </string-array>
@@ -431,15 +431,15 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ Tasse</item>
         <item>¼ Tasse</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g</item>
         <item>12 g</item>
-        <item/>
+        <item />
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_greens">
         <item>%s roh</item>
         <item>%s gekocht</item>
@@ -454,7 +454,7 @@
         <item>60 g</item>
         <item>90 g</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_other_vegetables">
         <item>%s rohes Blattgemüse</item>
         <item>%s roh oder gekocht; kein Blattgemüse</item>
@@ -475,19 +475,19 @@
         <item>125 ml</item>
         <item>7 g</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_flaxseeds">
         <item>%s1 Esslöffel (15 ml) gerieben</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item/>
+        <item />
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s Nüsse oder Samen</item>
         <item>%s2 Esslöffel (30 ml) Butter aus Nüssen oder Samen</item>
@@ -495,29 +495,29 @@
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ Tasse</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
-        <item/>
+        <item />
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_spices">
         <item>%s¼ Teelöffel (1,2 ml) Kurkuma</item>
         <item>%sAlle anderen (salzfreien) Kräuter und Gewürze, die du magst</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_whole_grains">
         <item>%s heißes oder gekochtes Getreide, Teigwaren, oder Maiskörner</item>
         <item>%s Getreide</item>
@@ -529,19 +529,19 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ Tasse</item>
         <item>1 Tasse</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>3 Tassen</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>30 g</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_beverages">
         <item>1½ Gläser (%s)</item>
     </string-array>
@@ -553,20 +553,20 @@
     <string-array name="food_info_serving_sizes_beverages_metric">
         <item>350 ml</item>
     </string-array>
-    
+
     <string-array name="food_info_serving_sizes_exercise">
         <item>%s90 min Aktivität mittlerer Intensität</item>
         <item>%s40 min Aktivität hoher Intensität</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
     <string name="channel_reminders_name">Erinnerungen</string>
 

@@ -509,12 +509,12 @@
 
     <string-array name="food_info_serving_sizes_spices_imperial">
         <item>¼ colher de chá</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
         <item>¼ colher de chá</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">

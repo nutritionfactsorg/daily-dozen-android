@@ -67,8 +67,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Моля, дайте ни обратна връзка в Google Play Store.</string>
     <string name="rate_now">Изпратете обратна информация</string>
     <string name="not_now">Пропусни</string>
-    <string formatted="false" name="format_version">версия %s</string>
-    <string formatted="false" name="format_num_days">%d дни</string>
+    <string name="format_version" formatted="false">версия %s</string>
+    <string name="format_num_days" formatted="false">%d дни</string>
     <string name="daily_reminder_title">Напомняне за Daily Dozen</string>
     <string name="daily_reminder_text">Актуализиране на вашите порции за днес</string>
     <string name="daily_reminder_settings">Настройки за напомняне</string>
@@ -81,17 +81,17 @@
 
     <string-array name="about_text_lines">
         <item>Това приложение е създадено от John Slavick.</item>
-        <item/>
+        <item />
         <item>Използват се следните библиотеки с отворен код: ActiveAndroid, Android-iconify, EventBus, LikeAnimation, и MPAndroidChart.</item>
     </string-array>
 
     <string-array name="backup_instructions_lines">
         <item>Следвайте тези стъпки, за да възстановите Daily Dozen от резервно копие</item>
-        <item/>
+        <item />
         <item>1. Приложението Daily Dozen трябва да се инсталира на вашия телефон с Андроид. Можете да го изтеглите от тук: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
-        <item/>
+        <item />
         <item>2. Изберете архивния файл, прикачен към този имейл.</item>
-        <item/>
+        <item />
         <item>3. Изберете „Отвори“ с Daily Dozen</item>
     </string-array>
 
@@ -480,11 +480,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
@@ -494,12 +494,12 @@
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ чаша</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 грам</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
@@ -508,13 +508,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
@@ -528,16 +528,16 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ чаша</item>
         <item>1 чаша</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>3 чаши</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 грам</item>
         <item>50 грам</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>30 грам</item>
     </string-array>
 
@@ -559,13 +559,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string name="error_cannot_handle_url">Връзката не може да се отвори. Моля, инсталирайте браузър.</string>

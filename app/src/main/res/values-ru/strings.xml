@@ -428,13 +428,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item/>
+        <item />
         <item>1 чашка</item>
         <item>¼ чашки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item/>
+        <item />
         <item>120 г</item>
         <item>40 г</item>
     </string-array>
@@ -448,13 +448,13 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ чашки</item>
         <item>¼ чашки</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 г</item>
         <item>12 г</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_greens">
@@ -498,11 +498,11 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts">
@@ -512,12 +512,12 @@
 
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ чашки</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 г</item>
-        <item/>
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices">
@@ -526,13 +526,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains">
@@ -546,16 +546,16 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ чашки</item>
         <item>1 чашка</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>3 чашки</item>
     </string-array>
 
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 г</item>
         <item>50 г</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>30 г</item>
     </string-array>
 
@@ -577,13 +577,13 @@
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item/>
-        <item/>
+        <item />
+        <item />
     </string-array>
 
     <string name="error_cannot_handle_url">Не могу открыть ссылку. Пожалуйста, установите браузер.</string>
