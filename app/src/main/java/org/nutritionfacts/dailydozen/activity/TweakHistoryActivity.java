@@ -31,7 +31,7 @@ import java.util.concurrent.Executors;
 
 import hirondelle.date4j.DateTime;
 
-public class TweakHistoryActivity extends TweakLoadingActivity {
+public class TweakHistoryActivity extends InfoActivity {
     private ActivityHistoryBinding binding;
 
     private final Set<String> loadedMonths = new HashSet<>();
