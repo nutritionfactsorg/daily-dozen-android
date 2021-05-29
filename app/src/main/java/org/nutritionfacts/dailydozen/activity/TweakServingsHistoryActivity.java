@@ -22,6 +22,7 @@ import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
 import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadTweakServingsHistoryTask;
 import org.nutritionfacts.dailydozen.task.ProgressListener;
@@ -82,6 +83,7 @@ public class TweakServingsHistoryActivity extends AppCompatActivity
             alreadyLoadingData = true;
 
             LoadHistoryTaskParams loadHistoryTaskParams = new LoadHistoryTaskParams(
+                    HistoryType.Tweaks,
                     binding.dailyServingsHistoryTimeScale.getSelectedTimeScale(),
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
                     binding.dailyServingsHistoryTimeRange.getSelectedMonth());
