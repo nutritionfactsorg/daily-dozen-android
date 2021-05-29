@@ -22,8 +22,7 @@ import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-import org.nutritionfacts.dailydozen.adapter.DailyDozenPagerAdapter;
-import org.nutritionfacts.dailydozen.adapter.TweaksPagerAdapter;
+import org.nutritionfacts.dailydozen.adapter.DatePagerAdapter;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.controller.Prefs;
@@ -258,11 +257,9 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
 
     private void initDatePager() {
         final FragmentStatePagerAdapter pagerAdapter;
-        if (inDailyDozenMode) {
-            pagerAdapter = new DailyDozenPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        } else {
-            pagerAdapter = new TweaksPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        }
+
+        pagerAdapter = new DatePagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, inDailyDozenMode);
+
         binding.datePager.setAdapter(pagerAdapter);
         daysSinceEpoch = pagerAdapter.getCount();
 
