@@ -57,13 +57,11 @@ public class FoodInfoActivity extends InfoActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.food_info_videos:
-                openVideosInBrowser();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.food_info_videos) {
+            openVideosInBrowser();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     private void displayFoodInfo() {
