@@ -24,7 +24,7 @@ import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
-import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
+import org.nutritionfacts.dailydozen.task.LoadHistoryTask;
 import org.nutritionfacts.dailydozen.task.ProgressListener;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
@@ -87,7 +87,7 @@ public class ServingsHistoryActivity extends AppCompatActivity
                     binding.dailyServingsHistoryTimeScale.getSelectedTimeScale(),
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
                     binding.dailyServingsHistoryTimeRange.getSelectedMonth());
-            new TaskRunner().executeAsync(new LoadServingsHistoryTask(this, this, loadHistoryTaskParams));
+            new TaskRunner().executeAsync(new LoadHistoryTask(this, this, loadHistoryTaskParams));
         }
     }
 
