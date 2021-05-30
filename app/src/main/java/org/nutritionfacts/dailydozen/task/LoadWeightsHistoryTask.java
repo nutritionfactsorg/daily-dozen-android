@@ -19,7 +19,6 @@ import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Weights;
-import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
@@ -27,10 +26,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import timber.log.Timber;
-
 public class LoadWeightsHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
-    private static final int MONTHS_IN_YEAR = 12;
     private final ProgressListener progressListener;
     private final Context context;
     private final LoadHistoryTaskParams inputParams;
@@ -43,15 +39,7 @@ public class LoadWeightsHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
 
     @Override
     public LoadHistoryCompleteEvent call() {
-        switch (inputParams.getTimeScale()) {
-            default:
-            case TimeScale.DAYS:
-                return getChartDataInDays(inputParams);
-            case TimeScale.MONTHS:
-                return getChartDataInMonths(inputParams);
-            case TimeScale.YEARS:
-                return getChartDataInYears();
-        }
+        return getChartDataInDays(inputParams);
     }
 
     @Override
@@ -63,26 +51,26 @@ public class LoadWeightsHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
     public void setDataAfterLoading(LoadHistoryCompleteEvent event) {
         progressListener.hideProgressBar();
 
-        Bus.loadServingsHistoryCompleteEvent(event);
+        Bus.loadHistoryCompleteEvent(event);
     }
 
-    // This method loads the last two months of servings into memory, but only shows the selected
+    // This method loads the last two months of history into memory, but only shows the selected
     // month. This is because it needs to use the data from the month before to calculate the
     // starting moving average.
     private LoadHistoryCompleteEvent getChartDataInDays(final LoadHistoryTaskParams inputParams) {
         final List<Day> history = Day.getLastTwoMonths(inputParams.getSelectedYear(), inputParams.getSelectedMonth());
 
-        final int numDaysOfWeights = history.size();
+        final int numDaysOfHistory = history.size();
 
-        final List<String> xLabels = new ArrayList<>(numDaysOfWeights);
-        final List<BarEntry> barEntries = new ArrayList<>(numDaysOfWeights);
-        final List<Entry> lineEntries = new ArrayList<>(numDaysOfWeights);
+        final List<String> xLabels = new ArrayList<>(numDaysOfHistory);
+        final List<BarEntry> barEntries = new ArrayList<>(numDaysOfHistory);
+        final List<Entry> lineEntries = new ArrayList<>(numDaysOfHistory);
 
         float previousTrend = 0;
         float minWeight = Float.MAX_VALUE;
         float maxWeight = Float.MIN_VALUE;
 
-        for (int i = 0; i < numDaysOfWeights; i++) {
+        for (int i = 0; i < numDaysOfHistory; i++) {
             final Day day = history.get(i);
 
             Weights weightsOnDay = Weights.getWeightsOnDay(day);
@@ -104,7 +92,7 @@ public class LoadWeightsHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
                 }
             }
 
-            // Only show the past days of servings in the selected month and year
+            // Only show the past days of history in the selected month and year
             if (day.getYear() == inputParams.getSelectedYear() && day.getMonth() == inputParams.getSelectedMonth()) {
                 final int xIndex = xLabels.size();
 
@@ -116,90 +104,22 @@ public class LoadWeightsHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
 
                 final Entry lineEntry = new Entry(previousTrend, xIndex);
                 // Here we set the optional data field on the Entry class. This gives the user the
-                // ability to tap on a value in the LoadWeightsHistoryTask and be taken to that date
+                // ability to tap on a value in the WeightHistoryActivity and be taken to that date
                 lineEntry.setData(DateUtil.convertDayToDate(day));
                 lineEntries.add(lineEntry);
             }
 
-            progressListener.updateProgressBar(i + 1, numDaysOfWeights);
+            progressListener.updateProgressBar(i + 1, numDaysOfHistory);
         }
 
-        final LoadHistoryCompleteEvent weightHistory = createCompleteEvent(createLineAndBarData(xLabels, lineEntries, barEntries), TimeScale.DAYS);
+        final LoadHistoryCompleteEvent weightHistory = createCompleteEvent(createLineAndBarData(xLabels, lineEntries, barEntries));
         weightHistory.setMinVal(minWeight);
         weightHistory.setMaxVal(maxWeight);
         return weightHistory;
     }
 
-    private LoadHistoryCompleteEvent getChartDataInMonths(final LoadHistoryTaskParams inputParams) {
-        int i = 0;
-
-        int year = inputParams.getSelectedYear();
-        int monthOneBased = 1;
-
-        final List<String> xLabels = new ArrayList<>();
-        final List<Entry> lineEntries = new ArrayList<>();
-
-        while (monthOneBased <= MONTHS_IN_YEAR) {
-            final float averageWeightInMonth = Weights.getAverageWeightInMonth(year, monthOneBased);
-
-            Timber.d("getChartDataInMonths: year [%s], monthOneBased [%s], average weight [%s]",
-                    year, monthOneBased, averageWeightInMonth);
-
-            if (averageWeightInMonth > 0) {
-                final int xIndex = xLabels.size();
-
-                xLabels.add(DateUtil.getShortNameOfMonth(monthOneBased));
-
-                lineEntries.add(new Entry(averageWeightInMonth, xIndex));
-            }
-
-            monthOneBased++;
-
-            progressListener.updateProgressBar(i++, MONTHS_IN_YEAR);
-        }
-
-        return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.MONTHS);
-    }
-
-    private LoadHistoryCompleteEvent getChartDataInYears() {
-        final Day firstDay = Day.getFirstDay();
-        final int firstYear = firstDay.getYear();
-        Timber.d("getChartDataInYears: firstYear [%s]", firstYear);
-
-        final int currentYear = DateUtil.getCurrentYear();
-        Timber.d("getChartDataInYears: currentYear [%s]", currentYear);
-
-        final int numYears = currentYear - firstYear;
-        int i = 0;
-
-        int year = firstYear;
-
-        final List<String> xLabels = new ArrayList<>();
-        final List<Entry> lineEntries = new ArrayList<>();
-
-        while (year <= currentYear) {
-            final int xIndex = xLabels.size();
-
-            xLabels.add(String.valueOf(year));
-
-            final float averageWeightInYear = Weights.getAverageWeightInYear(year);
-
-            Timber.d("getChartDataInYears: year [%s], average weight [%s]",
-                    year, averageWeightInYear);
-
-            lineEntries.add(new Entry(averageWeightInYear, xIndex));
-
-            year++;
-
-            progressListener.updateProgressBar(i++, numYears);
-        }
-
-        return createCompleteEvent(createLineData(xLabels, lineEntries), TimeScale.YEARS);
-    }
-
-    private LoadHistoryCompleteEvent createCompleteEvent(final CombinedData combinedData,
-                                                         @TimeScale.Interface final int timeScale) {
-        return new LoadHistoryCompleteEvent(combinedData, timeScale);
+    private LoadHistoryCompleteEvent createCompleteEvent(final CombinedData combinedData) {
+        return new LoadHistoryCompleteEvent(combinedData, inputParams.getTimeScale());
     }
 
     private CombinedData createLineAndBarData(List<String> xLabels, List<Entry> lineEntries, List<BarEntry> barEntries) {
