@@ -15,7 +15,6 @@ import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.task.CalculateStreakTask;
-import org.nutritionfacts.dailydozen.task.CalculateTweakStreakTask;
 import org.nutritionfacts.dailydozen.task.StreakTaskInput;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.view.ServingCheckBox;
@@ -183,6 +182,6 @@ public class RDACheckBoxes extends LinearLayout {
     }
 
     private void onTweakServingsChanged() {
-        new TaskRunner().executeAsync(new CalculateTweakStreakTask(new StreakTaskInput(day, rda)));
+        new TaskRunner().executeAsync(new CalculateStreakTask(new StreakTaskInput(day, rda)));
     }
 }

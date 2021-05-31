@@ -19,10 +19,16 @@ public class StreakTaskInput {
     }
 
     public Food getFood() {
-        return (Food) rda;
+        if (rda instanceof Food) {
+            return (Food) rda;
+        }
+        return null;
     }
 
     public Tweak getTweak() {
-        return (Tweak) rda;
+        if (rda instanceof Tweak) {
+            return (Tweak) rda;
+        }
+        return null;
     }
 }
