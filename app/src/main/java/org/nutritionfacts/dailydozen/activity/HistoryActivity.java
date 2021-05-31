@@ -14,8 +14,8 @@ import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.databinding.ActivityHistoryBinding;
+import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
-import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.util.CalendarHistoryDecorator;
 import org.nutritionfacts.dailydozen.util.DateUtil;
@@ -31,8 +31,10 @@ import java.util.concurrent.Executors;
 
 import hirondelle.date4j.DateTime;
 
-public class TweakHistoryActivity extends InfoActivity {
+public class HistoryActivity extends InfoActivity {
     private ActivityHistoryBinding binding;
+
+    private boolean isFoodHistory = false;
 
     private final Set<String> loadedMonths = new HashSet<>();
     private List<DateTime> fullServingsDates;
@@ -52,19 +54,22 @@ public class TweakHistoryActivity extends InfoActivity {
             partialServingsDates = (ArrayList<DateTime>) savedInstanceState.getSerializable(Args.DATES_WITH_PARTIAL_SERVINGS);
         }
 
-        displayTweakHistory();
+        displayHistory();
     }
 
-    private void displayTweakHistory() {
-        final Tweak tweak = getTweak();
-        if (tweak != null) {
-            initCalendar(tweak.getId(), tweak.getRecommendedAmount());
-
-            displayEntriesForVisibleMonths(Calendar.getInstance(), tweak.getId());
+    private void displayHistory() {
+        if (getFood() != null) {
+            isFoodHistory = true;
+            initCalendar(getFood().getId(), getFood().getRecommendedAmount());
+            displayEntriesForVisibleMonths(Calendar.getInstance(), getFood().getId());
+        } else if (getTweak() != null) {
+            isFoodHistory = false;
+            initCalendar(getTweak().getId(), getTweak().getRecommendedAmount());
+            displayEntriesForVisibleMonths(Calendar.getInstance(), getTweak().getId());
         }
     }
 
-    private void initCalendar(final long tweakId, final int recommendedServings) {
+    private void initCalendar(final long id, final int recommendedServings) {
         fullServingsDates = new ArrayList<>();
         partialServingsDates = new ArrayList<>();
 
@@ -73,21 +78,21 @@ public class TweakHistoryActivity extends InfoActivity {
             finish();
         });
 
-        binding.calendarView.setOnMonthChangedListener((widget, date) -> displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(date.getYear(), date.getMonth()), tweakId));
+        binding.calendarView.setOnMonthChangedListener((widget, date) -> displayEntriesForVisibleMonths(DateUtil.getCalendarForYearAndMonth(date.getYear(), date.getMonth()), id));
 
         binding.calendarLegend.setVisibility(recommendedServings > 1 ? View.VISIBLE : View.GONE);
     }
 
-    private void displayEntriesForVisibleMonths(final Calendar cal, final long tweakId) {
+    private void displayEntriesForVisibleMonths(final Calendar cal, final long id) {
         ExecutorService executor = Executors.newSingleThreadExecutor();
         Handler handler = new Handler(Looper.getMainLooper());
 
         executor.execute(() -> {
             ColorDrawable bgLessThanRecServings = new ColorDrawable(
-                    ContextCompat.getColor(TweakHistoryActivity.this, R.color.legend_less_than_recommended_servings));
+                    ContextCompat.getColor(HistoryActivity.this, R.color.legend_less_than_recommended_servings));
 
             ColorDrawable bgRecServings = new ColorDrawable(
-                    ContextCompat.getColor(TweakHistoryActivity.this, R.color.legend_recommended_servings));
+                    ContextCompat.getColor(HistoryActivity.this, R.color.legend_recommended_servings));
 
             // We start 2 months in the past because this prevents "flickering" of dates when the user swipes to
             // the previous month. For instance, starting in February and swiping to January, the dates from
@@ -99,8 +104,13 @@ public class TweakHistoryActivity extends InfoActivity {
                 final String monthStr = DateUtil.toStringYYYYMM(cal);
 
                 if (!loadedMonths.contains(monthStr)) {
-                    final Map<Day, Boolean> servings = TweakServings.getServingsOfTweakInYearAndMonth(tweakId,
-                            DateUtil.getYear(cal), DateUtil.getMonthOneBased(cal));
+                    Map<Day, Boolean> servings;
+
+                    if (isFoodHistory) {
+                        servings = DDServings.getServingsOfFoodInYearAndMonth(id, DateUtil.getYear(cal), DateUtil.getMonthOneBased(cal));
+                    } else {
+                        servings = TweakServings.getServingsOfTweakInYearAndMonth(id, DateUtil.getYear(cal), DateUtil.getMonthOneBased(cal));
+                    }
 
                     loadedMonths.add(monthStr);
 
@@ -116,7 +126,6 @@ public class TweakHistoryActivity extends InfoActivity {
                 DateUtil.addOneMonth(cal);
                 i++;
             } while (i < 3);
-
 
             handler.post(() -> {
                 ArrayList<DayViewDecorator> decorators = new ArrayList<>();

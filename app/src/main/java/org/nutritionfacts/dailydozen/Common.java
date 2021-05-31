@@ -15,10 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
 
-import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
+import org.nutritionfacts.dailydozen.activity.HistoryActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
-import org.nutritionfacts.dailydozen.activity.TweakHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.TweakInfoActivity;
 import org.nutritionfacts.dailydozen.activity.TweakServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.WeightHistoryActivity;
@@ -160,11 +159,11 @@ public class Common {
     }
 
     public static void openFoodHistory(final Context context, final Food food) {
-        startSelectableDateActivity(context, createFoodIntent(context, FoodHistoryActivity.class, food));
+        startSelectableDateActivity(context, createFoodIntent(context, HistoryActivity.class, food));
     }
 
     public static void openTweakHistory(final Context context, final Tweak tweak) {
-        startSelectableDateActivity(context, createTweakIntent(context, TweakHistoryActivity.class, tweak));
+        startSelectableDateActivity(context, createTweakIntent(context, HistoryActivity.class, tweak));
     }
 
     public static void openServingsHistory(final Context context) {
