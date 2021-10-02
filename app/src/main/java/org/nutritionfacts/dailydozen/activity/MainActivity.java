@@ -122,6 +122,8 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         // morning to enter data. The app crashed immediately.
         // Solutions tried: datePagerAdapter.notifyDataSetChanged() did not work
         if (daysSinceEpoch < Day.getNumDaysSinceEpoch()) {
+            // Reset user selection so today's date is selected
+            binding.datePager.setCurrentItem(0);
             initDatePager();
         }
 
@@ -255,6 +257,9 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     }
 
     private void initDatePager() {
+        // Record user's current date selection (value is 0 when unset)
+        int origDate = binding.datePager.getCurrentItem();
+
         final FragmentStatePagerAdapter pagerAdapter;
 
         pagerAdapter = new DatePagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, inDailyDozenMode);
@@ -262,8 +267,8 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         binding.datePager.setAdapter(pagerAdapter);
         daysSinceEpoch = pagerAdapter.getCount();
 
-        // Go to today's date by default
-        binding.datePager.setCurrentItem(pagerAdapter.getCount(), false);
+        // Maintain user's selected date when switching adapters
+        binding.datePager.setCurrentItem(origDate != 0 ? origDate : daysSinceEpoch, false);
     }
 
     private void initDatePagerIndicator() {
