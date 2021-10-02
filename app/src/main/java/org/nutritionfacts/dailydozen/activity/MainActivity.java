@@ -272,7 +272,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         daysSinceEpoch = pagerAdapter.getCount();
 
         // Maintain user's selected date when switching adapters
-        binding.datePager.setCurrentItem(origDate != 0 ? origDate : pagerAdapter.getCount(), false);
+        binding.datePager.setCurrentItem(origDate != 0 ? origDate : daysSinceEpoch, false);
     }
 
     private void initDatePagerIndicator() {
