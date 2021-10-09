@@ -3,6 +3,8 @@ package org.nutritionfacts.dailydozen.model.pref;
 import android.content.Context;
 import android.text.TextUtils;
 
+import androidx.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
 
 import org.nutritionfacts.dailydozen.util.DateUtil;
@@ -64,6 +66,7 @@ public class UpdateReminderPref {
         return reminderTimes;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return TextUtils.join(", ", reminderTimes);

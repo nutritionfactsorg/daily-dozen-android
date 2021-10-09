@@ -2,6 +2,8 @@ package org.nutritionfacts.dailydozen.model;
 
 import android.text.TextUtils;
 
+import androidx.annotation.NonNull;
+
 import com.activeandroid.ActiveAndroid;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
@@ -54,6 +56,7 @@ public class Food extends Model implements RDA {
         this.recommendedServings = recommendedServings;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return name;

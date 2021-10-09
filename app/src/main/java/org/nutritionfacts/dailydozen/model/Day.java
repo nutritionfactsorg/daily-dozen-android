@@ -2,6 +2,8 @@ package org.nutritionfacts.dailydozen.model;
 
 import android.text.TextUtils;
 
+import androidx.annotation.NonNull;
+
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
@@ -106,6 +108,7 @@ public class Day extends TruncatableModel {
         return date;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return getDateTime().format("WWW, MMM D", Locale.getDefault());
