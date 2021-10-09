@@ -144,7 +144,9 @@ public class UpdateReminderPref {
         private int timeInMillis(String time, DateFormat format) {
             try {
                 Date date = format.parse(time);
-                return (int) date.getTime();
+                if (date != null) {
+                    return (int) date.getTime();
+                }
             } catch (ParseException e) {
                 if (format != twentyFourHourFormat) {
                     return timeInMillis(time, twentyFourHourFormat);
