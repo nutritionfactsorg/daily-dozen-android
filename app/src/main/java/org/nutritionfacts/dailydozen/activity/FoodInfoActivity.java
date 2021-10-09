@@ -7,7 +7,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
@@ -83,10 +82,10 @@ public class FoodInfoActivity extends InfoActivity {
     private void initServingTypes(final Food food) {
         final List<String> servingSizes = FoodInfo.getServingSizes(food.getIdName(),
                 Prefs.getInstance(this).getUnitTypePref());
-        final FoodServingsAdapter adapter = new FoodServingsAdapter(servingSizes);
 
         initChangeUnitsButton();
-        initList(binding.foodServingSizes, adapter);
+        binding.foodServingSizes.setAdapter(new FoodServingsAdapter(servingSizes));
+        binding.foodServingSizes.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
 
     private void initChangeUnitsButton() {
@@ -97,14 +96,9 @@ public class FoodInfoActivity extends InfoActivity {
     private void initFoodTypes(String foodName) {
         final List<String> foods = FoodInfo.getTypesOfFood(foodName);
         final List<String> videos = FoodInfo.getFoodVideosLink(foodName);
-        final RecyclerView.Adapter adapter = new FoodTypeAdapter(foods, videos);
 
-        initList(binding.foodTypes, adapter);
-    }
-
-    private void initList(final RecyclerView list, final RecyclerView.Adapter adapter) {
-        list.setAdapter(adapter);
-        list.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        binding.foodTypes.setAdapter(new FoodTypeAdapter(foods, videos));
+        binding.foodTypes.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
 
     private void openVideosInBrowser() {
