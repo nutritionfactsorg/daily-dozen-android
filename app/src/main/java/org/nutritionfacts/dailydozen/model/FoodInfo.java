@@ -412,7 +412,7 @@ public class FoodInfo {
     }
 
     public static List<String> getFoodVideosLink(final String foodName) {
-        return foodVideos.containsKey(foodName) ? foodVideos.get(foodName) : new ArrayList<String>();
+        return foodVideos.containsKey(foodName) ? foodVideos.get(foodName) : new ArrayList<>();
     }
 
     private static void putFoodVideosLink(Resources res, String food, int videosId) {
