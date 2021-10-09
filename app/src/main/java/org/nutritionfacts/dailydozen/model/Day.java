@@ -97,7 +97,7 @@ public class Day extends TruncatableModel {
     }
 
     private void setDate(DateTime dateTime) {
-        this.date = Long.valueOf(getDateString(dateTime));
+        this.date = Long.parseLong(getDateString(dateTime));
 
         this.year = dateTime.getYear();
         this.month = dateTime.getMonth();
