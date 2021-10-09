@@ -67,8 +67,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Danos tu opinión en la Play Store.</string>
     <string name="rate_now">Dar mi opinión</string>
     <string name="not_now">Ahora no</string>
-    <string name="format_version" formatted="false">versión %s</string>
-    <string name="format_num_days" formatted="false">%d días</string>
+    <string name="format_version">versión %1$s</string>
+    <string name="format_num_days">%1$d días</string>
     <string name="daily_reminder_title">Recordatorio de la Docena Diaria</string>
     <string name="daily_reminder_text">Actualiza las porciones de hoy</string>
     <string name="daily_reminder_settings">Ajustes del recordatorio diario</string>

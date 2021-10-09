@@ -67,8 +67,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Vi preghiamo di darci un feedback nel Play Store.</string>
     <string name="rate_now">Dare un feedback</string>
     <string name="not_now">Non adesso</string>
-    <string name="format_version" formatted="false">versione %s</string>
-    <string name="format_num_days" formatted="false">%d giorni</string>
+    <string name="format_version">versione %1$s</string>
+    <string name="format_num_days">%1$d giorni</string>
     <string name="daily_reminder_title">Promemoria quotidiano Dozen</string>
     <string name="daily_reminder_text">Aggiorna le tue porzioni di oggi</string>
     <string name="daily_reminder_settings">Impostazioni promemoria quotidiano</string>

@@ -67,8 +67,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Por favor, dê-nos feedback na Play Store.</string>
     <string name="rate_now">Deixar Feedback</string>
     <string name="not_now">Agora não</string>
-    <string name="format_version" formatted="false">versão %s</string>
-    <string name="format_num_days" formatted="false">%d dias</string>
+    <string name="format_version">versão %1$s</string>
+    <string name="format_num_days">%1$d dias</string>
     <string name="daily_reminder_title">Lembrete do Daily Dozen</string>
     <string name="daily_reminder_text">Atualize as suas porções de hoje</string>
     <string name="daily_reminder_settings">Configurações do Lembrete Diário</string>

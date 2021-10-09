@@ -66,8 +66,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Zostaw nam opinię w sklepie Play.</string>
     <string name="rate_now">Zostaw opinię</string>
     <string name="not_now">Nie teraz</string>
-    <string name="format_version" formatted="false">wersja %s</string>
-    <string name="format_num_days" formatted="false">%d dni</string>
+    <string name="format_version">wersja %1$s</string>
+    <string name="format_num_days">%1$d dni</string>
     <string name="daily_reminder_title">Przypomnienie Codzienny Tuzin</string>
     <string name="daily_reminder_text">Zaktualizuj swoje dzisiejsze porcje</string>
     <string name="daily_reminder_settings">Ustawienia codziennych przypomnień</string>

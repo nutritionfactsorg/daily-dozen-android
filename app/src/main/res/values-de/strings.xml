@@ -39,8 +39,8 @@
     <string name="history_to_generate">Zu erstellender Verlauf</string>
     <string name="history">Verlauf</string>
     <string name="greens">Blattgemüse</string>
-    <string name="format_version" formatted="false">Version %s</string>
-    <string name="format_num_days" formatted="false">%d Tage</string>
+    <string name="format_version">Version %1$s</string>
+    <string name="format_num_days">%1$d Tage</string>
     <string name="food_info">Lebensmittelinfo</string>
     <string name="food_history">Lebensmittel-Verlauf</string>
     <string name="flaxseeds">Leinsamen</string>

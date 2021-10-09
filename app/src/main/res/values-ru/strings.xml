@@ -68,8 +68,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Ждём Ваших отзывов в Play Store.</string>
     <string name="rate_now">Оставить Отзыв</string>
     <string name="not_now">Не Сейчас</string>
-    <string name="format_version" formatted="false">версия %s</string>
-    <string name="format_num_days" formatted="false">%d дней</string>
+    <string name="format_version">версия %1$s</string>
+    <string name="format_num_days">%1$d дней</string>
     <string name="daily_reminder_title">Напоминания Daily Dozen</string>
     <string name="daily_reminder_text">Отметь сегодняшние порции</string>
     <string name="daily_reminder_settings">Настройки Ежедневных Напоминаний</string>
