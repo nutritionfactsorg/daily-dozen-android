@@ -74,7 +74,7 @@ public class HistoryActivity extends InfoActivity {
         partialServingsDates = new ArrayList<>();
 
         binding.calendarView.setOnDateChangedListener((widget, date, selected) -> {
-            setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(DateUtil.getCalendarForYearMonthAndDay(date.getYear(), date.getMonth(), date.getDay()).getTime()));
+            setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(date.getYear(), date.getMonth(), date.getDay()));
             finish();
         });
 

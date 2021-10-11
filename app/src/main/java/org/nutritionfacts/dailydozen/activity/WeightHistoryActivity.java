@@ -29,8 +29,6 @@ import org.nutritionfacts.dailydozen.task.ProgressListener;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 
-import java.util.Date;
-
 import timber.log.Timber;
 
 public class WeightHistoryActivity extends AppCompatActivity
@@ -165,7 +163,10 @@ public class WeightHistoryActivity extends AppCompatActivity
 
     @Override
     public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
-        setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent((Date) e.getData()));
+        setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(
+                binding.dailyServingsHistoryTimeRange.getSelectedYear(),
+                binding.dailyServingsHistoryTimeRange.getSelectedMonth(),
+                e.getXIndex() + 1)); // convert x-index (0-based index) to days by adding 1
         finish();
     }
 
