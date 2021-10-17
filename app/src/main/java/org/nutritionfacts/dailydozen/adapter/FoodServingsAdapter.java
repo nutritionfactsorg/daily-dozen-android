@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.nutritionfacts.dailydozen.Common;
@@ -19,6 +20,7 @@ public class FoodServingsAdapter extends RecyclerView.Adapter<FoodServingsAdapte
         this.servingSizes = servingSizes;
     }
 
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         final View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
@@ -26,7 +28,7 @@ public class FoodServingsAdapter extends RecyclerView.Adapter<FoodServingsAdapte
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final String servingSize = servingSizes.get(position);
 
         if (!TextUtils.isEmpty(servingSize)) {

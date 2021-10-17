@@ -27,6 +27,7 @@ public class DateUtil {
         final Calendar cal = getCalendarForToday();
         cal.set(Calendar.YEAR, year);
         cal.set(Calendar.MONTH, monthZeroBased);
+        cal.set(Calendar.DAY_OF_MONTH, 1);
         return cal;
     }
 

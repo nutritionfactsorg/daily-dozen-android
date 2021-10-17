@@ -22,13 +22,12 @@ import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
 import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadWeightsHistoryTask;
 import org.nutritionfacts.dailydozen.task.ProgressListener;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
-
-import java.util.Date;
 
 import timber.log.Timber;
 
@@ -83,6 +82,7 @@ public class WeightHistoryActivity extends AppCompatActivity
             alreadyLoadingData = true;
 
             LoadHistoryTaskParams loadHistoryTaskParams = new LoadHistoryTaskParams(
+                    HistoryType.Weights,
                     TimeScale.DAYS,
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
                     binding.dailyServingsHistoryTimeRange.getSelectedMonth());
@@ -163,7 +163,10 @@ public class WeightHistoryActivity extends AppCompatActivity
 
     @Override
     public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
-        setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent((Date) e.getData()));
+        setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(
+                binding.dailyServingsHistoryTimeRange.getSelectedYear(),
+                binding.dailyServingsHistoryTimeRange.getSelectedMonth(),
+                e.getXIndex() + 1)); // convert x-index (0-based index) to days by adding 1
         finish();
     }
 

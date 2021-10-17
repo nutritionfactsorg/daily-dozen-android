@@ -3,6 +3,8 @@ package org.nutritionfacts.dailydozen.model.pref;
 import android.content.Context;
 import android.text.TextUtils;
 
+import androidx.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
 
 import org.nutritionfacts.dailydozen.util.DateUtil;
@@ -64,6 +66,7 @@ public class UpdateReminderPref {
         return reminderTimes;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return TextUtils.join(", ", reminderTimes);
@@ -141,7 +144,9 @@ public class UpdateReminderPref {
         private int timeInMillis(String time, DateFormat format) {
             try {
                 Date date = format.parse(time);
-                return (int) date.getTime();
+                if (date != null) {
+                    return (int) date.getTime();
+                }
             } catch (ParseException e) {
                 if (format != twentyFourHourFormat) {
                     return timeInMillis(time, twentyFourHourFormat);

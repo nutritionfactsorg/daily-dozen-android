@@ -22,8 +22,7 @@ import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
-import org.nutritionfacts.dailydozen.adapter.DailyDozenPagerAdapter;
-import org.nutritionfacts.dailydozen.adapter.TweaksPagerAdapter;
+import org.nutritionfacts.dailydozen.adapter.DatePagerAdapter;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.controller.Prefs;
@@ -123,6 +122,8 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         // morning to enter data. The app crashed immediately.
         // Solutions tried: datePagerAdapter.notifyDataSetChanged() did not work
         if (daysSinceEpoch < Day.getNumDaysSinceEpoch()) {
+            // Reset user selection so today's date is selected
+            binding.datePager.setCurrentItem(0);
             initDatePager();
         }
 
@@ -140,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putBoolean(ALREADY_HANDLED_RESTORE_INTENT, alreadyHandledRestoreIntent);
     }
@@ -186,57 +187,56 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_toggle_modes:
-                inDailyDozenMode = !inDailyDozenMode;
-                if (inDailyDozenMode) {
-                    setTitle(R.string.app_name);
-                    item.setTitle(R.string.twenty_one_tweaks);
-                } else {
-                    setTitle(R.string.twenty_one_tweaks);
-                    item.setTitle(R.string.app_name);
-                }
-                initDatePager();
-                return true;
-            case R.id.menu_latest_videos:
-                Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);
-                return true;
-            case R.id.menu_how_not_to_die:
-                Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_die);
-                return true;
-            case R.id.menu_cookbook:
-                Common.openUrlInExternalBrowser(this, R.string.url_cookbook);
-                return true;
-            case R.id.menu_how_not_to_diet:
-                Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_diet);
-                return true;
-            case R.id.menu_daily_dozen_challenge:
-                Common.openUrlInExternalBrowser(this, R.string.url_daily_dozen_challenge);
-                return true;
-            case R.id.menu_donate:
-                Common.openUrlInExternalBrowser(this, R.string.url_donate);
-                return true;
-            case R.id.menu_subscribe:
-                Common.openUrlInExternalBrowser(this, R.string.url_subscribe);
-                return true;
-            case R.id.menu_open_source:
-                Common.openUrlInExternalBrowser(this, R.string.url_open_source);
-                return true;
-            case R.id.menu_daily_reminder_settings:
-                startActivity(new Intent(this, DailyReminderSettingsActivity.class));
-                return true;
-            case R.id.menu_backup:
-                backup();
-                return true;
-            case R.id.menu_about:
-                startActivity(new Intent(this, AboutActivity.class));
-                return true;
-            case R.id.menu_debug:
-                startActivityForResult(new Intent(this, DebugActivity.class), Args.DEBUG_SETTINGS_REQUEST);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+        if (itemId == R.id.menu_toggle_modes) {
+            inDailyDozenMode = !inDailyDozenMode;
+            if (inDailyDozenMode) {
+                setTitle(R.string.app_name);
+                item.setTitle(R.string.twenty_one_tweaks);
+            } else {
+                setTitle(R.string.twenty_one_tweaks);
+                item.setTitle(R.string.app_name);
+            }
+            initDatePager();
+            return true;
+        } else if (itemId == R.id.menu_latest_videos) {
+            Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);
+            return true;
+        } else if (itemId == R.id.menu_how_not_to_die) {
+            Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_die);
+            return true;
+        } else if (itemId == R.id.menu_cookbook) {
+            Common.openUrlInExternalBrowser(this, R.string.url_cookbook);
+            return true;
+        } else if (itemId == R.id.menu_how_not_to_diet) {
+            Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_diet);
+            return true;
+        } else if (itemId == R.id.menu_daily_dozen_challenge) {
+            Common.openUrlInExternalBrowser(this, R.string.url_daily_dozen_challenge);
+            return true;
+        } else if (itemId == R.id.menu_donate) {
+            Common.openUrlInExternalBrowser(this, R.string.url_donate);
+            return true;
+        } else if (itemId == R.id.menu_subscribe) {
+            Common.openUrlInExternalBrowser(this, R.string.url_subscribe);
+            return true;
+        } else if (itemId == R.id.menu_open_source) {
+            Common.openUrlInExternalBrowser(this, R.string.url_open_source);
+            return true;
+        } else if (itemId == R.id.menu_daily_reminder_settings) {
+            startActivity(new Intent(this, DailyReminderSettingsActivity.class));
+            return true;
+        } else if (itemId == R.id.menu_backup) {
+            backup();
+            return true;
+        } else if (itemId == R.id.menu_about) {
+            startActivity(new Intent(this, AboutActivity.class));
+            return true;
+        } else if (itemId == R.id.menu_debug) {
+            startActivityForResult(new Intent(this, DebugActivity.class), Args.DEBUG_SETTINGS_REQUEST);
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -257,17 +257,18 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     }
 
     private void initDatePager() {
+        // Record user's current date selection (value is 0 when unset)
+        int origDate = binding.datePager.getCurrentItem();
+
         final FragmentStatePagerAdapter pagerAdapter;
-        if (inDailyDozenMode) {
-            pagerAdapter = new DailyDozenPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        } else {
-            pagerAdapter = new TweaksPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        }
+
+        pagerAdapter = new DatePagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, inDailyDozenMode);
+
         binding.datePager.setAdapter(pagerAdapter);
         daysSinceEpoch = pagerAdapter.getCount();
 
-        // Go to today's date by default
-        binding.datePager.setCurrentItem(pagerAdapter.getCount(), false);
+        // Maintain user's selected date when switching adapters
+        binding.datePager.setCurrentItem(origDate != 0 ? origDate : daysSinceEpoch, false);
     }
 
     private void initDatePagerIndicator() {

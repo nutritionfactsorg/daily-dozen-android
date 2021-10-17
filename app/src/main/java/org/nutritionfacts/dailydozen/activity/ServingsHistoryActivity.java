@@ -22,13 +22,12 @@ import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
 import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
-import org.nutritionfacts.dailydozen.task.LoadServingsHistoryTask;
+import org.nutritionfacts.dailydozen.task.LoadHistoryTask;
 import org.nutritionfacts.dailydozen.task.ProgressListener;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
-
-import java.util.Date;
 
 import timber.log.Timber;
 
@@ -82,10 +81,11 @@ public class ServingsHistoryActivity extends AppCompatActivity
             alreadyLoadingData = true;
 
             LoadHistoryTaskParams loadHistoryTaskParams = new LoadHistoryTaskParams(
+                    HistoryType.FoodServings,
                     binding.dailyServingsHistoryTimeScale.getSelectedTimeScale(),
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
                     binding.dailyServingsHistoryTimeRange.getSelectedMonth());
-            new TaskRunner().executeAsync(new LoadServingsHistoryTask(this, this, loadHistoryTaskParams));
+            new TaskRunner().executeAsync(new LoadHistoryTask(this, this, loadHistoryTaskParams));
         }
     }
 
@@ -164,7 +164,10 @@ public class ServingsHistoryActivity extends AppCompatActivity
 
     @Override
     public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
-        setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent((Date) e.getData()));
+        setResult(Args.SELECTABLE_DATE_REQUEST, Common.createShowDateIntent(
+                binding.dailyServingsHistoryTimeRange.getSelectedYear(),
+                binding.dailyServingsHistoryTimeRange.getSelectedMonth(),
+                e.getXIndex() + 1)); // convert x-index (0-based index) to days by adding 1
         finish();
     }
 

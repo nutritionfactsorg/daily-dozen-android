@@ -45,7 +45,7 @@ public class DailyDozenFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentDailyDozenBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
@@ -138,18 +138,14 @@ public class DailyDozenFragment extends Fragment {
         binding.explodingStar.runAnimation(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationCancel(Animator animation) {
-                if (binding.explodingStar != null) {
-                    binding.explodingStar.cancelAnimation();
-                }
+                binding.explodingStar.cancelAnimation();
             }
 
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
 
-                if (binding.explodingStarContainer != null) {
-                    binding.explodingStarContainer.setVisibility(View.GONE);
-                }
+                binding.explodingStarContainer.setVisibility(View.GONE);
 
                 askUserToRateAfterFirstStarExplosion();
             }

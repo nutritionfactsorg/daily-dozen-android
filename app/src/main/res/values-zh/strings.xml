@@ -67,8 +67,8 @@
     <string name="dialog_ask_user_to_rate_app_message">請在應用程式商店中給我們指教。</string>
     <string name="rate_now">我有意見</string>
     <string name="not_now">稍後再說</string>
-    <string name="format_version" formatted="false">版本 %s</string>
-    <string name="format_num_days" formatted="false">%d 天</string>
+    <string name="format_version">版本 %1$s</string>
+    <string name="format_num_days">%1$d 天</string>
     <string name="daily_reminder_title">每日十二要素提醒</string>
     <string name="daily_reminder_text">更新您的今日份量</string>
     <string name="daily_reminder_settings">每日提醒設定</string>

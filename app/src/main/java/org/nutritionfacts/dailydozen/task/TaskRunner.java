@@ -13,7 +13,7 @@ public class TaskRunner {
     public <R> void executeAsync(CustomCallable<R> callable) {
         try {
             callable.setUiForLoading();
-            executor.execute(new RunnableTask<R>(handler, callable));
+            executor.execute(new RunnableTask<>(handler, callable));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -32,7 +32,7 @@ public class TaskRunner {
         public void run() {
             try {
                 final R result = callable.call();
-                handler.post(new RunnableTaskForHandler(callable, result));
+                handler.post(new RunnableTaskForHandler<>(callable, result));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -40,8 +40,8 @@ public class TaskRunner {
     }
 
     public static class RunnableTaskForHandler<R> implements Runnable {
-        private CustomCallable<R> callable;
-        private R result;
+        private final CustomCallable<R> callable;
+        private final R result;
 
         public RunnableTaskForHandler(CustomCallable<R> callable, R result) {
             this.callable = callable;

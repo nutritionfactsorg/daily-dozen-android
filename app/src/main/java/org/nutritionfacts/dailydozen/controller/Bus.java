@@ -66,7 +66,7 @@ public class Bus {
         post(new CalculateStreaksTaskCompleteEvent(success));
     }
 
-    public static void loadServingsHistoryCompleteEvent(final LoadHistoryCompleteEvent event) {
+    public static void loadHistoryCompleteEvent(final LoadHistoryCompleteEvent event) {
         post(event);
     }
 

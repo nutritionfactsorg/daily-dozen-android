@@ -68,8 +68,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Spuneți-ne părerea în Magazinul Play.</string>
     <string name="rate_now">Trimiteți părerea</string>
     <string name="not_now">Nu acum</string>
-    <string name="format_version" formatted="false">versiune %s</string>
-    <string name="format_num_days" formatted="false">%d zile</string>
+    <string name="format_version">versiune %1$s</string>
+    <string name="format_num_days">%1$d zile</string>
     <string name="daily_reminder_title">Daily Dozen memento</string>
     <string name="daily_reminder_text">Actualizați-vă porțile pentru ziua de azi</string>
     <string name="daily_reminder_settings">Setările pentru mementourile zilnice</string>

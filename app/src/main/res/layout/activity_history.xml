@@ -49,20 +49,20 @@
                     <TextView
                         android:text="@string/servings_some"
                         android:drawablePadding="5dp"
-                        android:drawableLeft="@drawable/legend_icon_less_than_recommended_servings"
-                        android:drawableStart="@drawable/legend_icon_less_than_recommended_servings"
                         android:layout_weight="1"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        app:drawableLeftCompat="@drawable/legend_icon_less_than_recommended_servings"
+                        app:drawableStartCompat="@drawable/legend_icon_less_than_recommended_servings" />
 
                     <TextView
                         android:text="@string/servings_all"
                         android:drawablePadding="5dp"
-                        android:drawableLeft="@drawable/legend_icon_recommended_servings"
-                        android:drawableStart="@drawable/legend_icon_recommended_servings"
                         android:layout_weight="1"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        app:drawableStartCompat="@drawable/legend_icon_recommended_servings"
+                        app:drawableLeftCompat="@drawable/legend_icon_recommended_servings" />
 
                 </LinearLayout>
 

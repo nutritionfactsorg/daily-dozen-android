@@ -1,18 +1,28 @@
 package org.nutritionfacts.dailydozen.task.params;
 
+import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 
 public class LoadHistoryTaskParams {
+    @HistoryType.Interface
+    private final int historyType;
+
     @TimeScale.Interface
-    private int timeScale;
+    private final int timeScale;
 
-    private int selectedYear;
-    private int selectedMonth;
+    private final int selectedYear;
+    private final int selectedMonth;
 
-    public LoadHistoryTaskParams(@TimeScale.Interface int timeScale, int selectedYear, int selectedMonth) {
+    public LoadHistoryTaskParams(@HistoryType.Interface int historyType, @TimeScale.Interface int timeScale, int selectedYear, int selectedMonth) {
+        this.historyType = historyType;
         this.timeScale = timeScale;
         this.selectedYear = selectedYear;
         this.selectedMonth = selectedMonth;
+    }
+
+    @HistoryType.Interface
+    public int getHistoryType() {
+        return historyType;
     }
 
     @TimeScale.Interface
@@ -27,5 +37,4 @@ public class LoadHistoryTaskParams {
     public int getSelectedMonth() {
         return selectedMonth;
     }
-
 }

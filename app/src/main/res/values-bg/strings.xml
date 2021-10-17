@@ -67,8 +67,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Моля, дайте ни обратна връзка в Google Play Store.</string>
     <string name="rate_now">Изпратете обратна информация</string>
     <string name="not_now">Пропусни</string>
-    <string name="format_version" formatted="false">версия %s</string>
-    <string name="format_num_days" formatted="false">%d дни</string>
+    <string name="format_version">версия %s</string>
+    <string name="format_num_days">%d дни</string>
     <string name="daily_reminder_title">Напомняне за Daily Dozen</string>
     <string name="daily_reminder_text">Актуализиране на вашите порции за днес</string>
     <string name="daily_reminder_settings">Настройки за напомняне</string>

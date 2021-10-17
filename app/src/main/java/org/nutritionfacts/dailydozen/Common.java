@@ -15,10 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
 
-import org.nutritionfacts.dailydozen.activity.FoodHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
+import org.nutritionfacts.dailydozen.activity.HistoryActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
-import org.nutritionfacts.dailydozen.activity.TweakHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.TweakInfoActivity;
 import org.nutritionfacts.dailydozen.activity.TweakServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.WeightHistoryActivity;
@@ -29,8 +28,7 @@ import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.model.Weights;
-
-import java.util.Date;
+import org.nutritionfacts.dailydozen.util.DateUtil;
 
 public class Common {
     public static final String FILE_PROVIDER_AUTHORITY = "org.nutritionfacts.dailydozen.fileprovider";
@@ -137,9 +135,9 @@ public class Common {
         return intent;
     }
 
-    public static Intent createShowDateIntent(final Date date) {
+    public static Intent createShowDateIntent(final int year, final int month, final int day) {
         final Intent showDateIntent = new Intent();
-        showDateIntent.putExtra(Args.DATE, date);
+        showDateIntent.putExtra(Args.DATE, DateUtil.getCalendarForYearMonthAndDay(year, month, day).getTime());
         return showDateIntent;
     }
 
@@ -160,11 +158,11 @@ public class Common {
     }
 
     public static void openFoodHistory(final Context context, final Food food) {
-        startSelectableDateActivity(context, createFoodIntent(context, FoodHistoryActivity.class, food));
+        startSelectableDateActivity(context, createFoodIntent(context, HistoryActivity.class, food));
     }
 
     public static void openTweakHistory(final Context context, final Tweak tweak) {
-        startSelectableDateActivity(context, createTweakIntent(context, TweakHistoryActivity.class, tweak));
+        startSelectableDateActivity(context, createTweakIntent(context, HistoryActivity.class, tweak));
     }
 
     public static void openServingsHistory(final Context context) {

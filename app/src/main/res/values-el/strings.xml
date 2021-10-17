@@ -67,8 +67,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Παρακαλώ δώστε μας τα σχόλιά στο Play Store.</string>
     <string name="rate_now">Αποστολή σχολίων</string>
     <string name="not_now">Όχι τώρα</string>
-    <string name="format_version" formatted="false">εκδοχή %s</string>
-    <string name="format_num_days" formatted="false">%d ημέρες</string>
+    <string name="format_version">εκδοχή %1$s</string>
+    <string name="format_num_days">%1$d ημέρες</string>
     <string name="daily_reminder_title">Υπενθύμιση Daily Dozen</string>
     <string name="daily_reminder_text">Ενημερώστε τις μερίδες σας για σήμερα</string>
     <string name="daily_reminder_settings">Ρυθμίσεις Καθημερινής Υπενθύμισης</string>

@@ -2,20 +2,33 @@ package org.nutritionfacts.dailydozen.task;
 
 import com.activeandroid.ActiveAndroid;
 
+import org.nutritionfacts.dailydozen.Servings;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
+import org.nutritionfacts.dailydozen.model.Tweak;
+import org.nutritionfacts.dailydozen.model.TweakServings;
 
 import java.util.List;
 
 public class CalculateStreakTask extends BaseTask<Boolean> {
     private final Day startingDay;
-    private final Food food;
+    private Food food;
+    private Tweak tweak;
+
+    private boolean isFoodStreak;
 
     public CalculateStreakTask(StreakTaskInput input) {
         this.startingDay = input.getStartingDay();
-        this.food = input.getFood();
+
+        if (input.getFood() != null) {
+            isFoodStreak = true;
+            this.food = input.getFood();
+        } else if (input.getTweak() != null) {
+            isFoodStreak = false;
+            this.tweak = input.getTweak();
+        }
     }
 
     @Override
@@ -29,7 +42,13 @@ public class CalculateStreakTask extends BaseTask<Boolean> {
             for (int i = 0; i < numDays; i++) {
                 final Day day = daysToCalculate.get(i);
 
-                final DDServings servingsOnDate = DDServings.getByDateAndFood(day, food);
+                Servings servingsOnDate;
+                if (isFoodStreak) {
+                    servingsOnDate = DDServings.getByDateAndFood(day, food);
+                } else {
+                    servingsOnDate = TweakServings.getByDateAndTweak(day, tweak);
+                }
+
                 if (servingsOnDate != null) {
                     servingsOnDate.recalculateStreak();
                     servingsOnDate.save();
@@ -47,7 +66,11 @@ public class CalculateStreakTask extends BaseTask<Boolean> {
     @Override
     public void setDataAfterLoading(Boolean success) {
         if (success) {
-            Bus.foodServingsChangedEvent(startingDay, food);
+            if (isFoodStreak) {
+                Bus.foodServingsChangedEvent(startingDay, food);
+            } else {
+                Bus.tweakServingsChangedEvent(startingDay, tweak);
+            }
         }
     }
 }

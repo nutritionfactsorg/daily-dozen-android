@@ -2,6 +2,8 @@ package org.nutritionfacts.dailydozen.model;
 
 import android.text.TextUtils;
 
+import androidx.annotation.NonNull;
+
 import com.activeandroid.ActiveAndroid;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
@@ -53,6 +55,7 @@ public class Tweak extends TruncatableModel implements RDA {
         this.recommendedAmount = recommendedAmount;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return name;

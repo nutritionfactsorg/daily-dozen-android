@@ -8,7 +8,6 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.nutritionfacts.dailydozen.Args;
-import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Tweak;
 
@@ -46,13 +45,11 @@ public abstract class InfoActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     private void loadFoodOrTweakFromIntent() {
@@ -65,7 +62,9 @@ public abstract class InfoActivity extends AppCompatActivity {
             }
 
             tweak = Tweak.getById(intent.getLongExtra(Args.TWEAK_ID, -1));
-            setTitle(R.string.about_tweak);
+            if (tweak != null) {
+                setTitle(tweak.getName());
+            }
         }
     }
 }

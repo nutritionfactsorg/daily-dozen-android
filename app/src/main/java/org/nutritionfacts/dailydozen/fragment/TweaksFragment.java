@@ -41,7 +41,7 @@ public class TweaksFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentTweaksBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }

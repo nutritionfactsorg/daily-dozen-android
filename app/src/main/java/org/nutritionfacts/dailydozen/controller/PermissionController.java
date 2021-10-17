@@ -26,10 +26,8 @@ public class PermissionController {
     public static boolean grantedWriteExternalStorage(int requestCode, int[] grantResults) {
         boolean permissionGranted = false;
 
-        switch (requestCode) {
-            case WRITE_EXTERNAL_STORAGE_REQUEST:
-                permissionGranted = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
-                break;
+        if (requestCode == WRITE_EXTERNAL_STORAGE_REQUEST) {
+            permissionGranted = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
         }
 
         return permissionGranted;

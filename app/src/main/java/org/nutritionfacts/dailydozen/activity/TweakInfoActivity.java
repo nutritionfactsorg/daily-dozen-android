@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 
 import org.nutritionfacts.dailydozen.Common;
+import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.databinding.ActivityTweakInfoBinding;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Tweak;
@@ -30,6 +31,8 @@ public class TweakInfoActivity extends InfoActivity {
     }
 
     private void displayTweakInfo() {
+        setTitle(R.string.about_tweak);
+
         final Tweak tweak = getTweak();
 
         if (tweak != null && !TextUtils.isEmpty(tweak.getName())) {

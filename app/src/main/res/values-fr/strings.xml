@@ -68,8 +68,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Veuillez nous faire part de vos commentaires dans le Play Store.</string>
     <string name="rate_now">Envoyer un commentaire</string>
     <string name="not_now">Pas maintenant</string>
-    <string name="format_version" formatted="false">version %s</string>
-    <string name="format_num_days" formatted="false">%d jours</string>
+    <string name="format_version">version %1$s</string>
+    <string name="format_num_days">%1$d jours</string>
     <string name="daily_reminder_title">Rappel journalier</string>
     <string name="daily_reminder_text">Mettez à jour vos portions pour aujourd\'hui</string>
     <string name="daily_reminder_settings">Paramètres du rappel quotidien</string>
