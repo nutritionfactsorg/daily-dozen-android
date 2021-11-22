@@ -1,85 +1,261 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <resources>
-    <string name="app_name">Daily Dozen</string>
-
+    <string name="app_name">Не Сдохни!</string>
     <string name="beans">Бобовые</string>
     <string name="berries">Ягоды</string>
-    <string name="other_fruits">Фрукты</string>
-    <string name="cruciferous_vegetables">Капустные</string>
+    <string name="other_fruits">Другие Фрукты</string>
+    <string name="cruciferous_vegetables">Крестоцветные Овощи</string>
     <string name="greens">Листовые Овощи</string>
     <string name="other_vegetables">Прочие Овощи</string>
-    <string name="flaxseeds">Семена Льна</string>
-    <string name="nuts">Орехи</string>
-    <string name="spices">Пряности</string>
+    <string name="flaxseeds">Семена льна</string>
+    <string name="nuts">Орехи и Семена</string>
+    <string name="spices">Травы и Специи</string>
     <string name="whole_grains">Цельнозерновые Продукты</string>
     <string name="beverages">Напитки</string>
     <string name="exercise">Физические Упражнения</string>
     <string name="vitamin_b12">Витамин B12</string>
-    <string name="serving_sizes">Размеры Порций</string>
+    <string name="serving_sizes">Размер порции</string>
     <string name="types">Типы</string>
     <string name="history">История</string>
-    <string name="servings_some">Часть плана</string>
-    <string name="servings_all">Весь план</string>
+    <string name="servings_some">Некоторые порции</string>
+    <string name="servings_all">Все порции</string>
     <string name="servings">Порции</string>
     <string name="out_of">из</string>
-    <string name="moving_average">Скользящее Среднее</string>
-    <string name="about">О Приложении</string>
-    <string name="about_this_app">О приложении</string>
-    <string name="latest_videos">Новые Видео</string>
-    <string name="donate">Поддержать</string>
-    <string name="subscribe">Подписаться</string>
-    <string name="open_source">Open Source</string>
-    <string name="permission_needed_to_write_storage">Не могу сделать резервную копию без права на запись в хранилище телефона</string>
-    <string name="backup_failed">Резервное копирование не удалось</string>
-    <string name="restore_failed">Не удалось восстановить данные</string>
-    <string name="backup_success">Резервное копирование выполнено</string>
-    <string name="restore_success">Восстановление данных выполнено</string>
-    <string name="restore_confirm_title">Восстановление Данных Из Резервной Копии</string>
-    <string name="restore_confirm_message">Все текущие данные будут удалены перед резервным восстановлением. Продолжить?</string>
+    <string name="moving_average">Средняя подвижность</string>
+    <string name="about">О нас</string>
+    <string name="about_this_app">Об этом приложении</string>
+    <string name="latest_videos">Последние видео</string>
+    <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
+    <string name="title_how_not_to_die" translatable="false">How Not to Die</string>
+    <string name="url_how_not_to_die" translatable="false">http://nutritionfacts.org/book/</string>
+    <string name="title_cookbook" translatable="false">Cookbook</string>
+    <string name="url_cookbook" translatable="false">https://nutritionfacts.org/cookbook/</string>
+    <string name="title_how_not_to_diet" translatable="false">How Not to Diet</string>
+    <string name="url_how_not_to_diet" translatable="false">https://nutritionfacts.org/how-not-to-diet/</string>
+    <string name="daily_dozen_challenge" translatable="false">Daily Dozen Challenge</string>
+    <string name="url_daily_dozen_challenge" translatable="false">https://nutritionfacts.org/daily-dozen-challenge/</string>
+    <string name="donate">Сделайте пожертвование</string>
+    <string name="url_donate" translatable="false">https://nutritionfacts.org/donate/</string>
+    <string name="subscribe">Подпишитесь</string>
+    <string name="url_subscribe" translatable="false">http://nutritionfacts.org/subscribe/</string>
+    <string name="open_source">Открытое программное обеспечение</string>
+    <string name="url_open_source" translatable="false">http://nutritionfacts.org/open-source/</string>
+    <string name="nutritionfacts_title" translatable="false">nutritionfacts.org</string>
+    <string name="url_nutritionfacts" translatable="false">http://nutritionfacts.org</string>
+    <string name="name_john_slavick" translatable="false">John Slavick</string>
+    <string name="url_john_slavick" translatable="false">http://johnslavick.com</string>
+    <string name="library_activeandroid" translatable="false">ActiveAndroid</string>
+    <string name="library_android_iconify" translatable="false">android-iconify</string>
+    <string name="library_eventbus" translatable="false">EventBus</string>
+    <string name="library_likeanimation" translatable="false">LikeAnimation</string>
+    <string name="library_mpandroidchart" translatable="false">MPAndroidChart</string>
+    <string name="url_activeandroid" translatable="false">https://github.com/pardom/ActiveAndroid</string>
+    <string name="url_android_iconify" translatable="false">https://github.com/JoanZapata/android-iconify</string>
+    <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
+    <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
+    <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
+    <string name="permission_needed_to_write_storage">Невозможно сделать резервную копию без разрешения на запись в хранилище</string>
+    <string name="backup_failed">Сбой создания резервной копии</string>
+    <string name="restore_failed">Сбой восстановления из резервной копии</string>
+    <string name="backup_success">Резервная копия была создана успешно</string>
+    <string name="restore_success">Восстановление из резервной копии прошло успешно</string>
+    <string name="restore_confirm_title">Восстановить резервную копию</string>
+    <string name="restore_confirm_message">Все существующие данные будут удалены перед восстановлением из резервной копии. Вы хотите продолжить?</string>
+    <string name="backup_mimetype" translatable="false">message/rfc822</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
-    <string name="backup">Резервная Копия Данных</string>
-    <string name="food_info">Food Info</string>
-    <string name="food_history">Food History</string>
-    <string name="daily_servings_history">Выполнение Плана По Дням</string>
-    <string name="no_servings_recorded">Вы не отметили ни одной порции!</string>
-    <string name="task_backup_title">Копирую</string>
-    <string name="task_restore_title">Восстанавливаю</string>
-    <string name="task_calculating_streaks_title">Просчитываю полосы</string>
-    <string name="back_to_today">Назад к сегодняшней дате</string>
+    <string name="backup">Резервная копия</string>
+    <string name="food_info">Еда Информация</string>
+    <string name="food_history">Еда История</string>
+    <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
+    <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
+    <string name="num_servings_max" translatable="false">24</string>
+    <string name="icon_chart" translatable="false">{fa-bar-chart 20dp @color/gray_dark}</string>
+    <string name="daily_servings_history">Ежедневные порции История</string>
+    <string name="no_servings_recorded">Вы еще не отметили ни одной порции!</string>
+    <string name="task_backup_title">Создание резервной копии</string>
+    <string name="task_restore_title">Восстановление</string>
+    <string name="task_calculating_streaks_title">Оценка прогресса</string>
+    <string name="back_to_today">Обратно к Сегодня</string>
     <string name="debug">Отладка</string>
-    <string name="debug_clear_data">Удалить все данные</string>
-    <string name="debug_clear_data_message">Это удалит все данные о прогрессе. Продолжить?</string>
-    <string name="OK">OK</string>
-    <string name="dialog_streaks_title">Новая функция: Полосы!</string>
-    <string name="dialog_streaks_message">Ваша база данных сейчас будет обновлена для поддержки новой функции "полосы".</string>
-    <string name="dialog_no_email_apps_title">Email приложения не обнаружены</string>
-    <string name="dialog_no_email_apps_message">Резервное копирование Ваших данных требует установленного email приложения для отправки резервного .csv файла на Вашу электронную почту. Пожалуйста, установите email приложение и повторите попытку.</string>
-    <string name="debug_generate_random_data">Сгенерировать случайные данные</string>
-    <string name="debug_generate_full_data">Сгенерировать все данные</string>
-    <string name="debug_generate_data_message">Все существующие данные будут замещены. Продолжить?</string>
-    <string name="task_generating_random_data">Генерирую случайные данные</string>
-    <string name="task_loading_servings_history_title">Загружаю Историю Выполнения Плана</string>
-    <string name="time_scale">Масштаб Времени</string>
-    <string name="history_to_generate">История Для Генерации</string>
-    <string name="welcome_to_my_daily_dozen">Приветствую Вас в Daily Dozen!</string>
-    <string name="activity_welcome_text">Это приложение предназначено для ежедневного отслеживания еды, рекомендованной мной для оптимального здоровья и долголетия в моей книге How Not to Die.</string>
-    <string name="dialog_ask_user_to_rate_app_title">Нравится это приложение?</string>
-    <string name="dialog_ask_user_to_rate_app_message">Ждём Ваших отзывов в Play Store.</string>
-    <string name="rate_now">Оставить Отзыв</string>
-    <string name="not_now">Не Сейчас</string>
-    <string name="format_version">версия %1$s</string>
-    <string name="format_num_days">%1$d дней</string>
-    <string name="daily_reminder_title">Напоминания Daily Dozen</string>
-    <string name="daily_reminder_text">Отметь сегодняшние порции</string>
-    <string name="daily_reminder_settings">Настройки Ежедневных Напоминаний</string>
-    <string name="enable_daily_reminder">Включить Ежедневные Напоминания</string>
-    <string name="remind_me_at">Напоминать в</string>
-    <string name="videos">Видео</string>
-    <string name="units">Единицы</string>
-    <string name="imperial">Английские</string>
-    <string name="metric">Метрические</string>
-
+    <string name="debug_clear_data">Очистить все данные</string>
+    <string name="debug_clear_data_message">Это удалит все внесенные порции. Вы хотите продолжить?</string>
+    <string name="OK">ОК</string>
+    <string name="dialog_streaks_title">Новая функциональность, отображающая прогресс, была добавлена!</string>
+    <string name="dialog_streaks_message">Ваша база данных сейчас будет обновлена до версии, поддерживающей новую функциональность прогресса.</string>
+    <string name="dialog_no_email_apps_title">Не было найдено ни одного приложения для работы с электронной почтой.</string>
+    <string name="dialog_no_email_apps_message">Чтобы создать резервную копию ваших данных, вам нужно сначала установить приложение для работы с электронной почтой, чтобы вы смогли послать себе .csv файл с резервной копией. Пожалуйста, попробуйте установить приложение и повторите попытку.</string>
+    <string name="debug_generate_random_data">Получить случайную выборку</string>
+    <string name="debug_generate_full_data">Получить все данные</string>
+    <string name="debug_generate_data_message">Все существующие данные будут изменены. Вы хотите продолжить?</string>
+    <string name="debug_show_reminder_notification" translatable="false">Show Reminder Notification</string>
+    <string name="task_generating_random_data">Генерация случайных данных</string>
+    <string name="task_loading_servings_history_title">Загрузка истории порций</string>
+    <string name="time_scale">Шкала Времени</string>
+    <string name="history_to_generate">Загрузить историю</string>
+    <string name="date_weight_morning" translatable="false">{fa-sun-o 22dp @color/gray_dark}</string>
+    <string name="date_weight_evening" translatable="false">{fa-moon-o 22dp @color/gray_dark}</string>
+    <string name="date_servings_star" translatable="false">{fa-star 24dp @color/gold}</string>
+    <string name="date_servings_star_large" translatable="false">{fa-star 64dp @color/gold}</string>
+    <string name="date_weights_eye_open" translatable="false">{fa-eye 24dp @color/gray_dark}</string>
+    <string name="date_weights_eye_closed" translatable="false">{fa-eye-slash 24dp @color/gray_dark}</string>
+    <string name="date_weights_morning_weight" translatable="false">{fa-square 24dp @color/gray_dark}</string>
+    <string name="date_weights_evening_weight" translatable="false">{fa-check-square 24dp @color/gray_dark}</string>
+    <string name="unchecked" translatable="false">{fa-square 24dp @color/gray_dark}</string>
+    <string name="checked" translatable="false">{fa-check-square 24dp @color/gray_dark}</string>
+    <string name="welcome_to_my_daily_dozen">Добро пожаловать в Не сдохни!</string>
+    <string name="activity_welcome_text">Используйте данное приложение на ежедневной основе, чтобы отслеживать продукты питания и применять мои рекомендации для оптимального здоровья и продолжительности жизни, которые изложены в книгах Не сдохни и Не сдохни на Диете.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Вам нравится это приложение?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Пожалуйста, оставьте нам отзыв в Play Store.</string>
+    <string name="rate_now">Оставить отзыв</string>
+    <string name="not_now">Не сейчас</string>
+    <string name="format_version">версия %s</string>
+    <string name="format_num_days">%d дней</string>
+    <string name="daily_reminder_title">Напоминания Не сдохни!</string>
+    <string name="daily_reminder_text">Обновите порции за сегодня</string>
+    <string name="daily_reminder_settings">Настройки ежедневных напоминаний</string>
+    <string name="enable_daily_reminder">Включить ежедневные напоминания</string>
+    <string name="remind_me_at">Напомнить мне в:</string>
+    <string name="videos">ВИДЕО</string>
+    <string name="units">Единица Измерения:</string>
+    <string name="imperial">имперская</string>
+    <string name="metric">метрическая</string>
+    <string name="error_cannot_handle_url">Невозможно открыть ссылку. Пожалуйста, установите веб браузер.</string>
+    <string name="channel_reminders_name">Напоминания</string>
+    <string name="twenty_one_tweaks">21 Уловка</string>
+    <string name="tweaks">Уловки</string>
+    <string name="daily_tweaks_history">Ежедневные уловки История</string>
+    <string name="weight_history">Вес История</string>
+    <string name="no_weights_recorded">Вы еще не отметили ни одной порции!</string>
+    <string name="task_loading_weights_history_title">Загрузка истории веса</string>
+    <string name="morning">Утро</string>
+    <string name="evening">Вечер</string>
+    <string name="meal_water">Предварительная водная загрузка</string>
+    <string name="meal_negcal">Предварительная загрузка отрицательными калориями</string>
+    <string name="meal_vinegar">Включите уксус (2 ч.л. с каждым приемом пищи)</string>
+    <string name="meal_undistracted">Не отвлекайтесь от еды</string>
+    <string name="meal_twentyminutes">Следуйте двадцатиминутному правилу</string>
+    <string name="daily_blackcumin">Черный тмин/кумин (¼ ч.л.)</string>
+    <string name="daily_garlic">Чесночный порошок (¼ ч.л.)</string>
+    <string name="daily_ginger">Молотый имбирь (1 чайная ложка) или кайенский перец (½ чайной ложки)</string>
+    <string name="daily_nutriyeast">Пищевые дрожжи неактивные (2 ч.л.)</string>
+    <string name="daily_cumin">Тмин (½ чайной ложки с обедом и ужином)</string>
+    <string name="daily_greentea">Зеленый чай (3 чашки)</string>
+    <string name="daily_hydrate">Избегайте обезвоживания</string>
+    <string name="daily_deflourdiet">Уберите муку из диеты</string>
+    <string name="daily_frontload">Фронтальная калорийная загрузка</string>
+    <string name="daily_timerestrict">Ограничивайте время приема пищи</string>
+    <string name="exercise_timing">Оптимизируйте график выполнения физических упражнений</string>
+    <string name="weigh_twice">Взвешивайтесь дважды в день</string>
+    <string name="complete_intentions">Воплощайте свои намерения</string>
+    <string name="nightly_fast">Не ешьте после 7:00 вечера</string>
+    <string name="nightly_sleep">Высыпайтесь</string>
+    <string name="nightly_trendelenburg">Поэкспериментируйте с положением мягкого Тренделенбурга</string>
+    <string name="debug_generate_weight_data">Получить данные по весу</string>
+    <string name="average_weight_on_day">Средний вес за день</string>
+    <string name="meal_water_short">Предварительная водная загрузка</string>
+    <string name="meal_negcal_short">Предварительная загрузка отрицательными калориями</string>
+    <string name="meal_vinegar_short">Включите уксус (2 ч.л. с каждым приемом пищи)</string>
+    <string name="meal_undistracted_short">Не отвлекайтесь от еды</string>
+    <string name="meal_twentyminutes_short">Следуйте двадцатиминутному правилу</string>
+    <string name="daily_blackcumin_short">Черный тмин/кумин (Нигела) (¼ ч.л.)</string>
+    <string name="daily_garlic_short">Чесночный порошок (¼ ч.л.)</string>
+    <string name="daily_ginger_short">Молотый имбирь (1 чайная ложка) или кайенский перец (½ чайной ложки)</string>
+    <string name="daily_nutriyeast_short">Пищевые дрожжи неактивные (2 ч.л.)</string>
+    <string name="daily_cumin_short">Кумин/Зира (½ чайной ложки с обедом и ужином)</string>
+    <string name="daily_greentea_short">Зеленый чай (3 чашки)</string>
+    <string name="daily_hydrate_short">Избегайте обезвоживания</string>
+    <string name="daily_deflourdiet_short">Уберите муку из диеты</string>
+    <string name="daily_frontload_short">Фронтальная калорийная загрузка</string>
+    <string name="daily_timerestrict_short">Ограничивайте время приема пищи</string>
+    <string name="exercise_timing_short">Оптимизируйте график выполнения физических упражнений</string>
+    <string name="weigh_twice_short">Взвешивайтесь дважды в день</string>
+    <string name="complete_intentions_short">Воплощайте свои намерения</string>
+    <string name="nightly_fast_short">Не ешьте после 7:00 вечера</string>
+    <string name="nightly_sleep_short">Высыпайтесь</string>
+    <string name="nightly_trendelenburg_short">Поэкспериментируйте с положением мягкого Тренделенбурга</string>
+    <string name="meal_water_text">Перед каждым приемом пищи добавьте две чашки прохладной или холодной неароматизированной воды, улучшающей обмен веществ, чтобы также воспользоваться преимуществами предварительной загрузки.</string>
+    <string name="meal_negcal_text">Начинайте каждый прием пищи с яблока или легкого зеленого супа из зеленых ингредиентов, или салата, содержащих менее ста калорий на чашку.</string>
+    <string name="meal_vinegar_text">Никогда не пейте неразбавленный уксус. Добавляйте сладкие и пикантные уксусы, в изобилии присутствующие на рынке, в блюда, заправки для салатов или гарниры. Если вы хотите его выпить, обязательно смешайте его в стакане с водой, а затем тщательно прополощите рот водой, чтобы защитить зубную эмаль.</string>
+    <string name="meal_undistracted_text">Не ешьте во время просмотра телевизора или игры на телефоне. Поставьте себе галочку за каждый прием пищи, во время которого вы не отвлекались на посторонние дела.</string>
+    <string name="meal_twentyminutes_text">Десятки исследований показали, что независимо от того, увеличивается ли вязкость пищи или количество жеваний, или уменьшается размер ваших укусов и скорость приема пищи, независимо от того, как мы увеличиваем количество времени, которое пища проводит во рту, это может привести к снижению потребляемых калорий. Поэтому продлите продолжительность приема пищи как минимум до двадцати минут, чтобы ваши естественные сигналы сытости вступили в силу. Как? Выбирая продукты, чтобы съесть которые, вы потратите больше времени так или иначе, и вдобавок ешьте их, продлевая время, которое они остаются во рту. Подумайте о более объемной, твердой жевательной пище небольшими, хорошо прожеванными кусочками.</string>
+    <string name="daily_blackcumin_text">Как отмечалось в разделе Подавление аппетита, систематический обзор и мета-анализ рандомизированных контролируемых испытаний по снижению веса показал, что примерно четверть чайной ложки черного порошка кумина каждый день, по-видимому, снижает индекс массы тела в течение пары месяцев. Обратите внимание, что черный кумин отличается от обычного кумина, для которого дозировка отличается.</string>
+    <string name="daily_garlic_text">Рандомизированные, двойные слепые, плацебо-контролируемые исследования показали, что всего лишь четверть чайной ложки чесночного порошка в день может снизить содержание жира в организме по цене, возможно, два цента в день.</string>
+    <string name="daily_ginger_text">Рандомизированные контролируемые испытания показали, что от ¼ чайной ложки до 1 ½ чайной ложки молотого имбиря в день значительно снижает массу тела и стоит копейки. Можно просто размешать молотую специю в чашке горячей воды. Примечание: имбирь чаще работает лучше утром, чем вечером. Чай масала - вкусный способ объединить уловку зеленого чая и имбиря в один напиток. В противном случае, для активации бурой жировой ткани вы можете добавить в свой ежедневный рацион один сырой перец халапеньо или половину чайной ложки порошка красного перца (или, по-видимому, измельченные хлопья красного перца). Чтобы уменьшить остроту, вы можете очень тонко или мелко нарезать халапеньо,  или смешать красный перец с супом или с овощным смузи из цельных продуктов, которые я показывал в одном из моих кулинарных видео на NutritionFacts.org.</string>
+    <string name="daily_nutriyeast_text">Как показали рандомизированные, двойные слепые, плацебо-контролируемые клинические исследования, две чайные ложки пекарских, пивоваренных или пищевых дрожжей содержат примерно количество 1,3/1,6 бета глюканов, способствующие потере веса.</string>
+    <string name="daily_cumin_text">Женщины с избыточным весом в рандомизированном исследовании, которые добавляли половину чайной ложки кумина к обедам и ужинам, побили контрольную группу на два дополнительных сброшенных килограмма и на 2.5 см в талии. Существует также доказательство в поддержку использования специи шафран, но щепотка в день обойдется в доллар, тогда как чайная ложка кумина стоит менее десяти центов.</string>
+    <string name="daily_greentea_text">Пейте три чашки в день между приемами пищи (подождите не менее часа после еды, чтобы не мешать усвоению железа). Во время еды пейте воду, черный кофе или чай из гибискуса, смешанный 6:1 с лимонной вербеной, но никогда не превышайте три чашки жидкости в час (важно, учитывая мой совет по предварительной загрузке воды). Воспользуйтесь усиливающим эффектом кофеина, выпивая зеленый чай вместе с чем-то полезным, что вы хотели бы больше любить, но не употребляйте большое количество кофеина в течение шести часов перед сном. Лучше всего принимать чай без подсластителя, но если вы обычно подслащиваете его медом или сахаром, попробуйте вместо этого сироп с яконом.</string>
+    <string name="daily_hydrate_text">Установите этот флажок, если ваша моча никогда не выглядит темнее бледно-желтой. Обратите внимание, что если вы едите обогащенные рибофлавином продукты (например, неактивные пищевые дрожжи), то нужно выпивать не менее девяти чашек несладких напитков в день для женщин (которые покроются рекомендациями по зеленому чаю и предварительной водной загрузке) или тринадцать чашек в день для мужчин. Если у вас проблемы с сердцем или почками, не увеличивайте потребление жидкости, не посоветовавшись предварительно с врачом. Помните, что диетическая содовая может быть без калорий, но не без последствий, как мы узнали в разделе Низкий уровень добавленного сахара.</string>
+    <string name="daily_deflourdiet_text">Ставьте этот флажок каждый день, когда все ваши порции зерновых идут из цельных зерен. Измельчение даже 100% цельных зерен лишает нашу микробиому крахмала, заключенного в цельных клеточных стенках, который был бы доставлен в наш кишечник. .</string>
+    <string name="daily_frontload_text">Есть преимущества в распределении большего количества калорий на начало дня с точки зрения нашего обмена веществ, поэтому сделайте завтрак (в идеале) или обед своей самой большой едой дня в стиле истинного короля / принца / нищего.</string>
+    <string name="daily_timerestrict_text">Ограничивайте временной интервал приема пищи по вашему выбору и делайте его продолжительностью менее двенадцати часов, которого вы можете придерживаться последовательно, семь дней в неделю. Учитывая циркадные преимущества сокращения вечернего приема пищи, окно должно заканчиваться до 7:00 вечера.</string>
+    <string name="exercise_timing_text">Рекомендация Не Сдохни! по оптимальной продолжительности упражнений для долголетия составляет девяносто минут умеренно интенсивной активности в день, что также является оптимальной продолжительностью упражнений для похудения. В любое время хорошо, и чем больше, тем лучше, но, возможно, стоит отдать предпочтение тренировкам на голодный желудок или, по крайней мере, через шесть часов после вашего последнего приема пищи. Как правило, это будет означать до завтрака, но если вы правильно рассчитаете время, вы можете заняться спортом в полдень до позднего обеда или, если обед съели достаточно рано, до ужина. Но это время для людей, не страдающих диабетом. Диабетики и преддиабетики должны, напротив, начать тренироваться через тридцать минут после начала приема пищи и, в идеале, по крайней мере, час, чтобы полностью охватить время скачка сахара в крови. Если вам нужно было бы выбрать один прием пищи, после которого нужно выполнить тренировку, это был бы ужин, так как циркадный ритм контроля уровня сахара в крови падает в течение дня. Но в идеале, завтрак должен быть самым большим приемом пищи за день и нужно тренироваться после него - а еще лучше после каждого приема пищи.</string>
+    <string name="weigh_twice_text">Регулярное самостоятельное взвешивание считается критически важным для долгосрочного контроля веса, но нет достаточных данных для подтверждения конкретной частоты взвешивания. Моя рекомендация основана на одном исследовании, которое показало, что два раза в день - после пробуждения и непосредственно перед сном - оказалось лучше, чем один раз в день (около трех против одного килограмма потери веса в течение двенадцати недель).</string>
+    <string name="complete_intentions_text">Каждые два месяца создавайте три новых пункта по реализации ваших намерений - «если А, то Б» планы выполнить определенное действие в определенном контексте - и проверяйте каждое из них по мере их выполнения каждый день.</string>
+    <string name="nightly_fast_text">Из-за наших циркадных ритмов пища, съедаемая поздним вечером, полнит больше, чем та же самая пища, съеденная ранее днем, поэтому каждый вечер, начиная с 7 часов, голодайте не менее двенадцати часов. Чем меньше калорий после захода солнца, тем лучше.</string>
+    <string name="nightly_sleep_text">Установите этот флажок, если вы спите по крайней мере семь часов в обычное время сна.</string>
+    <string name="nightly_trendelenburg_text">Попробуйте проводить по крайней мере четыре часа ночью, лежа под уклоном шесть градусов, подняв ножки кровати на двадцать сантиметров у изножья кровати (или на двадцать три сантиметра, если у вас очень большая двуспальная кровать). Будьте очень осторожны, когда встаете с постели, так как это вызывает ортостатическую нетерпимость у большинства людей, даже если вы молоды и здоровы — то есть, если вы встанете слишком быстро, вы можете почувствовать головокружение и слабость и можете упасть и удариться. Так что вставайте медленно. Выпивание двух чашек холодной воды за тридцать минут до вставания может помочь предотвратить этот потенциально опасный побочный эффект.\ n*ВАЖНО: Не пытайтесь делать это дома вообще, если у вас есть проблемы с сердцем или легкими, кислотный рефлюкс или проблемы с мозгом (например, травма головы) или глазами (даже семейный анамнез глаукомы дисквалифицирует вас). Также не пытайтесь делать это, пока не спросите своего врача, считает ли он, что вам безопасно спать в мягком Тренделенбурге.*</string>
+    <!--
+    NOTE: These strings are used to created the url to take the user to the overall food videos page.
+    These strings are to not be literial language translations.
+    These strings must be valid existing url addition to "http://nutritionfacts.org/".
+    If the language is not present on nutritionfacts.org, then the default English url is used.
+    -->
+    <string name="food_info_videos_beans" translatable="false">beans</string>
+    <string name="food_info_videos_berries" translatable="false">berries</string>
+    <string name="food_info_videos_fruits" translatable="false">fruit</string>
+    <string name="food_info_videos_cruciferous" translatable="false">cruciferous-vegetables</string>
+    <string name="food_info_videos_greens" translatable="false">greens</string>
+    <string name="food_info_videos_vegetables" translatable="false">vegetables</string>
+    <string name="food_info_videos_flaxseeds" translatable="false">flax-seeds</string>
+    <string name="food_info_videos_nuts" translatable="false">nuts</string>
+    <string name="food_info_videos_spices" translatable="false">spices</string>
+    <string name="food_info_videos_whole_grains" translatable="false">grains</string>
+    <string name="food_info_videos_beverages" translatable="false">beverages</string>
+    <string name="food_info_videos_exercise" translatable="false">exercise</string>
+    <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
+    <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
+    <string name="food_info_videos_omega3" translatable="false">omega-3-fatty-acids</string>
+    <string name="weight">Вес</string>
+    <string name="tweak_group_meal">С каждым приемом пищи</string>
+    <string name="tweak_group_daily">Каждый день</string>
+    <string name="tweak_group_dailydoses">Принимайте ежедневно</string>
+    <string name="tweak_group_nightly">Каждый вечер</string>
+    <string name="about_tweak">Об уловке</string>
+    <!--
+    NOTE: These strings should never be translated from English
+    These strings are used as the canonical names for the different foods and make it easy to switch between languages
+    -->
+    <string-array name="food_id_names" translatable="false">
+        <item>Beans</item>
+        <item>Berries</item>
+        <item>Other Fruits</item>
+        <item>Cruciferous Vegetables</item>
+        <item>Greens</item>
+        <item>Other Vegetables</item>
+        <item>Flaxseeds</item>
+        <item>Nuts</item>
+        <item>Spices</item>
+        <item>Whole Grains</item>
+        <item>Beverages</item>
+        <item>Exercise</item>
+        <item>Vitamin B12</item>
+    </string-array>
+    <string-array name="food_names" translatable="false">
+        <item>@string/beans</item>
+        <item>@string/berries</item>
+        <item>@string/other_fruits</item>
+        <item>@string/cruciferous_vegetables</item>
+        <item>@string/greens</item>
+        <item>@string/other_vegetables</item>
+        <item>@string/flaxseeds</item>
+        <item>@string/nuts</item>
+        <item>@string/spices</item>
+        <item>@string/whole_grains</item>
+        <item>@string/beverages</item>
+        <item>@string/exercise</item>
+        <item>@string/vitamin_b12</item>
+    </string-array>
     <integer-array name="food_quantities">
         <item>3</item>
         <item>1</item>
@@ -96,29 +272,94 @@
         <item>1</item>
         <item>1</item>
     </integer-array>
-
+    <string-array name="tweak_id_names" translatable="false">
+        <item>Meal Water</item>
+        <item>Meal NegCal</item>
+        <item>Meal Vinegar</item>
+        <item>Meal Undistracted</item>
+        <item>Meal 20 Minutes</item>
+        <item>Daily Black Cumin</item>
+        <item>Daily Garlic</item>
+        <item>Daily Ginger</item>
+        <item>Daily NutriYeast</item>
+        <item>Daily Cumin</item>
+        <item>Daily Green Tea</item>
+        <item>Daily Hydrate</item>
+        <item>Daily Deflour Diet</item>
+        <item>Daily Front-Load</item>
+        <item>Daily Time-Restrict</item>
+        <item>Exercise Timing</item>
+        <item>Weigh Twice</item>
+        <item>Complete Intentions</item>
+        <item>Nightly Fast</item>
+        <item>Nightly Sleep</item>
+        <item>Nightly Trendelenburg</item>
+    </string-array>
+    <string-array name="tweak_names" translatable="false">
+        <item>@string/meal_water</item>
+        <item>@string/meal_negcal</item>
+        <item>@string/meal_vinegar</item>
+        <item>@string/meal_undistracted</item>
+        <item>@string/meal_twentyminutes</item>
+        <item>@string/daily_blackcumin</item>
+        <item>@string/daily_garlic</item>
+        <item>@string/daily_ginger</item>
+        <item>@string/daily_nutriyeast</item>
+        <item>@string/daily_cumin</item>
+        <item>@string/daily_greentea</item>
+        <item>@string/daily_hydrate</item>
+        <item>@string/daily_deflourdiet</item>
+        <item>@string/daily_frontload</item>
+        <item>@string/daily_timerestrict</item>
+        <item>@string/exercise_timing</item>
+        <item>@string/weigh_twice</item>
+        <item>@string/complete_intentions</item>
+        <item>@string/nightly_fast</item>
+        <item>@string/nightly_sleep</item>
+        <item>@string/nightly_trendelenburg</item>
+    </string-array>
+    <integer-array name="tweak_amounts" translatable="false">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
     <string-array name="about_text_lines">
-        <item>Это приложение создано Джоном Славиком (John Slavick).</item>
-        <item />
-        <item>Приложение использует следующие библиотеки с открытым исходным кодом: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>This app was created by John Slavick.</item>
+        <item/>
+        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
-
     <string-array name="backup_instructions_lines">
-        <item>Шаги по восстановлению приложения Daily Dozen из резервной копии</item>
-        <item />
-        <item>1. Daily Dozen должно быть установлено на Вашем Android телефоне. Вы можете скачать приложение здесь: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
-        <item />
-        <item>2. Нажмите на файл резервной копии, прикреплённый к данному письму.</item>
-        <item />
-        <item>3. Выберите "Открыть с Daily Dozen" (Open with Daily Dozen)</item>
+        <item>Следуйте этим инструкциям для восстановления этой резервной копии в приложении Не сдохни!</item>
+        <item></item>
+        <item>1. Приложение Не сдохни! должно быть установлено на ваш Android-смартфон. Его можно скачать по ссылке: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item></item>
+        <item>2. Откройте файл с резервной копией, прикрепленный к этому сообщению.</item>
+        <item></item>
+        <item>3. Выберите Открыть с помощью Не сдохни</item>
     </string-array>
-
     <string-array name="servings_time_scale_choices">
         <item>День</item>
         <item>Месяц</item>
         <item>Год</item>
     </string-array>
-
     <string-array name="history_to_generate_choices">
         <item>1 месяц</item>
         <item>3 месяца</item>
@@ -127,18 +368,17 @@
         <item>2 года</item>
         <item>5 лет</item>
     </string-array>
-
     <string-array name="food_info_types_beans">
         <item>Чёрная фасоль</item>
         <item>Черноглазая фасоль</item>
-        <item>Фасоль Лима</item>
-        <item>Белая фасоль (каннеллини)</item>
+        <item>Фасоль лима</item>
+        <item>Фасоль каннеллини</item>
         <item>Нут</item>
         <item>Эдамамэ</item>
         <item>Садовый горох</item>
         <item>Белая фасоль (великая северная)</item>
         <item>Красная фасоль (кидни)</item>
-        <item>Чечевица (чёрная "белуга", зеленая "французская", красная)</item>
+        <item>Чечевица (чёрная "белуга", зеленая "французская" и разновидности красной)</item>
         <item>Мисо</item>
         <item>Белая фасоль (флотская)</item>
         <item>Фасоль пинто</item>
@@ -146,12 +386,11 @@
         <item>Горох колотый (жёлтый или зелёный)</item>
         <item>Темпе</item>
     </string-array>
-
     <string-array name="food_info_types_berries">
         <item>Ягоды асаи</item>
-        <item>Ягоды барбариса</item>
+        <item>Барбарис</item>
         <item>Ежевика</item>
-        <item>Черника</item>
+        <item>Черника, голубика</item>
         <item>Вишня (или черешня)</item>
         <item>Виноград Конкорд</item>
         <item>Клюква</item>
@@ -161,14 +400,13 @@
         <item>Малина (чёрная или красная)</item>
         <item>Клубника</item>
     </string-array>
-
     <string-array name="food_info_types_other_fruits">
         <item>Яблоки</item>
         <item>Курага</item>
         <item>Авокадо</item>
         <item>Бананы</item>
-        <item>Дыня Канталупа</item>
-        <item>Мандарины</item>
+        <item>Дыня мускусная (канталупа)</item>
+        <item>Мандарины (клементины)</item>
         <item>Финики</item>
         <item>Сушёный инжир</item>
         <item>Грейпфрут</item>
@@ -189,32 +427,30 @@
         <item>Плумкот</item>
         <item>Гранат</item>
         <item>Чернослив</item>
-        <item>Танжерины</item>
+        <item>Мандарины</item>
         <item>Арбуз</item>
     </string-array>
-
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Руккола</item>
         <item>Пак-чой</item>
-        <item>Брокколи (и романеско)</item>
+        <item>Брокколи (включая романеско)</item>
         <item>Брюссельская капуста</item>
         <item>Капуста (белокочанная, красная и савойская)</item>
         <item>Цветная капуста (белая, зеленая, оранжевая, фиолетовая)</item>
         <item>Листовая капуста Коллард</item>
         <item>Хрен</item>
-        <item>Кудрявая капуста (тёмная, зелёная и красная)</item>
+        <item>Кудрявая капуста кейл (тёмная, зелёная и красная)</item>
         <item>Кольраби (зеленая и фиолетовая)</item>
         <item>Горчица листовая</item>
         <item>Редис</item>
         <item>Ботва репы</item>
         <item>Водяной кресс</item>
     </string-array>
-
     <string-array name="food_info_types_greens">
         <item>Руккола</item>
-        <item>Ботва свеклы</item>
-        <item>Листовая капуста Коллард</item>
-        <item>Кудрявая капуста (тёмная, зелёная и красная)</item>
+        <item>Cвекольная ботва</item>
+        <item>Листовая капуста</item>
+        <item>Кудрявая капуста кейл (тёмная, зелёная и красная)</item>
         <item>Месклан (ассорти из молодых салатных листьев)</item>
         <item>Горчица листовая</item>
         <item>Щавель</item>
@@ -222,7 +458,6 @@
         <item>Мангольд</item>
         <item>Ботва репы</item>
     </string-array>
-
     <string-array name="food_info_types_other_vegetables">
         <item>Артишоки</item>
         <item>Спаржа</item>
@@ -238,25 +473,23 @@
         <item>Тыква</item>
         <item>Съедобные водоросли (араме, красные водоросли и нори)</item>
         <item>Стручковый горох (Snap peas)</item>
-        <item>Сквош (летний и зимний, в т.ч. "деликата" и "спагетти")</item>
+        <item>Сквош (деликата, летний, спагетти и другие виды)</item>
         <item>Батат/ямс</item>
         <item>Помидоры</item>
         <item>Цуккини</item>
     </string-array>
-
     <string-array name="food_info_types_flaxseeds">
         <item>Семена коричневого льна</item>
         <item>Семена белого льна</item>
     </string-array>
-
     <string-array name="food_info_types_nuts">
         <item>Миндаль</item>
-        <item>Бразильский орех</item>
+        <item>Бразильские орехи</item>
         <item>Кешью</item>
         <item>Семена чиа</item>
         <item>Фундук</item>
         <item>Семена конопли</item>
-        <item>Макадамия (австралийский орех)</item>
+        <item>Макадамия</item>
         <item>Орех пекан</item>
         <item>Фисташки</item>
         <item>Семена тыквы</item>
@@ -264,7 +497,6 @@
         <item>Семечки подсолнечника</item>
         <item>Грецкие орехи</item>
     </string-array>
-
     <string-array name="food_info_types_spices">
         <item>Душистый перец</item>
         <item>Барбарис</item>
@@ -275,15 +507,15 @@
         <item>Кориандр (кинза)</item>
         <item>Корица</item>
         <item>Гвоздика</item>
-        <item>Семена кориандра (кинзы)</item>
-        <item>Зира (тмин)</item>
+        <item>Семена кориандра</item>
+        <item>Зира (кумин)</item>
         <item>Карри</item>
         <item>Укроп</item>
         <item>Пажитник</item>
         <item>Чеснок</item>
         <item>Имбирь</item>
         <item>Хрен</item>
-        <item>Лимонное сорго</item>
+        <item>Лемонграсс</item>
         <item>Майоран</item>
         <item>Горчичный порошок</item>
         <item>Мускатный орех</item>
@@ -295,11 +527,10 @@
         <item>Розмарин</item>
         <item>Шафран</item>
         <item>Шалфей</item>
-        <item>Тимьян (чабрец)</item>
+        <item>Тимьян</item>
         <item>Куркума</item>
         <item>Ваниль</item>
     </string-array>
-
     <string-array name="food_info_types_whole_grains">
         <item>Ячмень</item>
         <item>Гречневая крупа</item>
@@ -309,28 +540,26 @@
         <item>Киноа</item>
         <item>Рожь</item>
         <item>Теф</item>
-        <item>Цельнозерновые макароны</item>
+        <item>Цельнозерновая паста</item>
     </string-array>
-
     <string-array name="food_info_types_beverages">
         <item>Чёрный чай</item>
-        <item>Чай масала (букв. "чай со специями")</item>
+        <item>Чай масала</item>
         <item>Ромашковый чай с ванилью</item>
         <item>Кофе</item>
-        <item>Чай Эрл Грей (чай с бергамотом)</item>
+        <item>Чай Эрл Грей</item>
         <item>Зелёный чай</item>
         <item>Каркаде</item>
         <item>Горячий шоколад</item>
         <item>Чай с жасмином</item>
         <item>Чай из мелиссы</item>
-        <item>Маття ("матча")</item>
+        <item>Чай матча</item>
         <item>Миндальный улун</item>
         <item>Чай из перечной мяты</item>
         <item>Ройбос</item>
         <item>Вода</item>
         <item>Белый чай</item>
     </string-array>
-
     <string-array name="food_info_types_exercise">
         <item>Езда на велосипеде</item>
         <item>Гребля</item>
@@ -341,29 +570,29 @@
         <item>Хайкинг (длительная прогулка, пешеходный туризм)</item>
         <item>Работа по дому</item>
         <item>Катание на коньках</item>
-        <item>Роллерблейдинг (экстремальное катание на роликовых коньках)</item>
+        <item>Роллерблейдинг</item>
         <item>Жонглирование</item>
         <item>Прыжки на батуте</item>
-        <item>Катание на водном велосипеде</item>
-        <item>Игра с летающим диском</item>
+        <item>Катание на катамаране</item>
+        <item>Игра с летающим диском (фрисби)</item>
         <item>Катание на роликах</item>
-        <item>Броски мяча в корзину</item>
+        <item>Бросание мяча в корзину</item>
         <item>Сгребание лёгкого снега</item>
         <item>Скейтбординг</item>
-        <item>Сноркелинг (ныряние с дыхательной трубкой)</item>
+        <item>Сноркелинг</item>
         <item>Сёрфинг</item>
         <item>Свободное плавание</item>
         <item>Парный теннис</item>
         <item>Вертикальное удержание на плаву</item>
         <item>Быстрая ходьба (6–7 км/ч)</item>
-        <item>Водная гимнастика</item>
-        <item>Воднолыжный спорт</item>
+        <item>Аквааэробика</item>
+        <item>Водные лыжи</item>
         <item>Работа по саду</item>
         <item>Йога</item>
         <item>Поход с рюкзаком</item>
         <item>Баскетбол</item>
-        <item>Подъем в горку на велосипеде</item>
-        <item>Повторяемые упражнения с весом</item>
+        <item>Горный велосипед</item>
+        <item>Силовые тренировки</item>
         <item>Лыжный бег</item>
         <item>Американский футбол</item>
         <item>Хоккей</item>
@@ -379,294 +608,368 @@
         <item>Бег</item>
         <item>Дайвинг с аквалангом</item>
         <item>Теннис</item>
-        <item>Футбол ("соккер")</item>
+        <item>Футбол</item>
         <item>Конькобежный спорт</item>
         <item>Сквош</item>
-        <item>Гимнастика на степе</item>
+        <item>Аэробика на степе</item>
         <item>Спортивное плавание</item>
-        <item>Быстрая ходьба в горку</item>
+        <item>Быстрая ходьба в гору</item>
         <item>Беговые движения на плаву</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beans">
         <item>%s хумуса или бобового соуса</item>
-        <item>%s готовых фасоли, колотого гороха, чечевицы, тофу или темпе</item>
-        <item>%s свежего гороха или пророшенной чечевицы</item>
+        <item>%s готовой фасоли, колотого гороха, чечевицы, тофу или темпе</item>
+        <item>1%s свежего гороха или пророщенной чечевицы</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ чашки</item>
         <item>½ чашки</item>
-        <item>1 чашка</item>
+        <item> чашка</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beans_metric">
         <item>60 г</item>
         <item>130 г</item>
-        <item>150 г</item>
+        <item>50 г</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_berries">
         <item>%s свежих или замороженных</item>
         <item>%s сушёных</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ чашки</item>
         <item>¼ чашки</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_berries_metric">
         <item>60 г</item>
         <item>40 г</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_fruits">
         <item>%s1 фрукт среднего размера</item>
-        <item>%s нарезанного фрукта</item>
+        <item>1%s</item>
         <item>%s сушёного фрукта</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item>1 чашка</item>
+        <item></item>
+        <item> чашка нарезанных фруктов</item>
         <item>¼ чашки</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>120 г</item>
+        <item></item>
+        <item>20 г нарезанного фрукта</item>
         <item>40 г</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s нарубленного</item>
+        <item>%s нарезанных</item>
         <item>%s брюссельской капусты или брокколи</item>
         <item>%s1 столовая ложка хрена</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ чашки</item>
         <item>¼ чашки</item>
-        <item />
+        <item></item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 г</item>
         <item>12 г</item>
-        <item />
+        <item></item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_greens">
         <item>%s сырых</item>
         <item>%s приготовленных</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1 чашка</item>
         <item>½ чашки</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_greens_metric">
         <item>60 г</item>
         <item>90 г</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_vegetables">
         <item>%s сырых листовых овощей</item>
         <item>%s сырых или приготовленных нелистовых овощей</item>
         <item>%s овощного сока</item>
         <item>%s сушёных грибов</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
         <item>1 чашка</item>
         <item>½ чашки</item>
         <item>½ чашки</item>
         <item>¼ чашки</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 г</item>
         <item>50 г</item>
         <item>125 мл</item>
         <item>7 г</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_flaxseeds">
         <item>%s1 столовая ложка измельчённых</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item />
+        <item></item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item />
+        <item></item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s орехов или семян</item>
         <item>%s2 столовые ложки пасты из орехов или семян</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ чашки</item>
-        <item />
+        <item></item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 г</item>
-        <item />
+        <item></item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_spices">
         <item>%s¼ чайной ложки куркумы</item>
-        <item>%sЛюбые другие пряности (без соли), которые Вы любите</item>
+        <item>%sДругие любимые пряности (без соли)</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
+        <item></item>
+        <item></item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
+        <item></item>
+        <item></item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s горячих хлопьев или приготовленных злаков, макарон или кукурузных зёрен</item>
-        <item>%s неразогретых хлопьев</item>
+        <item>%s приготовленных злаков/зерновых, пасты или кукурузных зёрен</item>
+        <item>%s цельнозерновых хлопьев</item>
         <item>%s1 тортилья или ломтик хлеба</item>
-        <item>%s½ бублика или английской булочки</item>
-        <item>%s приготовленного попкорна</item>
+        <item>½ бублика или английско%s</item>
+        <item>3%s приготовленного попкорна</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ чашки</item>
         <item>1 чашка</item>
-        <item />
-        <item />
-        <item>3 чашки</item>
+        <item></item>
+        <item>го маффина</item>
+        <item> чашки</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 г</item>
         <item>50 г</item>
-        <item />
-        <item />
-        <item>30 г</item>
+        <item></item>
+        <item>й булочки</item>
+        <item>0 г</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beverages">
         <item>Один стакан (%s)</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beverages_imperial">
         <item>12 унций</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beverages_metric">
         <item>350 мл</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 минут средней нагрузки</item>
+        <item>%s90 минут нагрузки средней интенсивности</item>
         <item>%s40 минут интенсивной нагрузки</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
+        <item></item>
+        <item></item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
+        <item></item>
+        <item></item>
     </string-array>
-
-    <string name="error_cannot_handle_url">Не могу открыть ссылку. Пожалуйста, установите браузер.</string>
-    <string name="channel_reminders_name">Напоминания</string>
-
-    <string name="twenty_one_tweaks">21 твик</string>
-    <string name="tweaks">Tweaks</string>
-    <string name="daily_tweaks_history">История ежедневных твиков</string>
-    <string name="weight_history">История веса</string>
-    <string name="no_weights_recorded">Вы еще не записали вес!</string>
-    <string name="task_loading_weights_history_title">Загрузка истории весов</string>
-    <string name="morning">утро</string>
-    <string name="evening">Вечер</string>
-    <string name="weight">Вес</string>
-    <string name="tweak_group_meal">На каждой еде</string>
-    <string name="tweak_group_daily">Каждый день</string>
-    <string name="tweak_group_dailydoses">Принимайте свои ежедневные дозы</string>
-    <string name="tweak_group_nightly">Каждую ночь</string>
-    <string name="about_tweak">О твике</string>
-    <string name="meal_water">Предварительная загрузка с водой</string>
-    <string name="meal_negcal">Предварительная загрузка с продуктами "Negative Calorie"</string>
-    <string name="meal_vinegar">Включите Уксус (2 ч. Л. С каждым приемом пищи)</string>
-    <string name="meal_undistracted">Наслаждайтесь безудержной едой</string>
-    <string name="meal_twentyminutes">Следуйте двадцатиминутному правилу</string>
-    <string name="daily_blackcumin">Черный тмин (¼ ч.л.)</string>
-    <string name="daily_garlic">Чесночный порошок (¼ ч.л.)</string>
-    <string name="daily_ginger">Молотый имбирь (1 чайная ложка) или кайенский перец (½ чайной ложки)</string>
-    <string name="daily_nutriyeast">Пищевые дрожжи (2 ч. Л.)</string>
-    <string name="daily_cumin">Тмин (½ чайной ложки с обедом и ужином)</string>
-    <string name="daily_greentea">Зеленый чай (3 чашки)</string>
-    <string name="daily_hydrate">Оставайтесь гидратированными</string>
-    <string name="daily_deflourdiet">Ослабьте свою диету</string>
-    <string name="daily_frontload">Фронтальная загрузка ваших калорий</string>
-    <string name="daily_timerestrict">Ограничить время еды</string>
-    <string name="exercise_timing">Оптимизация времени выполнения</string>
-    <string name="weigh_twice">Взвешивайся дважды в день</string>
-    <string name="complete_intentions">Завершите свои намерения внедрения</string>
-    <string name="nightly_fast">Быстро после 7:00 вечера</string>
-    <string name="nightly_sleep">Достаточно выспаться</string>
-    <string name="nightly_trendelenburg">Эксперимент с Милд Тренделенбург</string>
-    <string name="debug_generate_weight_data">Генерация данных о весе</string>
-    <string name="average_weight_on_day">Средний вес в день</string>
-    <string name="meal_water_short">Предварительная загрузка с водой</string>
-    <string name="meal_negcal_short">Предварительная загрузка с продуктами "Negative Calorie"</string>
-    <string name="meal_vinegar_short">Включите Уксус (2 ч. Л. С каждым приемом пищи)</string>
-    <string name="meal_undistracted_short">Наслаждайтесь безудержной едой</string>
-    <string name="meal_twentyminutes_short">Следуйте двадцатиминутному правилу</string>
-    <string name="daily_blackcumin_short">Черный тмин (Nigella Sativa) (¼ ч.л.)</string>
-    <string name="daily_garlic_short">Чесночный порошок (¼ ч.л.)</string>
-    <string name="daily_ginger_short">Молотый имбирь (1 чайная ложка) или кайенский перец (½ чайной ложки)</string>
-    <string name="daily_nutriyeast_short">Пищевые дрожжи (2 ч. Л.)</string>
-    <string name="daily_cumin_short">Тмин (Cumin cyminum) (½ чайной ложки с обедом и ужином)</string>
-    <string name="daily_greentea_short">Зеленый чай (3 чашки)</string>
-    <string name="daily_hydrate_short">Оставайтесь гидратированными</string>
-    <string name="daily_deflourdiet_short">Ослабьте свою диету</string>
-    <string name="daily_frontload_short">Фронтальная загрузка ваших калорий</string>
-    <string name="daily_timerestrict_short">Ограничить время еды</string>
-    <string name="exercise_timing_short">Оптимизация времени выполнения</string>
-    <string name="weigh_twice_short">Взвешивайся дважды в день</string>
-    <string name="complete_intentions_short">Завершите свои намерения внедрения</string>
-    <string name="nightly_fast_short">Быстро после 7:00 вечера.</string>
-    <string name="nightly_sleep_short">Достаточно выспаться</string>
-    <string name="nightly_trendelenburg_short">Эксперимент с Милд Тренделенбург</string>
-    <string name="meal_water_text">Перед каждым приемом пищи добавьте две чашки прохладной или холодной неароматизированной воды, улучшающей обмен веществ, чтобы также воспользоваться преимуществами предварительной нагрузки.</string>
-    <string name="meal_negcal_text">В качестве первого блюда начинайте каждый прием пищи с яблочного супа или зеленого супа или салата, содержащего менее ста калорий на чашку.</string>
-    <string name="meal_vinegar_text">Никогда не пейте уксус прямо. Вместо этого, ароматизируйте блюда или заправьте гарнир любым из сладких и соленых уксусов. Если вы хотите его выпить, обязательно смешайте его в стакане воды, а затем обязательно прополощите рот водой, чтобы защитить зубную эмаль.</string>
-    <string name="meal_undistracted_text">Не ешьте во время просмотра телевизора или игры на телефоне. Дайте себе чек на каждый прием пищи, который вы можете есть без отвлечения.</string>
-    <string name="meal_twentyminutes_text">Десятки исследований показали, что независимо от того, увеличивается ли вязкость или количество жеваний, или уменьшается размер прикуса и скорость приема пищи, независимо от того, как мы увеличиваем количество пищи во рту, это может привести к снижению потребления калорий. Поэтому продлите продолжительность приема пищи как минимум до двадцати минут, чтобы ваши естественные сигналы сытости вступили в силу. Как? Выбирая продукты, которые потребляют больше времени, и съедая их таким образом, чтобы продлить время, которое они остаются во рту. Подумайте о более объемной, твердой и жевательной пище в небольших, хорошо прожеванных кусочках.</string>
-    <string name="daily_blackcumin_text">Как отмечалось в разделе «Подавление аппетита», систематический обзор и мета-анализ рандомизированных контролируемых испытаний по снижению веса показал, что примерно четверть чайной ложки черного порошка тмина каждый день, по-видимому, снижает индекс массы тела в течение пары месяцев. Обратите внимание, что черный тмин отличается от обычного тмина, для которого дозировка отличается.</string>
-    <string name="daily_garlic_text">Рандомизированные, двойные слепые, плацебо-контролируемые исследования показали, что всего лишь четверть чайной ложки чесночного порошка в день может снизить содержание жира в организме по цене, возможно, в два цента в день.</string>
-    <string name="daily_ginger_text">Рандомизированные контролируемые испытания показали, что ¼ чайной ложки на 1 ½ чайной ложки молотого имбиря в день значительно снижает массу тела всего на копейки в день. Это может быть так же просто, как размешать молотую специю в чашке с горячей водой. Примечание: имбирь может работать лучше утром, чем вечером. Чай Чай - вкусный способ объединить уловки зеленого чая и имбиря в один напиток. Кроме того, для активации BAT вы можете добавить в свой ежедневный рацион один сырой перец халапеньо или половину чайной ложки порошка красного перца (или, по-видимому, измельченные хлопья красного перца). Чтобы помочь справиться с жарой, вы можете очень тонко нарезать или мелко нарезать халапеньо, чтобы уменьшить его прикус до маленьких колючек, или смешать красный перец с супом или с овощным смузи из цельных продуктов, которые я показывал в одном из моих кулинарных видео на NutritionFacts.org. ,</string>
-    <string name="daily_nutriyeast_text">Две чайные ложки пекарских, пивоваренных или пищевых дрожжей содержат примерно количество бета 1,3 / 1,6 глюканов, обнаруженных в рандомизированных, двойных слепых, плацебо-контролируемых клинических испытаниях для облегчения потери веса.</string>
-    <string name="daily_cumin_text">Женщины с избыточным весом случайным образом добавляли половину чайной ложки тмина к обедам и ужинам, выбивая контрольную группу еще на четыре фунта и на дюйм больше их талии. Существует также доказательство в поддержку использования специй шафран, но щепотка в день обойдется в доллар, тогда как чайная ложка тмина стоит менее десяти центов.</string>
-    <string name="daily_greentea_text">Пейте три чашки в день между приемами пищи (подождите не менее часа после еды, чтобы не мешать усвоению железа). Во время еды пейте воду, черный кофе или чай из гибискуса, смешанный 6: 1 с лимонной вербеной, но никогда не превышайте три чашки жидкости в час (важно, учитывая мой совет по предварительной загрузке воды). Воспользуйтесь усиливающим эффектом кофеина, выпивая зеленый чай вместе с чем-то здоровым, которое вы хотели бы больше любить, но не употребляйте большое количество кофеина в течение шести часов перед сном. Лучше всего принимать чай без подсластителя, но если вы обычно подслащиваете его медом или сахаром, попробуйте вместо этого сироп с яконом.</string>
-    <string name="daily_hydrate_text">Установите этот флажок, если ваша моча никогда не выглядит темнее бледно-желтой. Обратите внимание, что если вы едите обогащенные рибофлавином продукты (например, пищевые дрожжи), то вместо этого основывайте это на потреблении девяти чашек несладких напитков в день для женщин (о которых позаботятся рекомендации по предварительной загрузке зеленого чая и воды) или тринадцать чашек в день для мужчин. Если у вас проблемы с сердцем или почками, не увеличивайте потребление жидкости, не посоветовавшись предварительно с врачом. Помните, что диетическая сода может быть без калорий, но не без последствий, как мы узнали в разделе «Низкий уровень добавленного сахара».</string>
-    <string name="daily_deflourdiet_text">Установите этот флажок каждый день, когда все ваши порции зерна находятся в виде неповрежденных зерен. Измельчение даже 100% цельных зерен лишает наши микробиомы крахмала, который в противном случае был бы перенесен в наши двоеточия, заключенные в неразбитые клеточные стенки.</string>
-    <string name="daily_frontload_text">Есть метаболические преимущества в распределении большего количества калорий в начале дня, поэтому сделайте завтрак (в идеале) или обед своей самой большой едой дня в стиле истинного короля / принца / нищего.</string>
-    <string name="daily_timerestrict_text">Ограничивайте прием пищи ежедневным интервалом времени по вашему выбору продолжительностью менее двенадцати часов, который вы можете придерживаться последовательно, семь дней в неделю. Учитывая циркадные преимущества сокращения вечернего приема пищи, окно должно заканчиваться до 7:00 вечера.</string>
-    <string name="exercise_timing_text">Ежедневная дюжина рекомендаций по оптимальной продолжительности упражнений для долголетия составляет девяносто минут умеренно интенсивной активности в день, что также является оптимальной продолжительностью упражнений для похудения. В любое время хорошо, и чем больше, тем лучше, но может быть преимущество в том, что вы тренируетесь в голодном состоянии, по крайней мере, через шесть часов после вашего последнего приема пищи. Как правило, это будет означать до завтрака, но если вы правильно рассчитаете время, вы можете заняться спортом в полдень до позднего обеда или, если обед съели достаточно рано, до обеда. Это время для недиабетиков. Диабетики и преддиабетики должны вместо этого начать тренироваться через тридцать минут после начала приема пищи и в идеале, по крайней мере, час, чтобы полностью преодолеть пик сахара в крови. Если вам нужно было выбрать один прием пищи после тренировки, это был бы ужин из-за циркадного ритма контроля уровня сахара в крови, который снижается в течение дня. В идеале завтрак должен быть самым большим приемом пищи за день, и вы будете тренироваться после этого - или, что еще лучше, после каждого приема пищи.</string>
-    <string name="weigh_twice_text">Регулярное самостоятельное взвешивание считается критически важным для долгосрочного контроля веса, но нет достаточных данных для подтверждения конкретной частоты взвешивания. Моя рекомендация основана на одном исследовании, которое показало, что два раза в день - после пробуждения и непосредственно перед сном - оказалось лучше, чем один раз в день (около шести против двух фунтов потери веса в течение двенадцати недель).</string>
-    <string name="complete_intentions_text">Каждые два месяца создавайте три новых намерения реализации - «если X, то Y» планирует выполнить определенное поведение в определенном контексте - и проверяйте каждое из них по мере их выполнения каждый день.</string>
-    <string name="nightly_fast_text">Из-за наших циркадных ритмов пища, съедаемая ночью, является более жирной, чем та же самая пища, которую едят ранее днем, поэтому каждый вечер голодает не менее двенадцати часов, начиная с 7:00 вечера. Чем меньше калорий после захода солнца, тем лучше.</string>
-    <string name="nightly_sleep_text">Установите этот флажок, если вы спите по крайней мере семь часов в обычное время сна.</string>
-    <string name="nightly_trendelenburg_text">Старайтесь проводить по крайней мере четыре часа в ночи, лежа с телом, наклоненным вниз на шесть градусов, подняв столбы у подножия кровати на восемь дюймов (или на девять дюймов, если у вас есть калифорнийский король). Будьте очень осторожны, когда встаете с постели, так как это вызывает ортостатическую нетерпимость у большинства людей, даже если вы молоды и здоровы, то есть, если вы встаете слишком быстро, вы можете чувствовать головокружение, слабость или головокружение и могут упасть и пораниться. Так что вставай медленно. Питье двух чашек холодной воды за тридцать минут до вставания может также помочь предотвратить этот потенциально опасный побочный эффект. \ N * ВАЖНО: не пытайтесь делать это дома вообще, если у вас есть проблемы с сердцем или легкими, кислотный рефлюкс или проблемы с мозгом (например, травма головы) или глаза (даже семейный анамнез глаукомы дисквалифицирует вас). Также не пытайтесь делать это, пока не спросите своего врача, считают ли они, что вам безопасно спать в мягком Тренделенбурге. *</string>
-
+    <!--
+    NOTE: These strings are used to created the url to take the user to the overall food videos page.
+    These strings are to not be literial language translations.
+    These strings must be valid existing url addition to "http://nutritionfacts.org/".
+    If the language is not present on nutritionfacts.org, then the default English url is used.
+    -->
+    <string-array name="food_videos_beans" translatable="false">
+        <item>black-beans</item>
+        <item/>
+        <item/>
+        <item/>
+        <item>chickpeas</item>
+        <item>edamame</item>
+        <item/>
+        <item/>
+        <item>kidney-beans</item>
+        <item>lentils</item>
+        <item>miso</item>
+        <item>navy-beans</item>
+        <item>pinto-beans</item>
+        <item/>
+        <item>split-peas</item>
+        <item>tempeh</item>
+    </string-array>
+    <string-array name="food_videos_berries" translatable="false">
+        <item>acai-berries</item>
+        <item>barberries</item>
+        <item>blackberries</item>
+        <item>blueberries</item>
+        <item>cherries</item>
+        <item>grapes</item>
+        <item>cranberries</item>
+        <item>goji-berries</item>
+        <item/>
+        <item/>
+        <item>raspberries</item>
+        <item>strawberries</item>
+    </string-array>
+    <string-array name="food_videos_other_fruits" translatable="false">
+        <item>apples</item>
+        <item>apricots</item>
+        <item>avocados</item>
+        <item>bananas</item>
+        <item>cantaloupe</item>
+        <item/>
+        <item>dates</item>
+        <item/>
+        <item>grapefruit</item>
+        <item/>
+        <item>kiwifruit</item>
+        <item>lemons</item>
+        <item>limes</item>
+        <item/>
+        <item>mango</item>
+        <item/>
+        <item>oranges</item>
+        <item/>
+        <item/>
+        <item>peaches</item>
+        <item>pears</item>
+        <item/>
+        <item>plums</item>
+        <item/>
+        <item>pomegranates</item>
+        <item>prunes</item>
+        <item/>
+        <item>watermelon</item>
+    </string-array>
+    <string-array name="food_videos_cruciferous_vegetables" translatable="false">
+        <item/>
+        <item>bok-choy</item>
+        <item>broccoli</item>
+        <item>brussels-sprouts</item>
+        <item>cabbage</item>
+        <item>cauliflower</item>
+        <item>collard-greens</item>
+        <item/>
+        <item>kale</item>
+        <item/>
+        <item>mustard-greens</item>
+        <item/>
+        <item/>
+        <item>watercress</item>
+    </string-array>
+    <string-array name="food_videos_greens" translatable="false">
+        <item/>
+        <item>beets</item>
+        <item>collard-greens</item>
+        <item>kale</item>
+        <item/>
+        <item>mustard-greens</item>
+        <item/>
+        <item>spinach</item>
+        <item>swiss-chard</item>
+        <item/>
+    </string-array>
+    <string-array name="food_videos_other_vegetables" translatable="false">
+        <item>artichokes</item>
+        <item>asparagus</item>
+        <item>beets</item>
+        <item>bell-peppers</item>
+        <item>carrots</item>
+        <item>corn</item>
+        <item>garlic</item>
+        <item>mushrooms</item>
+        <item>okra</item>
+        <item>onions</item>
+        <item>potatoes</item>
+        <item>pumpkin</item>
+        <item>sea-vegetables</item>
+        <item/>
+        <item>squash</item>
+        <item>sweet-potatoes</item>
+        <item>tomatoes</item>
+        <item>zucchini</item>
+    </string-array>
+    <string-array name="food_videos_nuts" translatable="false">
+        <item>almonds</item>
+        <item>brazil-nuts</item>
+        <item>cashews</item>
+        <item>chia-seeds</item>
+        <item>hazelnuts</item>
+        <item/>
+        <item>macadamia-nuts</item>
+        <item>pecans</item>
+        <item>pistachios</item>
+        <item>pumpkin-seeds</item>
+        <item>sesame-seeds</item>
+        <item>sunflower-seeds</item>
+        <item>walnuts</item>
+    </string-array>
+    <string-array name="food_videos_spices" translatable="false">
+        <item>allspice</item>
+        <item>barberries</item>
+        <item>basil</item>
+        <item/>
+        <item/>
+        <item/>
+        <item>cilantro</item>
+        <item>cinnamon</item>
+        <item>cloves</item>
+        <item/>
+        <item>cumin</item>
+        <item>curry-powder</item>
+        <item/>
+        <item>fenugreek</item>
+        <item>garlic</item>
+        <item>ginger</item>
+        <item/>
+        <item/>
+        <item>marjoram</item>
+        <item>mustard-powder</item>
+        <item>nutmeg</item>
+        <item>oregano</item>
+        <item/>
+        <item>parsley</item>
+        <item>pepper</item>
+        <item>peppermint</item>
+        <item>rosemary</item>
+        <item>saffron</item>
+        <item/>
+        <item/>
+        <item>turmeric</item>
+        <item/>
+    </string-array>
+    <string-array name="food_videos_whole_grains" translatable="false">
+        <item>barley</item>
+        <item>buckwheat</item>
+        <item>millet</item>
+        <item>oats</item>
+        <item>popcorn</item>
+        <item>quinoa</item>
+        <item>rye</item>
+        <item/>
+        <item>pasta</item>
+    </string-array>
+    <string-array name="food_videos_beverages" translatable="false">
+        <item>black-tea</item>
+        <item>chai-tea</item>
+        <item>chamomile-tea</item>
+        <item>coffee</item>
+        <item>earl-grey-tea</item>
+        <item>green-tea</item>
+        <item>hibiscus-tea</item>
+        <item/>
+        <item/>
+        <item>lemon-balm</item>
+        <item>matcha</item>
+        <item>oolong-tea</item>
+        <item>peppermint</item>
+        <item>rooibos-tea</item>
+        <item>water</item>
+        <item>white-tea</item>
+    </string-array>
 </resources>
