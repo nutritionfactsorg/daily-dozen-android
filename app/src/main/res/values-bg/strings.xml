@@ -101,15 +101,6 @@
         <item>Година</item>
     </string-array>
 
-    <string-array name="history_to_generate_choices">
-        <item>1 месец</item>
-        <item>3 месеца</item>
-        <item>6 месеца</item>
-        <item>1 година</item>
-        <item>2 години</item>
-        <item>5 години</item>
-    </string-array>
-
     <string-array name="food_info_types_beans">
         <item>Черен боб</item>
         <item>Папуда</item>

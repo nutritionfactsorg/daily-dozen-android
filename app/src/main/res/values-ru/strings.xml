@@ -178,14 +178,6 @@
         <item>Месяц</item>
         <item>Год</item>
     </string-array>
-    <string-array name="history_to_generate_choices">
-        <item>1 месяц</item>
-        <item>3 месяца</item>
-        <item>6 месяцев</item>
-        <item>1 год</item>
-        <item>2 года</item>
-        <item>5 лет</item>
-    </string-array>
     <string-array name="food_info_types_beans">
         <item>Чёрная фасоль</item>
         <item>Черноглазая фасоль</item>

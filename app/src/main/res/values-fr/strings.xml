@@ -102,15 +102,6 @@
         <item>Année</item>
     </string-array>
 
-    <string-array name="history_to_generate_choices">
-        <item>1 mois</item>
-        <item>3 mois</item>
-        <item>6 mois</item>
-        <item>1 an</item>
-        <item>2 ans</item>
-        <item>5 ans</item>
-    </string-array>
-
     <string-array name="food_info_types_beans">
         <item>Haricots noirs</item>
         <item>Haricots à oeil noir</item>

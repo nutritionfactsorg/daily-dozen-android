@@ -101,15 +101,6 @@
         <item>Año</item>
     </string-array>
 
-    <string-array name="history_to_generate_choices">
-        <item>1 mes</item>
-        <item>3 meses</item>
-        <item>6 meses</item>
-        <item>1 año</item>
-        <item>2 años</item>
-        <item>5 años</item>
-    </string-array>
-
     <string-array name="food_info_types_beans">
         <item>Frijoles negros</item>
         <item>Frijoles de careta</item>

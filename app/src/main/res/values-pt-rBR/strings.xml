@@ -178,14 +178,6 @@
         <item>Mês</item>
         <item>Ano</item>
     </string-array>
-    <string-array name="history_to_generate_choices">
-        <item>1 mês</item>
-        <item>3 meses</item>
-        <item>6 meses</item>
-        <item>1 ano</item>
-        <item>2 anos</item>
-        <item>5 anos</item>
-    </string-array>
     <string-array name="food_info_types_beans">
         <item>Feijão preto</item>
         <item>Feijão fradinho</item>

@@ -188,14 +188,6 @@
         <item>חודש</item>
         <item>שנה</item>
     </string-array>
-    <string-array name="history_to_generate_choices">
-        <item>חודש 1</item>
-        <item>3 חודשים</item>
-        <item>6 חודשים</item>
-        <item>שנה אחת</item>
-        <item>שנתיים</item>
-        <item>5 שנים</item>
-    </string-array>
     <string-array name="food_info_types_beans">
         <item>שעועית שחורה</item>
         <item>שעועית מנומרת</item>

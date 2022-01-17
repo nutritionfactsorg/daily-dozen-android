@@ -118,15 +118,6 @@
         <item>Anno</item>
     </string-array>
 
-    <string-array name="history_to_generate_choices">
-        <item>1 mese</item>
-        <item>3 mesi</item>
-        <item>6 mesi</item>
-        <item>1 anno</item>
-        <item>2 anni</item>
-        <item>5 anno</item>
-    </string-array>
-
     <string-array name="food_info_types_beans">
         <item>Fagioli neri</item>
         <item>Fagioli dall’occhio nero</item>

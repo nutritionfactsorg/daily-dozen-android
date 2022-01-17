@@ -184,14 +184,6 @@
         <item>Monat</item>
         <item>Jahr</item>
     </string-array>
-    <string-array name="history_to_generate_choices">
-        <item>1 Monat</item>
-        <item>3 Monate</item>
-        <item>6 Monate</item>
-        <item>1 Jahr</item>
-        <item>2 Jahre</item>
-        <item>5 Jahre</item>
-    </string-array>
     <string-array name="food_info_types_beans">
         <item>Schwarze Bohnen</item>
         <item>Schwarzäugige Erbsen (Bohnen)</item>

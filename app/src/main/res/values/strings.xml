@@ -360,7 +360,7 @@
         <item>Month</item>
         <item>Year</item>
     </string-array>
-    <string-array name="history_to_generate_choices">
+    <string-array name="history_to_generate_choices" translatable="false">
         <item>1 month</item>
         <item>3 months</item>
         <item>6 months</item>

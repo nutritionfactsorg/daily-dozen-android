@@ -193,14 +193,6 @@
         <item>Miesiąc</item>
         <item>Rok</item>
     </string-array>
-    <string-array name="history_to_generate_choices">
-        <item>1 miesiąc</item>
-        <item>3 miesiące</item>
-        <item>6 miesięcy</item>
-        <item>1 rok</item>
-        <item>2 lata</item>
-        <item>5 lat</item>
-    </string-array>
     <string-array name="food_info_types_beans">
         <item>Fasola czana</item>
         <item>Fasola czarne oczko</item>
