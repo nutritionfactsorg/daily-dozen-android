@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" standalone="yes"?>
 <resources>
     <string name="app_name">Dúzia Diária</string>
     <string name="beans">Leguminosas</string>
@@ -8,8 +8,8 @@
     <string name="greens">Verduras</string>
     <string name="other_vegetables">Outros Vegetais</string>
     <string name="flaxseeds">Linhaça</string>
-    <string name="nuts">Oleaginosas e Sementes</string>
-    <string name="spices">Ervas e Especiarias</string>
+    <string name="nuts">Castanhas e Sementes</string>
+    <string name="spices">Ervas e Temperos</string>
     <string name="whole_grains">Grãos Integrais</string>
     <string name="beverages">Bebidas</string>
     <string name="exercise">Exercícios</string>
@@ -176,7 +176,7 @@
     <string name="nightly_trendelenburg_short">Experimente o Trendelenburg Leve</string>
     <string name="meal_water_text">Planeje seus dois copos de água sem sabor, fria ou gelada, que aumentam o metabolismo, antes de cada refeição, para também aproveitar seus benefícios de pré-refeição.</string>
     <string name="meal_negcal_text">Como primeiro prato, comece cada refeição com uma maçã, ou uma sopa ou uma salada considerada "Luz Verde" contendo menos de cem calorias por xícara.</string>
-    <string name="meal_vinegar_text">Nunca beba vinagre puro. Em vez disso, incorpore em refeições ou tempere uma salada, utilizando qualquer um dos vinagres doces e salgados. Se você quiser bebê-lo, misture-o em um copo de água e depois enxague a boca com água para proteger o esmalte dos dentes.</string>
+    <string name="meal_vinegar_text">Nunca beba vinagre puro. Em vez disso, incorpore em refeições ou tempere uma salada, utilizando qualquer um dos vinagres doces ou salgados. Se você quiser bebê-lo, misture-o em um copo de água e depois enxague a boca com água para proteger o esmalte dos dentes.</string>
     <string name="meal_undistracted_text">Não coma enquanto assiste TV ou joga no seu celular. Assinale para cada refeição que puder comer sem distração.</string>
     <string name="meal_twentyminutes_text">Seja através do aumento da viscosidade ou do número de mastigações ou da diminuição do tamanho da mordida e da taxa de alimentação, dezenas de estudos demonstraram que, independentemente de como aumentamos a quantidade de tempo que os alimentos permanecem na boca, isso pode resultar em uma menor ingestão calórica. Portanto, estenda a duração das refeições para pelo menos vinte minutos para permitir que seus sinais naturais de saciedade entrem em ação. De que forma? Escolhendo alimentos que demoram mais para serem ingeridos e comendo-os de maneira a prolongar o tempo que eles ficam na boca. Pense em alimentos mais volumosos, mais duros, que exigem mais mastigação, em pequenas quantidades bem mastigadas.</string>
     <string name="daily_blackcumin_text">Como observado na seção Supressão de Apetite, uma revisão sistemática e metanálise de estudos clínicos randomizados e controlados para perda de peso descobriu que cerca de um quarto de colher de chá de pó de cominho preto todos os dias parece reduzir o índice de massa corporal em um período de alguns meses. Observe que o cominho preto é diferente do cominho comum, para o qual a dosagem é diferente.</string>
@@ -187,9 +187,9 @@
     <string name="daily_greentea_text">Beba três xícaras por dia entre as refeições (aguarde pelo menos uma hora após a refeição para não interferir na absorção de ferro). Durante as refeições, beba água, café preto ou chá de hibisco misturado 6:1 com verbena-limão, mas nunca exceda três xícaras de líquido por hora (importante devido aos meus conselhos de fazer uma pré-refeição de água). Aproveite o efeito reforçado da cafeína bebendo seu chá verde junto com algo saudável que você não gosta tanto, mas não consuma grandes quantidades de cafeína nas seis horas antes de dormir. Tomar chá sem adoçante é melhor, mas se você normalmente adoça o chá com mel ou açúcar, tente o xarope de yacon.</string>
     <string name="daily_hydrate_text">Assinale esta opção se a sua urina nunca parecer mais escura que amarelo pálido. Note que, se você estiver ingerindo alimentos enriquecidos com riboflavina (como levedura nutricional), baseie-se apenas no critério de ingerir nove copos de bebidas sem açúcar por dia para as mulheres (que seriam cumpridas pelas recomendações de pré-refeição de água e chá verde) ou 13 copos por dia para homens. Se você tiver problemas cardíacos ou renais, não aumente a ingestão de líquidos sem antes conversar com seu médico. Lembre-se de que o refrigerante diet pode estar isento de calorias, mas não está isento de consequências, como aprendemos na seção Baixo Teor de Açúcar Adicionado.</string>
     <string name="daily_deflourdiet_text">Assinale esta opção todos os dias que as suas porções de grãos integrais forem na forma de grãos intactos. Moer grãos, incluindo grãos 100 % integrais, impede que o amido seja transportado dentro de parades celulares intactas para o nosso cólon, impedindo assim, que chegue ao nosso microbioma.</string>
-    <string name="daily_frontload_text">Existem benefícios metabólicos no consumo de mais calorias no início do dia, portanto, faça da refeição matinal (idealmente) ou do almoço a sua maior refeição do dia, seguindo o estilo rei/príncipe/pobre.</string>
+    <string name="daily_frontload_text">Existem benefícios metabólicos no consumo de mais calorias no início do dia, portanto, faça do café da manhã (idealmente) ou do almoço a sua maior refeição do dia, seguindo o estilo rei/príncipe/pobre.</string>
     <string name="daily_timerestrict_text">Limite a alimentação a um intervalo de tempo diário de sua escolha com menos de doze horas de duração, que você possa manter consistentemente, sete dias por semana. Dados os benefícios circadianos de reduzir a ingestão noturna de alimentos, o intervalo deve terminar antes das 19:00h.</string>
-    <string name="exercise_timing_text">A recomendação da Dúzia Diária para a duração ideal de exercícios para a longevidade é de noventa minutos de atividade de intensidade moderada por dia, que também é a duração ideal de exercícios para perda de peso. Qualquer momento é bom e, quanto mais, melhor, mas pode haver uma vantagem em se exercitar em jejum, pelo menos seis horas após a sua última refeição. Normalmente, isso significa antes da refeição matinal, mas se você planejar corretamente, pode se exercitar no meio do dia antes de um almoço tardio ou, se você almoçar suficientemente cedo, antes do jantar. Estes são os períodos para os não diabéticos. Diabéticos e pré-diabéticos devem começar a se exercitar trinta minutos após o início de uma refeição e, idealmente, se exercitar por pelo menos uma hora para passar completamente o pico de glicose no sangue. Se você tivesse que escolher uma única refeição para se exercitar depois, seria o jantar, devido ao ritmo circadiano de controle de glicose no sangue que diminui ao longo do dia. Idealmente, porém, a refeição matinal seria a maior refeição do dia e você deveria se exercitar depois disso — ou, melhor ainda, depois de cada refeição.</string>
+    <string name="exercise_timing_text">A recomendação da Dúzia Diária para a duração ideal de exercícios para a longevidade é de noventa minutos de atividade de intensidade moderada por dia, que também é a duração ideal de exercícios para perda de peso. Qualquer momento é bom e, quanto mais, melhor, mas pode haver uma vantagem em se exercitar em jejum, pelo menos seis horas após a sua última refeição. Normalmente, isso significa antes do café da manhã, mas se você planejar corretamente, pode se exercitar no meio do dia antes de um almoço tardio ou, se você almoçar suficientemente cedo, antes do jantar. Estes são os períodos para os não diabéticos. Diabéticos e pré-diabéticos devem começar a se exercitar trinta minutos após o início de uma refeição e, idealmente, se exercitar por pelo menos uma hora para passar completamente o pico de glicose no sangue. Se você tivesse que escolher uma única refeição para se exercitar depois, seria o jantar, devido ao ritmo circadiano de controle de glicose no sangue que diminui ao longo do dia. Idealmente, porém, o café da manhã seria a maior refeição do dia e você deveria se exercitar depois disso — ou, melhor ainda, depois de cada refeição.</string>
     <string name="weigh_twice_text">A auto-pesagem regular é considerada crucial para o controle de peso a longo prazo, mas não há evidências suficientes para apoiar uma frequência específica de pesagem. Minha recomendação baseia-se no estudo que constatou que duas vezes por dia — ao acordar e logo antes de dormir — pareceu superior a uma vez por dia (cerca de 2,7 kg versus 0,9 kg de perda de peso em doze semanas).</string>
     <string name="complete_intentions_text">A cada dois meses, crie três novas intenções de implementação — planos "se X, então Y" para executar um comportamento específico em um contexto específico — e marque cada uma delas conforme você as conclui todos os dias.</string>
     <string name="nightly_fast_text">Devido aos nossos ritmos circadianos, os alimentos consumidos à noite engordam mais do que exatamente os mesmos alimentos ingeridos no início do dia, portanto jejue todas as noites por pelo menos doze horas, começando antes das 19:00h. Quanto menos calorias após o pôr do sol, melhor.</string>
@@ -370,7 +370,7 @@
     </string-array>
     <string-array name="food_info_types_beans">
         <item>Feijão preto</item>
-        <item>Feijão frade</item>
+        <item>Feijão fradinho</item>
         <item>Feijão branco (lima)</item>
         <item>Feijão branco (cannellini)</item>
         <item>Grão-de-bico</item>
@@ -381,7 +381,7 @@
         <item>Lentilha (variedades beluga, francesa e vermelha)</item>
         <item>Missô</item>
         <item>Feijão branco (navy)</item>
-        <item>Feijão carioca/catarino</item>
+        <item>Feijão carioquinha</item>
         <item>Feijão vermelho pequeno</item>
         <item>Ervilha seca partida (amarela ou verde)</item>
         <item>Tempê</item>
@@ -405,7 +405,7 @@
         <item>Damasco seco</item>
         <item>Abacate</item>
         <item>Banana</item>
-        <item>Melão Gália/Cantaloupe</item>
+        <item>Melão Cantaloupe</item>
         <item>Tangerina clementina</item>
         <item>Tâmara</item>
         <item>Figo seco</item>
@@ -422,9 +422,9 @@
         <item>Maracujá</item>
         <item>Pêssego</item>
         <item>Pêra</item>
-        <item>Abacaxi/Ananás</item>
+        <item>Abacaxi</item>
         <item>Ameixa (especialmente ameixa preta)</item>
-        <item>Damasco/Alperce Pluot</item>
+        <item>Damasco Pluot</item>
         <item>Romã</item>
         <item>Ameixa seca</item>
         <item>Tangerina</item>
@@ -433,30 +433,30 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Rúcula</item>
         <item>Couve chinesa (bok choy)</item>
-        <item>Brócolis/Brócolos (inclui couve-romanesca)</item>
+        <item>Brócolis (inclui couve-romanesca)</item>
         <item>Couve-de-bruxelas</item>
         <item>Repolho (verde, roxo e savoy)</item>
         <item>Couve-flor (branca, verde, laranja e roxa)</item>
-        <item>Couve/Couve-galega</item>
-        <item>Rábano-silvestre/Armorácia</item>
-        <item>Kale/Couve-de-folhas (preta, verde e vermelha)</item>
+        <item>Couve</item>
+        <item>Rábano-silvestre</item>
+        <item>Couve kale (preta, verde e vermelha)</item>
         <item>Couve-rábano (verde e roxa)</item>
         <item>Folhas de mostarda</item>
         <item>Rabanetes</item>
-        <item>Folhas de nabo/Nabiças</item>
+        <item>Folhas de nabo</item>
         <item>Agrião</item>
     </string-array>
     <string-array name="food_info_types_greens">
         <item>Rúcula</item>
         <item>Folhas de beterraba</item>
-        <item>Couve galega</item>
-        <item>Kale/Couve-de-folhas (preta, verde e vermelha)</item>
+        <item>Couve</item>
+        <item>Couve kale (preta, verde e vermelha)</item>
         <item>Mistura de folhas tenras verdes variadas</item>
         <item>Folhas de mostarda</item>
         <item>Vinagreira/Azeda</item>
         <item>Espinafre</item>
-        <item>Folhas de acelga/beterraba branca</item>
-        <item>Folhas de nabo/Nabiças</item>
+        <item>Folhas de acelga</item>
+        <item>Folhas de nabo</item>
     </string-array>
     <string-array name="food_info_types_other_vegetables">
         <item>Alcachofra</item>
@@ -474,9 +474,9 @@
         <item>Algas (arame, dulse e nori)</item>
         <item>Ervilha torta</item>
         <item>Abóbora (variedades delicata, amarela/verão e espaguete)</item>
-        <item>Batata doce/inhame</item>
+        <item>Batata doce/Inhame</item>
         <item>Tomate</item>
-        <item>Abobrinha/Curgete</item>
+        <item>Abobrinha</item>
     </string-array>
     <string-array name="food_info_types_flaxseeds">
         <item>Linhaça marrom</item>
@@ -484,7 +484,7 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Amêndoas</item>
-        <item>Castanhas do Pará/Brasil</item>
+        <item>Castanhas do Pará</item>
         <item>Castanhas de cajú</item>
         <item>Sementes de chia</item>
         <item>Avelãs</item>
@@ -493,7 +493,7 @@
         <item>Nozes pecãs</item>
         <item>Pistaches</item>
         <item>Sementes de abóbora</item>
-        <item>Gergelim/Sementes de sésamo</item>
+        <item>Gergelim</item>
         <item>Sementes de girassol</item>
         <item>Nozes</item>
     </string-array>
@@ -520,7 +520,7 @@
         <item>Mostarda em pó</item>
         <item>Noz-moscada</item>
         <item>Orégano</item>
-        <item>Páprica/Páprica defumada</item>
+        <item>Páprica</item>
         <item>Salsinha</item>
         <item>Pimenta</item>
         <item>Hortelã-pimenta</item>
@@ -564,7 +564,7 @@
         <item>Ciclismo</item>
         <item>Canoagem</item>
         <item>Dança</item>
-        <item>Queimada/Jogo do mata</item>
+        <item>Queimada</item>
         <item>Esqui alpino</item>
         <item>Esgrima</item>
         <item>Caminhada</item>
@@ -596,16 +596,16 @@
         <item>Esqui cross-country</item>
         <item>Futebol americano</item>
         <item>Hóquei</item>
-        <item>Jogging/Corrida</item>
+        <item>Corrida em velocidade baixa</item>
         <item>Polichinelo</item>
         <item>Pular corda</item>
         <item>Lacrosse</item>
         <item>Flexões de braço</item>
-        <item>Flexões de braços em barra fixa (pull-ups)</item>
+        <item>Flexões de braços em barra fixa</item>
         <item>Raquetebol</item>
         <item>Escalada</item>
         <item>Rugby</item>
-        <item>Corrida</item>
+        <item>Corrida em velocidade alta</item>
         <item>Mergulho</item>
         <item>Tênis (1vs1)</item>
         <item>Futebol</item>
@@ -614,7 +614,7 @@
         <item>Aeróbica de step</item>
         <item>Natação contínua</item>
         <item>Andar rapidamente em subida</item>
-        <item>Jogging na água</item>
+        <item>Corrida na água</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans">
         <item>%s de homus ou patê de feijão</item>
@@ -645,8 +645,8 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits">
         <item>%s1 fruta de tamanho médio</item>
-        <item>1%s de fruta cortada</item>
-        <item>%s de fruta seca</item>
+        <item>1%s de frutas picadas</item>
+        <item>%s de frutas secas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
         <item></item>
@@ -688,7 +688,7 @@
     <string-array name="food_info_serving_sizes_other_vegetables">
         <item>%s de vegetais folhosos crus</item>
         <item>%s de vegetais não-folhosos crus ou cozidos</item>
-        <item>%s de suco/sumo de vegetais</item>
+        <item>%s de suco de vegetais</item>
         <item>%s de cogumelos secos</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
@@ -713,8 +713,8 @@
         <item></item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts">
-        <item>%s de oleaginosas ou sementes</item>
-        <item>%s2 colheres de sopa de manteiga/pasta de oleaginosas ou sementes</item>
+        <item>%s de castanhas ou sementes</item>
+        <item>%s2 colheres de sopa de manteiga de castanhas ou sementes</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ xícara</item>
@@ -737,7 +737,7 @@
         <item></item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s de cereais ou grãos cozidos, massas ou grãos de milho</item>
+        <item>%s de cereais, grãos cozidos, massas ou grãos de milho</item>
         <item>%s de cereais matinais</item>
         <item>%s1 tortilha ou fatia de pão</item>
         <item>%s½ bagel ou muffin inglês</item>
