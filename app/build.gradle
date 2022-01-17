@@ -39,7 +39,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 30
         vectorDrawables.useSupportLibrary = true
-        versionCode 62
+        versionCode 63
         versionName "21"
     }
     buildTypes {
