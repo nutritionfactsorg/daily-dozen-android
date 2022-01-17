@@ -256,7 +256,7 @@
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
     </string-array>
-    <integer-array name="food_quantities">
+    <integer-array name="food_quantities" translatable="false">
         <item>3</item>
         <item>1</item>
         <item>3</item>
