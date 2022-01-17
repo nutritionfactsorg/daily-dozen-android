@@ -89,9 +89,7 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        final int historyToGenerate = getNumDaysForChoice();
-        Common.showToast(view.getContext(), String.valueOf(historyToGenerate));
-        this.historyToGenerate = historyToGenerate;
+        this.historyToGenerate = getNumDaysForChoice();
     }
 
     private int getNumDaysForChoice() {
