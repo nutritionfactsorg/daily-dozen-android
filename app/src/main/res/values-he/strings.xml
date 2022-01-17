@@ -214,7 +214,7 @@
         <item>דובדבנים</item>
         <item>ענבי קונקורד</item>
         <item>חמוציות</item>
-        <item>גוג'י ברי</item>
+        <item>גוג\'י ברי</item>
         <item>תפוז סיני</item>
         <item>תותים</item>
         <item>פטל שחור או אדום</item>
@@ -234,7 +234,7 @@
         <item>קיווי</item>
         <item>לימונים</item>
         <item>ליים</item>
-        <item>ליצ'י</item>
+        <item>ליצ\'י</item>
         <item>מנגו</item>
         <item>נקטרינות</item>
         <item>תפוזים</item>
@@ -252,7 +252,7 @@
     </string-array>
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>אורוגולה</item>
-        <item>בוק צ'וי</item>
+        <item>בוק צ\'וי</item>
         <item>ברוקולי (כולל רומנסקו)</item>
         <item>כרוב ניצנים</item>
         <item>כרוב (ירוק, אדום וסבוי)</item>
@@ -306,7 +306,7 @@
         <item>שקדים</item>
         <item>אגוזי ברזיל</item>
         <item>קשיו</item>
-        <item>זרעי צ'יה</item>
+        <item>זרעי צ\'יה</item>
         <item>אגוזי לוז</item>
         <item>קנבוס</item>
         <item>אגוזי מקדמיה</item>
@@ -323,7 +323,7 @@
         <item>בזיליקום</item>
         <item>עלי דפנה</item>
         <item>הל</item>
-        <item>אבקת צ'ילי</item>
+        <item>אבקת צ\'ילי</item>
         <item>כוסברה</item>
         <item>קינמון</item>
         <item>ציפורן</item>
@@ -364,7 +364,7 @@
     </string-array>
     <string-array name="food_info_types_beverages">
         <item>תה שחור</item>
-        <item>תה צ'אי</item>
+        <item>תה צ\'אי</item>
         <item>תה קמומיל-וניל</item>
         <item>קפה</item>
         <item>תה ארל-גריי</item>
