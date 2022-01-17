@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" standalone="yes"?>
 <resources>
     <string name="app_name">Не Сдохни!</string>
     <string name="beans">Бобовые</string>
@@ -110,7 +110,7 @@
     <string name="rate_now">Оставить отзыв</string>
     <string name="not_now">Не сейчас</string>
     <string name="format_version">версия %s</string>
-    <string name="format_num_days">%d дней</string>
+    <string name="format_num_days">%d дни</string>
     <string name="daily_reminder_title">Напоминания Не сдохни!</string>
     <string name="daily_reminder_text">Обновите порции за сегодня</string>
     <string name="daily_reminder_settings">Настройки ежедневных напоминаний</string>
