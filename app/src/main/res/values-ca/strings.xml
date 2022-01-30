@@ -28,13 +28,13 @@
     <string name="donate">Donacions</string>
     <string name="subscribe">Subscriu-te</string>
     <string name="open_source">Codi Obert</string>
-    <string name="permission_needed_to_write_storage">No podem fer una còpia de seguretat sense permís per accedir a l'emmagatzematge</string>
+    <string name="permission_needed_to_write_storage">No podem fer una còpia de seguretat sense permís per accedir a l\'emmagatzematge</string>
     <string name="backup_failed">La còpia de seguretat ha fallat</string>
     <string name="restore_failed">La recuperació ha fallat</string>
     <string name="backup_success">Còpia de seguretat feta amb èxit</string>
-    <string name="restore_success">La recuperació s'ha fet amb èxit</string>
+    <string name="restore_success">La recuperació s\'ha fet amb èxit</string>
     <string name="restore_confirm_title">Recuperar Còpia de seguretat</string>
-    <string name="restore_confirm_message">Totes les dades existents s'esborraran abans de recuperar la còpia de seguretat. Vols continuar?</string>
+    <string name="restore_confirm_message">Totes les dades existents s\'esborraran abans de recuperar la còpia de seguretat. Vols continuar?</string>
     <string name="yes">Sí</string>
     <string name="no">No</string>
     <string name="backup">Còpia de seguretat</string>
@@ -51,9 +51,9 @@
     <string name="debug_clear_data_message">Això elliminarà totes les racions. Vols continuar?</string>
     <string name="OK">OK</string>
     <string name="dialog_streaks_title">Nova eina: Gomets!</string>
-    <string name="dialog_streaks_message">La teva base de dades s'actualitzarà per afegir la nova eina del gomet.</string>
-    <string name="dialog_no_email_apps_title">No s'ha trobat cap aplicació de correu electrònic</string>
-    <string name="dialog_no_email_apps_message">Per fer una còpia de seguretat de les teves dades, has de tenir instal·lada una aplicació de correu electrònic perquè et puguis enviar l'arxiu .csv amb la còpia a tu mateix. Sisuplau, instal·la una aplicació de correu electrònic i torna-ho a intentar.</string>
+    <string name="dialog_streaks_message">La teva base de dades s\'actualitzarà per afegir la nova eina del gomet.</string>
+    <string name="dialog_no_email_apps_title">No s\'ha trobat cap aplicació de correu electrònic</string>
+    <string name="dialog_no_email_apps_message">Per fer una còpia de seguretat de les teves dades, has de tenir instal·lada una aplicació de correu electrònic perquè et puguis enviar l\'arxiu .csv amb la còpia a tu mateix. Sisuplau, instal·la una aplicació de correu electrònic i torna-ho a intentar.</string>
     <string name="debug_generate_random_data">Genera dades aleatòries</string>
     <string name="debug_generate_full_data">Genera totes les dades</string>
     <string name="debug_generate_data_message">Es reemplaçaran totes les dades. Vols continuar?</string>
@@ -63,22 +63,22 @@
     <string name="history_to_generate">Generar Historial</string>
     <string name="welcome_to_my_daily_dozen">Benvingut a la meva Dotzena Diària!</string>
     <string name="activity_welcome_text">Utilitza aquesta app cada dia per fer un seguiment dels aliments i els consells que dono per una salut i longevitat òptimes als meus llibres How Not to Die i How Not to Diet.</string>
-    <string name="dialog_ask_user_to_rate_app_title">T'agrada aquesta app?</string>
-    <string name="dialog_ask_user_to_rate_app_message">Siusplau, deixa'ns una ressenya a la Play Store.</string>
+    <string name="dialog_ask_user_to_rate_app_title">T\'agrada aquesta app?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Siusplau, deixa\'ns una ressenya a la Play Store.</string>
     <string name="rate_now">Dona la teva Opinió</string>
     <string name="not_now">Ara No</string>
     <string name="format_version">versió %s</string>
     <string name="format_num_days">%d dies</string>
     <string name="daily_reminder_title">Recordatoris de la Dotzena Diària</string>
-    <string name="daily_reminder_text">Actualitza les racions d'avui</string>
+    <string name="daily_reminder_text">Actualitza les racions d\'avui</string>
     <string name="daily_reminder_settings">Configuració de la Dotzena Diària</string>
     <string name="enable_daily_reminder">Permet el Recordatori Diari</string>
-    <string name="remind_me_at">Recorda-m'ho a</string>
+    <string name="remind_me_at">Recorda-m\'ho a</string>
     <string name="videos">Vídeos</string>
     <string name="units">Unitats</string>
     <string name="imperial">imperial</string>
     <string name="metric">mètric</string>
-    <string name="error_cannot_handle_url">No es pot obrir l'enllaç. Siusplau, instal·la un navegador.</string>
+    <string name="error_cannot_handle_url">No es pot obrir l\'enllaç. Siusplau, instal·la un navegador.</string>
     <string name="channel_reminders_name">Recordatoris</string>
     <string name="twenty_one_tweaks">21 Potenciadors</string>
     <string name="tweaks">Potenciadors</string>
@@ -103,7 +103,7 @@
     <string name="daily_deflourdiet">Prou de farines</string>
     <string name="daily_frontload">Càrrega frontal de calories</string>
     <string name="daily_timerestrict">Alimentació amb Temps Restringit</string>
-    <string name="exercise_timing">Optimitzar el Temps d'Exercici</string>
+    <string name="exercise_timing">Optimitzar el Temps d\'Exercici</string>
     <string name="weigh_twice">Pesar-se Dues Vegades al Dia</string>
     <string name="complete_intentions">Completa els Teus Objectius</string>
     <string name="nightly_fast">Dejú Després de les 7:00 P.M.</string>
@@ -126,33 +126,33 @@
     <string name="daily_deflourdiet_short">Prou de farines</string>
     <string name="daily_frontload_short">Càrrega frontal de calories</string>
     <string name="daily_timerestrict_short">Alimentació amb Temps Restringit</string>
-    <string name="exercise_timing_short">Optimitzar el Temps d'Exercici</string>
+    <string name="exercise_timing_short">Optimitzar el Temps d\'Exercici</string>
     <string name="weigh_twice_short">Pesar-se Dues Vegades al Dia</string>
     <string name="complete_intentions_short">Completa els Teus Objectius</string>
     <string name="nightly_fast_short">Dejú Després de les 7:00 P.M.</string>
     <string name="nightly_sleep_short">Dorm Prou Hores</string>
     <string name="nightly_trendelenburg_short">Trendelenburg</string>
-    <string name="meal_water_text">Beu dos gots d'aigua sense gust, freda o natural, abans de cada àpat per accelerar el teu metabolisme i aprofitar-ne els beneficis.</string>
+    <string name="meal_water_text">Beu dos gots d\'aigua sense gust, freda o natural, abans de cada àpat per accelerar el teu metabolisme i aprofitar-ne els beneficis.</string>
     <string name="meal_negcal_text">Com entrant, pots menjar-te una poma, una sopa o una amanida amb aliments recomanats que contingui menys de cent calories per tassa.</string>
-    <string name="meal_vinegar_text">Mai no beguis vinagre sol. Pots utilitzar-lo per condimentar els menjars o per amanir. Pots utilitzar qualsevol tipus de vinagre, dolç o salat. Si vols beure'n, has de barrejar-lo amb un got d'aigua i glopejar just després per protegir l'esmalt dental.</string>
+    <string name="meal_vinegar_text">Mai no beguis vinagre sol. Pots utilitzar-lo per condimentar els menjars o per amanir. Pots utilitzar qualsevol tipus de vinagre, dolç o salat. Si vols beure\'n, has de barrejar-lo amb un got d\'aigua i glopejar just després per protegir l\'esmalt dental.</string>
     <string name="meal_undistracted_text">No mengis mentre mires la televisió o juguis amb el mòbil. Pots marcar una casella per cada àpat que passis sense distraccions.</string>
-    <string name="meal_twentyminutes_text">Ja sigui amb l'augment de la viscositat i el temps de mastegar o reduint la quantitat de menjar que et poses a la boca, dotzenes d'estudis han demostrat que augmentar la quantitat de temps que els aliments es passen a la boca pot resultar en una menor ingesta calòrica. Per tant, allarga els àpats com a mínim vint minuts perquè les teves senyals de sacietat naturals es tornin efectives. Com pots fer-ho? Podries escollir aliments que siguin més difícils de menjar i menjar-te'ls de manera que es prolongui el temps que es queden a la boca. Pensa en aliments més voluminosos, més durs i que puguis mastegar en bocins més petits.</string>
-    <string name="daily_blackcumin_text">Com s'indica a la secció de Repressió de la Gana, una revisió sistemàtica i un metaanàlisi d'intents aleatoritzats i controlats de pèrdua de pes van demostrar que un quart de culleradeta de comí negre en pols cada dia reduiria l'índex de massa corporal en un període de dos mesos. Recorda que el comí negre és diferent del comí normal, per això les dosis són diferents.</string>
-    <string name="daily_garlic_text">Estudis aleatoritzats, amb cegament doble i amb placebo controlats han demostrat que amb només un quart de culleradeta d'all en pols es pot reduir el greix corporal a un preu de dos cèntims el dia.</string>
-    <string name="daily_ginger_text">Proves aleatoritzades i controlades han demostrat que, entre ¼ i ½ culleradeta al dia de gingebre mòlt, redueixen de manera significativa el pes corporal per només dos penics al dia. Pot ser tan fàcil com combinar l'espècia en pols en un got d'aigua calenta. Nota: És possible que el gingebre funcioni millor al matí que al vespre. El te xai és una manera deliciosa de combinar el te verd i el gingebre en una sola beguda. Com a alternativa, per una activació del BAT, pots afegir un xili cru o mitja culleradeta de pebre vermell en pols a la teva alimentació diària. Per ajudar a combatre la calor, pots tallar el xili molt finament o combinar el pebre vermell amb una sopa o un batut integral de verdures. N'he fet un en un dels meus vídeos de cuina de NutritionFacts.org.</string>
+    <string name="meal_twentyminutes_text">Ja sigui amb l\'augment de la viscositat i el temps de mastegar o reduint la quantitat de menjar que et poses a la boca, dotzenes d\'estudis han demostrat que augmentar la quantitat de temps que els aliments es passen a la boca pot resultar en una menor ingesta calòrica. Per tant, allarga els àpats com a mínim vint minuts perquè les teves senyals de sacietat naturals es tornin efectives. Com pots fer-ho? Podries escollir aliments que siguin més difícils de menjar i menjar-te\'ls de manera que es prolongui el temps que es queden a la boca. Pensa en aliments més voluminosos, més durs i que puguis mastegar en bocins més petits.</string>
+    <string name="daily_blackcumin_text">Com s\'indica a la secció de Repressió de la Gana, una revisió sistemàtica i un metaanàlisi d\'intents aleatoritzats i controlats de pèrdua de pes van demostrar que un quart de culleradeta de comí negre en pols cada dia reduiria l\'índex de massa corporal en un període de dos mesos. Recorda que el comí negre és diferent del comí normal, per això les dosis són diferents.</string>
+    <string name="daily_garlic_text">Estudis aleatoritzats, amb cegament doble i amb placebo controlats han demostrat que amb només un quart de culleradeta d\'all en pols es pot reduir el greix corporal a un preu de dos cèntims el dia.</string>
+    <string name="daily_ginger_text">Proves aleatoritzades i controlades han demostrat que, entre ¼ i ½ culleradeta al dia de gingebre mòlt, redueixen de manera significativa el pes corporal per només dos penics al dia. Pot ser tan fàcil com combinar l\'espècia en pols en un got d\'aigua calenta. Nota: És possible que el gingebre funcioni millor al matí que al vespre. El te xai és una manera deliciosa de combinar el te verd i el gingebre en una sola beguda. Com a alternativa, per una activació del BAT, pots afegir un xili cru o mitja culleradeta de pebre vermell en pols a la teva alimentació diària. Per ajudar a combatre la calor, pots tallar el xili molt finament o combinar el pebre vermell amb una sopa o un batut integral de verdures. N\'he fet un en un dels meus vídeos de cuina de NutritionFacts.org.</string>
     <string name="daily_nutriyeast_text">Dues culleradetes de llevat de forner, de cervesa o nutricional conté pràcticament la quantitat de beta-glucans 1,3/1,6 que es poden trobar a les proves clíniques amb cegament doble i placebo controlades per perdre pes.</string>
-    <string name="daily_cumin_text">Dones amb sobrepès van afegir de manera aleatoritzada mitja culleradeta de comí als seus dinars i sopars i van guanyar de pallissa el grup de control per gairebé mig quilo i dos centímetres i mig extres de les seves cintures. Tambvé hi ha evidència que promou l'ús del safrà, però un pessic al dia costaria un dòlar, mentre que una culleradeta de comí costa menys de deu centaus.</string>
-    <string name="daily_greentea_text">Beu-ne tres tasses al dia entre àpats (esperant com a mínim una hora després de l'àpat perquè no interfereixi amb l'absorció´de ferro). Durant els àpats, beu aigua, cafè o infusió d'hibisc amb una sisena part de marialluïsa, però mai en beguis més de tres tasses cada hora (important pel que fa als meus consells de precàrrega d'aigua). Aprofita l'efecte reforçant de la cafeïna bevent el teu te verd juntament amb alguna cosa sana que t'agradi, però no consumeixis grans quantitats de cafeïna sis hores abans d'anar a dormir. Prendre't el te sense edulcorants és millor, però si normalment endolceixes el te amb mel o sucre, pots provar el xarop de yacón.</string>
-    <string name="daily_hydrate_text">Marca aquesta casella si la teva orina mai no és més fosca que un grod pàl·lid.\n\nFixa't si menges aliments fortificats amb ribofalvines (com el llevat de cervesa nutricional), després basa't en això en lloc de prendre nou tasses de begudes no ensucrades al dia per a les dones (que tenen a veure amb les recomanacions del te verd i de la precàrrega amb aigua) o tretze tasses al dia per als homes.\n\nSi tens problemes de cor o de ronyó, sobretot no incrementis la ingesta de líquids sense parlar-ho abans amb el teu metge.\n\nRecorda, els refrescos light pot ser que no tinguin calories, però sí que tenen conseqüències, tal i com hem après a la secció Baixos en Sucres Afegits.</string>
-    <string name="daily_deflourdiet_text">Marca aquesta casella cada dia que les teves dosis de cereals integrals siguin en forma de grans intactes. Encara que siguin cereals integrals, si són en pols, roben l'almidó al nostre microbioma que, en un altre cas, seria transportat al còlon contingut en parets cel·lulars intactes.</string>
-    <string name="daily_frontload_text">Distribuir més calories durant les primeres hores del dia té beneficis metabòlics, per tant, fes que l'esmorzar (idealment) o el dinar siguin els teus àpats més copiosos del dia, de l'estil "esmorzar com un rei, dinar com un príncep i sopar com un pobre".</string>
-    <string name="daily_timerestrict_text">Limita't a menjar durant un període de temps que hagis escollit que duri menys de dotze hores al qual et puguis cenyir de manera consistent, set dies a la setmana. A causa dels beneficis circadians de reduir la ingesta d'aliments al vespre, el període hauria de finalitzar abans de les 7:00 p.m.</string>
-    <string name="exercise_timing_text">La recomenació de la Dotzena Diària per una longevitat major són noranta minuts d'activitat física moderada al dia, que també és la duració òptima per perdre pes. Qualsevol moment és bo, i com més, millor, però fer exercici en dejú probablement és més recomanable, com a mínim sis hores després de l'últim àpat. En general, això voldria dir abans d'esmorzar, però si ho otganitzes bé, pots fer exercici al migdia abans de dinar una mica tard o, si dines prou aviat, abans de sopar. Aquests són els temps per als que no són diabètics. Els diabètics i prediabètics, en canvi, haurien de començar a fer exercici trenta minuts després de començar un àpat i, idealment, fer-lo durar com a mínim una hora per arribar al pic de sucre a la sang. Si haguessis de triar un sol àpat per fer exercici després, seria el sopar, a perquè el ritme circadià del control de sucre a la sang va disminuint durant el dia. Tot i això, com que el millor és que l'esmorzar sigui l'àpat més gran del dia, hauries de fer exercici després d'esmorzar; o, millor encara, després de cada àpat.</string>
-    <string name="weigh_twice_text">Se sol pensar que pesar-se de manera habitual és un mètode crucial per al control del pes a llarg termini, però no existeixen proves suficients per donar suport a aquesta teoria. La meva recomanació es basa en un estudi que va descobrir que dues vegades al dia, quan et despertes i just abans d'anar al llit, sembla ser millor que un cop al dia (amb una diferència d'entre 1 i 3 kg en dotze setmanes).</string>
-    <string name="complete_intentions_text">Cada dos mesos, crea tres nous objectius - plans de "si X, llavors Y" per dur a terme una certa rutina en un context específic - i comprova'ls quan s'acabi el dia.</string>
+    <string name="daily_cumin_text">Dones amb sobrepès van afegir de manera aleatoritzada mitja culleradeta de comí als seus dinars i sopars i van guanyar de pallissa el grup de control per gairebé mig quilo i dos centímetres i mig extres de les seves cintures. Tambvé hi ha evidència que promou l\'ús del safrà, però un pessic al dia costaria un dòlar, mentre que una culleradeta de comí costa menys de deu centaus.</string>
+    <string name="daily_greentea_text">Beu-ne tres tasses al dia entre àpats (esperant com a mínim una hora després de l\'àpat perquè no interfereixi amb l\'absorció´de ferro). Durant els àpats, beu aigua, cafè o infusió d\'hibisc amb una sisena part de marialluïsa, però mai en beguis més de tres tasses cada hora (important pel que fa als meus consells de precàrrega d\'aigua). Aprofita l\'efecte reforçant de la cafeïna bevent el teu te verd juntament amb alguna cosa sana que t\'agradi, però no consumeixis grans quantitats de cafeïna sis hores abans d\'anar a dormir. Prendre\'t el te sense edulcorants és millor, però si normalment endolceixes el te amb mel o sucre, pots provar el xarop de yacón.</string>
+    <string name="daily_hydrate_text">Marca aquesta casella si la teva orina mai no és més fosca que un grod pàl·lid.\n\nFixa\'t si menges aliments fortificats amb ribofalvines (com el llevat de cervesa nutricional), després basa\'t en això en lloc de prendre nou tasses de begudes no ensucrades al dia per a les dones (que tenen a veure amb les recomanacions del te verd i de la precàrrega amb aigua) o tretze tasses al dia per als homes.\n\nSi tens problemes de cor o de ronyó, sobretot no incrementis la ingesta de líquids sense parlar-ho abans amb el teu metge.\n\nRecorda, els refrescos light pot ser que no tinguin calories, però sí que tenen conseqüències, tal i com hem après a la secció Baixos en Sucres Afegits.</string>
+    <string name="daily_deflourdiet_text">Marca aquesta casella cada dia que les teves dosis de cereals integrals siguin en forma de grans intactes. Encara que siguin cereals integrals, si són en pols, roben l\'almidó al nostre microbioma que, en un altre cas, seria transportat al còlon contingut en parets cel·lulars intactes.</string>
+    <string name="daily_frontload_text">Distribuir més calories durant les primeres hores del dia té beneficis metabòlics, per tant, fes que l\'esmorzar (idealment) o el dinar siguin els teus àpats més copiosos del dia, de l\'estil "esmorzar com un rei, dinar com un príncep i sopar com un pobre".</string>
+    <string name="daily_timerestrict_text">Limita\'t a menjar durant un període de temps que hagis escollit que duri menys de dotze hores al qual et puguis cenyir de manera consistent, set dies a la setmana. A causa dels beneficis circadians de reduir la ingesta d\'aliments al vespre, el període hauria de finalitzar abans de les 7:00 p.m.</string>
+    <string name="exercise_timing_text">La recomenació de la Dotzena Diària per una longevitat major són noranta minuts d\'activitat física moderada al dia, que també és la duració òptima per perdre pes. Qualsevol moment és bo, i com més, millor, però fer exercici en dejú probablement és més recomanable, com a mínim sis hores després de l\'últim àpat. En general, això voldria dir abans d\'esmorzar, però si ho otganitzes bé, pots fer exercici al migdia abans de dinar una mica tard o, si dines prou aviat, abans de sopar. Aquests són els temps per als que no són diabètics. Els diabètics i prediabètics, en canvi, haurien de començar a fer exercici trenta minuts després de començar un àpat i, idealment, fer-lo durar com a mínim una hora per arribar al pic de sucre a la sang. Si haguessis de triar un sol àpat per fer exercici després, seria el sopar, a perquè el ritme circadià del control de sucre a la sang va disminuint durant el dia. Tot i això, com que el millor és que l\'esmorzar sigui l\'àpat més gran del dia, hauries de fer exercici després d\'esmorzar; o, millor encara, després de cada àpat.</string>
+    <string name="weigh_twice_text">Se sol pensar que pesar-se de manera habitual és un mètode crucial per al control del pes a llarg termini, però no existeixen proves suficients per donar suport a aquesta teoria. La meva recomanació es basa en un estudi que va descobrir que dues vegades al dia, quan et despertes i just abans d\'anar al llit, sembla ser millor que un cop al dia (amb una diferència d\'entre 1 i 3 kg en dotze setmanes).</string>
+    <string name="complete_intentions_text">Cada dos mesos, crea tres nous objectius - plans de "si X, llavors Y" per dur a terme una certa rutina en un context específic - i comprova\'ls quan s\'acabi el dia.</string>
     <string name="nightly_fast_text">A causa d ela influència dels ritmes circadians, el que menges a la nit engreixa més que si mengessis això mateix però més aviat, per tant, intenta dejunar cada nit durant com a mínim dotze hores a partir de les 7 p.m. Com menys calories consumeixis després que es pongui el sol, millor.</string>
-    <string name="nightly_sleep_text">Pots marcar aquesta casella si has dormit com a mínim set hores i te n'has anat al llit a la teva hora normal.</string>
-    <string name="nightly_trendelenburg_text">Intenta estar com a mínim quatre hores cada nit amb el cos inclinat sis graus. Per aconseguir-ho, has d'elevar els peus del llit uns 20 centímetres. Vés amb molt de compte, perquè aquesta postura provoca intolerància ortostàtica per gairebé tothom, encara que siguis jove i estiguis sa, per tant, si t'aixeques massa ràpid, pots marejar-te, desmaiar-te o fins i tot caure i fer-te mal. Per tant, aixeca't a poc a poc. Beure dos gots d'aigua freda trenta minuts abans d'aixecar-te també podria ajudar a prevenir aquest efecte secundari potencialment perillós.\n\n*IMPORTANT: no provis això a casa si tens problemes cardíacs o pulmonars, reflux àcid, problemes cerebrals (com traumatisme cranial) o oculars (fins i tot un historial familiar de glaucoma ho descalifica). Si tens qualsevol dubta, no ho intentis sense preguntar-li abans al teu metge.*</string>
+    <string name="nightly_sleep_text">Pots marcar aquesta casella si has dormit com a mínim set hores i te n\'has anat al llit a la teva hora normal.</string>
+    <string name="nightly_trendelenburg_text">Intenta estar com a mínim quatre hores cada nit amb el cos inclinat sis graus. Per aconseguir-ho, has d\'elevar els peus del llit uns 20 centímetres. Vés amb molt de compte, perquè aquesta postura provoca intolerància ortostàtica per gairebé tothom, encara que siguis jove i estiguis sa, per tant, si t\'aixeques massa ràpid, pots marejar-te, desmaiar-te o fins i tot caure i fer-te mal. Per tant, aixeca\'t a poc a poc. Beure dos gots d\'aigua freda trenta minuts abans d\'aixecar-te també podria ajudar a prevenir aquest efecte secundari potencialment perillós.\n\n*IMPORTANT: no provis això a casa si tens problemes cardíacs o pulmonars, reflux àcid, problemes cerebrals (com traumatisme cranial) o oculars (fins i tot un historial familiar de glaucoma ho descalifica). Si tens qualsevol dubta, no ho intentis sense preguntar-li abans al teu metge.*</string>
     <string name="weight">Pes</string>
     <string name="tweak_group_meal">A cada àpat</string>
     <string name="tweak_group_daily">Cada Dia</string>
@@ -169,11 +169,11 @@
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
-        <item>Segueix aquests passos per recuperar la còpia de seguretat a l'app de la Dotzena Diària</item>
+        <item>Segueix aquests passos per recuperar la còpia de seguretat a l\'app de la Dotzena Diària</item>
         <item></item>
-        <item>1. L'app de la Dotzena Diària s'ha d'instal·lar al teu telèfon Android. La pots descarregar aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. L\'app de la Dotzena Diària s\'ha d\'instal·lar al teu telèfon Android. La pots descarregar aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item></item>
-        <item>2. Fes clic a l'arxiu de còpia de seguretat adjuntat a aquest email.</item>
+        <item>2. Fes clic a l\'arxiu de còpia de seguretat adjuntat a aquest email.</item>
         <item></item>
         <item>3. Selecciona Obrir amb Dotzena Diària</item>
     </string-array>
@@ -192,7 +192,7 @@
     </string-array>
     <string-array name="food_info_types_beans">
         <item>Mongetes negres</item>
-        <item>Mongetes de l'ull negre</item>
+        <item>Mongetes de l\'ull negre</item>
         <item>Garrofons</item>
         <item>Mongetes paretanes</item>
         <item>Cigrons</item>
@@ -209,7 +209,7 @@
         <item>Tempeh</item>
     </string-array>
     <string-array name="food_info_types_berries">
-        <item>Baies d'açaí</item>
+        <item>Baies d\'açaí</item>
         <item>Coralets / Espinavinetes</item>
         <item>Mores</item>
         <item>Mirtils</item>
@@ -328,7 +328,7 @@
         <item>Pebre de Caiena</item>
         <item>Cilantre</item>
         <item>Canyella</item>
-        <item>Claus d'olor</item>
+        <item>Claus d\'olor</item>
         <item>Coriandre</item>
         <item>Comí</item>
         <item>Curri en pols</item>
@@ -371,7 +371,7 @@
         <item>Cafè</item>
         <item>Te Earl Grey</item>
         <item>Te verd</item>
-        <item>Infusió d'hibisc</item>
+        <item>Infusió d\'hibisc</item>
         <item>Xocolata calenta (sense sucre)</item>
         <item>Te de gessamí</item>
         <item>Infusió de melissa</item>
@@ -414,7 +414,7 @@
         <item>Trescar</item>
         <item>Bàsquet</item>
         <item>Anar en bicicleta en pujada</item>
-        <item>Circuits d'entrenament amb peses</item>
+        <item>Circuits d\'entrenament amb peses</item>
         <item>Esquí de fons</item>
         <item>Futbol americà</item>
         <item>Hoquei</item>
@@ -439,7 +439,7 @@
         <item>Aquajogging</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans">
-        <item>%s d'hummus o untable de llegums</item>
+        <item>%s d\'hummus o untable de llegums</item>
         <item>%s de llegums cuits, mongetes seques, llenties, tofu o tempeh</item>
         <item>1%s de pèsols frescos o germinats de llenties</item>
     </string-array>
@@ -589,8 +589,8 @@
         <item>350 ml</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 minuts d'activitat física moderada</item>
-        <item>%s40 minuts d'activitat física intensa</item>
+        <item>%s90 minuts d\'activitat física moderada</item>
+        <item>%s40 minuts d\'activitat física intensa</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
         <item></item>
