@@ -1,4 +1,4 @@
-<?xml version="1.0" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
     <string name="app_name">Dúzia Diária</string>
     <string name="beans">Leguminosas</string>
@@ -152,7 +152,7 @@
     <string name="complete_intentions_text">A cada dois meses, crie três novas intenções de implementação — planos "se X, então Y" para executar um comportamento específico em um contexto específico — e marque cada uma delas conforme você as conclui todos os dias.</string>
     <string name="nightly_fast_text">Devido aos nossos ritmos circadianos, os alimentos consumidos à noite engordam mais do que exatamente os mesmos alimentos ingeridos no início do dia, portanto jejue todas as noites por pelo menos doze horas, começando antes das 19:00h. Quanto menos calorias após o pôr do sol, melhor.</string>
     <string name="nightly_sleep_text">Assinale esta opção se você dormir pelo menos sete horas no seu horário de dormir usual.</string>
-    <string name="nightly_trendelenburg_text">Tente passar pelo menos quatro horas por noite deitado com o corpo inclinado a seis graus com a cabeça para baixo, elevando os pés da cama em 20 cm (ou 23 cm se você tiver uma cama "California King"). Seja extremamente cuidadoso ao sair da cama, pois isso causa intolerância ortostática na maioria das pessoas, mesmo se você for jovem e saudável — ou seja, se você levantar rápido demais, pode sentir tontura, ter um desmaio, cair e se machucar. Então levante-se devagar. Beber dois copos de água fria trinta minutos antes de se levantar também pode ajudar a evitar esse efeito colateral potencialmente perigoso.\n*IMPORTANTE: Não tente fazer isso se você tiver problemas cardíacos ou pulmonares, refluxo ácido, problemas no cérebro (como traumatismo craniano) ou nos olhos (até um histórico familiar de glaucoma o desqualifica). Além disso, não tente fazer isso antes de perguntar ao/à médico/a se ele/a acha seguro dormir em Trendelenburg leve.*</string>
+    <string name="nightly_trendelenburg_text">Tente passar pelo menos quatro horas por noite deitado com o corpo inclinado a seis graus com a cabeça para baixo, elevando os pés da cama em 20 cm (ou 23 cm se você tiver uma cama "California King"). Seja extremamente cuidadoso ao sair da cama, pois isso causa intolerância ortostática na maioria das pessoas, mesmo se você for jovem e saudável — ou seja, se você levantar rápido demais, pode sentir tontura, ter um desmaio, cair e se machucar. Então levante-se devagar. Beber dois copos de água fria trinta minutos antes de se levantar também pode ajudar a evitar esse efeito colateral potencialmente perigoso.\n\n*IMPORTANTE: Não tente fazer isso se você tiver problemas cardíacos ou pulmonares, refluxo ácido, problemas no cérebro (como traumatismo craniano) ou nos olhos (até um histórico familiar de glaucoma o desqualifica). Além disso, não tente fazer isso antes de perguntar ao/à médico/a se ele/a acha seguro dormir em Trendelenburg leve.*</string>
     <string name="weight">Peso</string>
     <string name="tweak_group_meal">Em Cada Refeição</string>
     <string name="tweak_group_daily">Todo Dia</string>
@@ -166,17 +166,25 @@
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Siga estes passos para restaurar esta cópia de segurança no aplicativo Dúzia Diária</item>
-        <item></item>
+        <item />
         <item>1. A Dúzia Diária deve ser instalada no seu celular Android. Você pode baixar aqui: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
-        <item></item>
+        <item />
         <item>2. Clique no arquivo de cópia de segurança anexada a este email.</item>
-        <item></item>
+        <item />
         <item>3. Selecione Abrir com a Dúzia Diária</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
         <item>Dia</item>
         <item>Mês</item>
         <item>Ano</item>
+    </string-array>
+    <string-array name="history_to_generate_choices">
+        <item>1 mês</item>
+        <item>3 meses</item>
+        <item>6 meses</item>
+        <item>1 ano</item>
+        <item>2 anos</item>
+        <item>5 anos</item>
     </string-array>
     <string-array name="food_info_types_beans">
         <item>Feijão preto</item>
@@ -459,12 +467,12 @@
         <item>%s de fruta seca</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item></item>
+        <item />
         <item> xícara</item>
         <item>¼ xícara</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item></item>
+        <item />
         <item>20 g</item>
         <item>40 g</item>
     </string-array>
@@ -476,12 +484,12 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ xícara</item>
         <item>¼ xícara</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g</item>
         <item>12 g</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_greens">
         <item>%s de verduras cruas</item>
@@ -517,10 +525,10 @@
         <item>%s1 colher de sopa (moída/triturada)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s de oleaginosas ou sementes</item>
@@ -528,23 +536,23 @@
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ xícara</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_spices">
         <item>%s¼ colher de chá de cúrcuma/açafrão-da-terra</item>
         <item>%sQualquer outra erva (sem sal) e especiarias que goste</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains">
         <item>%s de cereais ou grãos cozidos, massas ou grãos de milho</item>
@@ -556,15 +564,15 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ xícara</item>
         <item>1 xícara</item>
-        <item></item>
-        <item></item>
+        <item />
+        <item />
         <item> xícaras</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
-        <item></item>
-        <item></item>
+        <item />
+        <item />
         <item>0 g</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages">
@@ -581,11 +589,11 @@
         <item>%s40 minutos de atividade de intensidade vigorosa</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
 </resources>

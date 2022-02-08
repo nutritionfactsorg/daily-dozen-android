@@ -1,6 +1,6 @@
-<?xml version="1.0" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
-    <string name="app_name">השניים עשר היומי</string>
+    <string name="app_name">התריסר היומי</string>
     <string name="beans">שעועית</string>
     <string name="berries">גרגרי יער</string>
     <string name="other_fruits">פירות אחרים</string>
@@ -93,11 +93,11 @@
     <string name="meal_vinegar">שלבו חומץ (2 כפיות בכל ארוחה)</string>
     <string name="meal_undistracted">תהנו מארוחות ללא הפרעה</string>
     <string name="meal_twentyminutes">עיקבו אחר חוק 20 הדקות</string>
-    <string name="daily_blackcumin"><![CDATA[כמון שחור (&#188; כפית)]]></string>
-    <string name="daily_garlic"><![CDATA[אבקת שום (&#188; כפית)]]></string>
-    <string name="daily_ginger"><![CDATA[זנגויל טחון (1 כפית) או פלפל קאיין (&#189; כפית)]]></string>
+    <string name="daily_blackcumin">כמון שחור (¼ כפית)</string>
+    <string name="daily_garlic">אבקת שום (¼ כפית)</string>
+    <string name="daily_ginger">זנגויל טחון (1 כפית) או פלפל קאיין (½ כפית)</string>
     <string name="daily_nutriyeast">שמרי בירה (2 כפיות)</string>
-    <string name="daily_cumin"><![CDATA[כמון (&#189; כפית עם ארוחות צהריים וערב)]]></string>
+    <string name="daily_cumin">כמון (½ כפית עם ארוחות צהריים וערב)</string>
     <string name="daily_greentea">תה ירוק (3 כוסות)</string>
     <string name="daily_hydrate">שתו מספיק</string>
     <string name="daily_deflourdiet">טירפו את התזונה שלכם</string>
@@ -105,7 +105,7 @@
     <string name="daily_timerestrict">הגבלת זמן האכילה שלכם</string>
     <string name="exercise_timing">יעלו את זמן הספורט</string>
     <string name="weigh_twice">שיקלו את עצמכם פעמיים ביום</string>
-    <string name="complete_intentions">כל חודשיים, צור שלוש כוונות יישום חדשות - "אם X, אז Y" מתכנן לבצע התנהגות מסוימת בהקשר ספציפי - ובדוק כל אחת מהן כאשר אתה משלים אותן מדי יום.</string>
+    <string name="complete_intentions"></string>
     <string name="nightly_fast">צומו לאחר 19:00</string>
     <string name="nightly_sleep">קבלו שינה מספיקה</string>
     <string name="nightly_trendelenburg">התנסו ב-Trendelenburg מתון</string>
@@ -116,11 +116,11 @@
     <string name="meal_vinegar_short">שלבו חומץ (2 כפיות בכל ארוחה)</string>
     <string name="meal_undistracted_short">תהנו מארוחות ללא הפרעה</string>
     <string name="meal_twentyminutes_short">עיקבו אחר חוק 20 הדקות</string>
-    <string name="daily_blackcumin_short"><![CDATA[כמון שחור (&#188; כפית)]]></string>
-    <string name="daily_garlic_short"><![CDATA[אבקת שום (&#188; כפית)]]></string>
-    <string name="daily_ginger_short"><![CDATA[זנגויל טחון (1 כפית) או פלפל קאיין (&#189; כפית)]]></string>
+    <string name="daily_blackcumin_short">כמון שחור (¼ כפית)</string>
+    <string name="daily_garlic_short">אבקת שום (¼ כפית)</string>
+    <string name="daily_ginger_short">זנגויל טחון (1 כפית) או פלפל קאיין (½ כפית)</string>
     <string name="daily_nutriyeast_short">שמרי בירה (2 כפיות)</string>
-    <string name="daily_cumin_short"><![CDATA[כמון (&#189; כפית עם ארוחות צהריים וערב)]]></string>
+    <string name="daily_cumin_short">כמון (½ כפית עם ארוחות צהריים וערב)</string>
     <string name="daily_greentea_short">תה ירוק (3 כוסות)</string>
     <string name="daily_hydrate_short">שתו מספיק</string>
     <string name="daily_deflourdiet_short">טירפו את התזונה שלכם</string>
@@ -153,22 +153,12 @@
     <string name="nightly_fast_text">בשל מקצבי היממה שלנו, אוכל שנאכל בלילה משמין יותר מאותו אוכל בדיוק שנאכל מוקדם יותר ביום, אז צומו כל לילה במשך שתים עשרה שעות לפחות החל מהשעה 19:00. כמה שפחות קלוריות אחרי השקיעה, כך ייטב.</string>
     <string name="nightly_sleep_text">סמנו תיבה זו אם אתם ישנים לפחות 7 שעות שינה בזמן השינה הרגיל שלכם</string>
     <string name="nightly_trendelenburg_text">נסו להקדיש לפחות ארבע שעות בלילה בשכיבה כשגופכם מוטה ראש כלפי מטה שש מעלות על ידי הרמת העמודים למרגלות המיטה בשמונה סנטימטרים (או תשעה סנטימטרים אם יש לכם California king). היזהרו במיוחד כאשר אתo קמים מהמיטה, מכיוון שזה גורם לחוסר סובלנות אורתוסטטית אצל רוב האנשים, גם אם אתם צעירים ובריאים-כלומר אם אתם קמים מהר מדי, אתם יכולים להרגיש סחרחורת, חולשה או ראש קל ועלולים ליפול ולפגוע בעצמכם. אז קומו לאט. שתיית שתי כוסות מים קרים שלושים דקות לפני העלייה עשויה לסייע גם במניעת תופעת לוואי שעלולה להיות מסוכנת. *חשוב: אל תנסו זאת בבית כלל אם יש לכם בעיות לב או ריאה, ריפלוקס חומצי או בעיות במוח (כמו טראומת ראש) או עיניים (אפילו היסטוריה משפחתית של גלאוקומה פוסלת אתכם). גם אל תנסו את זה עד שתשאלו את הרופא שלכם אם הוא חושב שזה בטוח לכם לישון בטרנדלנבורג מתון*</string>
-    <!--
-    NOTE: These strings are used to created the url to take the user to the overall food videos page.
-    These strings are to not be literial language translations.
-    These strings must be valid existing url addition to "http://nutritionfacts.org/".
-    If the language is not present on nutritionfacts.org, then the default English url is used.
-    -->
     <string name="weight">משקל</string>
     <string name="tweak_group_meal">בכל ארוחה</string>
     <string name="tweak_group_daily">כל יום</string>
     <string name="tweak_group_dailydoses">קחו את המנות היומיות שלכם</string>
     <string name="tweak_group_nightly">כל לילה</string>
     <string name="about_tweak">לגבי שינוי</string>
-    <!--
-    NOTE: These strings should never be translated from English
-    These strings are used as the canonical names for the different foods and make it easy to switch between languages
-    -->
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
         <item/>
@@ -176,17 +166,25 @@
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>בצע את השלבים הבאים כדי לשחזר גיבוי זה באפליקציית "התריסר היומי"</item>
-        <item></item>
+        <item />
         <item>1. יש להתקין את אפליקציית Daily Dozen בטלפון Android שלכם. אתם יכולים להוריד אותה כאן: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
-        <item></item>
+        <item />
         <item>2. הקישו על קובץ הגיבוי המצורף לדוא"ל זה.</item>
-        <item></item>
+        <item />
         <item>3. בחרו פתח עם תריסר יומי</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
         <item>יום</item>
         <item>חודש</item>
         <item>שנה</item>
+    </string-array>
+    <string-array name="history_to_generate_choices">
+        <item>חודש 1</item>
+        <item>3 חודשים</item>
+        <item>6 חודשים</item>
+        <item>שנה אחת</item>
+        <item>שנתיים</item>
+        <item>5 שנים</item>
     </string-array>
     <string-array name="food_info_types_beans">
         <item>שעועית שחורה</item>
@@ -244,7 +242,7 @@
         <item>אגסים</item>
         <item>אננס</item>
         <item>שזיפים (בעיקר שחורים)</item>
-        <item></item>
+        <item />
         <item>רימונים</item>
         <item>קצוצים</item>
         <item>מנדרינה</item>
@@ -419,7 +417,7 @@
         <item>ריצה קלה</item>
         <item>תרגילי קפיצה</item>
         <item>קפיצה על חבל</item>
-        <item></item>
+        <item />
         <item>שכיבות שמיכה</item>
         <item>מתח</item>
         <item>סקווש</item>
@@ -438,17 +436,17 @@
     </string-array>
     <string-array name="food_info_serving_sizes_beans">
         <item>%s חומוס או מטבל שעועית</item>
-        <item>1%s שעועית מבושלת, אפונה מפוצלת, קטניות, טופו או טמפה</item>
+        <item>%s שעועית מבושלת, אפונה מפוצלת, קטניות, טופו או טמפה</item>
         <item>1%s אפונה טריה או עדשים מונבטות</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item><![CDATA[&#188; כוס]]></item>
-        <item>/2 כוס</item>
+        <item>¼ כוס</item>
+        <item>½ כוס</item>
         <item> כוס</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
         <item>60 גרם</item>
-        <item>30 גרם</item>
+        <item>130 גרם</item>
         <item>50גרם</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries">
@@ -456,8 +454,8 @@
         <item>%s יבשים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item><![CDATA[&#189; כוס טריה או קפואה]]></item>
-        <item><![CDATA[&#188; כוס]]></item>
+        <item>½ כוס טריה או קפואה</item>
+        <item>¼ כוס</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
         <item>60 גרם טריים או קפואים</item>
@@ -469,29 +467,29 @@
         <item>%s פירות יבשים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item></item>
-        <item>/4 כוס</item>
-        <item><![CDATA[&#188; כוס]]></item>
+        <item />
+        <item> כוס</item>
+        <item>¼ כוס</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item></item>
+        <item />
         <item>20 גרם</item>
         <item>40 גרם</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
         <item>%s קצוצים</item>
-        <item>1%s כרוב ניצנים או נבטי ברוקולי</item>
+        <item>%s כרוב ניצנים או נבטי ברוקולי</item>
         <item>%sכף חזרת</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item><![CDATA[&#189; כוס]]></item>
-        <item>/4 כוס</item>
-        <item></item>
+        <item>½ כוס</item>
+        <item>¼ כוס</item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 גרם</item>
-        <item>2 גרם</item>
-        <item></item>
+        <item>30-80 גרם</item>
+        <item>12 גרם</item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_greens">
         <item>%s</item>
@@ -499,7 +497,7 @@
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1 כוס גולמית</item>
-        <item><![CDATA[&#189; כוס]]></item>
+        <item>½ כוס</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
         <item>60 גרם גולמי</item>
@@ -508,73 +506,73 @@
     <string-array name="food_info_serving_sizes_other_vegetables">
         <item>%s ירקות עליים טריים</item>
         <item>%s ירקות לא עליים טריים או מבושלים</item>
-        <item>1%s מיץ ירקות</item>
+        <item>%s מיץ ירקות</item>
         <item>%s פטריות מיובשות</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
         <item>כוס</item>
-        <item><![CDATA[&#189; כוס]]></item>
-        <item>/2 כוס</item>
-        <item><![CDATA[&#188; כוס]]></item>
+        <item>½ כוס</item>
+        <item>½ כוס</item>
+        <item>¼ כוס</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 גרם</item>
         <item>50 גרם</item>
-        <item>25 מ"ל</item>
+        <item>125 מ"ל</item>
         <item>7 גרם</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds">
         <item>%s1 כף טחונים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s אגוזים או זרעים</item>
         <item>%s2 כפות חמאת אגוזים או זרעים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item><![CDATA[&#188; כוס]]></item>
-        <item></item>
+        <item>¼ כוס</item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 גרם</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_spices">
-        <item>%s1/4 כפית כורכום</item>
+        <item>%s¼ כפית כורכום</item>
         <item>%sעשבי מרפא ותבלינים נוספים (ללא מלח) שאתם אוהבים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>1%s דגני בוקר חמים או דגנים מבושלים, פסטה או לבבות תירס</item>
+        <item>%s דגני בוקר חמים או דגנים מבושלים, פסטה או לבבות תירס</item>
         <item>%s דגני בוקר קרים</item>
         <item>%s1 טורטיה או פרוסת לחם</item>
-        <item>%s1/2 בייגל או מאפין אנגלי</item>
+        <item>%s½ בייגל או מאפין אנגלי</item>
         <item>3%s פופקורן מוכן</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>/2 כוס</item>
+        <item>½ כוס</item>
         <item>1 כוס</item>
-        <item></item>
-        <item></item>
+        <item />
+        <item />
         <item> כוסות</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>00 גרם</item>
+        <item>100 גרם</item>
         <item>50 גרם</item>
-        <item></item>
-        <item></item>
+        <item />
+        <item />
         <item>0 גרם</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages">
@@ -591,11 +589,11 @@
         <item>%s40 דקות פעילות בעצימות גבוהה</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
 </resources>

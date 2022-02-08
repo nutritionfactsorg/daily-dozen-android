@@ -1,4 +1,4 @@
-<?xml version="1.0" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
     <string name="app_name">Dotzena Diària</string>
     <string name="beans">Llegums</string>
@@ -159,10 +159,6 @@
     <string name="tweak_group_dailydoses">Pren les dosis diàries</string>
     <string name="tweak_group_nightly">Cada Nit</string>
     <string name="about_tweak">Sobre els Potenciadors</string>
-    <!--
-    NOTE: These strings should never be translated from English
-    These strings are used as the canonical names for the different foods and make it easy to switch between languages
-    -->
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
         <item/>
@@ -170,11 +166,11 @@
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Segueix aquests passos per recuperar la còpia de seguretat a l\'app de la Dotzena Diària</item>
-        <item></item>
+        <item />
         <item>1. L\'app de la Dotzena Diària s\'ha d\'instal·lar al teu telèfon Android. La pots descarregar aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
-        <item></item>
+        <item />
         <item>2. Fes clic a l\'arxiu de còpia de seguretat adjuntat a aquest email.</item>
-        <item></item>
+        <item />
         <item>3. Selecciona Obrir amb Dotzena Diària</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
@@ -471,12 +467,12 @@
         <item>%s de fruita dessecada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item></item>
+        <item />
         <item> tassa</item>
         <item>¼ tassa</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item></item>
+        <item />
         <item>20 g</item>
         <item>40 g</item>
     </string-array>
@@ -488,12 +484,12 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ tassa</item>
         <item>¼ tassa</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30-80 g</item>
         <item>12 g</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_greens">
         <item>%s crua</item>
@@ -529,10 +525,10 @@
         <item>%s1 cullerada (mòlt)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s de fruits secs o llavors</item>
@@ -540,23 +536,23 @@
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ tassa</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_spices">
         <item>%s¼ culleradeta de cúrcuma</item>
         <item>%sQualsevol altra espècie (sense sal)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains">
         <item>%s de cereals cuits, pasta integral o grans de blat cuits</item>
@@ -568,15 +564,15 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ tassa</item>
         <item>1 tassa</item>
-        <item></item>
-        <item></item>
+        <item />
+        <item />
         <item> tasses</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
-        <item></item>
-        <item></item>
+        <item />
+        <item />
         <item>0 g</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages">
@@ -593,11 +589,11 @@
         <item>%s40 minuts d\'activitat física intensa</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
 </resources>

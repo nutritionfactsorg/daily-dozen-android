@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
     <string name="app_name">Daily Dozen</string>
     <string name="beans">Beans</string>
@@ -348,11 +348,11 @@
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Follow these steps to restore this backup in the Daily Dozen app</item>
-        <item></item>
+        <item />
         <item>1. The Daily Dozen app must be installed on your Android phone. You can download it here: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
-        <item></item>
+        <item />
         <item>2. Tap on the backup file attached to this email.</item>
-        <item></item>
+        <item />
         <item>3. Select Open with Daily Dozen</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
@@ -360,7 +360,7 @@
         <item>Month</item>
         <item>Year</item>
     </string-array>
-    <string-array name="history_to_generate_choices" translatable="false">
+    <string-array name="history_to_generate_choices">
         <item>1 month</item>
         <item>3 months</item>
         <item>6 months</item>
@@ -650,12 +650,12 @@
         <item>%s dried fruit</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item></item>
+        <item />
         <item> cup</item>
         <item>¼ cup</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item></item>
+        <item />
         <item>20 g</item>
         <item>40 g</item>
     </string-array>
@@ -667,12 +667,12 @@
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ cup</item>
         <item>¼ cup</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g</item>
         <item>12 g</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_greens">
         <item>%s raw</item>
@@ -708,10 +708,10 @@
         <item>%s1 tablespoon ground</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s nuts or seeds</item>
@@ -719,23 +719,23 @@
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ cup</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
-        <item></item>
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_spices">
         <item>%s¼ teaspoon of turmeric</item>
         <item>%sAny other (salt-free) herbs and spices you enjoy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains">
         <item>%s hot cereal or cooked grains, pasta, or corn kernels</item>
@@ -747,15 +747,15 @@
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ cup</item>
         <item>1 cup</item>
-        <item></item>
-        <item></item>
+        <item />
+        <item />
         <item> cups</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
-        <item></item>
-        <item></item>
+        <item />
+        <item />
         <item>0 g</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages">
@@ -772,12 +772,12 @@
         <item>%s40 minutes of vigorous-intensity activity</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item></item>
-        <item></item>
+        <item />
+        <item />
     </string-array>
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page.
