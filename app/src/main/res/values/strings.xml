@@ -619,7 +619,6 @@
     <string-array name="food_info_serving_sizes_beans">
         <item>%s of hummus or bean dip</item>
         <item>%s cooked beans, split peas, lentils, tofu, or tempeh</item>
-
         <item>1%s of fresh peas or sprouted lentils</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
