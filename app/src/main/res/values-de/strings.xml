@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
-    <string name="app_name">Das tägliche Dutzend</string>
+    <string name="app_name">Tägliches Dutzend</string>
     <string name="beans">Bohnen</string>
     <string name="berries">Beeren</string>
     <string name="other_fruits">Anderes Obst</string>
