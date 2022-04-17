@@ -76,7 +76,7 @@
     <string name="remind_me_at">Lembre-me em:</string>
     <string name="videos">VÍDEOS</string>
     <string name="units">Unidades:</string>
-    <string name="imperial">Unidades americanas</string>
+    <string name="imperial">Imperial</string>
     <string name="metric">métrico</string>
     <string name="error_cannot_handle_url">Não foi possível abrir o url. Por favor instale um navegador.</string>
     <string name="channel_reminders_name">Lembretes</string>
