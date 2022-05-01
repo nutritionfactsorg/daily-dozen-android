@@ -101,15 +101,6 @@
         <item>Έτος</item>
     </string-array>
 
-    <string-array name="history_to_generate_choices">
-        <item>1 μήνα</item>
-        <item>3 μήνες</item>
-        <item>6 μήνες</item>
-        <item>1 έτος</item>
-        <item>2 έτη</item>
-        <item>5 έτη</item>
-    </string-array>
-
     <string-array name="food_info_types_beans">
         <item>Μαύρα</item>
         <item>Μαυρομάτικα</item>

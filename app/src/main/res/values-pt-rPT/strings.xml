@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<resources>
+    <string name="app_name">Dúzia Diária</string>
+    <string name="beans">Leguminosas</string>
+    <string name="berries">Bagas</string>
+    <string name="other_fruits">Outras Frutas</string>
+    <string name="cruciferous_vegetables">Vegetais Crucíferos</string>
+    <string name="greens">Verduras</string>
+    <string name="other_vegetables">Outros Vegetais</string>
+    <string name="flaxseeds">Linhaça</string>
+    <string name="nuts">Frutos secos e Sementes</string>
+    <string name="spices">Ervas e Especiarias</string>
+    <string name="whole_grains">Grãos Integrais</string>
+    <string name="beverages">Bebidas</string>
+    <string name="exercise">Exercício</string>
+    <string name="vitamin_b12">Vitamina B12</string>
+    <string name="serving_sizes">Tamanhos da Porção</string>
+    <string name="types">Tipos</string>
+    <string name="history">Histórico</string>
+    <string name="servings_some">Algumas porções</string>
+    <string name="servings_all">Todas as porções</string>
+    <string name="servings">Porções</string>
+    <string name="out_of">de</string>
+    <string name="moving_average">Média Móvel</string>
+    <string name="about">Sobre Nós</string>
+    <string name="about_this_app">Sobre este aplicativo</string>
+    <string name="latest_videos">Últimos Vídeos</string>
+    <string name="donate">Doar</string>
+    <string name="subscribe">Subscreva</string>
+    <string name="open_source">Código Aberto</string>
+    <string name="permission_needed_to_write_storage">Não é possível criar uma cópia de segurança sem permissão de escrita no armazenamento</string>
+    <string name="backup_failed">Falha na cópia de segurança</string>
+    <string name="restore_failed">Falha na restauração</string>
+    <string name="backup_success">Cópia de segurança realizada com sucesso</string>
+    <string name="restore_success">Restauração realizada com sucesso</string>
+    <string name="restore_confirm_title">Restaurar a Cópia de Segurança</string>
+    <string name="restore_confirm_message">Toda a informação existente será apagada antes de restaurar a cópia de segurança. Deseja continuar?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="backup">Cópia de segurança</string>
+    <string name="food_info">Informação de Alimentos</string>
+    <string name="food_history">Histórico de Alimentos</string>
+    <string name="daily_servings_history">Histórico de Porções Diárias</string>
+    <string name="no_servings_recorded">Você ainda não registou nenhuma porção!</string>
+    <string name="task_backup_title">Realizando a cópia de segurança</string>
+    <string name="task_restore_title">Restaurando</string>
+    <string name="task_calculating_streaks_title">Calculando o progresso</string>
+    <string name="back_to_today">Voltar para hoje</string>
+    <string name="debug">Depurar</string>
+    <string name="debug_clear_data">Limpar todos os dados</string>
+    <string name="debug_clear_data_message">Isto vai apagar todas as Porções inseridas. Deseja continuar?</string>
+    <string name="OK">OK</string>
+    <string name="dialog_streaks_title">Nova função de progresso adicionada!</string>
+    <string name="dialog_streaks_message">A sua base de dados será agora atualizada para suportar a nova função de progresso.</string>
+    <string name="dialog_no_email_apps_title">Aplicativo de email não encontrado</string>
+    <string name="dialog_no_email_apps_message">Fazer uma cópia de segurança das suas informações requer que você tenha um aplicativo de email instalado para que você possa enviar, por email, o arquivo .csv para você mesmo. Por favor instale um aplicativo de email e tente novamente.</string>
+    <string name="debug_generate_random_data">Gerar informações aleatórias</string>
+    <string name="debug_generate_full_data">Gerar informações completas</string>
+    <string name="debug_generate_data_message">Todos os dados existentes serão substituidos. Deseja continuar?</string>
+    <string name="task_generating_random_data">Gerando informações aleatórias</string>
+    <string name="task_loading_servings_history_title">Carregando o Histórico de Porções</string>
+    <string name="time_scale">Escala de Tempo</string>
+    <string name="history_to_generate">Gerar baseado no Histórico</string>
+    <string name="welcome_to_my_daily_dozen">Bem-vindos à minha Dúzia Diária!</string>
+    <string name="activity_welcome_text">Use este aplicativo diariamente para controlar os seus alimentos e acompanhar os conselhos que eu recomendo para uma ótima saúde e longevidade nos meus livros Como Não Morrer e Como Não Fazer Dieta.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Você gosta deste aplicativo?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Por favor, comente a sua experiência no Play Store.</string>
+    <string name="rate_now">Comente a sua Experiência</string>
+    <string name="not_now">Agora Não</string>
+    <string name="format_version">versão %s</string>
+    <string name="format_num_days">%d dias</string>
+    <string name="daily_reminder_title">Lembrete da Dúzia Diária</string>
+    <string name="daily_reminder_text">Atualize as suas porções para hoje</string>
+    <string name="daily_reminder_settings">Configuração dos Lembretes Diários</string>
+    <string name="enable_daily_reminder">Habilitar Lembretes Diários</string>
+    <string name="remind_me_at">Lembre-me em:</string>
+    <string name="videos">VÍDEOS</string>
+    <string name="units">Unidades:</string>
+    <string name="imperial">Imperial</string>
+    <string name="metric">métrico</string>
+    <string name="error_cannot_handle_url">Não foi possível abrir o url. Por favor instale um navegador.</string>
+    <string name="channel_reminders_name">Lembretes</string>
+    <string name="twenty_one_tweaks">21 Truques</string>
+    <string name="tweaks">Truques</string>
+    <string name="daily_tweaks_history">Histórico de Truques Diários</string>
+    <string name="weight_history">Histórico de Peso</string>
+    <string name="no_weights_recorded">Você ainda não registou nenhum peso!</string>
+    <string name="task_loading_weights_history_title">Carregando o Histórico de Pesos</string>
+    <string name="morning">Manhã</string>
+    <string name="evening">Noite</string>
+    <string name="meal_water">Pré-refeição de Água</string>
+    <string name="meal_negcal">Pré-refeição de Alimentos com "Calorias Negativas"</string>
+    <string name="meal_vinegar">Incorpore Vinagre (2 colheres de chá com cada refeição)</string>
+    <string name="meal_undistracted">Desfrute de Refeições sem Distrações</string>
+    <string name="meal_twentyminutes">Siga a Regra dos Vinte Minutos</string>
+    <string name="daily_blackcumin">Cominho Preto (¼ colher de chá)</string>
+    <string name="daily_garlic">Alho em Pó (¼ colher de chá)</string>
+    <string name="daily_ginger">Gengibre em Pó (1 colher de chá) ou Pimenta Caiena (½ colher de chá)</string>
+    <string name="daily_nutriyeast">Levedura Nutricional (2 colheres de chá)</string>
+    <string name="daily_cumin">Cominho (½ colher de chá no almoço e no jantar)</string>
+    <string name="daily_greentea">Chá Verde (3 xícaras)</string>
+    <string name="daily_hydrate">Mantenha-se Hidratado</string>
+    <string name="daily_deflourdiet">Retire a Farinha da Sua Alimentação</string>
+    <string name="daily_frontload">Consuma Mais Calorias de Manhã</string>
+    <string name="daily_timerestrict">Limite o Tempo de sua Alimentação</string>
+    <string name="exercise_timing">Optimize o Tempo de Exercícios</string>
+    <string name="weigh_twice">Pese-se Duas Vezes por Dia</string>
+    <string name="complete_intentions">Conclua as suas Intenções de Implementação</string>
+    <string name="nightly_fast">Jejum Após as 19:00h</string>
+    <string name="nightly_sleep">Durma o Suficiente</string>
+    <string name="nightly_trendelenburg">Experimente a inclinação leve de Trendelenburg</string>
+    <string name="debug_generate_weight_data">Gerar Informações de Peso</string>
+    <string name="average_weight_on_day">Peso médio no dia</string>
+    <string name="meal_water_short">Pré-refeição de Água</string>
+    <string name="meal_negcal_short">Pré-refeição de Alimentos com "Calorias Negativas"</string>
+    <string name="meal_vinegar_short">Incorpore Vinagre (2 colheres de chá com cada refeição)</string>
+    <string name="meal_undistracted_short">Desfrute de Refeições sem Distrações</string>
+    <string name="meal_twentyminutes_short">Siga a Regra dos Vinte Minutos</string>
+    <string name="daily_blackcumin_short">Cominho Preto (Nigella sativa) (¼ colher de chá)</string>
+    <string name="daily_garlic_short">Alho em Pó (¼ colher de chá)</string>
+    <string name="daily_ginger_short">Gengibre em Pó (1 colher de chá) ou Pimenta Caiena (½ colher de chá)</string>
+    <string name="daily_nutriyeast_short">Levedura Nutricional (2 colheres de chá)</string>
+    <string name="daily_cumin_short">Cominho (Cuminum cyminum) (½ colher de chá no almoço e no jantar)</string>
+    <string name="daily_greentea_short">Chá Verde (3 xícaras)</string>
+    <string name="daily_hydrate_short">Mantenha-se Hidratado</string>
+    <string name="daily_deflourdiet_short">Retire a Farinha da Sua Alimentação</string>
+    <string name="daily_frontload_short">Consuma Mais Calorias de Manhã</string>
+    <string name="daily_timerestrict_short">Limite o Tempo de sua Alimentação</string>
+    <string name="exercise_timing_short">Optimize o Tempo de Exercícios</string>
+    <string name="weigh_twice_short">Pese-se Duas Vezes por Dia</string>
+    <string name="complete_intentions_short">Conclua as suas Intenções de Implementação</string>
+    <string name="nightly_fast_short">Jejum Após as 19:00h</string>
+    <string name="nightly_sleep_short">Durma o Suficiente</string>
+    <string name="nightly_trendelenburg_short">Experimente a inclinação leve de Trendelenburg</string>
+    <string name="meal_water_text">Planeje os seus 2 copos de água sem sabor, fria ou gelada, que aumenta o metabolismo, antes de cada refeição, para também aproveitar os seus benefícios de pré-refeição.</string>
+    <string name="meal_negcal_text">Como primeiro prato, comece cada refeição com uma maçã, ou uma sopa ou uma salada considerada "Luz Verde" contendo menos de cem calorias por xícara.</string>
+    <string name="meal_vinegar_text">Nunca beba vinagre puro. Em vez disso, incorpore em refeições ou tempere uma salada, utilizando qualquer um dos vinagres doces e salgados. Se você quiser bebê-lo, misture-o num copo de água e depois enxague a boca com água para proteger o esmalte dos dentes.</string>
+    <string name="meal_undistracted_text">Não coma enquanto assiste TV ou joga no seu telemóvel. Assinale cada refeição que puder comer sem distração.</string>
+    <string name="meal_twentyminutes_text">Seja através do aumento da viscosidade ou do número de mastigações ou da diminuição do tamanho da mordida e da taxa de alimentação, dezenas de estudos demonstraram que, seja qual for a forma como aumentamos a quantidade de tempo que os alimentos permanecem na boca, isso pode resultar numa menor ingestão calórica. Portanto, estenda a duração das refeições para pelo menos 20 minutos para permitir que seus sinais naturais de saciedade entrem em ação. De que forma? Escolhendo alimentos que demoram mais para serem ingeridos e comendo-os de maneira a prolongar o tempo que ficam na boca. Pense em alimentos mais volumosos, mais duros, que exigem mais mastigação, em pequenas quantidades bem mastigadas.</string>
+    <string name="daily_blackcumin_text">Como observado na secção Supressão de Apetite, uma revisão sistemática e metanálise de estudos clínicos randomizados e controlados para perda de peso descobriu que cerca de um quarto de colher de chá de pó de cominho-preto, todos os dias, parece reduzir o índice de massa corporal num período de alguns meses. Observe que o cominho preto é diferente do cominho comum, para o qual a dosagem é diferente.</string>
+    <string name="daily_garlic_text">Estudos randomizados, duplamente ocultados, e controlados por placebo, descobriram que um quarto de colher de chá diária de alho em pó pode reduzir a gordura corporal a um custo de cerca de 0,02 dólares por dia.</string>
+    <string name="daily_ginger_text">Estudos clínicos randomizados descobriram que entre ¼ de colher de chá a 1½ colheres de chá por dia de gengibre em pó reduzem significativamente o peso corporal por apenas alguns centavos por dia. Pode ser tão fácil quanto misturar o tempero moído num copo de água quente. Nota: o gengibre pode funcionar melhor de manhã do que à noite. O chá chai é uma maneira saborosa de combinar os benefícios do chá verde e do gengibre numa única bebida. Como alternativa, para a ativação do Tecido Adiposo Castanho, pode adicionar uma pimenta jalapenho crua ou meia colher de chá de pimenta vermelha em pó (ou, presumivelmente, flocos de pimenta vermelha amassados) na sua alimentação diária. Para ajudar a combater o sabor picante, você pode fatiar bem fino ou picar muito bem o jalapenho, ou misturar a pimenta vermelha numa sopa ou no smoothie de vegetais integrais que eu mostrei num dos meus vídeos de culinária do NutritionFacts.org.</string>
+    <string name="daily_nutriyeast_text">Duas colheres de chá de levedura de cerveja ou "nutricional" contêm aproximadamente a quantidade de beta 1,3/1,6 glucanos que facilita a perda de peso, conforme estudos clínicos randomizados, duplamente ocultados, e controlados por placebo.</string>
+    <string name="daily_cumin_text">Mulheres com excesso de peso, randomizadas para adicionar meia colher de chá de cominho nos almoços e jantares, superaram o grupo de controle, reduzindo mais 1,8 kg e 2,5 cm na cintura. Também há evidências para apoiar o uso do açafrão, mas uma pitada por dia custaria 1 dólar, enquanto que uma colher de chá de cominho custa menos de 0,10 dólares.</string>
+    <string name="daily_greentea_text">Beba três xícaras por dia entre as refeições (aguarde pelo menos uma hora após a refeição para não interferir na absorção de ferro). Durante as refeições, beba água, café preto ou infusão de hibisco misturado 6:1 com lúcia-lima, mas nunca exceda três xícaras de líquido por hora (importante devido aos meus conselhos de fazer uma pré-refeição de água). Aproveite o efeito "reforçador" da cafeína bebendo o seu chá verde juntamente com algo saudável que você não gosta tanto, mas não consuma grandes quantidades de cafeína nas seis horas antes de dormir. Tomar chá sem adoçante é melhor, mas se você normalmente adoça o chá com mel ou açúcar, tente o xarope de yacon.</string>
+    <string name="daily_hydrate_text">Assinale esta opção se a sua urina nunca parecer mais escura que amarelo-pálido. Note que, se você estiver ingerindo alimentos enriquecidos com riboflavina (como levedura nutricional), baseie-se apenas no critério de ingerir 9 copos de bebidas sem açúcar por dia para as mulheres (que seriam cumpridas pelas recomendações de pré-refeição de água e chá verde) ou 13 copos por dia para homens. Se você tiver problemas cardíacos ou renais, não aumente a ingestão de líquidos sem antes conversar com seu médico. Lembre-se de que os refrigerantes diet podem estar isentos de calorias, mas não estão isentos de consequências, como aprendemos na secção Baixo Teor de Açúcar Adicionado.</string>
+    <string name="daily_deflourdiet_text">Assinale esta opção todos os dias que as suas porções de grãos integrais forem na forma de grãos intactos. Moer cereais, incluindo cereais 100 % integrais, rouba ao nosso microbioma o amido que normalmente viajaria até ao cólon envolvido em paredes celulares não destruídas.</string>
+    <string name="daily_frontload_text">Existem benefícios metabólicos no consumo de mais calorias no início do dia, portanto, faça da refeição matinal (idealmente) ou do almoço a sua maior refeição do dia, seguindo o estilo "rei / príncipe / indigente".</string>
+    <string name="daily_timerestrict_text">Limite a alimentação a um intervalo de tempo diário à sua escolha com menos de 12 horas de duração, que você possa manter consistentemente, sete dias por semana. Dados os benefícios circadianos de reduzir a ingestão noturna de alimentos, o intervalo deve terminar antes das 19:00h.</string>
+    <string name="exercise_timing_text">A recomendação da Dúzia Diária para a duração ideal de exercícios para a longevidade é de 90 minutos de atividade de intensidade moderada por dia, que também é a duração ideal de exercícios para perda de peso. Qualquer momento é bom e, quanto mais, melhor, mas pode haver uma vantagem em se exercitar em jejum, pelo menos 6 horas após a sua última refeição. Normalmente, isso significa antes da refeição matinal, mas se você planejar corretamente, pode-se exercitar ao meio-dia antes de um almoço tardio ou, se você almoçar suficientemente cedo, antes do jantar. Estes são os períodos para os não diabéticos. Diabéticos e pré-diabéticos devem começar a exercitarem-se 30 minutos após o início de uma refeição e, idealmente, exercitarem-se por pelo menos 1 hora para passar completamente o pico de glicose no sangue. Se você tivesse que escolher uma única refeição para se exercitar a seguir, seria o jantar, devido ao ritmo circadiano de controle de glicose no sangue que diminui ao longo do dia. Idealmente, porém, a refeição matinal seria a maior refeição do dia e você deveria se exercitar depois disso — ou, melhor ainda, depois de cada refeição.</string>
+    <string name="weigh_twice_text">A auto-pesagem regular é considerada crucial para o controle de peso a longo prazo, mas não há evidências suficientes para apoiar uma frequência específica de pesagem. A minha recomendação baseia-se no estudo que constatou que duas vezes por dia — ao acordar e logo antes de dormir — pareceu superior a uma vez por dia (cerca de 2,7 kg versus 0,9 kg de perda de peso em doze semanas).</string>
+    <string name="complete_intentions_text">A cada dois meses, crie três novas intenções de implementação — planos "se X, então Y" para executar um comportamento específico num contexto específico — e marque cada uma delas conforme você as conclui, todos os dias.</string>
+    <string name="nightly_fast_text">Devido aos nossos ritmos circadianos, os alimentos consumidos à noite engordam mais do que exatamente os mesmos alimentos ingeridos no início do dia, portanto jejue todas as noites por pelo menos 12 horas, começando antes das 19:00h. Quanto menos calorias após o pôr-do-sol, melhor.</string>
+    <string name="nightly_sleep_text">Assinale esta opção se você dormir pelo menos 7 horas no seu horário de dormir usual.</string>
+    <string name="nightly_trendelenburg_text">Tente passar pelo menos 4 horas por noite deitado com o corpo inclinado a 6 graus com a cabeça para baixo, elevando os pés da cama em 20 cm (ou 23 cm se você tiver uma cama "California King"). Seja extremamente cuidadoso ao sair da cama, pois isso causa intolerância ortostática na maioria das pessoas, mesmo se você for jovem e saudável — ou seja, se você levantar rápido demais, pode sentir tontura, ter um desmaio, cair e magoar-se. Por isso, levante-se devagar. Beber dois copos de água fria trinta minutos antes de se levantar também pode ajudar a evitar esse efeito colateral potencialmente perigoso.\n*IMPORTANTE: Não tente fazer isso se você tiver problemas cardíacos ou pulmonares, refluxo ácido, problemas no cérebro (como traumatismo craniano) ou nos olhos (até um histórico familiar de glaucoma o desqualifica). Além disso, não tente fazer isso antes de perguntar ao/à médico/a se ele/a acha seguro dormir em Trendelenburg leve.*</string>
+    <string name="weight">Peso</string>
+    <string name="tweak_group_meal">Em Cada Refeição</string>
+    <string name="tweak_group_daily">Todos os Dias</string>
+    <string name="tweak_group_dailydoses">Siga as suas doses diárias</string>
+    <string name="tweak_group_nightly">Todas as Noites</string>
+    <string name="about_tweak">Sobre os Truques</string>
+    <string-array name="about_text_lines">
+        <item>This app was created by John Slavick.</item>
+        <item/>
+        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+    </string-array>
+    <string-array name="backup_instructions_lines">
+        <item>Siga estes passos para restaurar esta cópia de segurança no aplicativo Dúzia Diária</item>
+        <item />
+        <item>1. A Dúzia Diária deve ser instalada no seu telemóvel Android. Você pode baixar aqui: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Clique no arquivo de cópia de segurança anexada a este email.</item>
+        <item />
+        <item>3. Selecione Abrir com a Dúzia Diária</item>
+    </string-array>
+    <string-array name="servings_time_scale_choices">
+        <item>Dia</item>
+        <item>Mês</item>
+        <item>Ano</item>
+    </string-array>
+    <string-array name="history_to_generate_choices">
+        <item>1 mês</item>
+        <item>3 meses</item>
+        <item>6 meses</item>
+        <item>1 ano</item>
+        <item>2 anos</item>
+        <item>5 anos</item>
+    </string-array>
+    <string-array name="food_info_types_beans">
+        <item>Feijão preto</item>
+        <item>Feijão frade</item>
+        <item>Feijão branco (lima)</item>
+        <item>Feijão branco (cannellini)</item>
+        <item>Grão-de-bico</item>
+        <item>Edamame</item>
+        <item>Ervilha inglesa</item>
+        <item>Feijão branco (great northern)</item>
+        <item>Feijão vermelho grande</item>
+        <item>Lentilha (variedades beluga, francesa e vermelha)</item>
+        <item>Miso</item>
+        <item>Feijão branco (navy)</item>
+        <item>Feijão catarino</item>
+        <item>Feijão vermelho pequeno</item>
+        <item>Ervilha seca partida (amarela ou verde)</item>
+        <item>Tempeh</item>
+    </string-array>
+    <string-array name="food_info_types_berries">
+        <item>Açaí</item>
+        <item>Berberis</item>
+        <item>Amora</item>
+        <item>Mirtilo</item>
+        <item>Cereja (doces ou azedas)</item>
+        <item>Uva Concord</item>
+        <item>Arando</item>
+        <item>Goji</item>
+        <item>Kumquat</item>
+        <item>Amora (de árvore)</item>
+        <item>Framboesa (preta ou vermelha)</item>
+        <item>Morango</item>
+    </string-array>
+    <string-array name="food_info_types_other_fruits">
+        <item>Maçã</item>
+        <item>Damasco seco</item>
+        <item>Abacate</item>
+        <item>Banana</item>
+        <item>Meloa</item>
+        <item>Clementina</item>
+        <item>Tâmara</item>
+        <item>Figo seco</item>
+        <item>Toranja</item>
+        <item>Melão Honeydew</item>
+        <item>Kiwi</item>
+        <item>Limão</item>
+        <item>Lima</item>
+        <item>Líchia</item>
+        <item>Manga</item>
+        <item>Nectarina</item>
+        <item>Laranja</item>
+        <item>Mamão</item>
+        <item>Maracujá</item>
+        <item>Pêssego</item>
+        <item>Pêra</item>
+        <item>Abacaxi/Ananás</item>
+        <item>Ameixa (especialmente ameixa preta)</item>
+        <item>Pluot</item>
+        <item>Romã</item>
+        <item>Ameixa seca</item>
+        <item>Tangerina</item>
+        <item>Melancia</item>
+    </string-array>
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Rúcula</item>
+        <item>Couve chinesa (bok choy)</item>
+        <item>Brócolos (inclui couve-romanesca)</item>
+        <item>Couve-de-bruxelas</item>
+        <item>Couve (verde, roxa e lombarda)</item>
+        <item>Couve-flor (branca, verde, laranja e roxa)</item>
+        <item>Couve-galega</item>
+        <item>Rábano</item>
+        <item>Kale (preta, verde e vermelha)</item>
+        <item>Couve-rábano (verde e roxa)</item>
+        <item>Folhas de mostarda</item>
+        <item>Rabanetes</item>
+        <item>Nabiças</item>
+        <item>Agrião</item>
+    </string-array>
+    <string-array name="food_info_types_greens">
+        <item>Rúcula</item>
+        <item>Folhas de beterraba</item>
+        <item>Couve-galega</item>
+        <item>Kale (preta, verde e vermelha)</item>
+        <item>Mistura de folhas tenras verdes variadas</item>
+        <item>Folhas de mostarda</item>
+        <item>Azeda</item>
+        <item>Espinafre</item>
+        <item>Acelga</item>
+        <item>Nabiça</item>
+    </string-array>
+    <string-array name="food_info_types_other_vegetables">
+        <item>Alcachofra</item>
+        <item>Espargo</item>
+        <item>Beterraba</item>
+        <item>Pimentão</item>
+        <item>Cenoura</item>
+        <item>Milho</item>
+        <item>Alho</item>
+        <item>Cogumelos (champignon, pleurotus, portobello e shitake)</item>
+        <item>Quiabo</item>
+        <item>Cebola</item>
+        <item>Batata roxa</item>
+        <item>Abóbora</item>
+        <item>Algas (arame, dulse e nori)</item>
+        <item>Vagem de ervilha</item>
+        <item>Abóbora (variedades delicata, amarela e esparguete)</item>
+        <item>Batata doce/inhame</item>
+        <item>Tomate</item>
+        <item>Courgette</item>
+    </string-array>
+    <string-array name="food_info_types_flaxseeds">
+        <item>Linhaça castanha</item>
+        <item>Linhaça dourada</item>
+    </string-array>
+    <string-array name="food_info_types_nuts">
+        <item>Amêndoas</item>
+        <item>Castanhas do Pará</item>
+        <item>Cajú</item>
+        <item>Chia</item>
+        <item>Avelã</item>
+        <item>Sementes de cânhamo</item>
+        <item>Macadâmias</item>
+        <item>Nozes pecãs</item>
+        <item>Pistachios</item>
+        <item>Sementes de abóbora</item>
+        <item>Sementes de sésamo</item>
+        <item>Sementes de girassol</item>
+        <item>Nozes</item>
+    </string-array>
+    <string-array name="food_info_types_spices">
+        <item>Pimenta-da-jamaica</item>
+        <item>Bérberis</item>
+        <item>Manjericão</item>
+        <item>Folhas de louro</item>
+        <item>Cardamomo</item>
+        <item>Chili em pó</item>
+        <item>Coentro</item>
+        <item>Canela</item>
+        <item>Cravo</item>
+        <item>Coentro (sementes)</item>
+        <item>Cominho</item>
+        <item>Caril em pó</item>
+        <item>Endro</item>
+        <item>Feno-grego</item>
+        <item>Alho</item>
+        <item>Gengibre</item>
+        <item>Rábano</item>
+        <item>Erva cidreira</item>
+        <item>Manjerona</item>
+        <item>Mostarda em pó</item>
+        <item>Noz-moscada</item>
+        <item>Orégão</item>
+        <item>Páprica</item>
+        <item>Salsa</item>
+        <item>Pimenta</item>
+        <item>Hortelã-pimenta</item>
+        <item>Alecrim</item>
+        <item>Açafrão verdadeiro</item>
+        <item>Sálvia</item>
+        <item>Tomilho</item>
+        <item>Cúrcuma / açafrão-da-terra</item>
+        <item>Baunilha</item>
+    </string-array>
+    <string-array name="food_info_types_whole_grains">
+        <item>Cevada</item>
+        <item>Trigo-sarraceno</item>
+        <item>Millet</item>
+        <item>Aveia</item>
+        <item>Pipoca</item>
+        <item>Quinoa</item>
+        <item>Centeio</item>
+        <item>Teff</item>
+        <item>Massa integral</item>
+    </string-array>
+    <string-array name="food_info_types_beverages">
+        <item>Chá preto</item>
+        <item>Chá chai</item>
+        <item>Infusão de camomila com baunilha</item>
+        <item>Café</item>
+        <item>Chá Earl Grey</item>
+        <item>Chá verde</item>
+        <item>Infusão de hibisco</item>
+        <item>Chocolate quente</item>
+        <item>Chá verde com aroma de jasmim</item>
+        <item>Infusão de erva-cidreira</item>
+        <item>Chá matcha</item>
+        <item>Chá oolong com aroma de amêndoas</item>
+        <item>Infusão de hortelã</item>
+        <item>Infusão de rooibos</item>
+        <item>Água</item>
+        <item>Chá branco</item>
+    </string-array>
+    <string-array name="food_info_types_exercise">
+        <item>Ciclismo</item>
+        <item>Canoagem</item>
+        <item>Dança</item>
+        <item>Jogo do mata</item>
+        <item>Esqui alpino</item>
+        <item>Esgrima</item>
+        <item>Caminhada</item>
+        <item>Tarefas domésticas</item>
+        <item>Patinagem no gelo</item>
+        <item>Patinagem em linha</item>
+        <item>Malabarismo</item>
+        <item>Pular no trampolim</item>
+        <item>Remo</item>
+        <item>Jogo de frisbee</item>
+        <item>Patinagem</item>
+        <item>Arremesso na cesta de basquete</item>
+        <item>Remover neve leve</item>
+        <item>Andar de skate</item>
+        <item>Mergulho com snorkel</item>
+        <item>Surf</item>
+        <item>Natação recreacional</item>
+        <item>Ténis (em duplas)</item>
+        <item>Caminhada na água</item>
+        <item>Andar rapidamente (6,4 km/h)</item>
+        <item>Aeróbica aquática</item>
+        <item>Esqui aquático</item>
+        <item>Jardinagem</item>
+        <item>Ioga</item>
+        <item>Caminhada com mochila</item>
+        <item>Basquete</item>
+        <item>Ciclismo em subida</item>
+        <item>Treinos com pesos em circuito</item>
+        <item>Esqui de fundo</item>
+        <item>Futebol americano</item>
+        <item>Hóquei</item>
+        <item>Corrida</item>
+        <item>Polichinelo</item>
+        <item>Saltar à corda</item>
+        <item>Lacrosse</item>
+        <item>Flexões de braço</item>
+        <item>Flexões de braços em barra fixa (pull-ups)</item>
+        <item>Raquetebol</item>
+        <item>Escalada</item>
+        <item>Rugby</item>
+        <item>Corrida</item>
+        <item>Mergulho</item>
+        <item>Tênis (individual)</item>
+        <item>Futebol</item>
+        <item>Patinação em alta velocidade</item>
+        <item>Squash</item>
+        <item>Aeróbica de step</item>
+        <item>Natação - voltas à piscina</item>
+        <item>Andar rapidamente em subida</item>
+        <item>Corrida na água</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans">
+        <item>%s de hummus ou patê de feijão</item>
+        <item>%s de feijão, ervilha, lentilha, tofu ou tempê cozidos</item>
+        <item>1%s de ervilha fresca ou lentilha germinada</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ xícara</item>
+        <item>½ xícara</item>
+        <item> xícara</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g</item>
+        <item>130 g</item>
+        <item>50 g</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries">
+        <item>%s de bagas frescas ou congeladas</item>
+        <item>%s de bagas secas</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ xícara</item>
+        <item>¼ xícara</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g</item>
+        <item>40 g</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits">
+        <item>%s1 fruta de tamanho médio</item>
+        <item>1%s de fruta cortada</item>
+        <item>%s de fruta seca</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item />
+        <item> xícara</item>
+        <item>¼ xícara</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item />
+        <item>20 g</item>
+        <item>40 g</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
+        <item>%s de crucíferos picados</item>
+        <item>%s de rebentos de brócolos ou couve-de-bruxelas</item>
+        <item>%s1 colher de sopa de rábano</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ xícara</item>
+        <item>½ xícara</item>
+        <item />
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g</item>
+        <item>44 g</item>
+        <item />
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens">
+        <item>%s de verduras cruas</item>
+        <item>%s de verduras cozidas</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 xícara</item>
+        <item>½ xícara</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g</item>
+        <item>90 g</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables">
+        <item>%s de vegetais folhosos crus</item>
+        <item>%s de vegetais não-folhosos crus ou cozidos</item>
+        <item>%s de sumo de vegetais</item>
+        <item>%s de cogumelos secos</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 xícara</item>
+        <item>½ xícara</item>
+        <item>½ xícara</item>
+        <item>¼ xícara</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g</item>
+        <item>50 g</item>
+        <item>125 ml</item>
+        <item>7 g</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds">
+        <item>%s1 colher de sopa (moída)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item />
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item />
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts">
+        <item>%s de frutos secos ou sementes</item>
+        <item>%s2 colheres de sopa de manteiga de frutos secos ou sementes</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ xícara</item>
+        <item />
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g</item>
+        <item />
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices">
+        <item>%s¼ colher de chá de cúrcuma</item>
+        <item>%sQualquer outra erva (sem sal) e especiarias que goste</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item />
+        <item />
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item />
+        <item />
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains">
+        <item>%s de cereais ou grãos cozidos, massas ou grãos de milho</item>
+        <item>%s de cereais matinais</item>
+        <item>%s1 tortilha ou fatia de pão</item>
+        <item>%s½ bagel ou muffin inglês</item>
+        <item>3%s de pipoca</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ xícara</item>
+        <item>1 xícara</item>
+        <item />
+        <item />
+        <item> xícaras</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g</item>
+        <item>50 g</item>
+        <item />
+        <item />
+        <item>0 g</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages">
+        <item>Um copo (%s)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>12 onças</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>350 ml</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise">
+        <item>%s90 minutos de atividade com intensidade moderada</item>
+        <item>%s40 minutos de atividade com intensidade vigorosa</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item />
+        <item />
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item />
+        <item />
+    </string-array>
+</resources>

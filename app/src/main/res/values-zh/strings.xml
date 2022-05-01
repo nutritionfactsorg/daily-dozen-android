@@ -118,15 +118,6 @@
         <item>年</item>
     </string-array>
 
-    <string-array name="history_to_generate_choices">
-        <item>1個月</item>
-        <item>3個月</item>
-        <item>6個月</item>
-        <item>1年</item>
-        <item>2年</item>
-        <item>5年</item>
-    </string-array>
-
     <string-array name="food_info_types_beans">
         <item>黑豆</item>
         <item>黑眼豆</item>

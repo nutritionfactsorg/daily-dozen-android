@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
     <string name="app_name">Codzienny Tuzin</string>
-    <string name="beans">Rośliny strączkowe</string>
-    <string name="berries">Jagody</string>
+    <string name="beans">Fasola</string>
+    <string name="berries">Owoce Jagodowe</string>
     <string name="other_fruits">Inne owoce</string>
     <string name="cruciferous_vegetables">Warzywa kapustne</string>
-    <string name="greens">Warzywa liściaste</string>
+    <string name="greens">Zielenina</string>
     <string name="other_vegetables">Inne warzywa</string>
     <string name="flaxseeds">Siemię lniane</string>
     <string name="nuts">Orzechy i nasiona</string>
@@ -37,10 +38,10 @@
     <string name="yes">Tak</string>
     <string name="no">Nie</string>
     <string name="backup">Kopia zapasowa</string>
-    <string name="food_info">Informacja o jedzeniu</string>
-    <string name="food_history">Historia jedzenia</string>
-    <string name="daily_servings_history">Historia dziennych porcji</string>
-    <string name="no_servings_recorded">Jeszcze nie zapisałeś żadnych porcji!</string>
+    <string name="food_info">Informacja o Pokarmach</string>
+    <string name="food_history">Historia Posiłków</string>
+    <string name="daily_servings_history">Historia Dziennych Porcji</string>
+    <string name="no_servings_recorded">Jeszcze nie zapisałeś/aś żadnych porcji!</string>
     <string name="task_backup_title">Tworzenie kopii zapasowej</string>
     <string name="task_restore_title">Przywracanie</string>
     <string name="task_calculating_streaks_title">Obliczanie postępu</string>
@@ -60,15 +61,15 @@
     <string name="task_loading_servings_history_title">Ładowanie historii porcji</string>
     <string name="time_scale">Okres czasu</string>
     <string name="history_to_generate">Historia do wygenerowania</string>
-    <string name="welcome_to_my_daily_dozen">Witaj w moim Codzienny Tuzin!</string>
-    <string name="activity_welcome_text">Korzystaj z tej aplikacji codziennie, aby śledzić żywność i porady, które polecam dla optymalnego zdrowia i długowieczności w moich książkach „Jak nie umrzeć przedwcześni” i „How Not to Diet”.</string>
+    <string name="welcome_to_my_daily_dozen">Witaj w moim Codziennym Tuzinie!</string>
+    <string name="activity_welcome_text">Korzystaj z tej aplikacji codziennie, aby śledzić żywność i porady, które polecam dla optymalnego zdrowia i długowieczności w moich książkach „Jak nie umrzeć przedwcześnie” i „How Not to Diet”.</string>
     <string name="dialog_ask_user_to_rate_app_title">Czy lubisz tę aplikację?</string>
     <string name="dialog_ask_user_to_rate_app_message">Zostaw nam opinię w sklepie Play.</string>
-    <string name="rate_now">Zostaw opinię</string>
+    <string name="rate_now">Zostaw Opinię</string>
     <string name="not_now">Nie teraz</string>
-    <string name="format_version">wersja %1$s</string>
-    <string name="format_num_days">%1$d dni</string>
-    <string name="daily_reminder_title">Przypomnienie Codzienny Tuzin</string>
+    <string name="format_version">wersja %s</string>
+    <string name="format_num_days">%d dni</string>
+    <string name="daily_reminder_title">Przypomnienie Codziennego Tuzina</string>
     <string name="daily_reminder_text">Zaktualizuj swoje dzisiejsze porcje</string>
     <string name="daily_reminder_settings">Ustawienia codziennych przypomnień</string>
     <string name="enable_daily_reminder">Włącz codzienne przypomnienia</string>
@@ -81,12 +82,12 @@
     <string name="channel_reminders_name">Przypomnienia</string>
     <string name="twenty_one_tweaks">21 Adaptacji</string>
     <string name="tweaks">Adaptacje</string>
-    <string name="daily_tweaks_history">Dzienna historia adaptacji</string>
+    <string name="daily_tweaks_history">Dzienna Historia Adaptacji</string>
     <string name="weight_history">Historia pomiarów wagi</string>
-    <string name="no_weights_recorded">Nie zapisałeś żadnej wagi!</string>
+    <string name="no_weights_recorded">Nie zapisałeś/aś wagi!</string>
     <string name="task_loading_weights_history_title">Ładowanie historii pomiarów wagi</string>
     <string name="morning">Ranek</string>
-    <string name="evening">Wieczór.</string>
+    <string name="evening">Wieczór</string>
     <string name="meal_water">Woda przed posiłkiem</string>
     <string name="meal_negcal">Spożywaj pokarmy o „negatywnej kaloryczności”</string>
     <string name="meal_vinegar">Włącz ocet do diety (2 łyżeczki do każdego posiłku)</string>
@@ -96,20 +97,20 @@
     <string name="daily_garlic">Czosnek w proszku (¼ łyżeczki)</string>
     <string name="daily_ginger">Mielony imbir (1 łyżeczka) lub pieprz Cayenne (½ łyżeczki)</string>
     <string name="daily_nutriyeast">Drożdże odżywcze (2 łyżeczki)</string>
-    <string name="daily_cumin">Kminek (½ łyżeczki do obiadu i kolacji)</string>
+    <string name="daily_cumin">Kmin rzymski (½ łyżeczki do obiadu i kolacji)</string>
     <string name="daily_greentea">Zielona herbata (3 szklanki)</string>
     <string name="daily_hydrate">Nawadniaj się</string>
     <string name="daily_deflourdiet">Odmącz swoją dietę</string>
     <string name="daily_frontload">Więcej kalorii na początku dnia</string>
-    <string name="daily_timerestrict">Ogranicz czasowo jedzenie</string>
+    <string name="daily_timerestrict">Ogranicz jedzenie czasowo</string>
     <string name="exercise_timing">Zoptymalizuj czas ćwiczeń</string>
     <string name="weigh_twice">Waż się dwa razy dziennie</string>
-    <string name="complete_intentions">Spełnij swoje intencje implementacyjne</string>
+    <string name="complete_intentions">Wypełnij Swoje Intencje</string>
     <string name="nightly_fast">Nie jedz po 19:00</string>
     <string name="nightly_sleep">Śpij wystarczająco dużo</string>
-    <string name="nightly_trendelenburg">Eksperyment z łągodną pozycją Trendelenburga</string>
-    <string name="debug_generate_weight_data">Stwórz pomiary wagi</string>
-    <string name="average_weight_on_day">Średnia waga w dniu</string>
+    <string name="nightly_trendelenburg">Eksperyment z łągodną pozycją Trendelenburg</string>
+    <string name="debug_generate_weight_data">Wygeneruj Dane Wagi</string>
+    <string name="average_weight_on_day">Średnia waga w danym dniu</string>
     <string name="meal_water_short">Woda przed posiłkiem</string>
     <string name="meal_negcal_short">Spożywaj pokarmy o „negatywnej kaloryczności”</string>
     <string name="meal_vinegar_short">Włącz ocet do diety (2 łyżeczki do każdego posiłku)</string>
@@ -119,74 +120,58 @@
     <string name="daily_garlic_short">Czosnek w proszku (¼ łyżeczki)</string>
     <string name="daily_ginger_short">Mielony imbir (1 łyżeczka) lub pieprz Cayenne (½ łyżeczki)</string>
     <string name="daily_nutriyeast_short">Drożdże odżywcze (2 łyżeczki)</string>
-    <string name="daily_cumin_short">Kminek (½ łyżeczki do obiadu i kolacji)</string>
+    <string name="daily_cumin_short">Kmin rzymski (½ łyżeczki do obiadu i kolacji)</string>
     <string name="daily_greentea_short">Zielona herbata (3 szklanki)</string>
     <string name="daily_hydrate_short">Nawadniaj się</string>
     <string name="daily_deflourdiet_short">Odmącz swoją dietę</string>
     <string name="daily_frontload_short">Więcej kalorii na początku dnia</string>
-    <string name="daily_timerestrict_short">Ogranicz czasowo jedzenie</string>
+    <string name="daily_timerestrict_short">Ogranicz jedzenie czasowo</string>
     <string name="exercise_timing_short">Zoptymalizuj czas ćwiczeń</string>
     <string name="weigh_twice_short">Waż się dwa razy dziennie</string>
-    <string name="complete_intentions_short">Spełnij swoje intencje implementacyjne</string>
+    <string name="complete_intentions_short">Wypełnij Swoje Intencje</string>
     <string name="nightly_fast_short">Nie jedz po 19:00</string>
     <string name="nightly_sleep_short">Śpij wystarczająco dużo</string>
-    <string name="nightly_trendelenburg_short">Eksperyment z łagodną pozycją Trendelenburga</string>
+    <string name="nightly_trendelenburg_short">Eksperyment z łagodną pozycją Trendelenburg</string>
     <string name="meal_water_text">Wypicie dwóch szklanek chłodnej lub zimnej wody (bez żadnych dodatków smakowych i środków aromatyzujących) przed każdym posiłkiem pobudzi metabolizm.</string>
     <string name="meal_negcal_text">Każdy posiłek zaczynaj od jabłka lub zupy z grupy „Zielone światło”, czy sałatki zawierającej mniej niż sto kalorii na szklankę.</string>
-    <string name="meal_vinegar_text">Nigdy nie pij octu bezpośrednio. Zamiast tego, doprawiaj nim posiłki lub dodaj dowolny słodki czy pikantny ocet do sałatki. Jeśli chcesz go wypić, wymieszaj go w szklance wody, a po wypiciu przepłucz usta wodą, by chronić szkliwo zębów.</string>
-    <string name="meal_undistracted_text">Nie jedz podczas oglądania telewizji lub grania na telefonie. Odhacz każdy posiłek, który udało ci się zjeść bez rozpraszania się.</string>
-    <string name="meal_twentyminutes_text">Niezależnie od tego, czy zwiększamy liczbę kęsów, czy też zmniejszamy rozmiar gryzów i tempo jedzenia, dziesiątki badań wykazały, że bez względu na to, jak wydłużamy czas przez jaki pokarm pozostaje w ustach, może to pomóc w mniejszym spożyciu kalorii. Dlatego wydłuż czas posiłku do co najmniej dwudziestu minut, aby naturalne sygnały sytości mogły się pojawić w pełni. Jak? Wybierając pokarmy, których spożycie zajmuje więcej czasu i jedząc je w sposób, który wydłuża ich czas pozostawania w ustach. Pomyśl o pokarmach większych, twardszych, o konsystencji wymagającej żucia i sprowadzeniu ich do mniejszych, dobrze przeżutych kęsów.</string>
-    <string name="daily_blackcumin_text">Jak zauważono w sekcji „Tłumienie apetytu”, systematyczny przegląd i metaanaliza randomizowanych, kontrolowanych badań na temat utraty wagi wykazał, że około ćwierć łyżeczki czarnuszki w proszku każdego dnia wydaje się obniżać wskaźnik masy ciała w ciągu kilku miesięcy.</string>
-    <string name="daily_garlic_text">Randomizowane, podwójnie ślepe, badania kontrolowane placebo wykazały, że zaledwie ćwierć łyżeczki czosnku dziennie może zmniejszyć tkankę tłuszczową - za jedynie grosze.</string>
-    <string name="daily_ginger_text">Randomizowane badania z grupą kontrolną wykazały, że ¼ łyżeczki do 1,5 łyżeczki mielonego imbiru na dzień znacznie zmniejszyła masę ciała, za zaledwie grosze. Może to być tak proste, jak wymieszanie zmielonej przyprawy w szklance gorącej wody. Uwaga: imbir może działać lepiej rano niż wieczorem. Herbata Chai to smaczny sposób na połączenie korzyści zielonej herbaty i imbiru w jednym napoju. Alternatywnie, aby aktywować brązowe tkanki tłuszczowe, możesz włączyć jedną surową papryczkę jalapeño lub pół łyżeczki sproszkowanej czerwonej papryki (lub, zakładam, pokruszonych płatków czerwonej papryki) do swojej codziennej diety. Aby zmniejszyć ostrość, możesz bardzo cienko pokroić lub drobno posiekać jalapeño, powinno mniej szczypać, lub wymieszać czerwoną paprykę z zupą lub ze smoothie z nieprzetworzonych warzyw, które przedstawiłem w jednym z moich filmów o gotowaniu na NutritionFacts.org.</string>
-    <string name="daily_nutriyeast_text">Dwie łyżeczki drożdży piekarskich, piwowarskich lub odżywczych zawierają z grubsza ilość beta 1,3/1,6-glukanów znalezioną w randomizowanych, podwójnie ślepych, kontrolowanych placebo badaniach klinicznych, mających na celu ułatwienie utraty wagi.</string>
-    <string name="daily_cumin_text">W randomizowaych badaniach, kobiety z nadwagą, które dodawały pół łyżeczki kminku do swoich obiadów i kolacji pokonały grupę kontrolną o 1,8 kg i straciły 2,5 cm w talii. Istnieją również dowody na zalety stosowania szafranu przyprawowego, ale zaledwie szczypta dziennie kosztowałaby więcej niż jedna łyżeczka kminku.</string>
-    <string name="daily_greentea_text">Pij trzy szklanki dziennie między posiłkami (odczekaj co najmniej godzinę po posiłku, aby nie zakłócać wchłaniania żelaza). Podczas posiłków pij wodę, czarną kawę lub herbatę z hibiskusa zmieszaną w stosunku 6:1 z werbeną cytrynową, ale nigdy nie przekraczaj trzech szklanek płynu na godzinę (ważne, biorąc pod uwagę moje zalecenia o piciu przed posiłkami). Skorzystaj ze wzmacniającego działania kofeiny, pijąc zieloną herbatę razem z czymś zdrowym, co chciałbyś/-abyś lubić bardziej, ale nie spożywaj dużych ilości kofeiny w ciągu sześciu godzin przed snem. Najlepiej jest pić herbatę bez słodzika, ale jeśli zazwyczaj słodzisz herbatę miodem lub cukrem, spróbuj zamiast tego syropu Yacon.</string>
+    <string name="meal_vinegar_text">Nigdy nie pij octu bezpośrednio. Zamiast tego, doprawiaj nim posiłki lub dodaj dowolny słodki, czy pikantny ocet do sałatki. Jeśli chcesz go wypić, wymieszaj go w szklance wody, a po wypiciu przepłucz usta wodą, by chronić szkliwo zębów.</string>
+    <string name="meal_undistracted_text">Nie jedz podczas oglądania telewizji lub grania na telefonie. Odznacz każdy posiłek, który udało ci się zjeść bez rozpraszania się.</string>
+    <string name="meal_twentyminutes_text">Niezależnie od tego, czy zwiększamy liczbę kęsów, czy też zmniejszamy rozmiar gryzów i tempo jedzenia, dziesiątki badań wykazały, że bez względu na to, jak wydłużamy czas kiedy pokarm pozostaje w ustach, może to pomóc zmniejszyć spożycie kalorii. Dlatego wydłuż czas posiłku do co najmniej dwudziestu minut, aby naturalne sygnały sytości w pełni się aktywowały. Jak? Wybierając pokarmy, których spożycie zajmuje więcej czasu i jedząc je w sposób, który wydłuża ich czas pozostawania w ustach. Pomyśl o spożywanu pokarmów większych, twardszych, o konsystencji wymagającej żucia i sprowadzeniu ich do mniejszych, dobrze przeżutych kęsów.</string>
+    <string name="daily_blackcumin_text">Jak zauważono w sekcji „Tłumienie apetytu”, systematyczny przegląd i metaanaliza randomizowanych, kontrolowanych badań na temat utraty wagi wykazały, że około ćwierć łyżeczki czarnuszki w proszku każdego dnia wydaje się obniżać wskaźnik masy ciała w ciągu kilku miesięcy.</string>
+    <string name="daily_garlic_text">Randomizowane, podwójnie ślepe, badania kontrolowane placebo wykazały, że zaledwie ćwierć łyżeczki czosnku dziennie może zmniejszyć tkankę tłuszczową - za grosze.</string>
+    <string name="daily_ginger_text">Randomizowane badania z grupą kontrolną wykazały, że ¼ łyżeczki do 1,5 łyżeczki mielonego imbiru na dzień znacznie zmniejszyła masę ciała, a kosztuje grosze. Wystarczy proste wymieszanie zmielonej przyprawy w szklance gorącej wody. Uwaga: imbir może działać lepiej rano niż wieczorem. Herbata Chai to smaczny sposób na połączenie korzyści zielonej herbaty i imbiru w jednym. Alternatywnie, aby aktywować brązowe tkanki tłuszczowe, możesz dodać jedną surową papryczkę jalapeño lub pół łyżeczki sproszkowanej czerwonej papryki (lub, pokruszonych płatków czerwonej papryki) do swojej codziennej diety. Aby zmniejszyć ostrość, możesz bardzo cienko pokroić lub drobno posiekać jalapeño (powinno mniej szczypać) lub wymieszać czerwoną paprykę z zupą lub ze smoothie z nieprzetworzonych warzyw (które przedstawiłem w jednym z moich filmów o gotowaniu na NutritionFacts.org).</string>
+    <string name="daily_nutriyeast_text">Dwie łyżeczki drożdży (piekarskich, piwowarskich lub odżywczych) zawierają z grubsza 1,3/1,6- beta glukanów, które według randomizowanych, podwójnie ślepych, kontrolowanych badań klinicznych z placebo, ułatwiają utratę wagi.</string>
+    <string name="daily_cumin_text">W randomizowaych badaniach, kobiety z nadwagą, które dodawały pół łyżeczki kminu rzymskiego do obiadów i kolacji, pokonały grupę kontrolną o 1,8 kg i straciły 2,5 cm w talii. Istnieją również dowody na zalety stosowania szafranu jako przyprawy, ale zaledwie szczypta dziennie kosztowałaby więcej niż jedna łyżeczka kminu.</string>
+    <string name="daily_greentea_text">Pij trzy szklanki dziennie między posiłkami (odczekaj co najmniej godzinę po posiłku, aby nie zakłócać wchłaniania żelaza). Podczas posiłków pij wodę, czarną kawę lub herbatę z hibiskusa zmieszaną w stosunku 6:1 z lippią trójlistną, ale nigdy nie przekraczaj trzech szklanek płynu na godzinę (ważne, biorąc pod uwagę moje zalecenia o piciu przed posiłkami). Skorzystaj ze wzmacniającego działania kofeiny, pijąc zieloną herbatę razem z czymś zdrowym, co chciałbyś/-abyś bardziej polubić, ale nie spożywaj dużych ilości kofeiny na sześć godzin przed snem. Najlepiej jest pić herbatę bez słodzika, ale jeśli zazwyczaj słodzisz herbatę miodem lub cukrem, spróbuj zamiast tego syropu Yacon.</string>
     <string name="daily_hydrate_text">Zaznacz to pole, jeśli Twój mocz nigdy nie jest ciemniejszy niż bladożółty. Zwróć uwagę, że jeśli jesz pokarmy wzbogacone ryboflawiną (takie jak odżywcze drożdże), to zamiast tego spożywaj dziennie dziewięć szklanek niesłodzonych napojów dla kobiet (tutaj wystarczy stosować zalecenia dotyczące zielonej herbaty i wody) lub trzynaście szklanek dziennie dla mężczyzn. Jeśli masz problemy z sercem lub nerkami, nie zwiększaj spożycia płynów bez uprzedniej konsultacji z lekarzem. Pamiętaj, że picie napojów dietetycznych może nie zwiększa spożycia kalorii, ale nie jest pozbawione konsekwencji, o czym dowiedzieliśmy się w sekcji „Niska zawartość dodanego cukru”.</string>
-    <string name="daily_deflourdiet_text">Zaznacz to pole każdego dnia, kiedy Twoje porcje pełnoziarnistych zbóż są dostarczone w postaci całych ziaren. Sproszkowanie nawet stuprocentowo pełnoziarnistych zbóż pozbawia naszą mikrobiotę skrobi, która w innym przypadku byłaby przetransportowana do naszej okrężnicy zamknięta w nienaruszonych ścianach komórkowych.</string>
-    <string name="daily_frontload_text">Spożycie większej ilości kalorii wcześniej w ciągu dnia przynosi korzyści metaboliczne, więc przygotuj (najlepiej) śniadanie lub obiad jako największy posiłek dnia - w stylu prawdziwego króla / księcia / żebraka.</string>
-    <string name="daily_timerestrict_text">Staraj się jeść w wybranym przez siebie dziennym przedziale czasowym poniżej dwunastu godzin, którego możesz przestrzegać konsekwentnie, siedem dni w tygodniu. Biorąc pod uwagę dobowe korzyści wynikające z ograniczenia wieczornego odżywiania się, okienko powinno kończyć się przed godziną 19:00.</string>
-    <string name="exercise_timing_text">Zalecenia Codzienny Tuzin dotyczące optymalnego czasu trwania ćwiczeń na długowieczność to dziewięćdziesiąt minut umiarkowanie intensywnych ćwiczeń dziennie, co jest również optymalnym czasem trwania ćwiczeń dla utraty wagi. Każda pora jest dobra, a im więcej ćwiczeń, tym lepiej, ale ćwiczenia na czczo mogą być korzystne, przynajmniej sześć godzin po ostatnim posiłku. Zwykle oznacza to przed śniadaniem, ale jeśli dobrze to zaplanowałeś/-łaś, możesz ćwiczyć w południe przed późnym obiadem lub, jeśli obiad jest spożywany wystarczająco wcześnie, przed kolacją. To jest czas odpowiedni dla osób bez cukrzycy. Diabetycy i osoby w stanie przedcukrzycowym powinny zamiast tego rozpocząć ćwiczenia 30 minut po rozpoczęciu posiłku i najlepiej przez co najmniej godzinę, aby całkowicie pokonać szczytowy poziom cukru we krwi. Gdybyś musiał/-a wybrać pojedynczy posiłek do ćwiczeń, byłby to obiad ze względu na dobowy rytm kontroli poziomu cukru we krwi, który słabnie przez dzień. Lepiej byłoby jednak, gdyby śniadanie było największym posiłkiem w ciągu dnia, a ćwiczenia po nim - lub jeszcze lepiej, po każdym posiłku.</string>
+    <string name="daily_deflourdiet_text">Zaznacz to pole każdego dnia, kiedy Twoje porcje pełnoziarnistych zbóż są dostarczone w postaci całych ziaren. Mielenie nawet stuprocentowo pełnoziarnistych zbóż pozbawia nasz mikrobiom skrobi, która w  przeciwnym razie byłaby przetransportowana do naszej okrężnicy zamknięta w nienaruszonych ścianach komórkowych.</string>
+    <string name="daily_frontload_text">Spożycie większej ilości kalorii wcześniej w ciągu dnia przynosi korzyści metaboliczne, więc (najlepiej) przygotuj śniadanie lub obiad jako największy posiłek dnia - w stylu prawdziwego króla / księcia / żebraka (po ang. mówi się „śniadanie jak król, obiad jak książę, a kolację jak żebrak.")</string>
+    <string name="daily_timerestrict_text">Staraj się jeść w wybranym przez siebie dziennym przedziale czasowym poniżej dwunastu godzin, którego możesz przestrzegać konsekwentnie - siedem dni w tygodniu. Biorąc pod uwagę dobowe korzyści wynikające z ograniczenia wieczornego odżywiania się, okienko powinno zamknąć się przed godziną 19:00.</string>
+    <string name="exercise_timing_text">Zalecenia Codziennego Tuzina dotyczące optymalnego czasu trwania ćwiczeń na długowieczność to dziewięćdziesiąt minut umiarkowanie intensywnych ćwiczeń dziennie, co jest również optymalnym czasem trwania ćwiczeń dla utraty wagi. Każda pora jest dobra, a im więcej ćwiczeń, tym lepiej, ale ćwiczenia na czczo (przynajmniej sześć godzin po ostatnim posiłku) są bardziej korzystne. Zwykle byłoby to przed śniadaniem, ale jeśli dobrze to zaplanować, możesz ćwiczyć w południe przed późnym obiadem lub, jeśli obiad jest spożywany wystarczająco wcześnie, przed kolacją. To jest czas odpowiedni dla osób które nie mają cukrzycy. Diabetycy i osoby w stanie przedcukrzycowym powinny zamiast tego rozpocząć ćwiczenia 30 minut po rozpoczęciu posiłku i najlepiej ćwiczyć przez co najmniej godzinę, aby czas ćwiczeń obejmował szczytowy poziom cukru we krwi. Gdybyś musiał/-a wybrać pojedynczy posiłek, po którym ćwiczysz, byłby to obiad - ze względu na dobowy rytm kontroli poziomu cukru we krwi, który słabnie wraz z dniem. Najlepiej byłoby jednak, gdyby śniadanie było największym posiłkiem w ciągu dnia, a ćwiczenia następowały po nim - lub jeszcze lepiej, po każdym posiłku.</string>
     <string name="weigh_twice_text">Uważa się, że regularne ważenie się ma kluczowe znaczenie dla długoterminowej kontroli masy ciała, choć nie ma wystarczających dowodów na poparcie określonej częstotliwości ważenia. Moje zalecenie opiera się na jednym badaniu, które wykazało, że ważenie się dwa razy dziennie - po przebudzeniu i tuż przed spaniem - wydawało się lepsze niż raz dziennie (około 2,70 kg w porównaniu do 0,90 kg utraty wagi w ciągu dwunastu tygodni).</string>
-    <string name="complete_intentions_text">Co dwa miesiące twórz trzy nowe intencje implementacyjne. Zaplanuj „jeśli X, to Y”,  by wykonać je w określonym kontekście - i odznaczaj każdą z nich po ich wykonaniu.</string>
-    <string name="nightly_fast_text">Ze względu na nasz rytm dobowy, jedzenie spożywane w nocy jest bardziej tuczące niż dokładnie to samo jedzenie spożywane wcześniej w ciągu dnia, więc pość co najmniej 12 godzin przed godziną 19:00. Im mniej kalorii po zachodzie słońca, tym lepiej.</string>
-    <string name="nightly_sleep_text">Zaznacz to pole, jeśli śpisz przynajmniej siedem godzin w swojej zwykłej porze snu.</string>
-    <string name="nightly_trendelenburg_text">Spróbuj spędzać co najmniej cztery godziny w nocy, leżąc nachylonym/-ną pod kątem sześć stopni - głową w dół, poprzez podwyższenie dolnych nóg łóżka o 20 cm (lub o 23 cm, jeśli masz łóżko California king). Należy zachować szczególną ostrożność, gdy wstajesz z łóżka, ponieważ powoduje to ortostatyczną nietolerancję u większości ludzi, nawet jeśli jesteś młody/-a i zdrowy/-a - co oznacza, że jeśli wstaniesz zbyt szybko, możesz odczuć zawroty głowy, słabość lub oszołomienie i upaść i zranić się. Więc wstań powoli. Wypicie dwóch szklanek zimnej wody na trzydzieści minut przed wstawaniem może również pomóc w zapobiegnięciu temu potencjalnie niebezpiecznemu efektowi ubocznemu. \n*WAŻNE: nie próbuj tego w domu w ogóle, jeśli masz problemy z sercem lub płucami, refluks żołądkowy lub problemy z mózgiem (np. uraz głowy) lub oczu (nawet historia jaskry w rodzinie Cię dyskwalifikuje). Nie próbuj tego także, dopóki nie zapytasz swojego lekarza, czy uważa, że spanie w łagodnym Trendelenburgu jest bezpieczne.</string>
+    <string name="complete_intentions_text">Co dwa miesiące twórz trzy nowe intencje. Zaplanuj „jeśli X, to Y”, by wykonać je w określonym kontekście - i odznaczaj każdą z nich po ich wykonaniu.</string>
+    <string name="nightly_fast_text">Ze względu na nasz rytm dobowy, jedzenie spożywane w nocy jest bardziej tuczące niż dokładnie to samo jedzenie spożywane wcześniej w ciągu dnia, więc pość co najmniej 12 godzin zaczynając od 19:00. Im mniej kalorii po zachodzie słońca, tym lepiej.</string>
+    <string name="nightly_sleep_text">Zaznacz to pole, jeśli śpisz przynajmniej siedem godzin o zwyczajowej porze.</string>
+    <string name="nightly_trendelenburg_text">Spróbuj spędzać co najmniej cztery godziny w nocy, leżąc pod kątem sześć stopni - głową w dół, poprzez podwyższenie dolnych nóg łóżka o 20 cm (lub o 23 cm, jeśli masz łóżko California king). Należy zachować szczególną ostrożność, gdy wstajesz z łóżka, ponieważ powoduje to ortostatyczną nietolerancję u większości ludzi, nawet jeśli jesteś młody/-a i zdrowy/-a - co oznacza, że jeśli wstaniesz zbyt szybko, możesz odczuć zawroty głowy, słabość lub oszołomienie, upaść i zranić się. Więc wstawaj powoli. Wypicie dwóch szklanek zimnej wody na trzydzieści minut przed wstawaniem może również pomóc w zapobieganiu temu potencjalnie niebezpiecznemu efektowi ubocznemu.\n\nWAŻNE: nigdy nie próbuj tego w domu, jeśli masz problemy z sercem lub płucami, refluks żołądkowy lub problemy z mózgiem (np. uraz głowy) lub oczu (nawet historia jaskry w rodzinie dyskwalifikuje Cię). Nie próbuj tego także, dopóki nie zapytasz swojego lekarza, czy uważa, że spanie w łagodnym Trendelenburgu jest bezpieczne.</string>
     <string name="weight">Waga</string>
     <string name="tweak_group_meal">Przy każdym posiłku</string>
     <string name="tweak_group_daily">Każdego dnia</string>
     <string name="tweak_group_dailydoses">Przyjmij swoje dzienne dawki</string>
     <string name="tweak_group_nightly">Każdej nocy</string>
     <string name="about_tweak">O Adaptacji</string>
-    <integer-array name="food_quantities">
-        <item>3</item>
-        <item>1</item>
-        <item>3</item>
-        <item>1</item>
-        <item>2</item>
-        <item>2</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>3</item>
-        <item>5</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-    </integer-array>
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
-        <item />
+        <item/>
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Wykonaj następujące kroki, aby przywrócić swoją kopię zapasową w aplikacji Codzienny Tuzin.</item>
         <item />
-        <item>1. Aplikacja Codzienny Tuzin musi być zainstalowana na telefonie z systemem Android. Możesz ją pobrać tutaj: : https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. Aplikacja Codzienny Tuzin musi być zainstalowana na telefonie z systemem Android. Możesz ją pobrać tutaj: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
-        <item>2. Stuknij w plik kopii zapasowej załączony w tym e-mailu.</item>
+        <item>2. Kliknij w plik kopii zapasowej załączony w tym e-mailu.</item>
         <item />
-        <item>3. Wybierz opcję „Otwórz przy pomocy Codzienny Tuzin”.</item>
+        <item>3. Wybierz opcję „Otwórz przy pomocy Codziennego Tuzina”.</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
         <item>Dzień</item>
@@ -204,18 +189,18 @@
     <string-array name="food_info_types_beans">
         <item>Fasola czana</item>
         <item>Fasola czarne oczko</item>
-        <item>Fasola biała półksiężycowata</item>
+        <item>Fasola limeńska</item>
         <item>Fasola Cannellini</item>
         <item>Ciecierzyca</item>
         <item>Fasola Edamame</item>
         <item>Groszek zwyczajny</item>
         <item>Fasola Great northern</item>
-        <item>Fasola nerkowata</item>
+        <item>Fasola czerwona kidney</item>
         <item>Soczewica (beluga, francuska du Puy i czerwone odmiany)</item>
         <item>Miso</item>
-        <item>Fasola Navy</item>
+        <item>Fasola garbanzo</item>
         <item>Fasola Pinto</item>
-        <item>Fasola Red small</item>
+        <item>Fasola (mała czerwona)</item>
         <item>Groch (żółty lub zielony)</item>
         <item>Tempeh</item>
     </string-array>
@@ -224,7 +209,7 @@
         <item>Berberys</item>
         <item>Jeżyny</item>
         <item>Jagody</item>
-        <item>Wiśnie (słodkie lub cierpkie)</item>
+        <item>Wiśnie i Czereśnie</item>
         <item>Winogrona Concord</item>
         <item>Żurawina</item>
         <item>Jagody Goji</item>
@@ -234,12 +219,12 @@
         <item>Truskawki</item>
     </string-array>
     <string-array name="food_info_types_other_fruits">
-        <item>Jabłko</item>
+        <item>Jabłka</item>
         <item>Suszone morele</item>
         <item>Awokado</item>
-        <item>Banan</item>
+        <item>Banany</item>
         <item>Melon Cantaloupe</item>
-        <item>Mandarynka Klementynka</item>
+        <item>Klementynki</item>
         <item>Daktyle</item>
         <item>Suszone figi</item>
         <item>Grejpfrut</item>
@@ -249,16 +234,16 @@
         <item>Limonki</item>
         <item>Liczi</item>
         <item>Mango</item>
-        <item>Nektarynka Tangerynka</item>
+        <item>Nektarynki</item>
         <item>Pomarańcze</item>
         <item>Papaja</item>
         <item>Marakuja</item>
-        <item>Brzoskwinia</item>
-        <item>Gruszka</item>
+        <item>Brzoskwinie</item>
+        <item>Gruszki</item>
         <item>Ananas</item>
         <item>Śliwki (zwłaszcza ciemnoskóre)</item>
         <item>Śliwkomorela</item>
-        <item>Granat</item>
+        <item>Owoce granatu</item>
         <item>Suszona śliwka</item>
         <item>Mandarynki</item>
         <item>Arbuz</item>
@@ -267,25 +252,25 @@
         <item>Rukola</item>
         <item>Kapusta chińska</item>
         <item>Brokuł (włącznie z Romanesco)</item>
-        <item>Brukselka</item>
+        <item>Brukselki</item>
         <item>Kapusta (zielona, czerwona i włoska)</item>
         <item>Kalafior (biały, zielony, pomarańczowy i fioletowy)</item>
-        <item>Collard greens (liściasta odmiana kapusty)</item>
+        <item>Kapusta pastewna</item>
         <item>Chrzan</item>
         <item>Jarmuż (czarny, zielony i czerwony)</item>
         <item>Kalarepa (zielona i fioletowa)</item>
-        <item>Kapusta sarepska</item>
+        <item>Musztardowiec</item>
         <item>Rzodkiewki</item>
         <item>Nać rzepy</item>
-        <item>Rukiew wodna</item>
+        <item>Rzeżucha wodna</item>
     </string-array>
     <string-array name="food_info_types_greens">
         <item>Rukola</item>
         <item>Boćwina</item>
-        <item>Collard greens (liściasta odmiana kapusty)</item>
+        <item>Kapusta pastewna</item>
         <item>Jarmuż (czarny, zielony i czerwony)</item>
-        <item>Mieszanka Mesclun (mieszanka młodych warzyw sałatkowych)</item>
-        <item>Kapusta sarepska</item>
+        <item>Mieszanka Mesclun (mieszanka młodych liści warzyw sałatkowych)</item>
+        <item>Musztardowiec</item>
         <item>Szczaw</item>
         <item>Szpinak</item>
         <item>Szwjacarska boćwina</item>
@@ -299,15 +284,15 @@
         <item>Marchew</item>
         <item>Kukurydza</item>
         <item>Czosnek</item>
-        <item>Grzyby (młode pieczarki, boczniaki, pieczatki portobello, shiitake)</item>
+        <item>Grzyby (młode pieczarki, boczniaki, pieczarki portobello, shiitake)</item>
         <item>Okra</item>
         <item>Cebula</item>
-        <item>Ziemniaki truflowe</item>
+        <item>Ziemniaki truflowe (fioletowe)</item>
         <item>Dynia</item>
         <item>Warzywa morskie (arame, dulse, nori)</item>
         <item>Groszek cukrowy</item>
         <item>Odmiany dyni (letnie, zimowe, spaghetti)</item>
-        <item>Słodkie ziemniaki/Bataty</item>
+        <item>Słodkie ziemniaki/Pochrzyn</item>
         <item>Pomidory</item>
         <item>Cukinia</item>
     </string-array>
@@ -323,7 +308,7 @@
         <item>Orzechy laskowe</item>
         <item>Nasiona konopii</item>
         <item>Orzechy makadamia</item>
-        <item>Orzechy Pekan</item>
+        <item>Orzechy pekan</item>
         <item>Pistacje</item>
         <item>Pestki dyni</item>
         <item>Ziarna sezamu</item>
@@ -450,8 +435,8 @@
         <item>Jogging w wodzie</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans">
-        <item>%s humusu lub dipu ze strączków</item>
-        <item>%s ugotowanych strączków, groszku, soczewicy, tofu lub tempehu</item>
+        <item>%s humusu lub dipu z fasoli</item>
+        <item>%s ugotowanej fasoli, grochu łuskanego, soczewicy, tofu lub tempeh</item>
         <item>1%s świeżego groszku lub kiełków soczewicy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
@@ -477,7 +462,7 @@
         <item>40 g</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 średniej wielkości owoc</item>
+        <item>1 owoc %s średniej wielkości</item>
         <item>1%s pokrojonych owoców</item>
         <item>%s suszonych owoców</item>
     </string-array>
@@ -493,7 +478,7 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
         <item>%s posiekanych</item>
-        <item>%s brukselek lub kiełków brokułu</item>
+        <item>%s brukselek lub kiełków brokułów</item>
         <item>%s1 łyżka chrzanu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
@@ -570,11 +555,11 @@
         <item />
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s gorących płatków zbożowych lub gotowanych ziaren, makaronu lub ziaren kukurydzy</item>
-        <item>%s zimnych płatków śniadaniowych</item>
+        <item>%s gorących płatków zbożowych lub gotowanych ziaren zbóż, makaronu lub ziaren kukurydzy</item>
+        <item>%s płatków śniadaniowych na zimno</item>
         <item>%s1 tortilla lub kromka chleba</item>
         <item>%s½ bajgla lub angielskiego muffina</item>
-        <item>3%s popcornu</item>
+        <item>3%s prażonej kukurydzy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ szklanki</item>
@@ -591,13 +576,13 @@
         <item>0 g</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages">
-        <item>Jedna szklanka %s)</item>
+        <item>Jedna szklanka (3%s)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>(12 uncji</item>
+        <item>40 g</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item> (350 ml</item>
+        <item>50 ml</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise">
         <item>%s90 minut aktywności o umiarkowanej intensywności</item>

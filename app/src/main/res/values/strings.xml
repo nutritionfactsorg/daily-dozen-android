@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
     <string name="app_name">Daily Dozen</string>
-
     <string name="beans">Beans</string>
     <string name="berries">Berries</string>
     <string name="other_fruits">Other Fruits</string>
@@ -54,7 +54,7 @@
     <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
     <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
     <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
-    <string name="permission_needed_to_write_storage">Can\'t backup without permission to write to storage</string>
+    <string name="permission_needed_to_write_storage">Can’t backup without permission to write to storage</string>
     <string name="backup_failed">Backup failed</string>
     <string name="restore_failed">Restore failed</string>
     <string name="backup_success">Backup successful</string>
@@ -104,13 +104,13 @@
     <string name="unchecked" translatable="false">{fa-square 24dp @color/gray_dark}</string>
     <string name="checked" translatable="false">{fa-check-square 24dp @color/gray_dark}</string>
     <string name="welcome_to_my_daily_dozen">Welcome to my Daily Dozen!</string>
-    <string name="activity_welcome_text">Use this app on a daily basis to keep track of the foods I recommend for optimal health and longevity in my book How Not to Die.</string>
+    <string name="activity_welcome_text">Use this app on a daily basis to keep track of the foods and advice I recommend for optimal health and longevity in my books How Not to Die and How Not to Diet.</string>
     <string name="dialog_ask_user_to_rate_app_title">Do you like this app?</string>
     <string name="dialog_ask_user_to_rate_app_message">Please give us feedback in the Play Store.</string>
     <string name="rate_now">Give Feedback</string>
     <string name="not_now">Not Now</string>
-    <string name="format_version">version %1$s</string>
-    <string name="format_num_days">%1$d days</string>
+    <string name="format_version">version %s</string>
+    <string name="format_num_days">%d days</string>
     <string name="daily_reminder_title">Daily Dozen Reminder</string>
     <string name="daily_reminder_text">Update your servings for today</string>
     <string name="daily_reminder_settings">Daily Reminder Settings</string>
@@ -122,7 +122,6 @@
     <string name="metric">Metric</string>
     <string name="error_cannot_handle_url">Could not open url. Please install a browser.</string>
     <string name="channel_reminders_name">Reminders</string>
-
     <string name="twenty_one_tweaks">21 Tweaks</string>
     <string name="tweaks">Tweaks</string>
     <string name="daily_tweaks_history">Daily Tweaks History</string>
@@ -132,7 +131,7 @@
     <string name="morning">Morning</string>
     <string name="evening">Evening</string>
     <string name="meal_water">Preload with Water</string>
-    <string name="meal_negcal">Preload with "Negative Calorie" Foods</string>
+    <string name="meal_negcal">Preload with “Negative Calorie” Foods</string>
     <string name="meal_vinegar">Incorporate Vinegar (2 tsp with each meal)</string>
     <string name="meal_undistracted">Enjoy Undistracted Meals</string>
     <string name="meal_twentyminutes">Follow the Twenty-Minute Rule</string>
@@ -155,7 +154,7 @@
     <string name="debug_generate_weight_data">Generate Weight Data</string>
     <string name="average_weight_on_day">Average weight on day</string>
     <string name="meal_water_short">Preload with Water</string>
-    <string name="meal_negcal_short">Preload with "Negative Calorie" Foods</string>
+    <string name="meal_negcal_short">Preload with “Negative Calorie” Foods</string>
     <string name="meal_vinegar_short">Incorporate Vinegar (2 tsp with each meal)</string>
     <string name="meal_undistracted_short">Enjoy Undistracted Meals</string>
     <string name="meal_twentyminutes_short">Follow the Twenty-Minute Rule</string>
@@ -178,25 +177,24 @@
     <string name="meal_water_text">Time your metabolism-boosting two cups of cool or cold unflavored water before each meal to also take advantage of its preload benefits.</string>
     <string name="meal_negcal_text">As the first course, start each meal with an apple or a Green Light soup or salad containing fewer than one hundred calories per cup.</string>
     <string name="meal_vinegar_text">Never drink vinegar straight. Instead, flavor meals or dress a side salad with any of the sweet and savory vinegars out there. If you want to drink it, make sure to mix it in a glass of water and, afterward, be sure to rinse your mouth out with water to protect your tooth enamel.</string>
-    <string name="meal_undistracted_text">Don\'t eat while watching TV or playing on your phone. Give yourself a check for each meal you\'re able to eat without distraction.</string>
+    <string name="meal_undistracted_text">Don’t eat while watching TV or playing on your phone. Give yourself a check for each meal you’re able to eat without distraction.</string>
     <string name="meal_twentyminutes_text">Whether through increasing viscosity or the number of chews, or decreasing bite size and eating rate, dozens of studies have demonstrated that no matter how we boost the amount of time food is in our mouths, it can result in lower caloric intake. So extend meal duration to at least twenty minutes to allow your natural satiety signals to take full effect. How? By choosing foods that take longer to eat and eating them in a way that prolongs the time they stay in your mouth. Think bulkier, hardier, chewier foods in smaller, well-chewed bites.</string>
     <string name="daily_blackcumin_text">As noted in the Appetite Suppression section, a systematic review and meta-analysis of randomized, controlled weight-loss trials found that about a quarter teaspoon of black cumin powder every day appears to reduce body mass index within a span of a couple of months. Note that black cumin is different from regular cumin, for which the dosing is different.</string>
     <string name="daily_garlic_text">Randomized, double-blind, placebo-controlled studies have found that as little as a daily quarter teaspoon of garlic powder can reduce body fat at a cost of perhaps two cents a day.</string>
     <string name="daily_ginger_text">Randomized controlled trials have found that ¼ teaspoon to 1½ teaspoons a day of ground ginger significantly decreased body weight for just pennies a day. It can be as easy as stirring the ground spice into a cup of hot water. Note: Ginger may work better in the morning than evening. Chai tea is a tasty way to combine the green tea and ginger tricks into a single beverage. Alternately, for BAT activation, you can add one raw jalapeño pepper or a half teaspoon of red pepper powder (or, presumably, crushed red pepper flakes) into your daily diet. To help beat the heat, you can very thinly slice or finely chop the jalapeño to reduce its bite to little prickles, or mix the red pepper into soup or the whole-food vegetable smoothie I featured in one of my cooking videos on NutritionFacts.org.</string>
-    <string name="daily_nutriyeast_text">Two teaspoons of baker\'s, brewer\'s, or nutritional yeast contains roughly the amount of beta 1,3/1,6 glucans found in randomized, double-blind, placebo-controlled clinical trials to facilitate weight loss.</string>
+    <string name="daily_nutriyeast_text">Two teaspoons of baker’s, brewer’s, or nutritional yeast contains roughly the amount of beta 1,3/1,6 glucans found in randomized, double-blind, placebo-controlled clinical trials to facilitate weight loss.</string>
     <string name="daily_cumin_text">Overweight women randomized to add a half teaspoon of cumin to their lunches and dinners beat out the control group by four more pounds and an extra inch off their waists. There is also evidence to support the use of the spice saffron, but a pinch a day would cost a dollar, whereas a teaspoon of cumin costs less than ten cents.</string>
-    <string name="daily_greentea_text">Drink three cups a day between meals (waiting at least an hour after a meal so as to not interfere with iron absorption). During meals, drink water, black coffee, or hibiscus tea mixed 6:1 with lemon verbena, but never exceed three cups of fluid an hour (important given my water preloading advice). Take advantage of the reinforcing effect of caffeine by drinking your green tea along with something healthy you wish you liked more, but don\'t consume large amounts of caffeine within six hours of bedtime. Taking your tea without sweetener is best, but if you typically sweeten your tea with honey or sugar, try yacon syrup instead.</string>
-    <string name="daily_hydrate_text">Check this box if your urine never appears darker than a pale yellow. Note that if you\'re eating riboflavin-fortified foods (such as nutritional yeast), then base this instead on getting nine cups of unsweetened beverages a day for women (which would be taken care of by the green tea and water preloading recommendations) or thirteen cups a day for men. If you have heart or kidney issues, don\'t increase fluid intake at all without first talking with your physician. Remember, diet soda may be calorie-free, but it\'s not consequence-free, as we learned in the Low in Added Sugar section.</string>
+    <string name="daily_greentea_text">Drink three cups a day between meals (waiting at least an hour after a meal so as to not interfere with iron absorption). During meals, drink water, black coffee, or hibiscus tea mixed 6:1 with lemon verbena, but never exceed three cups of fluid an hour (important given my water preloading advice). Take advantage of the reinforcing effect of caffeine by drinking your green tea along with something healthy you wish you liked more, but don’t consume large amounts of caffeine within six hours of bedtime. Taking your tea without sweetener is best, but if you typically sweeten your tea with honey or sugar, try yacon syrup instead.</string>
+    <string name="daily_hydrate_text">Check this box if your urine never appears darker than a pale yellow.\n\nNote that if you’re eating riboflavin-fortified foods (such as nutritional yeast), then base this instead on getting nine cups of unsweetened beverages a day for women (which would be taken care of by the green tea and water preloading recommendations) or thirteen cups a day for men.\n\nIf you have heart or kidney issues, don’t increase fluid intake at all without first talking with your physician.\n\nRemember, diet soda may be calorie-free, but it’s not consequence-free, as we learned in the Low in Added Sugar section.</string>
     <string name="daily_deflourdiet_text">Check this box every day your whole grain servings are in the form of intact grains. The powdering of even 100 percent whole grains robs our microbiomes of the starch that would otherwise be ferried down to our colons enclosed in unbroken cell walls.</string>
     <string name="daily_frontload_text">There are metabolic benefits to distributing more calories to earlier in the day, so make breakfast (ideally) or lunch your largest meal of the day in true king/prince/pauper style.</string>
     <string name="daily_timerestrict_text">Confine eating to a daily window of time of your choosing under twelve hours in length that you can stick to consistently, seven days a week. Given the circadian benefits of reducing evening food intake, the window should end before 7:00 p.m.</string>
-    <string name="exercise_timing_text">The Daily Dozen\'s recommendation for optimum exercise duration for longevity is ninety minutes of moderately intense activity a day, which is also the optimum exercise duration for weight loss. Anytime is good, and the more, the better, but there may be an advantage to exercising in a fasted state, at least six hours after your last meal. Typically, this would mean before breakfast, but if you timed it right, you could exercise midday before a late lunch or, if lunch is eaten early enough, before dinner. This is the timing for nondiabetics. Diabetics and prediabetics should instead start exercising thirty minutes after the start of a meal and ideally go for at least an hour to completely straddle the blood sugar peak. If you had to choose a single meal to exercise after, it would be dinner, due to the circadian rhythm of blood sugar control that wanes throughout the day. Ideally, though, breakfast would be the largest meal of the day, and you\'d exercise after that—or, even better, after every meal.</string>
+    <string name="exercise_timing_text">The Daily Dozen’s recommendation for optimum exercise duration for longevity is ninety minutes of moderately intense activity a day, which is also the optimum exercise duration for weight loss. Anytime is good, and the more, the better, but there may be an advantage to exercising in a fasted state, at least six hours after your last meal. Typically, this would mean before breakfast, but if you timed it right, you could exercise midday before a late lunch or, if lunch is eaten early enough, before dinner. This is the timing for nondiabetics. Diabetics and prediabetics should instead start exercising thirty minutes after the start of a meal and ideally go for at least an hour to completely straddle the blood sugar peak. If you had to choose a single meal to exercise after, it would be dinner, due to the circadian rhythm of blood sugar control that wanes throughout the day. Ideally, though, breakfast would be the largest meal of the day, and you’d exercise after that—or, even better, after every meal.</string>
     <string name="weigh_twice_text">Regular self-weighing is considered crucial for long-term weight control, but there is insufficient evidence to support a specific frequency of weighing. My recommendation is based on the one study that found that twice daily—upon waking and right before bed—appeared superior to once a day (about six versus two pounds of weight loss over twelve weeks).</string>
-    <string name="complete_intentions_text">Every two months, create three new implementation intentions—"if X, then Y" plans to perform a particular behavior in a specific context—and check each one of them off as you complete them every day.</string>
+    <string name="complete_intentions_text">Every two months, create three new implementation intentions—“if X, then Y” plans to perform a particular behavior in a specific context—and check each one of them off as you complete them every day.</string>
     <string name="nightly_fast_text">Due to our circadian rhythms, food eaten at night is more fattening than the exact same food eaten earlier in the day, so fast every night for at least twelve hours starting before 7:00 p.m. The fewer calories after sundown, the better.</string>
     <string name="nightly_sleep_text">Check this box if you get at least seven hours of sleep at your regular bedtime.</string>
-    <string name="nightly_trendelenburg_text">Try spending at least four hours a night lying with your body tilted head-down six degrees by elevating the posts at the foot of your bed by eight inches (or by nine inches if you have a California king). Be extremely careful when you get out of bed, as this causes orthostatic intolerance in most people, even if you\'re young and healthy—meaning if you get up too fast, you can feel dizzy, faint, or light-headed and could fall and hurt yourself. So get up slowly. Drinking two cups of cold water thirty minutes before rising may also help prevent this potentially hazardous side effect.\n*IMPORTANT: Do not try this at home at all if you have any heart or lung issues, acid reflux, or problems with your brain (like head trauma) or eyes (even a family history of glaucoma disqualifies you). Also do not try this until you ask your physician if they think it\'s safe for you to sleep in mild Trendelenburg.*</string>
-
+    <string name="nightly_trendelenburg_text">Try spending at least four hours a night lying with your body tilted head-down six degrees by elevating the posts at the foot of your bed by eight inches (or by nine inches if you have a California king). Be extremely careful when you get out of bed, as this causes orthostatic intolerance in most people, even if you’re young and healthy—meaning if you get up too fast, you can feel dizzy, faint, or light-headed and could fall and hurt yourself. So get up slowly. Drinking two cups of cold water thirty minutes before rising may also help prevent this potentially hazardous side effect.\n\n*IMPORTANT: Do not try this at home at all if you have any heart or lung issues, acid reflux, or problems with your brain (like head trauma) or eyes (even a family history of glaucoma disqualifies you). Also do not try this until you ask your physician if they think it’s safe for you to sleep in mild Trendelenburg.*</string>
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page.
     These strings are to not be literial language translations.
@@ -218,14 +216,12 @@
     <string name="food_info_videos_vitamin_b12" translatable="false">vitamin-b12</string>
     <string name="food_info_videos_vitamin_d" translatable="false">vitamin-d-supplements</string>
     <string name="food_info_videos_omega3" translatable="false">omega-3-fatty-acids</string>
-
     <string name="weight">Weight</string>
     <string name="tweak_group_meal">At Each Meal</string>
     <string name="tweak_group_daily">Every Day</string>
     <string name="tweak_group_dailydoses">Take your daily doses</string>
     <string name="tweak_group_nightly">Every Night</string>
     <string name="about_tweak">About Tweak</string>
-
     <!--
     NOTE: These strings should never be translated from English
     These strings are used as the canonical names for the different foods and make it easy to switch between languages
@@ -245,7 +241,6 @@
         <item>Exercise</item>
         <item>Vitamin B12</item>
     </string-array>
-
     <string-array name="food_names" translatable="false">
         <item>@string/beans</item>
         <item>@string/berries</item>
@@ -261,8 +256,7 @@
         <item>@string/exercise</item>
         <item>@string/vitamin_b12</item>
     </string-array>
-
-    <integer-array name="food_quantities">
+    <integer-array name="food_quantities" translatable="false">
         <item>3</item>
         <item>1</item>
         <item>3</item>
@@ -278,7 +272,6 @@
         <item>1</item>
         <item>1</item>
     </integer-array>
-
     <string-array name="tweak_id_names" translatable="false">
         <item>Meal Water</item>
         <item>Meal NegCal</item>
@@ -302,7 +295,6 @@
         <item>Nightly Sleep</item>
         <item>Nightly Trendelenburg</item>
     </string-array>
-
     <string-array name="tweak_names" translatable="false">
         <item>@string/meal_water</item>
         <item>@string/meal_negcal</item>
@@ -326,7 +318,6 @@
         <item>@string/nightly_sleep</item>
         <item>@string/nightly_trendelenburg</item>
     </string-array>
-
     <integer-array name="tweak_amounts" translatable="false">
         <item>3</item>
         <item>3</item>
@@ -350,13 +341,11 @@
         <item>1</item>
         <item>1</item>
     </integer-array>
-
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
-        <item />
+        <item/>
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
-
     <string-array name="backup_instructions_lines">
         <item>Follow these steps to restore this backup in the Daily Dozen app</item>
         <item />
@@ -366,13 +355,11 @@
         <item />
         <item>3. Select Open with Daily Dozen</item>
     </string-array>
-
     <string-array name="servings_time_scale_choices">
         <item>Day</item>
         <item>Month</item>
         <item>Year</item>
     </string-array>
-
     <string-array name="history_to_generate_choices">
         <item>1 month</item>
         <item>3 months</item>
@@ -381,13 +368,12 @@
         <item>2 years</item>
         <item>5 years</item>
     </string-array>
-
     <string-array name="food_info_types_beans">
         <item>Black beans</item>
         <item>Black-eyed peas</item>
         <item>Butter beans</item>
         <item>Cannellini beans</item>
-        <item>Chickpeas/Garbanzo beans</item>
+        <item>Chickpeas/Garbanzo Beans</item>
         <item>Edamame</item>
         <item>English peas</item>
         <item>Great northern beans</item>
@@ -400,7 +386,6 @@
         <item>Split peas (yellow or green)</item>
         <item>Tempeh</item>
     </string-array>
-
     <string-array name="food_info_types_berries">
         <item>Acai berries</item>
         <item>Barberries</item>
@@ -415,16 +400,15 @@
         <item>Raspberries (black or red)</item>
         <item>Strawberries</item>
     </string-array>
-
     <string-array name="food_info_types_other_fruits">
         <item>Apples</item>
-        <item>Dried apricots</item>
+        <item>Apricots</item>
         <item>Avocados</item>
         <item>Bananas</item>
         <item>Cantaloupe</item>
         <item>Clementines</item>
         <item>Dates</item>
-        <item>Dried figs</item>
+        <item>Figs</item>
         <item>Grapefruit</item>
         <item>Honeydew</item>
         <item>Kiwifruit</item>
@@ -446,7 +430,6 @@
         <item>Tangerines</item>
         <item>Watermelon</item>
     </string-array>
-
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Arugula</item>
         <item>Bok choy</item>
@@ -463,7 +446,6 @@
         <item>Turnip greens</item>
         <item>Watercress</item>
     </string-array>
-
     <string-array name="food_info_types_greens">
         <item>Arugula</item>
         <item>Beet greens</item>
@@ -476,7 +458,6 @@
         <item>Swiss chard</item>
         <item>Turnip greens</item>
     </string-array>
-
     <string-array name="food_info_types_other_vegetables">
         <item>Artichokes</item>
         <item>Asparagus</item>
@@ -497,12 +478,10 @@
         <item>Tomatoes</item>
         <item>Zucchini</item>
     </string-array>
-
     <string-array name="food_info_types_flaxseeds">
         <item>Brown flaxseeds</item>
         <item>Golden flaxseeds</item>
     </string-array>
-
     <string-array name="food_info_types_nuts">
         <item>Almonds</item>
         <item>Brazil nuts</item>
@@ -518,7 +497,6 @@
         <item>Sunflower seeds</item>
         <item>Walnuts</item>
     </string-array>
-
     <string-array name="food_info_types_spices">
         <item>Allspice</item>
         <item>Barberries</item>
@@ -553,7 +531,6 @@
         <item>Turmeric</item>
         <item>Vanilla</item>
     </string-array>
-
     <string-array name="food_info_types_whole_grains">
         <item>Barley</item>
         <item>Buckwheat</item>
@@ -565,7 +542,6 @@
         <item>Teff</item>
         <item>Whole-wheat pasta</item>
     </string-array>
-
     <string-array name="food_info_types_beverages">
         <item>Black tea</item>
         <item>Chai tea</item>
@@ -584,7 +560,6 @@
         <item>Water</item>
         <item>White tea</item>
     </string-array>
-
     <string-array name="food_info_types_exercise">
         <item>Bicycling</item>
         <item>Canoeing</item>
@@ -641,231 +616,192 @@
         <item>Walking briskly uphill</item>
         <item>Water jogging</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beans">
         <item>%s of hummus or bean dip</item>
         <item>%s cooked beans, split peas, lentils, tofu, or tempeh</item>
-        <item>%s of fresh peas or sprouted lentils</item>
+        <item>1%s of fresh peas or sprouted lentils</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ cup</item>
         <item>½ cup</item>
-        <item>1 cup</item>
+        <item> cup</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beans_metric">
         <item>60 g</item>
         <item>130 g</item>
-        <item>150 g</item>
+        <item>50 g</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_berries">
         <item>%s fresh or frozen</item>
         <item>%s dried</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ cup</item>
         <item>¼ cup</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_berries_metric">
         <item>60 g</item>
         <item>40 g</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_fruits">
         <item>%s1 medium-sized fruit</item>
-        <item>%s cut-up fruit</item>
+        <item>1%s cut-up fruit</item>
         <item>%s dried fruit</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
         <item />
-        <item>1 cup</item>
+        <item> cup</item>
         <item>¼ cup</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item />
-        <item>120 g</item>
+        <item>20 g</item>
         <item>40 g</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_cruciferous_vegetables">
         <item>%s chopped</item>
         <item>%s Brussels or broccoli sprouts</item>
         <item>%s1 tablespoon horseradish</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ cup</item>
         <item>¼ cup</item>
         <item />
     </string-array>
-
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g</item>
         <item>12 g</item>
         <item />
     </string-array>
-
     <string-array name="food_info_serving_sizes_greens">
         <item>%s raw</item>
         <item>%s cooked</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1 cup</item>
         <item>½ cup</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_greens_metric">
         <item>60 g</item>
         <item>90 g</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_vegetables">
         <item>%s raw leafy vegetables</item>
         <item>%s raw or cooked nonleafy vegetables</item>
         <item>%s vegetable juice</item>
         <item>%s dried mushrooms</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
         <item>1 cup</item>
         <item>½ cup</item>
         <item>½ cup</item>
         <item>¼ cup</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g</item>
         <item>50 g</item>
         <item>125 ml</item>
         <item>7 g</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_flaxseeds">
         <item>%s1 tablespoon ground</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item />
     </string-array>
-
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
         <item />
     </string-array>
-
     <string-array name="food_info_serving_sizes_nuts">
         <item>%s nuts or seeds</item>
         <item>%s2 tablespoons nut or seed butter</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼ cup</item>
         <item />
     </string-array>
-
     <string-array name="food_info_serving_sizes_nuts_metric">
         <item>30 g</item>
         <item />
     </string-array>
-
     <string-array name="food_info_serving_sizes_spices">
         <item>%s¼ teaspoon of turmeric</item>
         <item>%sAny other (salt-free) herbs and spices you enjoy</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_spices_imperial">
         <item />
         <item />
     </string-array>
-
     <string-array name="food_info_serving_sizes_spices_metric">
         <item />
         <item />
     </string-array>
-
     <string-array name="food_info_serving_sizes_whole_grains">
         <item>%s hot cereal or cooked grains, pasta, or corn kernels</item>
         <item>%s cold cereal</item>
         <item>%s1 tortilla or slice of bread</item>
         <item>%s½ a bagel or English muffin</item>
-        <item>%s popped popcorn</item>
+        <item>3%s popped popcorn</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ cup</item>
         <item>1 cup</item>
         <item />
         <item />
-        <item>3 cups</item>
+        <item> cups</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g</item>
         <item>50 g</item>
         <item />
         <item />
-        <item>30 g</item>
+        <item>0 g</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beverages">
         <item>One glass (%s)</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beverages_imperial">
         <item>12 ounces</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_beverages_metric">
         <item>350 ml</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_exercise">
         <item>%s90 minutes of moderate-intensity activity</item>
         <item>%s40 minutes of vigorous-intensity activity</item>
     </string-array>
-
     <string-array name="food_info_serving_sizes_exercise_imperial">
         <item />
         <item />
     </string-array>
-
     <string-array name="food_info_serving_sizes_exercise_metric">
         <item />
         <item />
     </string-array>
-
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page.
     These strings are to not be literial language translations.
     These strings must be valid existing url addition to "http://nutritionfacts.org/".
     If the language is not present on nutritionfacts.org, then the default English url is used.
     -->
-
     <string-array name="food_videos_beans" translatable="false">
         <item>black-beans</item>
-        <item />
-        <item />
-        <item />
+        <item/>
+        <item/>
+        <item/>
         <item>chickpeas</item>
         <item>edamame</item>
-        <item />
-        <item />
+        <item/>
+        <item/>
         <item>kidney-beans</item>
         <item>lentils</item>
         <item>miso</item>
         <item>navy-beans</item>
         <item>pinto-beans</item>
-        <item />
+        <item/>
         <item>split-peas</item>
         <item>tempeh</item>
     </string-array>
-
     <string-array name="food_videos_berries" translatable="false">
         <item>acai-berries</item>
         <item>barberries</item>
@@ -875,73 +811,69 @@
         <item>grapes</item>
         <item>cranberries</item>
         <item>goji-berries</item>
-        <item />
-        <item />
+        <item/>
+        <item/>
         <item>raspberries</item>
         <item>strawberries</item>
     </string-array>
-
     <string-array name="food_videos_other_fruits" translatable="false">
         <item>apples</item>
         <item>apricots</item>
         <item>avocados</item>
         <item>bananas</item>
         <item>cantaloupe</item>
-        <item />
+        <item/>
         <item>dates</item>
-        <item />
+        <item/>
         <item>grapefruit</item>
-        <item />
+        <item/>
         <item>kiwifruit</item>
         <item>lemons</item>
         <item>limes</item>
-        <item />
+        <item/>
         <item>mango</item>
-        <item />
+        <item/>
         <item>oranges</item>
-        <item />
-        <item />
+        <item/>
+        <item/>
         <item>peaches</item>
         <item>pears</item>
-        <item />
+        <item/>
         <item>plums</item>
-        <item />
+        <item/>
         <item>pomegranates</item>
         <item>prunes</item>
-        <item />
+        <item/>
         <item>watermelon</item>
     </string-array>
-
     <string-array name="food_videos_cruciferous_vegetables" translatable="false">
-        <item />
+        <item/>
         <item>bok-choy</item>
         <item>broccoli</item>
         <item>brussels-sprouts</item>
         <item>cabbage</item>
         <item>cauliflower</item>
         <item>collard-greens</item>
-        <item />
+        <item/>
         <item>kale</item>
-        <item />
+        <item/>
         <item>mustard-greens</item>
-        <item />
-        <item />
+        <item/>
+        <item/>
         <item>watercress</item>
     </string-array>
-
     <string-array name="food_videos_greens" translatable="false">
-        <item />
+        <item/>
         <item>beets</item>
         <item>collard-greens</item>
         <item>kale</item>
-        <item />
+        <item/>
         <item>mustard-greens</item>
-        <item />
+        <item/>
         <item>spinach</item>
         <item>swiss-chard</item>
-        <item />
+        <item/>
     </string-array>
-
     <string-array name="food_videos_other_vegetables" translatable="false">
         <item>artichokes</item>
         <item>asparagus</item>
@@ -956,20 +888,19 @@
         <item>potatoes</item>
         <item>pumpkin</item>
         <item>sea-vegetables</item>
-        <item />
+        <item/>
         <item>squash</item>
         <item>sweet-potatoes</item>
         <item>tomatoes</item>
         <item>zucchini</item>
     </string-array>
-
     <string-array name="food_videos_nuts" translatable="false">
         <item>almonds</item>
         <item>brazil-nuts</item>
         <item>cashews</item>
         <item>chia-seeds</item>
         <item>hazelnuts</item>
-        <item />
+        <item/>
         <item>macadamia-nuts</item>
         <item>pecans</item>
         <item>pistachios</item>
@@ -978,42 +909,40 @@
         <item>sunflower-seeds</item>
         <item>walnuts</item>
     </string-array>
-
     <string-array name="food_videos_spices" translatable="false">
         <item>allspice</item>
         <item>barberries</item>
         <item>basil</item>
-        <item />
-        <item />
-        <item />
+        <item/>
+        <item/>
+        <item/>
         <item>cilantro</item>
         <item>cinnamon</item>
         <item>cloves</item>
-        <item />
+        <item/>
         <item>cumin</item>
         <item>curry-powder</item>
-        <item />
+        <item/>
         <item>fenugreek</item>
         <item>garlic</item>
         <item>ginger</item>
-        <item />
-        <item />
+        <item/>
+        <item/>
         <item>marjoram</item>
         <item>mustard-powder</item>
         <item>nutmeg</item>
         <item>oregano</item>
-        <item />
+        <item/>
         <item>parsley</item>
         <item>pepper</item>
         <item>peppermint</item>
         <item>rosemary</item>
         <item>saffron</item>
-        <item />
-        <item />
+        <item/>
+        <item/>
         <item>turmeric</item>
-        <item />
+        <item/>
     </string-array>
-
     <string-array name="food_videos_whole_grains" translatable="false">
         <item>barley</item>
         <item>buckwheat</item>
@@ -1022,10 +951,9 @@
         <item>popcorn</item>
         <item>quinoa</item>
         <item>rye</item>
-        <item />
+        <item/>
         <item>pasta</item>
     </string-array>
-
     <string-array name="food_videos_beverages" translatable="false">
         <item>black-tea</item>
         <item>chai-tea</item>
@@ -1034,8 +962,8 @@
         <item>earl-grey-tea</item>
         <item>green-tea</item>
         <item>hibiscus-tea</item>
-        <item />
-        <item />
+        <item/>
+        <item/>
         <item>lemon-balm</item>
         <item>matcha</item>
         <item>oolong-tea</item>
@@ -1044,5 +972,4 @@
         <item>water</item>
         <item>white-tea</item>
     </string-array>
-
 </resources>

@@ -119,15 +119,6 @@
         <item>An</item>
     </string-array>
 
-    <string-array name="history_to_generate_choices">
-        <item>1 lună</item>
-        <item>3 luni</item>
-        <item>6 luni</item>
-        <item>1 an</item>
-        <item>2 ani</item>
-        <item>5 ani</item>
-    </string-array>
-
     <string-array name="food_info_types_beans">
         <item>Fasole neagră</item>
         <item>Fasole ochi negru</item>

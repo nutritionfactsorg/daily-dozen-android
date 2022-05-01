@@ -35,7 +35,9 @@
         android:layout_below="@id/reminder_control_container"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
         app:cardElevation="6dp">
 
         <LinearLayout
