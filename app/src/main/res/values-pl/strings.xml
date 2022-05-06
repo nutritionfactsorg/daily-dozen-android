@@ -161,7 +161,7 @@
     <string name="about_tweak">O Adaptacji</string>
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
-        <item/>
+        <item />
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
@@ -434,166 +434,112 @@
         <item>Szybki chód pod górę</item>
         <item>Jogging w wodzie</item>
     </string-array>
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s humusu lub dipu z fasoli</item>
-        <item>%s ugotowanej fasoli, grochu łuskanego, soczewicy, tofu lub tempeh</item>
-        <item>1%s świeżego groszku lub kiełków soczewicy</item>
-    </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ szklanki</item>
-        <item>½ szklanki</item>
-        <item> szklanka</item>
+        <item>¼ szklanki humusu lub dipu z fasoli</item>
+        <item>½ szklanki ugotowanej fasoli, grochu łuskanego, soczewicy, tofu lub tempeh</item>
+        <item>1 szklanka świeżego groszku lub kiełków soczewicy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g</item>
-        <item>130 g</item>
-        <item>50 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s świeżych lub mrożonych</item>
-        <item>%s susznych</item>
+        <item>60 g humusu lub dipu z fasoli</item>
+        <item>130 g ugotowanej fasoli, grochu łuskanego, soczewicy, tofu lub tempeh</item>
+        <item>150 g świeżego groszku lub kiełków soczewicy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ szklanki</item>
-        <item>¼ szklanki</item>
+        <item>½ szklanki świeżych lub mrożonych</item>
+        <item>¼ szklanki susznych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g</item>
-        <item>40 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>1 owoc %s średniej wielkości</item>
-        <item>1%s pokrojonych owoców</item>
-        <item>%s suszonych owoców</item>
+        <item>60 g świeżych lub mrożonych</item>
+        <item>40 g susznych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item> szklanka</item>
-        <item>¼ szklanki</item>
+        <item>1 owoc średniej wielkości</item>
+        <item>1 szklanka pokrojonych owoców</item>
+        <item>¼ szklanki suszonych owoców</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>20 g</item>
-        <item>40 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s posiekanych</item>
-        <item>%s brukselek lub kiełków brokułów</item>
-        <item>%s1 łyżka chrzanu</item>
+        <item>1 owoc  średniej wielkości</item>
+        <item>120 g pokrojonych owoców</item>
+        <item>40 g suszonych owoców</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ szklanki</item>
-        <item>¼ szklanki</item>
-        <item />
+        <item>½ szklanki posiekanych</item>
+        <item>¼ szklanki brukselek lub kiełków brokułów</item>
+        <item>1 łyżka chrzanu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g</item>
-        <item>12 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s surowych</item>
-        <item>%s gotowanych</item>
+        <item>30–80 g posiekanych</item>
+        <item>12 g brukselek lub kiełków brokułów</item>
+        <item>1 łyżka chrzanu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 szklanka</item>
-        <item>½ szklanki</item>
+        <item>1 szklanka surowych</item>
+        <item>½ szklanki gotowanych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 g</item>
-        <item>90 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s surowych warzyw liściastych</item>
-        <item>%s surowych lub gotowanych warzyw nieliściastych</item>
-        <item>%s soku warzywnego</item>
-        <item>%s suszonych grzybów</item>
+        <item>60 g surowych</item>
+        <item>90 g gotowanych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 szklanka</item>
-        <item>½ szklanki</item>
-        <item>½ szklanki</item>
-        <item>¼ szklanki</item>
+        <item>1 szklanka surowych warzyw liściastych</item>
+        <item>½ szklanki surowych lub gotowanych warzyw nieliściastych</item>
+        <item>½ szklanki soku warzywnego</item>
+        <item>¼ szklanki suszonych grzybów</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 g</item>
-        <item>50 g</item>
-        <item>125 ml</item>
-        <item>7 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 łyżka mielonych</item>
+        <item>60 g surowych warzyw liściastych</item>
+        <item>50 g surowych lub gotowanych warzyw nieliściastych</item>
+        <item>125 ml soku warzywnego</item>
+        <item>7 g suszonych grzybów</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item />
+        <item>1 łyżka mielonych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s orzechów lub nasion</item>
-        <item>%s2 łyżki masła z orzechów lub z nasion</item>
+        <item>1 łyżka mielonych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ szklanki</item>
-        <item />
+        <item>¼ szklanki orzechów lub nasion</item>
+        <item>2 łyżki masła z orzechów lub z nasion</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ łyżeczki kurkumy</item>
-        <item>%sWszelkie inne (pozbawione soli) zioła i przyprawy, które lubisz</item>
+        <item>30 g orzechów lub nasion</item>
+        <item>2 łyżki masła z orzechów lub z nasion</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
+        <item>¼ łyżeczki kurkumy</item>
+        <item>Wszelkie inne (pozbawione soli) zioła i przyprawy, które lubisz</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s gorących płatków zbożowych lub gotowanych ziaren zbóż, makaronu lub ziaren kukurydzy</item>
-        <item>%s płatków śniadaniowych na zimno</item>
-        <item>%s1 tortilla lub kromka chleba</item>
-        <item>%s½ bajgla lub angielskiego muffina</item>
-        <item>3%s prażonej kukurydzy</item>
+        <item>¼ łyżeczki kurkumy</item>
+        <item>Wszelkie inne (pozbawione soli) zioła i przyprawy, które lubisz</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ szklanki</item>
-        <item>1 szklanka</item>
-        <item />
-        <item />
-        <item> szklanki</item>
+        <item>½ szklanki gorących płatków zbożowych lub gotowanych ziaren zbóż, makaronu lub ziaren kukurydzy</item>
+        <item>1 szklanka płatków śniadaniowych na zimno</item>
+        <item>1 tortilla lub kromka chleba</item>
+        <item>½ bajgla lub angielskiego muffina</item>
+        <item>3 szklanki prażonej kukurydzy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g</item>
-        <item>50 g</item>
-        <item />
-        <item />
-        <item>0 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>Jedna szklanka (3%s)</item>
+        <item>100 g gorących płatków zbożowych lub gotowanych ziaren zbóż, makaronu lub ziaren kukurydzy</item>
+        <item>50 g płatków śniadaniowych na zimno</item>
+        <item>1 tortilla lub kromka chleba</item>
+        <item>½ bajgla lub angielskiego muffina</item>
+        <item>30 g prażonej kukurydzy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>40 g</item>
+        <item>Jedna szklanka (340 g)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>50 ml</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 minut aktywności o umiarkowanej intensywności</item>
-        <item>%s40 minut intensywnej aktywności</item>
+        <item>Jedna szklanka (350 ml)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
+        <item>90 minut aktywności o umiarkowanej intensywności</item>
+        <item>40 minut intensywnej aktywności</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
+        <item>90 minut aktywności o umiarkowanej intensywności</item>
+        <item>40 minut intensywnej aktywności</item>
     </string-array>
 </resources>
