@@ -161,7 +161,7 @@
     <string name="about_tweak">לגבי שינוי</string>
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
-        <item/>
+        <item />
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
@@ -434,166 +434,112 @@
         <item>הליכה במעלה הרים</item>
         <item>הליכה במים</item>
     </string-array>
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s חומוס או מטבל שעועית</item>
-        <item>%s שעועית מבושלת, אפונה מפוצלת, קטניות, טופו או טמפה</item>
-        <item>1%s אפונה טריה או עדשים מונבטות</item>
-    </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ כוס</item>
-        <item>½ כוס</item>
-        <item> כוס</item>
+        <item>¼ כוס חומוס או מטבל שעועית</item>
+        <item>½ כוס שעועית מבושלת, אפונה מפוצלת, קטניות, טופו או טמפה</item>
+        <item>1 כוס אפונה טריה או עדשים מונבטות</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 גרם</item>
-        <item>130 גרם</item>
-        <item>50גרם</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s</item>
-        <item>%s יבשים</item>
+        <item>60 גרם חומוס או מטבל שעועית</item>
+        <item>130 גרם שעועית מבושלת, אפונה מפוצלת, קטניות, טופו או טמפה</item>
+        <item>150גרם אפונה טריה או עדשים מונבטות</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ כוס טריה או קפואה</item>
-        <item>¼ כוס</item>
+        <item>¼ כוס יבשים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
         <item>60 גרם טריים או קפואים</item>
-        <item>40 גרם</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 פרי בינוני</item>
-        <item>1%s פירות חתוכים</item>
-        <item>%s פירות יבשים</item>
+        <item>40 גרם יבשים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item> כוס</item>
-        <item>¼ כוס</item>
+        <item>1 פרי בינוני</item>
+        <item>1 כוס פירות חתוכים</item>
+        <item>¼ כוס פירות יבשים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>20 גרם</item>
-        <item>40 גרם</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s קצוצים</item>
-        <item>%s כרוב ניצנים או נבטי ברוקולי</item>
-        <item>%sכף חזרת</item>
+        <item>1 פרי בינוני</item>
+        <item>120 גרם פירות חתוכים</item>
+        <item>40 גרם פירות יבשים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ כוס</item>
-        <item>¼ כוס</item>
-        <item />
+        <item>½ כוס קצוצים</item>
+        <item>¼ כוס כרוב ניצנים או נבטי ברוקולי</item>
+        <item>כף חזרת</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30-80 גרם</item>
-        <item>12 גרם</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s</item>
-        <item>%s מבושלים</item>
+        <item>30-80 גרם קצוצים</item>
+        <item>12 גרם כרוב ניצנים או נבטי ברוקולי</item>
+        <item>כף חזרת</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1 כוס גולמית</item>
-        <item>½ כוס</item>
+        <item>½ כוס מבושלים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
         <item>60 גרם גולמי</item>
-        <item>90 גרם</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s ירקות עליים טריים</item>
-        <item>%s ירקות לא עליים טריים או מבושלים</item>
-        <item>%s מיץ ירקות</item>
-        <item>%s פטריות מיובשות</item>
+        <item>90 גרם מבושלים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>כוס</item>
-        <item>½ כוס</item>
-        <item>½ כוס</item>
-        <item>¼ כוס</item>
+        <item>כוס ירקות עליים טריים</item>
+        <item>½ כוס ירקות לא עליים טריים או מבושלים</item>
+        <item>½ כוס מיץ ירקות</item>
+        <item>¼ כוס פטריות מיובשות</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 גרם</item>
-        <item>50 גרם</item>
-        <item>125 מ"ל</item>
-        <item>7 גרם</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 כף טחונים</item>
+        <item>60 גרם ירקות עליים טריים</item>
+        <item>50 גרם ירקות לא עליים טריים או מבושלים</item>
+        <item>125 מ"ל מיץ ירקות</item>
+        <item>7 גרם פטריות מיובשות</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item />
+        <item>1 כף טחונים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s אגוזים או זרעים</item>
-        <item>%s2 כפות חמאת אגוזים או זרעים</item>
+        <item>1 כף טחונים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ כוס</item>
-        <item />
+        <item>¼ כוס אגוזים או זרעים</item>
+        <item>2 כפות חמאת אגוזים או זרעים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 גרם</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ כפית כורכום</item>
-        <item>%sעשבי מרפא ותבלינים נוספים (ללא מלח) שאתם אוהבים</item>
+        <item>30 גרם אגוזים או זרעים</item>
+        <item>2 כפות חמאת אגוזים או זרעים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
+        <item>¼ כפית כורכום</item>
+        <item>עשבי מרפא ותבלינים נוספים (ללא מלח) שאתם אוהבים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s דגני בוקר חמים או דגנים מבושלים, פסטה או לבבות תירס</item>
-        <item>%s דגני בוקר קרים</item>
-        <item>%s1 טורטיה או פרוסת לחם</item>
-        <item>%s½ בייגל או מאפין אנגלי</item>
-        <item>3%s פופקורן מוכן</item>
+        <item>¼ כפית כורכום</item>
+        <item>עשבי מרפא ותבלינים נוספים (ללא מלח) שאתם אוהבים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ כוס</item>
-        <item>1 כוס</item>
-        <item />
-        <item />
-        <item> כוסות</item>
+        <item>½ כוס דגני בוקר חמים או דגנים מבושלים, פסטה או לבבות תירס</item>
+        <item>1 כוס דגני בוקר קרים</item>
+        <item>1 טורטיה או פרוסת לחם</item>
+        <item>½ בייגל או מאפין אנגלי</item>
+        <item>3 כוסות פופקורן מוכן</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 גרם</item>
-        <item>50 גרם</item>
-        <item />
-        <item />
-        <item>0 גרם</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>כוס אחת %s)</item>
+        <item>100 גרם דגני בוקר חמים או דגנים מבושלים, פסטה או לבבות תירס</item>
+        <item>50 גרם דגני בוקר קרים</item>
+        <item>1 טורטיה או פרוסת לחם</item>
+        <item>½ בייגל או מאפין אנגלי</item>
+        <item>30 גרם פופקורן מוכן</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>350 גרם</item>
+        <item>כוס אחת 350 גרם)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>(350 מ"ל</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 דקות פעילות בעצימות בינונית</item>
-        <item>%s40 דקות פעילות בעצימות גבוהה</item>
+        <item>כוס אחת (350 מ"ל)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
+        <item>90 דקות פעילות בעצימות בינונית</item>
+        <item>40 דקות פעילות בעצימות גבוהה</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
+        <item>90 דקות פעילות בעצימות בינונית</item>
+        <item>40 דקות פעילות בעצימות גבוהה</item>
     </string-array>
 </resources>

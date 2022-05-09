@@ -161,7 +161,7 @@
     <string name="about_tweak">Über Optimierungen</string>
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
-        <item/>
+        <item />
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
@@ -434,166 +434,112 @@
         <item>Zügig bergauf gehen</item>
         <item>Wasserjogging</item>
     </string-array>
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s Hummus oder Bohnendip</item>
-        <item>%s gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
-        <item>1%s frische Erbsen oder gekeimte Linsen</item>
-    </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ Tasse</item>
-        <item>½ Tasse</item>
-        <item> Tasse</item>
+        <item>¼ Tasse Hummus oder Bohnendip</item>
+        <item>½ Tasse gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
+        <item>1 Tasse frische Erbsen oder gekeimte Linsen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60g</item>
-        <item>130g</item>
-        <item>50g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s frisch oder gefroren</item>
-        <item>%s getrocknet</item>
+        <item>60g Hummus oder Bohnendip</item>
+        <item>130g gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
+        <item>150g frische Erbsen oder gekeimte Linsen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ Tasse</item>
-        <item>¼ Tasse</item>
+        <item>½ Tasse frisch oder gefroren</item>
+        <item>¼ Tasse getrocknet</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60g</item>
-        <item>40g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 mittelgroße Frucht</item>
-        <item>1%s geschnittene Früchte</item>
-        <item>%s getrocknete Früchte</item>
+        <item>60g frisch oder gefroren</item>
+        <item>40g getrocknet</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item> Tasse</item>
-        <item>¼ Tasse</item>
+        <item>1 mittelgroße Frucht</item>
+        <item>1 Tasse geschnittene Früchte</item>
+        <item>¼ Tasse getrocknete Früchte</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>20g</item>
-        <item>60g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s gehackt</item>
-        <item>%s Rosenkohl oder Brokkolisprossen</item>
-        <item>1 Esslöffel %s Meerrettich</item>
+        <item>1 mittelgroße Frucht</item>
+        <item>120g geschnittene Früchte</item>
+        <item>60g getrocknete Früchte</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ Tasse</item>
-        <item>¼ Tasse</item>
-        <item />
+        <item>½ Tasse gehackt</item>
+        <item>¼ Tasse Rosenkohl oder Brokkolisprossen</item>
+        <item>1 Esslöffel Meerrettich</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g</item>
-        <item>12 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s roh</item>
-        <item>%s gekocht</item>
+        <item>30–80 g gehackt</item>
+        <item>12 g Rosenkohl oder Brokkolisprossen</item>
+        <item>1 Esslöffel (15 ml) Meerrettich</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 Tasse</item>
-        <item>½ Tasse</item>
+        <item>1 Tasse roh</item>
+        <item>½ Tasse gekocht</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60g</item>
-        <item>90g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s rohes Blattgemüse</item>
-        <item>%s rohes oder gekochtes nicht-blättriges Gemüse</item>
-        <item>%s Gemüsesaft</item>
-        <item>%s getrocknete Pilze</item>
+        <item>60g roh</item>
+        <item>90g gekocht</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 Tasse</item>
-        <item>½ Tasse</item>
-        <item>½ Tasse</item>
-        <item>¼ Tasse</item>
+        <item>1 Tasse rohes Blattgemüse</item>
+        <item>½ Tasse rohes oder gekochtes nicht-blättriges Gemüse</item>
+        <item>½ Tasse Gemüsesaft</item>
+        <item>¼ Tasse getrocknete Pilze</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 g</item>
-        <item>50 g</item>
-        <item>125 ml</item>
-        <item>7 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>1%sl gemahlen</item>
+        <item>60 g rohes Blattgemüse</item>
+        <item>50 g rohes oder gekochtes nicht-blättriges Gemüse</item>
+        <item>125 ml Gemüsesaft</item>
+        <item>7 g getrocknete Pilze</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item> Esslöffe</item>
+        <item>1 Esslöffel gemahlen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item>5m</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s Nüsse oder Samen</item>
-        <item>%s2 Esslöffel (30 ml) Nuß- oder Samenmus</item>
+        <item>15ml gemahlen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ Tasse</item>
-        <item />
+        <item>¼ Tasse Nüsse oder Samen</item>
+        <item>2 Esslöffel (30 ml) Nuß- oder Samenmus</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ Teelöffel (1,2 ml) Kurkuma</item>
-        <item>%sAlle anderen (salzfreien) Kräuter und Gewürze, die Sie mögen</item>
+        <item>30 g Nüsse oder Samen</item>
+        <item>2 Esslöffel (30 ml) Nuß- oder Samenmus</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
+        <item>¼ Teelöffel (1,2 ml) Kurkuma</item>
+        <item>Alle anderen (salzfreien) Kräuter und Gewürze, die Sie mögen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s Getreideflockenbrei oder gekochte Körner, Nudeln oder Maiskörner</item>
-        <item>%s Getreideflocken</item>
-        <item>%s1 Tortilla oder 1 Scheibe Brot</item>
-        <item>%s½ Bagel oder ½ Englischer Muffin</item>
-        <item>3%s Popcorn</item>
+        <item>¼ Teelöffel (1,2 ml) Kurkuma</item>
+        <item>Alle anderen (salzfreien) Kräuter und Gewürze, die Sie mögen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ Tasse</item>
-        <item>1 Tasse</item>
-        <item />
-        <item />
-        <item> Tassen</item>
+        <item>½ Tasse Getreideflockenbrei oder gekochte Körner, Nudeln oder Maiskörner</item>
+        <item>1 Tasse Getreideflocken</item>
+        <item>1 Tortilla oder 1 Scheibe Brot</item>
+        <item>½ Bagel oder ½ Englischer Muffin</item>
+        <item>3 Tassen Popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g</item>
-        <item>50 g</item>
-        <item />
-        <item />
-        <item>0 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>1½ Gläser (%s)</item>
+        <item>100 g Getreideflockenbrei oder gekochte Körner, Nudeln oder Maiskörner</item>
+        <item>50 g Getreideflocken</item>
+        <item>1 Tortilla oder 1 Scheibe Brot</item>
+        <item>½ Bagel oder ½ Englischer Muffin</item>
+        <item>30 g Popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>12 Unzen</item>
+        <item>1½ Gläser (12 Unzen)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>350ml</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 Minuten Aktivität mit mäßiger Intensität</item>
-        <item>%s40 Minuten Aktivität mit hoher Intensität</item>
+        <item>1½ Gläser (350ml)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
+        <item>90 Minuten Aktivität mit mäßiger Intensität</item>
+        <item>40 Minuten Aktivität mit hoher Intensität</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
+        <item>90 Minuten Aktivität mit mäßiger Intensität</item>
+        <item>40 Minuten Aktivität mit hoher Intensität</item>
     </string-array>
 </resources>

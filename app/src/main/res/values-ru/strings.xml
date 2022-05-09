@@ -161,7 +161,7 @@
     <string name="about_tweak">Об уловке</string>
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
-        <item/>
+        <item />
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
@@ -434,166 +434,112 @@
         <item>Быстрая ходьба в гору</item>
         <item>Беговые движения на плаву</item>
     </string-array>
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s хумуса или бобового соуса</item>
-        <item>%s готовой фасоли, колотого гороха, чечевицы, тофу или темпе</item>
-        <item>1%s свежего гороха или пророщенной чечевицы</item>
-    </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ чашки</item>
-        <item>½ чашки</item>
-        <item> чашка</item>
+        <item>¼ чашки хумуса или бобового соуса</item>
+        <item>½ чашки готовой фасоли, колотого гороха, чечевицы, тофу или темпе</item>
+        <item>1 чашка свежего гороха или пророщенной чечевицы</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 г</item>
-        <item>130 г</item>
-        <item>50 г</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s свежих или замороженных</item>
-        <item>%s сушёных</item>
+        <item>60 г хумуса или бобового соуса</item>
+        <item>130 г готовой фасоли, колотого гороха, чечевицы, тофу или темпе</item>
+        <item>150 г свежего гороха или пророщенной чечевицы</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ чашки</item>
-        <item>¼ чашки</item>
+        <item>½ чашки свежих или замороженных</item>
+        <item>¼ чашки сушёных</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 г</item>
-        <item>40 г</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 фрукт среднего размера</item>
-        <item>1%s</item>
-        <item>%s сушёного фрукта</item>
+        <item>60 г свежих или замороженных</item>
+        <item>40 г сушёных</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item> чашка нарезанных фруктов</item>
-        <item>¼ чашки</item>
+        <item>1 фрукт среднего размера</item>
+        <item>1 чашка нарезанных фруктов</item>
+        <item>¼ чашки сушёного фрукта</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>20 г нарезанного фрукта</item>
-        <item>40 г</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s нарезанных</item>
-        <item>%s брюссельской капусты или брокколи</item>
-        <item>%s1 столовая ложка хрена</item>
+        <item>1 фрукт среднего размера</item>
+        <item>120 г нарезанного фрукта</item>
+        <item>40 г сушёного фрукта</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ чашки</item>
-        <item>¼ чашки</item>
-        <item />
+        <item>½ чашки нарезанных</item>
+        <item>¼ чашки брюссельской капусты или брокколи</item>
+        <item>1 столовая ложка хрена</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 г</item>
-        <item>12 г</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s сырых</item>
-        <item>%s приготовленных</item>
+        <item>30–80 г нарезанных</item>
+        <item>12 г брюссельской капусты или брокколи</item>
+        <item>1 столовая ложка хрена</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 чашка</item>
-        <item>½ чашки</item>
+        <item>1 чашка сырых</item>
+        <item>½ чашки приготовленных</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 г</item>
-        <item>90 г</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s сырых листовых овощей</item>
-        <item>%s сырых или приготовленных нелистовых овощей</item>
-        <item>%s овощного сока</item>
-        <item>%s сушёных грибов</item>
+        <item>60 г сырых</item>
+        <item>90 г приготовленных</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 чашка</item>
-        <item>½ чашки</item>
-        <item>½ чашки</item>
-        <item>¼ чашки</item>
+        <item>1 чашка сырых листовых овощей</item>
+        <item>½ чашки сырых или приготовленных нелистовых овощей</item>
+        <item>½ чашки овощного сока</item>
+        <item>¼ чашки сушёных грибов</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 г</item>
-        <item>50 г</item>
-        <item>125 мл</item>
-        <item>7 г</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 столовая ложка измельчённых</item>
+        <item>60 г сырых листовых овощей</item>
+        <item>50 г сырых или приготовленных нелистовых овощей</item>
+        <item>125 мл овощного сока</item>
+        <item>7 г сушёных грибов</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item />
+        <item>1 столовая ложка измельчённых</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s орехов или семян</item>
-        <item>%s2 столовые ложки пасты из орехов или семян</item>
+        <item>1 столовая ложка измельчённых</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ чашки</item>
-        <item />
+        <item>¼ чашки орехов или семян</item>
+        <item>2 столовые ложки пасты из орехов или семян</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 г</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ чайной ложки куркумы</item>
-        <item>%sДругие любимые пряности (без соли)</item>
+        <item>30 г орехов или семян</item>
+        <item>2 столовые ложки пасты из орехов или семян</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
+        <item>¼ чайной ложки куркумы</item>
+        <item>Другие любимые пряности (без соли)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s приготовленных злаков/зерновых, пасты или кукурузных зёрен</item>
-        <item>%s цельнозерновых хлопьев</item>
-        <item>%s1 тортилья или ломтик хлеба</item>
-        <item>½ бублика или английско%s</item>
-        <item>3%s приготовленного попкорна</item>
+        <item>¼ чайной ложки куркумы</item>
+        <item>Другие любимые пряности (без соли)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ чашки</item>
-        <item>1 чашка</item>
-        <item />
-        <item>го маффина</item>
-        <item> чашки</item>
+        <item>½ чашки приготовленных злаков/зерновых, пасты или кукурузных зёрен</item>
+        <item>1 чашка цельнозерновых хлопьев</item>
+        <item>1 тортилья или ломтик хлеба</item>
+        <item>½ бублика или английского маффина</item>
+        <item>3 чашки приготовленного попкорна</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 г</item>
-        <item>50 г</item>
-        <item />
-        <item>й булочки</item>
-        <item>0 г</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>Один стакан (%s)</item>
+        <item>100 г приготовленных злаков/зерновых, пасты или кукурузных зёрен</item>
+        <item>50 г цельнозерновых хлопьев</item>
+        <item>1 тортилья или ломтик хлеба</item>
+        <item>½ бублика или английской булочки</item>
+        <item>30 г приготовленного попкорна</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>12 унций</item>
+        <item>Один стакан (12 унций)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>350 мл</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 минут нагрузки средней интенсивности</item>
-        <item>%s40 минут интенсивной нагрузки</item>
+        <item>Один стакан (350 мл)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
+        <item>90 минут нагрузки средней интенсивности</item>
+        <item>40 минут интенсивной нагрузки</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
+        <item>90 минут нагрузки средней интенсивности</item>
+        <item>40 минут интенсивной нагрузки</item>
     </string-array>
 </resources>

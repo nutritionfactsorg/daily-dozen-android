@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
     <string name="app_name">Daily Dozen</string>
-
     <string name="beans">Бобови</string>
     <string name="berries">Горски плодове</string>
     <string name="other_fruits">Други плодове</string>
@@ -78,490 +78,8 @@
     <string name="units">единици</string>
     <string name="imperial">имперски</string>
     <string name="metric">метричен</string>
-
-    <string-array name="about_text_lines">
-        <item>Това приложение е създадено от John Slavick.</item>
-        <item />
-        <item>Използват се следните библиотеки с отворен код: ActiveAndroid, Android-iconify, EventBus, LikeAnimation, и MPAndroidChart.</item>
-    </string-array>
-
-    <string-array name="backup_instructions_lines">
-        <item>Следвайте тези стъпки, за да възстановите Daily Dozen от резервно копие</item>
-        <item />
-        <item>1. Приложението Daily Dozen трябва да се инсталира на вашия телефон с Андроид. Можете да го изтеглите от тук: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
-        <item />
-        <item>2. Изберете архивния файл, прикачен към този имейл.</item>
-        <item />
-        <item>3. Изберете „Отвори“ с Daily Dozen</item>
-    </string-array>
-
-    <string-array name="servings_time_scale_choices">
-        <item>Ден</item>
-        <item>Месец</item>
-        <item>Година</item>
-    </string-array>
-
-    <string-array name="food_info_types_beans">
-        <item>Черен боб</item>
-        <item>Папуда</item>
-        <item>Жълт боб</item>
-        <item>Бял боб</item>
-        <item>Нахут</item>
-        <item>Едамаме</item>
-        <item>Английски грах</item>
-        <item>Едър боб</item>
-        <item>Бъбрековиден боб</item>
-        <item>Леща (белуга, френска и червени сортове)</item>
-        <item>Мисо</item>
-        <item>Дребен боб</item>
-        <item>Боб Пинто</item>
-        <item>Дребен червен боб</item>
-        <item>Белен грах (жълт или зелен)</item>
-        <item>Темпе</item>
-    </string-array>
-
-    <string-array name="food_info_types_berries">
-        <item>Акаи плодове</item>
-        <item>Кисел трън</item>
-        <item>Къпини</item>
-        <item>Боровинки</item>
-        <item>Череши (сладки или кисели)</item>
-        <item>Американски грозде („Конкорд“)</item>
-        <item>Червени боровинки</item>
-        <item>Годжи Бери</item>
-        <item>Кумкуат</item>
-        <item>Черници</item>
-        <item>Малини (черни или червени)</item>
-        <item>Ягоди</item>
-    </string-array>
-
-    <string-array name="food_info_types_other_fruits">
-        <item>Ябълки</item>
-        <item>Сушени кайсии</item>
-        <item>Авокадо</item>
-        <item>Банани</item>
-        <item>Пъпеш</item>
-        <item>Мандарини</item>
-        <item>Фурми</item>
-        <item>Сушени смокини</item>
-        <item>Грейпфрут</item>
-        <item>Пъпеш („Медена роса“)</item>
-        <item>Киви</item>
-        <item>Лимони</item>
-        <item>Лайм</item>
-        <item>Личии</item>
-        <item>Манго</item>
-        <item>Нектарини</item>
-        <item>Портокали</item>
-        <item>Папая</item>
-        <item>Маракуя</item>
-        <item>Праскови</item>
-        <item>Круши</item>
-        <item>Ананас</item>
-        <item>Сливи (особено черни сливи)</item>
-        <item>Едри сини сливи</item>
-        <item>Нар</item>
-        <item>Сушени сливи</item>
-        <item>Мандарини</item>
-        <item>Диня</item>
-    </string-array>
-
-    <string-array name="food_info_types_cruciferous_vegetables">
-        <item>Рукола</item>
-        <item>Бок чой</item>
-        <item>Броколи (Романеско)</item>
-        <item>Брюкселско зеле</item>
-        <item>Зеле (зелен, червено, савойско)</item>
-        <item>Карфиол (бяло, зелено, оранжево, лилаво)</item>
-        <item>Зелеви растения</item>
-        <item>Хрян</item>
-        <item>Кейл (черен, зелен и червен)</item>
-        <item>Алабаш (зелено, лилаво)</item>
-        <item>Сарепска горчица</item>
-        <item>Репички</item>
-        <item>Ряпа</item>
-        <item>Кресон</item>
-    </string-array>
-
-    <string-array name="food_info_types_greens">
-        <item>Рукола</item>
-        <item>Цвекло</item>
-        <item>Зелеви растения</item>
-        <item>Кейл/Къдраво зеле (черно, зелено и червено)</item>
-        <item>Микс от млади салатни зеленчуци</item>
-        <item>Сарепска горчица</item>
-        <item>Киселец</item>
-        <item>Спанак</item>
-        <item>Манголд</item>
-        <item>Ряпа</item>
-    </string-array>
-
-    <string-array name="food_info_types_other_vegetables">
-        <item>Артишок</item>
-        <item>Аспержи</item>
-        <item>Цвекло</item>
-        <item>Камби</item>
-        <item>Моркови</item>
-        <item>Царевица</item>
-        <item>Чесън</item>
-        <item>Гъби (печурки, кладница и шийтаке)</item>
-        <item>Бамя</item>
-        <item>Лук</item>
-        <item>Лилави картофи</item>
-        <item>Тиква</item>
-        <item>Морски зеленчуци (араме, дулсе и нори)</item>
-        <item>Грах</item>
-        <item>Тиква „Скуош“ (деликата, лято и скуош „спагети“)</item>
-        <item>Сладки картофи</item>
-        <item>Домати</item>
-        <item>Тиквички</item>
-    </string-array>
-
-    <string-array name="food_info_types_flaxseeds">
-        <item>Кафяво лененото семе</item>
-        <item>Златно лененото семе</item>
-    </string-array>
-
-    <string-array name="food_info_types_nuts">
-        <item>Бадеми</item>
-        <item>Бразилски орех</item>
-        <item>Кашу</item>
-        <item>Семена от чиа</item>
-        <item>Лешници</item>
-        <item>Конопени семена</item>
-        <item>Макадамия</item>
-        <item>Пекан</item>
-        <item>Шамфъстък</item>
-        <item>Тиквени семена</item>
-        <item>Сусам</item>
-        <item>Слънчогледови семки</item>
-        <item>Орехи</item>
-    </string-array>
-
-    <string-array name="food_info_types_spices">
-        <item>Бахар</item>
-        <item>Кисел трън</item>
-        <item>Босилек</item>
-        <item>Дафинови листа</item>
-        <item>Кардамон</item>
-        <item>Чили на прах</item>
-        <item>Силантро</item>
-        <item>Канела</item>
-        <item>Карамфил</item>
-        <item>Кориандър</item>
-        <item>Кимион</item>
-        <item>Къри на прах</item>
-        <item>Копър</item>
-        <item>Сминдух</item>
-        <item>Чесън</item>
-        <item>Джинджифил</item>
-        <item>Хрян</item>
-        <item>Лимонена трева</item>
-        <item>Риган</item>
-        <item>Горчица на прах</item>
-        <item>Индийско орехче</item>
-        <item>Риган</item>
-        <item>Пушен червен пипер</item>
-        <item>Магданоз</item>
-        <item>Пипер</item>
-        <item>Мента</item>
-        <item>Розмарин</item>
-        <item>Шафран</item>
-        <item>Градински чай</item>
-        <item>Мащерка</item>
-        <item>Куркума</item>
-        <item>Ванилия</item>
-    </string-array>
-
-    <string-array name="food_info_types_whole_grains">
-        <item>Ечемик</item>
-        <item>Елда</item>
-        <item>Просо</item>
-        <item>Овесени ядки</item>
-        <item>Пуканки</item>
-        <item>Киноа</item>
-        <item>Ръж</item>
-        <item>Теф</item>
-        <item>Пълнозърнеста паста</item>
-    </string-array>
-
-    <string-array name="food_info_types_beverages">
-        <item>Черен чай</item>
-        <item>Чаи чай</item>
-        <item>Ванилово-лайков чай</item>
-        <item>Кафе</item>
-        <item>„Ърл Грей“ чай</item>
-        <item>Зелен чай</item>
-        <item>Чай от хибискус</item>
-        <item>Горещ шоколад</item>
-        <item>Жасминов чай</item>
-        <item>Чай от маточина</item>
-        <item>Матча чай</item>
-        <item>Чай „цъфнали бадеми оолонг“</item>
-        <item>Чай от мента</item>
-        <item>Ройбос чай</item>
-        <item>Вода</item>
-        <item>Бял чай</item>
-    </string-array>
-
-    <string-array name="food_info_types_exercise">
-        <item>Колоездене</item>
-        <item>Гребане</item>
-        <item>Танцуване</item>
-        <item>Народна топка</item>
-        <item>Спускане ски</item>
-        <item>Фехтовка</item>
-        <item>Туризъм</item>
-        <item>Домакинска работа</item>
-        <item>Фигурно пързаляне</item>
-        <item>Каране на ролери</item>
-        <item>Жонглиране</item>
-        <item>Скокове на батут</item>
-        <item>Каране на водно колело</item>
-        <item>Игра с фризби</item>
-        <item>Каране на кънки</item>
-        <item>Баскетбол</item>
-        <item>Изгребване на сняг</item>
-        <item>Каране на скейтборд</item>
-        <item>Плуване с шнорхел</item>
-        <item>Сърфиране</item>
-        <item>Плуване</item>
-        <item>Тенис на двойки</item>
-        <item>Синхронно плуване</item>
-        <item>Бързо ходене (6,4 км/ч)</item>
-        <item>Водна аеробика</item>
-        <item>Каране на водни ски</item>
-        <item>Градинарство</item>
-        <item>Йога</item>
-        <item>Туризъм</item>
-        <item>Баскетбол</item>
-        <item>Планинско колоездене</item>
-        <item>Вдигане на тежести</item>
-        <item>Ски бягане</item>
-        <item>Футбол</item>
-        <item>Хокей</item>
-        <item>Джогинг</item>
-        <item>Подскоци</item>
-        <item>Скачането на въже</item>
-        <item>Игра на топка</item>
-        <item>Лицеви опори</item>
-        <item>Набирания</item>
-        <item>Ракетбол</item>
-        <item>Скално катерене</item>
-        <item>Ръгби</item>
-        <item>Тичане</item>
-        <item>Гмуркане</item>
-        <item>Тенис на корд</item>
-        <item>Футбол</item>
-        <item>Пързаляне с кънки</item>
-        <item>Скуош</item>
-        <item>Аеробика</item>
-        <item>Плуване</item>
-        <item>Планинско тичане</item>
-        <item>Воден джогинг</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s хумус или бобова разядка</item>
-        <item>%s сварен боб, грах, леща, тофу или темпе</item>
-        <item>%s пресен грах или покълнала леща</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ чаша</item>
-        <item>½ чаша</item>
-        <item>1 чаша</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 грам</item>
-        <item>130 грам</item>
-        <item>150 грам</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s пресни или замразени боровинки</item>
-        <item>%s изсушени боровинки</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ чаша</item>
-        <item>¼ чаша</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 грам</item>
-        <item>40 грам</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s средно голям плод</item>
-        <item>%s нарязани плодове</item>
-        <item>%s сушени плодове</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item>1</item>
-        <item>1 чаша</item>
-        <item>¼ чаша</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item>1</item>
-        <item>120 грам</item>
-        <item>40 грам</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s нарязани цветнолистни</item>
-        <item>%s брюкселско зеле или броколи</item>
-        <item>%s супена лъжица хрян</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ чаша</item>
-        <item>¼ чаша</item>
-        <item>1</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 грам</item>
-        <item>12 грам</item>
-        <item>1</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s сурови зеленолистни</item>
-        <item>%s варени зеленолистни</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 чаша</item>
-        <item>½ чаша</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 грам</item>
-        <item>90 грам</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s сурови листни зеленчуци</item>
-        <item>%s сурови или варени зеленчуци</item>
-        <item>%s зеленчуков сок</item>
-        <item>%s сушени гъби</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 чаша</item>
-        <item>½ чаша</item>
-        <item>½ чаша</item>
-        <item>¼ чаша</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 грам</item>
-        <item>50 грам</item>
-        <item>125 мл.</item>
-        <item>7 грам</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 супена лъжица ленено семе</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s ядки или семена</item>
-        <item>%s2 супени лъжици ядки или масло от семена</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ чаша</item>
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 грам</item>
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ чаена лъжичка куркума</item>
-        <item>%sВсякакви други безсолни билки и подправки, които обичате</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s топла зърнена закуска или сварени зърна, паста или царевица</item>
-        <item>%s студена зърнена закуска</item>
-        <item>%s1 тортила или филия хляб</item>
-        <item>%s½ поничка или английски мъфин</item>
-        <item>%s пуканки</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ чаша</item>
-        <item>1 чаша</item>
-        <item />
-        <item />
-        <item>3 чаши</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 грам</item>
-        <item>50 грам</item>
-        <item />
-        <item />
-        <item>30 грам</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>Една чаша (%s)</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>12 унции</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>350 мл.</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 минути умерена интензивност на физическа дейност</item>
-        <item>%s40 минути енергично интензивност дейност</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
-    </string-array>
-
     <string name="error_cannot_handle_url">Връзката не може да се отвори. Моля, инсталирайте браузър.</string>
     <string name="channel_reminders_name">Напомняния</string>
-
     <string name="twenty_one_tweaks">21 ощипвания</string>
     <string name="tweaks">Фини настройки</string>
     <string name="daily_tweaks_history">Ежедневна история за ощипване</string>
@@ -570,12 +88,6 @@
     <string name="task_loading_weights_history_title">Зареждане на историята на теглата</string>
     <string name="morning">Сутрин</string>
     <string name="evening">вечер</string>
-    <string name="weight">тегло</string>
-    <string name="tweak_group_meal">При всяко хранене</string>
-    <string name="tweak_group_daily">Всеки ден</string>
-    <string name="tweak_group_dailydoses">Вземете дневните си дози</string>
-    <string name="tweak_group_nightly">Всяка нощ</string>
-    <string name="about_tweak">Относно ощипване</string>
     <string name="meal_water">Предварително заредете с вода</string>
     <string name="meal_negcal">Предварително заредете с храни с отрицателни калории</string>
     <string name="meal_vinegar">Включете оцет (2 ч.л. с всяко хранене)</string>
@@ -641,5 +153,393 @@
     <string name="nightly_fast_text">Поради нашите циркадни ритми, храната, изядена през нощта, е по-угояваща от същата същата храна, изядена по-рано през деня, толкова бърза всяка вечер в продължение на поне дванадесет часа, като се започне преди 19:00 ч. Колкото по-малко калории след залеза, толкова по-добре.</string>
     <string name="nightly_sleep_text">Поставете отметка в това поле, ако получавате поне седем часа сън в редовното си лягане.</string>
     <string name="nightly_trendelenburg_text">Опитайте да прекарвате поне четири часа на нощ в легнало с наклонено тяло с главата надолу шест градуса, като повдигнете стълбовете в подножието на леглото си с осем инча (или с девет инча, ако имате крал на Калифорния). Бъдете изключително внимателни, когато ставате от леглото, тъй като това причинява ортостатична непоносимост при повечето хора, дори и да сте млади и здрави - което означава, че ако станете твърде бързо, можете да почувствате замаяност, припадък или светлоглаза и може падайте и се наранявайте. Затова станете бавно. Пиенето на две чаши студена вода тридесет минути преди втасване също може да помогне за предотвратяване на този потенциално опасен страничен ефект. \ N * ВАЖНО: Не опитвайте това у дома изобщо, ако имате проблеми със сърцето или белите дробове, рефлукс с киселина или проблеми с мозъка ви (като травма на главата) или очите (дори фамилна анамнеза за глаукома ви дисквалифицира). Също така не опитвайте това, докато не попитате лекаря си, ако те мислят, че е безопасно за вас да спите в мек Трендленбург. *</string>
-
+    <string name="weight">тегло</string>
+    <string name="tweak_group_meal">При всяко хранене</string>
+    <string name="tweak_group_daily">Всеки ден</string>
+    <string name="tweak_group_dailydoses">Вземете дневните си дози</string>
+    <string name="tweak_group_nightly">Всяка нощ</string>
+    <string name="about_tweak">Относно ощипване</string>
+    <string-array name="about_text_lines">
+        <item>This app was created by John Slavick.</item>
+        <item />
+        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+    </string-array>
+    <string-array name="backup_instructions_lines">
+        <item>Следвайте тези стъпки, за да възстановите Daily Dozen от резервно копие</item>
+        <item />
+        <item>1. Приложението Daily Dozen трябва да се инсталира на вашия телефон с Андроид. Можете да го изтеглите от тук: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Изберете архивния файл, прикачен към този имейл.</item>
+        <item />
+        <item>3. Изберете „Отвори“ с Daily Dozen</item>
+    </string-array>
+    <string-array name="servings_time_scale_choices">
+        <item>Ден</item>
+        <item>Месец</item>
+        <item>Година</item>
+    </string-array>
+    <string-array name="history_to_generate_choices">
+        <item>1 месец</item>
+        <item>3 месеца</item>
+        <item>6 месеца</item>
+        <item>1 година</item>
+        <item>2 години</item>
+        <item>5 години</item>
+    </string-array>
+    <string-array name="food_info_types_beans">
+        <item>Черен боб</item>
+        <item>Папуда</item>
+        <item>Жълт боб</item>
+        <item>Бял боб</item>
+        <item>Нахут</item>
+        <item>Едамаме</item>
+        <item>Английски грах</item>
+        <item>Едър боб</item>
+        <item>Бъбрековиден боб</item>
+        <item>Леща (белуга, френска и червени сортове)</item>
+        <item>Мисо</item>
+        <item>Дребен боб</item>
+        <item>Боб Пинто</item>
+        <item>Дребен червен боб</item>
+        <item>Белен грах (жълт или зелен)</item>
+        <item>Темпе</item>
+    </string-array>
+    <string-array name="food_info_types_berries">
+        <item>Акаи плодове</item>
+        <item>Кисел трън</item>
+        <item>Къпини</item>
+        <item>Боровинки</item>
+        <item>Череши (сладки или кисели)</item>
+        <item>Американски грозде („Конкорд“)</item>
+        <item>Червени боровинки</item>
+        <item>Годжи Бери</item>
+        <item>Кумкуат</item>
+        <item>Черници</item>
+        <item>Малини (черни или червени)</item>
+        <item>Ягоди</item>
+    </string-array>
+    <string-array name="food_info_types_other_fruits">
+        <item>Ябълки</item>
+        <item>Сушени кайсии</item>
+        <item>Авокадо</item>
+        <item>Банани</item>
+        <item>Пъпеш</item>
+        <item>Мандарини</item>
+        <item>Фурми</item>
+        <item>Сушени смокини</item>
+        <item>Грейпфрут</item>
+        <item>Пъпеш („Медена роса“)</item>
+        <item>Киви</item>
+        <item>Лимони</item>
+        <item>Лайм</item>
+        <item>Личии</item>
+        <item>Манго</item>
+        <item>Нектарини</item>
+        <item>Портокали</item>
+        <item>Папая</item>
+        <item>Маракуя</item>
+        <item>Праскови</item>
+        <item>Круши</item>
+        <item>Ананас</item>
+        <item>Сливи (особено черни сливи)</item>
+        <item>Едри сини сливи</item>
+        <item>Нар</item>
+        <item>Сушени сливи</item>
+        <item>Мандарини</item>
+        <item>Диня</item>
+    </string-array>
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Рукола</item>
+        <item>Бок чой</item>
+        <item>Броколи (Романеско)</item>
+        <item>Брюкселско зеле</item>
+        <item>Зеле (зелен, червено, савойско)</item>
+        <item>Карфиол (бяло, зелено, оранжево, лилаво)</item>
+        <item>Зелеви растения</item>
+        <item>Хрян</item>
+        <item>Кейл (черен, зелен и червен)</item>
+        <item>Алабаш (зелено, лилаво)</item>
+        <item>Сарепска горчица</item>
+        <item>Репички</item>
+        <item>Ряпа</item>
+        <item>Кресон</item>
+    </string-array>
+    <string-array name="food_info_types_greens">
+        <item>Рукола</item>
+        <item>Цвекло</item>
+        <item>Зелеви растения</item>
+        <item>Кейл/Къдраво зеле (черно, зелено и червено)</item>
+        <item>Микс от млади салатни зеленчуци</item>
+        <item>Сарепска горчица</item>
+        <item>Киселец</item>
+        <item>Спанак</item>
+        <item>Манголд</item>
+        <item>Ряпа</item>
+    </string-array>
+    <string-array name="food_info_types_other_vegetables">
+        <item>Артишок</item>
+        <item>Аспержи</item>
+        <item>Цвекло</item>
+        <item>Камби</item>
+        <item>Моркови</item>
+        <item>Царевица</item>
+        <item>Чесън</item>
+        <item>Гъби (печурки, кладница и шийтаке)</item>
+        <item>Бамя</item>
+        <item>Лук</item>
+        <item>Лилави картофи</item>
+        <item>Тиква</item>
+        <item>Морски зеленчуци (араме, дулсе и нори)</item>
+        <item>Грах</item>
+        <item>Тиква „Скуош“ (деликата, лято и скуош „спагети“)</item>
+        <item>Сладки картофи</item>
+        <item>Домати</item>
+        <item>Тиквички</item>
+    </string-array>
+    <string-array name="food_info_types_flaxseeds">
+        <item>Кафяво лененото семе</item>
+        <item>Златно лененото семе</item>
+    </string-array>
+    <string-array name="food_info_types_nuts">
+        <item>Бадеми</item>
+        <item>Бразилски орех</item>
+        <item>Кашу</item>
+        <item>Семена от чиа</item>
+        <item>Лешници</item>
+        <item>Конопени семена</item>
+        <item>Макадамия</item>
+        <item>Пекан</item>
+        <item>Шамфъстък</item>
+        <item>Тиквени семена</item>
+        <item>Сусам</item>
+        <item>Слънчогледови семки</item>
+        <item>Орехи</item>
+    </string-array>
+    <string-array name="food_info_types_spices">
+        <item>Бахар</item>
+        <item>Кисел трън</item>
+        <item>Босилек</item>
+        <item>Дафинови листа</item>
+        <item>Кардамон</item>
+        <item>Чили на прах</item>
+        <item>Силантро</item>
+        <item>Канела</item>
+        <item>Карамфил</item>
+        <item>Кориандър</item>
+        <item>Кимион</item>
+        <item>Къри на прах</item>
+        <item>Копър</item>
+        <item>Сминдух</item>
+        <item>Чесън</item>
+        <item>Джинджифил</item>
+        <item>Хрян</item>
+        <item>Лимонена трева</item>
+        <item>Риган</item>
+        <item>Горчица на прах</item>
+        <item>Индийско орехче</item>
+        <item>Риган</item>
+        <item>Пушен червен пипер</item>
+        <item>Магданоз</item>
+        <item>Пипер</item>
+        <item>Мента</item>
+        <item>Розмарин</item>
+        <item>Шафран</item>
+        <item>Градински чай</item>
+        <item>Мащерка</item>
+        <item>Куркума</item>
+        <item>Ванилия</item>
+    </string-array>
+    <string-array name="food_info_types_whole_grains">
+        <item>Ечемик</item>
+        <item>Елда</item>
+        <item>Просо</item>
+        <item>Овесени ядки</item>
+        <item>Пуканки</item>
+        <item>Киноа</item>
+        <item>Ръж</item>
+        <item>Теф</item>
+        <item>Пълнозърнеста паста</item>
+    </string-array>
+    <string-array name="food_info_types_beverages">
+        <item>Черен чай</item>
+        <item>Чаи чай</item>
+        <item>Ванилово-лайков чай</item>
+        <item>Кафе</item>
+        <item>„Ърл Грей“ чай</item>
+        <item>Зелен чай</item>
+        <item>Чай от хибискус</item>
+        <item>Горещ шоколад</item>
+        <item>Жасминов чай</item>
+        <item>Чай от маточина</item>
+        <item>Матча чай</item>
+        <item>Чай „цъфнали бадеми оолонг“</item>
+        <item>Чай от мента</item>
+        <item>Ройбос чай</item>
+        <item>Вода</item>
+        <item>Бял чай</item>
+    </string-array>
+    <string-array name="food_info_types_exercise">
+        <item>Колоездене</item>
+        <item>Гребане</item>
+        <item>Танцуване</item>
+        <item>Народна топка</item>
+        <item>Спускане ски</item>
+        <item>Фехтовка</item>
+        <item>Туризъм</item>
+        <item>Домакинска работа</item>
+        <item>Фигурно пързаляне</item>
+        <item>Каране на ролери</item>
+        <item>Жонглиране</item>
+        <item>Скокове на батут</item>
+        <item>Каране на водно колело</item>
+        <item>Игра с фризби</item>
+        <item>Каране на кънки</item>
+        <item>Баскетбол</item>
+        <item>Изгребване на сняг</item>
+        <item>Каране на скейтборд</item>
+        <item>Плуване с шнорхел</item>
+        <item>Сърфиране</item>
+        <item>Плуване</item>
+        <item>Тенис на двойки</item>
+        <item>Синхронно плуване</item>
+        <item>Бързо ходене (6,4 км/ч)</item>
+        <item>Водна аеробика</item>
+        <item>Каране на водни ски</item>
+        <item>Градинарство</item>
+        <item>Йога</item>
+        <item>Туризъм</item>
+        <item>Баскетбол</item>
+        <item>Планинско колоездене</item>
+        <item>Вдигане на тежести</item>
+        <item>Ски бягане</item>
+        <item>Футбол</item>
+        <item>Хокей</item>
+        <item>Джогинг</item>
+        <item>Подскоци</item>
+        <item>Скачането на въже</item>
+        <item>Игра на топка</item>
+        <item>Лицеви опори</item>
+        <item>Набирания</item>
+        <item>Ракетбол</item>
+        <item>Скално катерене</item>
+        <item>Ръгби</item>
+        <item>Тичане</item>
+        <item>Гмуркане</item>
+        <item>Тенис на корд</item>
+        <item>Футбол</item>
+        <item>Пързаляне с кънки</item>
+        <item>Скуош</item>
+        <item>Аеробика</item>
+        <item>Плуване</item>
+        <item>Планинско тичане</item>
+        <item>Воден джогинг</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ чаша хумус или бобова разядка</item>
+        <item>½ чаша сварен боб, грах, леща, тофу или темпе</item>
+        <item>1 чаша пресен грах или покълнала леща</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 грам хумус или бобова разядка</item>
+        <item>130 грам сварен боб, грах, леща, тофу или темпе</item>
+        <item>150 грам пресен грах или покълнала леща</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ чаша пресни или замразени боровинки</item>
+        <item>¼ чаша изсушени боровинки</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 грам пресни или замразени боровинки</item>
+        <item>40 грам изсушени боровинки</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item>1 средно голям плод</item>
+        <item>1 чаша нарязани плодове</item>
+        <item>¼ чаша сушени плодове</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item>1 средно голям плод</item>
+        <item>120 грам нарязани плодове</item>
+        <item>40 грам сушени плодове</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ чаша нарязани цветнолистни</item>
+        <item>¼ чаша брюкселско зеле или броколи</item>
+        <item>1 супена лъжица хрян</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 грам нарязани цветнолистни</item>
+        <item>12 грам брюкселско зеле или броколи</item>
+        <item>1 супена лъжица хрян</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 чаша сурови зеленолистни</item>
+        <item>½ чаша варени зеленолистни</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 грам сурови зеленолистни</item>
+        <item>90 грам варени зеленолистни</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 чаша сурови листни зеленчуци</item>
+        <item>½ чаша сурови или варени зеленчуци</item>
+        <item>½ чаша зеленчуков сок</item>
+        <item>¼ чаша сушени гъби</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 грам сурови листни зеленчуци</item>
+        <item>50 грам сурови или варени зеленчуци</item>
+        <item>125 мл. зеленчуков сок</item>
+        <item>7 грам сушени гъби</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item>1 супена лъжица ленено семе</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item>1 супена лъжица ленено семе</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ чаша ядки или семена</item>
+        <item>2 супени лъжици ядки или масло от семена</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 грам ядки или семена</item>
+        <item>2 супени лъжици ядки или масло от семена</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item>¼ чаена лъжичка куркума</item>
+        <item>Всякакви други безсолни билки и подправки, които обичате</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item>¼ чаена лъжичка куркума</item>
+        <item>Всякакви други безсолни билки и подправки, които обичате</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ чаша топла зърнена закуска или сварени зърна, паста или царевица</item>
+        <item>1 чаша студена зърнена закуска</item>
+        <item>1 тортила или филия хляб</item>
+        <item>½ поничка или английски мъфин</item>
+        <item>3 чаши пуканки</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 грам топла зърнена закуска или сварени зърна, паста или царевица</item>
+        <item>50 грам студена зърнена закуска</item>
+        <item>1 тортила или филия хляб</item>
+        <item>½ поничка или английски мъфин</item>
+        <item>30 грам пуканки</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>Една чаша (12 унции)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>Една чаша (350 мл.)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item>90 минути умерена интензивност на физическа дейност</item>
+        <item>40 минути енергично интензивност дейност</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item>90 минути умерена интензивност на физическа дейност</item>
+        <item>40 минути енергично интензивност дейност</item>
+    </string-array>
 </resources>

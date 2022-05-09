@@ -161,7 +161,7 @@
     <string name="about_tweak">Sobre o Ajuste</string>
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
-        <item/>
+        <item />
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
@@ -434,166 +434,112 @@
         <item>Andar rapidamente em subida</item>
         <item>Corrida na água</item>
     </string-array>
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s de homus ou patê de feijão</item>
-        <item>%s de feijão, ervilha, lentilha, tofu ou tempê cozidos</item>
-        <item>1%s de ervilha fresca ou lentilha germinada</item>
-    </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ xícara</item>
-        <item>½ xícara</item>
-        <item> xícara</item>
+        <item>¼ xícara de homus ou patê de feijão</item>
+        <item>½ xícara de feijão, ervilha, lentilha, tofu ou tempê cozidos</item>
+        <item>1 xícara de ervilha fresca ou lentilha germinada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g</item>
-        <item>130 g</item>
-        <item>50 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s de frutas silvestres frescas ou congeladas</item>
-        <item>%s de frutas silvestres secas</item>
+        <item>60 g de homus ou patê de feijão</item>
+        <item>130 g de feijão, ervilha, lentilha, tofu ou tempê cozidos</item>
+        <item>150 g de ervilha fresca ou lentilha germinada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ xícara</item>
-        <item>¼ xícara</item>
+        <item>½ xícara de frutas silvestres frescas ou congeladas</item>
+        <item>¼ xícara de frutas silvestres secas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g</item>
-        <item>40 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 fruta de tamanho médio</item>
-        <item>1%s de frutas picadas</item>
-        <item>%s de frutas secas</item>
+        <item>60 g de frutas silvestres frescas ou congeladas</item>
+        <item>40 g de frutas silvestres secas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item> xícara</item>
-        <item>¼ xícara</item>
+        <item>1 fruta de tamanho médio</item>
+        <item>1 xícara de frutas picadas</item>
+        <item>¼ xícara de frutas secas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>20 g</item>
-        <item>40 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s de crucíferos picados</item>
-        <item>%s de brotos de brócolis ou couve-de-bruxelas</item>
-        <item>%s1 colher de sopa de rábano-silvestre</item>
+        <item>1 fruta de tamanho médio</item>
+        <item>120 g de frutas picadas</item>
+        <item>40 g de frutas secas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ xícara</item>
-        <item>¼ xícara</item>
-        <item />
+        <item>½ xícara de crucíferos picados</item>
+        <item>¼ xícara de brotos de brócolis ou couve-de-bruxelas</item>
+        <item>1 colher de sopa de rábano-silvestre</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g</item>
-        <item>12 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s de verduras cruas</item>
-        <item>%s de verduras cozidas</item>
+        <item>30–80 g de crucíferos picados</item>
+        <item>12 g de brotos de brócolis ou couve-de-bruxelas</item>
+        <item>1 colher de sopa de rábano-silvestre</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 xícara</item>
-        <item>½ xícara</item>
+        <item>1 xícara de verduras cruas</item>
+        <item>½ xícara de verduras cozidas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 g</item>
-        <item>90 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s de vegetais folhosos crus</item>
-        <item>%s de vegetais não-folhosos crus ou cozidos</item>
-        <item>%s de suco de vegetais</item>
-        <item>%s de cogumelos secos</item>
+        <item>60 g de verduras cruas</item>
+        <item>90 g de verduras cozidas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 xícara</item>
-        <item>½ xícara</item>
-        <item>½ xícara</item>
-        <item>¼ xícara</item>
+        <item>1 xícara de vegetais folhosos crus</item>
+        <item>½ xícara de vegetais não-folhosos crus ou cozidos</item>
+        <item>½ xícara de suco de vegetais</item>
+        <item>¼ xícara de cogumelos secos</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 g</item>
-        <item>50 g</item>
-        <item>125 ml</item>
-        <item>7 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 colher de sopa (moída/triturada)</item>
+        <item>60 g de vegetais folhosos crus</item>
+        <item>50 g de vegetais não-folhosos crus ou cozidos</item>
+        <item>125 ml de suco de vegetais</item>
+        <item>7 g de cogumelos secos</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item />
+        <item>1 colher de sopa (moída/triturada)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s de castanhas ou sementes</item>
-        <item>%s2 colheres de sopa de manteiga de castanhas ou sementes</item>
+        <item>1 colher de sopa (moída/triturada)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ xícara</item>
-        <item />
+        <item>¼ xícara de castanhas ou sementes</item>
+        <item>2 colheres de sopa de manteiga de castanhas ou sementes</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ colher de chá de cúrcuma/açafrão-da-terra</item>
-        <item>%sQualquer outra erva (sem sal) e especiarias que goste</item>
+        <item>30 g de castanhas ou sementes</item>
+        <item>2 colheres de sopa de manteiga de castanhas ou sementes</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
+        <item>¼ colher de chá de cúrcuma/açafrão-da-terra</item>
+        <item>Qualquer outra erva (sem sal) e especiarias que goste</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s de cereais, grãos cozidos, massas ou grãos de milho</item>
-        <item>%s de cereais matinais</item>
-        <item>%s1 tortilha ou fatia de pão</item>
-        <item>%s½ bagel ou muffin inglês</item>
-        <item>3%s de pipoca</item>
+        <item>¼ colher de chá de cúrcuma/açafrão-da-terra</item>
+        <item>Qualquer outra erva (sem sal) e especiarias que goste</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ xícara</item>
-        <item>1 xícara</item>
-        <item />
-        <item />
-        <item> xícaras</item>
+        <item>½ xícara de cereais, grãos cozidos, massas ou grãos de milho</item>
+        <item>1 xícara de cereais matinais</item>
+        <item>1 tortilha ou fatia de pão</item>
+        <item>½ bagel ou muffin inglês</item>
+        <item>3 xícaras de pipoca</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g</item>
-        <item>50 g</item>
-        <item />
-        <item />
-        <item>0 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>Um copo (%s)</item>
+        <item>100 g de cereais, grãos cozidos, massas ou grãos de milho</item>
+        <item>50 g de cereais matinais</item>
+        <item>1 tortilha ou fatia de pão</item>
+        <item>½ bagel ou muffin inglês</item>
+        <item>30 g de pipoca</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>12 onças</item>
+        <item>Um copo (12 onças)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>350 ml</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 minutos de atividade de intensidade moderada</item>
-        <item>%s40 minutos de atividade de intensidade vigorosa</item>
+        <item>Um copo (350 ml)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
+        <item>90 minutos de atividade de intensidade moderada</item>
+        <item>40 minutos de atividade de intensidade vigorosa</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
+        <item>90 minutos de atividade de intensidade moderada</item>
+        <item>40 minutos de atividade de intensidade vigorosa</item>
     </string-array>
 </resources>

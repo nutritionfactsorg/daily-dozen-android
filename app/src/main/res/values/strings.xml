@@ -343,7 +343,7 @@
     </integer-array>
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
-        <item/>
+        <item />
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
@@ -616,167 +616,113 @@
         <item>Walking briskly uphill</item>
         <item>Water jogging</item>
     </string-array>
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s of hummus or bean dip</item>
-        <item>%s cooked beans, split peas, lentils, tofu, or tempeh</item>
-        <item>1%s of fresh peas or sprouted lentils</item>
-    </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ cup</item>
-        <item>½ cup</item>
-        <item> cup</item>
+        <item>¼ cup of hummus or bean dip</item>
+        <item>½ cup cooked beans, split peas, lentils, tofu, or tempeh</item>
+        <item>1 cup of fresh peas or sprouted lentils</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g</item>
-        <item>130 g</item>
-        <item>50 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s fresh or frozen</item>
-        <item>%s dried</item>
+        <item>60 g of hummus or bean dip</item>
+        <item>130 g cooked beans, split peas, lentils, tofu, or tempeh</item>
+        <item>150 g of fresh peas or sprouted lentils</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ cup</item>
-        <item>¼ cup</item>
+        <item>½ cup fresh or frozen</item>
+        <item>¼ cup dried</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g</item>
-        <item>40 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 medium-sized fruit</item>
-        <item>1%s cut-up fruit</item>
-        <item>%s dried fruit</item>
+        <item>60 g fresh or frozen</item>
+        <item>40 g dried</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item> cup</item>
-        <item>¼ cup</item>
+        <item>1 medium-sized fruit</item>
+        <item>1 cup cut-up fruit</item>
+        <item>¼ cup dried fruit</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>20 g</item>
-        <item>40 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s chopped</item>
-        <item>%s Brussels or broccoli sprouts</item>
-        <item>%s1 tablespoon horseradish</item>
+        <item>1 medium-sized fruit</item>
+        <item>120 g cut-up fruit</item>
+        <item>40 g dried fruit</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ cup</item>
-        <item>¼ cup</item>
-        <item />
+        <item>½ cup chopped</item>
+        <item>¼ cup Brussels or broccoli sprouts</item>
+        <item>1 tablespoon horseradish</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g</item>
-        <item>12 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s raw</item>
-        <item>%s cooked</item>
+        <item>30–80 g chopped</item>
+        <item>12 g Brussels or broccoli sprouts</item>
+        <item>1 tablespoon horseradish</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 cup</item>
-        <item>½ cup</item>
+        <item>1 cup raw</item>
+        <item>½ cup cooked</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 g</item>
-        <item>90 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s raw leafy vegetables</item>
-        <item>%s raw or cooked nonleafy vegetables</item>
-        <item>%s vegetable juice</item>
-        <item>%s dried mushrooms</item>
+        <item>60 g raw</item>
+        <item>90 g cooked</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 cup</item>
-        <item>½ cup</item>
-        <item>½ cup</item>
-        <item>¼ cup</item>
+        <item>1 cup raw leafy vegetables</item>
+        <item>½ cup raw or cooked nonleafy vegetables</item>
+        <item>½ cup vegetable juice</item>
+        <item>¼ cup dried mushrooms</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 g</item>
-        <item>50 g</item>
-        <item>125 ml</item>
-        <item>7 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 tablespoon ground</item>
+        <item>60 g raw leafy vegetables</item>
+        <item>50 g raw or cooked nonleafy vegetables</item>
+        <item>125 ml vegetable juice</item>
+        <item>7 g dried mushrooms</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item />
+        <item>1 tablespoon ground</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s nuts or seeds</item>
-        <item>%s2 tablespoons nut or seed butter</item>
+        <item>1 tablespoon ground</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ cup</item>
-        <item />
+        <item>¼ cup nuts or seeds</item>
+        <item>2 tablespoons nut or seed butter</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ teaspoon of turmeric</item>
-        <item>%sAny other (salt-free) herbs and spices you enjoy</item>
+        <item>30 g nuts or seeds</item>
+        <item>2 tablespoons nut or seed butter</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
+        <item>¼ teaspoon of turmeric</item>
+        <item>Any other (salt-free) herbs and spices you enjoy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s hot cereal or cooked grains, pasta, or corn kernels</item>
-        <item>%s cold cereal</item>
-        <item>%s1 tortilla or slice of bread</item>
-        <item>%s½ a bagel or English muffin</item>
-        <item>3%s popped popcorn</item>
+        <item>¼ teaspoon of turmeric</item>
+        <item>Any other (salt-free) herbs and spices you enjoy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ cup</item>
-        <item>1 cup</item>
-        <item />
-        <item />
-        <item> cups</item>
+        <item>½ cup hot cereal or cooked grains, pasta, or corn kernels</item>
+        <item>1 cup cold cereal</item>
+        <item>1 tortilla or slice of bread</item>
+        <item>½ a bagel or English muffin</item>
+        <item>3 cups popped popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g</item>
-        <item>50 g</item>
-        <item />
-        <item />
-        <item>0 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>One glass (%s)</item>
+        <item>100 g hot cereal or cooked grains, pasta, or corn kernels</item>
+        <item>50 g cold cereal</item>
+        <item>1 tortilla or slice of bread</item>
+        <item>½ a bagel or English muffin</item>
+        <item>30 g popped popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>12 ounces</item>
+        <item>One glass (12 ounces)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>350 ml</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 minutes of moderate-intensity activity</item>
-        <item>%s40 minutes of vigorous-intensity activity</item>
+        <item>One glass (350 ml)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
+        <item>90 minutes of moderate-intensity activity</item>
+        <item>40 minutes of vigorous-intensity activity</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
+        <item>90 minutes of moderate-intensity activity</item>
+        <item>40 minutes of vigorous-intensity activity</item>
     </string-array>
     <!--
     NOTE: These strings are used to created the url to take the user to the overall food videos page.
@@ -786,19 +732,19 @@
     -->
     <string-array name="food_videos_beans" translatable="false">
         <item>black-beans</item>
-        <item/>
-        <item/>
-        <item/>
+        <item />
+        <item />
+        <item />
         <item>chickpeas</item>
         <item>edamame</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>kidney-beans</item>
         <item>lentils</item>
         <item>miso</item>
         <item>navy-beans</item>
         <item>pinto-beans</item>
-        <item/>
+        <item />
         <item>split-peas</item>
         <item>tempeh</item>
     </string-array>
@@ -811,8 +757,8 @@
         <item>grapes</item>
         <item>cranberries</item>
         <item>goji-berries</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>raspberries</item>
         <item>strawberries</item>
     </string-array>
@@ -822,57 +768,57 @@
         <item>avocados</item>
         <item>bananas</item>
         <item>cantaloupe</item>
-        <item/>
+        <item />
         <item>dates</item>
-        <item/>
+        <item />
         <item>grapefruit</item>
-        <item/>
+        <item />
         <item>kiwifruit</item>
         <item>lemons</item>
         <item>limes</item>
-        <item/>
+        <item />
         <item>mango</item>
-        <item/>
+        <item />
         <item>oranges</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>peaches</item>
         <item>pears</item>
-        <item/>
+        <item />
         <item>plums</item>
-        <item/>
+        <item />
         <item>pomegranates</item>
         <item>prunes</item>
-        <item/>
+        <item />
         <item>watermelon</item>
     </string-array>
     <string-array name="food_videos_cruciferous_vegetables" translatable="false">
-        <item/>
+        <item />
         <item>bok-choy</item>
         <item>broccoli</item>
         <item>brussels-sprouts</item>
         <item>cabbage</item>
         <item>cauliflower</item>
         <item>collard-greens</item>
-        <item/>
+        <item />
         <item>kale</item>
-        <item/>
+        <item />
         <item>mustard-greens</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>watercress</item>
     </string-array>
     <string-array name="food_videos_greens" translatable="false">
-        <item/>
+        <item />
         <item>beets</item>
         <item>collard-greens</item>
         <item>kale</item>
-        <item/>
+        <item />
         <item>mustard-greens</item>
-        <item/>
+        <item />
         <item>spinach</item>
         <item>swiss-chard</item>
-        <item/>
+        <item />
     </string-array>
     <string-array name="food_videos_other_vegetables" translatable="false">
         <item>artichokes</item>
@@ -888,7 +834,7 @@
         <item>potatoes</item>
         <item>pumpkin</item>
         <item>sea-vegetables</item>
-        <item/>
+        <item />
         <item>squash</item>
         <item>sweet-potatoes</item>
         <item>tomatoes</item>
@@ -900,7 +846,7 @@
         <item>cashews</item>
         <item>chia-seeds</item>
         <item>hazelnuts</item>
-        <item/>
+        <item />
         <item>macadamia-nuts</item>
         <item>pecans</item>
         <item>pistachios</item>
@@ -913,35 +859,35 @@
         <item>allspice</item>
         <item>barberries</item>
         <item>basil</item>
-        <item/>
-        <item/>
-        <item/>
+        <item />
+        <item />
+        <item />
         <item>cilantro</item>
         <item>cinnamon</item>
         <item>cloves</item>
-        <item/>
+        <item />
         <item>cumin</item>
         <item>curry-powder</item>
-        <item/>
+        <item />
         <item>fenugreek</item>
         <item>garlic</item>
         <item>ginger</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>marjoram</item>
         <item>mustard-powder</item>
         <item>nutmeg</item>
         <item>oregano</item>
-        <item/>
+        <item />
         <item>parsley</item>
         <item>pepper</item>
         <item>peppermint</item>
         <item>rosemary</item>
         <item>saffron</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>turmeric</item>
-        <item/>
+        <item />
     </string-array>
     <string-array name="food_videos_whole_grains" translatable="false">
         <item>barley</item>
@@ -951,7 +897,7 @@
         <item>popcorn</item>
         <item>quinoa</item>
         <item>rye</item>
-        <item/>
+        <item />
         <item>pasta</item>
     </string-array>
     <string-array name="food_videos_beverages" translatable="false">
@@ -962,8 +908,8 @@
         <item>earl-grey-tea</item>
         <item>green-tea</item>
         <item>hibiscus-tea</item>
-        <item/>
-        <item/>
+        <item />
+        <item />
         <item>lemon-balm</item>
         <item>matcha</item>
         <item>oolong-tea</item>

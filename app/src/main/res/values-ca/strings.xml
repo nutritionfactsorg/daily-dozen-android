@@ -161,7 +161,7 @@
     <string name="about_tweak">Sobre els Potenciadors</string>
     <string-array name="about_text_lines">
         <item>This app was created by John Slavick.</item>
-        <item/>
+        <item />
         <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
@@ -434,166 +434,112 @@
         <item>Caminar a pas lleuger en pujada</item>
         <item>Aquajogging</item>
     </string-array>
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s d\'hummus o untable de llegums</item>
-        <item>%s de llegums cuits, mongetes seques, llenties, tofu o tempeh</item>
-        <item>1%s de pèsols frescos o germinats de llenties</item>
-    </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ tassa</item>
-        <item>½ tassa</item>
-        <item> tassa</item>
+        <item>¼ tassa d\'hummus o untable de llegums</item>
+        <item>½ tassa de llegums cuits, mongetes seques, llenties, tofu o tempeh</item>
+        <item>1 tassa de pèsols frescos o germinats de llenties</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g</item>
-        <item>130 g</item>
-        <item>50 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s frescos o congelats</item>
-        <item>%s dessecats</item>
+        <item>60 g d\'hummus o untable de llegums</item>
+        <item>130 g de llegums cuits, mongetes seques, llenties, tofu o tempeh</item>
+        <item>150 g de pèsols frescos o germinats de llenties</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ tassa</item>
-        <item>¼ tassa</item>
+        <item>½ tassa frescos o congelats</item>
+        <item>¼ tassa dessecats</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g</item>
-        <item>40 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 fruita de mida mitjana</item>
-        <item>1%s de fruita tallada</item>
-        <item>%s de fruita dessecada</item>
+        <item>60 g frescos o congelats</item>
+        <item>40 g dessecats</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item> tassa</item>
-        <item>¼ tassa</item>
+        <item>1 fruita de mida mitjana</item>
+        <item>1 tassa de fruita tallada</item>
+        <item>¼ tassa de fruita dessecada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>20 g</item>
-        <item>40 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s tallat</item>
-        <item>%s de cols de Brussel·les o brots de bròquil</item>
-        <item>%s1 cullerada de rave picant</item>
+        <item>1 fruita de mida mitjana</item>
+        <item>120 g de fruita tallada</item>
+        <item>40 g de fruita dessecada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ tassa</item>
-        <item>¼ tassa</item>
-        <item />
+        <item>½ tassa tallat</item>
+        <item>¼ tassa de cols de Brussel·les o brots de bròquil</item>
+        <item>1 cullerada de rave picant</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30-80 g</item>
-        <item>12 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s crua</item>
-        <item>%s cuita</item>
+        <item>30-80 g tallat</item>
+        <item>12 g de cols de Brussel·les o brots de bròquil</item>
+        <item>1 cullerada de rave picant</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 tassa</item>
-        <item>½ tassa</item>
+        <item>1 tassa crua</item>
+        <item>½ tassa cuita</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 g</item>
-        <item>90 g </item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s de verdures de fulla crues</item>
-        <item>%s de verdures sense fulla crues o cuites</item>
-        <item>%s de suc de verdures</item>
-        <item>%s de bolets dessecats</item>
+        <item>60 g crua</item>
+        <item>90 g  cuita</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 tassa</item>
-        <item>½ tassa</item>
-        <item>½ tassa</item>
-        <item>¼ tassa</item>
+        <item>1 tassa de verdures de fulla crues</item>
+        <item>½ tassa de verdures sense fulla crues o cuites</item>
+        <item>½ tassa de suc de verdures</item>
+        <item>¼ tassa de bolets dessecats</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 g</item>
-        <item>50 g</item>
-        <item>125 ml</item>
-        <item>7 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 cullerada (mòlt)</item>
+        <item>60 g de verdures de fulla crues</item>
+        <item>50 g de verdures sense fulla crues o cuites</item>
+        <item>125 ml de suc de verdures</item>
+        <item>7 g de bolets dessecats</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item />
+        <item>1 cullerada (mòlt)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s de fruits secs o llavors</item>
-        <item>%s2 cullerades de crema de fruits secs o llavors</item>
+        <item>1 cullerada (mòlt)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ tassa</item>
-        <item />
+        <item>¼ tassa de fruits secs o llavors</item>
+        <item>2 cullerades de crema de fruits secs o llavors</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ culleradeta de cúrcuma</item>
-        <item>%sQualsevol altra espècie (sense sal)</item>
+        <item>30 g de fruits secs o llavors</item>
+        <item>2 cullerades de crema de fruits secs o llavors</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
+        <item>¼ culleradeta de cúrcuma</item>
+        <item>Qualsevol altra espècie (sense sal)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s de cereals cuits, pasta integral o grans de blat cuits</item>
-        <item>%s de cereals freds</item>
-        <item>%s1 tortilla o llesca de pa</item>
-        <item>%s½ bagel o muffin anglès</item>
-        <item>3%s de crispetes de blat de moro</item>
+        <item>¼ culleradeta de cúrcuma</item>
+        <item>Qualsevol altra espècie (sense sal)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ tassa</item>
-        <item>1 tassa</item>
-        <item />
-        <item />
-        <item> tasses</item>
+        <item>½ tassa de cereals cuits, pasta integral o grans de blat cuits</item>
+        <item>1 tassa de cereals freds</item>
+        <item>1 tortilla o llesca de pa</item>
+        <item>½ bagel o muffin anglès</item>
+        <item>3 tasses de crispetes de blat de moro</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g</item>
-        <item>50 g</item>
-        <item />
-        <item />
-        <item>0 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>Un got (%s)</item>
+        <item>100 g de cereals cuits, pasta integral o grans de blat cuits</item>
+        <item>50 g de cereals freds</item>
+        <item>1 tortilla o llesca de pa</item>
+        <item>½ bagel o muffin anglès</item>
+        <item>30 g de crispetes de blat de moro</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>12 unces</item>
+        <item>Un got (12 unces)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>350 ml</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 minuts d\'activitat física moderada</item>
-        <item>%s40 minuts d\'activitat física intensa</item>
+        <item>Un got (350 ml)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
+        <item>90 minuts d\'activitat física moderada</item>
+        <item>40 minuts d\'activitat física intensa</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
+        <item>90 minuts d\'activitat física moderada</item>
+        <item>40 minuts d\'activitat física intensa</item>
     </string-array>
 </resources>
