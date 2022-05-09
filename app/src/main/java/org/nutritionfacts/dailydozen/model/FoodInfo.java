@@ -13,7 +13,6 @@ import org.nutritionfacts.dailydozen.model.enums.Units;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 public class FoodInfo {
@@ -329,18 +328,12 @@ public class FoodInfo {
     }
 
     private static int getServingSizesResourceId(final Context context,
-                                                 final String idSuffix) {
-        return context.getResources().getIdentifier(
-                "food_info_serving_sizes_" + idSuffix.toLowerCase(),
-                "array",
-                context.getApplicationInfo().packageName);
-    }
-
-    private static int getServingSizesResourceId(final Context context,
                                                  final String foodName,
                                                  @Units.Interface final int unitType) {
-        return getServingSizesResourceId(context,
-                foodName + (unitType == Units.IMPERIAL ? "_imperial" : "_metric"));
+        return context.getResources().getIdentifier(
+                "food_info_serving_sizes_" + (foodName + (unitType == Units.IMPERIAL ? "_imperial" : "_metric")).toLowerCase(),
+                "array",
+                context.getApplicationInfo().packageName);
     }
 
     private static void initServingSizes(Context context) {
@@ -354,7 +347,6 @@ public class FoodInfo {
 
     private static void initServingSizesForFood(final Context context, final String foodIdName) {
         final Resources res = context.getResources();
-        final Locale locale = Locale.getDefault();
 
         // Convert food name to resource id pattern ("Other Vegetables" becomes "other_vegetables")
         final String formattedFoodIdName = foodIdName.toLowerCase().replace(" ", "_");
@@ -362,23 +354,12 @@ public class FoodInfo {
         try {
             // Dynamically load the string-arrays for food.
             // The naming convention below must be followed:
-            //      food_info_serving_sizes_<formattedFoodIdName>
             //      food_info_serving_sizes_<formattedFoodIdName>_imperial
             //      food_info_serving_sizes_<formattedFoodIdName>_metric
-            String[] servingSizeTexts = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName));
-            String[] imperialServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName, Units.IMPERIAL));
-            String[] metricServingSizes = res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName, Units.METRIC));
-
-            final List<String> imperial = new ArrayList<>();
-            final List<String> metric = new ArrayList<>();
-
-            for (int i = 0; i < servingSizeTexts.length; i++) {
-                imperial.add(String.format(locale, servingSizeTexts[i], imperialServingSizes[i]));
-                metric.add(String.format(locale, servingSizeTexts[i], metricServingSizes[i]));
-            }
-
-            servingSizesImperial.put(foodIdName, imperial);
-            servingSizesMetric.put(foodIdName, metric);
+            servingSizesImperial.put(foodIdName,
+                    Arrays.asList(res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName, Units.IMPERIAL))));
+            servingSizesMetric.put(foodIdName,
+                    Arrays.asList(res.getStringArray(getServingSizesResourceId(context, formattedFoodIdName, Units.METRIC))));
         } catch (Resources.NotFoundException e) {
             // Vitamin B12 doesn't need the above functionality and therefore doesn't have the
             // required resource ids for the above code to function correctly
