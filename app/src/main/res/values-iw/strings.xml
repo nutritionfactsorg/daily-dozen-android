@@ -67,7 +67,7 @@
     <string name="dialog_ask_user_to_rate_app_message">אנא תנו לנו משוב בחנות Play.</string>
     <string name="rate_now">תנו משוב</string>
     <string name="not_now">לא עכשיו</string>
-    <string name="format_version">יצירת הסטוריה</string>
+    <string name="format_version">%s</string>
     <string name="format_num_days">%d ימים</string>
     <string name="daily_reminder_title">תזכורת יומית של התריסר היומי</string>
     <string name="daily_reminder_text">עדכנו את המנות שלכם להיום</string>

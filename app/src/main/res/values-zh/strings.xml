@@ -436,14 +436,12 @@
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼杯鷹嘴豆泥或豆子沾醬</item>
-        <item>,
-        </item>
+        <item>,</item>
         <item>½杯煮熟的豆子、豌豆、扁豆、豆腐或天貝</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
         <item>¼杯鷹嘴豆泥或豆子沾醬</item>
-        <item>,
-        </item>
+        <item>,</item>
         <item>½杯煮熟的豆子、豌豆、扁豆、豆腐或天貝</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">

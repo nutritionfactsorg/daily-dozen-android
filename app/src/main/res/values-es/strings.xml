@@ -76,26 +76,26 @@
     <string name="remind_me_at">Recuérdamelo a las</string>
     <string name="videos">Videos</string>
     <string name="units">Sistema</string>
-    <string name="imperial">Imperial</string>
-    <string name="metric">Métrico</string>
+    <string name="imperial">imperial</string>
+    <string name="metric">métrico</string>
     <string name="error_cannot_handle_url">No se puede abrir la URL. Debes instalar un navegador.</string>
     <string name="channel_reminders_name">Recordatorios</string>
-    <string name="twenty_one_tweaks">21 potenciadores</string>
-    <string name="tweaks">Potenciadores</string>
-    <string name="daily_tweaks_history">Historial de potenciadores</string>
+    <string name="twenty_one_tweaks">21 Ajustes</string>
+    <string name="tweaks">Ajustes</string>
+    <string name="daily_tweaks_history">Historial de ajustes</string>
     <string name="weight_history">Historia de peso</string>
     <string name="no_weights_recorded">Todavía no has registrado tu peso</string>
     <string name="task_loading_weights_history_title">Cargando historial de peso</string>
     <string name="morning">Mañana</string>
     <string name="evening">Noche</string>
     <string name="meal_water">Empezar con agua</string>
-    <string name="meal_negcal">Empezar con alimentos de calorías negativas"</string>
+    <string name="meal_negcal">Empezar con alimentos de "calorías negativas"</string>
     <string name="meal_vinegar">Vinagre (2 ctda. cada comida)</string>
     <string name="meal_undistracted">Comidas sin distracciones</string>
     <string name="meal_twentyminutes">La regla de los veinte minutos</string>
     <string name="daily_blackcumin">Comino negro (¼ ctda.)</string>
     <string name="daily_garlic">Ajo en polvo (¼ ctda.)</string>
-    <string name="daily_ginger">Jengibre (1 ctda.) o cayena (½ ctda.)</string>
+    <string name="daily_ginger">Jengibre molido (1 ctda.) o cayena (½ ctda.)</string>
     <string name="daily_nutriyeast">Levadura nutricional (2 ctda.)</string>
     <string name="daily_cumin">Comino (½ ctda. almuerzo y cena)</string>
     <string name="daily_greentea">Té verde (3 tazas)</string>
@@ -140,7 +140,7 @@
     <string name="daily_blackcumin_text">Como se indica en la sección del libro que habla de la supresión del apetito, una revisión sistemática y un metanálisis de ensayos aleatorizados con grupo de control sobre la pérdida de peso concluyó que aproximadamente un cuarto de cucharadita de comino negro en polvo al día parece reducir el índice de masa corporal en un lapso de un par de meses. No olvides que el comino negro es diferente al comino normal, cuya ingesta recomendada es diferente.</string>
     <string name="daily_garlic_text">Unos estudios aleatorizados, doble ciegos y controlados con placebo han encontrado que, con simplemente un cuarto de cucharadita diaria de ajo en polvo, se puede reducir la grasa corporal, a un costo de quizás dos centavos por día.</string>
     <string name="daily_ginger_text">Unos ensayos aleatorizados y con grupo de control han descubierto que el consumo de ¼ a 1½ cucharadita al día de jengibre en polvo disminuye significativamente el peso corporal por solo unos centavos al día. Puede ser tan fácil como echar el jengibre en una taza de agua caliente. Nota: el jengibre podría funcionar mejor por la mañana que por la tarde. El chai es una forma estupenda de combinar los trucos del té verde y el jengibre en una sola bebida. Además, para activar el tejido adiposo pardo, también puedes añadir un jalapeño crudo o media cucharadita de chile en polvo a tu dieta diaria. Para ayudarte con el picante, puedes cortar el jalapeño en rodajas muy finas o picarlo muy bien. El chile en polvo lo podrías echar en las sopas y guisos o en el batido de verduras que hice en uno de mis videos de cocina en NutritionFacts.org.</string>
-    <string name="daily_nutriyeast_text">Dos cucharaditas de levadura de panadería, de cerveza o nutricional contienen aproximadamente la cantidad de glucanos beta 1,3 \/ 1,6 correcta que, en ensayos clínicos aleatorizados, doble ciegos y con grupo de control, ha demostrado facilitar la pérdida de peso.</string>
+    <string name="daily_nutriyeast_text">Dos cucharaditas de levadura de panadería, de cerveza o nutricional contienen aproximadamente la cantidad de glucanos beta 1,3 / 1,6 correcta que, en ensayos clínicos aleatorizados, doble ciegos y con grupo de control, ha demostrado facilitar la pérdida de peso.</string>
     <string name="daily_cumin_text">Las mujeres con sobrepeso aleatorizadas a echarle media cucharadita de comino a sus almuerzos y cenas superaron al grupo de control, ya que perdieron casi 2 kg más y 2.5 cm extra en la cintura. También existe evidencia para apoyar el uso del azafrán, pero una pizca al día costaría un dólar, mientras que una cucharadita de comino cuesta menos de diez centavos.</string>
     <string name="daily_greentea_text">Bebe tres tazas al día entre comidas, esperando al menos una hora después de comer, para no interferir con la absorción de hierro. Durante las comidas, bebe agua, café solo o infusión de hibisco (mezclado 6:1 con hierba luisa), pero nunca excedas tres tazas de líquido por hora (tenlo en cuenta para mi sección sobra empezar con agua). Aprovecha los efectos de la cafeína y bebe el té verde mientras comes algo saludable que querrías que te gustase más, para crear una asociación positiva, pero ten ojo y no consumas mucha cafeína en las 6 horas antes de irte a dormir. Lo mejor es tomar el té sin ningún tipo de edulcorante, pero, si le sueles echar miel o azúcar, prueba el jarabe de yacón.</string>
     <string name="daily_hydrate_text">Puedes marcar esta casilla si tu orina nunca pasa del amarillo pálido.\n\nTen en cuenta que, si consumes alimentos fortificados con riboflavina (como la levadura nutricional), no deberías seguir esta premisa del color y debes centrarte en obtener nueve tazas de líquido sin edulcorar al día para las mujeres (que podrían cubrir el consumo de té verde y agua) o trece tazas al día para hombres.\n\nSi tienes problemas cardiacos o renales, no aumentes la ingesta de líquidos sin antes hablar con tu médico.\n\nNo olvides que, aunque los refrescos light no tengan calorías, no son inocuos, como explico en la sección del libro sobre los azúcares añadidos.</string>
@@ -149,7 +149,7 @@
     <string name="daily_timerestrict_text">Limita tu horario de comidas a un periodo diario de tu elección que no supere las doce horas y que puedas cumplir de manera habitual, es decir, los siete días de la semana. Dados los beneficios para el reloj circadiano de la reducción en la ingesta de alimentos por la noche, deberías dejar de comer antes de las 7 P.M.</string>
     <string name="exercise_timing_text">La recomendación de la Docena Diaria para una mayor longevidad son 90 minutos de actividad física moderada, que también resulta ser la duración óptima para perder peso. Cualquier momento es bueno y, cuanto más, mejor, pero podría ser mejor hacer ejercicio en ayunas, al menos seis horas después de tu última comida. En general, esto se traduce en antes del desayuno, pero, si lo planeas bien, podrías hacer ejercicio al mediodía antes de un almuerzo tardío o, si comes temprano, pues antes de la cena. Esto sería para los no diabéticos. Los diabéticos y prediabéticos deberían empezar a hacer ejercicio treinta minutos después del comienzo de una comida e idealmente durante por lo menos una hora, para alcanzar el pico de azúcar en sangre. Si tuvieras que elegir una sola comida para hacer ejercicio después esta, lo mejor sería la cena, debido a que el ritmo circadiano del control del azúcar en sangre va disminuyendo durante el día. Sin embargo, como lo mejor es que el desayuno sea la comida más grande del día, deberías hacer ejercicio después de desayunar; o, mejor aún, después de cada comida.</string>
     <string name="weigh_twice_text">Se suele pensar que pesarse de manera habitual es un método crucial para el control del peso a largo plazo, pero no existen suficientes pruebas para respaldar esta frecuencia. Mi recomendación se basa en un estudio que encontró que dos veces al día, al despertarte y justo antes de acostarte, parece ser mejor que una vez al día (con una diferencia de entre 1 y 3 kg en doce semanas).</string>
-    <string name="complete_intentions_text">Cada dos meses, crea tres metas nuevas, al estilo de \"si X, entonces Y\", para comportarte de cierta manera en situaciones específicas. Intenta marcar las tres casillas todos los días.</string>
+    <string name="complete_intentions_text">Cada dos meses, crea tres metas nuevas, al estilo de "si X, entonces Y", para comportarte de cierta manera en situaciones específicas. Intenta marcar las tres casillas todos los días.</string>
     <string name="nightly_fast_text">Debido a la influencia de los ritmos circadianos, lo que comes por la noche engorda más que si comieras eso mismo pero más temprano en el día, así que intenta ayunar todas las noches durante al menos doce horas a partir de las 7 P.M. Cuantas menos calorías consumas después de que se ponga el sol, mejor.</string>
     <string name="nightly_sleep_text">Puedes marcar esta casilla si has dormido al menos siete horas y te has ido a la cama a tu hora normal.</string>
     <string name="nightly_trendelenburg_text">Prueba a estar al menos cuatro horas cada noche con el cuerpo inclinado seis grados. Para conseguirlo, debes elevar los postes del pie de la cama unos 20 centímetros. Ten mucho cuidado al levantarte, ya que esta postura causa intolerancia ortostática para casi todo el mundo, aunque seas joven y estés saludable, así que, si te levantas demasiado rápido, puedes marearte, desmayarte o incluso caerte y hacerte daño. Por lo tanto, levántate lentamente. Beber dos tazas de agua fría treinta minutos antes de levantarte también podría ayudar a prevenir este efecto secundario potencialmente peligroso.\n\nIMPORTANTE: no intentes esto en casa si tienes problemas cardiacos o pulmonares, reflujo ácido, problemas cerebrales (como traumatismo craneal) u oculares (incluso un historial familiar de glaucoma lo descalifica). Si tienes cualquier duda, no lo intentes sin preguntarle a tu médico antes.*</string>
@@ -160,18 +160,18 @@
     <string name="tweak_group_nightly">Cada noche</string>
     <string name="about_tweak">Sobre este potenciador</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Esta app fue creada por John Slavick.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Se utilizaron estas librerías de código abierto: ActiveAndroid, android-iconify, EventBus, LikeAnimation y MPAndroidChart.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
-        <item>Sigue estos pasos para restaurar la copia de seguridad de la aplicación Dr. Greger\\'s Daily Dozen.</item>
+        <item>Sigue estos pasos para restaurar la copia de seguridad de la aplicación Dr. Greger\'s Daily Dozen.</item>
         <item />
-        <item>1. Debes tener la aplicación Dr. Greger\\'s Daily Dozen instalada en tu teléfono Android. Puedes acceder a ella aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. Debes tener la aplicación Dr. Greger\'s Daily Dozen instalada en tu teléfono Android. Puedes acceder a ella aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
         <item>2. Haz clic en la copia de seguridad anexada a este correo electronico.</item>
         <item />
-        <item>3. Selecciona la opción de abrir con Dr. Greger\\'s Daily Dozen.</item>
+        <item>3. Selecciona la opción de abrir con Dr. Greger\'s Daily Dozen.</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
         <item>Día</item>
@@ -209,7 +209,7 @@
         <item>Agracejos</item>
         <item>Moras</item>
         <item>Arándanos azules</item>
-        <item>Cerezas</item>
+        <item>Cerezas (dulces o ácidas)</item>
         <item>Uvas</item>
         <item>Arándanos rojos</item>
         <item>Bayas de Goji</item>
@@ -220,7 +220,7 @@
     </string-array>
     <string-array name="food_info_types_other_fruits">
         <item>Manzanas</item>
-        <item>Albaricoques secos</item>
+        <item>Albaricoques</item>
         <item>Aguacates</item>
         <item>Bananas</item>
         <item>Melón cantalupo</item>
@@ -257,7 +257,7 @@
         <item>Coliflor</item>
         <item>Berza</item>
         <item>Rábano picante</item>
-        <item>Berza</item>
+        <item>Col rizada (negra, verde y roja)</item>
         <item>Colinabo (verde, morado)</item>
         <item>Hojas de mostaza</item>
         <item>Rábanos</item>
@@ -268,7 +268,7 @@
         <item>Rúcula</item>
         <item>Hojas de remolacha</item>
         <item>Col</item>
-        <item>Berza</item>
+        <item>Col rizada (negra, verde y roja)</item>
         <item>Mesclun (hojas tiernas)</item>
         <item>Hojas de mostaza</item>
         <item>Alazán</item>
@@ -403,7 +403,7 @@
         <item>Tennis (dobles)</item>
         <item>Flotar en el agua</item>
         <item>Caminata rápida (6.5 kmh)</item>
-        <item>Aerobicos acuáticos</item>
+        <item>Aeróbicos acuáticos</item>
         <item>Esquí acuático</item>
         <item>Jardinería</item>
         <item>Yoga</item>
