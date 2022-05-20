@@ -89,7 +89,7 @@
     <string name="morning">Mattina</string>
     <string name="evening">Sera</string>
     <string name="meal_water">Precarico con acqua</string>
-    <string name="meal_negcal">Precaricare con alimenti "calorie negative"</string>
+    <string name="meal_negcal">Precaricare con alimenti \"calorie negative\"</string>
     <string name="meal_vinegar">Incorporare l\'aceto (2 cucchiaini per ogni pasto)</string>
     <string name="meal_undistracted">Goditi i pasti senza distrazioni</string>
     <string name="meal_twentyminutes">Segui la regola dei venti minuti</string>
@@ -112,7 +112,7 @@
     <string name="debug_generate_weight_data">Genera dati di peso</string>
     <string name="average_weight_on_day">Peso medio al giorno</string>
     <string name="meal_water_short">Precarico con acqua</string>
-    <string name="meal_negcal_short">Precaricare con alimenti "calorie negative"</string>
+    <string name="meal_negcal_short">Precaricare con alimenti \"calorie negative\"</string>
     <string name="meal_vinegar_short">Incorporare l\'aceto (2 cucchiaini per ogni pasto)</string>
     <string name="meal_undistracted_short">Goditi i pasti senza distrazioni</string>
     <string name="meal_twentyminutes_short">Segui la regola dei venti minuti</string>
@@ -149,7 +149,7 @@
     <string name="daily_timerestrict_text">Limita a mangiare in un intervallo di tempo quotidiano a tua scelta con meno di dodici ore di durata a cui puoi restare costantemente, sette giorni alla settimana. Dati i benefici circadiani della riduzione dell\'assunzione di cibo serale, la finestra dovrebbe terminare prima delle 19:00.</string>
     <string name="exercise_timing_text">La raccomandazione del Daily Dozen sulla durata ottimale dell\'allenamento per la longevità è di novanta minuti di attività moderatamente intensa al giorno, che è anche la durata ottimale dell\'esercizio per la perdita di peso. Ogni volta che va bene, e tanto più, meglio è, ma ci può essere un vantaggio nell\'esercizio a digiuno, almeno sei ore dopo l\'ultimo pasto. In genere, ciò significherebbe prima di colazione, ma se lo hai programmato nel modo giusto, potresti allenarti a mezzogiorno prima di un pranzo in ritardo o, se il pranzo viene consumato abbastanza presto, prima di cena. Questo è il momento giusto per i non diabetici. I diabetici e i prediabetici dovrebbero invece iniziare ad allenarsi trenta minuti dopo l\'inizio di un pasto e idealmente andare per almeno un\'ora a cavalcare completamente il picco di zucchero nel sangue. Se dovessi scegliere un solo pasto dopo l\'allenamento, sarebbe la cena, a causa del ritmo circadiano del controllo della glicemia che diminuisce durante il giorno. Idealmente, però, la colazione sarebbe il pasto più grande della giornata, e dopo ti alleneresti o, meglio ancora, dopo ogni pasto.</string>
     <string name="weigh_twice_text">L\'autopesatura regolare è considerata cruciale per il controllo del peso a lungo termine, ma non ci sono prove sufficienti per supportare una specifica frequenza di pesatura. La mia raccomandazione si basa su uno studio che ha scoperto che due volte al giorno, al risveglio e subito prima di coricarsi, apparivano superiori a una volta al giorno (circa sei contro due chili di perdita di peso in dodici settimane).</string>
-    <string name="complete_intentions_text">Ogni due mesi, crea tre nuove intenzioni di implementazione - "se X, quindi Y" prevede di eseguire un comportamento particolare in un contesto specifico - e verifica ognuna di esse mentre le completi ogni giorno.</string>
+    <string name="complete_intentions_text">Ogni due mesi, crea tre nuove intenzioni di implementazione - \"se X, quindi Y\" prevede di eseguire un comportamento particolare in un contesto specifico - e verifica ognuna di esse mentre le completi ogni giorno.</string>
     <string name="nightly_fast_text">A causa dei nostri ritmi circadiani, il cibo consumato durante la notte è più ingrassante rispetto allo stesso cibo consumato all\'inizio della giornata, così veloce ogni notte per almeno dodici ore a partire dalle 19:00. Meno calorie dopo il tramonto, meglio è.</string>
     <string name="nightly_sleep_text">Seleziona questa casella se dormi almeno sette ore al momento di coricarti.</string>
     <string name="nightly_trendelenburg_text">Prova a passare almeno quattro ore a notte sdraiato con il corpo inclinato a testa in giù di sei gradi sollevando i pali ai piedi del letto di otto pollici (o di nove pollici se hai un re della California). Fai molta attenzione quando ti alzi dal letto, poiché ciò causa intolleranza ortostatica nella maggior parte delle persone, anche se sei giovane e in buona salute, il che significa che se ti alzi troppo in fretta, puoi sentire vertigini, svenimento o stordimento e potresti cadere e farti del male. Quindi alzati lentamente. Bere due tazze di acqua fredda trenta minuti prima di alzarsi può anche aiutare a prevenire questo effetto collaterale potenzialmente pericoloso.\n\n* IMPORTANTE: non provarlo affatto a casa se hai problemi cardiaci o polmonari, reflusso acido o problemi al cervello (come il trauma cranico) o gli occhi (anche una storia familiare di glaucoma ti squalifica). Inoltre, non provare questo fino a quando non chiedi al tuo medico se pensano che sia sicuro per te dormire nella lieve Trendelenburg. *</string>
