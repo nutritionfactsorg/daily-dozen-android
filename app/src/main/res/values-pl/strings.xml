@@ -160,9 +160,11 @@
     <string name="tweak_group_nightly">Każdej nocy</string>
     <string name="about_tweak">O Adaptacji</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Aplikacja została stworzona przez Johna Slavicka.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Używane są następujące biblioteki open source: ActiveAndroid, android-iconify, EventBus, LikeAnimation i MPAndroidChart.</item>
+        <item />
+        <item>Specjalne podziękowania za wolontariacki wysiłek twórców poprzedniej aplikacji: Chana Kruse, Allana Portera i Sangeeta Kumara.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Wykonaj następujące kroki, aby przywrócić swoją kopię zapasową w aplikacji Codzienny Tuzin.</item>

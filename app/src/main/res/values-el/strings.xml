@@ -160,9 +160,11 @@
     <string name="tweak_group_nightly">Κάθε βράδυ</string>
     <string name="about_tweak">Σχετικά με το Tweak</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Η εφαρμογή δημιουργήθηκε από τον John Slavick.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Χρησιμοποιούνται οι ακόλουθες βιβλιοθήκες ανοικτού κώδικα: ActiveAndroid, android-iconify, EventBus, LikeAnimation και MPAndroidChart.</item>
+        <item />
+        <item>Ιδιαίτερες ευχαριστίες προς τις εθελοντικές προσπάθειες των δημιουργών της προηγούμενης εφαρμογής: Chan Kruse, Allan Portera και Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Ακολουθήστε τα παρακάτω βήματα για να επαναφέρετε αυτό το αντίγραφο ασφαλείας στην εφαρμογή Daily Dozen</item>

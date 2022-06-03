@@ -160,9 +160,11 @@
     <string name="tweak_group_nightly">Cada Nit</string>
     <string name="about_tweak">Sobre els Potenciadors</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Aquesta aplicació ha estat creada per John Slavick.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>S\'han utilitzat les següents llibreries de codi obert: ActiveAndroid, android-iconify, EventBus, LikeAnimation i MPAndroidChart.</item>
+        <item />
+        <item>Agraïm especialment l\'esforç voluntari dels creadors de l\'anterior aplicació: Chan Kruse, Allan Portera i Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Segueix aquests passos per recuperar la còpia de seguretat a l\'app de la Dotzena Diària</item>

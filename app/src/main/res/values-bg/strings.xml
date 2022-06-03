@@ -160,9 +160,11 @@
     <string name="tweak_group_nightly">Всяка нощ</string>
     <string name="about_tweak">Относно ощипване</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Това приложение е създадено от John Slavick.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Използват се следните библиотеки с отворен код: ActiveAndroid, Android-iconify, EventBus, LikeAnimation, и MPAndroidChart.</item>
+        <item />
+        <item>Специални благодарности за усилията положени от създателите на първата версия на приложението: Chan Kruse, Allan Portera, и Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Следвайте тези стъпки, за да възстановите Daily Dozen от резервно копие</item>

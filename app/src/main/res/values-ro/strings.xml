@@ -160,9 +160,11 @@
     <string name="tweak_group_nightly">In fiecare noapte</string>
     <string name="about_tweak">Despre Tweak</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Această aplicație a fost creată de John Slavick.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Următoarele biblioteci cu sursă deschisă sunt utilizate în crearea aplicației: ActiveAndroid, android-iconify, EventBus, LikeAnimation, și MPAndroidChart.</item>
+        <item />
+        <item>Mulțumiri speciale sunt aduse eforturilor de voluntariat ale creatorilor aplicației anterioare: Chan Kruse, Allan Portera, și Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Urmați acești pași pentru a restaura copia de siguranță a datelor în aplicația Daily Dozen</item>

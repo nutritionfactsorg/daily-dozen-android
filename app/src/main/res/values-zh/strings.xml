@@ -95,9 +95,9 @@
     <string name="meal_twentyminutes">遵循二十分鐘規則</string>
     <string name="daily_blackcumin">黑小茴香（¼茶匙）</string>
     <string name="daily_garlic">大蒜粉（¼茶匙）</string>
-    <string name="daily_ginger">生薑粉（1茶匙）或辣椒粉（1/2茶匙）</string>
+    <string name="daily_ginger">生薑粉（1茶匙）或辣椒粉（½茶匙）</string>
     <string name="daily_nutriyeast">營養酵母（2茶匙）</string>
-    <string name="daily_cumin">小茴香（午餐和晚餐約1/2茶匙）</string>
+    <string name="daily_cumin">小茴香（午餐和晚餐約½茶匙）</string>
     <string name="daily_greentea">綠茶（3杯）</string>
     <string name="daily_hydrate">保持水分</string>
     <string name="daily_deflourdiet">減少麪粉食品</string>
@@ -118,9 +118,9 @@
     <string name="meal_twentyminutes_short">20分鐘規則</string>
     <string name="daily_blackcumin_short">黑小茴香（Nigella sativa）（¼茶匙）</string>
     <string name="daily_garlic_short">大蒜粉（¼茶匙）</string>
-    <string name="daily_ginger_short">生薑粉（1茶匙）或辣椒粉（1/2茶匙）</string>
+    <string name="daily_ginger_short">生薑粉（1茶匙）或辣椒粉（½茶匙）</string>
     <string name="daily_nutriyeast_short">營養酵母（2茶匙）</string>
-    <string name="daily_cumin_short">孜然（Cumum cyminum）（午餐和晚餐含1/2茶匙）</string>
+    <string name="daily_cumin_short">孜然（Cumum cyminum）（午餐和晚餐含½茶匙）</string>
     <string name="daily_greentea_short">綠茶（3杯）</string>
     <string name="daily_hydrate_short">保持水分</string>
     <string name="daily_deflourdiet_short">減少麪粉食品</string>
@@ -139,7 +139,7 @@
     <string name="meal_twentyminutes_text">不管是通過增加粘度或咀嚼次數，還是通過減小咬合大小和進食速度，數十項研究表明，無論我們如何增加食物在口腔中的停留時間，都可能導致熱量攝入降低。因此，將用餐時間至少延長至二十分鐘，以使您的自然飽腹感信號充分發揮作用。怎麼樣？通過選擇吃時間更長的食物，並以延長食物在嘴裏停留的時間來食用它們。用較小的，經過精心咀嚼的食物來考慮體積更大，更硬，更耐嚼的食物。</string>
     <string name="daily_blackcumin_text">如“抑制食慾”部分所述，對隨機對照減肥試驗的系統評價和薈萃分析發現，每天約四分之一茶匙的黑孜然粉似乎會在幾個月內降低體重指數。請注意，黑孜然與常規孜然不同，後者的劑量有所不同。</string>
     <string name="daily_garlic_text">隨機，雙盲，安慰劑對照的研究發現，每天少到一茶匙的大蒜粉就可以減少體內脂肪，每天的費用可能只有兩美分。</string>
-    <string name="daily_ginger_text">隨機對照試驗發現，每天姜粉研磨量爲1/4茶匙至1.5茶匙，每天僅需幾便士就能顯着降低體重。就像將調味香料攪拌到一杯熱水中一樣容易。注意：生薑早上可能比晚上更好。柴茶是一種將綠茶和生薑花粉混合成一種飲料的美味方法。另外，對於BAT激活，您可以在日常飲食中添加一個生的墨西哥胡椒胡椒或半茶匙的紅辣椒粉（或大概是壓碎的紅辣椒片）。爲了幫助消除熱量，您可以將墨西哥胡椒切成薄片或切成薄片，以減少其刺傷，或將紅辣椒混入湯或全食蔬菜冰沙中，這是我在NutritionFacts.org上的一個烹飪視頻中精選的。</string>
+    <string name="daily_ginger_text">隨機對照試驗發現，每天姜粉研磨量爲¼茶匙至1.5茶匙，每天僅需幾便士就能顯着降低體重。就像將調味香料攪拌到一杯熱水中一樣容易。注意：生薑早上可能比晚上更好。柴茶是一種將綠茶和生薑花粉混合成一種飲料的美味方法。另外，對於BAT激活，您可以在日常飲食中添加一個生的墨西哥胡椒胡椒或半茶匙的紅辣椒粉（或大概是壓碎的紅辣椒片）。爲了幫助消除熱量，您可以將墨西哥胡椒切成薄片或切成薄片，以減少其刺傷，或將紅辣椒混入湯或全食蔬菜冰沙中，這是我在NutritionFacts.org上的一個烹飪視頻中精選的。</string>
     <string name="daily_nutriyeast_text">麪包，啤酒或營養酵母中的兩茶匙約含有在隨機，雙盲，安慰劑對照的臨牀試驗中發現的，可促進體重減輕的β1,3 / 1,6葡聚糖。</string>
     <string name="daily_cumin_text">超重的婦女在午餐和晚餐時隨機添加半茶匙的孜然，比對照組多了四磅，腰部也增加了一英寸。也有證據支持使用香料番紅花，但是每天捏一小撮要花一美元，而一茶匙孜然的價格不到十美分。</string>
     <string name="daily_greentea_text">兩餐之間每天喝三杯（餐後至少等待一個小時，以免干擾鐵的吸收）。用餐時，喝水，黑咖啡或芙蓉花茶與檸檬馬鞭草以6：1的比例混合，但每小時不要超過三杯水（根據我的預裝水建議很重要）。通過喝綠茶以及您希望自己更喜歡的健康食品來充分利用咖啡因的增強作用，但在就寢時間的六個小時內不要攝入大量咖啡因。不含甜味劑的茶是最好的，但是如果您通常用蜂蜜或糖來甜茶，請嘗試使用Yacon糖漿。</string>
@@ -160,9 +160,11 @@
     <string name="tweak_group_nightly">每天晚上</string>
     <string name="about_tweak">關於調整</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>這個應用程式是由John Slavick所製作的。</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>使用了以下免費程式庫: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item />
+        <item>特別感謝製作前一代應用程式志願者所做的貢獻: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>按照以下步驟在《每日十二要素》應用程式中還原此備份： </item>
