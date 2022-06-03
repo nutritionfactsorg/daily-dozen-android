@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
     <string name="app_name">Daily Dozen</string>
-    <string name="beans">Fagioli</string>
+    <string name="beans">Legumi</string>
     <string name="berries">Frutti Di Bosco</string>
     <string name="other_fruits">Altri Frutti</string>
-    <string name="cruciferous_vegetables">Verdure Crocifere</string>
-    <string name="greens">Verdure</string>
-    <string name="other_vegetables">Altri Ortaggi e Legumi</string>
+    <string name="cruciferous_vegetables">Verdure Crucifere</string>
+    <string name="greens">Verdure a foglia</string>
+    <string name="other_vegetables">Ortaggi e altre verdure</string>
     <string name="flaxseeds">Semi Di Lino</string>
-    <string name="nuts">Noccioline</string>
+    <string name="nuts">Noci e semi</string>
     <string name="spices">Erbe e Spezie</string>
     <string name="whole_grains">Cereali Integrali</string>
     <string name="beverages">Bevande</string>
@@ -45,7 +45,7 @@
     <string name="task_backup_title">Backup</string>
     <string name="task_restore_title">Ripristino</string>
     <string name="task_calculating_streaks_title">Strisce di calcolo</string>
-    <string name="back_to_today">Torna a Oggi</string>
+    <string name="back_to_today">Indietro a oggi</string>
     <string name="debug">Debug</string>
     <string name="debug_clear_data">Cancellare tutti i dati</string>
     <string name="debug_clear_data_message">Verranno eliminate tutti le dosi inserite. Vuoi continuare?</string>
@@ -164,7 +164,7 @@
         <item />
         <item>Le seguenti librerie open source sono utilizzate: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
         <item />
-        <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell\\'app precedente: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
+        <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell\'app precedente: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell\'app precedente</item>
@@ -186,43 +186,43 @@
         <item>6 mesi</item>
         <item>1 anno</item>
         <item>2 anni</item>
-        <item>5 anno</item>
+        <item>5 anni</item>
     </string-array>
     <string-array name="food_info_types_beans">
         <item>Fagioli neri</item>
-        <item>Fagioli dall’occhio nero</item>
-        <item>Fagioli</item>
+        <item>Fagioli dall’occhio</item>
+        <item>Fagioli di Spagna</item>
         <item>Fagioli Cannellini</item>
         <item>Ceci</item>
         <item>Fagioli di soia (edamame)</item>
-        <item>Piselli inglesi</item>
-        <item>Fagioli grandi del nord</item>
+        <item>Piselli</item>
+        <item>Fagioli bianchi</item>
         <item>Fagioli rossi</item>
         <item>Lenticchie (beluga, francese e varietà rossa)</item>
         <item>Miso</item>
         <item>Fagioli tondini</item>
         <item>Fagiolo pinto</item>
-        <item>Piccoli fagioli rossi</item>
-        <item>Piselli Secchi (gialli o verdi)</item>
+        <item>Fagiolo borlotti</item>
+        <item>Piselli spezzati (gialli o verdi)</item>
         <item>Tempè</item>
     </string-array>
     <string-array name="food_info_types_berries">
         <item>Bacche d\'Acai</item>
-        <item>Berberis</item>
+        <item>Bacca di Berberis</item>
         <item>More</item>
         <item>Mirtilli</item>
         <item>Ciliegie (dolci o aspre)</item>
         <item>Uva Concordia</item>
-        <item>Mirtilli</item>
+        <item>Mirtilli rossi americani</item>
         <item>Bacche di Goji</item>
         <item>Kumquat</item>
-        <item>Gelsi</item>
-        <item>Lamponi (nero o rosso)</item>
+        <item>More di Gelso</item>
+        <item>Lamponi (neri o rossi)</item>
         <item>Fragole</item>
     </string-array>
     <string-array name="food_info_types_other_fruits">
         <item>Mele</item>
-        <item>Albicocche secche</item>
+        <item>Albicocche</item>
         <item>Avocado</item>
         <item>Banane</item>
         <item>Cantalupo</item>
@@ -252,19 +252,19 @@
     </string-array>
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Arugula</item>
-        <item>Bok choy</item>
+        <item>Cavolo cinese (Pak choi, bok choi)</item>
         <item>Broccoli (incl. Romanesco)</item>
-        <item>Brussels sprouts</item>
-        <item>Cabbage (green, red and savoy)</item>
-        <item>Cauliflower (white, green, orange and purple)</item>
+        <item>Cavoletti di Brussel</item>
+        <item>Cavoli (verde, rosso, bianco, cappuccio, etc)</item>
+        <item>Cavolfiori</item>
         <item>Collard greens</item>
-        <item>Horseradish</item>
+        <item>Rafano</item>
         <item>Kale (black, green, and red)</item>
-        <item>Kohlrabi (green and purple)</item>
-        <item>Mustard greens</item>
-        <item>Radishes</item>
-        <item>Turnip greens</item>
-        <item>Watercress</item>
+        <item>Cavolo rapa (verde, viola)</item>
+        <item>Foglie di senape</item>
+        <item>Ravanelli</item>
+        <item>Cime di rapa</item>
+        <item>Crescione</item>
     </string-array>
     <string-array name="food_info_types_greens">
         <item>Rucola</item>
@@ -272,7 +272,7 @@
         <item>Cavolo Nero</item>
         <item>Cavolo Kale (nero, verde e rosso)</item>
         <item>Mix Mesclun (Assortimento di insalta giovane)</item>
-        <item>Senape verde</item>
+        <item>Foglie di senape</item>
         <item>Acetosa</item>
         <item>Spinaci</item>
         <item>Bietola</item>
@@ -280,7 +280,7 @@
     </string-array>
     <string-array name="food_info_types_other_vegetables">
         <item>Carciofi</item>
-        <item>Asparago</item>
+        <item>Asparagi</item>
         <item>Barbabietole</item>
         <item>Peperoni</item>
         <item>Carote</item>
@@ -292,14 +292,14 @@
         <item>Patate Viola</item>
         <item>Zucca</item>
         <item>Alghe Marine (Arame, Dulse e Nori)</item>
-        <item>Piselli Snap</item>
-        <item>Squash (varietà delicata, summer e spaghetti)</item>
+        <item>Piselli (Mangetout)</item>
+        <item>Zucca (varietà delicata, summer e spaghetti)</item>
         <item>Patate dolci</item>
         <item>Pomodori</item>
         <item>Zucchine</item>
     </string-array>
     <string-array name="food_info_types_flaxseeds">
-        <item>Semi di lino marroni</item>
+        <item>Semi di lino scuri</item>
         <item>Semi di lino dorati</item>
     </string-array>
     <string-array name="food_info_types_nuts">
@@ -318,10 +318,10 @@
         <item>Noci</item>
     </string-array>
     <string-array name="food_info_types_spices">
-        <item>Pimento</item>
+        <item>Pimenta dioica</item>
         <item>Berberis</item>
         <item>Basilico</item>
-        <item>Foglie di Alloro</item>
+        <item>Alloro</item>
         <item>Cardamomo</item>
         <item>Peperoncino in polvere</item>
         <item>Coriandolo</item>
@@ -365,14 +365,14 @@
     <string-array name="food_info_types_beverages">
         <item>Tè Nero</item>
         <item>Tè Chai</item>
-        <item>Camomilla Vanilla</item>
+        <item>Infuso Camomilla Vaniglia</item>
         <item>Caffè</item>
         <item>Tè Earl Grey</item>
         <item>Tè Verde</item>
         <item>Carcadè</item>
         <item>Cioccolata Calda</item>
         <item>Tè al Gelsomino</item>
-        <item>Tè Melissa</item>
+        <item>Infuso di Melissa</item>
         <item>Tè Matcha</item>
         <item>Tè Oolong Mandorlo in Fiore</item>
         <item>Tè alla menta piperita</item>
@@ -392,10 +392,10 @@
         <item>Pattinaggio sul ghiaccio</item>
         <item>Pattinaggio in linea</item>
         <item>Giocoleria</item>
-        <item>Saltando dal trampolino</item>
+        <item>Saltare su un trampolino</item>
         <item>Canottaggio Paddle</item>
         <item>Giocare a Frisbee</item>
-        <item>Pattinaggio a Rotelle</item>
+        <item>Pattinaggio</item>
         <item>Basket</item>
         <item>Spalare neve leggera</item>
         <item>Skateboarding</item>
@@ -437,13 +437,13 @@
         <item>Acqua-Jogging</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ tazza di hummus o salsa di soia,</item>
-        <item>½ tazza di fagioli cotti, piselli, lenticchie, tofu o tempé</item>
+        <item>¼ tazza di hummus o altra crema spalmabile di fagioli</item>
+        <item>½ tazza di fagioli cotti, piselli spezzati, lenticchie, tofu o tempé</item>
         <item>1 tazza di piselli freschi o germogli di lenticchia</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g di hummus o salsa di soia,</item>
-        <item>130 g di fagioli cotti, piselli, lenticchie, tofu o tempé</item>
+        <item>60 g di hummus o altra crema spalmabile di fagioli</item>
+        <item>130 g di fagioli cotti, piselli spezzati, lenticchie, tofu o tempé</item>
         <item>150 g di piselli freschi o germogli di lenticchia</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
@@ -509,24 +509,24 @@
         <item>2 pasta o burro di semi</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item> cucchiaino di curcuma</item>
-        <item>Eventuali altre erbe (senza sale) e spezie che ti piacciono</item>
+        <item>¼ cucchiaino di curcuma</item>
+        <item>Eventuali altre erbe (senza sale) e spezie a scelta</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item> cucchiaino di curcuma</item>
-        <item>Eventuali altre erbe (senza sale) e spezie che ti piacciono</item>
+        <item>¼ cucchiaino di curcuma</item>
+        <item>Eventuali altre erbe (senza sale) e spezie a scelta</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ tazza cereali caldi o cotti, pasta di nocciole o mais</item>
         <item>1 tazza cereali freddi</item>
-        <item>1 tortilla o fetta di pane</item>
+        <item>1 piadina, 1 tortilla o 1 fetta di pane integrale</item>
         <item>½ bagel o focaccina inglese</item>
         <item>3 tazze popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g cereali caldi o cotti, pasta di nocciole o mais</item>
         <item>50 g cereali freddi</item>
-        <item>1 tortilla o fetta di pane</item>
+        <item>1 piadina, 1 tortilla o 1 fetta di pane integrale</item>
         <item>½ bagel o focaccina inglese</item>
         <item>30 g popcorn</item>
     </string-array>

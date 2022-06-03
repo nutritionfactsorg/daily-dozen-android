@@ -164,7 +164,7 @@
         <item />
         <item>Les bibliothèques open source suivantes sont utilisées: ActiveAndroid, android-iconify, EventBus, LikeAnimation et MPAndroidChart.</item>
         <item />
-        <item>Un grand merci aux efforts bénévoles des créateurs de l\\'application précédente: Chan Kruse, Allan Portera et Sangeeta Kumar.</item>
+        <item>Un grand merci aux efforts bénévoles des créateurs de l\'application précédente: Chan Kruse, Allan Portera et Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Suivez ces étapes pour restaurer cette sauvegarde dans l\'application Daily Dozen</item>
