@@ -15,6 +15,7 @@ import org.nutritionfacts.dailydozen.RDA;
 import java.util.List;
 
 import hugo.weaving.DebugLog;
+import timber.log.Timber;
 
 @Table(name = "foods")
 public class Food extends Model implements RDA {
@@ -111,7 +112,11 @@ public class Food extends Model implements RDA {
         }
 
         if (needToSave) {
-            food.save();
+            try {
+                food.save();
+            } catch (java.lang.SecurityException e) {
+                Timber.e(e, "Caught SecurityException in createFoodIfDoesNotExist");
+            }
         }
     }
 
