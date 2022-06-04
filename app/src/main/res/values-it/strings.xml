@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
     <string name="app_name">Daily Dozen</string>
-    <string name="beans">Fagioli</string>
+    <string name="beans">Legumi</string>
     <string name="berries">Frutti Di Bosco</string>
     <string name="other_fruits">Altri Frutti</string>
-    <string name="cruciferous_vegetables">Verdure Crocifere</string>
-    <string name="greens">Verdure</string>
-    <string name="other_vegetables">Altri Ortaggi e Legumi</string>
+    <string name="cruciferous_vegetables">Verdure Crucifere</string>
+    <string name="greens">Verdure a foglia</string>
+    <string name="other_vegetables">Ortaggi e altre verdure</string>
     <string name="flaxseeds">Semi Di Lino</string>
-    <string name="nuts">Noccioline</string>
+    <string name="nuts">Noci e semi</string>
     <string name="spices">Erbe e Spezie</string>
     <string name="whole_grains">Cereali Integrali</string>
     <string name="beverages">Bevande</string>
@@ -28,7 +28,7 @@
     <string name="donate">Donare</string>
     <string name="subscribe">Sottoscrivi</string>
     <string name="open_source">Open Source</string>
-    <string name="permission_needed_to_write_storage">Non puoi eseguire backup senza il permesso di scrittura nell\\'archivio</string>
+    <string name="permission_needed_to_write_storage">Non puoi eseguire backup senza il permesso di scrittura nell\'archivio</string>
     <string name="backup_failed">Backup non riuscito</string>
     <string name="restore_failed">Ripristino fallito</string>
     <string name="backup_success">Backup riuscito</string>
@@ -45,7 +45,7 @@
     <string name="task_backup_title">Backup</string>
     <string name="task_restore_title">Ripristino</string>
     <string name="task_calculating_streaks_title">Strisce di calcolo</string>
-    <string name="back_to_today">Torna a Oggi</string>
+    <string name="back_to_today">Indietro a oggi</string>
     <string name="debug">Debug</string>
     <string name="debug_clear_data">Cancellare tutti i dati</string>
     <string name="debug_clear_data_message">Verranno eliminate tutti le dosi inserite. Vuoi continuare?</string>
@@ -53,7 +53,7 @@
     <string name="dialog_streaks_title">Nuova funzione: Strisce!</string>
     <string name="dialog_streaks_message">Il database sarà ora aggiornato per supportare la nuova funzionalità striscie.</string>
     <string name="dialog_no_email_apps_title">Nessuna applicazione di posta elettronica trovata</string>
-    <string name="dialog_no_email_apps_message">Per effettuare il backup dei dati si richiede di avere un app di posta elettronica installata in modo da poter inviare il file di backup .csv a te stesso. Si prega di installare un\\'applicazione di posta elettronica e riprovare.</string>
+    <string name="dialog_no_email_apps_message">Per effettuare il backup dei dati si richiede di avere un app di posta elettronica installata in modo da poter inviare il file di backup .csv a te stesso. Si prega di installare un\'applicazione di posta elettronica e riprovare.</string>
     <string name="debug_generate_random_data">Generare dati casuali</string>
     <string name="debug_generate_full_data">Generare dati completata</string>
     <string name="debug_generate_data_message">Tutti i dati esistenti verranno sostituiti. Vuoi continuare?</string>
@@ -89,8 +89,8 @@
     <string name="morning">Mattina</string>
     <string name="evening">Sera</string>
     <string name="meal_water">Precarico con acqua</string>
-    <string name="meal_negcal">Precaricare con alimenti "calorie negative"</string>
-    <string name="meal_vinegar">Incorporare l\\'aceto (2 cucchiaini per ogni pasto)</string>
+    <string name="meal_negcal">Precaricare con alimenti \"calorie negative\"</string>
+    <string name="meal_vinegar">Incorporare l\'aceto (2 cucchiaini per ogni pasto)</string>
     <string name="meal_undistracted">Goditi i pasti senza distrazioni</string>
     <string name="meal_twentyminutes">Segui la regola dei venti minuti</string>
     <string name="daily_blackcumin">Cumino nero (¼ cucchiaino)</string>
@@ -112,8 +112,8 @@
     <string name="debug_generate_weight_data">Genera dati di peso</string>
     <string name="average_weight_on_day">Peso medio al giorno</string>
     <string name="meal_water_short">Precarico con acqua</string>
-    <string name="meal_negcal_short">Precaricare con alimenti "calorie negative"</string>
-    <string name="meal_vinegar_short">Incorporare l\\'aceto (2 cucchiaini per ogni pasto)</string>
+    <string name="meal_negcal_short">Precaricare con alimenti \"calorie negative\"</string>
+    <string name="meal_vinegar_short">Incorporare l\'aceto (2 cucchiaini per ogni pasto)</string>
     <string name="meal_undistracted_short">Goditi i pasti senza distrazioni</string>
     <string name="meal_twentyminutes_short">Segui la regola dei venti minuti</string>
     <string name="daily_blackcumin_short">Cumino nero (Nigella sativa) (¼ cucchiaino)</string>
@@ -134,25 +134,25 @@
     <string name="nightly_trendelenburg_short">Sperimenta con Trendelenburg delicato</string>
     <string name="meal_water_text">Fai in modo che il tuo metabolismo acceleri due tazze di acqua fresca o fredda non aromatizzata prima di ogni pasto per sfruttare anche i suoi benefici di precarico.</string>
     <string name="meal_negcal_text">Come primo piatto, inizia ogni pasto con una mela o una zuppa di luce verde o insalata contenente meno di cento calorie per tazza.</string>
-    <string name="meal_vinegar_text">Non bere mai aceto dritto. Invece, condisci i pasti o condisci un\\'insalata con uno degli aceti dolci e salati. Se vuoi berlo, assicurati di mescolarlo in un bicchiere d\\'acqua e, successivamente, assicurati di risciacquare la bocca con acqua per proteggere lo smalto dei denti.</string>
+    <string name="meal_vinegar_text">Non bere mai aceto dritto. Invece, condisci i pasti o condisci un\'insalata con uno degli aceti dolci e salati. Se vuoi berlo, assicurati di mescolarlo in un bicchiere d\'acqua e, successivamente, assicurati di risciacquare la bocca con acqua per proteggere lo smalto dei denti.</string>
     <string name="meal_undistracted_text">Non mangiare mentre guardi la TV o giochi sul telefono. Datti un controllo per ogni pasto che puoi mangiare senza distrazioni.</string>
     <string name="meal_twentyminutes_text">Sia aumentando la viscosità o il numero di masticazioni, sia diminuendo la dimensione del morso e il tasso di consumo, dozzine di studi hanno dimostrato che, indipendentemente dal modo in cui aumentiamo la quantità di tempo in cui il cibo è in bocca, può portare a un ridotto apporto calorico. Quindi prolunga la durata del pasto ad almeno venti minuti per consentire ai segnali di sazietà naturale di avere pieno effetto. Come? Scegliendo cibi che richiedono più tempo per mangiarli e mangiarli in un modo che prolunga il tempo che rimangono in bocca. Pensa a cibi più voluminosi, più duri e più masticatori nei morsi più piccoli e ben masticati.</string>
-    <string name="daily_blackcumin_text">Come notato nella sezione Soppressione dell\\'appetito, una revisione sistematica e una meta-analisi di studi randomizzati e controllati sulla perdita di peso hanno scoperto che circa un quarto di cucchiaino di cumino nero in polvere ogni giorno sembra ridurre l\\'indice di massa corporea nell\\'arco di un paio di mesi. Si noti che il cumino nero è diverso dal cumino normale, per il quale il dosaggio è diverso.</string>
+    <string name="daily_blackcumin_text">Come notato nella sezione Soppressione dell\'appetito, una revisione sistematica e una meta-analisi di studi randomizzati e controllati sulla perdita di peso hanno scoperto che circa un quarto di cucchiaino di cumino nero in polvere ogni giorno sembra ridurre l\'indice di massa corporea nell\'arco di un paio di mesi. Si noti che il cumino nero è diverso dal cumino normale, per il quale il dosaggio è diverso.</string>
     <string name="daily_garlic_text">Studi randomizzati, in doppio cieco, controllati con placebo hanno scoperto che appena un cucchiaino da tè di aglio in polvere ogni giorno può ridurre il grasso corporeo ad un costo di forse due centesimi al giorno.</string>
-    <string name="daily_ginger_text">Studi randomizzati e controllati hanno scoperto che ¼ di cucchiaino da tè a 1/2 cucchiaino da tè al giorno di zenzero macinato ha ridotto significativamente il peso corporeo per pochi centesimi al giorno. Può essere facile come mescolare la spezia macinata in una tazza di acqua calda. Nota: lo zenzero potrebbe funzionare meglio al mattino che alla sera. Il tè Chai è un modo gustoso di combinare i trucchi di tè verde e zenzero in un\\'unica bevanda. In alternativa, per l\\'attivazione delle BAT, puoi aggiungere un peperoncino jalapeño crudo o mezzo cucchiaino di polvere di peperoncino (o, presumibilmente, scaglie di peperoncino tritato) nella tua dieta quotidiana. Per aiutare a combattere il caldo, puoi affettare sottilmente o tritare finemente il jalapeño per ridurne il morso a piccoli aculei o mescolare il peperoncino in zuppa o il frullato vegetale intero che ho presentato in uno dei miei video di cucina su NutritionFacts.org .</string>
-    <string name="daily_nutriyeast_text">Due cucchiaini di lievito alimentare, di birra o di lievito alimentare contengono all\\'incirca la quantità di beta 1,3 / 1,6 glucani trovati in studi clinici randomizzati, in doppio cieco, controllati con placebo per facilitare la perdita di peso.</string>
-    <string name="daily_cumin_text">Le donne in sovrappeso sono state randomizzate ad aggiungere mezzo cucchiaino di cumino ai loro pranzi e le cene hanno battuto il gruppo di controllo di altri quattro chili e un centimetro in più dai loro fianchi. Ci sono anche prove a sostegno dell\\'uso dello zafferano di spezie, ma un pizzico al giorno costerebbe un dollaro, mentre un cucchiaino di cumino costa meno di dieci centesimi.</string>
-    <string name="daily_greentea_text">Bere tre tazze al giorno tra i pasti (attendere almeno un\\'ora dopo i pasti in modo da non interferire con l\\'assorbimento del ferro). Durante i pasti, bere acqua, caffè nero o tè all\\'ibisco mescolato 6: 1 con verbena al limone, ma non superare mai tre tazze di liquido all\\'ora (importante dato il mio consiglio di precarico dell\\'acqua). Sfrutta l\\'effetto rinforzante della caffeina bevendo il tuo tè verde insieme a qualcosa di sano che vorresti ti piacesse di più, ma non consumare grandi quantità di caffeina entro sei ore prima di coricarsi. Prendere il tè senza dolcificante è la cosa migliore, ma se in genere addolcisci il tè con miele o zucchero, prova invece lo sciroppo di yacon.</string>
-    <string name="daily_hydrate_text">Seleziona questa casella se l\\'urina non appare mai più scura di un giallo pallido. Nota che se stai mangiando cibi fortificati con riboflavina (come il lievito alimentare), basalo invece su ottenere nove tazze di bevande non zuccherate al giorno per le donne (che sarebbero prese in carico dai consigli di precarico dell\\'acqua e del tè verde) o tredici tazze al giorno per gli uomini. Se hai problemi cardiaci o renali, non aumentare affatto l\\'assunzione di liquidi senza prima parlare con il medico. Ricorda, la soda dietetica può essere priva di calorie, ma non è priva di conseguenze, come abbiamo appreso nella sezione Basso contenuto di zuccheri aggiunti.</string>
+    <string name="daily_ginger_text">Studi randomizzati e controllati hanno scoperto che ¼ di cucchiaino da tè a ½ cucchiaino da tè al giorno di zenzero macinato ha ridotto significativamente il peso corporeo per pochi centesimi al giorno. Può essere facile come mescolare la spezia macinata in una tazza di acqua calda. Nota: lo zenzero potrebbe funzionare meglio al mattino che alla sera. Il tè Chai è un modo gustoso di combinare i trucchi di tè verde e zenzero in un\'unica bevanda. In alternativa, per l\'attivazione delle BAT, puoi aggiungere un peperoncino jalapeño crudo o mezzo cucchiaino di polvere di peperoncino (o, presumibilmente, scaglie di peperoncino tritato) nella tua dieta quotidiana. Per aiutare a combattere il caldo, puoi affettare sottilmente o tritare finemente il jalapeño per ridurne il morso a piccoli aculei o mescolare il peperoncino in zuppa o il frullato vegetale intero che ho presentato in uno dei miei video di cucina su NutritionFacts.org .</string>
+    <string name="daily_nutriyeast_text">Due cucchiaini di lievito alimentare, di birra o di lievito alimentare contengono all\'incirca la quantità di beta 1,3 / 1,6 glucani trovati in studi clinici randomizzati, in doppio cieco, controllati con placebo per facilitare la perdita di peso.</string>
+    <string name="daily_cumin_text">Le donne in sovrappeso sono state randomizzate ad aggiungere mezzo cucchiaino di cumino ai loro pranzi e le cene hanno battuto il gruppo di controllo di altri quattro chili e un centimetro in più dai loro fianchi. Ci sono anche prove a sostegno dell\'uso dello zafferano di spezie, ma un pizzico al giorno costerebbe un dollaro, mentre un cucchiaino di cumino costa meno di dieci centesimi.</string>
+    <string name="daily_greentea_text">Bere tre tazze al giorno tra i pasti (attendere almeno un\'ora dopo i pasti in modo da non interferire con l\'assorbimento del ferro). Durante i pasti, bere acqua, caffè nero o tè all\'ibisco mescolato 6: 1 con verbena al limone, ma non superare mai tre tazze di liquido all\'ora (importante dato il mio consiglio di precarico dell\'acqua). Sfrutta l\'effetto rinforzante della caffeina bevendo il tuo tè verde insieme a qualcosa di sano che vorresti ti piacesse di più, ma non consumare grandi quantità di caffeina entro sei ore prima di coricarsi. Prendere il tè senza dolcificante è la cosa migliore, ma se in genere addolcisci il tè con miele o zucchero, prova invece lo sciroppo di yacon.</string>
+    <string name="daily_hydrate_text">Seleziona questa casella se l\'urina non appare mai più scura di un giallo pallido. Nota che se stai mangiando cibi fortificati con riboflavina (come il lievito alimentare), basalo invece su ottenere nove tazze di bevande non zuccherate al giorno per le donne (che sarebbero prese in carico dai consigli di precarico dell\'acqua e del tè verde) o tredici tazze al giorno per gli uomini. Se hai problemi cardiaci o renali, non aumentare affatto l\'assunzione di liquidi senza prima parlare con il medico. Ricorda, la soda dietetica può essere priva di calorie, ma non è priva di conseguenze, come abbiamo appreso nella sezione Basso contenuto di zuccheri aggiunti.</string>
     <string name="daily_deflourdiet_text">Seleziona questa casella ogni giorno le porzioni di cereali integrali sono in forma di cereali intatti. La polverizzazione anche di cereali integrali al 100% priva i nostri microbiomi di amido che altrimenti verrebbero trasferiti ai nostri due punti chiusi in pareti cellulari ininterrotte.</string>
-    <string name="daily_frontload_text">Ci sono benefici metabolici nel distribuire più calorie all\\'inizio della giornata, quindi prepara la colazione (idealmente) o pranza il tuo pasto più grande della giornata nel vero stile re / principe / povero.</string>
-    <string name="daily_timerestrict_text">Limita a mangiare in un intervallo di tempo quotidiano a tua scelta con meno di dodici ore di durata a cui puoi restare costantemente, sette giorni alla settimana. Dati i benefici circadiani della riduzione dell\\'assunzione di cibo serale, la finestra dovrebbe terminare prima delle 19:00.</string>
-    <string name="exercise_timing_text">La raccomandazione del Daily Dozen sulla durata ottimale dell\\'allenamento per la longevità è di novanta minuti di attività moderatamente intensa al giorno, che è anche la durata ottimale dell\\'esercizio per la perdita di peso. Ogni volta che va bene, e tanto più, meglio è, ma ci può essere un vantaggio nell\\'esercizio a digiuno, almeno sei ore dopo l\\'ultimo pasto. In genere, ciò significherebbe prima di colazione, ma se lo hai programmato nel modo giusto, potresti allenarti a mezzogiorno prima di un pranzo in ritardo o, se il pranzo viene consumato abbastanza presto, prima di cena. Questo è il momento giusto per i non diabetici. I diabetici e i prediabetici dovrebbero invece iniziare ad allenarsi trenta minuti dopo l\\'inizio di un pasto e idealmente andare per almeno un\\'ora a cavalcare completamente il picco di zucchero nel sangue. Se dovessi scegliere un solo pasto dopo l\\'allenamento, sarebbe la cena, a causa del ritmo circadiano del controllo della glicemia che diminuisce durante il giorno. Idealmente, però, la colazione sarebbe il pasto più grande della giornata, e dopo ti alleneresti o, meglio ancora, dopo ogni pasto.</string>
-    <string name="weigh_twice_text">L\\'autopesatura regolare è considerata cruciale per il controllo del peso a lungo termine, ma non ci sono prove sufficienti per supportare una specifica frequenza di pesatura. La mia raccomandazione si basa su uno studio che ha scoperto che due volte al giorno, al risveglio e subito prima di coricarsi, apparivano superiori a una volta al giorno (circa sei contro due chili di perdita di peso in dodici settimane).</string>
-    <string name="complete_intentions_text">Ogni due mesi, crea tre nuove intenzioni di implementazione - "se X, quindi Y" prevede di eseguire un comportamento particolare in un contesto specifico - e verifica ognuna di esse mentre le completi ogni giorno.</string>
-    <string name="nightly_fast_text">A causa dei nostri ritmi circadiani, il cibo consumato durante la notte è più ingrassante rispetto allo stesso cibo consumato all\\'inizio della giornata, così veloce ogni notte per almeno dodici ore a partire dalle 19:00. Meno calorie dopo il tramonto, meglio è.</string>
+    <string name="daily_frontload_text">Ci sono benefici metabolici nel distribuire più calorie all\'inizio della giornata, quindi prepara la colazione (idealmente) o pranza il tuo pasto più grande della giornata nel vero stile re / principe / povero.</string>
+    <string name="daily_timerestrict_text">Limita a mangiare in un intervallo di tempo quotidiano a tua scelta con meno di dodici ore di durata a cui puoi restare costantemente, sette giorni alla settimana. Dati i benefici circadiani della riduzione dell\'assunzione di cibo serale, la finestra dovrebbe terminare prima delle 19:00.</string>
+    <string name="exercise_timing_text">La raccomandazione del Daily Dozen sulla durata ottimale dell\'allenamento per la longevità è di novanta minuti di attività moderatamente intensa al giorno, che è anche la durata ottimale dell\'esercizio per la perdita di peso. Ogni volta che va bene, e tanto più, meglio è, ma ci può essere un vantaggio nell\'esercizio a digiuno, almeno sei ore dopo l\'ultimo pasto. In genere, ciò significherebbe prima di colazione, ma se lo hai programmato nel modo giusto, potresti allenarti a mezzogiorno prima di un pranzo in ritardo o, se il pranzo viene consumato abbastanza presto, prima di cena. Questo è il momento giusto per i non diabetici. I diabetici e i prediabetici dovrebbero invece iniziare ad allenarsi trenta minuti dopo l\'inizio di un pasto e idealmente andare per almeno un\'ora a cavalcare completamente il picco di zucchero nel sangue. Se dovessi scegliere un solo pasto dopo l\'allenamento, sarebbe la cena, a causa del ritmo circadiano del controllo della glicemia che diminuisce durante il giorno. Idealmente, però, la colazione sarebbe il pasto più grande della giornata, e dopo ti alleneresti o, meglio ancora, dopo ogni pasto.</string>
+    <string name="weigh_twice_text">L\'autopesatura regolare è considerata cruciale per il controllo del peso a lungo termine, ma non ci sono prove sufficienti per supportare una specifica frequenza di pesatura. La mia raccomandazione si basa su uno studio che ha scoperto che due volte al giorno, al risveglio e subito prima di coricarsi, apparivano superiori a una volta al giorno (circa sei contro due chili di perdita di peso in dodici settimane).</string>
+    <string name="complete_intentions_text">Ogni due mesi, crea tre nuove intenzioni di implementazione - \"se X, quindi Y\" prevede di eseguire un comportamento particolare in un contesto specifico - e verifica ognuna di esse mentre le completi ogni giorno.</string>
+    <string name="nightly_fast_text">A causa dei nostri ritmi circadiani, il cibo consumato durante la notte è più ingrassante rispetto allo stesso cibo consumato all\'inizio della giornata, così veloce ogni notte per almeno dodici ore a partire dalle 19:00. Meno calorie dopo il tramonto, meglio è.</string>
     <string name="nightly_sleep_text">Seleziona questa casella se dormi almeno sette ore al momento di coricarti.</string>
-    <string name="nightly_trendelenburg_text">Prova a passare almeno quattro ore a notte sdraiato con il corpo inclinato a testa in giù di sei gradi sollevando i pali ai piedi del letto di otto pollici (o di nove pollici se hai un re della California). Fai molta attenzione quando ti alzi dal letto, poiché ciò causa intolleranza ortostatica nella maggior parte delle persone, anche se sei giovane e in buona salute, il che significa che se ti alzi troppo in fretta, puoi sentire vertigini, svenimento o stordimento e potresti cadere e farti del male. Quindi alzati lentamente. Bere due tazze di acqua fredda trenta minuti prima di alzarsi può anche aiutare a prevenire questo effetto collaterale potenzialmente pericoloso. \ N * IMPORTANTE: non provarlo affatto a casa se hai problemi cardiaci o polmonari, reflusso acido o problemi al cervello (come il trauma cranico) o gli occhi (anche una storia familiare di glaucoma ti squalifica). Inoltre, non provare questo fino a quando non chiedi al tuo medico se pensano che sia sicuro per te dormire nella lieve Trendelenburg. *</string>
+    <string name="nightly_trendelenburg_text">Prova a passare almeno quattro ore a notte sdraiato con il corpo inclinato a testa in giù di sei gradi sollevando i pali ai piedi del letto di otto pollici (o di nove pollici se hai un re della California). Fai molta attenzione quando ti alzi dal letto, poiché ciò causa intolleranza ortostatica nella maggior parte delle persone, anche se sei giovane e in buona salute, il che significa che se ti alzi troppo in fretta, puoi sentire vertigini, svenimento o stordimento e potresti cadere e farti del male. Quindi alzati lentamente. Bere due tazze di acqua fredda trenta minuti prima di alzarsi può anche aiutare a prevenire questo effetto collaterale potenzialmente pericoloso.\n\n* IMPORTANTE: non provarlo affatto a casa se hai problemi cardiaci o polmonari, reflusso acido o problemi al cervello (come il trauma cranico) o gli occhi (anche una storia familiare di glaucoma ti squalifica). Inoltre, non provare questo fino a quando non chiedi al tuo medico se pensano che sia sicuro per te dormire nella lieve Trendelenburg. *</string>
     <string name="weight">Peso</string>
     <string name="tweak_group_meal">Ad ogni pasto</string>
     <string name="tweak_group_daily">Ogni giorno</string>
@@ -160,14 +160,16 @@
     <string name="tweak_group_nightly">Ogni notte</string>
     <string name="about_tweak">Informazioni su Tweak</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Questa applicazione è stata creata da John Slavick.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Le seguenti librerie open source sono utilizzate: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item />
+        <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell\'app precedente: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
-        <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell\\'app precedente</item>
+        <item>Un ringraziamento speciale agli sforzi volontari dei creatori dell\'app precedente</item>
         <item />
-        <item>1. L\\'app Daily Dozen deve essere installata sul vostro telefono Android. Potete scaricarla qui: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. L\'app Daily Dozen deve essere installata sul vostro telefono Android. Potete scaricarla qui: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
         <item>2. Tocca il file di backup allegato a questa email.</item>
         <item />
@@ -184,43 +186,43 @@
         <item>6 mesi</item>
         <item>1 anno</item>
         <item>2 anni</item>
-        <item>5 anno</item>
+        <item>5 anni</item>
     </string-array>
     <string-array name="food_info_types_beans">
         <item>Fagioli neri</item>
-        <item>Fagioli dall’occhio nero</item>
-        <item>Fagioli</item>
+        <item>Fagioli dall’occhio</item>
+        <item>Fagioli di Spagna</item>
         <item>Fagioli Cannellini</item>
         <item>Ceci</item>
         <item>Fagioli di soia (edamame)</item>
-        <item>Piselli inglesi</item>
-        <item>Fagioli grandi del nord</item>
+        <item>Piselli</item>
+        <item>Fagioli bianchi</item>
         <item>Fagioli rossi</item>
         <item>Lenticchie (beluga, francese e varietà rossa)</item>
         <item>Miso</item>
         <item>Fagioli tondini</item>
         <item>Fagiolo pinto</item>
-        <item>Piccoli fagioli rossi</item>
-        <item>Piselli Secchi (gialli o verdi)</item>
+        <item>Fagiolo borlotti</item>
+        <item>Piselli spezzati (gialli o verdi)</item>
         <item>Tempè</item>
     </string-array>
     <string-array name="food_info_types_berries">
-        <item>Bacche d\\'Acai</item>
-        <item>Berberis</item>
+        <item>Bacche d\'Acai</item>
+        <item>Bacca di Berberis</item>
         <item>More</item>
         <item>Mirtilli</item>
         <item>Ciliegie (dolci o aspre)</item>
         <item>Uva Concordia</item>
-        <item>Mirtilli</item>
+        <item>Mirtilli rossi americani</item>
         <item>Bacche di Goji</item>
         <item>Kumquat</item>
-        <item>Gelsi</item>
-        <item>Lamponi (nero o rosso)</item>
+        <item>More di Gelso</item>
+        <item>Lamponi (neri o rossi)</item>
         <item>Fragole</item>
     </string-array>
     <string-array name="food_info_types_other_fruits">
         <item>Mele</item>
-        <item>Albicocche secche</item>
+        <item>Albicocche</item>
         <item>Avocado</item>
         <item>Banane</item>
         <item>Cantalupo</item>
@@ -250,19 +252,19 @@
     </string-array>
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Arugula</item>
-        <item>Bok choy</item>
+        <item>Cavolo cinese (Pak choi, bok choi)</item>
         <item>Broccoli (incl. Romanesco)</item>
-        <item>Brussels sprouts</item>
-        <item>Cabbage (green, red and savoy)</item>
-        <item>Cauliflower (white, green, orange and purple)</item>
+        <item>Cavoletti di Brussel</item>
+        <item>Cavoli (verde, rosso, bianco, cappuccio, etc)</item>
+        <item>Cavolfiori</item>
         <item>Collard greens</item>
-        <item>Horseradish</item>
+        <item>Rafano</item>
         <item>Kale (black, green, and red)</item>
-        <item>Kohlrabi (green and purple)</item>
-        <item>Mustard greens</item>
-        <item>Radishes</item>
-        <item>Turnip greens</item>
-        <item>Watercress</item>
+        <item>Cavolo rapa (verde, viola)</item>
+        <item>Foglie di senape</item>
+        <item>Ravanelli</item>
+        <item>Cime di rapa</item>
+        <item>Crescione</item>
     </string-array>
     <string-array name="food_info_types_greens">
         <item>Rucola</item>
@@ -270,7 +272,7 @@
         <item>Cavolo Nero</item>
         <item>Cavolo Kale (nero, verde e rosso)</item>
         <item>Mix Mesclun (Assortimento di insalta giovane)</item>
-        <item>Senape verde</item>
+        <item>Foglie di senape</item>
         <item>Acetosa</item>
         <item>Spinaci</item>
         <item>Bietola</item>
@@ -278,7 +280,7 @@
     </string-array>
     <string-array name="food_info_types_other_vegetables">
         <item>Carciofi</item>
-        <item>Asparago</item>
+        <item>Asparagi</item>
         <item>Barbabietole</item>
         <item>Peperoni</item>
         <item>Carote</item>
@@ -290,14 +292,14 @@
         <item>Patate Viola</item>
         <item>Zucca</item>
         <item>Alghe Marine (Arame, Dulse e Nori)</item>
-        <item>Piselli Snap</item>
-        <item>Squash (varietà delicata, summer e spaghetti)</item>
+        <item>Piselli (Mangetout)</item>
+        <item>Zucca (varietà delicata, summer e spaghetti)</item>
         <item>Patate dolci</item>
         <item>Pomodori</item>
         <item>Zucchine</item>
     </string-array>
     <string-array name="food_info_types_flaxseeds">
-        <item>Semi di lino marroni</item>
+        <item>Semi di lino scuri</item>
         <item>Semi di lino dorati</item>
     </string-array>
     <string-array name="food_info_types_nuts">
@@ -316,10 +318,10 @@
         <item>Noci</item>
     </string-array>
     <string-array name="food_info_types_spices">
-        <item>Pimento</item>
+        <item>Pimenta dioica</item>
         <item>Berberis</item>
         <item>Basilico</item>
-        <item>Foglie di Alloro</item>
+        <item>Alloro</item>
         <item>Cardamomo</item>
         <item>Peperoncino in polvere</item>
         <item>Coriandolo</item>
@@ -363,14 +365,14 @@
     <string-array name="food_info_types_beverages">
         <item>Tè Nero</item>
         <item>Tè Chai</item>
-        <item>Camomilla Vanilla</item>
+        <item>Infuso Camomilla Vaniglia</item>
         <item>Caffè</item>
         <item>Tè Earl Grey</item>
         <item>Tè Verde</item>
         <item>Carcadè</item>
         <item>Cioccolata Calda</item>
         <item>Tè al Gelsomino</item>
-        <item>Tè Melissa</item>
+        <item>Infuso di Melissa</item>
         <item>Tè Matcha</item>
         <item>Tè Oolong Mandorlo in Fiore</item>
         <item>Tè alla menta piperita</item>
@@ -390,10 +392,10 @@
         <item>Pattinaggio sul ghiaccio</item>
         <item>Pattinaggio in linea</item>
         <item>Giocoleria</item>
-        <item>Saltando dal trampolino</item>
+        <item>Saltare su un trampolino</item>
         <item>Canottaggio Paddle</item>
         <item>Giocare a Frisbee</item>
-        <item>Pattinaggio a Rotelle</item>
+        <item>Pattinaggio</item>
         <item>Basket</item>
         <item>Spalare neve leggera</item>
         <item>Skateboarding</item>
@@ -404,7 +406,7 @@
         <item>Treading water</item>
         <item>Camminando di buon passo (6 km/h)</item>
         <item>Water aerobics</item>
-        <item>Sci d\\'acqua</item>
+        <item>Sci d\'acqua</item>
         <item>Cantiere di lavoro</item>
         <item>Yoga</item>
         <item>Zaino in Spalla</item>
@@ -435,13 +437,13 @@
         <item>Acqua-Jogging</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ tazza di hummus o salsa di soia,</item>
-        <item>½ tazza di fagioli cotti, piselli, lenticchie, tofu o tempé</item>
+        <item>¼ tazza di hummus o altra crema spalmabile di fagioli</item>
+        <item>½ tazza di fagioli cotti, piselli spezzati, lenticchie, tofu o tempé</item>
         <item>1 tazza di piselli freschi o germogli di lenticchia</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g di hummus o salsa di soia,</item>
-        <item>130 g di fagioli cotti, piselli, lenticchie, tofu o tempé</item>
+        <item>60 g di hummus o altra crema spalmabile di fagioli</item>
+        <item>130 g di fagioli cotti, piselli spezzati, lenticchie, tofu o tempé</item>
         <item>150 g di piselli freschi o germogli di lenticchia</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
@@ -507,24 +509,24 @@
         <item>2 pasta o burro di semi</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item> cucchiaino di curcuma</item>
-        <item>Eventuali altre erbe (senza sale) e spezie che ti piacciono</item>
+        <item>¼ cucchiaino di curcuma</item>
+        <item>Eventuali altre erbe (senza sale) e spezie a scelta</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item> cucchiaino di curcuma</item>
-        <item>Eventuali altre erbe (senza sale) e spezie che ti piacciono</item>
+        <item>¼ cucchiaino di curcuma</item>
+        <item>Eventuali altre erbe (senza sale) e spezie a scelta</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ tazza cereali caldi o cotti, pasta di nocciole o mais</item>
         <item>1 tazza cereali freddi</item>
-        <item>1 tortilla o fetta di pane</item>
+        <item>1 piadina, 1 tortilla o 1 fetta di pane integrale</item>
         <item>½ bagel o focaccina inglese</item>
         <item>3 tazze popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g cereali caldi o cotti, pasta di nocciole o mais</item>
         <item>50 g cereali freddi</item>
-        <item>1 tortilla o fetta di pane</item>
+        <item>1 piadina, 1 tortilla o 1 fetta di pane integrale</item>
         <item>½ bagel o focaccina inglese</item>
         <item>30 g popcorn</item>
     </string-array>

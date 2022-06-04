@@ -76,26 +76,26 @@
     <string name="remind_me_at">Recuérdamelo a las</string>
     <string name="videos">Videos</string>
     <string name="units">Sistema</string>
-    <string name="imperial">Imperial</string>
-    <string name="metric">Métrico</string>
+    <string name="imperial">imperial</string>
+    <string name="metric">métrico</string>
     <string name="error_cannot_handle_url">No se puede abrir la URL. Debes instalar un navegador.</string>
     <string name="channel_reminders_name">Recordatorios</string>
-    <string name="twenty_one_tweaks">21 potenciadores</string>
-    <string name="tweaks">Potenciadores</string>
-    <string name="daily_tweaks_history">Historial de potenciadores</string>
+    <string name="twenty_one_tweaks">21 Ajustes</string>
+    <string name="tweaks">Ajustes</string>
+    <string name="daily_tweaks_history">Historial de ajustes</string>
     <string name="weight_history">Historia de peso</string>
     <string name="no_weights_recorded">Todavía no has registrado tu peso</string>
     <string name="task_loading_weights_history_title">Cargando historial de peso</string>
     <string name="morning">Mañana</string>
     <string name="evening">Noche</string>
     <string name="meal_water">Empezar con agua</string>
-    <string name="meal_negcal">Empezar con alimentos de calorías negativas"</string>
+    <string name="meal_negcal">Empezar con alimentos de \"calorías negativas\"</string>
     <string name="meal_vinegar">Vinagre (2 ctda. cada comida)</string>
     <string name="meal_undistracted">Comidas sin distracciones</string>
     <string name="meal_twentyminutes">La regla de los veinte minutos</string>
     <string name="daily_blackcumin">Comino negro (¼ ctda.)</string>
     <string name="daily_garlic">Ajo en polvo (¼ ctda.)</string>
-    <string name="daily_ginger">Jengibre (1 ctda.) o cayena (½ ctda.)</string>
+    <string name="daily_ginger">Jengibre molido (1 ctda.) o cayena (½ ctda.)</string>
     <string name="daily_nutriyeast">Levadura nutricional (2 ctda.)</string>
     <string name="daily_cumin">Comino (½ ctda. almuerzo y cena)</string>
     <string name="daily_greentea">Té verde (3 tazas)</string>
@@ -140,7 +140,7 @@
     <string name="daily_blackcumin_text">Como se indica en la sección del libro que habla de la supresión del apetito, una revisión sistemática y un metanálisis de ensayos aleatorizados con grupo de control sobre la pérdida de peso concluyó que aproximadamente un cuarto de cucharadita de comino negro en polvo al día parece reducir el índice de masa corporal en un lapso de un par de meses. No olvides que el comino negro es diferente al comino normal, cuya ingesta recomendada es diferente.</string>
     <string name="daily_garlic_text">Unos estudios aleatorizados, doble ciegos y controlados con placebo han encontrado que, con simplemente un cuarto de cucharadita diaria de ajo en polvo, se puede reducir la grasa corporal, a un costo de quizás dos centavos por día.</string>
     <string name="daily_ginger_text">Unos ensayos aleatorizados y con grupo de control han descubierto que el consumo de ¼ a 1½ cucharadita al día de jengibre en polvo disminuye significativamente el peso corporal por solo unos centavos al día. Puede ser tan fácil como echar el jengibre en una taza de agua caliente. Nota: el jengibre podría funcionar mejor por la mañana que por la tarde. El chai es una forma estupenda de combinar los trucos del té verde y el jengibre en una sola bebida. Además, para activar el tejido adiposo pardo, también puedes añadir un jalapeño crudo o media cucharadita de chile en polvo a tu dieta diaria. Para ayudarte con el picante, puedes cortar el jalapeño en rodajas muy finas o picarlo muy bien. El chile en polvo lo podrías echar en las sopas y guisos o en el batido de verduras que hice en uno de mis videos de cocina en NutritionFacts.org.</string>
-    <string name="daily_nutriyeast_text">Dos cucharaditas de levadura de panadería, de cerveza o nutricional contienen aproximadamente la cantidad de glucanos beta 1,3 \/ 1,6 correcta que, en ensayos clínicos aleatorizados, doble ciegos y con grupo de control, ha demostrado facilitar la pérdida de peso.</string>
+    <string name="daily_nutriyeast_text">Dos cucharaditas de levadura de panadería, de cerveza o nutricional contienen aproximadamente la cantidad de glucanos beta 1,3 / 1,6 correcta que, en ensayos clínicos aleatorizados, doble ciegos y con grupo de control, ha demostrado facilitar la pérdida de peso.</string>
     <string name="daily_cumin_text">Las mujeres con sobrepeso aleatorizadas a echarle media cucharadita de comino a sus almuerzos y cenas superaron al grupo de control, ya que perdieron casi 2 kg más y 2.5 cm extra en la cintura. También existe evidencia para apoyar el uso del azafrán, pero una pizca al día costaría un dólar, mientras que una cucharadita de comino cuesta menos de diez centavos.</string>
     <string name="daily_greentea_text">Bebe tres tazas al día entre comidas, esperando al menos una hora después de comer, para no interferir con la absorción de hierro. Durante las comidas, bebe agua, café solo o infusión de hibisco (mezclado 6:1 con hierba luisa), pero nunca excedas tres tazas de líquido por hora (tenlo en cuenta para mi sección sobra empezar con agua). Aprovecha los efectos de la cafeína y bebe el té verde mientras comes algo saludable que querrías que te gustase más, para crear una asociación positiva, pero ten ojo y no consumas mucha cafeína en las 6 horas antes de irte a dormir. Lo mejor es tomar el té sin ningún tipo de edulcorante, pero, si le sueles echar miel o azúcar, prueba el jarabe de yacón.</string>
     <string name="daily_hydrate_text">Puedes marcar esta casilla si tu orina nunca pasa del amarillo pálido.\n\nTen en cuenta que, si consumes alimentos fortificados con riboflavina (como la levadura nutricional), no deberías seguir esta premisa del color y debes centrarte en obtener nueve tazas de líquido sin edulcorar al día para las mujeres (que podrían cubrir el consumo de té verde y agua) o trece tazas al día para hombres.\n\nSi tienes problemas cardiacos o renales, no aumentes la ingesta de líquidos sin antes hablar con tu médico.\n\nNo olvides que, aunque los refrescos light no tengan calorías, no son inocuos, como explico en la sección del libro sobre los azúcares añadidos.</string>
@@ -160,18 +160,20 @@
     <string name="tweak_group_nightly">Cada noche</string>
     <string name="about_tweak">Sobre este potenciador</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Esta app fue creada por John Slavick.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Se utilizaron estas librerías de código abierto: ActiveAndroid, android-iconify, EventBus, LikeAnimation y MPAndroidChart.</item>
+        <item />
+        <item>Muchas gracias a los voluntarios que ayudaron con la versión anterior de la app: Chan Kruse, Allan Portera y Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
-        <item>Sigue estos pasos para restaurar la copia de seguridad de la aplicación Dr. Greger\\'s Daily Dozen.</item>
+        <item>Sigue estos pasos para restaurar la copia de seguridad de la aplicación Dr. Greger\'s Daily Dozen.</item>
         <item />
-        <item>1. Debes tener la aplicación Dr. Greger\\'s Daily Dozen instalada en tu teléfono Android. Puedes acceder a ella aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. Debes tener la aplicación Dr. Greger\'s Daily Dozen instalada en tu teléfono Android. Puedes acceder a ella aquí: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
         <item>2. Haz clic en la copia de seguridad anexada a este correo electronico.</item>
         <item />
-        <item>3. Selecciona la opción de abrir con Dr. Greger\\'s Daily Dozen.</item>
+        <item>3. Selecciona la opción de abrir con Dr. Greger\'s Daily Dozen.</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
         <item>Día</item>
@@ -209,7 +211,7 @@
         <item>Agracejos</item>
         <item>Moras</item>
         <item>Arándanos azules</item>
-        <item>Cerezas</item>
+        <item>Cerezas (dulces o ácidas)</item>
         <item>Uvas</item>
         <item>Arándanos rojos</item>
         <item>Bayas de Goji</item>
@@ -220,7 +222,7 @@
     </string-array>
     <string-array name="food_info_types_other_fruits">
         <item>Manzanas</item>
-        <item>Albaricoques secos</item>
+        <item>Albaricoques</item>
         <item>Aguacates</item>
         <item>Bananas</item>
         <item>Melón cantalupo</item>
@@ -257,7 +259,7 @@
         <item>Coliflor</item>
         <item>Berza</item>
         <item>Rábano picante</item>
-        <item>Berza</item>
+        <item>Col rizada (negra, verde y roja)</item>
         <item>Colinabo (verde, morado)</item>
         <item>Hojas de mostaza</item>
         <item>Rábanos</item>
@@ -268,7 +270,7 @@
         <item>Rúcula</item>
         <item>Hojas de remolacha</item>
         <item>Col</item>
-        <item>Berza</item>
+        <item>Col rizada (negra, verde y roja)</item>
         <item>Mesclun (hojas tiernas)</item>
         <item>Hojas de mostaza</item>
         <item>Alazán</item>
@@ -403,7 +405,7 @@
         <item>Tennis (dobles)</item>
         <item>Flotar en el agua</item>
         <item>Caminata rápida (6.5 kmh)</item>
-        <item>Aerobicos acuáticos</item>
+        <item>Aeróbicos acuáticos</item>
         <item>Esquí acuático</item>
         <item>Jardinería</item>
         <item>Yoga</item>
@@ -518,14 +520,14 @@
         <item>½ taza de cereales cocidos, pasta o granos de maíz cocidos</item>
         <item>1 taza de cereales fríos</item>
         <item>1 tortilla o rodaja de pan</item>
-        <item>½ de un bagel o English muffin</item>
+        <item>½ bagel o English muffin</item>
         <item>3 tazas de palomitas de maíz</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g de cereales cocidos, pasta o granos de maíz cocidos</item>
         <item>50 g de cereales fríos</item>
         <item>1 tortilla o rodaja de pan</item>
-        <item>½ de un bagel o English muffin</item>
+        <item>½ bagel o English muffin</item>
         <item>30 g de palomitas de maíz</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">

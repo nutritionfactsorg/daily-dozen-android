@@ -152,7 +152,7 @@
     <string name="complete_intentions_text">La fiecare două luni, creați trei noi intenții de implementare - „dacă X, apoi Y” intenționează să efectueze un anumit comportament într-un context specific - și verificați fiecare dintre ele în timp ce le completați în fiecare zi.</string>
     <string name="nightly_fast_text">Datorită ritmurilor noastre circadiene, mâncarea mâncată noaptea este mai îngrășată decât aceeași mâncare mâncată mai devreme în timpul zilei, atât de rapid în fiecare seară timp de cel puțin douăsprezece ore începând înainte de ora 19:00. Cu cât mai puține calorii după apusul soarelui, cu atât mai bine.</string>
     <string name="nightly_sleep_text">Bifează această casetă dacă ai cel puțin șapte ore de somn la culcare obișnuită.</string>
-    <string name="nightly_trendelenburg_text">Încercați să petreceți cel puțin patru ore pe noapte culcată cu corpul înclinat cu capul în jos cu șase grade, ridicând posturile de la poalele patului dvs. cu opt centimetri (sau cu nouă centimetri dacă aveți un rege din California). Fii extrem de atent când te ridici din pat, deoarece acest lucru provoacă intoleranță ortostatică la majoritatea oamenilor, chiar dacă ești tânăr și sănătos - adică dacă te ridici prea repede, te poți simți amețit, leșin sau cap deschis cădeați și răniți-vă. Deci ridicați-vă încet. Consumul a două căni de apă rece cu treizeci de minute înainte de creștere poate ajuta, de asemenea, la prevenirea acestui efect secundar potențial periculos. \ N * IMPORTANT: Nu încercați deloc acasă dacă aveți probleme cu inima sau cu plămânii, refluxul acid sau probleme cu creierul. (ca trauma capului) sau ochii (chiar și un istoric familial de glaucom te descalifică). De asemenea, nu încercați acest lucru până când nu întrebați medicul dvs. dacă consideră că este sigur să dormiți în Trendelenburg ușor. *</string>
+    <string name="nightly_trendelenburg_text">Încercați să petreceți cel puțin patru ore pe noapte culcată cu corpul înclinat cu capul în jos cu șase grade, ridicând posturile de la poalele patului dvs. cu opt centimetri (sau cu nouă centimetri dacă aveți un rege din California). Fii extrem de atent când te ridici din pat, deoarece acest lucru provoacă intoleranță ortostatică la majoritatea oamenilor, chiar dacă ești tânăr și sănătos - adică dacă te ridici prea repede, te poți simți amețit, leșin sau cap deschis cădeați și răniți-vă. Deci ridicați-vă încet. Consumul a două căni de apă rece cu treizeci de minute înainte de creștere poate ajuta, de asemenea, la prevenirea acestui efect secundar potențial periculos.\n\n* IMPORTANT: Nu încercați deloc acasă dacă aveți probleme cu inima sau cu plămânii, refluxul acid sau probleme cu creierul. (ca trauma capului) sau ochii (chiar și un istoric familial de glaucom te descalifică). De asemenea, nu încercați acest lucru până când nu întrebați medicul dvs. dacă consideră că este sigur să dormiți în Trendelenburg ușor. *</string>
     <string name="weight">Greutate</string>
     <string name="tweak_group_meal">La fiecare masă</string>
     <string name="tweak_group_daily">In fiecare zi</string>
@@ -160,9 +160,11 @@
     <string name="tweak_group_nightly">In fiecare noapte</string>
     <string name="about_tweak">Despre Tweak</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
+        <item>Această aplicație a fost creată de John Slavick.</item>
         <item />
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Următoarele biblioteci cu sursă deschisă sunt utilizate în crearea aplicației: ActiveAndroid, android-iconify, EventBus, LikeAnimation, și MPAndroidChart.</item>
+        <item />
+        <item>Mulțumiri speciale sunt aduse eforturilor de voluntariat ale creatorilor aplicației anterioare: Chan Kruse, Allan Portera, și Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Urmați acești pași pentru a restaura copia de siguranță a datelor în aplicația Daily Dozen</item>
