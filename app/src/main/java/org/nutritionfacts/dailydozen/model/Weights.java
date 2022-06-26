@@ -61,19 +61,21 @@ public class Weights extends TruncatableModel {
         return null;
     }
 
-    public static Weights createWeightsIfDoesNotExist(final Day day, float morningWeight, float eveningWeight) {
+    public static boolean createWeightsIfDoesNotExist(final Day day, float morningWeight, float eveningWeight) {
         Weights weights = getWeightsOnDay(day);
 
         if (weights == null) {
             weights = new Weights(day, morningWeight, eveningWeight);
-        } else {
-            weights.setMorningWeight(morningWeight);
-            weights.setEveningWeight(eveningWeight);
         }
 
-        weights.save();
+        if (weights.morningWeight != morningWeight || weights.eveningWeight != eveningWeight) {
+            weights.setMorningWeight(morningWeight);
+            weights.setEveningWeight(eveningWeight);
+            weights.save();
+            return true;
+        }
 
-        return weights;
+        return false;
     }
 
     public static Weights getWeightsOnDay(final Day day) {
