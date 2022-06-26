@@ -163,8 +163,6 @@
         <item>Diese Anwendung wurde von John Slavick erstellt.</item>
         <item />
         <item>Die folgenden Open-Source-Bibliotheken werden verwendet: ActiveAndroid, android-iconify, EventBus, LikeAnimation und MPAndroidChart.</item>
-        <item />
-        <item>Besonderer Dank gilt den freiwilligen Helfern, die die vorherige App entwickelt haben: Chan Kruse, Allan Portera und Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Gehen Sie folgendermaßen vor, um diese Sicherung in der Daily Dozen-App wiederherzustellen</item>

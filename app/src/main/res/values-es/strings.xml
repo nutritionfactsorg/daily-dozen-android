@@ -163,8 +163,6 @@
         <item>Esta app fue creada por John Slavick.</item>
         <item />
         <item>Se utilizaron estas librerías de código abierto: ActiveAndroid, android-iconify, EventBus, LikeAnimation y MPAndroidChart.</item>
-        <item />
-        <item>Muchas gracias a los voluntarios que ayudaron con la versión anterior de la app: Chan Kruse, Allan Portera y Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Sigue estos pasos para restaurar la copia de seguridad de la aplicación Dr. Greger\'s Daily Dozen.</item>

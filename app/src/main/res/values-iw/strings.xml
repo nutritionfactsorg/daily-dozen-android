@@ -163,8 +163,6 @@
         <item>אפליקציה זו נוצרה ע"י ג\'והן סלביק</item>
         <item />
         <item>נעשה שימוש בספריות הקוד הפתוחות הבאות: ActiveAndroid, android-iconify, EventBus, LikeAnimation ו- MPAndroidChart.</item>
-        <item />
-        <item>תודה מיוחדת למאמצי ההתנדבות של יוצרי האפליקציה הקודמת: צ\'אן קרוזה, אלן פורטרה וסנג\'טה קומאר ".</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>בצע את השלבים הבאים כדי לשחזר גיבוי זה באפליקציית "התריסר היומי"</item>

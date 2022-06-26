@@ -163,8 +163,6 @@
         <item>Aplikacja została stworzona przez Johna Slavicka.</item>
         <item />
         <item>Używane są następujące biblioteki open source: ActiveAndroid, android-iconify, EventBus, LikeAnimation i MPAndroidChart.</item>
-        <item />
-        <item>Specjalne podziękowania za wolontariacki wysiłek twórców poprzedniej aplikacji: Chana Kruse, Allana Portera i Sangeeta Kumara.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Wykonaj następujące kroki, aby przywrócić swoją kopię zapasową w aplikacji Codzienny Tuzin.</item>
