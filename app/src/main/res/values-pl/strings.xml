@@ -152,7 +152,7 @@
     <string name="complete_intentions_text">Co dwa miesiące twórz trzy nowe intencje. Zaplanuj „jeśli X, to Y”, by wykonać je w określonym kontekście - i odznaczaj każdą z nich po ich wykonaniu.</string>
     <string name="nightly_fast_text">Ze względu na nasz rytm dobowy, jedzenie spożywane w nocy jest bardziej tuczące niż dokładnie to samo jedzenie spożywane wcześniej w ciągu dnia, więc pość co najmniej 12 godzin zaczynając od 19:00. Im mniej kalorii po zachodzie słońca, tym lepiej.</string>
     <string name="nightly_sleep_text">Zaznacz to pole, jeśli śpisz przynajmniej siedem godzin o zwyczajowej porze.</string>
-    <string name="nightly_trendelenburg_text">Spróbuj spędzać co najmniej cztery godziny w nocy, leżąc pod kątem sześć stopni - głową w dół, poprzez podwyższenie dolnych nóg łóżka o 20 cm (lub o 23 cm, jeśli masz łóżko California king). Należy zachować szczególną ostrożność, gdy wstajesz z łóżka, ponieważ powoduje to ortostatyczną nietolerancję u większości ludzi, nawet jeśli jesteś młody/-a i zdrowy/-a - co oznacza, że jeśli wstaniesz zbyt szybko, możesz odczuć zawroty głowy, słabość lub oszołomienie, upaść i zranić się. Więc wstawaj powoli. Wypicie dwóch szklanek zimnej wody na trzydzieści minut przed wstawaniem może również pomóc w zapobieganiu temu potencjalnie niebezpiecznemu efektowi ubocznemu.\n\nWAŻNE: nigdy nie próbuj tego w domu, jeśli masz problemy z sercem lub płucami, refluks żołądkowy lub problemy z mózgiem (np. uraz głowy) lub oczu (nawet historia jaskry w rodzinie dyskwalifikuje Cię). Nie próbuj tego także, dopóki nie zapytasz swojego lekarza, czy uważa, że spanie w łagodnym Trendelenburgu jest bezpieczne.</string>
+    <string name="nightly_trendelenburg_text">Spróbuj spędzać co najmniej cztery godziny w nocy, leżąc pod kątem sześć stopni - głową w dół, poprzez podwyższenie dolnych nóg łóżka o 20 cm (lub o 23 cm, jeśli masz łóżko California king). Należy zachować szczególną ostrożność, gdy wstajesz z łóżka, ponieważ powoduje to ortostatyczną nietolerancję u większości ludzi, nawet jeśli jesteś młody/-a i zdrowy/-a - co oznacza, że jeśli wstaniesz zbyt szybko, możesz odczuć zawroty głowy, słabość lub oszołomienie, upaść i zranić się. Więc wstawaj powoli. Wypicie dwóch szklanek zimnej wody na trzydzieści minut przed wstawaniem może również pomóc w zapobieganiu temu potencjalnie niebezpiecznemu efektowi ubocznemu.\n\n* WAŻNE: nigdy nie próbuj tego w domu, jeśli masz problemy z sercem lub płucami, refluks żołądkowy lub problemy z mózgiem (np. uraz głowy) lub oczu (nawet historia jaskry w rodzinie dyskwalifikuje Cię). Nie próbuj tego także, dopóki nie zapytasz swojego lekarza, czy uważa, że spanie w łagodnym Trendelenburgu jest bezpieczne. *</string>
     <string name="weight">Waga</string>
     <string name="tweak_group_meal">Przy każdym posiłku</string>
     <string name="tweak_group_daily">Każdego dnia</string>
@@ -163,6 +163,8 @@
         <item>Aplikacja została stworzona przez Johna Slavicka.</item>
         <item />
         <item>Używane są następujące biblioteki open source: ActiveAndroid, android-iconify, EventBus, LikeAnimation i MPAndroidChart.</item>
+        <item />
+        <item>Specjalne podziękowania za wolontariacki wysiłek twórców poprzedniej aplikacji: Chana Kruse, Allana Portera i Sangeeta Kumara.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Wykonaj następujące kroki, aby przywrócić swoją kopię zapasową w aplikacji Codzienny Tuzin.</item>

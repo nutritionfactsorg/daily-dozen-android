@@ -41,7 +41,7 @@
     <string name="food_info">Información alimenticia</string>
     <string name="food_history">Historial alimenticio</string>
     <string name="daily_servings_history">Historial de porciones diarias</string>
-    <string name="no_servings_recorded">Todavía no has registrado ninguna porción</string>
+    <string name="no_servings_recorded">Todavía no has registrado ninguna porción.</string>
     <string name="task_backup_title">Creando copia de seguridad</string>
     <string name="task_restore_title">Restaurando</string>
     <string name="task_calculating_streaks_title">Calculando tu racha de porciones</string>
@@ -77,14 +77,14 @@
     <string name="videos">Videos</string>
     <string name="units">Sistema</string>
     <string name="imperial">Imperial</string>
-    <string name="metric">Métrico</string>
+    <string name="metric">MÉTRICO</string>
     <string name="error_cannot_handle_url">No se puede abrir la URL. Debes instalar un navegador.</string>
     <string name="channel_reminders_name">Recordatorios</string>
     <string name="twenty_one_tweaks">21 Potenciadores</string>
     <string name="tweaks">21 Potenciadores</string>
     <string name="daily_tweaks_history">Historial de potenciadores</string>
     <string name="weight_history">Historial de peso</string>
-    <string name="no_weights_recorded">Todavía no has registrado tu peso</string>
+    <string name="no_weights_recorded">Todavía no has registrado tu peso.</string>
     <string name="task_loading_weights_history_title">Cargando historial de peso</string>
     <string name="morning">Mañana</string>
     <string name="evening">Noche</string>
@@ -163,6 +163,8 @@
         <item>Esta app fue creada por John Slavick.</item>
         <item />
         <item>Se utilizaron estas librerías de código abierto: ActiveAndroid, android-iconify, EventBus, LikeAnimation y MPAndroidChart.</item>
+        <item />
+        <item>Muchas gracias a los voluntarios que ayudaron con la versión anterior de la app: Chan Kruse, Allan Portera y Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Sigue estos pasos para restaurar la copia de seguridad de la aplicación Dr. Greger\'s Daily Dozen.</item>
@@ -255,7 +257,7 @@
         <item>Coles de Bruselas</item>
         <item>Repollo (verde, rojo)</item>
         <item>Coliflor</item>
-        <item>Berza</item>
+        <item>Col</item>
         <item>Rábano picante</item>
         <item>Col rizada (negra, verde y roja)</item>
         <item>Colinabo (verde, morado)</item>
@@ -291,7 +293,7 @@
         <item>Calabaza</item>
         <item>Algas</item>
         <item>Tirabeques</item>
-        <item>Calabaza pequeñas</item>
+        <item>Calabaza pequeña</item>
         <item>Batata</item>
         <item>Tomates</item>
         <item>Calabacín</item>
@@ -397,7 +399,7 @@
         <item>Tirar canastas</item>
         <item>Palear nieve ligera</item>
         <item>Patineta</item>
-        <item>Snorkeling</item>
+        <item>Snorkel</item>
         <item>Surfear</item>
         <item>Natación por ocio</item>
         <item>Tennis (dobles)</item>

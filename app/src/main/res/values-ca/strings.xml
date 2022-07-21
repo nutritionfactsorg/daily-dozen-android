@@ -163,6 +163,8 @@
         <item>Aquesta aplicació ha estat creada per John Slavick.</item>
         <item />
         <item>S\'han utilitzat les següents llibreries de codi obert: ActiveAndroid, android-iconify, EventBus, LikeAnimation i MPAndroidChart.</item>
+        <item />
+        <item>Agraïm especialment l\'esforç voluntari dels creadors de l\'anterior aplicació: Chan Kruse, Allan Portera i Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Segueix aquests passos per recuperar la còpia de seguretat a l\'app de la Dotzena Diària</item>
