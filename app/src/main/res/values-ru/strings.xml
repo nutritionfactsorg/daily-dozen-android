@@ -163,6 +163,8 @@
         <item>Это приложение разработано Джоном Славиком.</item>
         <item />
         <item>Приложение использует следующие библиотеки с открытым кодом: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item />
+        <item>Особая благодарность усилиям добровольцев-создателей предыдущей версии приложения: Чану Круз, Аллану Портера и Сангите Кумар.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Следуйте этим инструкциям для восстановления этой резервной копии в приложении Не сдохни!</item>

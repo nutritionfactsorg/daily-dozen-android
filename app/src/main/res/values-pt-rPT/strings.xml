@@ -163,6 +163,8 @@
         <item>Este aplicativo foi criado por John Slavick.</item>
         <item />
         <item>As seguintes bibliotecas de código aberto foram usadas: ActiveAndroid, android-iconify, EventBus, LikeAnimation e MPAndroidChart.</item>
+        <item />
+        <item>Agradecimento especial ao esforço dos voluntários criadores do aplicativo anterior: Chan Kruse, Allan Portera e Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Siga estes passos para restaurar esta cópia de segurança no aplicativo Dúzia Diária</item>
