@@ -53,7 +53,7 @@
     <string name="dialog_streaks_title">Dodano nową funkcję postępu!</string>
     <string name="dialog_streaks_message">Twoja baza danych zostanie uaktualniona by wspierać nową funkcję postępu.</string>
     <string name="dialog_no_email_apps_title">Nie znaleziono aplikacji poczty e-mail</string>
-    <string name="dialog_no_email_apps_message">Tworzenie kopii zapasowych twoich danych wymaga zainstalowania aplikacji do obsługi poczty e-mail, aby można było wysłać do siebie plik kopii zapasowej ".csv" . Zainstaluj aplikację e-mail i spróbuj ponownie.</string>
+    <string name="dialog_no_email_apps_message">Tworzenie kopii zapasowych twoich danych wymaga zainstalowania aplikacji do obsługi poczty e-mail, aby można było wysłać do siebie plik kopii zapasowej \".csv\" . Zainstaluj aplikację e-mail i spróbuj ponownie.</string>
     <string name="debug_generate_random_data">Wygeneruj losowe dane</string>
     <string name="debug_generate_full_data">Wygeneruj wszystie dane</string>
     <string name="debug_generate_data_message">Wszystkie istniejące dane zostaną zastąpione. Czy chcesz kontynuować?</string>
@@ -145,14 +145,14 @@
     <string name="daily_greentea_text">Pij trzy szklanki dziennie między posiłkami (odczekaj co najmniej godzinę po posiłku, aby nie zakłócać wchłaniania żelaza). Podczas posiłków pij wodę, czarną kawę lub herbatę z hibiskusa zmieszaną w stosunku 6:1 z lippią trójlistną, ale nigdy nie przekraczaj trzech szklanek płynu na godzinę (ważne, biorąc pod uwagę moje zalecenia o piciu przed posiłkami). Skorzystaj ze wzmacniającego działania kofeiny, pijąc zieloną herbatę razem z czymś zdrowym, co chciałbyś/-abyś bardziej polubić, ale nie spożywaj dużych ilości kofeiny na sześć godzin przed snem. Najlepiej jest pić herbatę bez słodzika, ale jeśli zazwyczaj słodzisz herbatę miodem lub cukrem, spróbuj zamiast tego syropu Yacon.</string>
     <string name="daily_hydrate_text">Zaznacz to pole, jeśli Twój mocz nigdy nie jest ciemniejszy niż bladożółty. Zwróć uwagę, że jeśli jesz pokarmy wzbogacone ryboflawiną (takie jak odżywcze drożdże), to zamiast tego spożywaj dziennie dziewięć szklanek niesłodzonych napojów dla kobiet (tutaj wystarczy stosować zalecenia dotyczące zielonej herbaty i wody) lub trzynaście szklanek dziennie dla mężczyzn. Jeśli masz problemy z sercem lub nerkami, nie zwiększaj spożycia płynów bez uprzedniej konsultacji z lekarzem. Pamiętaj, że picie napojów dietetycznych może nie zwiększa spożycia kalorii, ale nie jest pozbawione konsekwencji, o czym dowiedzieliśmy się w sekcji „Niska zawartość dodanego cukru”.</string>
     <string name="daily_deflourdiet_text">Zaznacz to pole każdego dnia, kiedy Twoje porcje pełnoziarnistych zbóż są dostarczone w postaci całych ziaren. Mielenie nawet stuprocentowo pełnoziarnistych zbóż pozbawia nasz mikrobiom skrobi, która w  przeciwnym razie byłaby przetransportowana do naszej okrężnicy zamknięta w nienaruszonych ścianach komórkowych.</string>
-    <string name="daily_frontload_text">Spożycie większej ilości kalorii wcześniej w ciągu dnia przynosi korzyści metaboliczne, więc (najlepiej) przygotuj śniadanie lub obiad jako największy posiłek dnia - w stylu prawdziwego króla / księcia / żebraka (po ang. mówi się „śniadanie jak król, obiad jak książę, a kolację jak żebrak.")</string>
+    <string name="daily_frontload_text">Spożycie większej ilości kalorii wcześniej w ciągu dnia przynosi korzyści metaboliczne, więc (najlepiej) przygotuj śniadanie lub obiad jako największy posiłek dnia - w stylu prawdziwego króla / księcia / żebraka (po ang. mówi się „śniadanie jak król, obiad jak książę, a kolację jak żebrak.\")</string>
     <string name="daily_timerestrict_text">Staraj się jeść w wybranym przez siebie dziennym przedziale czasowym poniżej dwunastu godzin, którego możesz przestrzegać konsekwentnie - siedem dni w tygodniu. Biorąc pod uwagę dobowe korzyści wynikające z ograniczenia wieczornego odżywiania się, okienko powinno zamknąć się przed godziną 19:00.</string>
     <string name="exercise_timing_text">Zalecenia Codziennego Tuzina dotyczące optymalnego czasu trwania ćwiczeń na długowieczność to dziewięćdziesiąt minut umiarkowanie intensywnych ćwiczeń dziennie, co jest również optymalnym czasem trwania ćwiczeń dla utraty wagi. Każda pora jest dobra, a im więcej ćwiczeń, tym lepiej, ale ćwiczenia na czczo (przynajmniej sześć godzin po ostatnim posiłku) są bardziej korzystne. Zwykle byłoby to przed śniadaniem, ale jeśli dobrze to zaplanować, możesz ćwiczyć w południe przed późnym obiadem lub, jeśli obiad jest spożywany wystarczająco wcześnie, przed kolacją. To jest czas odpowiedni dla osób które nie mają cukrzycy. Diabetycy i osoby w stanie przedcukrzycowym powinny zamiast tego rozpocząć ćwiczenia 30 minut po rozpoczęciu posiłku i najlepiej ćwiczyć przez co najmniej godzinę, aby czas ćwiczeń obejmował szczytowy poziom cukru we krwi. Gdybyś musiał/-a wybrać pojedynczy posiłek, po którym ćwiczysz, byłby to obiad - ze względu na dobowy rytm kontroli poziomu cukru we krwi, który słabnie wraz z dniem. Najlepiej byłoby jednak, gdyby śniadanie było największym posiłkiem w ciągu dnia, a ćwiczenia następowały po nim - lub jeszcze lepiej, po każdym posiłku.</string>
     <string name="weigh_twice_text">Uważa się, że regularne ważenie się ma kluczowe znaczenie dla długoterminowej kontroli masy ciała, choć nie ma wystarczających dowodów na poparcie określonej częstotliwości ważenia. Moje zalecenie opiera się na jednym badaniu, które wykazało, że ważenie się dwa razy dziennie - po przebudzeniu i tuż przed spaniem - wydawało się lepsze niż raz dziennie (około 2,70 kg w porównaniu do 0,90 kg utraty wagi w ciągu dwunastu tygodni).</string>
     <string name="complete_intentions_text">Co dwa miesiące twórz trzy nowe intencje. Zaplanuj „jeśli X, to Y”, by wykonać je w określonym kontekście - i odznaczaj każdą z nich po ich wykonaniu.</string>
     <string name="nightly_fast_text">Ze względu na nasz rytm dobowy, jedzenie spożywane w nocy jest bardziej tuczące niż dokładnie to samo jedzenie spożywane wcześniej w ciągu dnia, więc pość co najmniej 12 godzin zaczynając od 19:00. Im mniej kalorii po zachodzie słońca, tym lepiej.</string>
     <string name="nightly_sleep_text">Zaznacz to pole, jeśli śpisz przynajmniej siedem godzin o zwyczajowej porze.</string>
-    <string name="nightly_trendelenburg_text">Spróbuj spędzać co najmniej cztery godziny w nocy, leżąc pod kątem sześć stopni - głową w dół, poprzez podwyższenie dolnych nóg łóżka o 20 cm (lub o 23 cm, jeśli masz łóżko California king). Należy zachować szczególną ostrożność, gdy wstajesz z łóżka, ponieważ powoduje to ortostatyczną nietolerancję u większości ludzi, nawet jeśli jesteś młody/-a i zdrowy/-a - co oznacza, że jeśli wstaniesz zbyt szybko, możesz odczuć zawroty głowy, słabość lub oszołomienie, upaść i zranić się. Więc wstawaj powoli. Wypicie dwóch szklanek zimnej wody na trzydzieści minut przed wstawaniem może również pomóc w zapobieganiu temu potencjalnie niebezpiecznemu efektowi ubocznemu.\n\nWAŻNE: nigdy nie próbuj tego w domu, jeśli masz problemy z sercem lub płucami, refluks żołądkowy lub problemy z mózgiem (np. uraz głowy) lub oczu (nawet historia jaskry w rodzinie dyskwalifikuje Cię). Nie próbuj tego także, dopóki nie zapytasz swojego lekarza, czy uważa, że spanie w łagodnym Trendelenburgu jest bezpieczne.</string>
+    <string name="nightly_trendelenburg_text">Spróbuj spędzać co najmniej cztery godziny w nocy, leżąc pod kątem sześć stopni - głową w dół, poprzez podwyższenie dolnych nóg łóżka o 20 cm (lub o 23 cm, jeśli masz łóżko California king). Należy zachować szczególną ostrożność, gdy wstajesz z łóżka, ponieważ powoduje to ortostatyczną nietolerancję u większości ludzi, nawet jeśli jesteś młody/-a i zdrowy/-a - co oznacza, że jeśli wstaniesz zbyt szybko, możesz odczuć zawroty głowy, słabość lub oszołomienie, upaść i zranić się. Więc wstawaj powoli. Wypicie dwóch szklanek zimnej wody na trzydzieści minut przed wstawaniem może również pomóc w zapobieganiu temu potencjalnie niebezpiecznemu efektowi ubocznemu.\n\n* WAŻNE: nigdy nie próbuj tego w domu, jeśli masz problemy z sercem lub płucami, refluks żołądkowy lub problemy z mózgiem (np. uraz głowy) lub oczu (nawet historia jaskry w rodzinie dyskwalifikuje Cię). Nie próbuj tego także, dopóki nie zapytasz swojego lekarza, czy uważa, że spanie w łagodnym Trendelenburgu jest bezpieczne. *</string>
     <string name="weight">Waga</string>
     <string name="tweak_group_meal">Przy każdym posiłku</string>
     <string name="tweak_group_daily">Każdego dnia</string>
@@ -160,9 +160,11 @@
     <string name="tweak_group_nightly">Każdej nocy</string>
     <string name="about_tweak">O Adaptacji</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
-        <item/>
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Aplikacja została stworzona przez Johna Slavicka.</item>
+        <item />
+        <item>Używane są następujące biblioteki open source: ActiveAndroid, android-iconify, EventBus, LikeAnimation i MPAndroidChart.</item>
+        <item />
+        <item>Specjalne podziękowania za wolontariacki wysiłek twórców poprzedniej aplikacji: Chana Kruse, Allana Portera i Sangeeta Kumara.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Wykonaj następujące kroki, aby przywrócić swoją kopię zapasową w aplikacji Codzienny Tuzin.</item>
@@ -434,166 +436,112 @@
         <item>Szybki chód pod górę</item>
         <item>Jogging w wodzie</item>
     </string-array>
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s humusu lub dipu z fasoli</item>
-        <item>%s ugotowanej fasoli, grochu łuskanego, soczewicy, tofu lub tempeh</item>
-        <item>1%s świeżego groszku lub kiełków soczewicy</item>
-    </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ szklanki</item>
-        <item>½ szklanki</item>
-        <item> szklanka</item>
+        <item>¼ szklanki humusu lub dipu z fasoli</item>
+        <item>½ szklanki ugotowanej fasoli, grochu łuskanego, soczewicy, tofu lub tempeh</item>
+        <item>1 szklanka świeżego groszku lub kiełków soczewicy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g</item>
-        <item>130 g</item>
-        <item>50 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s świeżych lub mrożonych</item>
-        <item>%s susznych</item>
+        <item>60 g humusu lub dipu z fasoli</item>
+        <item>130 g ugotowanej fasoli, grochu łuskanego, soczewicy, tofu lub tempeh</item>
+        <item>150 g świeżego groszku lub kiełków soczewicy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ szklanki</item>
-        <item>¼ szklanki</item>
+        <item>½ szklanki świeżych lub mrożonych</item>
+        <item>¼ szklanki susznych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g</item>
-        <item>40 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>1 owoc %s średniej wielkości</item>
-        <item>1%s pokrojonych owoców</item>
-        <item>%s suszonych owoców</item>
+        <item>60 g świeżych lub mrożonych</item>
+        <item>40 g susznych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item> szklanka</item>
-        <item>¼ szklanki</item>
+        <item>1 owoc średniej wielkości</item>
+        <item>1 szklanka pokrojonych owoców</item>
+        <item>¼ szklanki suszonych owoców</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>20 g</item>
-        <item>40 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s posiekanych</item>
-        <item>%s brukselek lub kiełków brokułów</item>
-        <item>%s1 łyżka chrzanu</item>
+        <item>1 owoc  średniej wielkości</item>
+        <item>120 g pokrojonych owoców</item>
+        <item>40 g suszonych owoców</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ szklanki</item>
-        <item>¼ szklanki</item>
-        <item />
+        <item>½ szklanki posiekanych</item>
+        <item>¼ szklanki brukselek lub kiełków brokułów</item>
+        <item>1 łyżka chrzanu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g</item>
-        <item>12 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s surowych</item>
-        <item>%s gotowanych</item>
+        <item>30–80 g posiekanych</item>
+        <item>12 g brukselek lub kiełków brokułów</item>
+        <item>1 łyżka chrzanu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 szklanka</item>
-        <item>½ szklanki</item>
+        <item>1 szklanka surowych</item>
+        <item>½ szklanki gotowanych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 g</item>
-        <item>90 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s surowych warzyw liściastych</item>
-        <item>%s surowych lub gotowanych warzyw nieliściastych</item>
-        <item>%s soku warzywnego</item>
-        <item>%s suszonych grzybów</item>
+        <item>60 g surowych</item>
+        <item>90 g gotowanych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 szklanka</item>
-        <item>½ szklanki</item>
-        <item>½ szklanki</item>
-        <item>¼ szklanki</item>
+        <item>1 szklanka surowych warzyw liściastych</item>
+        <item>½ szklanki surowych lub gotowanych warzyw nieliściastych</item>
+        <item>½ szklanki soku warzywnego</item>
+        <item>¼ szklanki suszonych grzybów</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 g</item>
-        <item>50 g</item>
-        <item>125 ml</item>
-        <item>7 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 łyżka mielonych</item>
+        <item>60 g surowych warzyw liściastych</item>
+        <item>50 g surowych lub gotowanych warzyw nieliściastych</item>
+        <item>125 ml soku warzywnego</item>
+        <item>7 g suszonych grzybów</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item />
+        <item>1 łyżka mielonych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s orzechów lub nasion</item>
-        <item>%s2 łyżki masła z orzechów lub z nasion</item>
+        <item>1 łyżka mielonych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ szklanki</item>
-        <item />
+        <item>¼ szklanki orzechów lub nasion</item>
+        <item>2 łyżki masła z orzechów lub z nasion</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ łyżeczki kurkumy</item>
-        <item>%sWszelkie inne (pozbawione soli) zioła i przyprawy, które lubisz</item>
+        <item>30 g orzechów lub nasion</item>
+        <item>2 łyżki masła z orzechów lub z nasion</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
+        <item>¼ łyżeczki kurkumy</item>
+        <item>Wszelkie inne (pozbawione soli) zioła i przyprawy, które lubisz</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s gorących płatków zbożowych lub gotowanych ziaren zbóż, makaronu lub ziaren kukurydzy</item>
-        <item>%s płatków śniadaniowych na zimno</item>
-        <item>%s1 tortilla lub kromka chleba</item>
-        <item>%s½ bajgla lub angielskiego muffina</item>
-        <item>3%s prażonej kukurydzy</item>
+        <item>¼ łyżeczki kurkumy</item>
+        <item>Wszelkie inne (pozbawione soli) zioła i przyprawy, które lubisz</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ szklanki</item>
-        <item>1 szklanka</item>
-        <item />
-        <item />
-        <item> szklanki</item>
+        <item>½ szklanki gorących płatków zbożowych lub gotowanych ziaren zbóż, makaronu lub ziaren kukurydzy</item>
+        <item>1 szklanka płatków śniadaniowych na zimno</item>
+        <item>1 tortilla lub kromka chleba</item>
+        <item>½ bajgla lub angielskiego muffina</item>
+        <item>3 szklanki prażonej kukurydzy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g</item>
-        <item>50 g</item>
-        <item />
-        <item />
-        <item>0 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>Jedna szklanka (3%s)</item>
+        <item>100 g gorących płatków zbożowych lub gotowanych ziaren zbóż, makaronu lub ziaren kukurydzy</item>
+        <item>50 g płatków śniadaniowych na zimno</item>
+        <item>1 tortilla lub kromka chleba</item>
+        <item>½ bajgla lub angielskiego muffina</item>
+        <item>30 g prażonej kukurydzy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>40 g</item>
+        <item>Jedna szklanka (340 g)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>50 ml</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 minut aktywności o umiarkowanej intensywności</item>
-        <item>%s40 minut intensywnej aktywności</item>
+        <item>Jedna szklanka (350 ml)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
+        <item>90 minut aktywności o umiarkowanej intensywności</item>
+        <item>40 minut intensywnej aktywności</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
+        <item>90 minut aktywności o umiarkowanej intensywności</item>
+        <item>40 minut intensywnej aktywności</item>
     </string-array>
 </resources>

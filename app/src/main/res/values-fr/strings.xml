@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
     <string name="app_name">Daily Dozen</string>
-
     <string name="beans">Légumineuses</string>
     <string name="berries">Baies</string>
     <string name="other_fruits">Autres fruits</string>
@@ -68,8 +67,8 @@
     <string name="dialog_ask_user_to_rate_app_message">Veuillez nous faire part de vos commentaires dans le Play Store.</string>
     <string name="rate_now">Envoyer un commentaire</string>
     <string name="not_now">Pas maintenant</string>
-    <string name="format_version">version %1$s</string>
-    <string name="format_num_days">%1$d jours</string>
+    <string name="format_version">version %s</string>
+    <string name="format_num_days">%d jours</string>
     <string name="daily_reminder_title">Rappel journalier</string>
     <string name="daily_reminder_text">Mettez à jour vos portions pour aujourd\'hui</string>
     <string name="daily_reminder_settings">Paramètres du rappel quotidien</string>
@@ -79,490 +78,8 @@
     <string name="units">Unités</string>
     <string name="imperial">Impérial</string>
     <string name="metric">Métrique</string>
-
-    <string-array name="about_text_lines">
-        <item>Cette application a été créée par John Slavick.</item>
-        <item />
-        <item>Les bibliothèques open source suivantes sont utilisées: ActiveAndroid, android-iconify, EventBus, LikeAnimation et MPAndroidChart.</item>
-    </string-array>
-
-    <string-array name="backup_instructions_lines">
-        <item>Suivez ces étapes pour restaurer cette sauvegarde dans l\'application Daily Dozen</item>
-        <item />
-        <item>1. L\'application Daily Dozen doit être installée sur votre téléphone Android. Vous pouvez le télécharger ici: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
-        <item />
-        <item>2. Tapez sur le fichier de sauvegarde joint à ce courriel.</item>
-        <item />
-        <item>3. Sélectionnez Ouvrir avec Daily Dozen</item>
-    </string-array>
-
-    <string-array name="servings_time_scale_choices">
-        <item>Jour</item>
-        <item>Mois</item>
-        <item>Année</item>
-    </string-array>
-
-    <string-array name="food_info_types_beans">
-        <item>Haricots noirs</item>
-        <item>Haricots à oeil noir</item>
-        <item>Haricots de Lima</item>
-        <item>Cannellini haricots</item>
-        <item>Pois chiches</item>
-        <item>Edamame</item>
-        <item>Pois à écosser</item>
-        <item>Haricots blancs</item>
-        <item>Haricots rouges</item>
-        <item>Lentilles (variétés beluga, françaises et rouges)</item>
-        <item>Miso</item>
-        <item>Haricots blancs</item>
-        <item>Haricots pinto</item>
-        <item>Petits haricots rouges</item>
-        <item>Pois cassés (jaune ou vert)</item>
-        <item>Tempeh</item>
-    </string-array>
-
-    <string-array name="food_info_types_berries">
-        <item>Baies d\'açai</item>
-        <item>Épine-vinette</item>
-        <item>Mûres</item>
-        <item>Bleuets</item>
-        <item>Cerises (sucrées ou sures)</item>
-        <item>Raisins Concord</item>
-        <item>Canneberges</item>
-        <item>Baies de Goji</item>
-        <item>Kumquats</item>
-        <item>Mûriers</item>
-        <item>Framboises (noires ou rouges)</item>
-        <item>Fraises</item>
-    </string-array>
-
-    <string-array name="food_info_types_other_fruits">
-        <item>Pommes</item>
-        <item>Abricots secs</item>
-        <item>Avocats</item>
-        <item>Bananes</item>
-        <item>Cantaloups</item>
-        <item>Clémentines</item>
-        <item>Dattes</item>
-        <item>Figues sèches</item>
-        <item>Pamplemousses</item>
-        <item>Melons miel</item>
-        <item>Kiwis</item>
-        <item>Citrons</item>
-        <item>Citrons verts</item>
-        <item>Lychees</item>
-        <item>Mangues</item>
-        <item>Nectarines</item>
-        <item>Oranges</item>
-        <item>Papayes</item>
-        <item>Fruits de la passion</item>
-        <item>Pêches</item>
-        <item>Poires</item>
-        <item>Ananas</item>
-        <item>Prunes (en particulier les prunes noires)</item>
-        <item>Pluots</item>
-        <item>Grenades</item>
-        <item>Prunes</item>
-        <item>Mandarines</item>
-        <item>Melon d\'eau</item>
-    </string-array>
-
-    <string-array name="food_info_types_cruciferous_vegetables">
-        <item>Roquette</item>
-        <item>Bok choy</item>
-        <item>Brocoli (Romanesco)</item>
-        <item>Choux de Bruxelles</item>
-        <item>Chou (vert, rouge, de savoie)</item>
-        <item>Choufleur (blanc, vert, orange, violet)</item>
-        <item>Chou collard</item>
-        <item>Raifort</item>
-        <item>Kale (noir, vert et rouge)</item>
-        <item>Chourave (vert, violet)</item>
-        <item>Feuilles de moutarde</item>
-        <item>Radis</item>
-        <item>Feuilles de navet</item>
-        <item>Cresson</item>
-    </string-array>
-
-    <string-array name="food_info_types_greens">
-        <item>Roquette</item>
-        <item>Feuilles de betteraves</item>
-        <item>Chou collard</item>
-        <item>Kale (noir, vert et rouge)</item>
-        <item>Mesclun (variété de jeunes salades vertes)</item>
-        <item>Feuilles de moutarde</item>
-        <item>Oseille</item>
-        <item>Épinards</item>
-        <item>Bette à carde</item>
-        <item>Feuilles de navet</item>
-    </string-array>
-
-    <string-array name="food_info_types_other_vegetables">
-        <item>Artichauts</item>
-        <item>Asperges</item>
-        <item>Betteraves</item>
-        <item>Poivrons</item>
-        <item>Carottes</item>
-        <item>Maïs</item>
-        <item>Ail</item>
-        <item>Champignons (de Paris, huître, portobello et shiitake)</item>
-        <item>Gombo</item>
-        <item>Oignons</item>
-        <item>Pommes de terre pourpres</item>
-        <item>Citrouille</item>
-        <item>Algues (arame, dulse et nori)</item>
-        <item>Petits pois</item>
-        <item>Courges (délicatesse, été, spaghetti et variétés de courges)</item>
-        <item>Patates douces / ignames</item>
-        <item>Tomates</item>
-        <item>Zucchini</item>
-    </string-array>
-
-    <string-array name="food_info_types_flaxseeds">
-        <item>Graines de lin brun</item>
-        <item>Graines de lin dorées</item>
-    </string-array>
-
-    <string-array name="food_info_types_nuts">
-        <item>Amandes</item>
-        <item>Noix du Brésil</item>
-        <item>Noix de cajou</item>
-        <item>Graines de chia</item>
-        <item>Noisettes</item>
-        <item>Graines de chanvre</item>
-        <item>Noix de macadamia</item>
-        <item>Pacanes</item>
-        <item>Pistaches</item>
-        <item>Graines de citrouille</item>
-        <item>Graines de sésame</item>
-        <item>Graines de tournesol</item>
-        <item>Noix de Grenoble</item>
-    </string-array>
-
-    <string-array name="food_info_types_spices">
-        <item>Allspice</item>
-        <item>Épine-vinette</item>
-        <item>Basilic</item>
-        <item>Feuilles de laurier</item>
-        <item>Cardamome</item>
-        <item>Poudre de chili</item>
-        <item>Coriandre</item>
-        <item>Cannelle</item>
-        <item>Clous de girofle</item>
-        <item>Coriandre</item>
-        <item>Cumin</item>
-        <item>Poudre de cari</item>
-        <item>Aneth</item>
-        <item>Fenugrec</item>
-        <item>Ail</item>
-        <item>Gingembre</item>
-        <item>Raifort</item>
-        <item>Citronnelle</item>
-        <item>Marjolaine</item>
-        <item>Moutarde en poudre</item>
-        <item>Noix de muscade</item>
-        <item>Origan</item>
-        <item>Paprika fumé</item>
-        <item>Persil</item>
-        <item>Poivre</item>
-        <item>Menthe poivrée</item>
-        <item>Romarin</item>
-        <item>Safran</item>
-        <item>sauge</item>
-        <item>Thym</item>
-        <item>Safran des Indes</item>
-        <item>Vanille</item>
-    </string-array>
-
-    <string-array name="food_info_types_whole_grains">
-        <item>Orge</item>
-        <item>Sarrasin</item>
-        <item>Millet</item>
-        <item>Avoine</item>
-        <item>Maïs soufflé</item>
-        <item>Quinoa</item>
-        <item>Seigle</item>
-        <item>Teff</item>
-        <item>Pâtes de blé entier</item>
-    </string-array>
-
-    <string-array name="food_info_types_beverages">
-        <item>Thé noir</item>
-        <item>Thé chai</item>
-        <item>Thé de camomille à la vanille</item>
-        <item>Café</item>
-        <item>Thé Earl Grey</item>
-        <item>Thé vert</item>
-        <item>Thé à l\'hibiscus</item>
-        <item>Chocolat chaud</item>
-        <item>Thé au jasmin</item>
-        <item>Thé au citron</item>
-        <item>Thé Matcha</item>
-        <item>Thé oolong aux fleurs d\'amandes</item>
-        <item>Thé à la menthe poivrée</item>
-        <item>Thé Rooibos</item>
-        <item>Eau</item>
-        <item>Thé blanc</item>
-    </string-array>
-
-    <string-array name="food_info_types_exercise">
-        <item>Faire du vélo</item>
-        <item>Faire du canoë</item>
-        <item>Danser</item>
-        <item>Dodgeball</item>
-        <item>Ski alpin</item>
-        <item>Escrime</item>
-        <item>Marche en montagne</item>
-        <item>Travaux ménagers</item>
-        <item>Patinage sur glace</item>
-        <item>Patin à roues alignées</item>
-        <item>Jonglerie</item>
-        <item>Sauter sur une trampoline</item>
-        <item>Pédalo</item>
-        <item>Jouer au frisbee</item>
-        <item>Patin à roues alignées</item>
-        <item>Tir au panier</item>
-        <item>Déneiger</item>
-        <item>Planche à roulettes</item>
-        <item>Plongée en apnée</item>
-        <item>Surf</item>
-        <item>Natation récréative</item>
-        <item>Tennis (double)</item>
-        <item>Surplace dans l\'eau</item>
-        <item>Marche rapide (6 km/h)</item>
-        <item>Aquagym</item>
-        <item>Ski nautique</item>
-        <item>Travaux de jardinage</item>
-        <item>Yoga</item>
-        <item>Randonnée pédestre</item>
-        <item>Basketball</item>
-        <item>Vélo en montée</item>
-        <item>Entraînement musculaire</item>
-        <item>Ski de fond</item>
-        <item>Football</item>
-        <item>Hockey</item>
-        <item>Jogging</item>
-        <item>Jumping jacks</item>
-        <item>Corde à sauter</item>
-        <item>Lacrosse</item>
-        <item>Push-ups</item>
-        <item>Pull-ups</item>
-        <item>Racquetball</item>
-        <item>Escalade</item>
-        <item>Rugby</item>
-        <item>Course à pied</item>
-        <item>Plongée sous-marine</item>
-        <item>Tennis (individuel)</item>
-        <item>Soccer</item>
-        <item>Patinage de vitesse</item>
-        <item>Squash</item>
-        <item>Step aérobique</item>
-        <item>Pistes de natation</item>
-        <item>Marcher rapidement en montée</item>
-        <item>Jogging en eau profonde</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s d\'humus ou trempette de haricots,</item>
-        <item>%s de haricots cuits, de pois cassés, de lentilles, de tofu ou de tempeh,</item>
-        <item>%s de pois frais ou de lentilles germées</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ tasse</item>
-        <item>½ tasse</item>
-        <item>1 tasse</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g</item>
-        <item>130 g</item>
-        <item>150 g</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s de fruits frais ou congelés</item>
-        <item>%s séché</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ tasse</item>
-        <item>¼ tasse</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g</item>
-        <item>40 g</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 fruit de taille moyenne</item>
-        <item>%s de fruits coupés</item>
-        <item>%s de fruits secs</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item>1 tasse</item>
-        <item>¼ tasse</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>120 g</item>
-        <item>40 g</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s haché</item>
-        <item>%s de pousses de chou ou de brocoli</item>
-        <item>%s1 cuillerée à soupe de raifort</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ tasse</item>
-        <item>¼ tasse</item>
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g</item>
-        <item>12 g</item>
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s cru</item>
-        <item>%s cuit</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 tasse</item>
-        <item>½ tasse</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 g</item>
-        <item>90 g</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s de légumes feuillus crus</item>
-        <item>%s de légumes non feuillus crus ou cuits</item>
-        <item>%s de jus de légumes</item>
-        <item>%s de champignons séchés</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 tasse</item>
-        <item>½ tasse</item>
-        <item>½ tasse</item>
-        <item>¼ tasse</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 g</item>
-        <item>50 g</item>
-        <item>125 ml</item>
-        <item>7 g</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>%s1 cuillrée à soupe moulu</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s de noix ou de graines</item>
-        <item>%s2 cuillerées à soupe de beurre de noix ou de graines</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ tasse</item>
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g</item>
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ de cuillère à café de curcuma</item>
-        <item>%sToutes les autres herbes et épices (sans sel) que vous aimez</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s de céréales chaudes ou de grains, pâtes ou grains de maïs cuits</item>
-        <item>%s de céréales froides</item>
-        <item>%s1 tortilla ou tranche de pain</item>
-        <item>%s½ bagel ou muffin anglais</item>
-        <item>%s de pop-corn éclaté</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ tasse</item>
-        <item>1 tasse</item>
-        <item />
-        <item />
-        <item>3 tasses</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g</item>
-        <item>50 g</item>
-        <item />
-        <item />
-        <item>30 g</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>Un verre (%s)</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>12 onces</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>350 ml</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 minutes d\'activité d\'intensité modérée</item>
-        <item>%s40 minutes d\'activité intense</item>
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
-    </string-array>
-
-    <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
-    </string-array>
-
     <string name="error_cannot_handle_url">Impossible d\'ouvrir l\'url. Veuillez installer un navigateur.</string>
     <string name="channel_reminders_name">Des rappels</string>
-
     <string name="twenty_one_tweaks">21 réglages</string>
     <string name="tweaks">Tweaks</string>
     <string name="daily_tweaks_history">Historique des modifications quotidiennes</string>
@@ -571,12 +88,6 @@
     <string name="task_loading_weights_history_title">Chargement de l\'historique des poids</string>
     <string name="morning">Matin</string>
     <string name="evening">Soir</string>
-    <string name="weight">Poids</string>
-    <string name="tweak_group_meal">À chaque repas</string>
-    <string name="tweak_group_daily">Tous les jours</string>
-    <string name="tweak_group_dailydoses">Prenez vos doses quotidiennes</string>
-    <string name="tweak_group_nightly">Toutes les nuits</string>
-    <string name="about_tweak">À propos de Tweak</string>
     <string name="meal_water">Précharger avec de l\'eau</string>
     <string name="meal_negcal">Précharge des aliments à «calories négatives»</string>
     <string name="meal_vinegar">Incorporer du vinaigre (2 cuillères à café à chaque repas)</string>
@@ -641,6 +152,396 @@
     <string name="complete_intentions_text">Tous les deux mois, créez trois nouvelles intentions d\'implémentation - «si X, puis Y» prévoit d\'exécuter un comportement particulier dans un contexte spécifique - et cochez chacune d\'elles au fur et à mesure que vous les réalisez chaque jour.</string>
     <string name="nightly_fast_text">En raison de nos rythmes circadiens, les aliments consommés la nuit sont plus gras que les mêmes aliments consommés plus tôt dans la journée, donc jeûne tous les soirs pendant au moins douze heures à partir de 19h00. Moins il y a de calories après le coucher du soleil, mieux c\'est.</string>
     <string name="nightly_sleep_text">Cochez cette case si vous dormez au moins sept heures à l\'heure du coucher habituelle.</string>
-    <string name="nightly_trendelenburg_text">Essayez de passer au moins quatre heures par nuit allongé avec votre corps incliné de 6 degrés vers le bas en élevant les montants au pied de votre lit de huit pouces (ou de neuf pouces si vous avez un roi de Californie). Soyez extrêmement prudent lorsque vous sortez du lit, car cela provoque une intolérance orthostatique chez la plupart des gens, même si vous êtes jeune et en bonne santé - ce qui signifie que si vous vous levez trop vite, vous pouvez vous sentir étourdi, faible ou étourdi et tomber et vous blesser. Alors lève-toi lentement. Boire deux tasses d\'eau froide trente minutes avant de se lever peut également aider à prévenir cet effet secondaire potentiellement dangereux. \ N * IMPORTANT: N\'essayez pas du tout à la maison si vous avez des problèmes cardiaques ou pulmonaires, un reflux acide ou des problèmes avec votre cerveau (comme un traumatisme crânien) ou des yeux (même une histoire familiale de glaucome vous disqualifie). N\'essayez pas non plus avant d\'avoir demandé à votre médecin s\'il pense qu\'il est sûr pour vous de dormir à Trendelenburg doux. *</string>
-
+    <string name="nightly_trendelenburg_text">Essayez de passer au moins quatre heures par nuit allongé avec votre corps incliné de 6 degrés vers le bas en élevant les montants au pied de votre lit de huit pouces (ou de neuf pouces si vous avez un roi de Californie). Soyez extrêmement prudent lorsque vous sortez du lit, car cela provoque une intolérance orthostatique chez la plupart des gens, même si vous êtes jeune et en bonne santé - ce qui signifie que si vous vous levez trop vite, vous pouvez vous sentir étourdi, faible ou étourdi et tomber et vous blesser. Alors lève-toi lentement. Boire deux tasses d\'eau froide trente minutes avant de se lever peut également aider à prévenir cet effet secondaire potentiellement dangereux.\n\n* IMPORTANT: N\'essayez pas du tout à la maison si vous avez des problèmes cardiaques ou pulmonaires, un reflux acide ou des problèmes avec votre cerveau (comme un traumatisme crânien) ou des yeux (même une histoire familiale de glaucome vous disqualifie). N\'essayez pas non plus avant d\'avoir demandé à votre médecin s\'il pense qu\'il est sûr pour vous de dormir à Trendelenburg doux. *</string>
+    <string name="weight">Poids</string>
+    <string name="tweak_group_meal">À chaque repas</string>
+    <string name="tweak_group_daily">Tous les jours</string>
+    <string name="tweak_group_dailydoses">Prenez vos doses quotidiennes</string>
+    <string name="tweak_group_nightly">Toutes les nuits</string>
+    <string name="about_tweak">À propos de Tweak</string>
+    <string-array name="about_text_lines">
+        <item>Cette application a été créée par John Slavick.</item>
+        <item />
+        <item>Les bibliothèques open source suivantes sont utilisées: ActiveAndroid, android-iconify, EventBus, LikeAnimation et MPAndroidChart.</item>
+        <item />
+        <item>Un grand merci aux efforts bénévoles des créateurs de l\'application précédente: Chan Kruse, Allan Portera et Sangeeta Kumar.</item>
+    </string-array>
+    <string-array name="backup_instructions_lines">
+        <item>Suivez ces étapes pour restaurer cette sauvegarde dans l\'application Daily Dozen</item>
+        <item />
+        <item>1. L\'application Daily Dozen doit être installée sur votre téléphone Android. Vous pouvez le télécharger ici: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Tapez sur le fichier de sauvegarde joint à ce courriel.</item>
+        <item />
+        <item>3. Sélectionnez Ouvrir avec Daily Dozen</item>
+    </string-array>
+    <string-array name="servings_time_scale_choices">
+        <item>Jour</item>
+        <item>Mois</item>
+        <item>Année</item>
+    </string-array>
+    <string-array name="history_to_generate_choices">
+        <item>1 mois</item>
+        <item>3 mois</item>
+        <item>6 mois</item>
+        <item>1 an</item>
+        <item>2 ans</item>
+        <item>5 ans</item>
+    </string-array>
+    <string-array name="food_info_types_beans">
+        <item>Haricots noirs</item>
+        <item>Haricots à oeil noir</item>
+        <item>Haricots de Lima</item>
+        <item>Cannellini haricots</item>
+        <item>Pois chiches</item>
+        <item>Edamame</item>
+        <item>Pois à écosser</item>
+        <item>Haricots blancs</item>
+        <item>Haricots rouges</item>
+        <item>Lentilles (variétés beluga, françaises et rouges)</item>
+        <item>Miso</item>
+        <item>Haricots blancs</item>
+        <item>Haricots pinto</item>
+        <item>Petits haricots rouges</item>
+        <item>Pois cassés (jaune ou vert)</item>
+        <item>Tempeh</item>
+    </string-array>
+    <string-array name="food_info_types_berries">
+        <item>Baies d\'açai</item>
+        <item>Épine-vinette</item>
+        <item>Mûres</item>
+        <item>Bleuets</item>
+        <item>Cerises (sucrées ou sures)</item>
+        <item>Raisins Concord</item>
+        <item>Canneberges</item>
+        <item>Baies de Goji</item>
+        <item>Kumquats</item>
+        <item>Mûriers</item>
+        <item>Framboises (noires ou rouges)</item>
+        <item>Fraises</item>
+    </string-array>
+    <string-array name="food_info_types_other_fruits">
+        <item>Pommes</item>
+        <item>Abricots secs</item>
+        <item>Avocats</item>
+        <item>Bananes</item>
+        <item>Cantaloups</item>
+        <item>Clémentines</item>
+        <item>Dattes</item>
+        <item>Figues sèches</item>
+        <item>Pamplemousses</item>
+        <item>Melons miel</item>
+        <item>Kiwis</item>
+        <item>Citrons</item>
+        <item>Citrons verts</item>
+        <item>Lychees</item>
+        <item>Mangues</item>
+        <item>Nectarines</item>
+        <item>Oranges</item>
+        <item>Papayes</item>
+        <item>Fruits de la passion</item>
+        <item>Pêches</item>
+        <item>Poires</item>
+        <item>Ananas</item>
+        <item>Prunes (en particulier les prunes noires)</item>
+        <item>Pluots</item>
+        <item>Grenades</item>
+        <item>Prunes</item>
+        <item>Mandarines</item>
+        <item>Melon d\'eau</item>
+    </string-array>
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Roquette</item>
+        <item>Bok choy</item>
+        <item>Brocoli (Romanesco)</item>
+        <item>Choux de Bruxelles</item>
+        <item>Chou (vert, rouge, de savoie)</item>
+        <item>Choufleur (blanc, vert, orange, violet)</item>
+        <item>Chou collard</item>
+        <item>Raifort</item>
+        <item>Kale (noir, vert et rouge)</item>
+        <item>Chourave (vert, violet)</item>
+        <item>Feuilles de moutarde</item>
+        <item>Radis</item>
+        <item>Feuilles de navet</item>
+        <item>Cresson</item>
+    </string-array>
+    <string-array name="food_info_types_greens">
+        <item>Roquette</item>
+        <item>Feuilles de betteraves</item>
+        <item>Chou collard</item>
+        <item>Kale (noir, vert et rouge)</item>
+        <item>Mesclun (variété de jeunes salades vertes)</item>
+        <item>Feuilles de moutarde</item>
+        <item>Oseille</item>
+        <item>Épinards</item>
+        <item>Bette à carde</item>
+        <item>Feuilles de navet</item>
+    </string-array>
+    <string-array name="food_info_types_other_vegetables">
+        <item>Artichauts</item>
+        <item>Asperges</item>
+        <item>Betteraves</item>
+        <item>Poivrons</item>
+        <item>Carottes</item>
+        <item>Maïs</item>
+        <item>Ail</item>
+        <item>Champignons (de Paris, huître, portobello et shiitake)</item>
+        <item>Gombo</item>
+        <item>Oignons</item>
+        <item>Pommes de terre pourpres</item>
+        <item>Citrouille</item>
+        <item>Algues (arame, dulse et nori)</item>
+        <item>Petits pois</item>
+        <item>Courges (délicatesse, été, spaghetti et variétés de courges)</item>
+        <item>Patates douces / ignames</item>
+        <item>Tomates</item>
+        <item>Zucchini</item>
+    </string-array>
+    <string-array name="food_info_types_flaxseeds">
+        <item>Graines de lin brun</item>
+        <item>Graines de lin dorées</item>
+    </string-array>
+    <string-array name="food_info_types_nuts">
+        <item>Amandes</item>
+        <item>Noix du Brésil</item>
+        <item>Noix de cajou</item>
+        <item>Graines de chia</item>
+        <item>Noisettes</item>
+        <item>Graines de chanvre</item>
+        <item>Noix de macadamia</item>
+        <item>Pacanes</item>
+        <item>Pistaches</item>
+        <item>Graines de citrouille</item>
+        <item>Graines de sésame</item>
+        <item>Graines de tournesol</item>
+        <item>Noix de Grenoble</item>
+    </string-array>
+    <string-array name="food_info_types_spices">
+        <item>Allspice</item>
+        <item>Épine-vinette</item>
+        <item>Basilic</item>
+        <item>Feuilles de laurier</item>
+        <item>Cardamome</item>
+        <item>Poudre de chili</item>
+        <item>Coriandre</item>
+        <item>Cannelle</item>
+        <item>Clous de girofle</item>
+        <item>Coriandre</item>
+        <item>Cumin</item>
+        <item>Poudre de cari</item>
+        <item>Aneth</item>
+        <item>Fenugrec</item>
+        <item>Ail</item>
+        <item>Gingembre</item>
+        <item>Raifort</item>
+        <item>Citronnelle</item>
+        <item>Marjolaine</item>
+        <item>Moutarde en poudre</item>
+        <item>Noix de muscade</item>
+        <item>Origan</item>
+        <item>Paprika fumé</item>
+        <item>Persil</item>
+        <item>Poivre</item>
+        <item>Menthe poivrée</item>
+        <item>Romarin</item>
+        <item>Safran</item>
+        <item>sauge</item>
+        <item>Thym</item>
+        <item>Safran des Indes</item>
+        <item>Vanille</item>
+    </string-array>
+    <string-array name="food_info_types_whole_grains">
+        <item>Orge</item>
+        <item>Sarrasin</item>
+        <item>Millet</item>
+        <item>Avoine</item>
+        <item>Maïs soufflé</item>
+        <item>Quinoa</item>
+        <item>Seigle</item>
+        <item>Teff</item>
+        <item>Pâtes de blé entier</item>
+    </string-array>
+    <string-array name="food_info_types_beverages">
+        <item>Thé noir</item>
+        <item>Thé chai</item>
+        <item>Thé de camomille à la vanille</item>
+        <item>Café</item>
+        <item>Thé Earl Grey</item>
+        <item>Thé vert</item>
+        <item>Thé à l\'hibiscus</item>
+        <item>Chocolat chaud</item>
+        <item>Thé au jasmin</item>
+        <item>Thé au citron</item>
+        <item>Thé Matcha</item>
+        <item>Thé oolong aux fleurs d\'amandes</item>
+        <item>Thé à la menthe poivrée</item>
+        <item>Thé Rooibos</item>
+        <item>Eau</item>
+        <item>Thé blanc</item>
+    </string-array>
+    <string-array name="food_info_types_exercise">
+        <item>Faire du vélo</item>
+        <item>Faire du canoë</item>
+        <item>Danser</item>
+        <item>Dodgeball</item>
+        <item>Ski alpin</item>
+        <item>Escrime</item>
+        <item>Marche en montagne</item>
+        <item>Travaux ménagers</item>
+        <item>Patinage sur glace</item>
+        <item>Patin à roues alignées</item>
+        <item>Jonglerie</item>
+        <item>Sauter sur une trampoline</item>
+        <item>Pédalo</item>
+        <item>Jouer au frisbee</item>
+        <item>Patin à roues alignées</item>
+        <item>Tir au panier</item>
+        <item>Déneiger</item>
+        <item>Planche à roulettes</item>
+        <item>Plongée en apnée</item>
+        <item>Surf</item>
+        <item>Natation récréative</item>
+        <item>Tennis (double)</item>
+        <item>Surplace dans l\'eau</item>
+        <item>Marche rapide (6 km/h)</item>
+        <item>Aquagym</item>
+        <item>Ski nautique</item>
+        <item>Travaux de jardinage</item>
+        <item>Yoga</item>
+        <item>Randonnée pédestre</item>
+        <item>Basketball</item>
+        <item>Vélo en montée</item>
+        <item>Entraînement musculaire</item>
+        <item>Ski de fond</item>
+        <item>Football</item>
+        <item>Hockey</item>
+        <item>Jogging</item>
+        <item>Jumping jacks</item>
+        <item>Corde à sauter</item>
+        <item>Lacrosse</item>
+        <item>Push-ups</item>
+        <item>Pull-ups</item>
+        <item>Racquetball</item>
+        <item>Escalade</item>
+        <item>Rugby</item>
+        <item>Course à pied</item>
+        <item>Plongée sous-marine</item>
+        <item>Tennis (individuel)</item>
+        <item>Soccer</item>
+        <item>Patinage de vitesse</item>
+        <item>Squash</item>
+        <item>Step aérobique</item>
+        <item>Pistes de natation</item>
+        <item>Marcher rapidement en montée</item>
+        <item>Jogging en eau profonde</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ tasse d\'humus ou trempette de haricots,</item>
+        <item>½ tasse de haricots cuits, de pois cassés, de lentilles, de tofu ou de tempeh,</item>
+        <item>1 tasse de pois frais ou de lentilles germées</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g d\'humus ou trempette de haricots,</item>
+        <item>130 g de haricots cuits, de pois cassés, de lentilles, de tofu ou de tempeh,</item>
+        <item>150 g de pois frais ou de lentilles germées</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ tasse de fruits frais ou congelés</item>
+        <item>¼ tasse séché</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g de fruits frais ou congelés</item>
+        <item>40 g séché</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item>1 fruit de taille moyenne</item>
+        <item>1 tasse de fruits coupés</item>
+        <item>¼ tasse de fruits secs</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item>1 fruit de taille moyenne</item>
+        <item>120 g de fruits coupés</item>
+        <item>40 g de fruits secs</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ tasse haché</item>
+        <item>¼ tasse de pousses de chou ou de brocoli</item>
+        <item>1 cuillerée à soupe de raifort</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g haché</item>
+        <item>12 g de pousses de chou ou de brocoli</item>
+        <item>1 cuillerée à soupe de raifort</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 tasse cru</item>
+        <item>½ tasse cuit</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g cru</item>
+        <item>90 g cuit</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 tasse de légumes feuillus crus</item>
+        <item>½ tasse de légumes non feuillus crus ou cuits</item>
+        <item>½ tasse de jus de légumes</item>
+        <item>¼ tasse de champignons séchés</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g de légumes feuillus crus</item>
+        <item>50 g de légumes non feuillus crus ou cuits</item>
+        <item>125 ml de jus de légumes</item>
+        <item>7 g de champignons séchés</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item>1 cuillrée à soupe moulu</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item>1 cuillrée à soupe moulu</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ tasse de noix ou de graines</item>
+        <item>2 cuillerées à soupe de beurre de noix ou de graines</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g de noix ou de graines</item>
+        <item>2 cuillerées à soupe de beurre de noix ou de graines</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item>¼ de cuillère à café de curcuma</item>
+        <item>Toutes les autres herbes et épices (sans sel) que vous aimez</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item>¼ de cuillère à café de curcuma</item>
+        <item>Toutes les autres herbes et épices (sans sel) que vous aimez</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ tasse de céréales chaudes ou de grains, pâtes ou grains de maïs cuits</item>
+        <item>1 tasse de céréales froides</item>
+        <item>1 tortilla ou tranche de pain</item>
+        <item>½ bagel ou muffin anglais</item>
+        <item>3 tasses de pop-corn éclaté</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g de céréales chaudes ou de grains, pâtes ou grains de maïs cuits</item>
+        <item>50 g de céréales froides</item>
+        <item>1 tortilla ou tranche de pain</item>
+        <item>½ bagel ou muffin anglais</item>
+        <item>30 g de pop-corn éclaté</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>Un verre (12 onces)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>Un verre (350 ml)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item>90 minutes d\'activité d\'intensité modérée</item>
+        <item>40 minutes d\'activité intense</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item>90 minutes d\'activité d\'intensité modérée</item>
+        <item>40 minutes d\'activité intense</item>
+    </string-array>
 </resources>

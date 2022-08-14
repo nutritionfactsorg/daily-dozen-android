@@ -4,8 +4,6 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
-import java.util.List;
-
 @Table(name = "weights")
 public class Weights extends TruncatableModel {
     @Column(name = "date_id")
@@ -61,19 +59,21 @@ public class Weights extends TruncatableModel {
         return null;
     }
 
-    public static Weights createWeightsIfDoesNotExist(final Day day, float morningWeight, float eveningWeight) {
+    public static boolean createWeightsIfDoesNotExist(final Day day, float morningWeight, float eveningWeight) {
         Weights weights = getWeightsOnDay(day);
 
         if (weights == null) {
             weights = new Weights(day, morningWeight, eveningWeight);
-        } else {
-            weights.setMorningWeight(morningWeight);
-            weights.setEveningWeight(eveningWeight);
         }
 
-        weights.save();
+        if (weights.morningWeight != morningWeight || weights.eveningWeight != eveningWeight) {
+            weights.setMorningWeight(morningWeight);
+            weights.setEveningWeight(eveningWeight);
+            weights.save();
+            return true;
+        }
 
-        return weights;
+        return false;
     }
 
     public static Weights getWeightsOnDay(final Day day) {
@@ -88,39 +88,5 @@ public class Weights extends TruncatableModel {
 
     public static boolean isEmpty() {
         return new Select().from(Weights.class).count() == 0;
-    }
-
-    public static float getAverageWeightInMonth(final int year, final int monthOneBased) {
-        return getAverageWeightForDays(Day.getDaysInYearAndMonth(year, monthOneBased));
-    }
-
-    public static float getAverageWeightInYear(final int year) {
-        return getAverageWeightForDays(Day.getDaysInYear(year));
-    }
-
-    private static float getAverageWeightForDays(final List<Day> days) {
-        if (days == null || days.isEmpty()) {
-            return 0;
-        }
-
-        int totalWeight = 0;
-        int daysWithWeights = 0;
-
-        for (Day day : days) {
-            Weights weights = getWeightsOnDay(day);
-            if (weights != null) {
-                Float averageWeight = weights.getAverageWeight();
-                if (averageWeight != null) {
-                    totalWeight += averageWeight;
-                    daysWithWeights++;
-                }
-            }
-        }
-
-        if (daysWithWeights == 0) {
-            return 0;
-        } else {
-            return (float) totalWeight / daysWithWeights;
-        }
     }
 }

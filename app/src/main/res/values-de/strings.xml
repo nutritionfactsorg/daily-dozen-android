@@ -89,7 +89,7 @@
     <string name="morning">Morgen</string>
     <string name="evening">Abend</string>
     <string name="meal_water">Mahlzeit mit kaltem Wasser beginnen</string>
-    <string name="meal_negcal">Mahlzeit mit "Negativ-Kalorien" beginnen</string>
+    <string name="meal_negcal">Mahlzeit mit \"Negativ-Kalorien\" beginnen</string>
     <string name="meal_vinegar">Essig hinzufügen (2 TL zu jeder Mahlzeit)</string>
     <string name="meal_undistracted">Ungestört essen</string>
     <string name="meal_twentyminutes">20-Minuten-Regel befolgen</string>
@@ -112,7 +112,7 @@
     <string name="debug_generate_weight_data">Gewichtsdaten erzeugen</string>
     <string name="average_weight_on_day">Durchschnittliches Gewicht am Tag</string>
     <string name="meal_water_short">Mahlzeit mit kaltem Wasser beginnen</string>
-    <string name="meal_negcal_short">Mahlzeit mit "Negativ-Kalorien" beginnen</string>
+    <string name="meal_negcal_short">Mahlzeit mit \"Negativ-Kalorien\" beginnen</string>
     <string name="meal_vinegar_short">Essig hinzufügen (2 TL zu jeder Mahlzeit)</string>
     <string name="meal_undistracted_short">Ungestört essen</string>
     <string name="meal_twentyminutes_short">20-Minuten-Regel befolgen</string>
@@ -143,13 +143,13 @@
     <string name="daily_nutriyeast_text">Zwei Teelöffel Bäcker-, Bier- oder Nährhefe enthalten ungefähr die Menge an Beta-1,3/1,6-Glucanen, die in randomisierten, doppelblinden, placebokontrollierten klinischen Studien eine Gewichtsreduktion begünstigt haben.</string>
     <string name="daily_cumin_text">Übergewichtige Frauen, die in einer randomisierten Studie ½ Teelöffel Kreuzkümmel zu ihrem Mittag- und Abendessen hinzufügten, übertrafen die Kontrollgruppe um weitere vier Pfund und 2,5 Zentimeter an der Taille. Es gibt auch Beweise für den Nutzen des Gewürz Safrans, aber eine Prise pro Tag würde einen Euro kosten, während ein Teelöffel Kreuzkümmel weniger als zehn Cent kostet.</string>
     <string name="daily_greentea_text">Trinken Sie täglich drei Tassen grüner Tee zwischen den Mahlzeiten (warten Sie  mindestens eine Stunde nach einer Mahlzeit, um die Eisenaufnahme nicht zu beeinträchtigen). Trinken Sie zu den Mahlzeiten Wasser, schwarzen Kaffee oder Hibiskus-Tee mit Zitronenverbene (im Verhältnis 6:1), aber überschreiten Sie niemals 750 ml Flüssigkeit pro Stunde (wichtig im Hinblick auf die zwei Gläser Wasser vor jeder Mahlzeit). Nutzen Sie die verstärkende Wirkung von Koffein, indem Sie Ihren grünen Tee zusammen mit etwas Gesundem trinkst, das Sie lieber mögen, aber trinken Sie keine großen Mengen an Koffein in den sechs Stunden vor dem Schlafengehen. Verwenden Sie keinen Süßstoff. Wenn Sie Ihren Tee normalerweise mit Honig oder Zucker süßen, versuchen Sie es stattdessen mit Yacon-Sirup.</string>
-    <string name="daily_hydrate_text">Setzen Sie dieses Häkchen, wenn Ihr Urin nie dunkler als blassgelb ist. Bei Zufuhr von Lebensmitteln, die mit Riboflavin (Vitamin B2) angereichert sind (z.B. Hefeflocken), sollten sich Frauen an 9 Tassen ungesüßte Getränke pro Tag orientieren (was durch die zwei Gläser Wasser vor jeder Mahlzeit und die drei Tassen grünen Tee zwischen den Mahlzeiten bereits abgedeckt wird) und Männer an 13 Tassen pro Tag.\n\nWenn Sie Herz- oder Nierenprobleme haben, erhöhen Sie die Flüssigkeitsaufnahme nicht, ohne vorher mit dem Arzt zu sprechen.\n\nDenken Sie daran, dass Diät-Soda zwar kalorienfrei sein mag, aber trotzdem Konsequenzen hat, wie wir im Kapitel "Ohne Zuckerzusatz" (Low in Added Sugar) erfahren haben.</string>
+    <string name="daily_hydrate_text">Setzen Sie dieses Häkchen, wenn Ihr Urin nie dunkler als blassgelb ist. Bei Zufuhr von Lebensmitteln, die mit Riboflavin (Vitamin B2) angereichert sind (z.B. Hefeflocken), sollten sich Frauen an 9 Tassen ungesüßte Getränke pro Tag orientieren (was durch die zwei Gläser Wasser vor jeder Mahlzeit und die drei Tassen grünen Tee zwischen den Mahlzeiten bereits abgedeckt wird) und Männer an 13 Tassen pro Tag.\n\nWenn Sie Herz- oder Nierenprobleme haben, erhöhen Sie die Flüssigkeitsaufnahme nicht, ohne vorher mit dem Arzt zu sprechen.\n\nDenken Sie daran, dass Diät-Soda zwar kalorienfrei sein mag, aber trotzdem Konsequenzen hat, wie wir im Kapitel \"Ohne Zuckerzusatz\" (Low in Added Sugar) erfahren haben.</string>
     <string name="daily_deflourdiet_text">Kreuzen Sie dieses Kästchen jeden Tag an, an dem Sie Vollkornprodukte in Form von unversehrten Körnern zu sich nehmen. Selbst bei 100-prozentigem Vollkorn wird unserem Mikrobiom durch die Pulverisierung die Stärke entzogen, die sonst in unversehrten Zellwänden in unseren Dickdarm transportiert würde.</string>
     <string name="daily_frontload_text">Es ist für den Stoffwechsel vorteilhaft, mehr Kalorien auf einen früheren Zeitpunkt am Tag zu verteilen. Machen Sie also das Frühstück (idealerweise) oder das Mittagessen zu Ihrer größten Mahlzeit des Tages, ganz im Stil von König/Prinz/Bettler.</string>
     <string name="daily_timerestrict_text">Beschränken Sie das Essen auf ein tägliches Zeitfenster Ihrer Wahl von weniger als zwölf Stunden, an das Sie sich sieben Tage die Woche konsequent halten können. Angesichts der Vorteile einer Reduzierung der abendlichen Nahrungsaufnahme für den Biorythmus sollte das Fenster spätestens um 19 Uhr enden.</string>
     <string name="exercise_timing_text">Das tägliche Dutzend empfiehlt für ein langes Leben eine optimale Bewegungsdauer von 90 Minuten mäßig intensiver Aktivität pro Tag. Dies ist auch die optimale Bewegungsdauer für Gewichtsverlust. Bewegung ist immer gut – je mehr davon, desto besser. Es könnte jedoch vorteilhaft sein, die Aktivität in nüchternem Zustand durchzuführen, mit einem Abstand von sechs Stunden zur letzten Mahlzeit. Üblicherweise wäre dies vor dem Frühstück, aber wenn Sie es zeitlich abstimmen, können Sie Ihre Aktivität auch vor einem späten Mittagessen durchführen oder, bei einem frühen Mittagessen, vor dem Abendessen. Diese Zeiten richten sich wohlgemerkt an Nicht-Diabetiker. Diabetiker und Prädiabetiker sollten stattdessen 30 Minuten nach dem Beginn einer Mahlzeit mit einer idealerweise einstündigen Aktivität beginnen, um die Zeitspanne mit dem höchsten Blutzuckerspiegel vollständig abzudecken. Wenn Sie eine einzige Mahlzeit wählen müssten, nach der Sie aktiv werden, wäre es das Abendessen, da die Blutzuckerkontrolle durch den Biorhythmus im Laufe des Tages abnimmt. Im Idealfall wäre das Frühstück die größte Mahlzeit des Tages, und Sie würden Ihre Aktivität danach durchführen – oder, noch besser, nach jeder Mahlzeit.</string>
     <string name="weigh_twice_text">Regelmäßiges Selbstwiegen wird als entscheidend angesehen für die langfristige Gewichtskontrolle. Es gibt jedoch nicht ausreichend Belege für eine bestimmte Häufigkeit des Wiegens. Meine Empfehlung basiert auf der einen Studie, die ergab, dass zweimal täglich – beim Aufwachen und direkt vor dem Schlafengehen – besser zu sein scheint als einmal täglich (etwa 3 Kilogramm Gewichtsverlust über 12 Wochen im Vergleich zu 1 Kilogramm).</string>
-    <string name="complete_intentions_text">Erstellen Sie alle zwei Monate drei neue Umsetzungsabsichten - "wenn X, dann Y"-Pläne, um ein bestimmtes Verhalten in einem bestimmten Kontext auszuführen - und haken Sie jeden dieser Pläne ab, wenn Sie ihn jeden Tag erfüllen.</string>
+    <string name="complete_intentions_text">Erstellen Sie alle zwei Monate drei neue Umsetzungsabsichten - \"wenn X, dann Y\"-Pläne, um ein bestimmtes Verhalten in einem bestimmten Kontext auszuführen - und haken Sie jeden dieser Pläne ab, wenn Sie ihn jeden Tag erfüllen.</string>
     <string name="nightly_fast_text">Aufgrund unseres Biorhytmus begünstigt das Essen am Abend eine Gewichtszunahme mehr als die gleiche Anzahl an Kalorien früher am Tag. Fasten Sie also jeden Abend für mindestens zwölf Stunden, beginnend spätestens um 19 Uhr. Je weniger Kalorien nach Sonnenuntergang, desto besser.</string>
     <string name="nightly_sleep_text">Setzen Sie dieses Häkchen, wenn Sie mindestens 7 Stunden geschlafen haben und zur üblichen Zeit ins Bett gegangen sind.</string>
     <string name="nightly_trendelenburg_text">Versuchen Sie, mindestens vier Stunden pro Nacht so zu liegen, dass Ihr Körper von Fuß bis Kopf um etwa sechs Grad geneigt ist, indem Sie das Bett am Fußende um 20 Zentimeter anheben (bzw. um 23 Zentimeter bei einer Bettlänge von mehr als 210 Zentimeter). Seien Sie beim Aufstehen jedoch äußerst vorsichtig, da dies bei den meisten Menschen zu einer orthostatischen Unverträglichkeit führt, auch wenn sie jung und gesund sind. Wenn Sie also zu schnell aufstehen, können Sie sich schwindelig, ohnmächtig oder benommen fühlen und Sie könnten fallen und sich verletzen. Stehen Sie also langsam auf. Zwei Tassen kaltes Wasser 30 Minuten vor dem Aufstehen können auch dazu beitragen, diese potenziell gefährliche Nebenwirkung zu vermeiden.\n\n*WICHTIG: Versuchen Sie dies auf keinen Fall zu Hause, wenn Sie Herz- oder Lungenprobleme haben, an gastroösophagealem Reflux leiden oder Probleme mit Ihrem Gehirn (z.B. Schädel-Hirn-Trauma) oder Ihren Augen haben (eine Glaukom-Erkrankung in der Familie genügt bereits). Versuchen Sie dies auch nicht, ohne Ihren Arzt zu fragen, ob er der Meinung ist, dass Sie in leichter Trendelenburg-Lage sicher schlafen können.*</string>
@@ -160,9 +160,11 @@
     <string name="tweak_group_nightly">Jede Nacht</string>
     <string name="about_tweak">Über Optimierungen</string>
     <string-array name="about_text_lines">
-        <item>This app was created by John Slavick.</item>
-        <item/>
-        <item>The following open source libraries are used: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>Diese Anwendung wurde von John Slavick erstellt.</item>
+        <item />
+        <item>Die folgenden Open-Source-Bibliotheken werden verwendet: ActiveAndroid, android-iconify, EventBus, LikeAnimation und MPAndroidChart.</item>
+        <item />
+        <item>Besonderer Dank gilt den freiwilligen Helfern, die die vorherige App entwickelt haben: Chan Kruse, Allan Portera und Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
         <item>Gehen Sie folgendermaßen vor, um diese Sicherung in der Daily Dozen-App wiederherzustellen</item>
@@ -434,166 +436,112 @@
         <item>Zügig bergauf gehen</item>
         <item>Wasserjogging</item>
     </string-array>
-    <string-array name="food_info_serving_sizes_beans">
-        <item>%s Hummus oder Bohnendip</item>
-        <item>%s gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
-        <item>1%s frische Erbsen oder gekeimte Linsen</item>
-    </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ Tasse</item>
-        <item>½ Tasse</item>
-        <item> Tasse</item>
+        <item>¼ Tasse Hummus oder Bohnendip</item>
+        <item>½ Tasse gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
+        <item>1 Tasse frische Erbsen oder gekeimte Linsen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60g</item>
-        <item>130g</item>
-        <item>50g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_berries">
-        <item>%s frisch oder gefroren</item>
-        <item>%s getrocknet</item>
+        <item>60g Hummus oder Bohnendip</item>
+        <item>130g gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
+        <item>150g frische Erbsen oder gekeimte Linsen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ Tasse</item>
-        <item>¼ Tasse</item>
+        <item>½ Tasse frisch oder gefroren</item>
+        <item>¼ Tasse getrocknet</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60g</item>
-        <item>40g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_fruits">
-        <item>%s1 mittelgroße Frucht</item>
-        <item>1%s geschnittene Früchte</item>
-        <item>%s getrocknete Früchte</item>
+        <item>60g frisch oder gefroren</item>
+        <item>40g getrocknet</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
-        <item />
-        <item> Tasse</item>
-        <item>¼ Tasse</item>
+        <item>1 mittelgroße Frucht</item>
+        <item>1 Tasse geschnittene Früchte</item>
+        <item>¼ Tasse getrocknete Früchte</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
-        <item />
-        <item>20g</item>
-        <item>60g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_cruciferous_vegetables">
-        <item>%s gehackt</item>
-        <item>%s Rosenkohl oder Brokkolisprossen</item>
-        <item>1 Esslöffel %s Meerrettich</item>
+        <item>1 mittelgroße Frucht</item>
+        <item>120g geschnittene Früchte</item>
+        <item>60g getrocknete Früchte</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ Tasse</item>
-        <item>¼ Tasse</item>
-        <item />
+        <item>½ Tasse gehackt</item>
+        <item>¼ Tasse Rosenkohl oder Brokkolisprossen</item>
+        <item>1 Esslöffel Meerrettich</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g</item>
-        <item>12 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_greens">
-        <item>%s roh</item>
-        <item>%s gekocht</item>
+        <item>30–80 g gehackt</item>
+        <item>12 g Rosenkohl oder Brokkolisprossen</item>
+        <item>1 Esslöffel (15 ml) Meerrettich</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 Tasse</item>
-        <item>½ Tasse</item>
+        <item>1 Tasse roh</item>
+        <item>½ Tasse gekocht</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60g</item>
-        <item>90g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_other_vegetables">
-        <item>%s rohes Blattgemüse</item>
-        <item>%s rohes oder gekochtes nicht-blättriges Gemüse</item>
-        <item>%s Gemüsesaft</item>
-        <item>%s getrocknete Pilze</item>
+        <item>60g roh</item>
+        <item>90g gekocht</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
-        <item>1 Tasse</item>
-        <item>½ Tasse</item>
-        <item>½ Tasse</item>
-        <item>¼ Tasse</item>
+        <item>1 Tasse rohes Blattgemüse</item>
+        <item>½ Tasse rohes oder gekochtes nicht-blättriges Gemüse</item>
+        <item>½ Tasse Gemüsesaft</item>
+        <item>¼ Tasse getrocknete Pilze</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>60 g</item>
-        <item>50 g</item>
-        <item>125 ml</item>
-        <item>7 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_flaxseeds">
-        <item>1%sl gemahlen</item>
+        <item>60 g rohes Blattgemüse</item>
+        <item>50 g rohes oder gekochtes nicht-blättriges Gemüse</item>
+        <item>125 ml Gemüsesaft</item>
+        <item>7 g getrocknete Pilze</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item> Esslöffe</item>
+        <item>1 Esslöffel gemahlen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item>5m</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_nuts">
-        <item>%s Nüsse oder Samen</item>
-        <item>%s2 Esslöffel (30 ml) Nuß- oder Samenmus</item>
+        <item>15ml gemahlen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ Tasse</item>
-        <item />
+        <item>¼ Tasse Nüsse oder Samen</item>
+        <item>2 Esslöffel (30 ml) Nuß- oder Samenmus</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g</item>
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_spices">
-        <item>%s¼ Teelöffel (1,2 ml) Kurkuma</item>
-        <item>%sAlle anderen (salzfreien) Kräuter und Gewürze, die Sie mögen</item>
+        <item>30 g Nüsse oder Samen</item>
+        <item>2 Esslöffel (30 ml) Nuß- oder Samenmus</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
-        <item />
-        <item />
+        <item>¼ Teelöffel (1,2 ml) Kurkuma</item>
+        <item>Alle anderen (salzfreien) Kräuter und Gewürze, die Sie mögen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
-        <item />
-        <item />
-    </string-array>
-    <string-array name="food_info_serving_sizes_whole_grains">
-        <item>%s Getreideflockenbrei oder gekochte Körner, Nudeln oder Maiskörner</item>
-        <item>%s Getreideflocken</item>
-        <item>%s1 Tortilla oder 1 Scheibe Brot</item>
-        <item>%s½ Bagel oder ½ Englischer Muffin</item>
-        <item>3%s Popcorn</item>
+        <item>¼ Teelöffel (1,2 ml) Kurkuma</item>
+        <item>Alle anderen (salzfreien) Kräuter und Gewürze, die Sie mögen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ Tasse</item>
-        <item>1 Tasse</item>
-        <item />
-        <item />
-        <item> Tassen</item>
+        <item>½ Tasse Getreideflockenbrei oder gekochte Körner, Nudeln oder Maiskörner</item>
+        <item>1 Tasse Getreideflocken</item>
+        <item>1 Tortilla oder 1 Scheibe Brot</item>
+        <item>½ Bagel oder ½ Englischer Muffin</item>
+        <item>3 Tassen Popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g</item>
-        <item>50 g</item>
-        <item />
-        <item />
-        <item>0 g</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_beverages">
-        <item>1½ Gläser (%s)</item>
+        <item>100 g Getreideflockenbrei oder gekochte Körner, Nudeln oder Maiskörner</item>
+        <item>50 g Getreideflocken</item>
+        <item>1 Tortilla oder 1 Scheibe Brot</item>
+        <item>½ Bagel oder ½ Englischer Muffin</item>
+        <item>30 g Popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
-        <item>12 Unzen</item>
+        <item>1½ Gläser (12 Unzen)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>350ml</item>
-    </string-array>
-    <string-array name="food_info_serving_sizes_exercise">
-        <item>%s90 Minuten Aktivität mit mäßiger Intensität</item>
-        <item>%s40 Minuten Aktivität mit hoher Intensität</item>
+        <item>1½ Gläser (350ml)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
-        <item />
-        <item />
+        <item>90 Minuten Aktivität mit mäßiger Intensität</item>
+        <item>40 Minuten Aktivität mit hoher Intensität</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_metric">
-        <item />
-        <item />
+        <item>90 Minuten Aktivität mit mäßiger Intensität</item>
+        <item>40 Minuten Aktivität mit hoher Intensität</item>
     </string-array>
 </resources>
