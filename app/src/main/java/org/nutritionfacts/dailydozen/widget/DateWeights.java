@@ -150,10 +150,8 @@ public class DateWeights extends LinearLayout {
 
                     if (morningWeight > 0 || eveningWeight > 0) {
                         day = Day.createDayIfDoesNotExist(day);
-                        boolean weightSaved = Weights.createWeightsIfDoesNotExist(day, morningWeight, eveningWeight);
-                        if (weightSaved) {
-                            Timber.d("Saving morning weight [%s] and evening weight [%s]", morningWeight, eveningWeight);
-                        }
+                        Weights.createWeightsIfDoesNotExist(day, morningWeight, eveningWeight);
+                        Timber.d("Saving morning weight [%s] and evening weight [%s]", morningWeight, eveningWeight);
                     }
                 } catch (NumberFormatException e) {
                     Timber.e(e);

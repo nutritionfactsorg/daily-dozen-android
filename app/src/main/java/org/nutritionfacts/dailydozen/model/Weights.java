@@ -64,16 +64,14 @@ public class Weights extends TruncatableModel {
 
         if (weights == null) {
             weights = new Weights(day, morningWeight, eveningWeight);
-        }
-
-        if (weights.morningWeight != morningWeight || weights.eveningWeight != eveningWeight) {
+        } else {
             weights.setMorningWeight(morningWeight);
             weights.setEveningWeight(eveningWeight);
-            weights.save();
-            return true;
         }
 
-        return false;
+        weights.save();
+
+        return true;
     }
 
     public static Weights getWeightsOnDay(final Day day) {
