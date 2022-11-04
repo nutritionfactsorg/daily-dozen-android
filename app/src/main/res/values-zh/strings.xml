@@ -466,13 +466,15 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½杯切碎的白花椰菜</item>
-        <item>¼杯球芽甘藍或青花椰苗</item>
-        <item>1大匙辣根</item>
+        <item>½杯孢子甘藍苗</item>
+        <item>¼杯花椰菜苗</item>
+        <item>一大匙辣根</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>½杯切碎的白花椰菜</item>
-        <item>¼杯球芽甘藍或青花椰苗</item>
-        <item>1大匙辣根</item>
+        <item>78克孢子甘藍苗</item>
+        <item>14克花椰菜苗</item>
+        <item>一大匙辣根</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1杯生菜</item>

@@ -648,12 +648,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ cup chopped</item>
-        <item>¼ cup Brussels or broccoli sprouts</item>
+        <item>½ cup Brussels sprouts</item>
+        <item>¼ cup Broccoli sprouts</item>
         <item>1 tablespoon horseradish</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g chopped</item>
-        <item>12 g Brussels or broccoli sprouts</item>
+        <item>78 g Brussels sprouts</item>
+        <item>14 g Broccoli sprouts</item>
         <item>1 tablespoon horseradish</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

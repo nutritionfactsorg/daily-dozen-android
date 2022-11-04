@@ -466,12 +466,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ чашки нарезанных</item>
-        <item>¼ чашки брюссельской капусты или брокколи</item>
+        <item>½ чашки брюссельской капусты</item>
+        <item>¼ чашки проростков брокколи</item>
         <item>1 столовая ложка хрена</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 г нарезанных</item>
-        <item>12 г брюссельской капусты или брокколи</item>
+        <item>78 г брюссельской капусты</item>
+        <item>14 г проростков брокколи</item>
         <item>1 столовая ложка хрена</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

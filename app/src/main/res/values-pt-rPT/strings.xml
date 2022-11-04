@@ -466,13 +466,15 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ xícara de crucíferos picados</item>
-        <item>½ xícara de rebentos de brócolos ou couve-de-bruxelas</item>
-        <item>1 colher de sopa de rábano</item>
+        <item>½ chávena de rebentos de Couves-de-Bruxelas</item>
+        <item>¼ chávena de rebentos de Brócolos</item>
+        <item>1 colher de sopa de Rábano Silvestre</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g de crucíferos picados</item>
-        <item>44 g de rebentos de brócolos ou couve-de-bruxelas</item>
-        <item>1 colher de sopa de rábano</item>
+        <item>78 g de rebentos de Couves-de-Bruxelas</item>
+        <item>14 g de rebentos de Brócolos</item>
+        <item>1 colher de sopa de Rábano Sivlestre</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1 xícara de verduras cruas</item>

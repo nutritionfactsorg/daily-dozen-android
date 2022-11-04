@@ -466,12 +466,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ cană tocate</item>
-        <item>¼ cană germeni de varză de Bruxelles sau de broccoli</item>
+        <item>½ cană varză de Bruxelles</item>
+        <item>¼ cană germeni de broccoli</item>
         <item>1 lingură de hrean</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g tocate</item>
-        <item>12 g germeni de varză de Bruxelles sau de broccoli</item>
+        <item>78 g varza de Bruxelles</item>
+        <item>14 g muguri de broccoli</item>
         <item>1 lingură de hrean</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

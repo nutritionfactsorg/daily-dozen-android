@@ -466,13 +466,15 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ Tasse gehackt</item>
-        <item>¼ Tasse Rosenkohl oder Brokkolisprossen</item>
-        <item>1 Esslöffel Meerrettich</item>
+        <item>1/2 Tasse Rosenkohl</item>
+        <item>1/4 Tasse Broccolisprossen</item>
+        <item>1 Eßlöffel Meerrettich</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g gehackt</item>
-        <item>12 g Rosenkohl oder Brokkolisprossen</item>
-        <item>1 Esslöffel (15 ml) Meerrettich</item>
+        <item>78 g Rosenkohl</item>
+        <item>14 g Broccolisprossen</item>
+        <item>1 Eßlöffel Meerrettich</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1 Tasse roh</item>
