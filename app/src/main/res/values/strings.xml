@@ -24,6 +24,7 @@
     <string name="moving_average">Moving Average</string>
     <string name="about">About</string>
     <string name="about_this_app">About this app</string>
+    <string name="about_translators">Special thanks to our volunteer translators: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Latest Videos</string>
     <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
     <string name="title_how_not_to_die" translatable="false">How Not to Die</string>

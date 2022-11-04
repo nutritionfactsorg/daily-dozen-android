@@ -24,6 +24,7 @@
     <string name="moving_average">Media móvil</string>
     <string name="about">Conócenos</string>
     <string name="about_this_app">Sobre esta app</string>
+    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Ángela Graña (es).</string>
     <string name="latest_videos">Videos más recientes</string>
     <string name="donate">Donación</string>
     <string name="subscribe">Suscríbete</string>

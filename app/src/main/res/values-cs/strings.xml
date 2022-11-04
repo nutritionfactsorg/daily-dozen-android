@@ -24,6 +24,7 @@
     <string name="moving_average">Pohyblivý průměr</string>
     <string name="about">Menu</string>
     <string name="about_this_app">O této aplikaci</string>
+    <string name="about_translators">Zvláštní poděkování patří našim dobrovolným překladatelům: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (on), Ruth Levy (on), Joanna Klopotek (pl), Tania Bassi ( pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Nejnovější videa</string>
     <string name="donate">Darovat</string>
     <string name="subscribe">Předplatit si</string>
