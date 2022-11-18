@@ -24,6 +24,7 @@
     <string name="moving_average">Κινητός Μέσος Όρος</string>
     <string name="about">Σχετικά</string>
     <string name="about_this_app">Σχετικά με την εφαρμογή</string>
+    <string name="about_translators">Ιδιαίτερες ευχαριστίες στους εθελοντές μεταφραστές μας: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Τελευταία Βίντεο</string>
     <string name="donate">Δωρεά</string>
     <string name="subscribe">Εγγραφή</string>
@@ -466,12 +467,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ φλιτζάνι ψιλοκομμένα</item>
-        <item>¼ φλιτζάνι λαχανάκι Βρυξέλλών ή φύτρα μπρόκολου</item>
+        <item>½ φλιτζάνι λαχανάκια Βρυξελλών</item>
+        <item>¼ φλιτζάνι φύτρα μπρόκολου</item>
         <item>1 κουταλιά της σούπας χρένο</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 γραμμάρια ψιλοκομμένα</item>
-        <item>12 γραμμάρια λαχανάκι Βρυξέλλών ή φύτρα μπρόκολου</item>
+        <item>78 γραμμάρια λαχανάκια Βρυξελλών</item>
+        <item>14 γραμμάρια φύτρα μπρόκολου</item>
         <item>1 κουταλιά της σούπας χρένο</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

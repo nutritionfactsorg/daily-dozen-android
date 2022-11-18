@@ -24,6 +24,7 @@
     <string name="moving_average">Media móvil</string>
     <string name="about">Conócenos</string>
     <string name="about_this_app">Sobre esta app</string>
+    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Ángela Graña (es).</string>
     <string name="latest_videos">Videos más recientes</string>
     <string name="donate">Donación</string>
     <string name="subscribe">Suscríbete</string>
@@ -74,9 +75,9 @@
     <string name="daily_reminder_settings">Potenciadores del recordatorio diario</string>
     <string name="enable_daily_reminder">Activar el recordatorio diario</string>
     <string name="remind_me_at">Recuérdamelo a las</string>
-    <string name="videos">Videos</string>
+    <string name="videos">VIDEOS</string>
     <string name="units">Sistema</string>
-    <string name="imperial">Imperial</string>
+    <string name="imperial">IMPERIAL</string>
     <string name="metric">MÉTRICO</string>
     <string name="error_cannot_handle_url">No se puede abrir la URL. Debes instalar un navegador.</string>
     <string name="channel_reminders_name">Recordatorios</string>
@@ -466,12 +467,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ taza picadas</item>
-        <item>¼ taza de coles de Bruselas o brotes de brócoli</item>
+        <item>½ taza de coles de Bruselas</item>
+        <item>¼ taza de brotes de brócoli</item>
         <item>1 cucharada de rábano picante</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g picadas</item>
-        <item>12 g de coles de Bruselas o brotes de brócoli</item>
+        <item>78 g de coles de Bruselas</item>
+        <item>14 g de brotes de brócoli</item>
         <item>1 cucharada de rábano picante</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

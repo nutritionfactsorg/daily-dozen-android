@@ -24,6 +24,7 @@
     <string name="moving_average">плъзгаща се средна</string>
     <string name="about">Относно</string>
     <string name="about_this_app">Информация за приложението</string>
+    <string name="about_translators">Специални благодарности на нашите преводачи доброволци: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Най-новите видео клипове</string>
     <string name="donate">Направете дарение</string>
     <string name="subscribe">Абонирай се</string>
@@ -466,12 +467,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ чаша нарязани цветнолистни</item>
-        <item>¼ чаша брюкселско зеле или броколи</item>
+        <item>½ чаша брюкселско зеле</item>
+        <item>¼ чаша кълнове от броколи</item>
         <item>1 супена лъжица хрян</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 грам нарязани цветнолистни</item>
-        <item>12 грам брюкселско зеле или броколи</item>
+        <item>78 грам брюкселско зеле</item>
+        <item>14 грам кълнове от броколи</item>
         <item>1 супена лъжица хрян</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

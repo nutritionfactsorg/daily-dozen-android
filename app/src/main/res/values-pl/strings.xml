@@ -24,6 +24,7 @@
     <string name="moving_average">Średnia ruchoma</string>
     <string name="about">O aplikacji</string>
     <string name="about_this_app">O aplikacji</string>
+    <string name="about_translators">Specjalne podziękowania dla naszych tłumaczy-wolontariuszy: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Najnowsze filmy</string>
     <string name="donate">Donacja</string>
     <string name="subscribe">Subskrybuj</string>
@@ -53,7 +54,7 @@
     <string name="dialog_streaks_title">Dodano nową funkcję postępu!</string>
     <string name="dialog_streaks_message">Twoja baza danych zostanie uaktualniona by wspierać nową funkcję postępu.</string>
     <string name="dialog_no_email_apps_title">Nie znaleziono aplikacji poczty e-mail</string>
-    <string name="dialog_no_email_apps_message">Tworzenie kopii zapasowych twoich danych wymaga zainstalowania aplikacji do obsługi poczty e-mail, aby można było wysłać do siebie plik kopii zapasowej \".csv\" . Zainstaluj aplikację e-mail i spróbuj ponownie.</string>
+    <string name="dialog_no_email_apps_message">Tworzenie kopii zapasowych twoich danych wymaga zainstalowania aplikacji do obsługi poczty e-mail, aby można było wysłać do siebie plik kopii zapasowej “.csv” . Zainstaluj aplikację e-mail i spróbuj ponownie.</string>
     <string name="debug_generate_random_data">Wygeneruj losowe dane</string>
     <string name="debug_generate_full_data">Wygeneruj wszystie dane</string>
     <string name="debug_generate_data_message">Wszystkie istniejące dane zostaną zastąpione. Czy chcesz kontynuować?</string>
@@ -145,7 +146,7 @@
     <string name="daily_greentea_text">Pij trzy szklanki dziennie między posiłkami (odczekaj co najmniej godzinę po posiłku, aby nie zakłócać wchłaniania żelaza). Podczas posiłków pij wodę, czarną kawę lub herbatę z hibiskusa zmieszaną w stosunku 6:1 z lippią trójlistną, ale nigdy nie przekraczaj trzech szklanek płynu na godzinę (ważne, biorąc pod uwagę moje zalecenia o piciu przed posiłkami). Skorzystaj ze wzmacniającego działania kofeiny, pijąc zieloną herbatę razem z czymś zdrowym, co chciałbyś/-abyś bardziej polubić, ale nie spożywaj dużych ilości kofeiny na sześć godzin przed snem. Najlepiej jest pić herbatę bez słodzika, ale jeśli zazwyczaj słodzisz herbatę miodem lub cukrem, spróbuj zamiast tego syropu Yacon.</string>
     <string name="daily_hydrate_text">Zaznacz to pole, jeśli Twój mocz nigdy nie jest ciemniejszy niż bladożółty. Zwróć uwagę, że jeśli jesz pokarmy wzbogacone ryboflawiną (takie jak odżywcze drożdże), to zamiast tego spożywaj dziennie dziewięć szklanek niesłodzonych napojów dla kobiet (tutaj wystarczy stosować zalecenia dotyczące zielonej herbaty i wody) lub trzynaście szklanek dziennie dla mężczyzn. Jeśli masz problemy z sercem lub nerkami, nie zwiększaj spożycia płynów bez uprzedniej konsultacji z lekarzem. Pamiętaj, że picie napojów dietetycznych może nie zwiększa spożycia kalorii, ale nie jest pozbawione konsekwencji, o czym dowiedzieliśmy się w sekcji „Niska zawartość dodanego cukru”.</string>
     <string name="daily_deflourdiet_text">Zaznacz to pole każdego dnia, kiedy Twoje porcje pełnoziarnistych zbóż są dostarczone w postaci całych ziaren. Mielenie nawet stuprocentowo pełnoziarnistych zbóż pozbawia nasz mikrobiom skrobi, która w  przeciwnym razie byłaby przetransportowana do naszej okrężnicy zamknięta w nienaruszonych ścianach komórkowych.</string>
-    <string name="daily_frontload_text">Spożycie większej ilości kalorii wcześniej w ciągu dnia przynosi korzyści metaboliczne, więc (najlepiej) przygotuj śniadanie lub obiad jako największy posiłek dnia - w stylu prawdziwego króla / księcia / żebraka (po ang. mówi się „śniadanie jak król, obiad jak książę, a kolację jak żebrak.\")</string>
+    <string name="daily_frontload_text">Spożycie większej ilości kalorii wcześniej w ciągu dnia przynosi korzyści metaboliczne, więc (najlepiej) przygotuj śniadanie lub obiad jako największy posiłek dnia - w stylu prawdziwego króla / księcia / żebraka (po ang. mówi się „śniadanie jak król, obiad jak książę, a kolację jak żebrak.”)</string>
     <string name="daily_timerestrict_text">Staraj się jeść w wybranym przez siebie dziennym przedziale czasowym poniżej dwunastu godzin, którego możesz przestrzegać konsekwentnie - siedem dni w tygodniu. Biorąc pod uwagę dobowe korzyści wynikające z ograniczenia wieczornego odżywiania się, okienko powinno zamknąć się przed godziną 19:00.</string>
     <string name="exercise_timing_text">Zalecenia Codziennego Tuzina dotyczące optymalnego czasu trwania ćwiczeń na długowieczność to dziewięćdziesiąt minut umiarkowanie intensywnych ćwiczeń dziennie, co jest również optymalnym czasem trwania ćwiczeń dla utraty wagi. Każda pora jest dobra, a im więcej ćwiczeń, tym lepiej, ale ćwiczenia na czczo (przynajmniej sześć godzin po ostatnim posiłku) są bardziej korzystne. Zwykle byłoby to przed śniadaniem, ale jeśli dobrze to zaplanować, możesz ćwiczyć w południe przed późnym obiadem lub, jeśli obiad jest spożywany wystarczająco wcześnie, przed kolacją. To jest czas odpowiedni dla osób które nie mają cukrzycy. Diabetycy i osoby w stanie przedcukrzycowym powinny zamiast tego rozpocząć ćwiczenia 30 minut po rozpoczęciu posiłku i najlepiej ćwiczyć przez co najmniej godzinę, aby czas ćwiczeń obejmował szczytowy poziom cukru we krwi. Gdybyś musiał/-a wybrać pojedynczy posiłek, po którym ćwiczysz, byłby to obiad - ze względu na dobowy rytm kontroli poziomu cukru we krwi, który słabnie wraz z dniem. Najlepiej byłoby jednak, gdyby śniadanie było największym posiłkiem w ciągu dnia, a ćwiczenia następowały po nim - lub jeszcze lepiej, po każdym posiłku.</string>
     <string name="weigh_twice_text">Uważa się, że regularne ważenie się ma kluczowe znaczenie dla długoterminowej kontroli masy ciała, choć nie ma wystarczających dowodów na poparcie określonej częstotliwości ważenia. Moje zalecenie opiera się na jednym badaniu, które wykazało, że ważenie się dwa razy dziennie - po przebudzeniu i tuż przed spaniem - wydawało się lepsze niż raz dziennie (około 2,70 kg w porównaniu do 0,90 kg utraty wagi w ciągu dwunastu tygodni).</string>
@@ -466,12 +467,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ szklanki posiekanych</item>
-        <item>¼ szklanki brukselek lub kiełków brokułów</item>
+        <item>½ szklanki brukselki</item>
+        <item>¼ szklanki kiełków brokułu</item>
         <item>1 łyżka chrzanu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g posiekanych</item>
-        <item>12 g brukselek lub kiełków brokułów</item>
+        <item>78 g brukselki</item>
+        <item>14 g  kiełków brokułu</item>
         <item>1 łyżka chrzanu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

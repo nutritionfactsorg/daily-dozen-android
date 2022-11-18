@@ -24,6 +24,7 @@
     <string name="moving_average">Media mișcării</string>
     <string name="about">Despre</string>
     <string name="about_this_app">Despre această aplicație</string>
+    <string name="about_translators">Mulțumiri speciale traducătorilor noștri voluntari: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Ultimele videoclipuri</string>
     <string name="donate">Donați</string>
     <string name="subscribe">Abonați-vă</string>
@@ -466,12 +467,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ cană tocate</item>
-        <item>¼ cană germeni de varză de Bruxelles sau de broccoli</item>
+        <item>½ cană varză de Bruxelles</item>
+        <item>¼ cană germeni de broccoli</item>
         <item>1 lingură de hrean</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g tocate</item>
-        <item>12 g germeni de varză de Bruxelles sau de broccoli</item>
+        <item>78 g varza de Bruxelles</item>
+        <item>14 g muguri de broccoli</item>
         <item>1 lingură de hrean</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

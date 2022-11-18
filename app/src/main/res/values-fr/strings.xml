@@ -24,6 +24,7 @@
     <string name="moving_average">Moyenne mobile</string>
     <string name="about">À propos</string>
     <string name="about_this_app">À propos de cette application</string>
+    <string name="about_translators">Remerciements particuliers à nos traducteurs bénévoles : Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Dernières vidéos</string>
     <string name="donate">Faire un don</string>
     <string name="subscribe">Souscrire</string>
@@ -466,12 +467,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ tasse haché</item>
-        <item>¼ tasse de pousses de chou ou de brocoli</item>
+        <item>½ tasse de choux de Bruxelles</item>
+        <item>¼ tasse de pousses de brocoli</item>
         <item>1 cuillerée à soupe de raifort</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g haché</item>
-        <item>12 g de pousses de chou ou de brocoli</item>
+        <item>78 g de choux de Bruxelles</item>
+        <item>14 g de pousses de brocoli</item>
         <item>1 cuillerée à soupe de raifort</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

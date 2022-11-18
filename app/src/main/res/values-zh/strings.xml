@@ -24,6 +24,7 @@
     <string name="moving_average">移動平均數</string>
     <string name="about">關於我們</string>
     <string name="about_this_app">關於這個應用程式</string>
+    <string name="about_translators">特別鳴謝翻譯志願者：Ricard Soler Roger（ca）、Luděk Bouška（cs）、Lenka Lukacová（cs）、Anke Schliessmann（de）、Doron Barak（he）、Ruth Levy（he）、Joanna Klopotek（pl）、Tania Bassi（pt-BR）、João Madureira（pr-PT）、Evgeniya Lyakh（ru）。</string>
     <string name="latest_videos">最新影片</string>
     <string name="donate">捐款</string>
     <string name="subscribe">訂閱</string>
@@ -466,13 +467,15 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½杯切碎的白花椰菜</item>
-        <item>¼杯球芽甘藍或青花椰苗</item>
-        <item>1大匙辣根</item>
+        <item>½杯孢子甘藍苗</item>
+        <item>¼杯花椰菜苗</item>
+        <item>一大匙辣根</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>½杯切碎的白花椰菜</item>
-        <item>¼杯球芽甘藍或青花椰苗</item>
-        <item>1大匙辣根</item>
+        <item>78克孢子甘藍苗</item>
+        <item>14克花椰菜苗</item>
+        <item>一大匙辣根</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1杯生菜</item>
