@@ -70,7 +70,7 @@ public class NotificationUtil {
     private static PendingIntent getUpdateReminderClickedIntent(final Context context) {
         return TaskStackBuilder.create(context)
                 .addNextIntent(new Intent(context, MainActivity.class))
-                .getPendingIntent(UPDATE_REMINDER_ID, PendingIntent.FLAG_UPDATE_CURRENT);
+                .getPendingIntent(UPDATE_REMINDER_ID, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
     private static PendingIntent getNotificationSettingsClickedIntent(final Context context) {
@@ -79,7 +79,7 @@ public class NotificationUtil {
 
         return TaskStackBuilder.create(context)
                 .addNextIntent(openNotificationSettingsIntent)
-                .getPendingIntent(NOTIFICATION_SETTINGS_ID, PendingIntent.FLAG_UPDATE_CURRENT);
+                .getPendingIntent(NOTIFICATION_SETTINGS_ID, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
     public static void setAlarmForUpdateReminderNotification(final Context context, final UpdateReminderPref pref) {
@@ -119,7 +119,7 @@ public class NotificationUtil {
             intent.putExtra(Args.UPDATE_REMINDER_PREF, new Gson().toJson(pref));
         }
 
-        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
     public static void init(final Context context) {
