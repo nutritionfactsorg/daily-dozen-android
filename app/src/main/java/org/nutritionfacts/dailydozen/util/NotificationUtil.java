@@ -93,16 +93,6 @@ public class NotificationUtil {
             final long alarmTimeInMillis = pref.getNextAlarmTimeInMillis(context);
             Timber.d("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis);
 
-            setAlarm(alarmManager, alarmPendingIntent, alarmTimeInMillis);
-        }
-    }
-
-    private static void setAlarm(AlarmManager alarmManager, PendingIntent alarmPendingIntent, long alarmTimeInMillis) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            alarmManager.setExact(AlarmManager.RTC_WAKEUP, alarmTimeInMillis, alarmPendingIntent);
-        } else {
-            // Note: Beginning in API 19, the trigger time passed to this method is treated as inexact: the alarm
-            // will not be delivered before this time, but may be deferred and delivered some time later
             alarmManager.set(AlarmManager.RTC_WAKEUP, alarmTimeInMillis, alarmPendingIntent);
         }
     }
