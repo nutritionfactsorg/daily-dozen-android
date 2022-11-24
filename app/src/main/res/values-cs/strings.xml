@@ -24,7 +24,7 @@
     <string name="moving_average">Pohyblivý průměr</string>
     <string name="about">Menu</string>
     <string name="about_this_app">O této aplikaci</string>
-    <string name="about_translators">Zvláštní poděkování patří našim dobrovolným překladatelům: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (on), Ruth Levy (on), Joanna Klopotek (pl), Tania Bassi ( pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
+    <string name="about_translators">Zvláštní poděkování patří našim dobrovolným překladatelům: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (on), Ruth Levy (on), Joanna Klopotek (pl), Tania Bassi ( pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Nejnovější videa</string>
     <string name="donate">Darovat</string>
     <string name="subscribe">Předplatit si</string>
@@ -49,12 +49,12 @@
     <string name="back_to_today">Zpět na Dnes</string>
     <string name="debug">Ladit</string>
     <string name="debug_clear_data">Vymazat všechna data</string>
-    <string name="debug_clear_data_message">Tímto se vymažou všechny zadané porce Denní Dvanáctky. Přejete si pokračovat?</string>
+    <string name="debug_clear_data_message">Tímto se vymažou všechny zadané porce. Přejete si pokračovat?</string>
     <string name="OK">OK</string>
     <string name="dialog_streaks_title">Nová funkce: Grafy!</string>
     <string name="dialog_streaks_message">Vaše databáze bude nyní upgradována, aby podporovala novou funkci Grafy</string>
     <string name="dialog_no_email_apps_title">Nebyla nalezena e-mailové aplikace</string>
-    <string name="dialog_no_email_apps_message">Zálohování dat vyžaduje, abyste měli nainstalovanou e-mailovou aplikaci, abyste si mohli poslat e-mailem záložní soubor .csv. Nainstalujte si e-mailovou aplikaci a zkuste to znovu.</string>
+    <string name="dialog_no_email_apps_message">Zálohování dat vyžaduje, abyste měli nainstalovanou e-mailovou aplikaci, abyste si mohli poslat e-mailem záložní soubor. Nainstalujte si e-mailovou aplikaci a zkuste to znovu.</string>
     <string name="debug_generate_random_data">Generovat náhodná data</string>
     <string name="debug_generate_full_data">Vygenerujte úplná data</string>
     <string name="debug_generate_data_message">Všechna stávající data budou nahrazena. Přejete si pokračovat?</string>
@@ -70,7 +70,7 @@
     <string name="not_now">Nyní ne</string>
     <string name="format_version">verze %s</string>
     <string name="format_num_days">%d dnů</string>
-    <string name="daily_reminder_title">Denní Dvanátka - připomenutí</string>
+    <string name="daily_reminder_title">Denní Dvanáctka - připomenutí</string>
     <string name="daily_reminder_text">Aktualizujte své porce pro dnešek</string>
     <string name="daily_reminder_settings">Nastavení denního připomenutí</string>
     <string name="enable_daily_reminder">Povolit denní připomenutí</string>
@@ -81,9 +81,9 @@
     <string name="metric">Metrické</string>
     <string name="error_cannot_handle_url">Nelze otevřít adresu URL. Nainstalujte si prosím prohlížeč.</string>
     <string name="channel_reminders_name">Připomenutí</string>
-    <string name="twenty_one_tweaks">Jednadvacítka Hubnutí</string>
-    <string name="tweaks">Jednadvacítka Hubnutí</string>
-    <string name="daily_tweaks_history">Denní historie Jednadvacítky Hubnutí</string>
+    <string name="twenty_one_tweaks">21 Hubnutí</string>
+    <string name="tweaks">21 Hubnutí</string>
+    <string name="daily_tweaks_history">Denní historie 21 Hubnutí</string>
     <string name="weight_history">Historie hmotnosti</string>
     <string name="no_weights_recorded">Dosud jste nezaznamenali žádnou váhu!</string>
     <string name="task_loading_weights_history_title">Stahování historie váhy</string>
@@ -135,12 +135,12 @@
     <string name="nightly_trendelenburg_short">Experimentujte s mírnou Trendelenburgovo polohou</string>
     <string name="meal_water_text">Načasujte si vypití dvou šálků studené neochucené vody před každým jídlem na zrychlení metabolismu, abyste také využili výhody předplnění se vodou.</string>
     <string name="meal_negcal_text">Jako první chod začněte každé jídlo jablkem nebo polévkou nebo salátem Green Light s méně než 100 kaloriemi na šálek.</string>
-    <string name="meal_vinegar_text">Nikdy nepijte čistý ocet. Místo toho používejte kterýkoli z dostupných octů (sladkých i \"slaných\") k dochucení jídla, nebo pokapání přílohového salátu. Pokud jej pít chcete, nezapomeňte jej naředit ve sklenici s vodou a po požití si důkladně vypláchněte ústa, abyste ochránili zubní sklovinu.</string>
+    <string name="meal_vinegar_text">Nikdy nepijte čistý ocet. Místo toho používejte kterýkoli z dostupných octů (sladkých i „slaných“) k dochucení jídla, nebo pokapání přílohového salátu. Pokud jej pít chcete, nezapomeňte jej naředit ve sklenici s vodou a po požití si důkladně vypláchněte ústa, abyste ochránili zubní sklovinu.</string>
     <string name="meal_undistracted_text">Nesledujte televizi a nepoužívejte telefon při jídle. Zaškrtněte si políčko za každé jídlo, které dokážete sníst bez rozptylování.</string>
     <string name="meal_twentyminutes_text">Ať už zvýšením viskozity nebo počtu žvýkání nebo snížením velikosti sousta a rychlosti jedení, desítky studií prokázaly, že bez ohledu na to, jak zvýšíme dobu, po kterou je jídlo v našich ústech, může to vést k nižšímu kalorickému příjmu. Prodlužte tedy dobu jídla alespoň na dvacet minut, aby se vaše přirozené signály sytosti mohly plně projevit. Jak? Výběrem potravin, jejichž konzumace trvá déle, a jejich konzumací způsobem, který prodlouží dobu, po kterou zůstanou v ústech. Jezte objemnější, tužší nebo potraviny nutné žvýkat, v malých, pořádně rozžvýkaných soustech.</string>
     <string name="daily_blackcumin_text">Jak je uvedeno v části Potlačení chuti k jídlu, systematický přehled a metaanalýza randomizovaných, kontrolovaných studií hubnutí zjistila, že asi čtvrtina čajové lžičky prášku z černého kmínu každý den snižuje index tělesné hmotnosti během několika měsíců. Všimněte si, že černý kmín se liší od běžného kmínu, u kterého se liší dávkování.</string>
     <string name="daily_garlic_text">Randomizované, dvojitě zaslepené, placebem kontrolované studie zjistily, že jen čtvrt čajové lžičky česnekového prášku denně může snížit tělesný tuk za cenu pár centů denně.</string>
-    <string name="daily_ginger_text">Randomizované kontrolované studie zjistily, že ¼ lžičky až 1½ lžičky mletého zázvoru denně významně snižuje tělesnou hmotnost, za cenu pouhých haléřů. Může to být tak jednoduché, jako zamíchat lžičku mletého koření do šálku horké vody. Poznámka: zázvor může lépe působit ráno, než večer. Čaj Chai je chutný způsob, jak spojit trik s kořením a trik se zeleným čajem do jediného nápoje. Alternativně, pro aktivaci BAT, můžete do své každodenní stravy přidat jednu syrovou jalapeño papričku, nebo půl lžičky prášku z červené papriky (případně také nadrcené paprikové vločky). Pro snížení pálivosti je možné jalapeño nakrájet na velmi tenké plátky, nebo nadrobno nasekat - to zredukuje pálení na jemné škrabkání - nebo vmíchejte papriku do \"celého jídla ve formě zeleninového smoothie\", které uvádím v jednom ze svých videí o vaření na stránkách NutritionFacts.org</string>
+    <string name="daily_ginger_text">Randomizované kontrolované studie zjistily, že ¼ lžičky až 1½ lžičky mletého zázvoru denně významně snižuje tělesnou hmotnost, za cenu pouhých haléřů. Může to být tak jednoduché, jako zamíchat lžičku mletého koření do šálku horké vody. Poznámka: zázvor může lépe působit ráno, než večer. Čaj Chai je chutný způsob, jak spojit trik s kořením a trik se zeleným čajem do jediného nápoje. Alternativně, pro aktivaci BAT, můžete do své každodenní stravy přidat jednu syrovou jalapeño papričku, nebo půl lžičky prášku z červené papriky (případně také nadrcené paprikové vločky). Pro snížení pálivosti je možné jalapeño nakrájet na velmi tenké plátky, nebo nadrobno nasekat - to zredukuje pálení na jemné škrabkání - nebo vmíchejte papriku do „celého jídla ve formě zeleninového smoothie“, které uvádím v jednom ze svých videí o vaření na stránkách NutritionFacts.org</string>
     <string name="daily_nutriyeast_text">Dvě čajové lžičky pekařského, pivovarského nebo lahůdkového droždí obsahují zhruba takové množství beta 1,3/1,6 glukanů, jaké bylo nalezeno v randomizovaných, dvojitě zaslepených, placebem kontrolovaných klinických studiích pro usnadnění hubnutí.</string>
     <string name="daily_cumin_text">Ženy s nadváhou náhodně vybrané do skupiny, která si k obědu a večeři dávala navíc půl lžičky římského kmínu, zhubly oproti kontrolní skupině o 4 kila a palec (2,5cm) v pase více. Existují také důkazy ohledně stejné účinnosti šafránu (koření), toho by ale špetka denně stála dolar, zatímco lžička římského kmínu stojí méně než deset centů.</string>
     <string name="daily_greentea_text">Pijte tři šálky denně mezi jídly (počkejte alespoň hodinu po jídle, abyste nenarušili vstřebávání železa). Během jídla pijte vodu nebo ibiškový čaj smíchaný v poměru 6:1 s citronovou verbenou, ale nikdy nepřekračujte tři šálky tekutiny za hodinu (důležité vzhledem k mé radě ohledně předběžného naplnění vodou). Využijte posilujícího účinku kofeinu tím, že budete pít svůj zelený čaj spolu s něčím zdravým, co si přejete, aby vám chutnalo víc, ale nekonzumujte velké množství kofeinu šest hodin před spaním. Nejlepší je pít čaj bez sladidla, ale pokud si čaj obvykle sladíte medem nebo cukrem, zkuste místo toho jakonový sirup.</string>
@@ -159,7 +159,7 @@
     <string name="tweak_group_daily">Každý den</string>
     <string name="tweak_group_dailydoses">Vezměte si své denní porce</string>
     <string name="tweak_group_nightly">Každou noc</string>
-    <string name="about_tweak">O Jednadacítce Hubnutí</string>
+    <string name="about_tweak">O 21 Hubnutí</string>
     <string-array name="about_text_lines">
         <item>Tuto aplikaci vytvořil John Slavick.</item>
         <item />
@@ -174,7 +174,7 @@
         <item />
         <item>2. Klepněte na záložní soubor připojený k tomuto e-mailu.</item>
         <item />
-        <item>3. Vyberte Otevřít s Denní dvanáctkou</item>
+        <item>3. Vyberte Otevřít s Denní Dvanáctkou</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
         <item>Den</item>

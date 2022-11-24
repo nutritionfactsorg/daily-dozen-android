@@ -24,7 +24,7 @@
     <string name="moving_average">Средняя подвижность</string>
     <string name="about">О нас</string>
     <string name="about_this_app">Об этом приложении</string>
-    <string name="about_translators">Особая благодарность нашим переводчикам-волонтерам: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
+    <string name="about_translators">Особая благодарность нашим переводчикам-волонтерам: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Последние видео</string>
     <string name="donate">Сделайте пожертвование</string>
     <string name="subscribe">Подпишитесь</string>
@@ -54,7 +54,7 @@
     <string name="dialog_streaks_title">Новая функциональность, отображающая прогресс, была добавлена!</string>
     <string name="dialog_streaks_message">Ваша база данных сейчас будет обновлена до версии, поддерживающей новую функциональность прогресса.</string>
     <string name="dialog_no_email_apps_title">Не было найдено ни одного приложения для работы с электронной почтой.</string>
-    <string name="dialog_no_email_apps_message">Чтобы создать резервную копию ваших данных, вам нужно сначала установить приложение для работы с электронной почтой, чтобы вы смогли послать себе .csv файл с резервной копией. Пожалуйста, попробуйте установить приложение и повторите попытку.</string>
+    <string name="dialog_no_email_apps_message">Чтобы создать резервную копию ваших данных, вам нужно сначала установить приложение для работы с электронной почтой, чтобы вы смогли послать себе файл с резервной копией. Пожалуйста, попробуйте установить приложение и повторите попытку.</string>
     <string name="debug_generate_random_data">Получить случайную выборку</string>
     <string name="debug_generate_full_data">Получить все данные</string>
     <string name="debug_generate_data_message">Все существующие данные будут изменены. Вы хотите продолжить?</string>
