@@ -24,7 +24,7 @@
     <string name="moving_average">Moyenne mobile</string>
     <string name="about">À propos</string>
     <string name="about_this_app">À propos de cette application</string>
-    <string name="about_translators">Remerciements particuliers à nos traducteurs bénévoles : Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
+    <string name="about_translators">Remerciements particuliers à nos traducteurs bénévoles : Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Dernières vidéos</string>
     <string name="donate">Faire un don</string>
     <string name="subscribe">Souscrire</string>
@@ -54,7 +54,7 @@
     <string name="dialog_streaks_title">Nouvelle fonctionnalité: Tendances!</string>
     <string name="dialog_streaks_message">Votre base de données sera maintenant mise à niveau pour prendre en charge la nouvelle fonctionnalité des tendances.</string>
     <string name="dialog_no_email_apps_title">Aucune application de messagerie électronique trouvée</string>
-    <string name="dialog_no_email_apps_message">Pour sauvegarder vos données, vous devez disposer d\'une application de messagerie électronique pour que vous puissiez envoyer par courriel le fichier de sauvegarde .csv. Veuillez installer une application de messagerie et réessayer.</string>
+    <string name="dialog_no_email_apps_message">Pour sauvegarder vos données, vous devez disposer d\'une application de messagerie électronique pour que vous puissiez envoyer par courriel le fichier de sauvegarde. Veuillez installer une application de messagerie et réessayer.</string>
     <string name="debug_generate_random_data">Générer des données aléatoires</string>
     <string name="debug_generate_full_data">Générer des données complètes</string>
     <string name="debug_generate_data_message">Toutes les données existantes seront remplacées. Souhaitez-vous continuer?</string>

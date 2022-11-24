@@ -24,7 +24,7 @@
     <string name="moving_average">Średnia ruchoma</string>
     <string name="about">O aplikacji</string>
     <string name="about_this_app">O aplikacji</string>
-    <string name="about_translators">Specjalne podziękowania dla naszych tłumaczy-wolontariuszy: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
+    <string name="about_translators">Specjalne podziękowania dla naszych tłumaczy-wolontariuszy: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Najnowsze filmy</string>
     <string name="donate">Donacja</string>
     <string name="subscribe">Subskrybuj</string>
@@ -54,7 +54,7 @@
     <string name="dialog_streaks_title">Dodano nową funkcję postępu!</string>
     <string name="dialog_streaks_message">Twoja baza danych zostanie uaktualniona by wspierać nową funkcję postępu.</string>
     <string name="dialog_no_email_apps_title">Nie znaleziono aplikacji poczty e-mail</string>
-    <string name="dialog_no_email_apps_message">Tworzenie kopii zapasowych twoich danych wymaga zainstalowania aplikacji do obsługi poczty e-mail, aby można było wysłać do siebie plik kopii zapasowej “.csv” . Zainstaluj aplikację e-mail i spróbuj ponownie.</string>
+    <string name="dialog_no_email_apps_message">Tworzenie kopii zapasowych twoich danych wymaga zainstalowania aplikacji do obsługi poczty e-mail, aby można było wysłać do siebie plik kopii zapasowej. Zainstaluj aplikację e-mail i spróbuj ponownie.</string>
     <string name="debug_generate_random_data">Wygeneruj losowe dane</string>
     <string name="debug_generate_full_data">Wygeneruj wszystie dane</string>
     <string name="debug_generate_data_message">Wszystkie istniejące dane zostaną zastąpione. Czy chcesz kontynuować?</string>

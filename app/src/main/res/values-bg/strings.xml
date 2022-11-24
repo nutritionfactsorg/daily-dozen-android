@@ -24,7 +24,7 @@
     <string name="moving_average">плъзгаща се средна</string>
     <string name="about">Относно</string>
     <string name="about_this_app">Информация за приложението</string>
-    <string name="about_translators">Специални благодарности на нашите преводачи доброволци: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
+    <string name="about_translators">Специални благодарности на нашите преводачи доброволци: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Най-новите видео клипове</string>
     <string name="donate">Направете дарение</string>
     <string name="subscribe">Абонирай се</string>
@@ -54,7 +54,7 @@
     <string name="dialog_streaks_title">Нова функция: Линии!</string>
     <string name="dialog_streaks_message">Вашата база данни ще бъде обновена, за да поддържа новата функция „линии“.</string>
     <string name="dialog_no_email_apps_title">Няма намерени имейл приложения</string>
-    <string name="dialog_no_email_apps_message">Архивирането на данни изисква да имате инсталирано приложение за имейл, за да можете да изпратите csv файл по пощата. Моля инсталирайте имейл клиент и опитайте отново.</string>
+    <string name="dialog_no_email_apps_message">Архивирането на данни изисква да имате инсталирано приложение за имейл, за да можете да изпратите файл по пощата. Моля инсталирайте имейл клиент и опитайте отново.</string>
     <string name="debug_generate_random_data">Генериране на случайни данни</string>
     <string name="debug_generate_full_data">Генериране на пълна информация</string>
     <string name="debug_generate_data_message">Всички съществуващи данни ще бъдат заменени. Желаете ли да продължите?</string>
