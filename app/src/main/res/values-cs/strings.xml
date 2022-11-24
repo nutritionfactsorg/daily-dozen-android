@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Denní Dvanáctka</string>
     <string name="beans">Luštěniny</string>
-    <string name="berries">Bobule</string>
+    <string name="berries">Bobuloviny</string>
     <string name="other_fruits">Ostatní ovoce</string>
     <string name="cruciferous_vegetables">Košťálová zelenina</string>
     <string name="greens">Zelenina</string>
@@ -10,7 +10,7 @@
     <string name="flaxseeds">Lněná semínka</string>
     <string name="nuts">Ořechy a semena</string>
     <string name="spices">Bylinky a koření</string>
-    <string name="whole_grains">Celá zrna</string>
+    <string name="whole_grains">Celozrnné obilniny</string>
     <string name="beverages">Nápoje</string>
     <string name="exercise">Pohyb</string>
     <string name="vitamin_b12">Vitamín B12</string>
@@ -22,7 +22,7 @@
     <string name="servings">Porce</string>
     <string name="out_of">z</string>
     <string name="moving_average">Pohyblivý průměr</string>
-    <string name="about">Menu</string>
+    <string name="about">O autorovi</string>
     <string name="about_this_app">O této aplikaci</string>
     <string name="about_translators">Zvláštní poděkování patří našim dobrovolným překladatelům: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (on), Ruth Levy (on), Joanna Klopotek (pl), Tania Bassi ( pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
     <string name="latest_videos">Nejnovější videa</string>
@@ -107,7 +107,7 @@
     <string name="exercise_timing">Optimalizujte načasování pohybu</string>
     <string name="weigh_twice">Važte se dvakrát denně</string>
     <string name="complete_intentions">Dokončete své implementační záměry</string>
-    <string name="nightly_fast">Nejezte po 19:00</string>
+    <string name="nightly_fast">Nejezte po 19:00 hodině</string>
     <string name="nightly_sleep">Dopřejte si dostatek spánku</string>
     <string name="nightly_trendelenburg">Experimentujte s mírnou Trendelenburgovo polohou</string>
     <string name="debug_generate_weight_data">Generování údajů o hmotnosti</string>
@@ -121,7 +121,7 @@
     <string name="daily_garlic_short">Česnekový prášek (¼ lžičky)</string>
     <string name="daily_ginger_short">Mletý zázvor (1 lžička) nebo kajenský pepř (½ lžičky)</string>
     <string name="daily_nutriyeast_short">Lahůdkové droždí (2 lžičky)</string>
-    <string name="daily_cumin_short">Kmín (Cuminum cyminum) (½ lžičky s obědem a večeří)</string>
+    <string name="daily_cumin_short">Římský kmín (Cuminum cyminum) (½ lžičky s obědem a večeří)</string>
     <string name="daily_greentea_short">Zelený čaj (3 šálky)</string>
     <string name="daily_hydrate_short">Zůstaňte hydratovaní</string>
     <string name="daily_deflourdiet_short">Zbavte se mouky</string>
@@ -129,7 +129,7 @@
     <string name="daily_timerestrict_short">Vymezte si čas pro jídlo</string>
     <string name="exercise_timing_short">Optimalizujte načasování pohybu</string>
     <string name="weigh_twice_short">Važte se dvakrát denně</string>
-    <string name="complete_intentions_short">Dokončete své implementační záměry</string>
+    <string name="complete_intentions_short">Dokončujte své implementační záměry</string>
     <string name="nightly_fast_short">Nejezte po 19:00</string>
     <string name="nightly_sleep_short">Dopřejte si dostatek spánku</string>
     <string name="nightly_trendelenburg_short">Experimentujte s mírnou Trendelenburgovo polohou</string>
