@@ -33,8 +33,8 @@ android {
         minSdkVersion 19
         targetSdkVersion 33
         vectorDrawables.useSupportLibrary = true
-        versionCode 75
-        versionName "22-beta-2"
+        versionCode 76
+        versionName "22-beta-3"
     }
     buildTypes {
         debug {
