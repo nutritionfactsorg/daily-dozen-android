@@ -13,8 +13,6 @@ import org.nutritionfacts.dailydozen.RDA;
 
 import java.util.List;
 
-import hugo.weaving.DebugLog;
-
 @Table(name = "tweaks")
 public class Tweak extends TruncatableModel implements RDA {
     @Column(name = "name", index = true)
@@ -61,7 +59,6 @@ public class Tweak extends TruncatableModel implements RDA {
         return name;
     }
 
-    @DebugLog
     public static void ensureAllTweaksExistInDatabase(final String[] tweakNames,
                                                       final String[] tweakIdNames,
                                                       final int[] recommendedAmounts) {

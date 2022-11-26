@@ -17,7 +17,6 @@ import java.util.Random;
 import java.util.TimeZone;
 
 import hirondelle.date4j.DateTime;
-import hugo.weaving.DebugLog;
 
 public class GenerateDataTask extends BaseTask<Boolean> {
     private final ProgressListener progressListener;
@@ -77,7 +76,6 @@ public class GenerateDataTask extends BaseTask<Boolean> {
         }
     }
 
-    @DebugLog
     private void createUserDataForDay(List<Food> allFoods, List<Tweak> allTweaks, DateTime current) {
         ActiveAndroid.beginTransaction();
 

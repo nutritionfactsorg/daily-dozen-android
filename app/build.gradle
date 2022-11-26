@@ -3,13 +3,8 @@ buildscript {
         mavenCentral()
         google()
     }
-
-    dependencies {
-        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
-    }
 }
 apply plugin: 'com.android.application'
-apply plugin: 'com.jakewharton.hugo'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
@@ -26,7 +21,6 @@ configurations {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion '30.0.2'
 
     buildFeatures.viewBinding = true
 
