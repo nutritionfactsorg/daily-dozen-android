@@ -34,7 +34,7 @@ android {
         multiDexEnabled true
         targetSdkVersion 33
         vectorDrawables.useSupportLibrary = true
-        versionCode 76
+        versionCode 77
         versionName "22-beta-3"
     }
     buildTypes {
