@@ -11,3 +11,6 @@ fabric.properties
 DailyDozenDB*
 ajcore*
 output-metadata.json
+
+## place for local-only items.
+*_LOCAL

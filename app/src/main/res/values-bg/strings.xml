@@ -24,7 +24,7 @@
     <string name="moving_average">плъзгаща се средна</string>
     <string name="about">Относно</string>
     <string name="about_this_app">Информация за приложението</string>
-    <string name="about_translators">Специални благодарности на нашите преводачи доброволци: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
+    <string name="about_translators">Специални благодарности на нашите преводачи доброволци: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Най-новите видео клипове</string>
     <string name="donate">Направете дарение</string>
     <string name="subscribe">Абонирай се</string>
