@@ -24,7 +24,7 @@
     <string name="moving_average">Gleitender Mittelwert</string>
     <string name="about">Über</string>
     <string name="about_this_app">Über diese Anwendung</string>
-    <string name="about_translators">Besonderer Dank an unsere ehrenamtlichen Übersetzer: Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), Joao Madureira (pt-PT), Evgeniya Lyakh (ru).</string>
+    <string name="about_translators">Besonderer Dank an unsere ehrenamtlichen Übersetzer: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), Joao Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Neueste Videos</string>
     <string name="donate">Spenden Sie</string>
     <string name="subscribe">Abonnieren</string>

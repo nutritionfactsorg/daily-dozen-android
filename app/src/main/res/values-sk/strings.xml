@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<resources>
+    <string name="app_name">Denná Dvanástka</string>
+    <string name="beans">Strukoviny</string>
+    <string name="berries">Bobuľoviny</string>
+    <string name="other_fruits">Ostatné ovocie</string>
+    <string name="cruciferous_vegetables">Košťálová zelenina</string>
+    <string name="greens">Zelenina</string>
+    <string name="other_vegetables">Ostatná zelenina</string>
+    <string name="flaxseeds">Ľanové semienka</string>
+    <string name="nuts">Orechy a semená</string>
+    <string name="spices">Bylinky a korenie</string>
+    <string name="whole_grains">Celozrnné obilniny</string>
+    <string name="beverages">Nápoje</string>
+    <string name="exercise">Pohyb</string>
+    <string name="vitamin_b12">Vitamín B12</string>
+    <string name="serving_sizes">Veľkosť porcie</string>
+    <string name="types">Typy</string>
+    <string name="history">História</string>
+    <string name="servings_some">Niektoré porcie</string>
+    <string name="servings_all">Všetky porcie</string>
+    <string name="servings">Porcia</string>
+    <string name="out_of">z</string>
+    <string name="moving_average">Pohyblivý priemer</string>
+    <string name="about">O aplikácii</string>
+    <string name="about_this_app">O tejto aplikácii</string>
+    <string name="about_translators">Osobitné poďakovanie patrí našim dobrovoľným prekladateľom: Ricard Soler Roger (ca), Luděk Bouška (cz, sk), Lenka Lukacová (cz), Anke Schliessmann (de), Doron Barak (on), Ruth Levy (on), Joanna Klopotek (pl), Tania Bassi (pt-BR), Joao Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk)., Katarína Mocáková (sk).</string>
+    <string name="latest_videos">Najnovšie videá</string>
+    <string name="donate">Darovať</string>
+    <string name="subscribe">Predplatiť si</string>
+    <string name="open_source">Open Source</string>
+    <string name="permission_needed_to_write_storage">Nie je možné vykonať zálohu bez oprávnenia na zápis do pamäte</string>
+    <string name="backup_failed">Zálohovanie zlyhalo</string>
+    <string name="restore_failed">Obnova zlyhala</string>
+    <string name="backup_success">Zálohovanie bolo úspešné</string>
+    <string name="restore_success">Obnova dát bola úspešná</string>
+    <string name="restore_confirm_title">Obnovenie zo zálohy</string>
+    <string name="restore_confirm_message">Všetky existujúce dáta budú vymazané pred obnovou zo zálohy. Chcete pokračovať?</string>
+    <string name="yes">Áno</string>
+    <string name="no">Nie</string>
+    <string name="backup">Záloha</string>
+    <string name="food_info">Informácie o jedlách</string>
+    <string name="food_history">História jedál</string>
+    <string name="daily_servings_history">História Dennej Dvanástky</string>
+    <string name="no_servings_recorded">Doteraz ste nezaznamenali žiadne porcie!</string>
+    <string name="task_backup_title">Zálohovanie</string>
+    <string name="task_restore_title">Obnovenie</string>
+    <string name="task_calculating_streaks_title">Výpočet pre graf</string>
+    <string name="back_to_today">Späť na Dnes</string>
+    <string name="debug">Ladiť</string>
+    <string name="debug_clear_data">Vymazať všetky dáta</string>
+    <string name="debug_clear_data_message">Týmto sa vymažú všetky zadané porcie. Prajete si pokračovať?</string>
+    <string name="OK">OK</string>
+    <string name="dialog_streaks_title">Nová funkcia: Grafy!</string>
+    <string name="dialog_streaks_message">Vaša databáza bude teraz upgradovaná, aby podporovala novú funkciu Grafy</string>
+    <string name="dialog_no_email_apps_title">Nebola nájdená e-mailová aplikácia</string>
+    <string name="dialog_no_email_apps_message">Zálohovanie dát vyžaduje, aby ste mali nainštalovanú e-mailovú aplikáciu, aby ste si mohli poslať e-mailom záložný súbor. Nainštalujte si e-mailovú aplikáciu a skúste to znova.</string>
+    <string name="debug_generate_random_data">Generovať náhodné dáta</string>
+    <string name="debug_generate_full_data">Vygenerujte úplné dáta</string>
+    <string name="debug_generate_data_message">Všetky existujúce dáta budú nahradené. Prajete si pokračovať?</string>
+    <string name="task_generating_random_data">Generovanie náhodných dát</string>
+    <string name="task_loading_servings_history_title">Sťahovanie histórie porcií</string>
+    <string name="time_scale">Časové merítko</string>
+    <string name="history_to_generate">Vygenerovanie histórie</string>
+    <string name="welcome_to_my_daily_dozen">Vitajte v mojej Dennej Dvanástke!</string>
+    <string name="activity_welcome_text">Táto aplikácia je určená na denné zaznamenávanie jedál a sledovanie odporúčaní pre optimálne zdravie a dlhovekosť, ktoré uvádzam vo svojich knihách Ako nezomrieť a Ako nedietovať.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Páči sa vám táto aplikácia?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Odošlite odozvu v Obchode Play.</string>
+    <string name="rate_now">Dať spätnú väzbu</string>
+    <string name="not_now">Teraz nie</string>
+    <string name="format_version">verzia %s</string>
+    <string name="format_num_days">%d dní</string>
+    <string name="daily_reminder_title">Denná Dvanástka - pripomenutie</string>
+    <string name="daily_reminder_text">Aktualizujte svoje porcie pre dnešok</string>
+    <string name="daily_reminder_settings">Nastavenie denného pripomenutia</string>
+    <string name="enable_daily_reminder">Povoliť dennú pripomienku</string>
+    <string name="remind_me_at">Pripomenúť v</string>
+    <string name="videos">Videá</string>
+    <string name="units">Jednotky</string>
+    <string name="imperial">Imperiálne</string>
+    <string name="metric">Metrické</string>
+    <string name="error_cannot_handle_url">Nie je možné otvoriť adresu URL. Nainštalujte si prosím prehliadač.</string>
+    <string name="channel_reminders_name">Pripomenutie</string>
+    <string name="twenty_one_tweaks">21 Vylepšení</string>
+    <string name="tweaks">21 Vylepšení</string>
+    <string name="daily_tweaks_history">História 21 Vylepšení</string>
+    <string name="weight_history">História hmotnosti</string>
+    <string name="no_weights_recorded">Doteraz ste nezaznamenali žiadnu váhu!</string>
+    <string name="task_loading_weights_history_title">Sťahovanie histórie váhy</string>
+    <string name="morning">Ráno</string>
+    <string name="evening">Večer</string>
+    <string name="meal_water">Pite vodu pred jedlom</string>
+    <string name="meal_negcal">Predplňte sa potravinami s „negatívnymi kalóriami“.</string>
+    <string name="meal_vinegar">Používajte ocot (2 lyžičky s každým jedlom)</string>
+    <string name="meal_undistracted">Nenechajte sa vyrušovať počas jedla</string>
+    <string name="meal_twentyminutes">Dodržujte pravidlo dvadsiatich minút</string>
+    <string name="daily_blackcumin">Čierna rasca (¼ lyžičky)</string>
+    <string name="daily_garlic">Cesnakový prášok (¼ lyžičky)</string>
+    <string name="daily_ginger">Mletý zázvor (1 lyžička) alebo kajenské korenie (½ lyžičky)</string>
+    <string name="daily_nutriyeast">Lahôdkové droždie (2 lyžičky)</string>
+    <string name="daily_cumin">Rímsky kmin (½ lyžičky s obedom a večerou)</string>
+    <string name="daily_greentea">Zelený čaj (3 šálky)</string>
+    <string name="daily_hydrate">Zostaňte hydratovaní</string>
+    <string name="daily_deflourdiet">Zbavte sa múky</string>
+    <string name="daily_frontload">Jedzte viac v prvej polovici dňa</string>
+    <string name="daily_timerestrict">Vymedzte si čas na jedlo</string>
+    <string name="exercise_timing">Optimalizujte načasovanie pohybu</string>
+    <string name="weigh_twice">Vážte sa dvakrát denne</string>
+    <string name="complete_intentions">Dokončite svoje implementačné zámery</string>
+    <string name="nightly_fast">Nejedzte po 19:00 hodine</string>
+    <string name="nightly_sleep">Doprajte si dostatok spánku</string>
+    <string name="nightly_trendelenburg">Experimentujte s miernou Trendelenburgovou polohou</string>
+    <string name="debug_generate_weight_data">Generovanie údajov o hmotnosti</string>
+    <string name="average_weight_on_day">Priemerná váha za deň</string>
+    <string name="meal_water_short">Pite vodu pred jedlom</string>
+    <string name="meal_negcal_short">Predplňte sa potravinami s „negatívnymi kalóriami“.</string>
+    <string name="meal_vinegar_short">Používajte ocot (2 lyžičky s každým jedlom)</string>
+    <string name="meal_undistracted_short">Nenechajte sa vyrušovať počas jedla</string>
+    <string name="meal_twentyminutes_short">Dodržujte pravidlo dvadsiatich minút</string>
+    <string name="daily_blackcumin_short">Čierna rasca (Nigella sativa) (¼ lyžičky)</string>
+    <string name="daily_garlic_short">Cesnakový prášok (¼ lyžičky)</string>
+    <string name="daily_ginger_short">Mletý zázvor (1 lyžička) alebo kajenské korenie (½ lyžičky)</string>
+    <string name="daily_nutriyeast_short">Lahôdkové droždie (2 lyžičky)</string>
+    <string name="daily_cumin_short">Rímska rasca (Cuminum cyminum) (½ lyžičky s obedom a večerou)</string>
+    <string name="daily_greentea_short">Zelený čaj (3 šálky)</string>
+    <string name="daily_hydrate_short">Zostaňte hydratovaní</string>
+    <string name="daily_deflourdiet_short">Zbavte sa múky</string>
+    <string name="daily_frontload_short">Jedzte viac v prvej polovici dňa</string>
+    <string name="daily_timerestrict_short">Vymedzte si čas na jedlo</string>
+    <string name="exercise_timing_short">Optimalizujte načasovanie pohybu</string>
+    <string name="weigh_twice_short">Vážte sa dvakrát denne</string>
+    <string name="complete_intentions_short">Dokončujte svoje implementačné zámery</string>
+    <string name="nightly_fast_short">Nejedzte po 19:00 hodine</string>
+    <string name="nightly_sleep_short">Doprajte si dostatok spánku</string>
+    <string name="nightly_trendelenburg_short">Experimentujte s miernou Trendelenburgovou polohou</string>
+    <string name="meal_water_text">Načasujte si vypitie dvoch šálok studenej neochutenej vody pred každým jedlom na zrýchlenie metabolizmu, aby ste tiež využili výhody naplnenia sa vodou.</string>
+    <string name="meal_negcal_text">Ako prvý chod začnite každé jedlo jablkom, alebo polievkou, alebo šalátom Green Light s menej ako 100 kalóriami na šálku.</string>
+    <string name="meal_vinegar_text">Nikdy nepite čistý ocot. Namiesto toho používajte ktorýkoľvek z dostupných octov (sladkých aj „slaných“) na dochutenie jedla, alebo pokvapkanie prílohového šalátu. Pokiaľ ho piť chcete, nezabudnite ho nariediť v pohári s vodou a po požití si dôkladne vypláchnite ústa, aby ste ochránili zubnú sklovinu.</string>
+    <string name="meal_undistracted_text">Nesledujte televíziu a nepoužívajte telefón pri jedle. Začiarknite si políčko za každé jedlo, ktoré dokážete zjesť bez rozptyľovania.</string>
+    <string name="meal_twentyminutes_text">Či už zvýšením viskozity alebo počtu žuvaní alebo znížením veľkosti sústa a rýchlosti jedenia, desiatky štúdií preukázali, že bez ohľadu na to, ako zvýšime dobu, počas ktorej je jedlo v našich ústach, môže to viesť k nižšiemu kalorickému príjmu. Predĺžte teda dobu jedla aspoň na dvadsať minút, aby sa vaše prirodzené signály sýtosti mohli plne prejaviť. Ako? Výberom potravín, ktorých konzumácia trvá dlhšie, a ich konzumáciou spôsobom, ktorý predĺži dobu, po ktorú zostanú v ústach. Jedzte objemnejšie, tuhšie alebo potraviny nutné žuť, v malých, poriadne rozžuvaných sústoch.</string>
+    <string name="daily_blackcumin_text">Ako je uvedené v časti Potlačenie chuti do jedla, systematický prehľad a metaanalýza randomizovaných, kontrolovaných štúdií chudnutia zistila, že asi štvrtina čajovej lyžičky prášku z čiernej rasce každý deň znižuje index telesnej hmotnosti počas niekoľkých mesiacov. Všimnite si, že čierna rasca sa líši od bežnej rasce, u ktorej sa líši dávkovanie.</string>
+    <string name="daily_garlic_text">Randomizované, dvojito zaslepené, placebom kontrolované štúdie zistili, že len štvrť čajovej lyžičky cesnakového prášku denne môže znížiť telesný tuk za cenu pár centov denne.</string>
+    <string name="daily_ginger_text">Randomizované kontrolované štúdie zistili, že ¼ lyžičky až 1½ lyžičky mletého zázvoru denne významne znižuje telesnú hmotnosť, za cenu iba halierov. Je to také jednoduché, ako zamiešať lyžičku mletého korenia do šálky horúcej vody. Poznámka: zázvor môže lepšie pôsobiť ráno než večer. Čaj Chai je chutný spôsob, ako spojiť trik s korením a trik so zeleným čajom do jediného nápoja. Alternatívne, pre aktiváciu BAT, môžete do svojej každodennej stravy pridať jednu surovú jalapeño papričku, alebo pol lyžičky prášku z červenej papriky (prípadne aj nadrvené paprikové vločky). Pre zníženie pálivosti je možné jalapeno nakrájať na veľmi tenké plátky, alebo nadrobno nasekať – to zredukuje pálenie na jemné škrabanie – alebo vmiešajte papriku do „celého jedla vo forme zeleninového smoothie“, ktoré uvádzam v jednom zo svojich videí o varení na stránkach NutritionFacts.</string>
+    <string name="daily_nutriyeast_text">Dve čajové lyžičky pekárskeho, pivovarského alebo lahôdkového droždia obsahujú zhruba také množstvo beta 1,3/1,6 glukánov, aké bolo nájdené v randomizovaných, dvojito zaslepených, placebom kontrolovaných klinických štúdiách na uľahčenie chudnutia.</string>
+    <string name="daily_cumin_text">Ženy s nadváhou náhodne vybrané do skupiny, ktorá si na obed a večeru dávala navyše pol lyžičky rímskej rasce, schudli oproti kontrolnej skupine o 4 kilá a 2,5 cm v páse viac. Existujú tiež dôkazy ohľadom rovnakej účinnosti šafranu (korenia), toho by ale štipka denne stála viacej eur, zatiaľ čo lyžička rímskej rasce stojí niekoľko centov.</string>
+    <string name="daily_greentea_text">Pite tri šálky denne medzi jedlami (počkajte aspoň hodinu po jedle, aby ste nenarušili vstrebávanie železa). Počas jedla pite vodu alebo ibištekový čaj zmiešaný v pomere 6:1 s citrónovou verbenou, ale nikdy neprekračujte tri šálky tekutiny za hodinu (dôležité vzhľadom na moju radu ohľadom predbežného naplnenia vodou). Využite posilňujúci účinok kofeínu tým, že budete piť svoj zelený čaj spolu s niečím zdravým, čo si prajete, aby vám chutilo viac, ale nekonzumujte veľké množstvo kofeínu šesť hodín pred spaním. Najlepšie je piť čaj bez sladidla, ale pokiaľ si čaj obvykle zladíte medom alebo cukrom, skúste namiesto toho akonový sirup.</string>
+    <string name="daily_hydrate_text">Toto políčko zaskrtnite, ak sa váš moč nikdy nejaví tmavší, než svetlo žltý. \n\nPoznámka: ak jete potraviny obohatené riboflavínom (napríklad nutričné ​​droždie), riaďte sa namiesto toho tým, či ste za deň vypili deväť šálok (pre ženy), alebo trinásť šálok (pre mužov) nesladených nápojov (to by malo byť pokryté odporúčaniami pre zelený čaj a predbežné naplnenie vodou). \n\nAk trpíte problémami so srdcom alebo obličkami, nezvyšujte príjem tekutín bez toho, aby ste sa predtým poradili so svojím lekárom. \n\nPamätajte, že light/diétne sýtené nápoje môžu byť bez kalórií, ale nie sú bez následkov, ako sme sa dozvedeli v sekcii Nízky obsah pridaného cukru.</string>
+    <string name="daily_deflourdiet_text">Začiarknite toto políčko každý deň, keď jete celozrnné porcie vo forme neporušených zŕn. Rozdrvenie dokonca aj stopercentne celých zŕn pripravuje naše mikrobiomy o škrob, ktorý by inak bol doručený do hrubého čreva uzavretý do neporušených bunkových stien.</string>
+    <string name="daily_frontload_text">Rozloženie príjmu väčšieho množstva kalórií do skoršej časti dňa má metabolické výhody, preto si z (ideálne) raňajok, alebo obeda urobte najväčšie jedlo dňa, v súlade s princípom kráľ/princ/chudák.</string>
+    <string name="daily_timerestrict_text">Vymedzte si pre jedenie denné časové okno, nie dlhšie ako 12 hodín, ktoré môžete dôsledne dodržiavať sedem dní v týždni. Vzhľadom na cirkadiánne výhody večerného zníženia príjmu potravy by okno malo skončiť pred 19:00.</string>
+    <string name="exercise_timing_text">Denná Dvanástka odporúča ako optimálne množstvo pohybu na dosiahnutie dlhovekosti deväťdesiat minút stredne intenzívnej aktivity denne, čo je tiež optimálne množstvo pohybu na chudnutie. Pohyb je dobrý kedykoľvek a čím viac, tým lepšie, špeciálne výhody však môže prinášať pohyb nalačno, najskôr šesť hodín po poslednom jedle. To by typicky znamenalo pred raňajkami, ale pokiaľ to správne načasujete, je možné cvičiť na obed pred neskorým obedom, alebo, ak ste obed jedli naopak dostatočne skoro, pred večerou. Toto načasovanie platí pre nediabetikov. Diabetici a prediabetici by naopak mali s pohybom začať tridsať minút po začiatku jedla a ideálne v aktivite vytrvať aspoň hodinu, aby kompletne preklenuli vrchol hladiny cukru v krvi. Ak by ste si mali vybrať pohyb po jedinom jedle, bola by to večera, vzhľadom na to, že cirkadiánny rytmus kontroly hladiny cukru v krvi počas dňa slabne. Ideálne by však najväčším jedlom dňa boli raňajky, a cvičili by ste po nich – alebo, ešte lepšie, po každom jedle.</string>
+    <string name="weigh_twice_text">Pravidelné váženie je považované za kľúčové pre dlhodobú kontrolu hmotnosti, ale neexistujú dostatočné dôkazy na podporu konkrétnej frekvencie váženia. Moje odporúčanie je založené na jednej štúdii, ktorá zistila, že dvakrát denne – po prebudení a tesne pred spaním – sa zdalo byť lepšie ako raz denne (asi šesť oproti dvom kilogramom úbytku hmotnosti za dvanásť týždňov).</string>
+    <string name="complete_intentions_text">Každé dva mesiace vytvorte tri nové implementačné zámery – plány „keď X, potom Y“ na vykonanie konkrétneho správania v konkrétnom kontexte – a každý z nich zaškrtnite, keď ich každý deň dokončíte.</string>
+    <string name="nightly_fast_text">Kvôli našim cirkadiánnym rytmom sa z jedla konzumovaného večer a v noci uloží viac tuku, než z úplne rovnakého jedla, konzumovaného v skoršiu dennú dobu. Preto sa každú noc, počnúc 19:00, aspoň dvanásť hodín postite. Čím menej kalórií po západe slnka, tým lepšie.</string>
+    <string name="nightly_sleep_text">Toto políčko zaškrtnite, ak pri dodržaní svojho pravidelného času ľahnutia spíte aspoň sedem hodín.</string>
+    <string name="nightly_trendelenburg_text">Skúste stráviť aspoň štyri hodiny za noc ležaním s telom nakloneným hlavou dole pod uhlom šesť stupňov. Tento náklon je možné dosiahnuť podložením/zdvihnutím stĺpikov v nohách postele o 20cm (22,5cm pokiaľ je vaša posteľ dlhšia ako štandardná). Buďte extrémne opatrní pri vstávaní z tejto polohy, pretože u väčšiny ľudí spôsobuje ortostatickú intoleranciu, dokonca aj keď ste mladí a zdraví. Pokiaľ teda vstanete príliš rýchlo, môžete pocítiť závrat, mdloby alebo točenie hlavy a mohli by ste spadnúť a zraniť sa. Takže vstávajte pomaly. Vypitie dvoch šálok studenej vody tridsať minút pred vstávaním (zdvihnutím sa z postele) môže pomôcť predísť tomuto potenciálne nebezpečnému vedľajšiemu efektu. \n\n*DÔLEŽITÉ: Toto doma v žiadnom prípade neskúšajte, ak trpíte problémami so srdcom alebo pľúcami, pálením záhy, alebo problémami s mozgom (traumatické zranenie hlavy) alebo očami (dokonca aj rodinná anamnéza glaukómu vás diskvalifikuje). Tiež toto neskúšajte, kým sa svojho lekára nespýtate, či si myslia, že je pre vás bezpečné spať v polohe \"mierny Trendelenburg\". *</string>
+    <string name="weight">Hmotnosť</string>
+    <string name="tweak_group_meal">Ku každému jedlu</string>
+    <string name="tweak_group_daily">Každý deň</string>
+    <string name="tweak_group_dailydoses">Vezmite si svoje denné porcie</string>
+    <string name="tweak_group_nightly">Každú noc</string>
+    <string name="about_tweak">O 21 Vylepšeniach</string>
+    <string-array name="about_text_lines">
+        <item>Túto aplikáciu vytvoril John Slavick.</item>
+        <item />
+        <item>Používajú sa nasledujúce open source knižnice: ActiveAndroid, android-iconify, EventBus, LikeAnimation a MPAndroidChart.</item>
+        <item />
+        <item>Osobitné poďakovanie patrí dobrovoľníckemu úsiliu tvorcov predchádzajúcej aplikácie: Chan Kruse, Allan Portera a Sangeeta Kumar.</item>
+    </string-array>
+    <string-array name="backup_instructions_lines">
+        <item>Ak chcete obnoviť túto zálohu v aplikácii Denná Dvanástka, postupujte podľa pokynov</item>
+        <item />
+        <item>1. Na vašom telefóne Android musí byť nainštalovaná aplikácia Denná dvanástka. Stiahnuť si ju môžete tu: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Kliknite na záložný súbor pripojený k tomuto e-mailu.</item>
+        <item />
+        <item>3. Vyberte Otvoriť s Dennou Dvanástkou</item>
+    </string-array>
+    <string-array name="servings_time_scale_choices">
+        <item>Deň</item>
+        <item>Mesiac</item>
+        <item>Rok</item>
+    </string-array>
+    <string-array name="history_to_generate_choices">
+        <item>1 mesiac</item>
+        <item>3 mesiace</item>
+        <item>6 mesiacov</item>
+        <item>1 rok</item>
+        <item>2 roky</item>
+        <item>5 rokov</item>
+    </string-array>
+    <string-array name="food_info_types_beans">
+        <item>Čierna fazuľa</item>
+        <item>Čiernooká fazuľa</item>
+        <item>Maslová fazuľa</item>
+        <item>Fazuľa Cannellini</item>
+        <item> Cícer / Fazuľa Garbanzo</item>
+        <item>Fazuľa Edamame</item>
+        <item> Anglický hrášok</item>
+        <item>Veľká severská fazuľa</item>
+        <item>Fazuľa (v tvare obličky)</item>
+        <item>Šošovica (beluga, francúzske a červené odrody)</item>
+        <item>Miso pasta</item>
+        <item>Fazuľa Navy</item>
+        <item>Fazuľa Pinto</item>
+        <item>Malá červená fazuľa</item>
+        <item>Polený hrach (žltý alebo zelený)</item>
+        <item>Tempeh</item>
+    </string-array>
+    <string-array name="food_info_types_berries">
+        <item>Acai bobule</item>
+        <item>Dráč obyčajný</item>
+        <item>Černice</item>
+        <item>Čučoriedky</item>
+        <item>Čerešne alebo višne</item>
+        <item>Hrozno (Concord)</item>
+        <item>Brusnice</item>
+        <item>Goji bobule</item>
+        <item>Kumquaty</item>
+        <item>Moruše</item>
+        <item>Maliny (čierne alebo červené)</item>
+        <item>Jahody</item>
+    </string-array>
+    <string-array name="food_info_types_other_fruits">
+        <item>Jablká</item>
+        <item>Marhule</item>
+        <item>Avokádo</item>
+        <item>Banány</item>
+        <item>Ananásový melón</item>
+        <item>Klementínky</item>
+        <item>Datle</item>
+        <item>Figy</item>
+        <item>Grapefruit</item>
+        <item>Cukrový melón</item>
+        <item>Kiwi</item>
+        <item>Citróny</item>
+        <item>Limetky</item>
+        <item>Liči</item>
+        <item>Mango</item>
+        <item>Nektárinky</item>
+        <item>Pomaranče</item>
+        <item>Papája</item>
+        <item>Mučenka</item>
+        <item>Broskyne</item>
+        <item>Hrušky</item>
+        <item>Ananás</item>
+        <item>Slivky (najmä čierne slivky)</item>
+        <item>Blumy</item>
+        <item>Granátové jablká</item>
+        <item>Ringloty</item>
+        <item>Mandarínky</item>
+        <item>Vodný melón</item>
+    </string-array>
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Rukola</item>
+        <item>Čínska kapusta</item>
+        <item>Brokolica (vrátane Romanesco)</item>
+        <item>Ružičkový kel</item>
+        <item>Kapusta (zelená, červená a savojská)</item>
+        <item>Karfiol (biely, zelený, oranžový a fialový)</item>
+        <item>Kapustovitá zelenina (kapusta, kel)</item>
+        <item>Chren</item>
+        <item>Kel (čierny, zelený a červený)</item>
+        <item>Kaleráb (zelený a fialový)</item>
+        <item>Brukev sietinovitá</item>
+        <item>Reďkovky</item>
+        <item>Kvaka</item>
+        <item>Žerucha</item>
+    </string-array>
+    <string-array name="food_info_types_greens">
+        <item>Rukola</item>
+        <item>Repná vňať</item>
+        <item>Brukev kapustová</item>
+        <item>Kel (čierny, zelený a červený)</item>
+        <item>Zmes šalátov (mladé zelené šaláty)</item>
+        <item>Brukev zelená</item>
+        <item>Šťavel</item>
+        <item>Špenát</item>
+        <item>Švajčiarsky mangold</item>
+        <item>Turínová vňať</item>
+    </string-array>
+    <string-array name="food_info_types_other_vegetables">
+        <item>Artičoky</item>
+        <item>Špargľa</item>
+        <item>Repa</item>
+        <item>Paprika (sladká)</item>
+        <item>Mrkva</item>
+        <item>Kukurica</item>
+        <item>Cesnak</item>
+        <item>Huby (pečiarka - biela, hnedá, hliva ustricová a shiitake)</item>
+        <item>Ibištekovec jedlý</item>
+        <item>Cibuľa</item>
+        <item>Fialové zemiaky</item>
+        <item>Tekvica</item>
+        <item>Morská zelenina (riasy arame, dulse a nori)</item>
+        <item>Hrášok cukrový</item>
+        <item>Tekvice (odrody delicatá, letné a špagetové tekvice)</item>
+        <item>Sladké zemiaky, batáty</item>
+        <item>Paradajky</item>
+        <item>Cuketa</item>
+    </string-array>
+    <string-array name="food_info_types_flaxseeds">
+        <item>Hnedé ľanová semienka</item>
+        <item>Zlaté ľanová semienka</item>
+    </string-array>
+    <string-array name="food_info_types_nuts">
+        <item>Mandle</item>
+        <item>Brazílske orechy</item>
+        <item>Kešu orechy</item>
+        <item>Chia semienka</item>
+        <item>Lieskové oriešky</item>
+        <item>Konopné semienka</item>
+        <item>Makadamové orechy</item>
+        <item>Pekanové orechy</item>
+        <item>Pistácie</item>
+        <item>Tekvicové semienka</item>
+        <item>Sezamové semienka</item>
+        <item>Slnečnicové semienka</item>
+        <item>Vlašské orechy</item>
+    </string-array>
+    <string-array name="food_info_types_spices">
+        <item>Nové korenie</item>
+        <item>Dráč obyčajný</item>
+        <item>Bazalka</item>
+        <item>Bobkové listy</item>
+        <item>Kardamón</item>
+        <item>Chilli prášok</item>
+        <item>Koriander (listy)</item>
+        <item>Škorica</item>
+        <item>Klinček</item>
+        <item>Koriander (semená)</item>
+        <item>Rasca</item>
+        <item>Kari v prášku</item>
+        <item>Kôpor</item>
+        <item>Pískavica grécka</item>
+        <item>Cesnak</item>
+        <item>Zázvor</item>
+        <item>Chren</item>
+        <item>Citrónová tráva</item>
+        <item>Majoránka</item>
+        <item>Horčičný prášok</item>
+        <item>Muškátový oriešok</item>
+        <item>Oregano</item>
+        <item>Údená paprika</item>
+        <item>Petržlen</item>
+        <item>Korenie</item>
+        <item>Mäta pieporná</item>
+        <item>Rozmarín</item>
+        <item>Šafran</item>
+        <item>Šalvia</item>
+        <item>Tymián</item>
+        <item>Kurkuma</item>
+        <item>Vanilka</item>
+    </string-array>
+    <string-array name="food_info_types_whole_grains">
+        <item>Jačmeň</item>
+        <item>Pohánka</item>
+        <item>Proso</item>
+        <item>Ovos</item>
+        <item>Popcorn</item>
+        <item>Quinoa</item>
+        <item>Žito</item>
+        <item>Teff - trpasličie proso</item>
+        <item>Celozrnné cestoviny</item>
+    </string-array>
+    <string-array name="food_info_types_beverages">
+        <item>Čierny čaj</item>
+        <item>Chai čaj</item>
+        <item>Vanilkový, harmančekový čaj</item>
+        <item>Káva</item>
+        <item>Earl grey čaj</item>
+        <item>Zelený čaj</item>
+        <item>Ibištekový čaj</item>
+        <item>Horúca čokoláda</item>
+        <item>Jazmínový čaj</item>
+        <item>Medovkový čaj</item>
+        <item>Matcha čaj</item>
+        <item>Čaj oolong (s mandľovou chuťou)</item>
+        <item>Mätový čaj</item>
+        <item>Rooibos čaj</item>
+        <item>Voda</item>
+        <item>Biely čaj</item>
+    </string-array>
+    <string-array name="food_info_types_exercise">
+        <item>Jazda na bicykli</item>
+        <item>Kanoistika</item>
+        <item>Tanec</item>
+        <item>Vybíjaná</item>
+        <item>Zjazdové lyžovanie</item>
+        <item>Šerm</item>
+        <item>Turistika</item>
+        <item>Domáce práce</item>
+        <item>Korčuľovanie</item>
+        <item>Inline korčuľovanie</item>
+        <item>Žonglovanie</item>
+        <item>Skákanie na trampolíne</item>
+        <item>Plavba na vodných bicykloch</item>
+        <item>Hranie frisbee</item>
+        <item>Korčuľovanie na kolieskových korčuliach</item>
+        <item>Hádzanie na kôš</item>
+        <item>Odhŕňanie ľahkého snehu</item>
+        <item>Skateboarding</item>
+        <item>Šnorchlovanie</item>
+        <item>Surfovanie</item>
+        <item>Rekreačné plávanie</item>
+        <item>Tenis (štvorhra)</item>
+        <item>Šliapanie vody</item>
+        <item>Rýchla chôdza (4 mph)</item>
+        <item>Vodný aerobik</item>
+        <item>Vodné lyžovanie</item>
+        <item>Práca na záhrade</item>
+        <item>Jóga</item>
+        <item>Turistika</item>
+        <item>Basketball</item>
+        <item>Jazda na bicykli do kopca</item>
+        <item>Kruhový posilňovací tréning</item>
+        <item>Beh na lyžiach</item>
+        <item>Americký futbal</item>
+        <item>Hokej</item>
+        <item>Behanie</item>
+        <item>Výskoky s roznožením a rozpažením (panáky)</item>
+        <item>Švihadlo</item>
+        <item>Lakros</item>
+        <item>Kľučky</item>
+        <item>Priťahovanie sa</item>
+        <item>Raketbal</item>
+        <item>Horolezectvo</item>
+        <item>Ragby</item>
+        <item>Beh</item>
+        <item>Potápanie</item>
+        <item>Tenis (dvojhra)</item>
+        <item>Futbal</item>
+        <item>Rýchlokorčuľovanie</item>
+        <item>Squash</item>
+        <item>Step aerobik</item>
+        <item>Kondičné plávanie</item>
+        <item>Rýchla chôdza do kopca</item>
+        <item>Vodný jogging</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ šálky hummusu alebo strukovinového dipu</item>
+        <item>½ šálky varených strukovín, hrášku, šošovice, tofu, alebo tempeh</item>
+        <item>1 šálka čerstvého hrášku alebo naklíčenej šošovice</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 g hummusu alebo strukovinového dipu</item>
+        <item>130 g varených fazulí, hrášku, šošovice, tofu alebo tempehu</item>
+        <item>150 g čerstvého hrášku alebo naklíčenej šošovice</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ šálky čerstvého alebo mrazeného</item>
+        <item>¼ šálky sušené</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 g čerstvé alebo mrazené</item>
+        <item>40 g sušené</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item>1 stredne veľké ovocie</item>
+        <item>1 šálka nakrájaného ovocia</item>
+        <item>¼ šálky sušeného ovocia</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item>1 stredne veľké ovocie</item>
+        <item>120 g nakrájaného ovocia</item>
+        <item>40 g sušeného ovocia</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ šálky nakrájané</item>
+        <item>½ šálky ružičkového kelu</item>
+        <item>¼ šálky brokolicových klíčkov</item>
+        <item>1 lyžica chrenu</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30–80 g nakrájané</item>
+        <item>78 g ružičkového kelu</item>
+        <item>14 g brokolicových klíčkov</item>
+        <item>1 lyžica chrenu</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 šálka surovej</item>
+        <item>½ šálky varenej</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g surovej</item>
+        <item>90 g varenej</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 šálka surovej listovej zeleniny</item>
+        <item>½ šálky surovej alebo varenej nelistovej zeleniny</item>
+        <item>½ šálky zeleninovej šťavy</item>
+        <item>¼ šálky sušených húb</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g surovej listovej zeleniny</item>
+        <item>50 g surovej alebo varenej nelistovej zeleniny</item>
+        <item>125 ml zeleninovej šťavy</item>
+        <item>7 g sušených húb</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item>1 polievková lyžica mletej</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item>1 polievková lyžica mletej</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ šálky orechov alebo semienok</item>
+        <item>2 lyžice orechového alebo semienkového masla</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g orechov alebo semienok</item>
+        <item>2 lyžice orechového alebo semienkového masla</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item>¼ lyžičky kurkumy</item>
+        <item>Akékoľvek ďalšie bylinky a korenie (bez soli), ktoré máte radi</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item>¼ lyžičky kurkumy</item>
+        <item>Akékoľvek ďalšie bylinky a korenie (bez soli), ktoré máte radi</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ šálky obilnej kaše alebo varených zŕn, cestovín alebo kukurice</item>
+        <item>1 šálka studených cereálií</item>
+        <item>1 tortilla alebo krajec chleba</item>
+        <item>½ žemle/bágelu alebo anglického mafinu</item>
+        <item>3 šálky popcornu</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g obilnej kaše alebo varených zŕn, cestovín alebo kukurice</item>
+        <item>50 g studených cereálií</item>
+        <item>1 tortilla alebo krajec chleba</item>
+        <item>½ žemle/bágelu alebo anglického mafinu</item>
+        <item>30 g popcornu (popraskaného)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>Jeden pohár (12 uncí)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>Jeden pohár (350 ml)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item>90 minút stredne intenzívnej aktivity</item>
+        <item>40 minút intenzívnej aktivity</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item>90 minút stredne intenzívnej aktivity</item>
+        <item>40 minút intenzívnej aktivity</item>
+    </string-array>
+</resources>
