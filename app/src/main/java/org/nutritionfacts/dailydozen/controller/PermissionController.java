@@ -12,8 +12,10 @@ public class PermissionController {
     private static final int WRITE_EXTERNAL_STORAGE_REQUEST = 1;
 
     public static boolean canWriteExternalStorage(final Activity activity) {
-        final int permissionStatus = ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        return Build.VERSION.SDK_INT < 23 || permissionStatus == PackageManager.PERMISSION_GRANTED;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+            return ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+        }
+        return true;
     }
 
     public static void askForWriteExternalStorage(final Activity activity) {
