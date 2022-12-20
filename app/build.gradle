@@ -25,8 +25,8 @@ android {
     buildFeatures.viewBinding = true
 
     compileOptions {
-       sourceCompatibility JavaVersion.VERSION_1_8
-       targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     defaultConfig {
         applicationId "org.nutritionfacts.dailydozen"
@@ -34,16 +34,16 @@ android {
         multiDexEnabled true
         targetSdkVersion 33
         vectorDrawables.useSupportLibrary = true
-        versionCode 78
-        versionName "22-beta-4"
+        versionCode 81
+        versionName "22-beta-5"
     }
     buildTypes {
         debug {
-            manifestPlaceholders = [crashlyticsCollectionEnabled:"false"]
-            ext.enableCrashlytics=false
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "false"]
+            ext.enableCrashlytics = false
         }
         release {
-            manifestPlaceholders = [crashlyticsCollectionEnabled:"true"]
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "true"]
 //            minifyEnabled true
 //            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
