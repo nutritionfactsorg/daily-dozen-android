@@ -14,7 +14,6 @@ import org.nutritionfacts.dailydozen.RDA;
 
 import java.util.List;
 
-import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
 @Table(name = "foods")
@@ -63,7 +62,6 @@ public class Food extends Model implements RDA {
         return name;
     }
 
-    @DebugLog
     public static void ensureAllFoodsExistInDatabase(final String[] foodNames,
                                                      final String[] foodIdNames,
                                                      final int[] recommendedServings) {

@@ -24,6 +24,7 @@
     <string name="moving_average">Gleitender Mittelwert</string>
     <string name="about">Über</string>
     <string name="about_this_app">Über diese Anwendung</string>
+    <string name="about_translators">Besonderer Dank an unsere ehrenamtlichen Übersetzer: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), Joao Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Neueste Videos</string>
     <string name="donate">Spenden Sie</string>
     <string name="subscribe">Abonnieren</string>
@@ -53,7 +54,7 @@
     <string name="dialog_streaks_title">Neue Fortschrittsfunktion hinzugefügt!</string>
     <string name="dialog_streaks_message">Ihre Datenbank wird nun aktualisiert, um die neue Fortschrittsfunktion zu unterstützen.</string>
     <string name="dialog_no_email_apps_title">Keine E-Mail-Anwendungen gefunden</string>
-    <string name="dialog_no_email_apps_message">Um Ihre Daten zu sichern, müssen Sie eine E-Mail-Anwendung installieren, damit Sie sich die .csv-Sicherungsdatei per E-Mail zusenden können. Bitte installieren Sie eine E-Mail-Anwendung und versuchen Sie es erneut.</string>
+    <string name="dialog_no_email_apps_message">Um Ihre Daten zu sichern, müssen Sie eine E-Mail-Anwendung installieren, damit Sie sich die Sicherungsdatei per E-Mail zusenden können. Bitte installieren Sie eine E-Mail-Anwendung und versuchen Sie es erneut.</string>
     <string name="debug_generate_random_data">Zufallsdaten erzeugen</string>
     <string name="debug_generate_full_data">Vollständige Daten erzeugen</string>
     <string name="debug_generate_data_message">Alle vorhandenen Daten werden ersetzt. Möchten Sie fortfahren?</string>
@@ -466,13 +467,15 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ Tasse gehackt</item>
-        <item>¼ Tasse Rosenkohl oder Brokkolisprossen</item>
-        <item>1 Esslöffel Meerrettich</item>
+        <item>½ Tasse Rosenkohl</item>
+        <item>¼ Tasse Broccolisprossen</item>
+        <item>1 Eßlöffel Meerrettich</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g gehackt</item>
-        <item>12 g Rosenkohl oder Brokkolisprossen</item>
-        <item>1 Esslöffel (15 ml) Meerrettich</item>
+        <item>78 g Rosenkohl</item>
+        <item>14 g Broccolisprossen</item>
+        <item>1 Eßlöffel Meerrettich</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1 Tasse roh</item>

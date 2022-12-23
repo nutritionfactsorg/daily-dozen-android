@@ -24,7 +24,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
 public class BackupTask extends BaseTask<Boolean> {
@@ -86,7 +85,6 @@ public class BackupTask extends BaseTask<Boolean> {
         Bus.backupCompleteEvent(success);
     }
 
-    @DebugLog
     private String getDayJsonLine(Day day) {
         final DayEntries dayEntries = new DayEntries();
         dayEntries.setDate(day.getDateString());

@@ -70,7 +70,7 @@ public class NotificationUtil {
     private static PendingIntent getUpdateReminderClickedIntent(final Context context) {
         return TaskStackBuilder.create(context)
                 .addNextIntent(new Intent(context, MainActivity.class))
-                .getPendingIntent(UPDATE_REMINDER_ID, PendingIntent.FLAG_UPDATE_CURRENT);
+                .getPendingIntent(UPDATE_REMINDER_ID, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
     private static PendingIntent getNotificationSettingsClickedIntent(final Context context) {
@@ -79,7 +79,7 @@ public class NotificationUtil {
 
         return TaskStackBuilder.create(context)
                 .addNextIntent(openNotificationSettingsIntent)
-                .getPendingIntent(NOTIFICATION_SETTINGS_ID, PendingIntent.FLAG_UPDATE_CURRENT);
+                .getPendingIntent(NOTIFICATION_SETTINGS_ID, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
     public static void setAlarmForUpdateReminderNotification(final Context context, final UpdateReminderPref pref) {
@@ -93,16 +93,6 @@ public class NotificationUtil {
             final long alarmTimeInMillis = pref.getNextAlarmTimeInMillis(context);
             Timber.d("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis);
 
-            setAlarm(alarmManager, alarmPendingIntent, alarmTimeInMillis);
-        }
-    }
-
-    private static void setAlarm(AlarmManager alarmManager, PendingIntent alarmPendingIntent, long alarmTimeInMillis) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            alarmManager.setExact(AlarmManager.RTC_WAKEUP, alarmTimeInMillis, alarmPendingIntent);
-        } else {
-            // Note: Beginning in API 19, the trigger time passed to this method is treated as inexact: the alarm
-            // will not be delivered before this time, but may be deferred and delivered some time later
             alarmManager.set(AlarmManager.RTC_WAKEUP, alarmTimeInMillis, alarmPendingIntent);
         }
     }
@@ -119,7 +109,7 @@ public class NotificationUtil {
             intent.putExtra(Args.UPDATE_REMINDER_PREF, new Gson().toJson(pref));
         }
 
-        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
     public static void init(final Context context) {

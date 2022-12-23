@@ -9,7 +9,6 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.model.enums.Units;
 import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 
-import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
 public class Prefs {
@@ -81,12 +80,10 @@ public class Prefs {
         setBooleanPref(USER_HAS_SEEN_FIRST_STAR_EXPLOSION, true);
     }
 
-    @DebugLog
     public void setUpdateReminderPref(UpdateReminderPref pref) {
         setStringPref(PREF_UPDATE_REMINDER, new Gson().toJson(pref));
     }
 
-    @DebugLog
     public UpdateReminderPref getUpdateReminderPref() {
         return new Gson().fromJson(getStringPref(PREF_UPDATE_REMINDER), UpdateReminderPref.class);
     }

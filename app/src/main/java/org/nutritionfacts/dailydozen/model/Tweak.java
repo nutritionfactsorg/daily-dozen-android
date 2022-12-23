@@ -13,7 +13,7 @@ import org.nutritionfacts.dailydozen.RDA;
 
 import java.util.List;
 
-import hugo.weaving.DebugLog;
+import timber.log.Timber;
 
 @Table(name = "tweaks")
 public class Tweak extends TruncatableModel implements RDA {
@@ -61,7 +61,6 @@ public class Tweak extends TruncatableModel implements RDA {
         return name;
     }
 
-    @DebugLog
     public static void ensureAllTweaksExistInDatabase(final String[] tweakNames,
                                                       final String[] tweakIdNames,
                                                       final int[] recommendedAmounts) {
@@ -110,7 +109,11 @@ public class Tweak extends TruncatableModel implements RDA {
         }
 
         if (needToSave) {
-            tweak.save();
+            try {
+                tweak.save();
+            } catch (java.lang.SecurityException e) {
+                Timber.e(e, "Caught SecurityException in createTweakIfDoesNotExist");
+            }
         }
     }
 

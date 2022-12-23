@@ -24,6 +24,7 @@
     <string name="moving_average">Media móvil</string>
     <string name="about">Conócenos</string>
     <string name="about_this_app">Sobre esta app</string>
+    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Videos más recientes</string>
     <string name="donate">Donación</string>
     <string name="subscribe">Suscríbete</string>
@@ -53,7 +54,7 @@
     <string name="dialog_streaks_title">Nueva característica: ¡Rachas!</string>
     <string name="dialog_streaks_message">Se actualizará la base de datos para incluir la nueva característica de rachas.</string>
     <string name="dialog_no_email_apps_title">No se encontró ninguna aplicación de correo electrónico</string>
-    <string name="dialog_no_email_apps_message">Para crear una copia de seguridad, debes tener una aplicación de correo electrónico instalada, lo que te permitirá mandarte a ti mismo el archivo .csv por email. Instala una applicación de correo electrónico e inténtalo de nuevo.</string>
+    <string name="dialog_no_email_apps_message">Para crear una copia de seguridad, debes tener una aplicación de correo electrónico instalada, lo que te permitirá mandarte a ti mismo el archivo por email. Instala una applicación de correo electrónico e inténtalo de nuevo.</string>
     <string name="debug_generate_random_data">Generar datos al azar</string>
     <string name="debug_generate_full_data">Generar datos completos</string>
     <string name="debug_generate_data_message">Todos los datos existentes serán reemplazados. ¿Deseas continuar?</string>
@@ -74,9 +75,9 @@
     <string name="daily_reminder_settings">Potenciadores del recordatorio diario</string>
     <string name="enable_daily_reminder">Activar el recordatorio diario</string>
     <string name="remind_me_at">Recuérdamelo a las</string>
-    <string name="videos">Videos</string>
+    <string name="videos">VIDEOS</string>
     <string name="units">Sistema</string>
-    <string name="imperial">Imperial</string>
+    <string name="imperial">IMPERIAL</string>
     <string name="metric">MÉTRICO</string>
     <string name="error_cannot_handle_url">No se puede abrir la URL. Debes instalar un navegador.</string>
     <string name="channel_reminders_name">Recordatorios</string>
@@ -89,7 +90,7 @@
     <string name="morning">Mañana</string>
     <string name="evening">Noche</string>
     <string name="meal_water">Empezar con agua</string>
-    <string name="meal_negcal">Empezar con alimentos de \"calorías negativas\"</string>
+    <string name="meal_negcal">Empezar con alimentos de “calorías negativas”</string>
     <string name="meal_vinegar">Vinagre (2 ctda. cada comida)</string>
     <string name="meal_undistracted">Comidas sin distracciones</string>
     <string name="meal_twentyminutes">La regla de los veinte minutos</string>
@@ -149,7 +150,7 @@
     <string name="daily_timerestrict_text">Limita tu horario de comidas a un periodo diario de tu elección que no supere las doce horas y que puedas cumplir de manera habitual, es decir, los siete días de la semana. Dados los beneficios para el reloj circadiano de la reducción en la ingesta de alimentos por la noche, deberías dejar de comer antes de las 7 P.M.</string>
     <string name="exercise_timing_text">La recomendación de la Docena Diaria para una mayor longevidad son 90 minutos de actividad física moderada, que también resulta ser la duración óptima para perder peso. Cualquier momento es bueno y, cuanto más, mejor, pero podría ser mejor hacer ejercicio en ayunas, al menos seis horas después de tu última comida. En general, esto se traduce en antes del desayuno, pero, si lo planeas bien, podrías hacer ejercicio al mediodía antes de un almuerzo tardío o, si comes temprano, pues antes de la cena. Esto sería para los no diabéticos. Los diabéticos y prediabéticos deberían empezar a hacer ejercicio treinta minutos después del comienzo de una comida e idealmente durante por lo menos una hora, para alcanzar el pico de azúcar en sangre. Si tuvieras que elegir una sola comida para hacer ejercicio después esta, lo mejor sería la cena, debido a que el ritmo circadiano del control del azúcar en sangre va disminuyendo durante el día. Sin embargo, como lo mejor es que el desayuno sea la comida más grande del día, deberías hacer ejercicio después de desayunar; o, mejor aún, después de cada comida.</string>
     <string name="weigh_twice_text">Se suele pensar que pesarse de manera habitual es un método crucial para el control del peso a largo plazo, pero no existen suficientes pruebas para respaldar esta frecuencia. Mi recomendación se basa en un estudio que encontró que dos veces al día, al despertarte y justo antes de acostarte, parece ser mejor que una vez al día (con una diferencia de entre 1 y 3 kg en doce semanas).</string>
-    <string name="complete_intentions_text">Cada dos meses, crea tres metas nuevas, al estilo de \"si X, entonces Y\", para comportarte de cierta manera en situaciones específicas. Intenta marcar las tres casillas todos los días.</string>
+    <string name="complete_intentions_text">Cada dos meses, crea tres metas nuevas, al estilo de “si X, entonces Y”, para comportarte de cierta manera en situaciones específicas. Intenta marcar las tres casillas todos los días.</string>
     <string name="nightly_fast_text">Debido a la influencia de los ritmos circadianos, lo que comes por la noche engorda más que si comieras eso mismo pero más temprano en el día, así que intenta ayunar todas las noches durante al menos doce horas a partir de las 7 P.M. Cuantas menos calorías consumas después de que se ponga el sol, mejor.</string>
     <string name="nightly_sleep_text">Puedes marcar esta casilla si has dormido al menos siete horas y te has ido a la cama a tu hora normal.</string>
     <string name="nightly_trendelenburg_text">Prueba a estar al menos cuatro horas cada noche con el cuerpo inclinado seis grados. Para conseguirlo, debes elevar los postes del pie de la cama unos 20 centímetros. Ten mucho cuidado al levantarte, ya que esta postura causa intolerancia ortostática para casi todo el mundo, aunque seas joven y estés saludable, así que, si te levantas demasiado rápido, puedes marearte, desmayarte o incluso caerte y hacerte daño. Por lo tanto, levántate lentamente. Beber dos tazas de agua fría treinta minutos antes de levantarte también podría ayudar a prevenir este efecto secundario potencialmente peligroso.\n\n* IMPORTANTE: no intentes esto en casa si tienes problemas cardiacos o pulmonares, reflujo ácido, problemas cerebrales (como traumatismo craneal) u oculares (incluso un historial familiar de glaucoma lo descalifica). Si tienes cualquier duda, no lo intentes sin preguntarle a tu médico antes.*</string>
@@ -466,12 +467,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ taza picadas</item>
-        <item>¼ taza de coles de Bruselas o brotes de brócoli</item>
+        <item>½ taza de coles de Bruselas</item>
+        <item>¼ taza de brotes de brócoli</item>
         <item>1 cucharada de rábano picante</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g picadas</item>
-        <item>12 g de coles de Bruselas o brotes de brócoli</item>
+        <item>78 g de coles de Bruselas</item>
+        <item>14 g de brotes de brócoli</item>
         <item>1 cucharada de rábano picante</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

@@ -24,6 +24,7 @@
     <string name="moving_average">Média Móvel</string>
     <string name="about">Sobre Nós</string>
     <string name="about_this_app">Sobre este aplicativo</string>
+    <string name="about_translators">Agradecimentos especiais aos tradutores voluntários: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Últimos Vídeos</string>
     <string name="donate">Doar</string>
     <string name="subscribe">Subscreva</string>
@@ -53,7 +54,7 @@
     <string name="dialog_streaks_title">Nova função de progresso adicionada!</string>
     <string name="dialog_streaks_message">A sua base de dados será agora atualizada para suportar a nova função de progresso.</string>
     <string name="dialog_no_email_apps_title">Aplicativo de email não encontrado</string>
-    <string name="dialog_no_email_apps_message">Fazer uma cópia de segurança das suas informações requer que você tenha um aplicativo de email instalado para que você possa enviar, por email, o arquivo .csv para você mesmo. Por favor instale um aplicativo de email e tente novamente.</string>
+    <string name="dialog_no_email_apps_message">Fazer uma cópia de segurança das suas informações requer que você tenha um aplicativo de email instalado para que você possa enviar, por email, o arquivo para você mesmo. Por favor instale um aplicativo de email e tente novamente.</string>
     <string name="debug_generate_random_data">Gerar informações aleatórias</string>
     <string name="debug_generate_full_data">Gerar informações completas</string>
     <string name="debug_generate_data_message">Todos os dados existentes serão substituidos. Deseja continuar?</string>
@@ -466,13 +467,15 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ xícara de crucíferos picados</item>
-        <item>½ xícara de rebentos de brócolos ou couve-de-bruxelas</item>
-        <item>1 colher de sopa de rábano</item>
+        <item>½ chávena de rebentos de Couves-de-Bruxelas</item>
+        <item>¼ chávena de rebentos de Brócolos</item>
+        <item>1 colher de sopa de Rábano Silvestre</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g de crucíferos picados</item>
-        <item>44 g de rebentos de brócolos ou couve-de-bruxelas</item>
-        <item>1 colher de sopa de rábano</item>
+        <item>78 g de rebentos de Couves-de-Bruxelas</item>
+        <item>14 g de rebentos de Brócolos</item>
+        <item>1 colher de sopa de Rábano Sivlestre</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1 xícara de verduras cruas</item>

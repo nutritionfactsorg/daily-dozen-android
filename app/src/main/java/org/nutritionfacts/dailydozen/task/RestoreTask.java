@@ -29,7 +29,6 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.Map;
 
-import hugo.weaving.DebugLog;
 import timber.log.Timber;
 
 public class RestoreTask extends BaseTask<Boolean> {
@@ -118,12 +117,10 @@ public class RestoreTask extends BaseTask<Boolean> {
         Bus.restoreCompleteEvent(success);
     }
 
-    @DebugLog
     private void deleteAllExistingData() {
         Common.truncateAllDatabaseTables();
     }
 
-    @DebugLog
     private void restoreLineCSV(final String[] headers, final String line) {
         if (TextUtils.isEmpty(line)) {
             return;
@@ -157,7 +154,6 @@ public class RestoreTask extends BaseTask<Boolean> {
         }
     }
 
-    @DebugLog
     private void restoreLineJSON(final String line) {
         if (TextUtils.isEmpty(line)) {
             return;

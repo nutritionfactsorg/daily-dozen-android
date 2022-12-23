@@ -24,6 +24,7 @@
     <string name="moving_average">Κινητός Μέσος Όρος</string>
     <string name="about">Σχετικά</string>
     <string name="about_this_app">Σχετικά με την εφαρμογή</string>
+    <string name="about_translators">Ιδιαίτερες ευχαριστίες στους εθελοντές μεταφραστές μας: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Τελευταία Βίντεο</string>
     <string name="donate">Δωρεά</string>
     <string name="subscribe">Εγγραφή</string>
@@ -53,7 +54,7 @@
     <string name="dialog_streaks_title">Νέα λειτουργία: Σερί!</string>
     <string name="dialog_streaks_message">Η βάση δεδομένων σας θα πρέπει τώρα να αναβαθμιστεί για να υποστηρίζει τη νέα λειτουργία για τα σερί.</string>
     <string name="dialog_no_email_apps_title">Δεν βρέθηκαν εφαρμογές ηλεκτρονικού ταχυδρομείου</string>
-    <string name="dialog_no_email_apps_message">Η δημιουργία αντιγράφων ασφαλείας των δεδομένων σας απαιτεί να έχετε εγκαταστήσει μια εφαρμογή ηλεκτρονικού ταχυδρομείου, ώστε να μπορείτε να στείλετε το αρχείο .csv αντιγράφων ασφαλείας στον εαυτό σας. Παρακαλώ εγκαταστήστε μια εφαρμογή ηλεκτρονικού ταχυδρομείου και δοκιμάστε ξανά.</string>
+    <string name="dialog_no_email_apps_message">Η δημιουργία αντιγράφων ασφαλείας των δεδομένων σας απαιτεί να έχετε εγκαταστήσει μια εφαρμογή ηλεκτρονικού ταχυδρομείου, ώστε να μπορείτε να στείλετε το αρχείο αντιγράφων ασφαλείας στον εαυτό σας. Παρακαλώ εγκαταστήστε μια εφαρμογή ηλεκτρονικού ταχυδρομείου και δοκιμάστε ξανά.</string>
     <string name="debug_generate_random_data">Παραγωγή τυχαίων δεδομένων</string>
     <string name="debug_generate_full_data">Παραγωγή πλήρων στοιχείων</string>
     <string name="debug_generate_data_message">Όλα τα υπάρχοντα δεδομένα θα αντικατασταθούν. Θέλετε να συνεχίσετε;</string>
@@ -466,12 +467,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ φλιτζάνι ψιλοκομμένα</item>
-        <item>¼ φλιτζάνι λαχανάκι Βρυξέλλών ή φύτρα μπρόκολου</item>
+        <item>½ φλιτζάνι λαχανάκια Βρυξελλών</item>
+        <item>¼ φλιτζάνι φύτρα μπρόκολου</item>
         <item>1 κουταλιά της σούπας χρένο</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 γραμμάρια ψιλοκομμένα</item>
-        <item>12 γραμμάρια λαχανάκι Βρυξέλλών ή φύτρα μπρόκολου</item>
+        <item>78 γραμμάρια λαχανάκια Βρυξελλών</item>
+        <item>14 γραμμάρια φύτρα μπρόκολου</item>
         <item>1 κουταλιά της σούπας χρένο</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
