@@ -27,7 +27,7 @@ public class NotificationUtil {
     private static final int UPDATE_REMINDER_ID = 1;
     private static final int NOTIFICATION_SETTINGS_ID = 2;
 
-    private static final String CHANNEL_REMINDERS = "DAILY_DOZEN_REMINDERS_CHANNEL";
+    public static final String CHANNEL_REMINDERS = "DAILY_DOZEN_REMINDERS_CHANNEL";
 
     public static void showUpdateReminderNotification(final Context context, Intent intent) {
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_REMINDERS)

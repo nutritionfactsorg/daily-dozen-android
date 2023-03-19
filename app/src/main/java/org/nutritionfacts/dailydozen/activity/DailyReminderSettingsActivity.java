@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TimePicker;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.adapter.DailyReminderAdapter;
 import org.nutritionfacts.dailydozen.controller.Bus;
+import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.databinding.ActivityNotificationSettingsBinding;
 import org.nutritionfacts.dailydozen.event.ReminderRemovedEvent;
@@ -50,9 +52,24 @@ public class DailyReminderSettingsActivity extends AppCompatActivity implements 
         onDailyReminderSwitchToggled();
         onAddReminderClicked();
 
-        updateReminderPref = Prefs.getInstance(this).getUpdateReminderPref();
+        if (PermissionController.canPostNotifications(this)) {
+            updateReminderPref = Prefs.getInstance(this).getUpdateReminderPref();
 
-        if (updateReminderPref != null) {
+            if (updateReminderPref != null) {
+                initUpdateReminderPrefConfig();
+            } else {
+                disableUpdateReminderPref();
+            }
+        } else {
+            PermissionController.askForPostNotifications(this);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (PermissionController.grantedPostNotifications(requestCode, grantResults)) {
             initUpdateReminderPrefConfig();
         } else {
             disableUpdateReminderPref();
