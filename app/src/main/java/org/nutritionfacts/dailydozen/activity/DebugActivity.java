@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.databinding.ActivityDebugBinding;
 import org.nutritionfacts.dailydozen.task.GenerateDataTask;
 import org.nutritionfacts.dailydozen.task.ProgressListener;
@@ -116,7 +118,28 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
     }
 
     public void onShowNotificationClicked() {
-        binding.debugShowNotification.setOnClickListener(v -> NotificationUtil.showUpdateReminderNotification(DebugActivity.this, null));
+        binding.debugShowNotification.setOnClickListener(v -> {
+            Timber.d("onShowNotificationClicked");
+            if (PermissionController.canPostNotifications(this)) {
+                Timber.d("canPostNotifications = [true]");
+                NotificationUtil.showUpdateReminderNotification(this, null);
+            } else {
+                Timber.d("canPostNotifications = [false]");
+                PermissionController.askForPostNotifications(this);
+            }
+        });
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (PermissionController.grantedPostNotifications(requestCode, grantResults)) {
+            Timber.d("onRequestPermissionsResult = [true]");
+            NotificationUtil.showUpdateReminderNotification(this, null);
+        } else {
+            Timber.d("onRequestPermissionsResult = [false]");
+        }
     }
 
     @Override
