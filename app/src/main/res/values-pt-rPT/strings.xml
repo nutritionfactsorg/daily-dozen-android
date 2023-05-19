@@ -14,7 +14,7 @@
     <string name="beverages">Bebidas</string>
     <string name="exercise">Exercício</string>
     <string name="vitamin_b12">Vitamina B12</string>
-    <string name="serving_sizes">Tamanhos da Porção</string>
+    <string name="serving_sizes">Tamanhos de Porções (sugestão)</string>
     <string name="types">Tipos</string>
     <string name="history">Histórico</string>
     <string name="servings_some">Algumas porções</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Média Móvel</string>
     <string name="about">Sobre Nós</string>
     <string name="about_this_app">Sobre este aplicativo</string>
-    <string name="about_translators">Agradecimentos especiais aos tradutores voluntários: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Agradecimentos especiais aos tradutores voluntários: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Últimos Vídeos</string>
     <string name="donate">Doar</string>
     <string name="subscribe">Subscreva</string>
@@ -438,14 +438,18 @@
         <item>Corrida na água</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ xícara de hummus ou patê de feijão</item>
-        <item>½ xícara de feijão, ervilha, lentilha, tofu ou tempê cozidos</item>
-        <item>1 xícara de ervilha fresca ou lentilha germinada</item>
+        <item>¼ copo de hummus or pasta de leguminosas</item>
+        <item>½ copo de feijões, ervilhas ou lentilhas cozidas</item>
+        <item>½ copo de tofu ou tempeh</item>
+        <item>1 copo de ervilhas frescas</item>
+        <item>1 copo de leguminosas frescas germinadas (lentilhas, feijão-mungo)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g de hummus ou patê de feijão</item>
-        <item>130 g de feijão, ervilha, lentilha, tofu ou tempê cozidos</item>
-        <item>150 g de ervilha fresca ou lentilha germinada</item>
+        <item>60 g de hummus or pasta de leguminosas</item>
+        <item>90 g de feijões, ervilhas ou lentilhas cozidas</item>
+        <item>100 g de tofu ou tempeh</item>
+        <item>130 g de ervilhas frescas</item>
+        <item>100 g de leguminosas frescas germinadas (lentilhas, feijão-mungo)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ xícara de bagas frescas ou congeladas</item>

@@ -14,7 +14,7 @@
     <string name="beverages">Getränke</string>
     <string name="exercise">Bewegung</string>
     <string name="vitamin_b12">Vitamin B12</string>
-    <string name="serving_sizes">Portionsgrößen</string>
+    <string name="serving_sizes">Portionsgröße (empfohlen)</string>
     <string name="types">Arten</string>
     <string name="history">Hintergrund</string>
     <string name="servings_some">Einige Portionen</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Gleitender Mittelwert</string>
     <string name="about">Über</string>
     <string name="about_this_app">Über diese Anwendung</string>
-    <string name="about_translators">Besonderer Dank an unsere ehrenamtlichen Übersetzer: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), Joao Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Besonderer Dank an unsere ehrenamtlichen Übersetzer: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Neueste Videos</string>
     <string name="donate">Spenden Sie</string>
     <string name="subscribe">Abonnieren</string>
@@ -438,14 +438,18 @@
         <item>Wasserjogging</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ Tasse Hummus oder Bohnendip</item>
-        <item>½ Tasse gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
-        <item>1 Tasse frische Erbsen oder gekeimte Linsen</item>
+        <item>32 Gramm Hummus oder Bohnendip</item>
+        <item>170 Gramm gekochte Bohnen, Erbsen oder Linsen</item>
+        <item>170 Gramm Tofu oder Tempeh </item>
+        <item>240 Gramm frische Erbsen oder Zuckererbsen </item>
+        <item>240 Gramm frische Sojasprossen (Linsen, Mungbohnen) </item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60g Hummus oder Bohnendip</item>
-        <item>130g gekochte Bohnen, Erbsen, Linsen, Tofu oder Tempeh</item>
-        <item>150g frische Erbsen oder gekeimte Linsen</item>
+        <item>60 Gramm Hummus oder Bohnendip</item>
+        <item>90 Gramm gekochte Bohnen, Erbsen oder Linsen</item>
+        <item>100 Gramm Tofu oder Tempeh</item>
+        <item>130 Gramm frische Erbsen oder Zuckererbsen</item>
+        <item>100 Gramm frische Sojasprossen (Linsen, Mungbohnen)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ Tasse frisch oder gefroren</item>

@@ -14,7 +14,7 @@
     <string name="beverages">משקאות קלים</string>
     <string name="exercise">תרגול גופני</string>
     <string name="vitamin_b12">ויטמין B12</string>
-    <string name="serving_sizes">גודלי המנות</string>
+    <string name="serving_sizes">גודל מנה (מוצע)</string>
     <string name="types">סוגים</string>
     <string name="history">היסטוריה</string>
     <string name="servings_some">חלק מהמנות</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">ממוצע נע</string>
     <string name="about">לגבי</string>
     <string name="about_this_app">בקשר לאפליקציה זו</string>
-    <string name="about_translators">תודה מיוחדת למתרגמים המתנדבים: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk). </string>
+    <string name="about_translators">תודה מיוחדת למתרגמים המתנדבים: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">הסרטונים האחרונים</string>
     <string name="donate">תירמו</string>
     <string name="subscribe">הירשמו</string>
@@ -438,14 +438,18 @@
         <item>הליכה במים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ כוס חומוס או ממרח שעועית</item>
-        <item>½ כוס קטניות מבושלות: שעועית, אפונה יבשה, עדשים, טופו או טמפה</item>
-        <item>1 כוס אפונה טריה או עדשים מונבטות</item>
+        <item>1/4 כוס חומוס או מתבל קיטניות</item>
+        <item>1/2 כוס שעועית, אפונה יבשה, או עדשים- מבושלות</item>
+        <item>1/2 כוס טופו או טמפה</item>
+        <item>1 כוס אפונה טריה או אפונת שלג</item>
+        <item>1 כוס  קטניות מונבטות (עדשים, שעועית מש)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 גרם חומוס או ממרח שעועית</item>
-        <item>130 גרם קטניות מבושלות: שעועית, אפונה יבשה, עדשים, טופו או טמפה</item>
-        <item>150גרם אפונה טריה או עדשים מונבטות</item>
+        <item>60 גרם חומוס או מתבל קיטניות</item>
+        <item>90 גרם שעועית, אפונה יבשה, או עדשים- מבושלות</item>
+        <item>100 גרם טופו או טמפה</item>
+        <item>130 גרם אפונה טריה או אפונת שלג</item>
+        <item>100 גרם קטניות מונבטות (עדשים, שעועית מש)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ כוס טרי או קפוא</item>

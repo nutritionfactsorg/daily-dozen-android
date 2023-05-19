@@ -14,7 +14,7 @@
     <string name="beverages">Ροφήματα</string>
     <string name="exercise">Γυμναστική</string>
     <string name="vitamin_b12">Βιταμίνη B12</string>
-    <string name="serving_sizes">Μερίδα</string>
+    <string name="serving_sizes">Μεγέθη σερβιρίσματος (Προτεινόμενα)</string>
     <string name="types">Τύποι</string>
     <string name="history">Ιστορικό</string>
     <string name="servings_some">Μερικές Μερίδες</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Κινητός Μέσος Όρος</string>
     <string name="about">Σχετικά</string>
     <string name="about_this_app">Σχετικά με την εφαρμογή</string>
-    <string name="about_translators">Ιδιαίτερες ευχαριστίες στους εθελοντές μεταφραστές μας: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Ιδιαίτερες ευχαριστίες στους εθελοντές μεταφραστές μας: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Τελευταία Βίντεο</string>
     <string name="donate">Δωρεά</string>
     <string name="subscribe">Εγγραφή</string>
@@ -438,14 +438,18 @@
         <item>Τζόκινγκ νερού</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ φλιτζάνι χούμους ή ντιπ φασολιού</item>
-        <item>½ φλιτζάνι μαγειρεμένα φασόλια, φάβα, φακές, τόφου, ή τέμπε</item>
-        <item>1 φλιτζάνι αρακά ή φακές φυτρωμένες</item>
+        <item>¼ φλιτζάνι ντιπ χούμους ή φασολιών</item>
+        <item>½ φλιτζάνι μαγειρεμένα φασόλια, μπιζέλια ή φακές</item>
+        <item>½ φλιτζάνι τόφου ή τέμπε</item>
+        <item>1 φλιτζάνι φρέσκο αρακά ή αρακά χιονιού</item>
+        <item>1 φλιτζάνι φύτρα φρέσκων φασολιών (φακές, mung)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 γραμμάρια χούμους ή ντιπ φασολιού</item>
-        <item>130 γραμμάρια μαγειρεμένα φασόλια, φάβα, φακές, τόφου, ή τέμπε</item>
-        <item>150 γραμμάρια αρακά ή φακές φυτρωμένες</item>
+        <item>60 γραμμάρια χούμους ή ντιπ φασολιών</item>
+        <item>90 γραμμάρια μαγειρεμένα φασόλια, σπαστά μπιζέλια ή φακές</item>
+        <item>100 g τόφου ή τέμπε</item>
+        <item>130 γραμμάρια φρέσκου αρακά ή αρακά χιονιού</item>
+        <item>100 g φύτρα φρέσκων φασολιών (φακές, mung)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ φλιτζάνι φρέσκα ή κατεψυγμένα</item>

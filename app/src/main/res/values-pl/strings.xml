@@ -14,7 +14,7 @@
     <string name="beverages">Napoje</string>
     <string name="exercise">Ćwiczenia</string>
     <string name="vitamin_b12">Witamina B12</string>
-    <string name="serving_sizes">Rozmiar porcji</string>
+    <string name="serving_sizes">Rozmiar porcji (Sugerowany)</string>
     <string name="types">Rodzaje</string>
     <string name="history">Historia</string>
     <string name="servings_some">Niektóre porcje</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Średnia ruchoma</string>
     <string name="about">O aplikacji</string>
     <string name="about_this_app">O aplikacji</string>
-    <string name="about_translators">Specjalne podziękowania dla naszych tłumaczy-wolontariuszy: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Specjalne podziękowania dla naszych tłumaczy-wolontariuszy: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Najnowsze filmy</string>
     <string name="donate">Donacja</string>
     <string name="subscribe">Subskrybuj</string>
@@ -438,14 +438,18 @@
         <item>Jogging w wodzie</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ szklanki humusu lub dipu z fasoli</item>
-        <item>½ szklanki ugotowanej fasoli, grochu łuskanego, soczewicy, tofu lub tempeh</item>
-        <item>1 szklanka świeżego groszku lub kiełków soczewicy</item>
+        <item>¼ szklanki hummusu lub dipu z fasoli</item>
+        <item>½ szklanki ugotowanej fasoli, grochu łuskanego, lub soczewicy</item>
+        <item>½ szklanki tofu lub tempehu</item>
+        <item>1 szklanka świeżego groszku lub groszku młodego cukrowego</item>
+        <item>1 szklanka świeżych kiełków strączków (soczewica, fasola mung)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g humusu lub dipu z fasoli</item>
-        <item>130 g ugotowanej fasoli, grochu łuskanego, soczewicy, tofu lub tempeh</item>
-        <item>150 g świeżego groszku lub kiełków soczewicy</item>
+        <item>60 g hummusu lub dipu z fasoli</item>
+        <item>90 g ugotowanej fasoli, grochu łuskanego, lub soczewicy</item>
+        <item>100 g tofu lub tempehu</item>
+        <item>130 g świeżego groszku lub groszku młodego cukrowego</item>
+        <item>100 g świeżych kiełków strączków (soczewica, fasola mung)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ szklanki świeżych lub mrożonych</item>

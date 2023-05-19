@@ -14,7 +14,7 @@
     <string name="beverages">Nápoje</string>
     <string name="exercise">Pohyb</string>
     <string name="vitamin_b12">Vitamín B12</string>
-    <string name="serving_sizes">Veľkosť porcie</string>
+    <string name="serving_sizes">Veľkosti porcí (odporúčané)</string>
     <string name="types">Typy</string>
     <string name="history">História</string>
     <string name="servings_some">Niektoré porcie</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Pohyblivý priemer</string>
     <string name="about">O aplikácii</string>
     <string name="about_this_app">O tejto aplikácii</string>
-    <string name="about_translators">Osobitné poďakovanie patrí našim dobrovoľným prekladateľom: Ricard Soler Roger (ca), Luděk Bouška (cz, sk), Lenka Lukacová (cz), Anke Schliessmann (de), Doron Barak (on), Ruth Levy (on), Joanna Klopotek (pl), Tania Bassi (pt-BR), Joao Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk)., Katarína Mocáková (sk).</string>
+    <string name="about_translators">Osobitné poďakovanie patrí našim dobrovoľným prekladateľom: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Najnovšie videá</string>
     <string name="donate">Darovať</string>
     <string name="subscribe">Predplatiť si</string>
@@ -438,14 +438,18 @@
         <item>Vodný jogging</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ šálky hummusu alebo strukovinového dipu</item>
-        <item>½ šálky varených strukovín, hrášku, šošovice, tofu, alebo tempeh</item>
-        <item>1 šálka čerstvého hrášku alebo naklíčenej šošovice</item>
+        <item>¼ šálky hummusu alebo fazuľového dipu</item>
+        <item>½ šálky varenej fazule, hrachu alebo šošovice</item>
+        <item>½ šálky tofu alebo tempehu</item>
+        <item>1 šálka čerstvého hrášku alebo cukrového hrášku</item>
+        <item>1½ šálky čerstvej naklíčenej fazule (šošovica, fazuľa mungo)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g hummusu alebo strukovinového dipu</item>
-        <item>130 g varených fazulí, hrášku, šošovice, tofu alebo tempehu</item>
-        <item>150 g čerstvého hrášku alebo naklíčenej šošovice</item>
+        <item>60 g hummusu alebo fazuľového dipu</item>
+        <item>90 g varenej fazule, hrachu alebo šošovice</item>
+        <item>100 g tofu alebo tempehu</item>
+        <item>130 g čerstvého hrášku alebo cukrového hrášku</item>
+        <item>100 g čerstvej naklíčenej fazule (šošovica, fazuľa mungo)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ šálky čerstvého alebo mrazeného</item>

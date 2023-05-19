@@ -4,18 +4,18 @@
     <string name="beans">Légumineuses</string>
     <string name="berries">Baies</string>
     <string name="other_fruits">Autres fruits</string>
-    <string name="cruciferous_vegetables">Crucifères</string>
+    <string name="cruciferous_vegetables">Légumes crucifères</string>
     <string name="greens">Légumes verts</string>
     <string name="other_vegetables">Autres légumes</string>
     <string name="flaxseeds">Graines de lin</string>
     <string name="nuts">Noix</string>
-    <string name="spices">Épices</string>
-    <string name="whole_grains">Grains entiers</string>
+    <string name="spices">Épices et herbes aromatiques</string>
+    <string name="whole_grains">Céréales complètes</string>
     <string name="beverages">Boissons</string>
     <string name="exercise">Exercice</string>
     <string name="vitamin_b12">Vitamine B12</string>
-    <string name="serving_sizes">Portions</string>
-    <string name="types">Types</string>
+    <string name="serving_sizes">Portions (à titre indicatif)</string>
+    <string name="types">Exemples</string>
     <string name="history">Historique</string>
     <string name="servings_some">Quelques portions</string>
     <string name="servings_all">Toutes les portions</string>
@@ -23,156 +23,156 @@
     <string name="out_of">sur</string>
     <string name="moving_average">Moyenne mobile</string>
     <string name="about">À propos</string>
-    <string name="about_this_app">À propos de cette application</string>
-    <string name="about_translators">Remerciements particuliers à nos traducteurs bénévoles : Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_this_app">À propos de cette app</string>
+    <string name="about_translators">Remerciements particuliers à nos traducteurs bénévoles : Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Dernières vidéos</string>
     <string name="donate">Faire un don</string>
     <string name="subscribe">Souscrire</string>
     <string name="open_source">Open source</string>
-    <string name="permission_needed_to_write_storage">Ne peut pas sauvegarder sans autorisation d\'écrire dans le stockage</string>
+    <string name="permission_needed_to_write_storage">Impossible de sauvegarder sans accès au stockage</string>
     <string name="backup_failed">Échec de la sauvegarde</string>
-    <string name="restore_failed">échec de la restauration</string>
+    <string name="restore_failed">Échec</string>
     <string name="backup_success">Sauvegarde réussie</string>
-    <string name="restore_success">Restauration réussie</string>
+    <string name="restore_success">Sauvegarde restaurée</string>
     <string name="restore_confirm_title">Restaurer la sauvegarde</string>
-    <string name="restore_confirm_message">Toutes les données existantes seront supprimées avant la restauration de la sauvegarde. Souhaitez-vous continuer?</string>
+    <string name="restore_confirm_message">Toutes les données existantes seront supprimées avant la restauration de la sauvegarde. Souhaitez-vous continuer ?</string>
     <string name="yes">Oui</string>
     <string name="no">Non</string>
     <string name="backup">Sauvegarde</string>
     <string name="food_info">Alimentation</string>
     <string name="food_history">Historique alimentaire</string>
-    <string name="daily_servings_history">Historique des portions quotidiennes</string>
-    <string name="no_servings_recorded">Vous n\'avez enregistré aucune portion pour le moment!</string>
-    <string name="task_backup_title">Sauvegarde</string>
-    <string name="task_restore_title">Restauration</string>
-    <string name="task_calculating_streaks_title">Calcul des stries</string>
+    <string name="daily_servings_history">Historique des portions par jour</string>
+    <string name="no_servings_recorded">Vous n\'avez pas encore enregistré de portion !</string>
+    <string name="task_backup_title">Sauvegarde en cours</string>
+    <string name="task_restore_title">Restauration en cours</string>
+    <string name="task_calculating_streaks_title">Calcul des séries en cours</string>
     <string name="back_to_today">Retour à aujourd\'hui</string>
     <string name="debug">Déboguer</string>
     <string name="debug_clear_data">Effacer toutes les données</string>
-    <string name="debug_clear_data_message">Cela supprimera toutes les portions saisies. Souhaitez-vous continuer?</string>
+    <string name="debug_clear_data_message">Cela supprimera toutes les portions saisies. Souhaitez-vous continuer ?</string>
     <string name="OK">OK</string>
-    <string name="dialog_streaks_title">Nouvelle fonctionnalité: Tendances!</string>
-    <string name="dialog_streaks_message">Votre base de données sera maintenant mise à niveau pour prendre en charge la nouvelle fonctionnalité des tendances.</string>
+    <string name="dialog_streaks_title">Nouvelle fonctionnalité : Séries !</string>
+    <string name="dialog_streaks_message">Votre base de données va maintenant être mise à jour pour intégrer la nouvelle fonctionnalité Séries.</string>
     <string name="dialog_no_email_apps_title">Aucune application de messagerie électronique trouvée</string>
-    <string name="dialog_no_email_apps_message">Pour sauvegarder vos données, vous devez disposer d\'une application de messagerie électronique pour que vous puissiez envoyer par courriel le fichier de sauvegarde. Veuillez installer une application de messagerie et réessayer.</string>
+    <string name="dialog_no_email_apps_message">Afin de sauvegarder vos données, vous devez disposer d\'une application de messagerie électronique afin de vous envoyer le fichier de sauvegarde par email. Veuillez installer une application de messagerie et réessayer.</string>
     <string name="debug_generate_random_data">Générer des données aléatoires</string>
-    <string name="debug_generate_full_data">Générer des données complètes</string>
+    <string name="debug_generate_full_data">Générer les données complètes</string>
     <string name="debug_generate_data_message">Toutes les données existantes seront remplacées. Souhaitez-vous continuer?</string>
-    <string name="task_generating_random_data">Génération de données aléatoires</string>
-    <string name="task_loading_servings_history_title">Historique des portions de chargement</string>
-    <string name="time_scale">Échelle de temps</string>
-    <string name="history_to_generate">L\'historique à générer</string>
-    <string name="welcome_to_my_daily_dozen">Bienvenue dans mon Daily Dozen!</string>
-    <string name="activity_welcome_text">Utilisez cette application quotidiennement pour suivre les aliments que je recommande pour une santé et une longévité optimales dans mon livre How Not to Die.</string>
-    <string name="dialog_ask_user_to_rate_app_title">Aimez-vous cette application?</string>
-    <string name="dialog_ask_user_to_rate_app_message">Veuillez nous faire part de vos commentaires dans le Play Store.</string>
+    <string name="task_generating_random_data">Génération de données aléatoires en cours</string>
+    <string name="task_loading_servings_history_title">Chargement de l’historique des portions en cours</string>
+    <string name="time_scale">Affichage</string>
+    <string name="history_to_generate">Historique à générer</string>
+    <string name="welcome_to_my_daily_dozen">Bienvenue dans Daily Dozen!</string>
+    <string name="activity_welcome_text">Utilisez cette app tous les jours pour suivre les aliments que je recommande pour une santé et une longévité optimales dans mes livres \'Comment ne pas mourir\' et \'Comment ne pas faire de régime.\'</string>
+    <string name="dialog_ask_user_to_rate_app_title">Aimez-vous cette application ?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Merci de nous faire part de vos commentaires dans le Play Store.</string>
     <string name="rate_now">Envoyer un commentaire</string>
     <string name="not_now">Pas maintenant</string>
     <string name="format_version">version %s</string>
     <string name="format_num_days">%d jours</string>
-    <string name="daily_reminder_title">Rappel journalier</string>
+    <string name="daily_reminder_title">Rappel Daily Dozen</string>
     <string name="daily_reminder_text">Mettez à jour vos portions pour aujourd\'hui</string>
     <string name="daily_reminder_settings">Paramètres du rappel quotidien</string>
-    <string name="enable_daily_reminder">Activer le rappel quotidien</string>
-    <string name="remind_me_at">Rappelez-moi à</string>
+    <string name="enable_daily_reminder">Rappel quotidien</string>
+    <string name="remind_me_at">Rappel à</string>
     <string name="videos">Vidéos</string>
     <string name="units">Unités</string>
     <string name="imperial">Impérial</string>
     <string name="metric">Métrique</string>
     <string name="error_cannot_handle_url">Impossible d\'ouvrir l\'url. Veuillez installer un navigateur.</string>
-    <string name="channel_reminders_name">Des rappels</string>
-    <string name="twenty_one_tweaks">21 réglages</string>
-    <string name="tweaks">Tweaks</string>
-    <string name="daily_tweaks_history">Historique des modifications quotidiennes</string>
-    <string name="weight_history">Historique du poids</string>
-    <string name="no_weights_recorded">Vous n\'avez encore enregistré aucun poids!</string>
-    <string name="task_loading_weights_history_title">Chargement de l\'historique des poids</string>
+    <string name="channel_reminders_name">Rappels</string>
+    <string name="twenty_one_tweaks">21 Astuces</string>
+    <string name="tweaks">Astuces</string>
+    <string name="daily_tweaks_history">Historique des modifications par jour</string>
+    <string name="weight_history">Historique Poids</string>
+    <string name="no_weights_recorded">Vous n\'avez pas encore enregistré de poids !</string>
+    <string name="task_loading_weights_history_title">Chargement de l\'historique de poids en cours</string>
     <string name="morning">Matin</string>
     <string name="evening">Soir</string>
-    <string name="meal_water">Précharger avec de l\'eau</string>
-    <string name="meal_negcal">Précharge des aliments à «calories négatives»</string>
-    <string name="meal_vinegar">Incorporer du vinaigre (2 cuillères à café à chaque repas)</string>
-    <string name="meal_undistracted">Profitez de repas sans distraction</string>
+    <string name="meal_water">Préchargez avec de l\'eau</string>
+    <string name="meal_negcal">Préchargez avec des “calories négatives”</string>
+    <string name="meal_vinegar">Prenez du vinaigre (2 c. à café par repas)</string>
+    <string name="meal_undistracted">Prenez vos repas sans distraction</string>
     <string name="meal_twentyminutes">Suivez la règle des vingt minutes</string>
-    <string name="daily_blackcumin">Cumin noir (¼ c. À thé)</string>
-    <string name="daily_garlic">Poudre d\'ail (¼ c. À thé)</string>
-    <string name="daily_ginger">Gingembre moulu (1 c. À thé) ou poivre de Cayenne (½ c. À thé)</string>
-    <string name="daily_nutriyeast">Levure nutritionnelle (2 c. À thé)</string>
-    <string name="daily_cumin">Cumin (½ cuillère à café avec déjeuner et dîner)</string>
+    <string name="daily_blackcumin">Cumin noir (¼ c. à café)</string>
+    <string name="daily_garlic">Ail en poudre (¼ c. à café)</string>
+    <string name="daily_ginger">Gingembre moulu (1 c. à café) ou piment de Cayenne (½ c. à café)</string>
+    <string name="daily_nutriyeast">Levure nutritionnelle (2 c. à café)</string>
+    <string name="daily_cumin">Cumin (½ c. à café au déjeuner et au dîner)</string>
     <string name="daily_greentea">Thé vert (3 tasses)</string>
     <string name="daily_hydrate">Restez hydraté</string>
-    <string name="daily_deflourdiet">Décorez votre alimentation</string>
-    <string name="daily_frontload">Chargez vos calories à l\'avance</string>
-    <string name="daily_timerestrict">Limitez votre temps à manger</string>
-    <string name="exercise_timing">Optimiser la synchronisation des exercices</string>
+    <string name="daily_deflourdiet">Défarinez votre alimentation</string>
+    <string name="daily_frontload">Concentrez vos calories en début de journée</string>
+    <string name="daily_timerestrict">Consommez vos aliments sur une durée définie</string>
+    <string name="exercise_timing">Optimisez vos exercices</string>
     <string name="weigh_twice">Pesez-vous deux fois par jour</string>
-    <string name="complete_intentions">Complétez vos intentions de mise en œuvre</string>
-    <string name="nightly_fast">Rapide après 19h00</string>
+    <string name="complete_intentions">Complétez vos objectifs</string>
+    <string name="nightly_fast">Jeûnez après 19h</string>
     <string name="nightly_sleep">Dormez suffisamment</string>
-    <string name="nightly_trendelenburg">Expérience avec Trendelenburg doux</string>
-    <string name="debug_generate_weight_data">Générer des données de poids</string>
-    <string name="average_weight_on_day">Poids moyen le jour</string>
-    <string name="meal_water_short">Précharger avec de l\'eau</string>
-    <string name="meal_negcal_short">Précharge des aliments à «calories négatives»</string>
-    <string name="meal_vinegar_short">Incorporer du vinaigre (2 cuillères à café à chaque repas)</string>
-    <string name="meal_undistracted_short">Profitez de repas sans distraction</string>
+    <string name="nightly_trendelenburg">Testez la position de Trendelenburg modérée</string>
+    <string name="debug_generate_weight_data">Générer les données de poids</string>
+    <string name="average_weight_on_day">Poids moyen</string>
+    <string name="meal_water_short">Préchargez avec de l\'eau</string>
+    <string name="meal_negcal_short">Préchargez avec des “calories négatives”</string>
+    <string name="meal_vinegar_short">Prenez du vinaigre (2 c. à café par repas)</string>
+    <string name="meal_undistracted_short">Prenez vos repas sans distraction</string>
     <string name="meal_twentyminutes_short">Suivez la règle des vingt minutes</string>
-    <string name="daily_blackcumin_short">Cumin noir (Nigella sativa) (¼ c. À thé)</string>
-    <string name="daily_garlic_short">Poudre d\'ail (¼ c. À thé)</string>
-    <string name="daily_ginger_short">Gingembre moulu (1 c. À thé) ou poivre de Cayenne (½ c. À thé)</string>
-    <string name="daily_nutriyeast_short">Levure nutritionnelle (2 c. À thé)</string>
-    <string name="daily_cumin_short">Cumin (Cuminum cyminum) (½ cuillère à café avec déjeuner et dîner)</string>
+    <string name="daily_blackcumin_short">Cumin noir (Nigella sativa) (¼ c. à café)</string>
+    <string name="daily_garlic_short">Ail en poudre (¼ c. à café)</string>
+    <string name="daily_ginger_short">Gingembre moulu (1 c. à café) ou piment de Cayenne (½ c. à café)</string>
+    <string name="daily_nutriyeast_short">Levure nutritionnelle (2 c. à café)</string>
+    <string name="daily_cumin_short">Cumin (Cuminum cyminum) (½ c. à café au déjeuner et au dîner)</string>
     <string name="daily_greentea_short">Thé vert (3 tasses)</string>
     <string name="daily_hydrate_short">Restez hydraté</string>
-    <string name="daily_deflourdiet_short">Décorez votre alimentation</string>
-    <string name="daily_frontload_short">Chargez vos calories à l\'avance</string>
-    <string name="daily_timerestrict_short">Limitez votre temps à manger</string>
-    <string name="exercise_timing_short">Optimiser la synchronisation des exercices</string>
+    <string name="daily_deflourdiet_short">Défarinez votre alimentation</string>
+    <string name="daily_frontload_short">Concentrez vos calories en début de journée</string>
+    <string name="daily_timerestrict_short">Consommez vos aliments sur une durée définie</string>
+    <string name="exercise_timing_short">Optimisez vos exercices</string>
     <string name="weigh_twice_short">Pesez-vous deux fois par jour</string>
-    <string name="complete_intentions_short">Complétez vos intentions de mise en œuvre</string>
-    <string name="nightly_fast_short">Jeûne après 19 h</string>
+    <string name="complete_intentions_short">Complétez vos objectifs</string>
+    <string name="nightly_fast_short">Jeûnez après 19h</string>
     <string name="nightly_sleep_short">Dormez suffisamment</string>
-    <string name="nightly_trendelenburg_short">Expérience avec Trendelenburg doux</string>
-    <string name="meal_water_text">Prévoyez deux tasses d\'eau non aromatisée fraîche ou froide stimulant votre métabolisme avant chaque repas pour profiter également de ses avantages de précharge.</string>
-    <string name="meal_negcal_text">Comme premier plat, commencez chaque repas par une pomme ou une soupe ou une salade Green Light contenant moins de cent calories par tasse.</string>
-    <string name="meal_vinegar_text">Ne buvez jamais de vinaigre directement. Au lieu de cela, aromatisez les repas ou habillez une salade d\'accompagnement avec l\'un des vinaigres sucrés et salés. Si vous voulez le boire, assurez-vous de le mélanger dans un verre d\'eau et, ensuite, assurez-vous de vous rincer la bouche avec de l\'eau pour protéger l\'émail de vos dents.</string>
-    <string name="meal_undistracted_text">Ne mangez pas en regardant la télévision ou en jouant sur votre téléphone. Donnez-vous un chèque pour chaque repas que vous pouvez manger sans distraction.</string>
-    <string name="meal_twentyminutes_text">Que ce soit en augmentant la viscosité ou le nombre de mastications, ou en diminuant la taille des bouchées et le taux de consommation, des dizaines d\'études ont démontré que peu importe la façon dont nous augmentons la quantité de nourriture dans la bouche, cela peut entraîner une diminution de l\'apport calorique. Prolongez donc la durée du repas à au moins vingt minutes pour permettre à vos signaux de satiété naturels de prendre pleinement effet. Comment? En choisissant des aliments qui prennent plus de temps à manger et en les mangeant d\'une manière qui prolonge le temps qu\'ils restent dans votre bouche. Pensez à des aliments plus volumineux, plus robustes et plus moelleux dans des bouchées plus petites et bien mâchées.</string>
-    <string name="daily_blackcumin_text">Comme indiqué dans la section Suppression de l\'appétit, une revue systématique et une méta-analyse d\'essais de perte de poids contrôlés randomisés ont révélé qu\'environ un quart de cuillère à café de poudre de cumin noir par jour semble réduire l\'indice de masse corporelle en l\'espace de quelques mois. Notez que le cumin noir est différent du cumin ordinaire, pour lequel le dosage est différent.</string>
-    <string name="daily_garlic_text">Des études randomisées, en double aveugle et contrôlées par placebo ont révélé que seulement un quart de cuillère à café de poudre d\'ail par jour peut réduire la graisse corporelle à un coût de peut-être deux cents par jour.</string>
-    <string name="daily_ginger_text">Des essais contrôlés randomisés ont révélé que ¼ cuillère à café à 1½ cuillères à café par jour de gingembre moulu diminuait considérablement le poids corporel pour quelques centimes par jour. Cela peut être aussi simple que de mélanger les épices moulues dans une tasse d\'eau chaude. Remarque: le gingembre peut mieux fonctionner le matin que le soir. Le thé Chai est une façon savoureuse de combiner les astuces thé vert et gingembre en une seule boisson. Alternativement, pour l\'activation des MTD, vous pouvez ajouter un piment jalapeño cru ou une demi-cuillère à café de poudre de poivron rouge (ou, vraisemblablement, des flocons de piment rouge broyés) dans votre alimentation quotidienne. Pour aider à combattre la chaleur, vous pouvez trancher très finement ou hacher finement le jalapeño pour réduire sa morsure en petits piquants, ou mélanger le poivron rouge dans la soupe ou le smoothie aux légumes complet que j\'ai présenté dans l\'une de mes vidéos de cuisine sur NutritionFacts.org .</string>
-    <string name="daily_nutriyeast_text">Deux cuillères à café de levure de boulangerie, de bière ou de levure nutritionnelle contiennent à peu près la quantité de glucanes bêta 1,3 / 1,6 trouvés dans des essais cliniques randomisés, en double aveugle et contrôlés par placebo pour faciliter la perte de poids.</string>
-    <string name="daily_cumin_text">Les femmes en surpoids randomisées pour ajouter une demi-cuillère à café de cumin à leurs déjeuners et dîners ont battu le groupe témoin de quatre livres de plus et un pouce supplémentaire de leur taille. Il existe également des preuves pour soutenir l\'utilisation du safran aux épices, mais une pincée par jour coûterait un dollar, tandis qu\'une cuillère à café de cumin coûte moins de dix cents.</string>
-    <string name="daily_greentea_text">Buvez trois tasses par jour entre les repas (en attendant au moins une heure après un repas pour ne pas interférer avec l\'absorption du fer). Pendant les repas, buvez de l\'eau, du café noir ou du thé d\'hibiscus mélangé 6: 1 avec de la verveine citronnée, mais ne dépassez jamais trois tasses de liquide par heure (important compte tenu de mes conseils de précharge d\'eau). Profitez de l\'effet renforçant de la caféine en buvant votre thé vert avec quelque chose de sain que vous aimeriez plus, mais ne consommez pas de grandes quantités de caféine dans les six heures avant le coucher. Il est préférable de prendre votre thé sans édulcorant, mais si vous adoucissez généralement votre thé avec du miel ou du sucre, essayez plutôt le sirop de yacon.</string>
-    <string name="daily_hydrate_text">Cochez cette case si votre urine n\'apparaît jamais plus sombre qu\'un jaune pâle. Notez que si vous mangez des aliments enrichis en riboflavine (tels que des levures nutritionnelles), basez-vous plutôt sur l\'obtention de neuf tasses de boissons non sucrées par jour pour les femmes (ce qui serait pris en charge par les recommandations de précharge de thé vert et d\'eau) ou treize tasses par jour pour les hommes. Si vous avez des problèmes cardiaques ou rénaux, n\'augmentez pas du tout l\'apport liquidien sans en parler d\'abord avec votre médecin. Rappelez-vous, le soda diététique peut être sans calories, mais ce n\'est pas sans conséquence, comme nous l\'avons appris dans la section faible en sucre ajouté.</string>
-    <string name="daily_deflourdiet_text">Cochez cette case chaque jour, vos portions de grains entiers sont sous forme de grains intacts. La poudre de grains entiers, même à 100 pour cent, prive nos microbiomes de l\'amidon qui, autrement, serait transporté vers nos colons enfermés dans des parois cellulaires ininterrompues.</string>
-    <string name="daily_frontload_text">Il y a des avantages métaboliques à distribuer plus de calories plus tôt dans la journée, alors faites le petit déjeuner (idéalement) ou déjeunez votre plus grand repas de la journée dans un vrai style roi / prince / pauvre.</string>
-    <string name="daily_timerestrict_text">Limitez votre consommation à une période quotidienne de votre choix de moins de douze heures à laquelle vous pouvez vous conformer de façon cohérente, sept jours par semaine. Étant donné les avantages circadiens de la réduction de la consommation de nourriture en soirée, la fenêtre devrait se terminer avant 19h00.</string>
-    <string name="exercise_timing_text">La recommandation du Daily Dozen pour une durée d\'exercice optimale pour la longévité est de quatre-vingt-dix minutes d\'activité modérément intense par jour, ce qui est également la durée d\'exercice optimale pour la perte de poids. N\'importe quand est bon, et plus c\'est mieux, mais il peut y avoir un avantage à faire de l\'exercice à jeun, au moins six heures après votre dernier repas. En règle générale, cela signifie avant le petit-déjeuner, mais si vous avez choisi le bon moment, vous pouvez faire de l\'exercice avant un déjeuner tardif ou, si le déjeuner est mangé suffisamment tôt, avant le dîner. C\'est le moment pour les non diabétiques. Les diabétiques et les prédiabétiques devraient plutôt commencer à faire de l\'exercice trente minutes après le début d\'un repas et idéalement pendant au moins une heure pour chevaucher complètement le pic de sucre dans le sang. Si vous deviez choisir un seul repas pour faire de l\'exercice après, ce serait le dîner, en raison du rythme circadien du contrôle de la glycémie qui diminue tout au long de la journée. Idéalement, cependant, le petit-déjeuner serait le plus gros repas de la journée, et vous feriez de l\'exercice après cela - ou, mieux encore, après chaque repas.</string>
-    <string name="weigh_twice_text">L\'auto-pesée régulière est considérée comme cruciale pour le contrôle du poids à long terme, mais les preuves sont insuffisantes pour soutenir une fréquence spécifique de pesée. Ma recommandation est basée sur une étude qui a révélé que deux fois par jour - au réveil et juste avant le coucher - semblait supérieur à une fois par jour (environ six livres contre deux livres de perte de poids sur douze semaines).</string>
-    <string name="complete_intentions_text">Tous les deux mois, créez trois nouvelles intentions d\'implémentation - «si X, puis Y» prévoit d\'exécuter un comportement particulier dans un contexte spécifique - et cochez chacune d\'elles au fur et à mesure que vous les réalisez chaque jour.</string>
-    <string name="nightly_fast_text">En raison de nos rythmes circadiens, les aliments consommés la nuit sont plus gras que les mêmes aliments consommés plus tôt dans la journée, donc jeûne tous les soirs pendant au moins douze heures à partir de 19h00. Moins il y a de calories après le coucher du soleil, mieux c\'est.</string>
-    <string name="nightly_sleep_text">Cochez cette case si vous dormez au moins sept heures à l\'heure du coucher habituelle.</string>
-    <string name="nightly_trendelenburg_text">Essayez de passer au moins quatre heures par nuit allongé avec votre corps incliné de 6 degrés vers le bas en élevant les montants au pied de votre lit de huit pouces (ou de neuf pouces si vous avez un roi de Californie). Soyez extrêmement prudent lorsque vous sortez du lit, car cela provoque une intolérance orthostatique chez la plupart des gens, même si vous êtes jeune et en bonne santé - ce qui signifie que si vous vous levez trop vite, vous pouvez vous sentir étourdi, faible ou étourdi et tomber et vous blesser. Alors lève-toi lentement. Boire deux tasses d\'eau froide trente minutes avant de se lever peut également aider à prévenir cet effet secondaire potentiellement dangereux.\n\n* IMPORTANT: N\'essayez pas du tout à la maison si vous avez des problèmes cardiaques ou pulmonaires, un reflux acide ou des problèmes avec votre cerveau (comme un traumatisme crânien) ou des yeux (même une histoire familiale de glaucome vous disqualifie). N\'essayez pas non plus avant d\'avoir demandé à votre médecin s\'il pense qu\'il est sûr pour vous de dormir à Trendelenburg doux. *</string>
+    <string name="nightly_trendelenburg_short">Testez la position de Trendelenburg modérée</string>
+    <string name="meal_water_text">Buvez deux verres d’eau fraîche ou froide non aromatisée avant chaque repas pour stimuler votre métabolisme et profiter de la faculté de précharge de l\'eau.</string>
+    <string name="meal_negcal_text">Commencez chaque repas avec une pomme ou bien une soupe ou salade contenant moins de cent calories par tasse (1 tasse = 250 ml).</string>
+    <string name="meal_vinegar_text">Ne buvez jamais de vinaigre pur. Utilisez-le plutôt pour aromatiser vos plats ou assaisonner vos salades. Choisissez n’importe quel vinaigre sucré ou salé. Si vous voulez le boire, mélangez-le bien dans un verre d\'eau et n’oubliez pas de vous rincer la bouche avec de l’eau en suivant pour protéger l\'émail de vos dents.</string>
+    <string name="meal_undistracted_text">Evitez de regarder la télévision ou jouer sur votre téléphone pendant les repas. Cochez cette case à chaque repas que vous arrivez à manger sans distraction.</string>
+    <string name="meal_twentyminutes_text">Que ce soit en augmentant la viscosité ou le nombre de mastications, ou en diminuant la taille des bouchées et la vitesse de consommation, des dizaines d\'études ont démontré que, quelle que soit la façon que nous utilisons pour prendre plus de temps à manger, cela peut entraîner une diminution de l\'apport calorique. Faites en sorte que votre repas dure au moins vingt minutes pour activer pleinement vos signaux de satiété.\n\nComment ? En choisissant des aliments qui prennent plus de temps à manger et en les gardant en bouche aussi longtemps que possible. Optez pour des aliments plus volumineux, plus durs et qui ont besoin d’être bien mâchés en prenant de plus petites bouchées.</string>
+    <string name="daily_blackcumin_text">Une revue systématique et méta-analyse d’études randomisées avec contrôle sur la perte de poids ont révélé qu\'environ un quart de cuillère à café de poudre de cumin noir par jour semble réduire l\'indice de masse corporelle en l\'espace de quelques mois.\n\nNotez que le cumin noir est différent du cumin ordinaire, pour lequel un autre dosage est recommandé.</string>
+    <string name="daily_garlic_text">Des études randomisées en double aveugle sous contrôle placebo ont démontré que l’on peut réduire sa masse graisseuse en prenant à peine un quart de cuillère à café d\'ail en poudre par jour, coûtant seulement deux cents par jour.</string>
+    <string name="daily_ginger_text">Des essais contrôlés randomisés ont révélé que ¼ de cuillère à café à 1½ cuillères à café de gingembre moulu par jour diminuait considérablement la masse corporelle pour seulement quelques centimes par jour. Vous pouvez tout simplement le diluer dans de l’eau chaude.\nN.B. : le gingembre est peut-être plus efficace le matin que le soir.\n\nLe thé Chai peut vous permettre de délicieusement combiner les astuces thé vert et gingembre en une seule boisson.\nAutrement, vous pouvez ajouter un piment jalapeño cru ou ½ cuillère à café de piment moulu (ou flocons de piment) dans votre alimentation quotidienne pour activer votre tissu adipeux brun. Pour atténuer sa force, vous pouvez émincer ou hacher le jalapeño très finement ou mélanger le piment moulu dans une soupe ou le smoothie de légumes complet qui figure dans l\'une de mes vidéos sur NutritionFacts.org.</string>
+    <string name="daily_nutriyeast_text">Deux cuillères à café de levure de boulanger, de bière ou nutritionnelle contiennent à peu près la quantité de bêta-(1,3/1,6)-glucanes qui permet de faciliter la perte de poids selon des études randomisées en double aveugle sous contrôle placebo.</string>
+    <string name="daily_cumin_text">Des femmes en surpoids randomisées de manière à ajouter une demi-cuillère à café de cumin à leur déjeuner et dîner ont battu le groupe témoin de 2 kg et 2,5 cm de tour de taille. Le safran s’est également avéré efficace, mais une pincée par jour coûte un dollar, tandis qu\'une cuillère à café de cumin coûte moins de dix cents.</string>
+    <string name="daily_greentea_text">Buvez trois tasses par jour entre les repas (attendez au moins une heure après un repas pour ne pas interférer avec l\'absorption du fer).\nPendant les repas, buvez de l\'eau, du café noir ou de la tisane d\'hibiscus mélangée 6/1 avec de la verveine citronnée, mais ne dépassez jamais trois tasses de liquide par heure (important compte tenu de mon astuce de précharge d\'eau).\nProfitez de l\'effet de renforcement positif de la caféine en buvant votre thé vert avec quelque chose de sain que vous voudriez aimer plus, mais évitez de consommer trop de caféine dans les six heures avant le coucher.\nIl est préférable de prendre votre thé sans édulcorant mais si vous sucrez généralement votre thé avec du miel ou du sucre, essayez plutôt le sirop de yacon.</string>
+    <string name="daily_hydrate_text">Cochez cette case si votre urine n’est jamais plus sombre que jaune pâle dans la journée.\n\nNotez que si vous mangez des aliments enrichis en riboflavine (comme la levure nutritionnelle), concentrez-vous plutôt sur neuf tasses de boissons non sucrées par jour pour les femmes (ce qui serait pris en charge par les recommandations de précharge de thé vert et d\'eau) ou treize tasses par jour pour les hommes.\n\nSi vous avez des problèmes cardiaques ou rénaux, n\'augmentez pas votre apport quotidien en liquides sans consulter votre médecin.\n\nAttention, comme expliqué dans mon livre ‘Comment ne pas faire de régime’, les sodas lights sont peut-être sans calories mais ils ne sont pas sans conséquences.</string>
+    <string name="daily_deflourdiet_text">Cochez cette case chaque jour où vous consommez vos céréales complètes sous forme de grains intacts. Une fois moulues, même les céréales 100% complètes privent notre microbiote de l’amidon que des grains intacts peuvent transporter jusqu’à notre côlon encapsulé dans des parois cellulaires inaltérées.</string>
+    <string name="daily_frontload_text">Consommer plus de calories plus tôt dans la journée est bénéfique au métabolisme, alors faites du petit déjeuner (idéalement) ou du déjeuner votre plus grand repas de la journée ; comme le veut l’adage qui nous recommande de manger comme un roi le matin, comme un prince le midi et comme un pauvre le soir.</string>
+    <string name="daily_timerestrict_text">Définissez une période de moins de douze heures par jour pour votre consommation alimentaire. Choissisez une fenêtre de douze heures à laquelle vous pourrez vous tenir tous les jours de la semaine. Sachant qu’il est bénéfique, par rapport aux rythmes circadiens, de ne pas consommer trop le soir, la période choisie devrait se terminer à 19h00 au plus tard.</string>
+    <string name="exercise_timing_text">La recommandation Daily Dozen pour une durée d\'exercice optimale pour la longévité est de 90 minutes d\'activité modérément intense par jour, ce qui est également la durée optimale pour la perte de poids. Cela est bénéfique à tout moment de la journée et plus vous en faites, mieux c’est, mais c’est peut-être encore mieux à jeun (au moins six heures après votre dernier repas). Ceci est généralement avant le petit-déjeuner, mais si vous calculez bien, vous pourriez faire de l\'exercice avant un déjeuner tardif ou, si votre déjeuner est suffisamment tôt, avant le dîner. Ça c\'est pour les non-diabétiques.\n\nLes diabétiques et prédiabétiques devraient, quant à eux, commencer à faire de l\'exercice trente minutes après le début d\'un repas et, idéalement, pendant au moins une heure pour passer complètement le pic de glycémie. Le repas optimal pour cela serait le dîner, en raison du rythme circadien du contrôle de la glycémie qui diminue tout au long de la journée. Mais, idéalement, le petit-déjeuner devrait être le plus gros repas de la journée et vous devriez faire votre exercice juste après – ou, mieux encore, après chaque repas.</string>
+    <string name="weigh_twice_text">Se peser régulièrement est essentiel pour contrôler son poids sur le long terme mais il n’y a pour l’instant pas de preuves justifiant une fréquence spécifique.\nMa recommandation est basée sur une étude qui a montré que deux fois par jour (au réveil et juste avant le coucher) semblait plus efficace qu’une fois par jour (environ 3kg perdus contre 1kg sur douze semaines).</string>
+    <string name="complete_intentions_text">Tous les deux mois, créez trois nouveaux objectifs – du style «si X, alors Y», afin de déterminer une marche à suivre dans un contexte spécifique – et cochez une case par objectif complété chaque jour.</string>
+    <string name="nightly_fast_text">En raison de nos rythmes circadiens, les aliments consommés le soir font davantage grossir que les mêmes aliments plus tôt dans la journée. Il est donc préférable de jeûner tous les soirs pendant au moins douze heures en commençant avant 19h. Moins vous consommez de calories après le coucher du soleil, mieux c’est.</string>
+    <string name="nightly_sleep_text">Cochez cette case si vous avez dormi au moins sept heures en vous couchant à l’heure habituelle.</string>
+    <string name="nightly_trendelenburg_text">Essayez de passer au moins quatre heures par nuit avec la tête inclinée de 6 degrés vers le bas par rapport aux pieds en surélevant les pieds de votre lit de 20 cm.\nSoyez extrêmement prudent au lever car cela provoque une intolérance orthostatique chez la plupart des gens, même jeunes et en bonne santé – ce qui veut dire que, si vous vous levez trop vite, vous pourriez être étourdi ou pris de malaise et tomber et vous blesser. Levez-vous donc lentement. Boire deux verres d\'eau fraiche trente minutes avant de vous lever peut également aider à prévenir cet effet indésirable.\n\nIMPORTANT : N\'essayez pas cela si vous avez le moindre problème cardiaque ou pulmonaire, des remontées acides, ou si vous souffrez de problèmes cérébraux (comme un traumatisme crânien) ou oculaires (même des antécédents familiaux de glaucome vous disqualifient). N\'essayez pas non plus avant d\'avoir demandé à votre médecin s\'il pense que la position de Trendelenburg modérée est sans danger pour vous.</string>
     <string name="weight">Poids</string>
     <string name="tweak_group_meal">À chaque repas</string>
     <string name="tweak_group_daily">Tous les jours</string>
     <string name="tweak_group_dailydoses">Prenez vos doses quotidiennes</string>
     <string name="tweak_group_nightly">Toutes les nuits</string>
-    <string name="about_tweak">À propos de Tweak</string>
+    <string name="about_tweak">À propos des Astuces</string>
     <string-array name="about_text_lines">
         <item>Cette application a été créée par John Slavick.</item>
         <item />
-        <item>Les bibliothèques open source suivantes sont utilisées: ActiveAndroid, android-iconify, EventBus, LikeAnimation et MPAndroidChart.</item>
+        <item>Bibliothèques open source utilisées: ActiveAndroid, android-iconify, EventBus, LikeAnimation et MPAndroidChart.</item>
         <item />
-        <item>Un grand merci aux efforts bénévoles des créateurs de l\'application précédente: Chan Kruse, Allan Portera et Sangeeta Kumar.</item>
+        <item>Un grand merci aux bénévoles qui ont créé l\'application précédente pour leurs efforts : Chan Kruse, Allan Portera et Sangeeta Kumar.</item>
     </string-array>
     <string-array name="backup_instructions_lines">
-        <item>Suivez ces étapes pour restaurer cette sauvegarde dans l\'application Daily Dozen</item>
+        <item>Suivez ces étapes pour restaurer la sauvegarde dans l\'app Daily Dozen</item>
         <item />
-        <item>1. L\'application Daily Dozen doit être installée sur votre téléphone Android. Vous pouvez le télécharger ici: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. Vous devez installer l\'application Daily Dozen sur votre téléphone Android. Vous pouvez la télécharger ici : https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
-        <item>2. Tapez sur le fichier de sauvegarde joint à ce courriel.</item>
+        <item>2. Tapez sur le fichier de sauvegarde joint à cet email.</item>
         <item />
         <item>3. Sélectionnez Ouvrir avec Daily Dozen</item>
     </string-array>
@@ -191,47 +191,47 @@
     </string-array>
     <string-array name="food_info_types_beans">
         <item>Haricots noirs</item>
-        <item>Haricots à oeil noir</item>
-        <item>Haricots de Lima</item>
-        <item>Cannellini haricots</item>
+        <item>Haricots cornilles</item>
+        <item>Pois du cap</item>
+        <item>Flageolets</item>
         <item>Pois chiches</item>
         <item>Edamame</item>
-        <item>Pois à écosser</item>
-        <item>Haricots blancs</item>
+        <item>Petits pois</item>
+        <item>Haricots lingots</item>
         <item>Haricots rouges</item>
-        <item>Lentilles (variétés beluga, françaises et rouges)</item>
+        <item>Lentilles (beluga, vertes, corail)</item>
         <item>Miso</item>
         <item>Haricots blancs</item>
-        <item>Haricots pinto</item>
+        <item>Haricots coco</item>
         <item>Petits haricots rouges</item>
-        <item>Pois cassés (jaune ou vert)</item>
+        <item>Pois cassés (jaunes ou verts)</item>
         <item>Tempeh</item>
     </string-array>
     <string-array name="food_info_types_berries">
-        <item>Baies d\'açai</item>
+        <item>Baies d\'açaï</item>
         <item>Épine-vinette</item>
         <item>Mûres</item>
-        <item>Bleuets</item>
-        <item>Cerises (sucrées ou sures)</item>
-        <item>Raisins Concord</item>
-        <item>Canneberges</item>
+        <item>Bleuets/Myrtilles</item>
+        <item>Cerises (sucrées, griottes, douces)</item>
+        <item>Raisins</item>
+        <item>Canneberges/Cranberries</item>
         <item>Baies de Goji</item>
         <item>Kumquats</item>
-        <item>Mûriers</item>
+        <item>Mûres de mûriers</item>
         <item>Framboises (noires ou rouges)</item>
         <item>Fraises</item>
     </string-array>
     <string-array name="food_info_types_other_fruits">
         <item>Pommes</item>
-        <item>Abricots secs</item>
+        <item>Abricots</item>
         <item>Avocats</item>
         <item>Bananes</item>
-        <item>Cantaloups</item>
+        <item>Melon</item>
         <item>Clémentines</item>
         <item>Dattes</item>
-        <item>Figues sèches</item>
-        <item>Pamplemousses</item>
-        <item>Melons miel</item>
+        <item>Figues</item>
+        <item>Pamplemousse</item>
+        <item>Melon jaune</item>
         <item>Kiwis</item>
         <item>Citrons</item>
         <item>Citrons verts</item>
@@ -239,45 +239,45 @@
         <item>Mangues</item>
         <item>Nectarines</item>
         <item>Oranges</item>
-        <item>Papayes</item>
+        <item>Papaye</item>
         <item>Fruits de la passion</item>
         <item>Pêches</item>
         <item>Poires</item>
         <item>Ananas</item>
         <item>Prunes (en particulier les prunes noires)</item>
-        <item>Pluots</item>
+        <item>Brugnons</item>
         <item>Grenades</item>
-        <item>Prunes</item>
+        <item>Pruneaux</item>
         <item>Mandarines</item>
-        <item>Melon d\'eau</item>
+        <item>Pastèque</item>
     </string-array>
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>Roquette</item>
-        <item>Bok choy</item>
-        <item>Brocoli (Romanesco)</item>
+        <item>Pak choi</item>
+        <item>Brocoli (dont Romanesco)</item>
         <item>Choux de Bruxelles</item>
-        <item>Chou (vert, rouge, de savoie)</item>
-        <item>Choufleur (blanc, vert, orange, violet)</item>
-        <item>Chou collard</item>
+        <item>Chou (vert, rouge)</item>
+        <item>Chou-fleur (blanc, vert, orange, violet)</item>
+        <item>Chou cavalier</item>
         <item>Raifort</item>
-        <item>Kale (noir, vert et rouge)</item>
-        <item>Chourave (vert, violet)</item>
+        <item>Chou kale (noir, vert et rouge)</item>
+        <item>Chou-rave (vert, violet)</item>
         <item>Feuilles de moutarde</item>
         <item>Radis</item>
-        <item>Feuilles de navet</item>
+        <item>Fanes de navets</item>
         <item>Cresson</item>
     </string-array>
     <string-array name="food_info_types_greens">
         <item>Roquette</item>
-        <item>Feuilles de betteraves</item>
-        <item>Chou collard</item>
-        <item>Kale (noir, vert et rouge)</item>
-        <item>Mesclun (variété de jeunes salades vertes)</item>
+        <item>Fanes de betteraves</item>
+        <item>Chou vert</item>
+        <item>Chou kale (noir, vert et rouge)</item>
+        <item>Mesclun (mélange de pousses de salade)</item>
         <item>Feuilles de moutarde</item>
         <item>Oseille</item>
         <item>Épinards</item>
-        <item>Bette à carde</item>
-        <item>Feuilles de navet</item>
+        <item>Blettes</item>
+        <item>Fanes de navets</item>
     </string-array>
     <string-array name="food_info_types_other_vegetables">
         <item>Artichauts</item>
@@ -287,21 +287,21 @@
         <item>Carottes</item>
         <item>Maïs</item>
         <item>Ail</item>
-        <item>Champignons (de Paris, huître, portobello et shiitake)</item>
+        <item>Champignons (de Paris, pleurote, portobello, shiitake)</item>
         <item>Gombo</item>
         <item>Oignons</item>
-        <item>Pommes de terre pourpres</item>
+        <item>Pommes de terre</item>
         <item>Citrouille</item>
-        <item>Algues (arame, dulse et nori)</item>
+        <item>Algues (brunes, rouges, vertes)</item>
         <item>Petits pois</item>
-        <item>Courges (délicatesse, été, spaghetti et variétés de courges)</item>
-        <item>Patates douces / ignames</item>
+        <item>Courges</item>
+        <item>Patates douces/Ignames</item>
         <item>Tomates</item>
-        <item>Zucchini</item>
+        <item>Courgettes</item>
     </string-array>
     <string-array name="food_info_types_flaxseeds">
         <item>Graines de lin brun</item>
-        <item>Graines de lin dorées</item>
+        <item>Graines de lin doré</item>
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Amandes</item>
@@ -311,26 +311,26 @@
         <item>Noisettes</item>
         <item>Graines de chanvre</item>
         <item>Noix de macadamia</item>
-        <item>Pacanes</item>
+        <item>Noix de pécan</item>
         <item>Pistaches</item>
-        <item>Graines de citrouille</item>
+        <item>Graines de courge</item>
         <item>Graines de sésame</item>
         <item>Graines de tournesol</item>
-        <item>Noix de Grenoble</item>
+        <item>Noix</item>
     </string-array>
     <string-array name="food_info_types_spices">
-        <item>Allspice</item>
+        <item>Piment de la Jamaïque</item>
         <item>Épine-vinette</item>
         <item>Basilic</item>
-        <item>Feuilles de laurier</item>
+        <item>Laurier</item>
         <item>Cardamome</item>
-        <item>Poudre de chili</item>
-        <item>Coriandre</item>
+        <item>Poudre de piment</item>
+        <item>Coriandre fraîche</item>
         <item>Cannelle</item>
         <item>Clous de girofle</item>
         <item>Coriandre</item>
         <item>Cumin</item>
-        <item>Poudre de cari</item>
+        <item>Curry en poudre</item>
         <item>Aneth</item>
         <item>Fenugrec</item>
         <item>Ail</item>
@@ -341,15 +341,15 @@
         <item>Moutarde en poudre</item>
         <item>Noix de muscade</item>
         <item>Origan</item>
-        <item>Paprika fumé</item>
+        <item>Paprika</item>
         <item>Persil</item>
         <item>Poivre</item>
         <item>Menthe poivrée</item>
         <item>Romarin</item>
         <item>Safran</item>
-        <item>sauge</item>
+        <item>Sauge</item>
         <item>Thym</item>
-        <item>Safran des Indes</item>
+        <item>Curcuma</item>
         <item>Vanille</item>
     </string-array>
     <string-array name="food_info_types_whole_grains">
@@ -357,103 +357,107 @@
         <item>Sarrasin</item>
         <item>Millet</item>
         <item>Avoine</item>
-        <item>Maïs soufflé</item>
+        <item>Pop-corn</item>
         <item>Quinoa</item>
         <item>Seigle</item>
         <item>Teff</item>
-        <item>Pâtes de blé entier</item>
+        <item>Pâtes de blé complet</item>
     </string-array>
     <string-array name="food_info_types_beverages">
         <item>Thé noir</item>
         <item>Thé chai</item>
-        <item>Thé de camomille à la vanille</item>
+        <item>Infusion de camomille</item>
         <item>Café</item>
         <item>Thé Earl Grey</item>
         <item>Thé vert</item>
-        <item>Thé à l\'hibiscus</item>
+        <item>Infusion d\'hibiscus</item>
         <item>Chocolat chaud</item>
         <item>Thé au jasmin</item>
-        <item>Thé au citron</item>
+        <item>Infusion de mélisse</item>
         <item>Thé Matcha</item>
-        <item>Thé oolong aux fleurs d\'amandes</item>
-        <item>Thé à la menthe poivrée</item>
-        <item>Thé Rooibos</item>
+        <item>Thé oolong</item>
+        <item>Infusion à la menthe poivrée</item>
+        <item>Infusion rooibos</item>
         <item>Eau</item>
         <item>Thé blanc</item>
     </string-array>
     <string-array name="food_info_types_exercise">
-        <item>Faire du vélo</item>
-        <item>Faire du canoë</item>
-        <item>Danser</item>
+        <item>Vélo</item>
+        <item>Canoë</item>
+        <item>Danse</item>
         <item>Dodgeball</item>
         <item>Ski alpin</item>
         <item>Escrime</item>
-        <item>Marche en montagne</item>
+        <item>Randonnée</item>
         <item>Travaux ménagers</item>
         <item>Patinage sur glace</item>
-        <item>Patin à roues alignées</item>
-        <item>Jonglerie</item>
-        <item>Sauter sur une trampoline</item>
+        <item>Patin à roulettes</item>
+        <item>Jonglage</item>
+        <item>Trampoline</item>
         <item>Pédalo</item>
-        <item>Jouer au frisbee</item>
-        <item>Patin à roues alignées</item>
+        <item>Frisbee</item>
+        <item>Roller</item>
         <item>Tir au panier</item>
-        <item>Déneiger</item>
-        <item>Planche à roulettes</item>
-        <item>Plongée en apnée</item>
+        <item>Déblayer la neige</item>
+        <item>Skateboard</item>
+        <item>Nage PMT (avec palmes, masque et tuba)</item>
         <item>Surf</item>
         <item>Natation récréative</item>
-        <item>Tennis (double)</item>
-        <item>Surplace dans l\'eau</item>
+        <item>Tennis (en double)</item>
+        <item>Marche dans l\'eau</item>
         <item>Marche rapide (6 km/h)</item>
         <item>Aquagym</item>
         <item>Ski nautique</item>
-        <item>Travaux de jardinage</item>
+        <item>Jardinage</item>
         <item>Yoga</item>
-        <item>Randonnée pédestre</item>
+        <item>Voyage en randonnée</item>
         <item>Basketball</item>
         <item>Vélo en montée</item>
-        <item>Entraînement musculaire</item>
+        <item>Circuits de musculation</item>
         <item>Ski de fond</item>
-        <item>Football</item>
+        <item>Football américain</item>
         <item>Hockey</item>
-        <item>Jogging</item>
+        <item>Jogging/Footing</item>
         <item>Jumping jacks</item>
         <item>Corde à sauter</item>
-        <item>Lacrosse</item>
-        <item>Push-ups</item>
-        <item>Pull-ups</item>
+        <item>Crosse</item>
+        <item>Pompes</item>
+        <item>Abdos</item>
         <item>Racquetball</item>
         <item>Escalade</item>
         <item>Rugby</item>
-        <item>Course à pied</item>
+        <item>Course à pied/Running</item>
         <item>Plongée sous-marine</item>
         <item>Tennis (individuel)</item>
-        <item>Soccer</item>
+        <item>Football/Soccer</item>
         <item>Patinage de vitesse</item>
         <item>Squash</item>
-        <item>Step aérobique</item>
-        <item>Pistes de natation</item>
-        <item>Marcher rapidement en montée</item>
-        <item>Jogging en eau profonde</item>
+        <item>Step</item>
+        <item>Longueurs à la nage</item>
+        <item>Marche rapide en montée</item>
+        <item>Aquajogging</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ tasse d\'humus ou trempette de haricots,</item>
-        <item>½ tasse de haricots cuits, de pois cassés, de lentilles, de tofu ou de tempeh,</item>
-        <item>1 tasse de pois frais ou de lentilles germées</item>
+        <item>¼ tasse de houmous ou autre crème de haricots</item>
+        <item>½ tasse de haricots cuits, pois cassés ou lentilles</item>
+        <item>½ tasse de tofu ou tempeh</item>
+        <item>1 tasse de petits pois ou pois mangetout</item>
+        <item>1 tasse de lentilles ou fèves germées</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g d\'humus ou trempette de haricots,</item>
-        <item>130 g de haricots cuits, de pois cassés, de lentilles, de tofu ou de tempeh,</item>
-        <item>150 g de pois frais ou de lentilles germées</item>
+        <item>60 g de houmous ou autre crème de haricots</item>
+        <item>90 g de haricots cuits, pois cassés ou lentilles</item>
+        <item>100 g de tofu ou tempeh</item>
+        <item>130 g de petits pois ou pois mangetout</item>
+        <item>100 g de lentilles ou fèves germées</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½ tasse de fruits frais ou congelés</item>
-        <item>¼ tasse séché</item>
+        <item>½ tasse fraîches ou congelées</item>
+        <item>¼ tasse séchées</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g de fruits frais ou congelés</item>
-        <item>40 g séché</item>
+        <item>60 g fraîches ou congelées</item>
+        <item>40 g séchées</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
         <item>1 fruit de taille moyenne</item>
@@ -466,24 +470,24 @@
         <item>40 g de fruits secs</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ tasse haché</item>
+        <item>½ tasse hachés</item>
         <item>½ tasse de choux de Bruxelles</item>
         <item>¼ tasse de pousses de brocoli</item>
-        <item>1 cuillerée à soupe de raifort</item>
+        <item>1 cuillère à soupe de raifort</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g haché</item>
+        <item>30–80 g hachés</item>
         <item>78 g de choux de Bruxelles</item>
         <item>14 g de pousses de brocoli</item>
-        <item>1 cuillerée à soupe de raifort</item>
+        <item>1 cuillère à soupe de raifort</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
-        <item>1 tasse cru</item>
-        <item>½ tasse cuit</item>
+        <item>1 tasse crus</item>
+        <item>½ tasse cuits</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>60 g cru</item>
-        <item>90 g cuit</item>
+        <item>60 g crus</item>
+        <item>90 g cuits</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
         <item>1 tasse de légumes feuillus crus</item>
@@ -498,40 +502,40 @@
         <item>7 g de champignons séchés</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item>1 cuillrée à soupe moulu</item>
+        <item>1 cuillère à soupe moulues</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item>1 cuillrée à soupe moulu</item>
+        <item>1 cuillère à soupe moulues</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
-        <item>¼ tasse de noix ou de graines</item>
-        <item>2 cuillerées à soupe de beurre de noix ou de graines</item>
+        <item>¼ tasse de noix ou graines</item>
+        <item>2 cuillères à soupe de beurre de noix ou graines</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>30 g de noix ou de graines</item>
-        <item>2 cuillerées à soupe de beurre de noix ou de graines</item>
+        <item>30 g de noix ou graines</item>
+        <item>2 cuillères à soupe de beurre de noix ou graines</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
         <item>¼ de cuillère à café de curcuma</item>
-        <item>Toutes les autres herbes et épices (sans sel) que vous aimez</item>
+        <item>Toutes autres épices et herbes aromatiques (sans sel) que vous aimez</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
         <item>¼ de cuillère à café de curcuma</item>
-        <item>Toutes les autres herbes et épices (sans sel) que vous aimez</item>
+        <item>Toutes autres épices et herbes aromatiques (sans sel) que vous aimez</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ tasse de céréales chaudes ou de grains, pâtes ou grains de maïs cuits</item>
+        <item>½ tasse de céréales cuites ou pâtes</item>
         <item>1 tasse de céréales froides</item>
         <item>1 tortilla ou tranche de pain</item>
         <item>½ bagel ou muffin anglais</item>
-        <item>3 tasses de pop-corn éclaté</item>
+        <item>3 tasses de pop-corn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g de céréales chaudes ou de grains, pâtes ou grains de maïs cuits</item>
+        <item>100 g de céréales cuites ou pâtes</item>
         <item>50 g de céréales froides</item>
         <item>1 tortilla ou tranche de pain</item>
         <item>½ bagel ou muffin anglais</item>
-        <item>30 g de pop-corn éclaté</item>
+        <item>30 g de pop-corn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
         <item>Un verre (12 onces)</item>

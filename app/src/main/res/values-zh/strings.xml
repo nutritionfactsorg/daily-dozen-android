@@ -14,7 +14,7 @@
     <string name="beverages">飲料</string>
     <string name="exercise">運動</string>
     <string name="vitamin_b12">維生素B12</string>
-    <string name="serving_sizes">份量大小</string>
+    <string name="serving_sizes">份量（建議）</string>
     <string name="types">種類</string>
     <string name="history">歷史紀錄</string>
     <string name="servings_some">部分份量</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">移動平均數</string>
     <string name="about">關於我們</string>
     <string name="about_this_app">關於這個應用程式</string>
-    <string name="about_translators">特別鳴謝翻譯志願者：Ricard Soler Roger（ca）、Luděk Bouška（cs、sk）、Lenka Lukacová（cs）、Anke Schliessmann（de）、Ángela Graña（es）、Doron Barak（he）、Ruth Levy（he）、Joanna Klopotek（pl）、Tania Bassi（pt-BR）、João Madureira（pr-PT）、Evgeniya Lyakh（ru）、Katarína Mocáková（sk）。</string>
+    <string name="about_translators">特別鳴謝翻譯志願者：Petar Enchev（bg）、Tsveti Enchev（bg）、Ricard Soler Roger（ca）、Luděk Bouška（cs,sk）、Lenka Lukacová（cs）、Anke Schliessmann（de）、Ángela Graña（es）、Audray Harkins（fr）、Doron Barak（he）、Ruth Levy（he）、Annalisa Guerrini-Körner（it）、Ilaria Zanini（it）、Hanna Gurzeda（pl）、Joanna Klopotek（pl）、Tania Bassi（pt-BR）、João Madureira（pt-PT）、Cristina Lauby（ro）、Evgeniya Lyakh（ru）、Katarína Mocáková（sk)。</string>
     <string name="latest_videos">最新影片</string>
     <string name="donate">捐款</string>
     <string name="subscribe">訂閱</string>
@@ -438,14 +438,18 @@
         <item>水中慢跑</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼杯鷹嘴豆泥或豆子沾醬</item>
-        <item>,</item>
-        <item>½杯煮熟的豆子、豌豆、扁豆、豆腐或天貝</item>
+        <item>¼ 杯鷹嘴豆泥</item>
+        <item>½ 杯煮熟的豆子、豌豆或扁豆</item>
+        <item>½ 杯豆腐或豆豉</item>
+        <item>1 杯新鮮豌豆或荷蘭豆</item>
+        <item>1杯新鮮發芽豆（扁豆、綠豆）</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>¼杯鷹嘴豆泥或豆子沾醬</item>
-        <item>,</item>
-        <item>½杯煮熟的豆子、豌豆、扁豆、豆腐或天貝</item>
+        <item>60 克鷹嘴豆泥</item>
+        <item>90 克煮熟的豆子、豌豆或扁豆</item>
+        <item>100 克豆腐或豆豉</item>
+        <item>130 克新鮮豌豆或荷蘭豆</item>
+        <item>100 克新鮮發芽豆（扁豆、綠豆）</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½杯新鮮或冷凍莓果</item>

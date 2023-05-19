@@ -14,7 +14,7 @@
     <string name="beverages">Beverages</string>
     <string name="exercise">Exercise</string>
     <string name="vitamin_b12">Vitamin B12</string>
-    <string name="serving_sizes">Serving Sizes</string>
+    <string name="serving_sizes">Serving Sizes (Suggested)</string>
     <string name="types">Types</string>
     <string name="history">History</string>
     <string name="servings_some">Some servings</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Moving Average</string>
     <string name="about">About</string>
     <string name="about_this_app">About this app</string>
-    <string name="about_translators">Special thanks to our volunteer translators: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Special thanks to our volunteer translators: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Latest Videos</string>
     <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
     <string name="title_how_not_to_die" translatable="false">How Not to Die</string>
@@ -620,14 +620,18 @@
         <item>Water jogging</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ cup of hummus or bean dip</item>
-        <item>½ cup cooked beans, split peas, lentils, tofu, or tempeh</item>
-        <item>1 cup of fresh peas or sprouted lentils</item>
+        <item>¼ cup hummus or bean dip</item>
+        <item>½ cup cooked beans, split peas, or lentils</item>
+        <item>½ cup tofu or tempeh</item>
+        <item>1 cup fresh peas or snow peas</item>
+        <item>1 cup fresh sprouted beans (lentils, mung beans)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g of hummus or bean dip</item>
-        <item>130 g cooked beans, split peas, lentils, tofu, or tempeh</item>
-        <item>150 g of fresh peas or sprouted lentils</item>
+        <item>60 g hummus or bean dip</item>
+        <item>90 g cooked beans, split peas, or lentils</item>
+        <item>100 g tofu or tempeh</item>
+        <item>130 g fresh peas or snow peas</item>
+        <item>100 g fresh sprouted beans (lentils, mung beans)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ cup fresh or frozen</item>
@@ -705,14 +709,14 @@
         <item>½ cup hot cereal or cooked grains, pasta, or corn kernels</item>
         <item>1 cup cold cereal</item>
         <item>1 tortilla or slice of bread</item>
-        <item>½ a bagel or English muffin</item>
+        <item>½ bagel or English muffin</item>
         <item>3 cups popped popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g hot cereal or cooked grains, pasta, or corn kernels</item>
         <item>50 g cold cereal</item>
         <item>1 tortilla or slice of bread</item>
-        <item>½ a bagel or English muffin</item>
+        <item>½ bagel or English muffin</item>
         <item>30 g popped popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">

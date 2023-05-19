@@ -14,7 +14,7 @@
     <string name="beverages">Bebidas</string>
     <string name="exercise">Ejercicio</string>
     <string name="vitamin_b12">Vitamina B12</string>
-    <string name="serving_sizes">Tamaño de las porciones</string>
+    <string name="serving_sizes">Tamaño de las porciones (sugerencia)</string>
     <string name="types">Tipos</string>
     <string name="history">Historial</string>
     <string name="servings_some">Algunas porciones</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Media móvil</string>
     <string name="about">Conócenos</string>
     <string name="about_this_app">Sobre esta app</string>
-    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Videos más recientes</string>
     <string name="donate">Donación</string>
     <string name="subscribe">Suscríbete</string>
@@ -75,7 +75,7 @@
     <string name="daily_reminder_settings">Potenciadores del recordatorio diario</string>
     <string name="enable_daily_reminder">Activar el recordatorio diario</string>
     <string name="remind_me_at">Recuérdamelo a las</string>
-    <string name="videos">VIDEOS</string>
+    <string name="videos">Videos</string>
     <string name="units">Sistema</string>
     <string name="imperial">IMPERIAL</string>
     <string name="metric">MÉTRICO</string>
@@ -438,14 +438,18 @@
         <item>Trotar en agua</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ taza de hummus o untable de legumbres</item>
-        <item>½ taza de frijoles cocidos, arvejas partidas, lentejas, tofu o tempeh</item>
-        <item>1 taza de guisantes frescos o brotes de lentejas</item>
+        <item>¼ taza de hummus o paté de otras legumbres</item>
+        <item>½ taza de legumbres cocinadas</item>
+        <item>½ taza de tofu o tempeh</item>
+        <item>1 taza de arvejas o tirabeques</item>
+        <item>1 taza de brotes de legumbres </item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g de hummus o untable de legumbres</item>
-        <item>130 g de frijoles cocidos, arvejas partidas, lentejas, tofu o tempeh</item>
-        <item>150 g de guisantes frescos o brotes de lentejas</item>
+        <item>60 g de hummus o paté de otras legumbres</item>
+        <item>90 g de legumbres cocinadas</item>
+        <item>100 g de tofu o tempeh</item>
+        <item>130 g de arvejas o tirabeques</item>
+        <item>100 g de brotes de legumbres</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ taza frescos o congelados</item>
