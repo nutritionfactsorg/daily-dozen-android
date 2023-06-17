@@ -216,8 +216,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
                 Common.openUrlInExternalBrowser(this, R.string.url_daily_dozen_challenge);
                 return true;
             case R.id.menu_faq:
-                // TODO: 6/17/23 open new activity
-                Common.showToast(this, "TODO: Open FAQ");
+                startActivity(new Intent(this, FaqActivity.class));
                 return true;
             case R.id.menu_donate:
                 Common.openUrlInExternalBrowser(this, R.string.url_donate);

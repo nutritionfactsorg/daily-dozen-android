@@ -139,6 +139,16 @@
                 android:value=".activity.MainActivity"/>
         </activity>
 
+        <activity android:name=".activity.FaqActivity"
+            android:label="@string/faq_title"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
         <receiver
             android:name=".receiver.AlarmReceiver"
             android:process=":remote"/>
