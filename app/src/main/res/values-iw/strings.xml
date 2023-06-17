@@ -14,7 +14,7 @@
     <string name="beverages">משקאות קלים</string>
     <string name="exercise">תרגול גופני</string>
     <string name="vitamin_b12">ויטמין B12</string>
-    <string name="serving_sizes">גודלי המנות</string>
+    <string name="serving_sizes">גודל מנה (מוצע)</string>
     <string name="types">סוגים</string>
     <string name="history">היסטוריה</string>
     <string name="servings_some">חלק מהמנות</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">ממוצע נע</string>
     <string name="about">לגבי</string>
     <string name="about_this_app">בקשר לאפליקציה זו</string>
-    <string name="about_translators">תודה מיוחדת למתרגמים המתנדבים: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk). </string>
+    <string name="about_translators">תודה מיוחדת למתרגמים המתנדבים: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">הסרטונים האחרונים</string>
     <string name="donate">תירמו</string>
     <string name="subscribe">הירשמו</string>
@@ -154,6 +154,22 @@
     <string name="nightly_fast_text">בשל מקצבי היממה שלנו, אוכל שנאכל בלילה משמין יותר מאותו אוכל בדיוק שנאכל מוקדם יותר ביום, אז צומו כל לילה במשך שתים עשרה שעות לפחות החל מהשעה 19:00. כמה שפחות קלוריות אחרי השקיעה, כך ייטב.</string>
     <string name="nightly_sleep_text">סמנו תיבה זו אם אתם ישנים לפחות 7 שעות שינה בזמן השינה הרגיל שלכם</string>
     <string name="nightly_trendelenburg_text">נסו להקדיש לפחות ארבע שעות בלילה בשכיבה כשגופכם מוטה ראש כלפי מטה שש מעלות על ידי הרמת העמודים למרגלות המיטה בשמונה סנטימטרים (או תשעה סנטימטרים אם יש לכם California king). היזהרו במיוחד כאשר אתם קמים מהמיטה, מכיוון שזה גורם לחוסר סובלנות אורתוסטטית אצל רוב האנשים, גם אם אתם צעירים ובריאים-כלומר, אם אתם קמים מהר מדי, אתם יכולים להרגיש סחרחורת, חולשה או ראש קל ועלולים ליפול ולפגוע בעצמכם. אז קומו לאט. שתיית שתי כוסות מים קרים שלושים דקות לפני שקמים עשויה לסייע גם במניעת תופעת לוואי זו שעלולה להיות מסוכנת. *חשוב: אל תנסו זאת בבית כלל אם יש לכם בעיות לב או ריאה, ריפלוקס חומצי או בעיות במוח (כמו טראומת ראש) או עיניים (אפילו היסטוריה משפחתית של גלאוקומה פוסלת אתכם). גם אל תנסו את זה עד שתשאלו את הרופא שלכם אם הוא חושב שזה בטוח לכם לישון בטרנדלנבורג מתון*</string>
+    <string name="faq_adapt_question">\"התריסר היומי\" זה יותר מדי אוכל בשבילי! האם אוכל להתאים את זה?</string>
+    <string name="faq_adapt_response">כן, \"התריסר היומי\" אמור להיות רק מדריך למזונות הבריאים ביותר שאנו שואפים לכלול כל יום. הוא אינו תכנית ארוחות ולא אמור להיות הנחיות מדוייקות. השתדלו לאכול מגוון רחב של מזונות צמחיים שלמים והתאימו את \"התריסר היומי\" לכמויות שמתאימות לכם.</string>
+    <string name="faq_age_question">האם זה ניתן להתאמה לילדים, מתבגרים, ובני עשרה?</string>
+    <string name="faq_age_response.0">לילדים, מתבגרים ובני עשרה יש דרישות קלוריות שונות בשלבים שונים של החיים. צרכים אלו משתנים כדי לתמוך בצמיחה והתפתחות בכל שלב.</string>
+    <string name="faq_age_response.1">\"התריסר היומי\" תוכנן להיות מדריך שעוזר לאנשים להכליל כמה מהמזונות הבריאים ביותר בתזונתם היומיומית. בעוד שניתן להשתמש באותה התבנית עבור רוב האנשים בכל שלבי החיים, כמות המזון הנדרשת לכם משתנה לפי מספר גורמים כמו גיל ורמת פעילות. מאחר ואיננו יכולים לתת ייעוץ תזונתי או רפואי עבור ילדכם הגדל, הורים צריכים להשתמש במדריך זה לפי מיטב הבנתם עבור הצרכים של הילד, ו/או להתייעץ עם דיאטנית מוסמכת או עם יועץ רפואי אחר שיעזרו לקבוע מה עדיף  לצרכים המסויימים שלהם.</string>
+    <string name="faq_calories_question">כמה קלוריות יש ב-\"תריסר היומי\"?</string>
+    <string name="faq_calories_response.0">ב-\"תריסר היומי\" יש בממוצע כ-1200 קלוריות, אבל בגלל המגוון הרחב של מזונות שונים בכל קטגוריה, זה יכול להשתנות בין 800 ל-1800 קלוריות. למשל, בקטגוריה \"ירקות אחרים\": בכוס של פלפלים ירוקים יש הרבה פחות קלוריות מאשר בכוס של בטטה מבושלת, לכן טווח הקלוריות תלוי בבחירות המסויימות שלכם. זה היתרון של הרשימות ב-\"תריסר היומי\"- אין זו גישה של דבר אחד לכולם, אלא ניתן להתאים זאת לצרכים שלכם.</string>
+    <string name="faq_calories_response.1">אם המטרה שלכם היא הפחתת משקל, תוכלו למצוא מידע נוסף בספר “How Not to Diet”, ובתוספת שלו \"Twenty-One Tweaks\". ב-“How Not to Diet\" ציינתי: \"סקירה שיטתית של אסטרטגיות מוצלחות להפחתת משקל הסיקה שבגלל ההאטה המטבולית והתאבון המוגבר שמלווים הפחתת משקל, כדי להשיג הפחתת משקל משמעותית, ייתכן שצריכת הקלוריות צריכה לרדת עד 1200 קלוריות ליום בנשים ו-1500 קלוריות ביום בגברים.</string>
+    <string name="faq_calories_response.2">מצד שני, אם מטרתכם היא עלייה במשקל, אולי תרצו להתמקד בהוספת מזונות עתירי קלוריות כמו בטטה, אבוקדו, אגוזים ומוצרי סויה.</string>
+    <string name="faq_mother_question">אוכל לעשות זאת בזמן הריון או הנקה?</string>
+    <string name="faq_mother_response">לנשים בהריון או מניקות יש צרכים קלוריים ותזונתיים שונים מאנשים אחרים. נזכיר שה\"תריסר היומי\" אינו תכנית ארוחות ולא צריך להיות המזונות שרק אותם תצרכו במהלך היום. נשים בהריון או מניקות צריכות להתייעץ עם מומחי רפואה או דיאטניות מוסמכות לעזרה בהשגת הדרישות הקלוריות והתזונתיות שלהן. </string>
+    <string name="faq_scaling_question">אינני יכול בשום אופן לאכול כל כך הרבה קטניות/דגנים/וכו.!</string>
+    <string name="faq_scaling_response">זה בסדר. התריסר היומי מדריך לכוון לשאוף אליו. עשו כמיטב יכולתכם להכליל את מירב המזונות הצמחיים הבריאים הללו. אם זה חדש לכם לאכול הרבה קטניות (או דגנים, ירוקים, וכו.), ייתכן שתצטרכו להתחיל בכמויות קטנות יותר ולהגדילן בהדרגה, כדי לתת לחיידקי המעיים שלכם זמן להתאמה. תוכלו גם להיות יצירתיים. למשל, הוספת שעועית לשיבולת השועל שלכם בבוקר. אם תוסיפו להם הרבה פירות יער, פשתן, זרעים ואגוזים, לא תרגישו את השעועית כלל. תוכלו גם לרסק את השעועית לממרח סנדביץ, או להכין את המתכון שלי לשיפון, שיבולת שועל, שעורה ועדשים [BROL](https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils) שמשמש לי כבסיס לארוחות רבות והוא דרך פשוטה לקבל מגוון דגנים מלאים ומכיל גם מנת קטניות. </string>
+    <string name="faq_supplements_question">חשבתי שד\"ר גרגר ממליץ לקחת תוספי ויטמין די ו-DHA. מדוע הם אינם נכללים כאן?</string>
+    <string name="faq_supplements_response">עדכנו את התריסר היומי כך שיכיל רק תוספים נדרשים. לדוגמה, ויטמין די נדרש רק לאנשים שאינם נחשפים מספיק לשמש. מטרתנו לחלוק אתכם את המדע כדי שתוכלו לעשות החלטות מודעות בעצמכם. תוכלו למצוא את כל המלצותי בדף [Optimum Nutrient](https://nutritionfacts.org/optimum-nutrient-recommendations) </string>
+    <string name="faq_title">שאלה נפוצה</string>
     <string name="weight">משקל</string>
     <string name="tweak_group_meal">בכל ארוחה</string>
     <string name="tweak_group_daily">כל יום</string>
@@ -311,6 +327,7 @@
         <item>אגוזי לוז</item>
         <item>זרעי קנבוס</item>
         <item>אגוזי מקדמיה</item>
+        <item>בוטנים</item>
         <item>פקאן</item>
         <item>פיסטוק</item>
         <item>גרעיני דלעת</item>
@@ -438,14 +455,18 @@
         <item>הליכה במים</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ כוס חומוס או ממרח שעועית</item>
-        <item>½ כוס קטניות מבושלות: שעועית, אפונה יבשה, עדשים, טופו או טמפה</item>
-        <item>1 כוס אפונה טריה או עדשים מונבטות</item>
+        <item>1/4 כוס חומוס או מתבל קיטניות</item>
+        <item>1/2 כוס שעועית, אפונה יבשה, או עדשים- מבושלות</item>
+        <item>1/2 כוס טופו או טמפה</item>
+        <item>1 כוס אפונה טריה או אפונת שלג</item>
+        <item>1 כוס  קטניות מונבטות (עדשים, שעועית מש)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 גרם חומוס או ממרח שעועית</item>
-        <item>130 גרם קטניות מבושלות: שעועית, אפונה יבשה, עדשים, טופו או טמפה</item>
-        <item>150גרם אפונה טריה או עדשים מונבטות</item>
+        <item>60 גרם חומוס או מתבל קיטניות</item>
+        <item>90 גרם שעועית, אפונה יבשה, או עדשים- מבושלות</item>
+        <item>100 גרם טופו או טמפה</item>
+        <item>130 גרם אפונה טריה או אפונת שלג</item>
+        <item>100 גרם קטניות מונבטות (עדשים, שעועית מש)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ כוס טרי או קפוא</item>
