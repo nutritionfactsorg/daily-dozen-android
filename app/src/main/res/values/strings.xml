@@ -28,11 +28,11 @@
     <string name="latest_videos">Latest Videos</string>
     <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
     <string name="title_how_not_to_die" translatable="false">How Not to Die</string>
-    <string name="url_how_not_to_die" translatable="false">http://nutritionfacts.org/book/</string>
+    <string name="url_how_not_to_die" translatable="false">https://nutritionfacts.org/book/how-not-to-die/</string>
     <string name="title_cookbook" translatable="false">Cookbook</string>
-    <string name="url_cookbook" translatable="false">https://nutritionfacts.org/cookbook/</string>
+    <string name="url_cookbook" translatable="false">https://nutritionfacts.org/book/how-not-to-die-cookbook/</string>
     <string name="title_how_not_to_diet" translatable="false">How Not to Diet</string>
-    <string name="url_how_not_to_diet" translatable="false">https://nutritionfacts.org/how-not-to-diet/</string>
+    <string name="url_how_not_to_diet" translatable="false">https://nutritionfacts.org/book/how-not-to-diet/</string>
     <string name="daily_dozen_challenge" translatable="false">Daily Dozen Challenge</string>
     <string name="url_daily_dozen_challenge" translatable="false">https://nutritionfacts.org/daily-dozen-challenge/</string>
     <string name="donate">Donate</string>
