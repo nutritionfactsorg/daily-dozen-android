@@ -74,4 +74,5 @@ dependencies {
     implementation('org.greenrobot:eventbus:3.2.0') { exclude group: "com.android.support" }
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation "io.noties.markwon:core:4.6.2"
 }

@@ -166,6 +166,7 @@
                     android:layout_height="wrap_content"/>
 
                 <TextView
+                    android:id="@+id/faq_scaling_response"
                     android:text="@string/faq_scaling_response"
                     style="@style/SecondaryText"
                     android:layout_width="match_parent"
@@ -195,6 +196,7 @@
                     android:layout_height="wrap_content"/>
 
                 <TextView
+                    android:id="@+id/faq_supplements_response"
                     android:text="@string/faq_supplements_response"
                     style="@style/SecondaryText"
                     android:layout_width="match_parent"
