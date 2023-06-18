@@ -60,6 +60,7 @@ public class AboutActivity extends AppCompatActivity {
         final SpannableStringBuilder ssb = new SpannableStringBuilder(welcomeText);
 
         initLink(welcomeText, ssb, R.string.title_how_not_to_die, R.string.url_how_not_to_die);
+        initLink(welcomeText, ssb, R.string.title_how_not_to_diet, R.string.url_how_not_to_diet);
 
         binding.aboutWelcome.setMovementMethod(LinkMovementMethod.getInstance());
         binding.aboutWelcome.setText(ssb, TextView.BufferType.SPANNABLE);
