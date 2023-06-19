@@ -26,6 +26,10 @@
         android:title="@string/daily_dozen_challenge"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/menu_faq"
+        android:title="@string/faq_title"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/menu_donate"
         android:title="@string/donate"
         app:showAsAction="never"/>

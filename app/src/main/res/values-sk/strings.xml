@@ -14,7 +14,7 @@
     <string name="beverages">Nápoje</string>
     <string name="exercise">Pohyb</string>
     <string name="vitamin_b12">Vitamín B12</string>
-    <string name="serving_sizes">Veľkosť porcie</string>
+    <string name="serving_sizes">Veľkosti porcí (odporúčané)</string>
     <string name="types">Typy</string>
     <string name="history">História</string>
     <string name="servings_some">Niektoré porcie</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Pohyblivý priemer</string>
     <string name="about">O aplikácii</string>
     <string name="about_this_app">O tejto aplikácii</string>
-    <string name="about_translators">Osobitné poďakovanie patrí našim dobrovoľným prekladateľom: Ricard Soler Roger (ca), Luděk Bouška (cz, sk), Lenka Lukacová (cz), Anke Schliessmann (de), Doron Barak (on), Ruth Levy (on), Joanna Klopotek (pl), Tania Bassi (pt-BR), Joao Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk)., Katarína Mocáková (sk).</string>
+    <string name="about_translators">Osobitné poďakovanie patrí našim dobrovoľným prekladateľom: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Najnovšie videá</string>
     <string name="donate">Darovať</string>
     <string name="subscribe">Predplatiť si</string>
@@ -154,6 +154,22 @@
     <string name="nightly_fast_text">Kvôli našim cirkadiánnym rytmom sa z jedla konzumovaného večer a v noci uloží viac tuku, než z úplne rovnakého jedla, konzumovaného v skoršiu dennú dobu. Preto sa každú noc, počnúc 19:00, aspoň dvanásť hodín postite. Čím menej kalórií po západe slnka, tým lepšie.</string>
     <string name="nightly_sleep_text">Toto políčko zaškrtnite, ak pri dodržaní svojho pravidelného času ľahnutia spíte aspoň sedem hodín.</string>
     <string name="nightly_trendelenburg_text">Skúste stráviť aspoň štyri hodiny za noc ležaním s telom nakloneným hlavou dole pod uhlom šesť stupňov. Tento náklon je možné dosiahnuť podložením/zdvihnutím stĺpikov v nohách postele o 20cm (22,5cm pokiaľ je vaša posteľ dlhšia ako štandardná). Buďte extrémne opatrní pri vstávaní z tejto polohy, pretože u väčšiny ľudí spôsobuje ortostatickú intoleranciu, dokonca aj keď ste mladí a zdraví. Pokiaľ teda vstanete príliš rýchlo, môžete pocítiť závrat, mdloby alebo točenie hlavy a mohli by ste spadnúť a zraniť sa. Takže vstávajte pomaly. Vypitie dvoch šálok studenej vody tridsať minút pred vstávaním (zdvihnutím sa z postele) môže pomôcť predísť tomuto potenciálne nebezpečnému vedľajšiemu efektu. \n\n*DÔLEŽITÉ: Toto doma v žiadnom prípade neskúšajte, ak trpíte problémami so srdcom alebo pľúcami, pálením záhy, alebo problémami s mozgom (traumatické zranenie hlavy) alebo očami (dokonca aj rodinná anamnéza glaukómu vás diskvalifikuje). Tiež toto neskúšajte, kým sa svojho lekára nespýtate, či si myslia, že je pre vás bezpečné spať v polohe \"mierny Trendelenburg\". *</string>
+    <string name="faq_adapt_question">Denná Dvanástka je pre mňa príliš veľa/príliš málo jedla! Môžem si to prispôsobiť?</string>
+    <string name="faq_adapt_response">Áno, Daily Dozen má byť jednoducho sprievodcom tých najzdravších potravín, ktoré sa snažíme každý deň zaradiť. Nie je to plán stravovania a nie je určený na predpis. Snažte sa jesť rozmanitú škálu celých rastlinných potravín a prispôsobte denný tucet množstvu, ktoré vám vyhovuje.</string>
+    <string name="faq_age_question">Je to prispôsobiteľné pre deti, dospievajúcich a mládež?</string>
+    <string name="faq_age_response.0">Deti, dospievajúci a dospievajúci majú počas svojho životného cyklu rôzne kalorické potreby. Tieto potreby sa menia, aby podporili rast a rozvoj v každej fáze.</string>
+    <string name="faq_age_response.1">Denná Dvanástka bola navrhnutá ako sprievodca, ktorý má ľuďom pomôcť zaradiť niektoré z najzdravších potravín do ich každodennej stravy. Zatiaľ čo rovnaký rámec možno použiť pre väčšinu ľudí počas celého životného cyklu, množstvo jedla, ktoré človek potrebuje zjesť, sa bude líšiť v závislosti od mnohých faktorov, ako je vek a úroveň aktivity. Keďže nemôžeme poskytnúť špecifické výživové alebo lekárske poradenstvo pre vaše rastúce dieťa, rodičia by mali používať túto príručku, pretože považujú za najvhodnejšiu pre potreby svojho dieťaťa a/alebo by sa mali poradiť s registrovaným dietológom alebo iným poskytovateľom zdravotnej starostlivosti, aby im pomohli určiť, čo je pre ich individuálne potreby najlepšie.</string>
+    <string name="faq_calories_question">Koľko kalórií je v Dennej Dvanástke?</string>
+    <string name="faq_calories_response.0">Denná Dvanástka má v priemere asi 1200 kalórií, ale vzhľadom na široký výber jedál v každej kategórii sa môže pohybovať od 800 do 1800. Zvážte kategóriu Iná zelenina: šálka papriky má oveľa nižšiu kalorickú hustotu ako šálka varených sladkých zemiakov, preto bude kalorický rozsah závisieť od vášho konkrétneho výberu jedla. To je skvelá vec na kontrolnom zozname Dennej Dvanástky – nejde o univerzálny prístup a dá sa prispôsobiť vašim potrebám.</string>
+    <string name="faq_calories_response.1">Ak je vaším cieľom chudnutie, ďalšie informácie nájdete v časti „Ako nedietovať“ a v sprievodných 21 intervenciách. V knihe „Ako nedietovať“ som poznamenal: „Systémový prehľad úspešných stratégií chudnutia dospel k záveru, že vzhľadom na spomalenie metabolizmu a zvýšenú chuť do jedla, ktoré sprevádza chudnutie, na dosiahnutie významného úbytku hmotnosti môže byť potrebné, aby počet kalórií klesol až na minimum. 1200 kalórií denne pre ženy a 1500 kalórií denne pre mužov.“</string>
+    <string name="faq_calories_response.2">Na druhej strane, ak je vaším cieľom priberanie na váhe, možno sa budete chcieť zamerať na pridávanie potravín s vyšším obsahom kalórií, ako sú sladké zemiaky, avokádo, orechy a sójové produkty.</string>
+    <string name="faq_mother_question">Môžem to robiť počas tehotenstva alebo dojčenia?</string>
+    <string name="faq_mother_response">Ženy, ktoré sú tehotné alebo dojčia, majú iné kalorické a nutričné potreby ako ľudia, ktorí nie sú. Pripomíname, že Denná Dvanástka nie je plán stravovania a nemal by byť jediným jedlom, ktoré sa skonzumuje počas dňa. Ženy, ktoré sú tehotné alebo dojčia, by sa mali poradiť so svojím praktickým lekárom alebo registrovaným dietológom, aby im pomohol splniť ich špecifické kalorické požiadavky a nutričné potreby.</string>
+    <string name="faq_scaling_question">Nemôžem zjesť toľko fazule/zŕn/atď.!</string>
+    <string name="faq_scaling_response">To je v poriadku! The Denná Dvanástka je ambiciózny sprievodca. Urobte všetko pre to, aby ste začlenili čo najviac týchto zdravých rastlinných potravín. Ak ste nováčikom v konzumácii veľkého množstva strukovín (alebo obilnín, zeleniny atď.), možno budete musieť začať s menšími množstvami a pomaly ich zvyšovať, aby ste svojmu mikrobiómu dali šancu prispôsobiť sa. Môžete byť aj kreatívni: napríklad pridajte trochu fazule do svojej rannej ovsenej kaše. Ak doň naložíte bobule, ľanové semienka a orechy, fazuľu si ani nevšimnete. Môžete tiež rozdrviť fazuľu na sendvičovú nátierku alebo pripraviť môj [BROL](https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils) – jačmeň, raž, ovsené krúpy a šošovica – ktorú používam ako základ mnohých jedál a je to jednoduchý spôsob, ako získať rôzne celozrnné výrobky so zabudovanou porciou strukovín.</string>
+    <string name="faq_supplements_question">Myslel som, že doktor Greger odporúča užívať doplnky vitamínu D a DHA. Prečo nie sú zahrnuté?</string>
+    <string name="faq_supplements_response">Aktualizovali sme aplikáciu Denná Dvanástka, aby obsahovala iba požadované doplnky. Napríklad vitamín D je potrebný len pre ľudí, ktorí sa nedostatočne vystavujú slnku. Naším cieľom je podeliť sa s vami o vedu, aby ste mohli robiť vlastné informované rozhodnutia. Všetky moje odporúčania si môžete pozrieť na stránke [Optimum Nutrient](https://nutritionfacts.org/optimum-nutrient-recommendations).</string>
+    <string name="faq_title">Často kladené otázky</string>
     <string name="weight">Hmotnosť</string>
     <string name="tweak_group_meal">Ku každému jedlu</string>
     <string name="tweak_group_daily">Každý deň</string>
@@ -311,6 +327,7 @@
         <item>Lieskové oriešky</item>
         <item>Konopné semienka</item>
         <item>Makadamové orechy</item>
+        <item>Arašidy</item>
         <item>Pekanové orechy</item>
         <item>Pistácie</item>
         <item>Tekvicové semienka</item>
@@ -438,14 +455,18 @@
         <item>Vodný jogging</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ šálky hummusu alebo strukovinového dipu</item>
-        <item>½ šálky varených strukovín, hrášku, šošovice, tofu, alebo tempeh</item>
-        <item>1 šálka čerstvého hrášku alebo naklíčenej šošovice</item>
+        <item>¼ šálky hummusu alebo fazuľového dipu</item>
+        <item>½ šálky varenej fazule, hrachu alebo šošovice</item>
+        <item>½ šálky tofu alebo tempehu</item>
+        <item>1 šálka čerstvého hrášku alebo cukrového hrášku</item>
+        <item>1½ šálky čerstvej naklíčenej fazule (šošovica, fazuľa mungo)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g hummusu alebo strukovinového dipu</item>
-        <item>130 g varených fazulí, hrášku, šošovice, tofu alebo tempehu</item>
-        <item>150 g čerstvého hrášku alebo naklíčenej šošovice</item>
+        <item>60 g hummusu alebo fazuľového dipu</item>
+        <item>90 g varenej fazule, hrachu alebo šošovice</item>
+        <item>100 g tofu alebo tempehu</item>
+        <item>130 g čerstvého hrášku alebo cukrového hrášku</item>
+        <item>100 g čerstvej naklíčenej fazule (šošovica, fazuľa mungo)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ šálky čerstvého alebo mrazeného</item>

@@ -14,17 +14,17 @@
     <string name="beverages">Напитки</string>
     <string name="exercise">Упражнения</string>
     <string name="vitamin_b12">Витамин B12</string>
-    <string name="serving_sizes">Порции</string>
+    <string name="serving_sizes">Размери на порции (препоръчани)</string>
     <string name="types">Видове</string>
     <string name="history">История</string>
     <string name="servings_some">Някои порции</string>
     <string name="servings_all">Всички порции</string>
     <string name="servings">Порция</string>
     <string name="out_of">от</string>
-    <string name="moving_average">плъзгаща се средна</string>
+    <string name="moving_average">Средна стойност</string>
     <string name="about">Относно</string>
     <string name="about_this_app">Информация за приложението</string>
-    <string name="about_translators">Специални благодарности на нашите преводачи доброволци: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Специални благодарности на нашите преводачи доброволци: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Най-новите видео клипове</string>
     <string name="donate">Направете дарение</string>
     <string name="subscribe">Абонирай се</string>
@@ -81,14 +81,14 @@
     <string name="metric">метричен</string>
     <string name="error_cannot_handle_url">Връзката не може да се отвори. Моля, инсталирайте браузър.</string>
     <string name="channel_reminders_name">Напомняния</string>
-    <string name="twenty_one_tweaks">21 ощипвания</string>
+    <string name="twenty_one_tweaks">21 Tweaks</string>
     <string name="tweaks">Фини настройки</string>
     <string name="daily_tweaks_history">Ежедневна история за ощипване</string>
     <string name="weight_history">История на теглото</string>
     <string name="no_weights_recorded">Все още не сте записали тежести!</string>
     <string name="task_loading_weights_history_title">Зареждане на историята на теглата</string>
     <string name="morning">Сутрин</string>
-    <string name="evening">вечер</string>
+    <string name="evening">Вечер</string>
     <string name="meal_water">Предварително заредете с вода</string>
     <string name="meal_negcal">Предварително заредете с храни с отрицателни калории</string>
     <string name="meal_vinegar">Включете оцет (2 ч.л. с всяко хранене)</string>
@@ -106,8 +106,8 @@
     <string name="daily_timerestrict">Ограничете времето за хранене</string>
     <string name="exercise_timing">Оптимизирайте времето за упражнения</string>
     <string name="weigh_twice">Претегляйте се два пъти на ден</string>
-    <string name="complete_intentions">Изпълнете намеренията си за внедряване</string>
-    <string name="nightly_fast">Бързо след 19:00 ч</string>
+    <string name="complete_intentions">Изпълнете намеренията си за прилагане на зададеното</string>
+    <string name="nightly_fast">Гладуване след 19:00 ч</string>
     <string name="nightly_sleep">Получете достатъчно сън</string>
     <string name="nightly_trendelenburg">Експериментирайте с лекия трендленбург</string>
     <string name="debug_generate_weight_data">Генериране на данни за теглото</string>
@@ -129,8 +129,8 @@
     <string name="daily_timerestrict_short">Ограничете времето за хранене</string>
     <string name="exercise_timing_short">Оптимизирайте времето за упражнения</string>
     <string name="weigh_twice_short">Претегляйте се два пъти на ден</string>
-    <string name="complete_intentions_short">Изпълнете намеренията си за внедряване</string>
-    <string name="nightly_fast_short">Бързо след 7:00 ч.</string>
+    <string name="complete_intentions_short">Изпълнете намеренията си за прилагане на зададеното</string>
+    <string name="nightly_fast_short">Гладуване след 7:00 ч.</string>
     <string name="nightly_sleep_short">Получете достатъчно сън</string>
     <string name="nightly_trendelenburg_short">Експериментирайте с лекия трендленбург</string>
     <string name="meal_water_text">Отделете време, за да стимулирате метаболизма си две чаши студена или студена не ароматизирана вода преди всяко хранене, за да се възползвате и от предимствата му.</string>
@@ -154,7 +154,23 @@
     <string name="nightly_fast_text">Поради нашите циркадни ритми, храната, изядена през нощта, е по-угояваща от същата същата храна, изядена по-рано през деня, толкова бърза всяка вечер в продължение на поне дванадесет часа, като се започне преди 19:00 ч. Колкото по-малко калории след залеза, толкова по-добре.</string>
     <string name="nightly_sleep_text">Поставете отметка в това поле, ако получавате поне седем часа сън в редовното си лягане.</string>
     <string name="nightly_trendelenburg_text">Опитайте да прекарвате поне четири часа на нощ в легнало с наклонено тяло с главата надолу шест градуса, като повдигнете стълбовете в подножието на леглото си с осем инча (или с девет инча, ако имате крал на Калифорния). Бъдете изключително внимателни, когато ставате от леглото, тъй като това причинява ортостатична непоносимост при повечето хора, дори и да сте млади и здрави - което означава, че ако станете твърде бързо, можете да почувствате замаяност, припадък или светлоглаза и може падайте и се наранявайте. Затова станете бавно. Пиенето на две чаши студена вода тридесет минути преди втасване също може да помогне за предотвратяване на този потенциално опасен страничен ефект.\n\n* ВАЖНО: Не опитвайте това у дома изобщо, ако имате проблеми със сърцето или белите дробове, рефлукс с киселина или проблеми с мозъка ви (като травма на главата) или очите (дори фамилна анамнеза за глаукома ви дисквалифицира). Също така не опитвайте това, докато не попитате лекаря си, ако те мислят, че е безопасно за вас да спите в мек Трендленбург. *</string>
-    <string name="weight">тегло</string>
+    <string name="faq_adapt_question">Daily Dozen е твърде много/твърде малко храна за мен! Мога ли да го адаптирам?</string>
+    <string name="faq_adapt_response">Да, Daily Dozen е просто предназначен да бъде ръководство за най-здравословните храни, които се стремим да включваме всеки ден. Това не е план за хранене и не е предназначен да бъде предписван. Направете всичко възможно да ядете разнообразие от цели растителни храни и адаптирайте Daily Dozen към количествата, които работят за вас.</string>
+    <string name="faq_age_question">Може ли да се приложи за деца, юноши и тийнейджъри?</string>
+    <string name="faq_age_response.0">Децата, юношите и тийнейджърите имат различни калорични нужди през целия си жизнен цикъл. Тези нужди се променят, за да подкрепят растежа и развитието на всеки етап.</string>
+    <string name="faq_age_response.1">Daily Dozen е създаден като ръководство, което да помогне на хората да включат някои от най-здравословните храни в ежедневието си. Въпреки че един и същи режим може да се използва за повечето хора през целия им живот, количеството храна, което човек трябва да изяде, ще варира в зависимост от редица фактори като възраст и ниво на активност. Тъй като не можем да предоставим конкретни хранителни или медицински съвети за вашето растящо дете, родителите трябва да използват това ръководство, тъй като смятат, че е най-добро за нуждите на детето си и/или да се консултират с регистриран диетолог или друг доставчик на здравни услуги, за да определят какво е най-добро за тях потребности.</string>
+    <string name="faq_calories_question">Колко калории има в Daily Dozen?</string>
+    <string name="faq_calories_response.0">Daily Dozen има средно около 1200 калории, но предвид широкия набор от храни във всяка категория, може да варира от 800 до 1800. Помислете за категорията „Други зеленчуци“: чаша чушки има много по-ниска калорична плътност от чаша варени сладки картофи, следователно калорийният диапазон ще зависи от конкретния ви избор на храна. Това е страхотното нещо на контролния списък Daily Dozen — това не е универсален подход и може да бъде адаптиран към вашите нужди.</string>
+    <string name="faq_calories_response.1">Ако целта ви е загуба на тегло, можете да намерите повече информация в „Можем без диети“ и придружаващите двадесет и едно ощипвания. В „Можем без диети“ отбелязах: „Систематичен преглед на успешни стратегии за отслабване стигна до заключението, че като се има предвид забавянето на метаболизма и повишения апетит, които съпътстват загубата на тегло, за да се постигне значителна загуба на тегло, може да се наложи броят на калориите да падне до 1200 калории на ден за жени и 1500 калории на ден за мъже.</string>
+    <string name="faq_calories_response.2">От друга страна, ако целта ви е наддаване на тегло, тогава може да искате да се съсредоточите върху добавянето на по-калорични храни, като сладки картофи, авокадо, ядки и соеви продукти.</string>
+    <string name="faq_mother_question">Мога ли да правя това по време на бременност или кърмене?</string>
+    <string name="faq_mother_response">Жените, които са бременни или кърмят, имат различни калорични и хранителни нужди от жените, които не са. Като напомняне, Daily Dozen не е план за хранене и не трябва да бъде единствената храна, консумирана в рамките на един ден. Жените, които са бременни или кърмят, трябва да се консултират със своя медицински специалист или регистриран диетолог за помощ при посрещане на техните специфични калорични изисквания и хранителни нужди.</string>
+    <string name="faq_scaling_question">Не мога да ям толкова много боб/зърна/и т.н.!</string>
+    <string name="faq_scaling_response">Това е добре! Daily Dozen е амбициозен наръчник. Направете всичко възможно да включите възможно най-много от тези здравословни растителни храни. Ако не сте започнали да ядете много боб (или зърнени храни, зеленчуци и т.н.!), може да се наложи да започнете с по-малки количества и бавно да увеличавате количеството, за да дадете шанс на микробиома си да се коригира. Можете също така да бъдете креативни: например, добавете малко боб към сутрешната си овесена каша. Ако го заредите с горски плодове, ленени семена и ядки, дори няма да забележите зърната. Можете също така да пасирате боб в сандвич или да направите моя [BROL](https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils) — ечемичен, ръжен, овесен зърнени храни и леща — която използвам като основа за много ястия и е лесен начин за получаване на разнообразие от пълнозърнести храни с вградена порция бобови растения.</string>
+    <string name="faq_supplements_question">Мислех, че д-р Грегър препоръчва приема на добавки с витамин D и DHA. Защо не са включени?</string>
+    <string name="faq_supplements_response">Актуализирахме приложението Daily Dozen, за да отразява само необходимите добавки. Например, витамин D е необходим само на хора, които не се излагат достатъчно на слънце. Нашата цел е да споделим науката с вас, за да можете да вземате свои собствени информирани решения. Можете да видите всичките ми препоръки на страницата [Оптимални хранителни вещества](https://nutritionfacts.org/optimum-nutrient-recommendations).</string>
+    <string name="faq_title">Често задавани въпроси</string>
+    <string name="weight">Тегло</string>
     <string name="tweak_group_meal">При всяко хранене</string>
     <string name="tweak_group_daily">Всеки ден</string>
     <string name="tweak_group_dailydoses">Вземете дневните си дози</string>
@@ -311,6 +327,7 @@
         <item>Лешници</item>
         <item>Конопени семена</item>
         <item>Макадамия</item>
+        <item>Фъстъци</item>
         <item>Пекан</item>
         <item>Шамфъстък</item>
         <item>Тиквени семена</item>
@@ -438,14 +455,18 @@
         <item>Воден джогинг</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ чаша хумус или бобова разядка</item>
-        <item>½ чаша сварен боб, грах, леща, тофу или темпе</item>
-        <item>1 чаша пресен грах или покълнала леща</item>
+        <item>¼ чаша хумус или боб</item>
+        <item>½ чаша сварен боб, грах или леща</item>
+        <item>½ чаша тофу или темпе</item>
+        <item>1 чаша пресен грах или снежен грах</item>
+        <item>1 чаша пресен покълнал боб (леща, боб мунг)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 грам хумус или бобова разядка</item>
-        <item>130 грам сварен боб, грах, леща, тофу или темпе</item>
-        <item>150 грам пресен грах или покълнала леща</item>
+        <item>60 г хумус или дип от боб</item>
+        <item>90 г варен боб, грах или леща</item>
+        <item>100 г тофу или темпе</item>
+        <item>130 г пресен грах или снежен грах</item>
+        <item>100 г пресен покълнал боб (леща, боб мунг)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ чаша пресни или замразени боровинки</item>

@@ -14,7 +14,7 @@
     <string name="beverages">Begudes</string>
     <string name="exercise">Exercici</string>
     <string name="vitamin_b12">Vitamina B12</string>
-    <string name="serving_sizes">Mida de les porcions</string>
+    <string name="serving_sizes">Mides de la porció (suggerit)</string>
     <string name="types">Tipus</string>
     <string name="history">Historial</string>
     <string name="servings_some">Algunes racions</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Mesura mòbil</string>
     <string name="about">Informació</string>
     <string name="about_this_app">Sobre aquesta app</string>
-    <string name="about_translators">Agraïment especial als nostres traductors voluntaris: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Agraïment especial als nostres traductors voluntaris: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Últims vídeos</string>
     <string name="donate">Donacions</string>
     <string name="subscribe">Subscriu-te</string>
@@ -154,6 +154,22 @@
     <string name="nightly_fast_text">A causa d ela influència dels ritmes circadians, el que menges a la nit engreixa més que si mengessis això mateix però més aviat, per tant, intenta dejunar cada nit durant com a mínim dotze hores a partir de les 7 p.m. Com menys calories consumeixis després que es pongui el sol, millor.</string>
     <string name="nightly_sleep_text">Pots marcar aquesta casella si has dormit com a mínim set hores i te n\'has anat al llit a la teva hora normal.</string>
     <string name="nightly_trendelenburg_text">Intenta estar com a mínim quatre hores cada nit amb el cos inclinat sis graus. Per aconseguir-ho, has d\'elevar els peus del llit uns 20 centímetres. Vés amb molt de compte, perquè aquesta postura provoca intolerància ortostàtica per gairebé tothom, encara que siguis jove i estiguis sa, per tant, si t\'aixeques massa ràpid, pots marejar-te, desmaiar-te o fins i tot caure i fer-te mal. Per tant, aixeca\'t a poc a poc. Beure dos gots d\'aigua freda trenta minuts abans d\'aixecar-te també podria ajudar a prevenir aquest efecte secundari potencialment perillós.\n\n*IMPORTANT: no provis això a casa si tens problemes cardíacs o pulmonars, reflux àcid, problemes cerebrals (com traumatisme cranial) o oculars (fins i tot un historial familiar de glaucoma ho descalifica). Si tens qualsevol dubte, no ho intentis sense preguntar-li abans al teu metge.*</string>
+    <string name="faq_adapt_question">La Dotzena Diària és massa/massa poc menjar per a mi! Puc adaptar-lo?</string>
+    <string name="faq_adapt_response">Sí, la Dotzena Diària només vol ser una guia dels aliments més saludables que ens esforcem per incloure cada dia. No és un pla d\'àpats i no pretén ser prescriptiu. Fes tot el possible per menjar una gran varietat d\'aliments vegetals sencers i adapta la Dotzena Diària a les quantitats que et funcionin.</string>
+    <string name="faq_age_question">És adaptable per a nens, adolescents i adolescents?</string>
+    <string name="faq_age_response.0">Els nens, adolescents i adolescents tenen necessitats calòriques diferents al llarg del seu cicle de vida. Aquestes necessitats canvien per donar suport al creixement i desenvolupament en cada etapa.</string>
+    <string name="faq_age_response.1">El Daily Dozen va ser dissenyat com una guia per ajudar la gent a incloure alguns dels aliments més saludables a la seva rutina diària. Tot i que el mateix marc es pot utilitzar per a la majoria de les persones al llarg del cicle de vida, la quantitat d\'aliments que cal menjar variarà en funció d\'una sèrie de factors com l\'edat i el nivell d\'activitat. Com que no podem oferir consells mèdics o nutricionals específics per al vostre fill en creixement, els pares haurien d\'utilitzar aquesta guia segons considerin adequat per a les necessitats del seu fill i/o consultar amb un dietista registrat o un altre metge proveïdor d\'atenció per ajudar a determinar què és el millor per a les vostres necessitats.</string>
+    <string name="faq_calories_question">Quantes calories hi ha a la Dotzena Diària?</string>
+    <string name="faq_calories_response.0">La Dotzena Diària té una mitjana d\'unes 1.200 calories, però donada l\'àmplia varietat d\'opcions d\'aliments de cada categoria, pot variar entre 800 i 1800. Penseu en la categoria Altres verdures: una tassa de pebrots morrons té una densitat calòrica molt menor que una tassa de moniatos cuits, per tant, el rang calòric dependrà de les vostres opcions alimentàries específiques. Això és el millor de la llista de verificació de la Dotzena Diària: no és un enfocament únic i es pot adaptar a les vostres necessitats.</string>
+    <string name="faq_calories_response.1">Si el vostre objectiu és perdre pes, podeu trobar més informació a “Com no fer dieta” i els 21 Potenciadors que l\'acompanyen. A “Com no fer dieta”, vaig assenyalar: “Una revisió sistemàtica d\'estratègies de pèrdua de pes reeixides va concloure que, donada la desacceleració metabòlica i l\'augment de la gana que acompanya la pèrdua de pes, per aconseguir una pèrdua de pes significativa, és possible que el recompte de calories hagi de baixar tant com sigui. 1.200 calories al dia per a les dones i 1.500 calories al dia per als homes”.</string>
+    <string name="faq_calories_response.2">D\'altra banda, si el vostre objectiu és l\'augment de pes, potser us voleu centrar a afegir aliments més densos en calories, com ara moniatos, alvocats, fruits secs i productes de soja.</string>
+    <string name="faq_mother_question">Puc fer-ho durant l\'embaràs o la lactància?</string>
+    <string name="faq_mother_response">Les persones que estan embarassades o en període de lactància tenen necessitats calòriques i nutricionals diferents de les persones que no ho estan. Com a recordatori, la Dotzena Diària no és un pla d\'àpats i no hauria de ser els únics aliments que es consumeixen en un dia. Les persones embarassades o en període de lactància han de consultar amb el seu metge de capçalera o amb un dietista registrat per ajudar-los a satisfer les seves necessitats calòriques i nutricionals específiques.</string>
+    <string name="faq_scaling_question">No puc menjar tantes mongetes/grans/etc.!</string>
+    <string name="faq_scaling_response">Està bé! The Daily Dozen és una guia amb aspiracions. Feu tot el possible per incorporar tants d\'aquests aliments vegetals saludables com sigui possible. Si sou nou a menjar moltes mongetes (o grans, verdures, etc.!), potser haureu de començar amb quantitats més petites i augmentar lentament la quantitat per donar-li l\'oportunitat al vostre microbioma d\'ajustar-se. També podeu ser creatius: per exemple, afegiu unes mongetes a la vostra civada del matí. Si el carregueu amb baies, llavors de lli i fruits secs, ni tan sols notareu les mongetes. També podeu triturar les mongetes en un entrepà o fer el meu [BROL](https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils): ordi, sègol, civada i llenties: que faig servir com a base per a molts àpats i és una manera senzilla d\'aconseguir una varietat de cereals integrals amb una porció integrada de llegums.</string>
+    <string name="faq_supplements_question">Vaig pensar que el Dr. Greger recomana prendre suplements de vitamina D i DHA. Per què no estan inclosos?</string>
+    <string name="faq_supplements_response">Hem actualitzat l\'aplicació Daily Dozen per reflectir només els suplements necessaris. Per exemple, la vitamina D només és necessària per a les persones que s\'exposició al sol inadequada. El nostre objectiu és compartir la ciència amb vosaltres perquè pugueu prendre les vostres pròpies decisions informades. Podeu veure totes les meves recomanacions a la pàgina [Optimum Nutrient](https://nutritionfacts.org/optimum-nutrient-recommendations).</string>
+    <string name="faq_title">Preguntes freqüents</string>
     <string name="weight">Pes</string>
     <string name="tweak_group_meal">A cada àpat</string>
     <string name="tweak_group_daily">Cada Dia</string>
@@ -311,6 +327,7 @@
         <item>Avellanes</item>
         <item>Llavors de cànem</item>
         <item>Nous de Macadamia</item>
+        <item>Cacauets</item>
         <item>Nous pecanes</item>
         <item>Pistatxos</item>
         <item>Llavors de carbassa</item>
@@ -438,14 +455,18 @@
         <item>Aquajogging</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ tassa d\'hummus o untable de llegums</item>
-        <item>½ tassa de llegums cuits, mongetes seques, llenties, tofu o tempeh</item>
-        <item>1 tassa de pèsols frescos o germinats de llenties</item>
+        <item>¼ tassa d\'hummus o salsa de fesols</item>
+        <item>½ tassa de mongetes cuites, pèsols o llenties</item>
+        <item>½ tassa de tofu o tempeh</item>
+        <item>1 tassa de pèsols frescos o pèsols de neu</item>
+        <item>1 tassa de mongetes germinades fresques (llenties, mongetes mung)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g d\'hummus o untable de llegums</item>
-        <item>130 g de llegums cuits, mongetes seques, llenties, tofu o tempeh</item>
-        <item>150 g de pèsols frescos o germinats de llenties</item>
+        <item>60 g d\'hummus o salsa de mongetes</item>
+        <item>90 g de mongetes cuites, pèsols o llenties</item>
+        <item>100 g de tofu o tempeh</item>
+        <item>130 g de pèsols frescos o pèsols de neu</item>
+        <item>100 g de mongetes fresques germinades (llenties, mongetes mung)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ tassa frescos o congelats</item>

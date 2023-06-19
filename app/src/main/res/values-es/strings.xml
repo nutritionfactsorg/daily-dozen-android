@@ -14,7 +14,7 @@
     <string name="beverages">Bebidas</string>
     <string name="exercise">Ejercicio</string>
     <string name="vitamin_b12">Vitamina B12</string>
-    <string name="serving_sizes">Tamaño de las porciones</string>
+    <string name="serving_sizes">Tamaño de las porciones (sugerencia)</string>
     <string name="types">Tipos</string>
     <string name="history">Historial</string>
     <string name="servings_some">Algunas porciones</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Media móvil</string>
     <string name="about">Conócenos</string>
     <string name="about_this_app">Sobre esta app</string>
-    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Videos más recientes</string>
     <string name="donate">Donación</string>
     <string name="subscribe">Suscríbete</string>
@@ -75,7 +75,7 @@
     <string name="daily_reminder_settings">Potenciadores del recordatorio diario</string>
     <string name="enable_daily_reminder">Activar el recordatorio diario</string>
     <string name="remind_me_at">Recuérdamelo a las</string>
-    <string name="videos">VIDEOS</string>
+    <string name="videos">Videos</string>
     <string name="units">Sistema</string>
     <string name="imperial">IMPERIAL</string>
     <string name="metric">MÉTRICO</string>
@@ -154,6 +154,22 @@
     <string name="nightly_fast_text">Debido a la influencia de los ritmos circadianos, lo que comes por la noche engorda más que si comieras eso mismo pero más temprano en el día, así que intenta ayunar todas las noches durante al menos doce horas a partir de las 7 P.M. Cuantas menos calorías consumas después de que se ponga el sol, mejor.</string>
     <string name="nightly_sleep_text">Puedes marcar esta casilla si has dormido al menos siete horas y te has ido a la cama a tu hora normal.</string>
     <string name="nightly_trendelenburg_text">Prueba a estar al menos cuatro horas cada noche con el cuerpo inclinado seis grados. Para conseguirlo, debes elevar los postes del pie de la cama unos 20 centímetros. Ten mucho cuidado al levantarte, ya que esta postura causa intolerancia ortostática para casi todo el mundo, aunque seas joven y estés saludable, así que, si te levantas demasiado rápido, puedes marearte, desmayarte o incluso caerte y hacerte daño. Por lo tanto, levántate lentamente. Beber dos tazas de agua fría treinta minutos antes de levantarte también podría ayudar a prevenir este efecto secundario potencialmente peligroso.\n\n* IMPORTANTE: no intentes esto en casa si tienes problemas cardiacos o pulmonares, reflujo ácido, problemas cerebrales (como traumatismo craneal) u oculares (incluso un historial familiar de glaucoma lo descalifica). Si tienes cualquier duda, no lo intentes sin preguntarle a tu médico antes.*</string>
+    <string name="faq_adapt_question">La Docena Diaria es mucha comida/muy poca comida para mí. ¿Puedo adaptarla?</string>
+    <string name="faq_adapt_response">Claro, la Docena Diaria es una guía de los alimentos que deberíamos intentar consumir a diario, pero no es un plan de comidas y no es prescriptiva. Intenta comer una variedad de alimentos vegetales integrales y adapta las cantidades de la Docena a las que funcionen para ti.</string>
+    <string name="faq_age_question">¿Se puede adaptar para niños y adolescentes? </string>
+    <string name="faq_age_response.0">Los niños y los adolescentes tienen necesidades calóricas que van cambiando según crecen. Esto ocurre para ayudarles a crecer y desarrollarse correctamente en cada etapa de su vida.</string>
+    <string name="faq_age_response.1">La Docena Diaria se diseñó para utilizarla como una guía de cómo incluir los alimentos más sanos en tu rutina diaria. Aunque se puede usar el mismo esquema para la mayoría de personas, la cantidad de comida cambia según un montón de factores, como la edad o el nivel de actividad física. Como no podemos proporcionar consejo médico o nutricional sobre niños en crecimiento, la Docena solo puede ser una guía para escoger cómo dar de comer a tu hijo. Aconsejamos hablar con un profesional de la nutrición para determinar necesidades concretas. </string>
+    <string name="faq_calories_question">¿Cuántas calorías tiene la Docena Diaria?</string>
+    <string name="faq_calories_response.0">La Docena Diaria aporta una media de 1200 calorías, pero, debido a la gran variedad de alimentos de cada categoría, puede estar entre 800 y 1800 calorías. Piensa en la categoría de Otras verduras: una taza de pimientos tiene una densidad calórica mucho menor que una taza de batata cocida, así que el rango de calorías depende de los alimentos que ingieras. Es lo bueno de la Docena Diaria, que no son reglas estrictas, sino que se puede adaptar a tus necesidades. </string>
+    <string name="faq_calories_response.1">Si quieres perder peso, puedes encontrar más información en \"Comer para no engordar\" y sus 21 potenciadores. En \"Comer para no engordar\", explico: \"Una revisión sistemática de las estrategias exitosas de pérdida de peso concluyó que, debido a que el metabolismo se ralentiza y tu apetito aumenta cuando pierdes peso, para poder perder bastante peso, quizá debas reducir tu consumo calórico a incluso 1200 calorías al día para las mujeres y 1500 calorías al día para los hombres\". </string>
+    <string name="faq_calories_response.2">Al mismo tiempo, si quieres ganar peso, quizá te interese enfocarte en añadir más alimentos densos en calorías, como las batatas, los aguacates, los frutos secos y los productos de soja.</string>
+    <string name="faq_mother_question">¿Puedo comer así si estoy embarazada o dando el pecho?</string>
+    <string name="faq_mother_response">Las personas embarazadas o que están dando el pecho tienen unas necesidades calóricas y nutricionales diferentes. Como recordatorio, la Docena Diaria no es un plan de comidas y no debería ser lo único que comes en un día. Una persona embarazada o dando el pecho debe consultar con su profesional de la salud o nutricionista sobre cómo alcanzar sus necesidades calóricas y nutricionales. </string>
+    <string name="faq_scaling_question">¡Me resulta imposible comer tantas legumbres/cereales/etc.!</string>
+    <string name="faq_scaling_response">¡No pasa nada! La Docena Diaria es una guía, una meta a la que aspirar. Haz tu mejor esfuerzo para incorporar todos los alimentos sanos que puedas. Si no sueles comer muchas legumbres (o cereales, u hojas verdes), quizá necesites empezar a incrementar la ingesta poco a poco para que tu microbioma se acostumbre. También te animo a tener creatividad: por ejemplo, puedes poner unos frijoles en tu avena de desayuno. Si la llenas de frutos rojos, linaza y frutos secos, no te darás cuenta. También puedes aplastarlos para añadirlos a un sándwich, hacer hummus, o hacer la mezcla [CALC](https://nutritionfacts.org/es/recipe/calc-basico) (centeno, avena en grano, lentejas negras y cebada) que uso como base en muchas comidas, ya que es una manera sencilla de añadir una variedad de cereales a tu dieta, y ya incluye una legumbre también. </string>
+    <string name="faq_supplements_question">Creía que el Dr. Greger recomendaba tomar suplementos de vitamina D y DHA. ¿Por qué no aparecen?</string>
+    <string name="faq_supplements_response">Hemos actualizado la aplicación de la Docena Diaria para que solo incluya los suplementos obligatorios. Por ejemplo, la suplementación con vitamina D solo es necesaria para quienes no reciben suficiente exposición al sol. Nuestra meta es compartir la ciencia contigo para que tomes tus propias decisiones informadas. Puedes ver todas mis recomendaciones en la página de [Recomendaciones para una nutrición óptima](https://nutritionfacts.org/es/recomendaciones-para-una-nutricion-optima/).</string>
+    <string name="faq_title">Preguntas frecuentes</string>
     <string name="weight">Peso</string>
     <string name="tweak_group_meal">En cada comida</string>
     <string name="tweak_group_daily">Todos los días</string>
@@ -311,6 +327,7 @@
         <item>Avellanas</item>
         <item>Semillas de cáñamo</item>
         <item>Nueces de macadamia</item>
+        <item>Cacahuete</item>
         <item>Nueces pecanas</item>
         <item>Pistachos</item>
         <item>Semillas de calabaza</item>
@@ -438,14 +455,18 @@
         <item>Trotar en agua</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ taza de hummus o untable de legumbres</item>
-        <item>½ taza de frijoles cocidos, arvejas partidas, lentejas, tofu o tempeh</item>
-        <item>1 taza de guisantes frescos o brotes de lentejas</item>
+        <item>¼ taza de hummus o paté de otras legumbres</item>
+        <item>½ taza de legumbres cocinadas</item>
+        <item>½ taza de tofu o tempeh</item>
+        <item>1 taza de arvejas o tirabeques</item>
+        <item>1 taza de brotes de legumbres </item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g de hummus o untable de legumbres</item>
-        <item>130 g de frijoles cocidos, arvejas partidas, lentejas, tofu o tempeh</item>
-        <item>150 g de guisantes frescos o brotes de lentejas</item>
+        <item>60 g de hummus o paté de otras legumbres</item>
+        <item>90 g de legumbres cocinadas</item>
+        <item>100 g de tofu o tempeh</item>
+        <item>130 g de arvejas o tirabeques</item>
+        <item>100 g de brotes de legumbres</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ taza frescos o congelados</item>

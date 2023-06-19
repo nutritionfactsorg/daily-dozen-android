@@ -14,7 +14,7 @@
     <string name="beverages">Nápoje</string>
     <string name="exercise">Pohyb</string>
     <string name="vitamin_b12">Vitamín B12</string>
-    <string name="serving_sizes">Velikost porce</string>
+    <string name="serving_sizes">Velikosti porcí (doporučené)</string>
     <string name="types">Typy</string>
     <string name="history">Historie</string>
     <string name="servings_some">Některé porce</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Pohyblivý průměr</string>
     <string name="about">O aplikaci</string>
     <string name="about_this_app">O této aplikaci</string>
-    <string name="about_translators">Zvláštní poděkování patří našim dobrovolným překladatelům: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (on), Ruth Levy (on), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Zvláštní poděkování patří našim dobrovolným překladatelům: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Nejnovější videa</string>
     <string name="donate">Darovat</string>
     <string name="subscribe">Předplatit si</string>
@@ -154,6 +154,22 @@
     <string name="nightly_fast_text">Kvůli našim cirkadiánním rytmům se z jídla konzumovaného večer a v noci uloží více tuku, než z úplně stejného jídla, konzumovaného v dřívější denní dobu. Proto se každou noc, počínaje 19:00, alespoň dvanáct hodin postěte. Čím méně kalorií po západu slunce, tím lépe.</string>
     <string name="nightly_sleep_text">Toto políčko zaškrtněte, pokud při dodržení svého pravidelného času uléhání spíte alespoň sedm hodin.</string>
     <string name="nightly_trendelenburg_text">Zkuste strávit alespoň čtyři hodiny za noc ležením s tělem nakloněným hlavou dolů pod úhlem šest stupňů. Tohoto náklonu lze dosáhnout podložením/zvednutím sloupků v nohou postele o 20cm (22,5cm pokud je vaše postel delší než standartní). Buďte extrémně opatrní při vstávání z této polohy, protože u většiny lidí způsobuje ortostatickou intoleranci, dokonce i když jste mladí a zdraví. Pokud tedy vstanete příliš rychle, můžete pocítit závrať, mdloby nebo točení hlavy a mohli byste upadnout a zranit se. Takže vstávejte pomalu. Vypití dvou šálků studené vody třicet minut před vstáváním (zvednutím se z postele) může pomoci předejít tomuto potenciálně nebezpečnému vedlejšímu efektu. \n\n*DŮLEŽITÉ: Toto doma v žádném případě nezkoušejte, pokud trpíte problémy se srdcem nebo plícemi, pálením žáhy, nebo problémy s mozkem (traumatické zranění hlavy) nebo očima (dokonce i rodinná anamnéza glaukomu vás diskvalifikuje). Také toto nezkoušejte, dokud se svého lékaře nezeptáte, zda si myslí, že je pro vás bezpečné spát v poloze \"mírný Trendelenburg\". *</string>
+    <string name="faq_adapt_question">Denní Dvanáctka je pro mě příliš mnoho/málo jídla! Mohu si to přizpůsobit?</string>
+    <string name="faq_adapt_response">Ano, Denní Dvanáctka má být jen průvodcem těch nejzdravějších potravin, které se snažíme každý den zařazovat. Nejedná se o jídelní plán a není míněno jako norma. Snažte se jíst rozmanitou škálu celých rostlinných potravin a přizpůsobte Denní Dvanáctku množství, které vám vyhovuje.</string>
+    <string name="faq_age_question">Je to vhodné pro děti, dospívající a mládež?</string>
+    <string name="faq_age_response.0">Děti, dospívající a mládež mají během svého životního cyklu různé kalorické potřeby. Tyto potřeby se mění, aby podpořily růst a rozvoj v každé fázi.</string>
+    <string name="faq_age_response.1">Denní Dvanáctka byla navržena jako průvodce, který má lidem pomoci zařadit některé z nejzdravějších potravin do jejich každodenní stravy. Zatímco stejné doporučení lze použít pro většinu lidí v průběhu životního cyklu, množství jídla, které člověk potřebuje sníst, se bude lišit v závislosti na řadě faktorů, jako je věk a úroveň aktivity. Vzhledem k tomu, že nemůžeme poskytnout konkrétní výživové nebo lékařské poradenství pro vaše rostoucí dítě, měli by rodiče používat tuto příručku rozumně, protože nejlépe znají potřeby svého dítěte, a/nebo by se měli poradit s registrovaným dietologem nebo jiným poskytovatelem zdravotní péče, aby pomohl určit, co je pro jejich potřeby nejvhodnější.</string>
+    <string name="faq_calories_question">Kolik kalorií je v Denní Dvanáctce?</string>
+    <string name="faq_calories_response.0">Denní Dvanáctka má průměrně asi 1200 kalorií, ale vzhledem k širokému výběru potravin v každé kategorii se může pohybovat kdekoli od 800 do 1 800. Zvažte kategorii Ostatní zelenina: šálek papriky má mnohem nižší kalorickou hustotu než šálek vařených sladkých brambor, proto bude kalorický rozsah záviset na vašem konkrétním výběru potravin. To je na denním kontrolním seznamu Dvanáctky skvělá věc – není to univerzální přístup a lze jej přizpůsobit vašim potřebám.</string>
+    <string name="faq_calories_response.1">Pokud je vaším cílem zhubnout, více informací naleznete v knize „Jak nedietovat“ a v doprovodných 21 intervencích. V knize „Jak nedietovat“ jsem poznamenal: „Systematický přehled úspěšných strategií hubnutí dospěl k závěru, že vzhledem ke zpomalení metabolismu a zvýšené chuti k jídlu, které doprovázejí hubnutí, k dosažení významného úbytku hmotnosti může být nutné snížit počet kalorií až na minimum. 1200 kalorií denně pro ženy a 1500 kalorií denně pro muže.“</string>
+    <string name="faq_calories_response.2">Na druhou stranu, pokud je vaším cílem přibírání na váze, pak se možná budete chtít zaměřit na přidání kaloricky bohatších potravin, jako jsou sladké brambory, avokádo, ořechy a sójové produkty.</string>
+    <string name="faq_mother_question">Mohu to vše dělat během těhotenství nebo kojení?</string>
+    <string name="faq_mother_response">Ženy, které jsou těhotné nebo kojí, mají jiné kalorické a nutriční potřeby než ostatní lidé. Připomínáme, že Denní Dvanáctka není jídelním plánem a neměla by být jediným jídlem spotřebovaným během dne. Ženy, které jsou těhotné nebo kojí, by se měli poradit se svým praktickým lékařem nebo registrovaným dietologem, který jim pomůže naplnit jejich specifické kalorické požadavky a nutriční potřeby.</string>
+    <string name="faq_scaling_question">Nemůžu sníst tolik luštěnín/cereálií/atd.!</string>
+    <string name="faq_scaling_response">To je v pořádku! Denní Dvanáctka je aspirační průvodce. Snažte se začlenit co nejvíce těchto zdravých rostlinných potravin. Pokud jste nováčkem v konzumaci velkého množství luštěnin (nebo obilí, zeleniny atd.), možná budete muset začít s menším množstvím a pomalu je zvyšovat, aby se váš mikrobiom mohl přizpůsobit. Můžete být také kreativní: přidejte například fazole do své ranní ovesné kaše. Když do něj naložíte bobule, lněná semínka a ořechy, fazolí si ani nevšimnete. Můžete také rozmačkat luštěniny na sendvičovou pomazánku nebo připravit můj [BROL](https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils) – ječmen, žito, ovesné kroupy a čočka – který používám jako základ mnoha jídel a je to jednoduchý způsob, jak získat různé celozrnné výrobky s vestavěnou porcí luštěnin.</string>
+    <string name="faq_supplements_question">Myslel jsem, že Dr. Greger doporučuje užívat vitamin D a DHA doplňky. Proč nejsou zahrnuty?</string>
+    <string name="faq_supplements_response">Aktualizovali jsme aplikaci Denní Dvanáctka tak, aby odrážela pouze požadované doplňky. Například vitamín D je potřebný pouze pro lidi, kteří se nedostatečně vystavují slunci. Naším cílem je sdílet s vámi vědu, abyste mohli činit svá informovaná rozhodnutí. Všechna moje doporučení si můžete prohlédnout na stránce [Optimum Nutrient](https://nutritionfacts.org/optimum-nutrient-recommendations).</string>
+    <string name="faq_title">Často kladené otázky</string>
     <string name="weight">Hmotnost</string>
     <string name="tweak_group_meal">Ke každému jídlu</string>
     <string name="tweak_group_daily">Každý den</string>
@@ -311,6 +327,7 @@
         <item>Lískové oříšky</item>
         <item>Konopná semínka</item>
         <item>Makadamové ořechy</item>
+        <item>Arašídy</item>
         <item>Pekanové ořechy</item>
         <item>Pistácie</item>
         <item>Dýňová semínka</item>
@@ -438,14 +455,18 @@
         <item>Vodní jogging</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ šálku hummusu nebo luštěninového dipu</item>
-        <item>½ šálku vařených luštěnin, hrášku, čočky, tofu, nebo tempeh</item>
-        <item>1 šálek čerstvého hrášku nebo naklíčené čočky</item>
+        <item>¼ šálku hummusu nebo fazolového dipu</item>
+        <item>½ šálku vařených fazolí, hrachu nebo čočky</item>
+        <item>½ šálku tofu nebo tempehu</item>
+        <item>1 šálek čerstvého nebo cukrového hrášku</item>
+        <item>1 šálku čerstvých naklíčených fazolí (čočka, mungo)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g hummusu nebo luštěninového dipu</item>
-        <item>130 g vařených fazolí, hrášku, čočky, tofu nebo tempehu</item>
-        <item>150 g čerstvého hrášku nebo naklíčené čočky</item>
+        <item>60 g šálku hummusu nebo fazolového dipu</item>
+        <item>90 g vařených fazolí, hrachu nebo čočky</item>
+        <item>100 g tofu nebo tempehu</item>
+        <item>130 g čerstvého nebo cukrového hrášku</item>
+        <item>100 g čerstvých naklíčených fazolí (čočka, mungo)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ šálku čerstvého nebo mraženého</item>

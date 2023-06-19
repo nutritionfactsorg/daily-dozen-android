@@ -188,53 +188,57 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
-        if (itemId == R.id.menu_toggle_modes) {
-            inDailyDozenMode = !inDailyDozenMode;
-            if (inDailyDozenMode) {
-                setTitle(R.string.app_name);
-                item.setTitle(R.string.twenty_one_tweaks);
-            } else {
-                setTitle(R.string.twenty_one_tweaks);
-                item.setTitle(R.string.app_name);
-            }
-            initDatePager();
-            return true;
-        } else if (itemId == R.id.menu_latest_videos) {
-            Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);
-            return true;
-        } else if (itemId == R.id.menu_how_not_to_die) {
-            Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_die);
-            return true;
-        } else if (itemId == R.id.menu_cookbook) {
-            Common.openUrlInExternalBrowser(this, R.string.url_cookbook);
-            return true;
-        } else if (itemId == R.id.menu_how_not_to_diet) {
-            Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_diet);
-            return true;
-        } else if (itemId == R.id.menu_daily_dozen_challenge) {
-            Common.openUrlInExternalBrowser(this, R.string.url_daily_dozen_challenge);
-            return true;
-        } else if (itemId == R.id.menu_donate) {
-            Common.openUrlInExternalBrowser(this, R.string.url_donate);
-            return true;
-        } else if (itemId == R.id.menu_subscribe) {
-            Common.openUrlInExternalBrowser(this, R.string.url_subscribe);
-            return true;
-        } else if (itemId == R.id.menu_open_source) {
-            Common.openUrlInExternalBrowser(this, R.string.url_open_source);
-            return true;
-        } else if (itemId == R.id.menu_daily_reminder_settings) {
-            startActivity(new Intent(this, DailyReminderSettingsActivity.class));
-            return true;
-        } else if (itemId == R.id.menu_backup) {
-            backup();
-            return true;
-        } else if (itemId == R.id.menu_about) {
-            startActivity(new Intent(this, AboutActivity.class));
-            return true;
-        } else if (itemId == R.id.menu_debug) {
-            startActivityForResult(new Intent(this, DebugActivity.class), Args.DEBUG_SETTINGS_REQUEST);
-            return true;
+        switch (itemId) {
+            case R.id.menu_toggle_modes:
+                inDailyDozenMode = !inDailyDozenMode;
+                if (inDailyDozenMode) {
+                    setTitle(R.string.app_name);
+                    item.setTitle(R.string.twenty_one_tweaks);
+                } else {
+                    setTitle(R.string.twenty_one_tweaks);
+                    item.setTitle(R.string.app_name);
+                }
+                initDatePager();
+                return true;
+            case R.id.menu_latest_videos:
+                Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);
+                return true;
+            case R.id.menu_how_not_to_die:
+                Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_die);
+                return true;
+            case R.id.menu_cookbook:
+                Common.openUrlInExternalBrowser(this, R.string.url_cookbook);
+                return true;
+            case R.id.menu_how_not_to_diet:
+                Common.openUrlInExternalBrowser(this, R.string.url_how_not_to_diet);
+                return true;
+            case R.id.menu_daily_dozen_challenge:
+                Common.openUrlInExternalBrowser(this, R.string.url_daily_dozen_challenge);
+                return true;
+            case R.id.menu_faq:
+                startActivity(new Intent(this, FaqActivity.class));
+                return true;
+            case R.id.menu_donate:
+                Common.openUrlInExternalBrowser(this, R.string.url_donate);
+                return true;
+            case R.id.menu_subscribe:
+                Common.openUrlInExternalBrowser(this, R.string.url_subscribe);
+                return true;
+            case R.id.menu_open_source:
+                Common.openUrlInExternalBrowser(this, R.string.url_open_source);
+                return true;
+            case R.id.menu_daily_reminder_settings:
+                startActivity(new Intent(this, DailyReminderSettingsActivity.class));
+                return true;
+            case R.id.menu_backup:
+                backup();
+                return true;
+            case R.id.menu_about:
+                startActivity(new Intent(this, AboutActivity.class));
+                return true;
+            case R.id.menu_debug:
+                startActivityForResult(new Intent(this, DebugActivity.class), Args.DEBUG_SETTINGS_REQUEST);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

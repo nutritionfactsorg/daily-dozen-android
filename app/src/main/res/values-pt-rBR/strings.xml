@@ -14,7 +14,7 @@
     <string name="beverages">Bebidas</string>
     <string name="exercise">Exercícios</string>
     <string name="vitamin_b12">Vitamina B12</string>
-    <string name="serving_sizes">Tamanhos da Porção</string>
+    <string name="serving_sizes">Porções (sugeridas)</string>
     <string name="types">Tipos</string>
     <string name="history">Histórico</string>
     <string name="servings_some">Algumas porções</string>
@@ -24,7 +24,7 @@
     <string name="moving_average">Média Móvel</string>
     <string name="about">Sobre Nós</string>
     <string name="about_this_app">Sobre este aplicativo</string>
-    <string name="about_translators">Agradecimentos especiais aos nossos tradutores voluntários: Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Doron Barak (he), Ruth Levy (he), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Agradecimentos especiais aos nossos tradutores voluntários: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Últimos Vídeos</string>
     <string name="donate">Doar</string>
     <string name="subscribe">Inscreva-se</string>
@@ -154,6 +154,22 @@
     <string name="nightly_fast_text">Devido aos nossos ritmos circadianos, os alimentos consumidos à noite engordam mais do que exatamente os mesmos alimentos ingeridos no início do dia, portanto jejue todas as noites por pelo menos doze horas, começando antes das 19:00h. Quanto menos calorias após o pôr do sol, melhor.</string>
     <string name="nightly_sleep_text">Assinale esta opção se você dormir pelo menos sete horas no seu horário de dormir usual.</string>
     <string name="nightly_trendelenburg_text">Tente passar pelo menos quatro horas por noite deitado com o corpo inclinado a seis graus com a cabeça para baixo, elevando os pés da cama em 20 cm (ou 23 cm se você tiver uma cama “California King”). Seja extremamente cuidadoso ao sair da cama, pois isso causa intolerância ortostática na maioria das pessoas, mesmo se você for jovem e saudável — ou seja, se você levantar rápido demais, pode sentir tontura, ter um desmaio, cair e se machucar. Então levante-se devagar. Beber dois copos de água fria trinta minutos antes de se levantar também pode ajudar a evitar esse efeito colateral potencialmente perigoso.\n\n*IMPORTANTE: Não tente fazer isso se você tiver problemas cardíacos ou pulmonares, refluxo ácido, problemas no cérebro (como traumatismo craniano) ou nos olhos (até um histórico familiar de glaucoma o desqualifica). Além disso, não tente fazer isso antes de perguntar ao/à médico/a se ele/a acha seguro dormir em Trendelenburg leve.*</string>
+    <string name="faq_adapt_question">A Dúzia Diária é muita/pouca comida para mim! Posso adaptá-la?</string>
+    <string name="faq_adapt_response">Sim, a Dúzia Diária é simplesmente um guia dos alimentos mais saudáveis que nos esforçamos para incluir todos os dias. Não é um plano de refeições e não pretende ser prescritivo. Faça o possível para comer uma variedade diversificada de alimentos vegetais integrais e adapte a Dúzia Diária às quantidades que funcionam melhor para você.</string>
+    <string name="faq_age_question">É adaptável para crianças e adolescentes?</string>
+    <string name="faq_age_response.0">Crianças e adolescentes têm diferentes necessidades calóricas ao longo de seu ciclo de vida. Essas necessidades mudam de acordo com o crescimento e o desenvolvimento em cada estágio.</string>
+    <string name="faq_age_response.1">A Dúzia Diária foi desenvolvida como um guia para ajudar as pessoas a incluir alguns dos alimentos mais saudáveis em sua rotina diária. Embora a mesma estrutura possa ser usada para a maioria das pessoas ao longo do ciclo de vida, a quantidade de comida necessária varia de acordo com vários fatores, como idade e nível de atividade. Como não podemos fornecer aconselhamento nutricional ou médico específico para seu/sua filho/a em crescimento, os pais devem usar este guia conforme acharem melhor para as necessidades de seus/suas filhos/as e/ou consultar um/a nutricionista registrado/a ou outro profissional da saúde para ajudar a determinar o que é melhor para as necessidades de seu/sua filho/a.</string>
+    <string name="faq_calories_question">Quantas calorias a Dúzia Diária tem?</string>
+    <string name="faq_calories_response.0">A Dúzia Diária tem em média cerca de 1.200 calorias, mas, dada a ampla variedade de opções de alimentos de cada categoria, pode variar de 800 a 1.800. Por exemplo, na categoria Outros Vegetais: uma xícara de pimentão tem uma densidade calórica muito menor do que uma xícara de batata-doce cozida, portanto, a faixa calórica dependerá das suas escolhas alimentares específicas. Essa é a grande vantagem da Lista da Dúzia Diária — não é uma abordagem única e pode ser adaptada às suas necessidades.</string>
+    <string name="faq_calories_response.1">Se o seu objetivo é perder peso, você pode encontrar mais informações no livro “Como Não Fazer Dieta” e nos Vinte e Um Ajustes que o acompanham. Em “Como Não Fazer Dieta”, eu observei: “Uma revisão sistemática de estratégias bem sucedidas de perda de peso concluiu que, devido à desaceleração metabólica e ao aumento do apetite que acompanham a perda de peso, para atingir uma perda de peso significativa, a quantidade de calorias pode precisar baixar para 1.200 calorias por dia para mulheres e 1.500 calorias por dia para homens”.</string>
+    <string name="faq_calories_response.2">Por outro lado, se o seu objetivo é ganhar peso, você pode adicionar mais alimentos ricos em calorias, como batata-doce, abacate, castanhas e produtos de soja.</string>
+    <string name="faq_mother_question">Posso fazer isso durante a gravidez ou a amamentação?</string>
+    <string name="faq_mother_response">Pessoas grávidas ou amamentando têm necessidades calóricas e nutricionais diferentes de pessoas que não estão. Como lembrete, a Dúzia Diária não é um plano de refeições e não deve ser uma lista dos únicos alimentos consumidos em um dia. As pessoas que estão grávidas ou amamentando devem consultar um/a médico/a ou um/a nutricionista registrado/a para obter assistência no atendimento das suas necessidades calóricas e nutricionais específicas.</string>
+    <string name="faq_scaling_question">Eu não consigo comer tantos feijões/grãos/etc.!</string>
+    <string name="faq_scaling_response">Tudo bem! A Dúzia Diária é um guia aspiracional. Faça o possível para incorporar o máximo possível desses alimentos vegetais saudáveis. Se você está começando a comer muitos feijões (ou grãos, verduras, etc!), pode ser necessário começar com quantidades menores e aumentar lentamente a quantidade para dar ao seu microbioma uma chance de se ajustar. Você também pode ser criativo: por exemplo, adicione alguns feijões ao seu mingau de aveia. Se você adicionar frutas silvestres, sementes de linhaça e castanhas, nem notará os feijões. Você também pode amassar feijão e fazer um patê para sanduíche ou fazer meu [BROL](https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils) — cevada, centeio, aveia e lentilhas — que eu uso como base para muitas refeições e é uma maneira simples de obter uma variedade de grãos integrais com uma porção integrada de leguminosas.</string>
+    <string name="faq_supplements_question">Eu achei que o Dr. Greger recomendasse tomar suplementos de vitamina D e DHA. Por que eles não estão incluídos?</string>
+    <string name="faq_supplements_response">Atualizamos o aplicativo da Dúzia Diária para refletir apenas os suplementos necessários. Por exemplo, a vitamina D só é necessária para pessoas que não tem exposição solar adequada. Nosso objetivo é compartilhar a ciência com você para que você possa tomar as suas próprias decisões informadas. Você pode ver todas as minhas recomendações na página [Optimum Nutrient](https://nutritionfacts.org/optimum-nutrient-recommendations).</string>
+    <string name="faq_title">Perguntas Frequentes</string>
     <string name="weight">Peso</string>
     <string name="tweak_group_meal">Em Cada Refeição</string>
     <string name="tweak_group_daily">Todo Dia</string>
@@ -311,6 +327,7 @@
         <item>Avelãs</item>
         <item>Sementes de cânhamo</item>
         <item>Macadâmias</item>
+        <item>Amendoins</item>
         <item>Nozes pecãs</item>
         <item>Pistaches</item>
         <item>Sementes de abóbora</item>
@@ -439,13 +456,17 @@
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ xícara de homus ou patê de feijão</item>
-        <item>½ xícara de feijão, ervilha, lentilha, tofu ou tempê cozidos</item>
-        <item>1 xícara de ervilha fresca ou lentilha germinada</item>
+        <item>½ xícara de feijão, ervilha ou lentilha cozidos</item>
+        <item>½ xícara de tofu ou tempê</item>
+        <item>1 xícara de ervilha fresca</item>
+        <item>1 xícara de feijão fresco germinado (lentilha, feijão mungo)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
         <item>60 g de homus ou patê de feijão</item>
-        <item>130 g de feijão, ervilha, lentilha, tofu ou tempê cozidos</item>
-        <item>150 g de ervilha fresca ou lentilha germinada</item>
+        <item>90 g de feijão, ervilha ou lentilha cozidos</item>
+        <item>100 g de tofu ou tempê</item>
+        <item>130 g de ervilha fresca</item>
+        <item>100 g de feijão fresco germinado (lentilha, feijão mungo)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ xícara de frutas silvestres frescas ou congeladas</item>
