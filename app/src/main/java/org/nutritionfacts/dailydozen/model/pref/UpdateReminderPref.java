@@ -148,6 +148,14 @@ public class UpdateReminderPref {
                     return (int) date.getTime();
                 }
             } catch (ParseException e) {
+                // If Canada Locale, AM/PM needs to be replaced with a.m./p.m. otherwise the time will not parse
+                // So if we get a ParseException, try replacing AM/PM with a.m./p.m. and try again
+                if (time.contains("AM") || time.contains("PM")) {
+                    time = time.replace("AM", "a.m.").replace("PM", "p.m.");
+                    return timeInMillis(time, format);
+                }
+
+                // If the time still doesn't parse, try the twenty four hour format
                 if (format != twentyFourHourFormat) {
                     return timeInMillis(time, twentyFourHourFormat);
                 } else {
