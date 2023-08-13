@@ -129,7 +129,7 @@ public class UpdateReminderPref {
     }
 
     private static class TimeStringComparator implements Comparator<String> {
-        private final DateFormat twelveHourFormat = new SimpleDateFormat("h:mm a", Locale.getDefault());
+        private final DateFormat twelveHourFormat = new SimpleDateFormat("h:mm a", Locale.US);
         private final DateFormat twentyFourHourFormat = new SimpleDateFormat("H:mm", Locale.getDefault());
 
         @Override
