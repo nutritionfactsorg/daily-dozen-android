@@ -488,14 +488,14 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>30–80 g tagliate</item>
-        <item>78 g di cavolini di Bruxelles</item>
-        <item>14 g di germogli di broccoli</item>
+        <item>80 g di cavolini di Bruxelles</item>
+        <item>15 g di germogli di broccoli</item>
         <item>1 cucchiaio di rafano</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g tagliate</item>
-        <item>78 g di cavolini di Bruxelles</item>
-        <item>14 g di germogli di broccoli</item>
+        <item>80 g di cavolini di Bruxelles</item>
+        <item>15 g di germogli di broccoli</item>
         <item>1 cucchiaio di rafano</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
