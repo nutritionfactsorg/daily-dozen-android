@@ -494,8 +494,8 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 γραμμάρια ψιλοκομμένα</item>
-        <item>78 γραμμάρια λαχανάκια Βρυξελλών</item>
-        <item>14 γραμμάρια φύτρα μπρόκολου</item>
+        <item>80 γραμμάρια λαχανάκια Βρυξελλών</item>
+        <item>15 γραμμάρια φύτρα μπρόκολου</item>
         <item>1 κουταλιά της σούπας χρένο</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">

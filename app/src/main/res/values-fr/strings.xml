@@ -8,7 +8,7 @@
     <string name="greens">Légumes verts</string>
     <string name="other_vegetables">Autres légumes</string>
     <string name="flaxseeds">Graines de lin</string>
-    <string name="nuts">Noix</string>
+    <string name="nuts">Noix et graines</string>
     <string name="spices">Épices et herbes aromatiques</string>
     <string name="whole_grains">Céréales complètes</string>
     <string name="beverages">Boissons</string>
@@ -24,12 +24,12 @@
     <string name="moving_average">Moyenne mobile</string>
     <string name="about">À propos</string>
     <string name="about_this_app">À propos de cette app</string>
-    <string name="about_translators">Remerciements particuliers à nos traducteurs bénévoles : Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Remerciements particuliers à nos traducteurs bénévoles: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
     <string name="latest_videos">Dernières vidéos</string>
     <string name="donate">Faire un don</string>
     <string name="subscribe">Souscrire</string>
     <string name="open_source">Open source</string>
-    <string name="permission_needed_to_write_storage">Impossible de sauvegarder sans accès au stockage</string>
+    <string name="permission_needed_to_write_storage">Impossible de sauvegarder sans autorisation d\'accès au stockage</string>
     <string name="backup_failed">Échec de la sauvegarde</string>
     <string name="restore_failed">Échec</string>
     <string name="backup_success">Sauvegarde réussie</string>
@@ -83,7 +83,7 @@
     <string name="channel_reminders_name">Rappels</string>
     <string name="twenty_one_tweaks">21 Astuces</string>
     <string name="tweaks">Astuces</string>
-    <string name="daily_tweaks_history">Historique des modifications par jour</string>
+    <string name="daily_tweaks_history">Historique des astuces par jour</string>
     <string name="weight_history">Historique Poids</string>
     <string name="no_weights_recorded">Vous n\'avez pas encore enregistré de poids !</string>
     <string name="task_loading_weights_history_title">Chargement de l\'historique de poids en cours</string>
@@ -251,7 +251,7 @@
         <item>Kiwis</item>
         <item>Citrons</item>
         <item>Citrons verts</item>
-        <item>Lychees</item>
+        <item>Litchi</item>
         <item>Mangues</item>
         <item>Nectarines</item>
         <item>Oranges</item>
@@ -309,7 +309,7 @@
         <item>Pommes de terre</item>
         <item>Citrouille</item>
         <item>Algues (brunes, rouges, vertes)</item>
-        <item>Petits pois</item>
+        <item>Pois gourmand</item>
         <item>Courges</item>
         <item>Patates douces/Ignames</item>
         <item>Tomates</item>
@@ -342,10 +342,10 @@
         <item>Laurier</item>
         <item>Cardamome</item>
         <item>Poudre de piment</item>
-        <item>Coriandre fraîche</item>
+        <item>Coriandre (feuilles)</item>
         <item>Cannelle</item>
         <item>Clous de girofle</item>
-        <item>Coriandre</item>
+        <item>Coriandre (graines)</item>
         <item>Cumin</item>
         <item>Curry en poudre</item>
         <item>Aneth</item>
@@ -439,7 +439,7 @@
         <item>Corde à sauter</item>
         <item>Crosse</item>
         <item>Pompes</item>
-        <item>Abdos</item>
+        <item>Tractions</item>
         <item>Racquetball</item>
         <item>Escalade</item>
         <item>Rugby</item>
@@ -494,8 +494,8 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>30–80 g hachés</item>
-        <item>78 g de choux de Bruxelles</item>
-        <item>14 g de pousses de brocoli</item>
+        <item>80 g de choux de Bruxelles</item>
+        <item>15 g de pousses de brocoli</item>
         <item>1 cuillère à soupe de raifort</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
