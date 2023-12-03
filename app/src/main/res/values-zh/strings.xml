@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <resources>
-    <string name="app_name">每日十二要素</string>
+    <string name="app_name">每日12清單</string>
     <string name="beans">豆類</string>
-    <string name="berries">莓果類</string>
+    <string name="berries">漿果類</string>
     <string name="other_fruits">其他水果</string>
     <string name="cruciferous_vegetables">十字花科蔬菜</string>
-    <string name="greens">綠色蔬菜</string>
+    <string name="greens">綠葉蔬菜</string>
     <string name="other_vegetables">其他蔬菜</string>
     <string name="flaxseeds">亞麻籽</string>
     <string name="nuts">堅果類</string>
-    <string name="spices">香料</string>
+    <string name="spices">香草和香料</string>
     <string name="whole_grains">全穀類</string>
     <string name="beverages">飲料</string>
     <string name="exercise">運動</string>
@@ -17,18 +17,18 @@
     <string name="serving_sizes">份量（建議）</string>
     <string name="types">種類</string>
     <string name="history">歷史紀錄</string>
-    <string name="servings_some">部分份量</string>
+    <string name="servings_some">部份份量</string>
     <string name="servings_all">全部份量</string>
     <string name="servings">份量</string>
     <string name="out_of">/</string>
     <string name="moving_average">移動平均數</string>
     <string name="about">關於我們</string>
-    <string name="about_this_app">關於這個應用程式</string>
+    <string name="about_this_app">關於本應用程序</string>
     <string name="about_translators">特別鳴謝翻譯志願者：Petar Enchev（bg）、Tsveti Enchev（bg）、Ricard Soler Roger（ca）、Luděk Bouška（cs,sk）、Lenka Lukacová（cs）、Anke Schliessmann（de）、Ángela Graña（es）、Audray Harkins（fr）、Doron Barak（he）、Ruth Levy（he）、Annalisa Guerrini-Körner（it）、Ilaria Zanini（it）、Hanna Gurzeda（pl）、Joanna Klopotek（pl）、Tania Bassi（pt-BR）、João Madureira（pt-PT）、Cristina Lauby（ro）、Evgeniya Lyakh（ru）、Katarína Mocáková（sk)。</string>
     <string name="latest_videos">最新影片</string>
     <string name="donate">捐款</string>
     <string name="subscribe">訂閱</string>
-    <string name="open_source">免費資源</string>
+    <string name="open_source">開放資源</string>
     <string name="permission_needed_to_write_storage">不具權限，無法備份至記憶體</string>
     <string name="backup_failed">備份失敗</string>
     <string name="restore_failed">還原失敗</string>
@@ -41,20 +41,20 @@
     <string name="backup">備份</string>
     <string name="food_info">食物資訊</string>
     <string name="food_history">食物歷史紀錄</string>
-    <string name="daily_servings_history">每日分量歷史紀錄</string>
-    <string name="no_servings_recorded">您尚未紀錄任何內容！</string>
+    <string name="daily_servings_history">每日份量歷史紀錄</string>
+    <string name="no_servings_recorded">您尚未紀錄任何份量！</string>
     <string name="task_backup_title">備份中</string>
     <string name="task_restore_title">還原中</string>
-    <string name="task_calculating_streaks_title">計算圖表中</string>
+    <string name="task_calculating_streaks_title">計算連勝</string>
     <string name="back_to_today">回到今天</string>
     <string name="debug">偵錯</string>
-    <string name="debug_clear_data">清除所有資料</string>
-    <string name="debug_clear_data_message">這將刪除所有已輸入的分量。確定要繼續嗎？</string>
+    <string name="debug_clear_data">清除所有數據</string>
+    <string name="debug_clear_data_message">這將刪除所有已輸入的份量。確定要繼續嗎？</string>
     <string name="OK">確定</string>
-    <string name="dialog_streaks_title">新功能：趨勢圖</string>
-    <string name="dialog_streaks_message">現在將升級您的資料庫，以支持新的趨勢圖功能。</string>
+    <string name="dialog_streaks_title">新功能：連勝！</string>
+    <string name="dialog_streaks_message">現在將升級您的資料庫，以支持新的連勝功能。</string>
     <string name="dialog_no_email_apps_title">找不到電子郵件應用程式</string>
-    <string name="dialog_no_email_apps_message">您需要安裝電子郵件應用程式才能使用備份數據功能，才能將的備份檔案寄到自己的電子郵件信箱。請安裝電子郵件應用程式後再重試。</string>
+    <string name="dialog_no_email_apps_message">您需要安裝電子郵件應用程式才能使用備份數據功能，並將備份檔案寄到自己的電子郵件信箱。請安裝電子郵件應用程式後再重試。</string>
     <string name="debug_generate_random_data">產生隨機數據</string>
     <string name="debug_generate_full_data">產生完整數據</string>
     <string name="debug_generate_data_message">所有現存的數據都將被取代。確定要繼續嗎？</string>
@@ -62,15 +62,15 @@
     <string name="task_loading_servings_history_title">載入份量歷史記錄</string>
     <string name="time_scale">時間尺度</string>
     <string name="history_to_generate">產生歷史記錄</string>
-    <string name="welcome_to_my_daily_dozen">歡迎來到我的《每日十二要素》！</string>
-    <string name="activity_welcome_text">我在《食療聖經》中推薦了能夠讓您健康長壽的食物，請每天使用這個應用程式來記錄與追蹤您對這些食物的攝取量。</string>
+    <string name="welcome_to_my_daily_dozen">歡迎來到我的《每日12清單》！</string>
+    <string name="activity_welcome_text">我在《食療聖經》中推薦了能夠讓您健康長壽的食物，請每天使用這個應用程序來記錄與追蹤您對這些食物的攝取量。</string>
     <string name="dialog_ask_user_to_rate_app_title">您喜歡這個應用程式嗎？</string>
     <string name="dialog_ask_user_to_rate_app_message">請在應用程式商店中給我們指教。</string>
-    <string name="rate_now">我有意見</string>
+    <string name="rate_now">提供反饋</string>
     <string name="not_now">稍後再說</string>
     <string name="format_version">版本 %s</string>
     <string name="format_num_days">%d 天</string>
-    <string name="daily_reminder_title">每日十二要素提醒</string>
+    <string name="daily_reminder_title">每日12清單提醒</string>
     <string name="daily_reminder_text">更新您的今日份量</string>
     <string name="daily_reminder_settings">每日提醒設定</string>
     <string name="enable_daily_reminder">啟用每日提醒</string>
@@ -81,119 +81,119 @@
     <string name="metric">公制</string>
     <string name="error_cannot_handle_url">無法開啟網頁。請安裝瀏覽器。</string>
     <string name="channel_reminders_name">提醒</string>
-    <string name="twenty_one_tweaks">21個調整</string>
+    <string name="twenty_one_tweaks">21招</string>
     <string name="tweaks">調整</string>
     <string name="daily_tweaks_history">每日調整記錄</string>
-    <string name="weight_history">體重記錄</string>
-    <string name="no_weights_recorded">您尚未記錄任何重量！</string>
-    <string name="task_loading_weights_history_title">重量歷史加載中</string>
+    <string name="weight_history">體重歷史</string>
+    <string name="no_weights_recorded">您尚未記錄任何體重！</string>
+    <string name="task_loading_weights_history_title">體重歷史加載中</string>
     <string name="morning">早上</string>
     <string name="evening">晚上</string>
-    <string name="meal_water">預先加水</string>
-    <string name="meal_negcal">預先吃“負熱量”食品</string>
-    <string name="meal_vinegar">加入醋（每餐2茶匙）</string>
+    <string name="meal_water">預載水分</string>
+    <string name="meal_negcal">預載負熱量食物</string>
+    <string name="meal_vinegar">配醋一起吃（每餐2茶匙）</string>
     <string name="meal_undistracted">專心用餐</string>
-    <string name="meal_twentyminutes">遵循二十分鐘規則</string>
-    <string name="daily_blackcumin">黑小茴香（¼茶匙）</string>
+    <string name="meal_twentyminutes">嚴守用餐20分鐘法則</string>
+    <string name="daily_blackcumin">黑孜然（¼茶匙）</string>
     <string name="daily_garlic">大蒜粉（¼茶匙）</string>
-    <string name="daily_ginger">生薑粉（1茶匙）或辣椒粉（½茶匙）</string>
+    <string name="daily_ginger">生薑粉（1茶匙）或卡宴辣椒粉（½茶匙）</string>
     <string name="daily_nutriyeast">營養酵母（2茶匙）</string>
-    <string name="daily_cumin">小茴香（午餐和晚餐約½茶匙）</string>
+    <string name="daily_cumin">孜然（午餐和晚餐½茶匙）</string>
     <string name="daily_greentea">綠茶（3杯）</string>
-    <string name="daily_hydrate">保持水分</string>
-    <string name="daily_deflourdiet">減少麪粉食品</string>
-    <string name="daily_frontload">提前加載您的卡路里</string>
-    <string name="daily_timerestrict">時間限制飲食</string>
-    <string name="exercise_timing">優化運動時間</string>
-    <string name="weigh_twice">一天兩次稱自己</string>
+    <string name="daily_hydrate">保持體內水分充足</string>
+    <string name="daily_deflourdiet">勿將食物磨成粉</string>
+    <string name="daily_frontload">提早載入熱量</string>
+    <string name="daily_timerestrict">限制進餐時間區間</string>
+    <string name="exercise_timing">把握運動良機</string>
+    <string name="weigh_twice">每天量體重兩次</string>
     <string name="complete_intentions">完成您的實施意圖</string>
-    <string name="nightly_fast">晚上７點後絕食</string>
-    <string name="nightly_sleep">獲得充足的睡眠</string>
-    <string name="nightly_trendelenburg">試試睡覺時讓頭稍微比較低</string>
+    <string name="nightly_fast">晚上７點後禁食</string>
+    <string name="nightly_sleep">睡眠充足</string>
+    <string name="nightly_trendelenburg">採取微微頭低腳高的仰臥睡姿</string>
     <string name="debug_generate_weight_data">產生體重數據</string>
     <string name="average_weight_on_day">日平均體重</string>
-    <string name="meal_water_short">先喝水</string>
-    <string name="meal_negcal_short">先吃“負熱量”食品</string>
-    <string name="meal_vinegar_short">加醋（每餐2茶匙）</string>
+    <string name="meal_water_short">預載水分</string>
+    <string name="meal_negcal_short">預載負熱量食物</string>
+    <string name="meal_vinegar_short">配醋一起吃（每餐2茶匙）</string>
     <string name="meal_undistracted_short">專心用餐</string>
-    <string name="meal_twentyminutes_short">20分鐘規則</string>
-    <string name="daily_blackcumin_short">黑小茴香（Nigella sativa）（¼茶匙）</string>
+    <string name="meal_twentyminutes_short">嚴守用餐20分鐘法則</string>
+    <string name="daily_blackcumin_short">黑孜然（¼茶匙）</string>
     <string name="daily_garlic_short">大蒜粉（¼茶匙）</string>
-    <string name="daily_ginger_short">生薑粉（1茶匙）或辣椒粉（½茶匙）</string>
+    <string name="daily_ginger_short">生薑粉（1茶匙）或卡宴辣椒粉（½茶匙）</string>
     <string name="daily_nutriyeast_short">營養酵母（2茶匙）</string>
-    <string name="daily_cumin_short">孜然（Cumum cyminum）（午餐和晚餐含½茶匙）</string>
+    <string name="daily_cumin_short">孜然（午餐和晚餐½茶匙）</string>
     <string name="daily_greentea_short">綠茶（3杯）</string>
-    <string name="daily_hydrate_short">保持水分</string>
-    <string name="daily_deflourdiet_short">減少麪粉食品</string>
-    <string name="daily_frontload_short">提前加載您的卡路里</string>
-    <string name="daily_timerestrict_short">時間限制飲食</string>
-    <string name="exercise_timing_short">優化運動時間</string>
-    <string name="weigh_twice_short">一天兩次稱自己</string>
+    <string name="daily_hydrate_short">保持體內水分充足</string>
+    <string name="daily_deflourdiet_short">勿將食物磨成粉</string>
+    <string name="daily_frontload_short">提早載入熱量</string>
+    <string name="daily_timerestrict_short">限制進餐時間區間</string>
+    <string name="exercise_timing_short">把握運動良機</string>
+    <string name="weigh_twice_short">每天量體重兩次</string>
     <string name="complete_intentions_short">完成您的實施意圖</string>
-    <string name="nightly_fast_short">晚上７點後絕食</string>
-    <string name="nightly_sleep_short">獲得充足的睡眠</string>
-    <string name="nightly_trendelenburg_short">試試睡覺時讓頭稍微比較低</string>
-    <string name="meal_water_text">每次進餐前安排兩杯涼爽或冷的無味水來促進新陳代謝，以充分利用其“預載”帶來的好處。</string>
-    <string name="meal_negcal_text">作爲第一道菜，每餐都以每杯少於100卡路里的蘋果或“綠燈”湯或色拉開始。</string>
-    <string name="meal_vinegar_text">切勿直接喝醋。把醋作爲調料或配上沙拉配甜味和鹹味醋。如果要喝，請確保將其與一杯水混合，然後再用水沖洗口腔以保護牙釉質。</string>
-    <string name="meal_undistracted_text">看電視或玩手機時不要吃飯。給自己檢查一下您可以不分心地進餐的每一餐。</string>
-    <string name="meal_twentyminutes_text">不管是通過增加粘度或咀嚼次數，還是通過減小咬合大小和進食速度，數十項研究表明，無論我們如何增加食物在口腔中的停留時間，都可能導致熱量攝入降低。因此，將用餐時間至少延長至二十分鐘，以使您的自然飽腹感信號充分發揮作用。怎麼樣？通過選擇吃時間更長的食物，並以延長食物在嘴裏停留的時間來食用它們。用較小的，經過精心咀嚼的食物來考慮體積更大，更硬，更耐嚼的食物。</string>
-    <string name="daily_blackcumin_text">如“抑制食慾”部分所述，對隨機對照減肥試驗的系統評價和薈萃分析發現，每天約四分之一茶匙的黑孜然粉似乎會在幾個月內降低體重指數。請注意，黑孜然與常規孜然不同，後者的劑量有所不同。</string>
-    <string name="daily_garlic_text">隨機，雙盲，安慰劑對照的研究發現，每天少到一茶匙的大蒜粉就可以減少體內脂肪，每天的費用可能只有兩美分。</string>
-    <string name="daily_ginger_text">隨機對照試驗發現，每天姜粉研磨量爲¼茶匙至1.5茶匙，每天僅需幾便士就能顯着降低體重。就像將調味香料攪拌到一杯熱水中一樣容易。注意：生薑早上可能比晚上更好。柴茶是一種將綠茶和生薑花粉混合成一種飲料的美味方法。另外，對於BAT激活，您可以在日常飲食中添加一個生的墨西哥胡椒胡椒或半茶匙的紅辣椒粉（或大概是壓碎的紅辣椒片）。爲了幫助消除熱量，您可以將墨西哥胡椒切成薄片或切成薄片，以減少其刺傷，或將紅辣椒混入湯或全食蔬菜冰沙中，這是我在NutritionFacts.org上的一個烹飪視頻中精選的。</string>
-    <string name="daily_nutriyeast_text">麪包，啤酒或營養酵母中的兩茶匙約含有在隨機，雙盲，安慰劑對照的臨牀試驗中發現的，可促進體重減輕的β1,3 / 1,6葡聚糖。</string>
-    <string name="daily_cumin_text">超重的婦女在午餐和晚餐時隨機添加半茶匙的孜然，比對照組多了四磅，腰部也增加了一英寸。也有證據支持使用香料番紅花，但是每天捏一小撮要花一美元，而一茶匙孜然的價格不到十美分。</string>
-    <string name="daily_greentea_text">兩餐之間每天喝三杯（餐後至少等待一個小時，以免干擾鐵的吸收）。用餐時，喝水，黑咖啡或芙蓉花茶與檸檬馬鞭草以6：1的比例混合，但每小時不要超過三杯水（根據我的預裝水建議很重要）。通過喝綠茶以及您希望自己更喜歡的健康食品來充分利用咖啡因的增強作用，但在就寢時間的六個小時內不要攝入大量咖啡因。不含甜味劑的茶是最好的，但是如果您通常用蜂蜜或糖來甜茶，請嘗試使用Yacon糖漿。</string>
-    <string name="daily_hydrate_text">如果您的尿液看上去不比淺黃色深，請選中此框。請注意，如果您正在食用核黃素強化的食物（例如營養酵母），則應以每天爲女性購買九杯不加糖的飲料爲基礎（綠茶和水預裝建議可以解決此問題）或男人一天十三杯。如果您有心臟或腎臟問題，請先與醫生交談，否則根本不要增加液體攝入量。請記住，減肥汽水可能不含卡路里，但並非零卡路里，正如我們在“低糖”中所瞭解的那樣。</string>
-    <string name="daily_deflourdiet_text">每天您所有的穀物都以完整穀物的形式選中。即使是全穀物的100％粉末化，也剝奪了我們澱粉的微生物羣，否則這些微生物羣會被運送到封閉在未破裂的細胞壁中的結腸。</string>
-    <string name="daily_frontload_text">在一天中的早些時候分配更多的卡路里有代謝的好處，就像中國俗話早“上吃飽中午吃好晚上吃少”，早餐或午餐早飯或午飯爲您一天中最大的一餐。</string>
-    <string name="daily_timerestrict_text">將進食限制在您選擇的每日時間範圍之內，長度不超過十二小時，您可以每週七天堅持食用。考慮到減少晚上進食的晝夜節律益處，窗戶應在下午7:00之前結束。</string>
-    <string name="exercise_timing_text">爲了延長壽命，每天的最佳建議是每天進行90分鐘的中等強度的運動，這也是減肥的最佳運動時間。任何時候都是好事，而且越好越好，但是在最後一頓飯後至少六個小時以空腹狀態鍛鍊可能會有好處。通常，這意味着在早餐前，但是如果您選擇合適的時間，則可以在中午之前做午飯，或者，如果午餐吃得早，則在晚餐前做運動。這是非糖尿病患者的時機。糖尿病患者和糖尿病前期患者應該在進餐後三十分鐘開始鍛鍊，理想情況下至少要花一個小時才能完全跨越血糖峯值。如果您必須選擇一頓飯來運動，那將是晚餐，因爲整日血糖控制的晝夜節律逐漸減弱。不過，理想情況下，早餐將是一天中最豐盛的一頓飯，之後您應該鍛鍊身體，或者甚至在每頓飯後都要運動。</string>
-    <string name="weigh_twice_text">定期自我稱重對於長期控制體重至關重要，但沒有足夠的證據支持特定的稱重頻率。我的建議是根據一項研究發現的，該研究發現每天兩次（醒來時和就寢前）表現出比每天一次更好的效果（在12周內體重減輕約6磅對2磅）。</string>
-    <string name="complete_intentions_text">每兩個月，創建三個新的實施意圖-“如果是X，則是Y”計劃在特定的上下文中執行特定的行爲-並在每天完成它們時檢查每個目標。</string>
-    <string name="nightly_fast_text">由於我們的晝夜節律，晚上進食的食物比白天早些時候吃的完全相同的食物更容易發胖，所以每天晚上7:00之前開始，至少每晚要快十二個小時。日落後卡路里越少越好。</string>
-    <string name="nightly_sleep_text">如果您在正常就寢時間至少有七個小時的睡眠時間，請選中此框。</string>
-    <string name="nightly_trendelenburg_text">嘗試將您的身體的頭部向下傾斜6度，使您的牀頭的牀頭擡高八英寸（如果您有加利福尼亞國王，則擡高九英寸），每晚至少花四個小時。起牀時要格外小心，因爲這會導致大多數人直立不寬容，即使您年輕又健康-這意味着如果您起得太快，您可能會感到頭暈，暈眩或頭昏眼花，並且可能跌倒傷害自己。所以慢慢起來。在升起前30分鐘喝兩杯冷水也可能有助於防止這種潛在的有害副作用。\n\n*重要提示：如果您有心臟或肺部問題，胃酸反流或大腦有問題，請不要在家嘗試（例如頭部外傷）或眼睛（甚至是青光眼的家族病史也會使您失去資格）。也不要嘗試此操作，除非您詢問您的醫生是否認爲您在輕度的特倫德倫伯臥位安全無事。*</string>
-    <string name="faq_adapt_question">Daily Dozen 建議我吃太多/太少！ 我可以調整嗎？</string>
-    <string name="faq_adapt_response">是的，Daily Dozen 只是為了指導我們每天努力攝取的最健康的食物。 這不是膳食計劃，也不是規定性的。 盡最大努力吃各種各樣的全植物食品，並根據適合您的數量調整每日一打。</string>
-    <string name="faq_age_question">這是否適用於兒童、青少年和青少年？</string>
-    <string name="faq_age_response.0">兒童、青少年和青少年在整個生命週期中有不同的熱量需求。 這些需求發生變化以支持每個階段的增長和發展。</string>
-    <string name="faq_age_response.1">Daily Dozen 旨在作為指南，幫助人們將一些最健康的食物納入日常生活。 雖然同一框架可用於大多數人的整個生命週期，但一個人需要吃的食物量會因年齡和活動水平等多種因素而異。 由於我們無法為您成長中的孩子提供具體的營養或醫療建議，因此父母應該根據他們認為最適合孩子需求的方式使用本指南和/或諮詢註冊營養師或其他醫療保健提供者，以幫助確定最適合他們個人的內容 需要。</string>
-    <string name="faq_calories_question">Daily Dozen 中含有多少卡路里？</string>
-    <string name="faq_calories_response.0">Daily Dozen 平均約 1,200 卡路里，但考慮到每個類別的食物選擇範圍廣泛，它可以在 800-1800 之間的任何地方。 考慮其他蔬菜類別：一杯甜椒的熱量密度比一杯煮熟的紅薯低得多，因此熱量範圍將取決於您的具體食物選擇。 這就是 Daily Dozen Checklist 的偉大之處——它不是一種放之四海而皆準的方法，可以根據您的需要進行調整。</string>
-    <string name="faq_calories_response.1">如果您的目標是減肥，您可以在《How Not to Diet》和隨附的二十一條調整中找到更多信息。 在《How Not to Diet》一文中，我指出：“一項對成功減肥策略的系統回顧得出的結論是，考慮到伴隨減肥而來的新陳代謝減慢和食慾增加，要實現顯著減肥，卡路里計數可能需要降低至 女性每天 1,200 卡路里，男性每天 1,500 卡路里。”</string>
-    <string name="faq_calories_response.2">另一方面，如果您的目標是增加體重，那麼您可能需要專注於添加更多高熱量食物，例如紅薯、鱷梨、堅果和豆製品。</string>
+    <string name="nightly_fast_short">晚上７點後禁食</string>
+    <string name="nightly_sleep_short">睡眠充足</string>
+    <string name="nightly_trendelenburg_short">採取微微頭低腳高的仰臥睡姿</string>
+    <string name="meal_water_text">在每餐前，安排好時間飲用兩杯涼爽或冷卻、無調味的水，以利用其預先補充的好處，從而提升新陈代谢。</string>
+    <string name="meal_negcal_text">作爲第一道菜，每餐都以每杯少於100卡路里的蘋果、「綠燈」湯或色拉開始。</string>
+    <string name="meal_vinegar_text">切勿直接喝醋。把醋作爲調料或配上沙拉，可搭配甜味和鹹味醋。如果要喝，請確保將其與一杯水混合，然後再用水沖洗口腔以保護牙釉質。</string>
+    <string name="meal_undistracted_text">看電視或玩手機時不要吃飯。每當您可以不分心地進食一餐，就給自己打個勾。</string>
+    <string name="meal_twentyminutes_text">無論是通過增加粘度、咀嚼次數，還是減少每口食物的大小和進食速度，數十項研究都表明，無論我們如何增加食物在口中停留的時間，都可能導致攝入的熱量降低。因此，將用餐時間延長至少20分鐘，以讓您的自然飽腹感充分發揮作用。如何做到？通過選擇需要更長時間吃的食物，並以延長它們在口中停留時間的方式進食。想想那些體積更大、結實、耐嚼的食物，並且以小口、咀嚼充分的方式食用。</string>
+    <string name="daily_blackcumin_text">如同在抑制食慾一節中所提到的，一項隨機、對照的減重試驗系統回顧和元分析發現，每天大約¼茶匙（約1.25毫升）的黑孜然粉在幾個月的時間內似乎能降低體質指數。請注意，黑孜然與普通孜然不同，其劑量也有所不同。</string>
+    <string name="daily_garlic_text">隨機、雙盲、安慰劑對照的研究發現，每天少到一茶匙的大蒜粉就可以減少體內脂肪，每天的費用可能只有兩美分。</string>
+    <string name="daily_ginger_text">隨機對照試驗發現，每天攝入¼茶匙至1½茶匙的磨碎生薑可以顯著減少體重，而且成本僅為每天幾分錢。這可以像將磨碎的生薑攪入一杯熱水那樣簡單。注意：生薑在早上可能比晚上效果更好。印度香料茶是將綠茶和生薑的妙招結合成一種飲料的美味方式。或者，為了激活棕色脂肪組織（BAT），您可以將一個生的墨西哥辣椒或半茶匙紅辣椒粉（或可以是碎紅辣椒片）加入您的日常飲食中。為了幫助抵抗辣味，您可以將墨西哥辣椒切成非常薄的片或細碎，以減少其辛辣程度，或者將紅辣椒混入湯中，或像是我在NutritionFacts.org上發佈過的全食物蔬食蔬果昔烹飪視頻中。</string>
+    <string name="daily_nutriyeast_text">兩茶匙的烘焙酵母、啤酒酵母或營養酵母大約含有在隨機、雙盲、安慰劑對照臨床試驗中發現的β-1,3/1,6葡聚糖的量，這些葡聚糖有助於減輕體重。</string>
+    <string name="daily_cumin_text">被隨機分配在午餐和晚餐中加入半茶匙（約2.5毫升）孜然的超重女性，比對照組多減輕了約1.8公斤（4磅），並且腰圍額外減少了約2.5公分。同時，也有證據支持使用藏紅花這種香料，但每天一撮的成本為1美元，而一茶匙孜然的成本不到10美分。</string>
+    <string name="daily_greentea_text">每天在餐間飲用三杯（至少在餐後等候一小時再飲用，以免干擾鐵的吸收）。在用餐時，可飲用水、黑咖啡或與檸檬馬鞭草混合的洛神花茶（比例為6:1），但每小時的液體攝入量不要超過三杯（鑑於我之前關於預載水分的建議，這一點很重要）。利用咖啡因的增強效應，將綠茶與您希望更喜歡的健康食品一同飲用，但不要在睡前六小時內攝入大量咖啡因。不加甜味劑飲用茶是最好的，但如果您通常用蜂蜜或糖來甜化茶，可以嘗試使用雅康糖漿代替。</string>
+    <string name="daily_hydrate_text">如果您的尿液從來不顯示出比淡黃色更深的顏色，請勾選此框。請注意，如果您食用富含核黃素的食物（如營養酵母），那麼請根據每天攝取9杯無糖飲料（對於女性來說，這可以通過綠茶和預載水分的建議來滿足）或每天13杯（對於男性）來判斷。  如果您有心臟或腎臟問題，在未與您的醫生商談前，請不要增加液體攝入量。記住，雖然無糖汽水可能不含卡路里，但並非沒有後果，正如我們在「低添加糖」一節中了解到的那樣。</string>
+    <string name="daily_deflourdiet_text">如果您每天攝入的全穀物都是以完整穀物的形式，請勾選此框。即使是100%全穀物，磨成粉也會剝奪我們的微生物群能夠得到的澱粉。這些澱粉原本會被完整的細胞壁包裹著送到我們的結腸。</string>
+    <string name="daily_frontload_text">在一天中的早些時候分配更多的卡路里有代謝的好處，就像中文俗話「早上吃飽、中午吃好、晚上吃少」，理想狀態下，早餐或午餐應是您一天中最大的一餐。</string>
+    <string name="daily_timerestrict_text">將每日進食時間限制在您選擇的不超過12小時的時間窗口內，並能夠每週七天持續遵守。鑒於減少晚間食物攝入的生理時鐘好處，這個時間窗口應在晚上7點之前結束。</string>
+    <string name="exercise_timing_text">為了延壽，《每日12清單》推薦的最佳運動時間為每天90分鐘的中等強度活動，這也是減重的最佳運動時間。任何時間運動都好，而且越多越好，但在空腹狀態下運動可能有優勢，至少要在最後一餐後六小時。通常，這意味著在早餐前運動，但如果您安排得當，您可以在午餐前或晚餐前運動，前提是午餐吃得夠早。這是非糖尿病患者的時間安排。糖尿病患者和糖尿病前期患者應該在進餐開始後30分鐘開始運動，理想情況下至少持續一小時，完全覆蓋血糖高峰期。如果您必須選擇一餐後運動，那應該是晚餐，因為血糖控制的晝夜節律會隨著一天的過去而減弱。理想情況下，早餐應該是一天中最大的一餐，並應該在那之後運動，或者更好的是，每餐後都運動。</string>
+    <string name="weigh_twice_text">定期量體重被視為長期體重控制的重要手段，但目前仍缺乏足夠證據支持特定的測量頻率。我建議一天兩次乃是根據一篇研究，該研究發現起床後和睡前各量一次，似乎比一天量一次效果更好（12週後，前者約減重6磅，後者約減重2磅）。</string>
+    <string name="complete_intentions_text">每兩個月，創建三個新的實施意圖——「如果X，則Y」，計劃在特定的上下文中執行特定的行爲——並在每天完成時打勾。</string>
+    <string name="nightly_fast_text">由於我們的晝夜節律，晚上進食的食物比白天早些時候吃的完全相同的食物更容易發胖，所以由每天晚上7點前開始，至少每晚要禁食12個小時。日落後卡路里攝入越少越好。</string>
+    <string name="nightly_sleep_text">如果您在正常就寢時間至少有七個小時的睡眠時間，請打勾。</string>
+    <string name="nightly_trendelenburg_text">嘗試每晚至少花四小時躺在床上，將床尾的支柱抬高20公分（如果您有加州特大號床，則提高23公分），使身體呈現頭部低於六度的傾斜狀態。起床時要非常小心，因為這會在大多數人身上引起立姿耐受不良，縱使年輕力壯者也萬不可大意——意味著如果您起床太快，可能會感到頭暈、昏厥或頭輕，可能會跌倒並受傷。所以起床時要慢慢來。在起身前三十分鐘喝兩杯冷水，也可能有助於預防這種潛在的危險副作用。  *重要提示：如果您有任何心臟或肺部問題、酸逆症，或者大腦（如頭部創傷）或眼睛（即使是家族史中有青光眼）的問題，請勿在家嘗試這種做法。在問過您的醫生並且他們認為您躺在輕度的特倫德倫伯臥位姿勢下睡覺是安全的之前，也不要嘗試這種做法。*</string>
+    <string name="faq_adapt_question">每日12清單建議我吃太多/太少！我可以調整嗎？</string>
+    <string name="faq_adapt_response">是的，每日12清單只是為了指導我們每天努力攝取的最健康的食物。這不是膳食計劃，也不是規定性的。盡最大努力吃各種各樣的全食物蔬食食品，並根據適合您的數量調整每日12清單。</string>
+    <string name="faq_age_question">這是否適用於兒童和青少年？</string>
+    <string name="faq_age_response.0">兒童和青少年在整個生命週期中有不同的熱量需求。 這些需求在每個階段發生改變，是為了支持每個階段的增長和發展。</string>
+    <string name="faq_age_response.1">每日12清單旨在作為指南，幫助人們將一些最健康的食物納入日常生活。雖然同一框架可用於大多數人的整個生命週期，但一個人需要吃的食物量會因年齡和活動水平等多種因素而異。由於我們無法為您成長中的孩子提供具體的營養或醫療建議，因此父母應該根據他們認為最適合孩子需求的方式使用本指南和/或諮詢註冊營養師或其他醫療保健提供者，以幫助確定最適合他們個人的內容需要。</string>
+    <string name="faq_calories_question">每日12清單中含有多少卡路里？</string>
+    <string name="faq_calories_response.0">每日12清單平均約1,200卡路里，但考慮到每個類別的食物選擇範圍廣泛，這個數字可以落在800-1800之間的任何地方。想想「其他蔬菜」類別：一杯甜椒的熱量密度比一杯煮熟的紅薯低得多，因此熱量範圍將取決於您的具體食物選擇。這就是每日12清單的偉大之處——它不是一種放之四海而皆準的方法，可以根據您的需要進行調整。</string>
+    <string name="faq_calories_response.1">如果您的目標是減重，您可以在《食療聖經減重版》和隨附的21招中找到更多信息。 在《食療聖經減重版》一書中，我指出：「一項對成功減重策略的系統回顧得出的結論是，考慮到伴隨減重而來的新陳代謝減慢和食慾增加，要實現顯著減重，卡路里計數可能需要降低至女性每天1,200卡路里，男性每天1,500卡路里。」</string>
+    <string name="faq_calories_response.2">另一方面，如果您的目標是增加體重，那麼您可能需要專注於添加更多高熱量食物，例如紅薯、酪梨、堅果和豆製品。</string>
     <string name="faq_mother_question">我可以在懷孕或哺乳期間這樣做嗎？</string>
-    <string name="faq_mother_response">懷孕或哺乳的人與未懷孕或哺乳的人有不同的熱量和營養需求。 提醒一下，Daily Dozen 不是膳食計劃，也不應該是一天內食用的唯一食物。 懷孕或哺乳的人應該諮詢他們的保健醫生或註冊營養師，以獲得滿足其特定熱量需求和營養需求的幫助。</string>
-    <string name="faq_scaling_question">我不可能吃那麼多豆子/穀物/等等！</string>
-    <string name="faq_scaling_response">根據個人需求變化是可以的。 Daily Dozen 是一本勵志指南。 盡可能多地攝入這些健康的植物性食物。 如果您剛開始大量食用豆類（或穀物、蔬菜等！），您可能需要從少量開始，然後慢慢增加數量，以便讓您的微生物組有機會進行調整。 您也可以發揮創意：例如，在早餐燕麥片中加入一些豆類。 如果你用漿果、亞麻籽和堅果裝滿它，你甚至不會注意到豆子。 您也可以將豆子搗碎成三明治塗抹醬，或製作我的 [BROL](https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils)——大麥、黑麥、去殼燕麥和 小扁豆——我用它作為許多餐食的基礎，是一種簡單的方法來獲取各種全穀物和豆類。</string>
-    <string name="faq_supplements_question">我認為 Greger 博士建議服用維生素 D 和 DHA 補充劑。 為什麼不包括它們？</string>
-    <string name="faq_supplements_response">我們更新了 Daily Dozen 應用程序以僅反映必需的補充劑。 例如，只有陽光照射不足的人才需要維生素 D。 我們的目標是與您分享科學知識，以便您做出明智的決定。 您可以在 [最佳營養](https://nutritionfacts.org/optimum-nutrient-recommendations) 頁面上查看我的所有建議。</string>
+    <string name="faq_mother_response">懷孕或哺乳的人與未懷孕或哺乳的人有不同的熱量和營養需求。 提醒一下，每日12清單不是膳食計劃，也不應該是一天內食用的唯一食物。 懷孕或哺乳的人應該諮詢她們的保健醫生或註冊營養師，以獲得滿足其特定熱量需求和營養需求的幫助。</string>
+    <string name="faq_scaling_question">我不可能吃那麼多豆子/穀物/其他食物！</string>
+    <string name="faq_scaling_response">根據個人需求變化是可以的。每日12清單是一個勵志指南。盡可能多地攝入這些健康的植物性食物。 如果您剛開始大量食用豆類（或穀物、蔬菜等），您可能需要從少量開始，然後慢慢增加數量，以便讓您的微生物組有機會進行調整。您也可以發揮創意：例如，在早餐燕麥片中加入一些豆類。如果您裝了滿滿的漿果、亞麻籽和堅果，您甚至不會注意到豆子的存在。您也可以將豆子搗碎成三明治塗抹醬，或製作我的BROL（https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils）——大麥、黑麥、去殼燕麥和小扁豆——我用它作為許多餐食的基礎，是一種簡單的方法來獲取各種全穀物和豆類。</string>
+    <string name="faq_supplements_question">我以為葛雷格醫師建議服用維生素D和DHA補充劑，為什麼清單裡不包括這些呢？</string>
+    <string name="faq_supplements_response">我們更新了每日12清單應用程序，僅反映必需的補充劑。例如，只有陽光照射不足的人才需要維生素D。我們的目標是與您分享科學知識，以便您做出明智的決定。您可以在「最佳營養」（https://nutritionfacts.org/optimum-nutrient-recommendations）頁面上查看我的所有建議。</string>
     <string name="faq_title">常見問題</string>
-    <string name="weight">重量</string>
+    <string name="weight">體重</string>
     <string name="tweak_group_meal">每頓飯</string>
     <string name="tweak_group_daily">每天</string>
     <string name="tweak_group_dailydoses">每天服用</string>
     <string name="tweak_group_nightly">每天晚上</string>
     <string name="about_tweak">關於調整</string>
     <string-array name="about_text_lines">
-        <item>這個應用程式是由John Slavick所製作的。</item>
+        <item>本應用程式是由John Slavick所製作的</item>
         <item />
-        <item>使用了以下免費程式庫: ActiveAndroid, android-iconify, EventBus, LikeAnimation, and MPAndroidChart.</item>
+        <item>使用了以下免費程式庫：ActiveAndroid、android-iconify、EventBus、LikeAnimation和MPAndroidChart。</item>
         <item />
-        <item>特別感謝製作前一代應用程式志願者所做的貢獻: Chan Kruse, Allan Portera, and Sangeeta Kumar.</item>
+        <item>特別感謝製作前一代應用程式志願者的貢獻：Chan Kruse、Allan Portera和Sangeeta Kumar。</item>
     </string-array>
     <string-array name="backup_instructions_lines">
-        <item>按照以下步驟在《每日十二要素》應用程式中還原此備份： </item>
+        <item>按照以下步驟在《每日12清單》應用程序中還原此備份：</item>
         <item />
-        <item>1. 您必須在Android手機上安裝《每日十二要素》應用程式。您可以從這裡下載： https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item>1. 您必須在安卓手機上安裝《每日12清單》應用程序。您可以從這裡下載： https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
         <item />
         <item>2. 點擊附加在此電子郵件的備份檔案。</item>
         <item />
-        <item>3. 選擇以《每日十二要素》應用程式開啟。</item>
+        <item>3. 選擇以《每日12清單》應用程式開啟</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
-        <item>天</item>
+        <item>日</item>
         <item>月</item>
         <item>年</item>
     </string-array>
@@ -228,7 +228,7 @@
         <item>莿莓</item>
         <item>黑莓</item>
         <item>藍莓</item>
-        <item>櫻桃（甜的或酸的）</item>
+        <item>櫻桃（甜或酸）</item>
         <item>康科德葡萄</item>
         <item>蔓越莓</item>
         <item>枸杞</item>
@@ -244,10 +244,10 @@
         <item>香蕉</item>
         <item>哈密瓜</item>
         <item>小柑橘</item>
-        <item>海棗</item>
-        <item>無花果乾</item>
+        <item>椰棗</item>
+        <item>無花果</item>
         <item>葡萄柚</item>
-        <item>蜜瓜</item>
+        <item>香瓜</item>
         <item>奇異果</item>
         <item>檸檬</item>
         <item>萊姆</item>
@@ -258,7 +258,7 @@
         <item>木瓜</item>
         <item>百香果</item>
         <item>桃子</item>
-        <item>梨子</item>
+        <item>梨</item>
         <item>鳳梨</item>
         <item>李子（尤其是黑李）</item>
         <item>杏李</item>
@@ -270,16 +270,16 @@
     <string-array name="food_info_types_cruciferous_vegetables">
         <item>芝麻葉</item>
         <item>青江菜</item>
-        <item>綠色花椰菜 (寶塔花菜)</item>
+        <item>綠色花椰菜（寶塔花菜）</item>
         <item>球芽甘藍</item>
-        <item>甘藍 (綠, 紫, 野甘藍)</item>
-        <item>花椰菜(白色，綠色，橙色，紫色)</item>
+        <item>甘藍（綠，紫，野甘藍）</item>
+        <item>花椰菜（白色，綠色，橙色，紫色）</item>
         <item>芥藍菜葉</item>
         <item>辣根</item>
         <item>羽衣甘藍（黑色、綠色與紅色品種）</item>
-        <item>大頭菜(綠色，紫色)</item>
+        <item>大頭菜（綠色，紫色）</item>
         <item>芥菜</item>
-        <item>蘿蔔</item>
+        <item>白蘿蔔</item>
         <item>蕪菁葉</item>
         <item>西洋菜</item>
     </string-array>
@@ -312,7 +312,7 @@
         <item>甜脆豌豆</item>
         <item>南瓜屬（包括花生南瓜、夏南瓜與金線南瓜等品種）</item>
         <item>地瓜／番薯</item>
-        <item>番茄</item>
+        <item>蕃茄</item>
         <item>櫛瓜</item>
     </string-array>
     <string-array name="food_info_types_flaxseeds">
@@ -324,9 +324,9 @@
         <item>巴西堅果</item>
         <item>腰果</item>
         <item>奇亞籽</item>
-        <item>榛果／榛子</item>
-        <item>大麻籽</item>
-        <item>夏威夷火山豆</item>
+        <item>榛果</item>
+        <item>火麻仁</item>
+        <item>夏威夷豆</item>
         <item>花生</item>
         <item>胡桃</item>
         <item>開心果</item>
@@ -345,8 +345,8 @@
         <item>芫荽</item>
         <item>肉桂</item>
         <item>丁香</item>
-        <item>芫荽籽</item>
-        <item>小茴香</item>
+        <item>香菜</item>
+        <item>孜然</item>
         <item>咖哩粉</item>
         <item>蒔蘿</item>
         <item>葫蘆巴</item>
@@ -358,7 +358,7 @@
         <item>芥末粉</item>
         <item>肉豆蔻</item>
         <item>牛至</item>
-        <item>匈牙利煙燻紅椒粉</item>
+        <item>煙燻紅椒粉</item>
         <item>荷蘭芹</item>
         <item>胡椒</item>
         <item>薄荷</item>
@@ -400,7 +400,7 @@
     </string-array>
     <string-array name="food_info_types_exercise">
         <item>騎單車</item>
-        <item>劃獨木舟</item>
+        <item>滑獨木舟</item>
         <item>跳舞</item>
         <item>躲避球</item>
         <item>下坡滑雪</item>
@@ -410,7 +410,7 @@
         <item>溜冰</item>
         <item>溜直排輪</item>
         <item>雜耍</item>
-        <item>跳彈簧牀</item>
+        <item>跳彈簧床</item>
         <item>踩腳踏船</item>
         <item>玩飛盤</item>
         <item>四輪溜冰</item>
@@ -422,12 +422,12 @@
         <item>休閒式游泳</item>
         <item>網球（雙打）</item>
         <item>立泳</item>
-        <item>健走(每小時4英里)</item>
+        <item>健走（每小時6公里）</item>
         <item>水中有氧</item>
         <item>滑水</item>
         <item>整理庭院</item>
         <item>瑜珈</item>
-        <item>揹包旅行</item>
+        <item>背包旅行</item>
         <item>打籃球</item>
         <item>單車爬坡</item>
         <item>循環重量訓練</item>
@@ -441,7 +441,7 @@
         <item>伏地挺身</item>
         <item>引體向上</item>
         <item>短柄牆球</item>
-        <item>攀巖</item>
+        <item>攀岩</item>
         <item>橄欖球</item>
         <item>跑步</item>
         <item>潛水</item>
@@ -450,31 +450,31 @@
         <item>競速滑冰</item>
         <item>壁球</item>
         <item>階梯有氧</item>
-        <item>來迴游泳</item>
-        <item>快走上坡</item>
+        <item>來回游泳</item>
+        <item>上坡快走</item>
         <item>水中慢跑</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_imperial">
-        <item>¼ 杯鷹嘴豆泥</item>
-        <item>½ 杯煮熟的豆子、豌豆或扁豆</item>
-        <item>½ 杯豆腐或豆豉</item>
-        <item>1 杯新鮮豌豆或荷蘭豆</item>
-        <item>1杯新鮮發芽豆（扁豆、綠豆）</item>
+        <item>¼杯鷹嘴豆泥</item>
+        <item>½杯煮熟的豆子、豌豆或扁豆</item>
+        <item>½杯豆腐或天貝</item>
+        <item>1杯新鮮豌豆或荷蘭豆</item>
+        <item>1杯新鮮萌芽豆（扁豆、綠豆）</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 克鷹嘴豆泥</item>
-        <item>90 克煮熟的豆子、豌豆或扁豆</item>
-        <item>100 克豆腐或豆豉</item>
-        <item>130 克新鮮豌豆或荷蘭豆</item>
-        <item>100 克新鮮發芽豆（扁豆、綠豆）</item>
+        <item>60克鷹嘴豆或其他豆泥</item>
+        <item>90克煮熟的豆子、豌豆或扁豆</item>
+        <item>100克豆腐或豆豉</item>
+        <item>130克新鮮豌豆或荷蘭豆</item>
+        <item>100克新鮮萌芽豆（扁豆、綠豆）</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
-        <item>½杯新鮮或冷凍莓果</item>
-        <item>¼杯莓果乾</item>
+        <item>½杯新鮮或冷凍漿果</item>
+        <item>¼杯漿果乾</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>½杯新鮮或冷凍莓果</item>
-        <item>¼杯莓果乾</item>
+        <item>60克新鮮或冷凍漿果</item>
+        <item>40克漿果乾</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
         <item>1顆中型水果</item>
@@ -483,17 +483,17 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1顆中型水果</item>
-        <item>1杯水果丁</item>
-        <item>¼杯果乾</item>
+        <item>120克水果丁</item>
+        <item>40克果乾</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½杯切碎的白花椰菜</item>
+        <item>½杯切碎的</item>
         <item>½杯孢子甘藍苗</item>
         <item>¼杯花椰菜苗</item>
         <item>一大匙辣根</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>½杯切碎的白花椰菜</item>
+        <item>30至80克切碎的</item>
         <item>80克孢子甘藍苗</item>
         <item>15克花椰菜苗</item>
         <item>一大匙辣根</item>
@@ -503,8 +503,8 @@
         <item>½杯煮過的蔬菜</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_metric">
-        <item>1杯生菜</item>
-        <item>½杯煮過的蔬菜</item>
+        <item>60克生菜</item>
+        <item>90克煮過的蔬菜</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
         <item>1杯生葉菜</item>
@@ -513,52 +513,52 @@
         <item>¼杯乾燥菇類</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
-        <item>1杯生葉菜</item>
-        <item>½杯生或熟的非葉菜</item>
-        <item>½杯蔬菜汁</item>
-        <item>¼杯乾燥菇類</item>
+        <item>60克生葉菜</item>
+        <item>50克生或熟的非葉菜</item>
+        <item>125毫升蔬菜汁</item>
+        <item>7克乾燥菇類</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
-        <item>1大匙研磨的亞麻籽</item>
+        <item>1大匙磨碎的亞麻籽</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_metric">
-        <item>1大匙研磨的亞麻籽</item>
+        <item>1大匙磨碎的亞麻籽</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_imperial">
         <item>¼杯堅果或種籽</item>
         <item>2大匙果仁醬或種籽醬</item>
     </string-array>
     <string-array name="food_info_serving_sizes_nuts_metric">
-        <item>¼杯堅果或種籽</item>
+        <item>30克堅果或種籽</item>
         <item>2大匙果仁醬或種籽醬</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_imperial">
         <item>¼茶匙的薑黃</item>
-        <item>任何其他你所喜歡的（無鹽）香草和香料</item>
+        <item>任何其他您所喜歡的（無鹽）香草和香料</item>
     </string-array>
     <string-array name="food_info_serving_sizes_spices_metric">
         <item>¼茶匙的薑黃</item>
-        <item>任何其他你所喜歡的（無鹽）香草和香料</item>
+        <item>任何其他您所喜歡的（無鹽）香草和香料</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½杯熱麥片或煮熟的穀物、義大利麵或玉米粒</item>
         <item>1杯冷麥片</item>
         <item>1份墨西哥薄餅或1片麵包</item>
         <item>½個貝果或英式鬆餅</item>
-        <item>3杯爆好的爆米花</item>
+        <item>3杯爆米花</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>½杯熱麥片或煮熟的穀物、義大利麵或玉米粒</item>
-        <item>1杯冷麥片</item>
+        <item>100克熱麥片或煮熟的穀物、義大利麵或玉米粒</item>
+        <item>50克冷麥片</item>
         <item>1份墨西哥薄餅或1片麵包</item>
         <item>½個貝果或英式鬆餅</item>
-        <item>3杯爆好的爆米花</item>
+        <item>30克爆米花</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
         <item>一杯（12盎司）</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_metric">
-        <item>一杯（12盎司）</item>
+        <item>一杯（350毫升）</item>
     </string-array>
     <string-array name="food_info_serving_sizes_exercise_imperial">
         <item>90分鐘的中等強度運動</item>
