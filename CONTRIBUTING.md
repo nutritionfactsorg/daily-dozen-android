@@ -160,5 +160,5 @@ The footer should reference GitHub issues that this commit **Closes**.
 [issues]: https://github.com/nutritionfactsorg/daily-dozen-android/issues "Daily Dozen for Android Issues"
 [issue]: https://github.com/nutritionfactsorg/daily-dozen-android/issues/new "Create an Issue"
 [pr]: https://github.com/nutritionfactsorg/daily-dozen-android/pulls "Pull Requests"
-[contribute-os]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github "How to Contribute to an Open Source Project on GitHub"
+[contribute-os]: https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github "How to Contribute to an Open Source Project on GitHub"
 [cremail]: mailto:christi@nutritionfacts.org?subject=Slack%20#Development%20Invitation
