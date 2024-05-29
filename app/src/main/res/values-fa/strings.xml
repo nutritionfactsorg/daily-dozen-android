@@ -327,13 +327,13 @@
         <item>فندق</item>
         <item>شاهدانه</item>
         <item>فندقِ خامه‌ای/فندقِ ماکادامیا/فندقِ استرالیایی</item>
+        <item>بادام‌زمینی</item>
         <item>گردوی آمریکایی/پِکان</item>
         <item>پسته</item>
         <item>تخمه‌کدو</item>
         <item>کنجد</item>
         <item>تخمه‌آفتابگردان</item>
         <item>گردو</item>
-        <item>Walnuts</item>
     </string-array>
     <string-array name="food_info_types_spices">
         <item>فلفلِ رنگی</item>
