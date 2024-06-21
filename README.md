@@ -8,7 +8,7 @@ About
 
 In the years of research required to create the more than a thousand evidence-based videos on [NutritionFacts.org][nutritionfacts.org], Michael Greger, MD, FACLM, has arrived at a list of what he considers the most important foods to include in a healthy daily diet. Yes, greens are good for you, but how much should we try to eat each day?
 
-Dr. Greger’s Daily Dozen details the healthiest foods and how many servings of each we should try to check off every day. He explains his rationale in his book [How Not to Die][book]. All his proceeds from his books, DVDs, and speaking engagements is all donated to charity.
+Dr. Greger’s Daily Dozen details the healthiest foods and how many servings of each we should try to check off every day. He explains his rationale in his book [How Not to Die][book]. All proceeds from his books, DVDs, and speaking engagements are donated to charity.
 
 
 Daily Dozen on Google Play
