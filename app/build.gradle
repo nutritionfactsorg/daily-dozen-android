@@ -58,6 +58,7 @@ android {
             dimension "store"
         }
     }
+    namespace 'org.nutritionfacts.dailydozen'
 }
 
 dependencies {
