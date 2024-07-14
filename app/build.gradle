@@ -20,8 +20,6 @@ configurations {
 }
 
 android {
-    compileSdkVersion 33
-
     buildFeatures.viewBinding = true
 
     compileOptions {
@@ -32,7 +30,8 @@ android {
         applicationId "org.nutritionfacts.dailydozen"
         minSdkVersion 19
         multiDexEnabled true
-        targetSdkVersion 33
+        compileSdk 34
+        targetSdkVersion 34
         vectorDrawables.useSupportLibrary = true
         versionCode 89
         versionName "25"
