@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<resources>
+    <string name="app_name">Дюжина доктора Грегера</string>
+    <string name="beans">Боби</string>
+    <string name="berries">Ягоди</string>
+    <string name="other_fruits">Інші фрукти</string>
+    <string name="cruciferous_vegetables">Хрестоцвіті овочі</string>
+    <string name="greens">Зелень</string>
+    <string name="other_vegetables">Інші овочі</string>
+    <string name="flaxseeds">Насіння льону</string>
+    <string name="nuts">Горіхи та насіння</string>
+    <string name="spices">Трави та спеції</string>
+    <string name="whole_grains">Цільні зерна</string>
+    <string name="beverages">Напої</string>
+    <string name="exercise">Фізична активність</string>
+    <string name="vitamin_b12">Вітамін В12</string>
+    <string name="serving_sizes">Розміри порцій (Пропоновані)</string>
+    <string name="types">Види</string>
+    <string name="history">Історія</string>
+    <string name="servings_some">Деякі порції</string>
+    <string name="servings_all">Всі порції</string>
+    <string name="servings">Порції</string>
+    <string name="out_of">з</string>
+    <string name="moving_average">Середня кількість руху</string>
+    <string name="about">Про</string>
+    <string name="about_this_app">Про цей застосунок</string>
+    <string name="about_translators">Особлива подяка нашим перекладачам-волонтерам: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="latest_videos">Останні відео</string>
+    <string name="donate">Зробити пожертву</string>
+    <string name="subscribe">Підписатись</string>
+    <string name="open_source">Відкрите програмне забезпечення</string>
+    <string name="permission_needed_to_write_storage">Неможливо створити резервну копію без дозволу на запис у сховище</string>
+    <string name="backup_failed">Помилка резервного копіювання</string>
+    <string name="restore_failed">Збій відновлення з резервної копії</string>
+    <string name="backup_success">Резервна копія була створена успішно</string>
+    <string name="restore_success">Відновлення з резервної копії пройшло успішно</string>
+    <string name="restore_confirm_title">Відновити резервну копію</string>
+    <string name="restore_confirm_message">Всі існуючі дані будуть видалені перед відновленням резервної копії.</string>
+    <string name="yes">Так</string>
+    <string name="no">Ні</string>
+    <string name="backup">Резервна копія</string>
+    <string name="food_info">Інформація про їжу</string>
+    <string name="food_history">Історія їжі</string>
+    <string name="daily_servings_history">Щоденна історія порцій</string>
+    <string name="no_servings_recorded">Ти ще не ввів жодної порцій</string>
+    <string name="task_backup_title">Створення резервної копії</string>
+    <string name="task_restore_title">Відновлення</string>
+    <string name="task_calculating_streaks_title">Оцінка прогресу</string>
+    <string name="back_to_today">До сьогодні</string>
+    <string name="debug">Відладка</string>
+    <string name="debug_clear_data">Очистити всі дані</string>
+    <string name="debug_clear_data_message">Це видалить всі попередньо внесені порції. Бажаєш продовжити?</string>
+    <string name="OK">ОК</string>
+    <string name="dialog_streaks_title">Додана нова функція, що відслідковує прогрес</string>
+    <string name="dialog_streaks_message">Ваша база даних зараз буде відновлена до версії, що підтримує нові функції</string>
+    <string name="dialog_no_email_apps_title">Не було знайдено жодного застосунку для роботи з поштою</string>
+    <string name="dialog_no_email_apps_message">Для резервного копіювання даних потрібно встановити програму електронної пошти, щоб ти міг відправити файл резервної копії собі електронною поштою. Установи програму електронної пошти та повтори спробу.</string>
+    <string name="debug_generate_random_data">Створити рендомні дані</string>
+    <string name="debug_generate_full_data">Створити всі дані</string>
+    <string name="debug_generate_data_message">Всі існуючі дані будуть змінені. Ти хочеш продовжити?</string>
+    <string name="task_generating_random_data">Генерація випадкових даних</string>
+    <string name="task_loading_servings_history_title">Завантаження історії порцій</string>
+    <string name="time_scale">Шкала часу</string>
+    <string name="history_to_generate">Завантажити історію</string>
+    <string name="welcome_to_my_daily_dozen">Ласкаво просимо до “Дюжини доктора Грегера”</string>
+    <string name="activity_welcome_text">Використовуй цей застосунок щодня, щоб відслідковувати продукти харчування та слідувати рекомендаціям для міцного здоров\'я та довголіття із моїх книг “Як не померти передчасно” та “How Not to diet (Як не сидіти на дієті)”</string>
+    <string name="dialog_ask_user_to_rate_app_title">Тобі подобається цей застосунок?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Будь ласка, залиш відгук про наш застосунок в Play Store</string>
+    <string name="rate_now">Залишити відгук</string>
+    <string name="not_now">Не зараз</string>
+    <string name="format_version">Версія %s</string>
+    <string name="format_num_days">%d днів</string>
+    <string name="daily_reminder_title">Нагадування від  Дюжини доктора Грегера</string>
+    <string name="daily_reminder_text">Оновити порції за сьогодні</string>
+    <string name="daily_reminder_settings">Налаштування щоденних нагадувань</string>
+    <string name="enable_daily_reminder">Включити щоденні нагадування</string>
+    <string name="remind_me_at">Нагадати мені о:</string>
+    <string name="videos">Відео</string>
+    <string name="units">Одиниці вимірювання</string>
+    <string name="imperial">Англійська система мір</string>
+    <string name="metric">Метрична система мір</string>
+    <string name="error_cannot_handle_url">Неможливо відкрити посилання. Будь ласка, встановіть браузер</string>
+    <string name="channel_reminders_name">Нагадування</string>
+    <string name="twenty_one_tweaks">21 Хитрість</string>
+    <string name="tweaks">Хитрощі</string>
+    <string name="daily_tweaks_history">Щоденна історія 21 Хитрість</string>
+    <string name="weight_history">Історія ваги</string>
+    <string name="no_weights_recorded">Ти ще не ввів історію ваги</string>
+    <string name="task_loading_weights_history_title">Завантаження історії ваги</string>
+    <string name="morning">Ранок</string>
+    <string name="evening">Вечір</string>
+    <string name="meal_water">Пий воду перед їжею</string>
+    <string name="meal_negcal">Користуйся правилом “Негативних калорій”</string>
+    <string name="meal_vinegar">Додавай оцет (2 ч.л. з кожним прийомом їжі)</string>
+    <string name="meal_undistracted">Не відволікайся під час їжі</string>
+    <string name="meal_twentyminutes">Слідуй правилу 20 хв</string>
+    <string name="daily_blackcumin">Чорний кмин (¼ чайної ложки)</string>
+    <string name="daily_garlic">Порошок часнику (¼ чайної ложки)</string>
+    <string name="daily_ginger">Мелений імбир (1 чайна ложка) або каєнський перець (½ чайної ложки)</string>
+    <string name="daily_nutriyeast">Харчові дріжджі (2 чайні ложки)</string>
+    <string name="daily_cumin">Кмин (½ чайної ложки на обід і вечерю)</string>
+    <string name="daily_greentea">Зелений чай (3 чашки)</string>
+    <string name="daily_hydrate">Залишайся гідратованим</string>
+    <string name="daily_deflourdiet">Прибери борошно зі свого раціону</string>
+    <string name="daily_frontload">Вживай більшу кількість калорій в першій половині дня</string>
+    <string name="daily_timerestrict">Обмежуй кількість годин протягом яких вживаєш їжу</string>
+    <string name="exercise_timing">Оптимізуй час виконання фізичних навантажень</string>
+    <string name="weigh_twice">Зважуйся двічі на день</string>
+    <string name="complete_intentions">Втілюй свої наміри</string>
+    <string name="nightly_fast">Останній прийом їжі має бути о 7 вечора</string>
+    <string name="nightly_sleep">Висипайся</string>
+    <string name="nightly_trendelenburg">Експериментуй з частковим положенням Тренделенбурга</string>
+    <string name="debug_generate_weight_data">Створити дані про вагу</string>
+    <string name="average_weight_on_day">Середня вага за день</string>
+    <string name="meal_water_short">Пий воду перед їжею</string>
+    <string name="meal_negcal_short">Користуйся правилом “Негативних калорій”</string>
+    <string name="meal_vinegar_short">Додавай оцет (2 ч.л. з кожним прийомом їжі)</string>
+    <string name="meal_undistracted_short">Не відволікайся під час їжі</string>
+    <string name="meal_twentyminutes_short">Слідуй правилу 20 хв</string>
+    <string name="daily_blackcumin_short">Чорний кмин (Nigella sativa) (¼ чайної ложки)</string>
+    <string name="daily_garlic_short">Порошок часнику (¼ чайної ложки)</string>
+    <string name="daily_ginger_short">Мелений імбир (1 чайна ложка) або каєнський перець (½ чайної ложки)</string>
+    <string name="daily_nutriyeast_short">Харчові дріжджі (2 чайні ложки)</string>
+    <string name="daily_cumin_short">Кмин (½ чайної ложки на обід і вечерю)</string>
+    <string name="daily_greentea_short">Зелений чай (3 чашки)</string>
+    <string name="daily_hydrate_short">Залишайся гідратованим</string>
+    <string name="daily_deflourdiet_short">Прибери борошно зі свого раціону</string>
+    <string name="daily_frontload_short">Вживай більшу кількість калорій в першій половині дня</string>
+    <string name="daily_timerestrict_short">Обмежуй кількість годин протягом яких вживаєш їжу</string>
+    <string name="exercise_timing_short">Оптимізуй час виконання фізичних навантажень</string>
+    <string name="weigh_twice_short">Зважуйся двічі на день</string>
+    <string name="complete_intentions_short">Втілюй свої наміри</string>
+    <string name="nightly_fast_short">Останній прийом їжі має бути о 7 вечора</string>
+    <string name="nightly_sleep_short">Висипайся</string>
+    <string name="nightly_trendelenburg_short">Експериментуй з частковим положенням Тренделенбурга</string>
+    <string name="meal_water_text">Випивай перед кожним прийомом їжі дві чашки прохолодної або холодної неароматизованої води, що прискорить метаболізм та частково наситить, зменшуючи з\'їдену кількість</string>
+    <string name="meal_negcal_text">Починай кожен прийом їжі з яблука, супу або салату, що містить менше ста калорій на чашку.</string>
+    <string name="meal_vinegar_text">Ніколи не пий чистий оцет. Замість цього присмачуй страви або заправляй гарнір до салату будь-яким солодким і пікантним оцтом. Якщо ти хочеш випити оцет, обов’язково розмішай його в склянці води, а потім прополощи рот водою, щоб захистити зубну емаль.</string>
+    <string name="meal_undistracted_text">Не їж під час перегляду телевізора або гри на телефоні. Постав галочку за кожен прийом їжі, під час якого ти не відволікався/лась на посторонні речі.</string>
+    <string name="meal_twentyminutes_text">Десятки досліджень показали, що незалежно від того, як ми збільшуємо час прийому їжі, це допомагає знизити кількість спожитих калорій. Це можна зробити завдяки збільшенню в’язкості консистенсії їжі чи кількості жувань або ж зменшити розміри укусу та швидкості їжі. Тому збільшуй тривалість прийому їжі принаймні до двадцяти хвилин, щоб твої природні сигнали насичення проявили повну силу. Як? Обирай продукти, що потребують більше часу для жування. Обирай більш об’ємну та твердішу їжу, яка потребує ретельного пережовування і вживай її невеликими шматочками.</string>
+    <string name="daily_blackcumin_text">Як зазначалося в розділі «Придушення апетиту», систематичний огляд і мета-аналіз рандомізованих контрольованих досліджень зниження ваги показали, що приблизно чверть чайної ложки порошку чорного кмину щодня знижує індекс маси тіла протягом двох місяців. Зверніть увагу, що чорний кмин відрізняється від звичайного кмину, для якого дозування інше.</string>
+    <string name="daily_garlic_text">Рандомізовані, подвійні сліпі, плацебо-контрольовані дослідження виявили, що всього чверть чайної ложки порошку часника щодня може зменшити жирові відкладення і вартує всього два центи на день.</string>
+    <string name="daily_ginger_text">Рандомізовані контрольовані дослідження виявили, що від ¼ до 1½ чайної ложки меленого імбиру на день значно зменшує вагу тіла і коштує копійки. Можна просто розмішати мелену спецію в чашці гарячої води. Примітка: імбир може бути ефективнішим вранці, ніж увечері. Чай масала– це смачний спосіб поєднати зелений чай і імбир в одному напої. Крім того, для активації бурої жирової тканини, можна додати у свій щоденний раціон один сирий перець халапеньо або половину чайної ложки порошку червоного перцю (або подрібнених пластівців червоного перцю). Щоб зменшити гостроту, можна дуже тонко або дрібно нарізати халапеньо або додати червоний перець у суп чи овочевий смузі, якими я ділився в одному зі своїх кулінарних відео на NutritionFacts.org .</string>
+    <string name="daily_nutriyeast_text">Дві чайні ложки пекарських, пивних або харчових дріжджів містять приблизно стільки ж бета-1,3/1,6 глюканів, що і рандомізовані, подвійні сліпі, плацебо-контрольовані клінічні дослідження, в яких спостерігали зниження ваги.</string>
+    <string name="daily_cumin_text">Жінки із зайвою вагою, у рандомізованому дослідженні, які додавали половину чайної ложки кмину на обід і вечерю, скинули на 2 кг більше ваши і втратили на 2.5 см більше в талії ніж контрольована група. Існують також докази на підтримку використання спеції шафрану, але щіпка на день коштуватиме долар, тоді як чайна ложка кмину коштує менше десяти центів.</string>
+    <string name="daily_greentea_text">Випивай по три чашки на день між прийомами їжі (принаймні через годину після їжі, щоб не перешкоджати засвоєнню заліза). Під час їжі пий воду, чорну каву або чай з гібіскусу, змішаний 6 до 1 з лимонною вербеною, але ніколи не перевищуй три чашки рідини на годину. Не вживай велику кількість кофеїну за шість годин до сну. Найкраще пити чай без підсолоджувача, але якщо ти зазвичай підсолоджуєш чай медом або цукром, спробуй натомість сироп якону.</string>
+    <string name="daily_hydrate_text">Постав галочку, якщо твоя сеча ніколи не виглядає темнішою ніж блідо-жовтий колір.\n\nЗверни увагу: якщо ти їсиш продукти, збагачені рибофлавіном (наприклад, харчові дріжджі), тоді випивай дев’ять чашок несолодких напоїв на день для жінок (що покриється слідуванням рекомендацій щодо зеленого чаю та води перед прийомом їжі) або тринадцять чашок на день для чоловіків.\n\nЯкщо у тебе є проблеми з серцем або нирками, не збільшуй кількість споживання рідини, попередньо не порадившись зі своїм лікарем. \n\nПам’ятай, що в дієтичній газованій воді може й немає калорій, але її вживання матиме наслідки для здоро\'я, як ми дізналися в розділі книги про Продукти з низький вмістом цукру.</string>
+    <string name="daily_deflourdiet_text">Постав галочку, якщо всі твої порції зернових продуктів є з цільного зерна. Подрібнення навіть 100% цільного зерна позбавляє наш мікробіом крохмалю, який міг би потрапити до товстої кишки і слугувати їжею для корисних бактерій.</string>
+    <string name="daily_frontload_text">З точки зору нашого обміну речовин, є перевага у вживанні більшої кількості калорій саме на початку дня, тому зроби сніданок (в ідеалі) або обід своїм найбільшим прийомом їжі за принципом “Під час сніданку їж, як король, в обід ― як принц, вечеряй ― як жебрак”.</string>
+    <string name="daily_timerestrict_text">Обмеж вживання їжі обраним тобою проміжком часу, тривалістю до дванадцяти годин, якого ти зможеш постійно дотримуватися сім днів на тиждень. Враховуючи циркадні переваги меншого вечірнього споживання їжі, вікно має закінчуватися до 19:00.</string>
+    <string name="exercise_timing_text">Рекомендація Daily Dozen щодо оптимальної тривалості вправ для довголіття — це дев’яносто хвилин помірної активності на день, що також є оптимальною тривалістю для схуднення. Можна виконувати вправи у будь-який час, і чим більше, тим краще. Тренування натще може мати переваги, принаймні через шість годин після останнього прийому їжі. Як правило, це до сніданку, але якщо правильно розрахувати час, то можна займатися спортом опівдні перед пізнім обідом або, якщо обід з’їдено досить рано, перед вечерею. Проте цей графік не підходить для тих, хто страждає на цукровий діабет. Натомість хворі на цукровий діабет і переддіабет повинні починати тренуватися через тридцять хвилин після початку їжі, а в ідеалі – принаймні через годину, щоб повністю охопити пік цукру в крові. Якщо обирати один прийом їжі після якого найкраще виконувати фізичні навантаження, то це вечеря, тому що циркадний ритм контролю рівня цукру в крові слабшає протягом дня. Однак в ідеалі сніданок має бути найбільшим прийомом їжі за день, а після цього — або, що ще краще, після кожного прийому їжі — займатися спортом.</string>
+    <string name="weigh_twice_text">Регулярне самостійне зважування вважається надзвичайно важливим для довгострокового контролю ваги, але немає достатньої кількості доказів, щоб визначити найкращу частоту зважування. Моя рекомендація ґрунтується на одному дослідженні, яке виявило, що двічі на день — після пробудження та безпосередньо перед сном — видається кращим, ніж один раз на день (приблизно три замість одного кілограму ваги за дванадцять тижнів).</string>
+    <string name="complete_intentions_text">Кожні два місяця створюй три нових наміри—«якщо ..., то ...» план виконання певних дій в конкретному порядку —і провіряй щодня по мірі їх виконання.</string>
+    <string name="nightly_fast_text">Через наші циркадні ритми їжа, з’їдена вночі, сприяє більшому набору ваги, ніж та сама їжа, з’їдена раніше вдень, тому голодуйте щовечора протягом принаймні дванадцяти годин, починаючи з 19:00. Чим менше калорій після заходу сонця, тим краще.</string>
+    <string name="nightly_sleep_text">Постав галочку, якщо ти регулярно спиш принаймні 7 годин</string>
+    <string name="nightly_trendelenburg_text">Спробуй проводити принаймні чотири години вночі лежачи під нахилом голови вниз на шість градусів, піднявши ліжко біля підніжжя на 20 см. Будь надзвичайно обережним, коли встаєш з ліжка, оскільки це спричиняє ортостатичну непереносимість у більшості людей, навіть якщо ти молодий/а та здоровий/а. Це означає, що якщо ти встаєш надто швидко, у тебе може запаморочитись в голові або ти можеш відчути слабкість, навіть знепритомніти та впасти. Тому вставай повільно. Дві чашки холодної води за тридцять хвилин до підйому також може допомогти запобігти цьому потенційно небезпечному побічному ефекту.\n\n*ВАЖЛИВО: ні в якому разі не пробуй це вдома, якщо у тебе є проблеми з серцем або легенями, кислотний рефлюкс або проблеми з мозком (наприклад, травма голови) або очима (теж не можна за наявності сімейної історії глаукоми). Також не пробуй це, доки не запитаєш свого лікаря, чи безпечно для тебе спати у положенні часткового Тренделенбурга.*</string>
+    <string name="faq_adapt_question">Дюжина доктора Грегера містить забагато/замало їжі для мене! Можна її адаптувати?</string>
+    <string name="faq_adapt_response">Так, Дюжина доктора Грегера це просто довідник найкорисніших продуктів, що ми намагаємося включити у свій щоденний раціон. Вона не є планом із харчування. Намагайся їсти різноманітну цільну рослинну їжу та адаптуй Дюжину доктора Грегера до кількості, яка підходить саме тобі. </string>
+    <string name="faq_age_question">Чи адаптована вона для дітей та підлітків?</string>
+    <string name="faq_age_response.0">Діти та підлітки мають різні потреби в калоріях протягом життєвого циклу. Ці потреби змінюються, щоб підтримувати ріст та розвиток на кожному етапі.  </string>
+    <string name="faq_age_response.1">Дюжина доктора Грегера була розроблена як посібник, що допоможе людям включати деякі з найкорисніших продуктів у свій щоденний раціон. Хоча одна і та ж структура може використовуватися для більшості людей протягом усього життєвого циклу, кількість їжі, яку потрібно з’їсти, змінюватиметься залежно від ряду факторів, таких як вік та рівень активності. Оскільки ми не можемо надати конкретні поради щодо харчування або медичні поради для вашої дитини, яка росте, батьки повинні використовувати цей посібник таким чином, як вони вважають найкращим для своєї дитини та/або проконсультуватися з ліцензованим дієтологом чи іншим медичним працівником, щоб допомогти визначити, що найкраще в їхній конкретній ситуації.</string>
+    <string name="faq_calories_question">Скільки калорій у Дюжині доктора Грегера?</string>
+    <string name="faq_calories_response.0">Дюжина доктора Грегера в середньому містить близько 1200 калорій, але, враховуючи широкий вибір їжі в кожній категорії, цифра може коливатися від 800 до 1800. Якщо поглянути на категорію “Інші овочі”: чашка болгарського перцю має набагато нижчу калорійність, ніж чашка вареної солодкої картоплі, тому діапазон калорій залежатиме від твого вибору їжі.  У цьому і перевага Дюжини доктора Грегера — її можна адаптувати до твоїх потреб.</string>
+    <string name="faq_calories_response.1">Якщо твоя мета — схуднення, ти можеш знайти більше інформації в розділі “How Not to Diet” та його додатку “21 Хитрість”. У книзі “How Not to Diet” я зазначив: “Систематичний огляд успішних стратегій схуднення показує, що, враховуючи уповільнення метаболізму та підвищення апетиту, які супроводжують втрату ваги, для досягнення значної втрати ваги, кількість калорій, можливо, доведеться знизити до 1200 калорій на день для жінок і 1500 калорій на день для чоловіків”.</string>
+    <string name="faq_calories_response.2">З іншого боку, якщо твоя мета — набрати вагу, ти можеш зосередитися на додаванні більш калорійних продуктів, таких як батат, авокадо, горіхи та соєві продукти.</string>
+    <string name="faq_mother_question">Чи можна використовувати Дюжину доктора Грегера під час вагітності та годуванні грудьми?</string>
+    <string name="faq_mother_response">Жінки, які вагітні або годують грудьми, мають інші потреби в калоріях і харчуванні, ніж інші люди. Нагадуємо, що Дюжина доктора Грегера не є планом харчування і не повинна бути єдиною їжею, спожитою протягом дня. Жінкам, які вагітні або годують грудьми, слід проконсультуватися зі своїм лікарем або ліцензованим дієтологом, щоб отримати допомогу щодо їхніх особливих потреб у калоріях та харчуванні.</string>
+    <string name="faq_scaling_question">Я не можу з’їсти стільки бобів/зерен тощо!</string>
+    <string name="faq_scaling_response">Нічого страшного! Дюжина доктора Грегера створена для того, щоб тебе надихнути. Роби усе можливе, щоб включити якомога більше цих здорових рослинних продуктів. Якщо ти тільки починаєш їсти багато бобів (або зерен, зелені тощо!), можливо, тобі доведеться почати з меншої кількості і поступово збільшувати кількість, щоб дати своєму мікробіому можливість пристосуватися. Ти також можеш проявити креативність: наприклад, додати трохи квасолі в ранкову вівсянку. Якщо ти додасиш до неї ягід, насіння льону та горіхи, бобів і не помітиш. Ти також можеш додати квасолю в пасту для бутербродів або приготувати мій [BROL](https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils) — ячмінну, житню, вівсяну крупу та сочевиця, яку я використовую як основу для багатьох страв , що є простим способом отримати різноманітні цільні зерна з вбудованою порцією бобових.</string>
+    <string name="faq_supplements_question">Я думав, що доктор Грегер рекомендує приймати суплементи з вітаміном D та DHA. Чому вони не включені?</string>
+    <string name="faq_supplements_response">Ми оновили додаток Дюжина доктора Грегера, щоб відобразити лише необхідні суплементи. Наприклад, вітамін D потрібен лише людям, які недостатньо перебувають на сонці. Наша мета — поділитися з тобою наукою, щоб ти міг/могла приймати власні обґрунтовані рішення. Ти можеш переглянути всі мої рекомендації на сторінці [Оптимальний нутрієнт](https://nutritionfacts.org/optimum-nutrient-recommendations).</string>
+    <string name="faq_title">Поширені Запитання</string>
+    <string name="weight">Вага</string>
+    <string name="tweak_group_meal">З кожним прийомом їжі</string>
+    <string name="tweak_group_daily">Щодня</string>
+    <string name="tweak_group_dailydoses">Вживай всі продукти з Дюжини доктора Грегера</string>
+    <string name="tweak_group_nightly">Кожного вечора</string>
+    <string name="about_tweak">Про застосунок Tweak</string>
+    <string-array name="about_text_lines">
+        <item>Цей застосунок був розроблений Джоном Славіком</item>
+        <item />
+        <item>У застосунку використовуються такі бібліотеки з відкритим кодом: ActiveAndroid, android-iconify, EventBus, LikeAnimation і MPAndroidChart.</item>
+        <item />
+        <item>Особлива подяка волонтерам, що створили попередній додаток: Чана Круза, Аллана Портери та Сангіти Кумар.</item>
+    </string-array>
+    <string-array name="backup_instructions_lines">
+        <item>Виконай ці дії, щоб відновити цю резервну копію в застосунку Дюжина доктора Грегера</item>
+        <item />
+        <item>1. Застосунок Дюжина доктора Грегера потрібно встановити на твій Android-смартфон. Його можна завантажити за наступним посиланням: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Відкрий файл з резервної копії, що прикріплений до цього повідомлення</item>
+        <item />
+        <item>3. Обери Відкрити за допомогою “Дюжина доктора Грегера”</item>
+    </string-array>
+    <string-array name="servings_time_scale_choices">
+        <item>День</item>
+        <item>Місяць</item>
+        <item>Рік</item>
+    </string-array>
+    <string-array name="history_to_generate_choices">
+        <item>1 місяць</item>
+        <item>3 місяці</item>
+        <item>6 місяців</item>
+        <item>1 рік</item>
+        <item>2 роки</item>
+        <item>5 років</item>
+    </string-array>
+    <string-array name="food_info_types_beans">
+        <item>Боби чорні</item>
+        <item>Чорноокий горох</item>
+        <item>Квасоля масляна</item>
+        <item>Квасоля каннелліні</item>
+        <item>Нут/квасоля гарбанзо</item>
+        <item>Едамаме</item>
+        <item>Горох</item>
+        <item>Велика північна квасоля</item>
+        <item>Квасоля</item>
+        <item>Сочевиця (білуга, французька, червона)</item>
+        <item>Місо</item>
+        <item>Флотська квасоля</item>
+        <item>Квасоля пінто</item>
+        <item>Дрібна червона квасоля</item>
+        <item>Горох колотий (жовтий чи зелений)</item>
+        <item>Темпе</item>
+    </string-array>
+    <string-array name="food_info_types_berries">
+        <item>Ягоди асаї</item>
+        <item>Барбарис</item>
+        <item>Ожина</item>
+        <item>Чорниця</item>
+        <item>Вишня (солодка або терпка)</item>
+        <item>Виноград “Конкорд”</item>
+        <item>Журавлина</item>
+        <item>Ягоди годжі</item>
+        <item>Кумкват</item>
+        <item>Шовковиця</item>
+        <item>Малина (чорна або червона)</item>
+        <item>Полуниця</item>
+    </string-array>
+    <string-array name="food_info_types_other_fruits">
+        <item>Яблука</item>
+        <item>Абрикоси</item>
+        <item>Авокадо</item>
+        <item>Банани</item>
+        <item>Диня Канталупа</item>
+        <item>Мандарини клементини</item>
+        <item>Фініки</item>
+        <item>Інжир</item>
+        <item>Грейпфрут</item>
+        <item>Медова диня</item>
+        <item>Ківі</item>
+        <item>Лимони</item>
+        <item>Лайми</item>
+        <item>Лічі</item>
+        <item>Манго</item>
+        <item>Нектарини</item>
+        <item>Апельсини</item>
+        <item>Папая</item>
+        <item>Маракуя</item>
+        <item>Персики</item>
+        <item>Груші</item>
+        <item>Ананас</item>
+        <item>Сливи (особливо чорна)</item>
+        <item>Плумкот</item>
+        <item>Гранати</item>
+        <item>Чорнослив</item>
+        <item>Танжерини</item>
+        <item>Кавун</item>
+    </string-array>
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Рукола</item>
+        <item>Бок чой</item>
+        <item>Броколі (включаючи Романеско)</item>
+        <item>Брюсельська капуста</item>
+        <item>Капуста (зелена, червона, савойська)</item>
+        <item>Цвітна капуста (біла, зелена, оранжева та фіолетова)</item>
+        <item>Листова капуста</item>
+        <item>Хрін</item>
+        <item>Кейл (чорна, зелена, і червона)</item>
+        <item>Кольрабі (зелена і фіолетова)</item>
+        <item>Капуста</item>
+        <item>Редис</item>
+        <item>Зелень ріпи</item>
+        <item>Крес-салат</item>
+    </string-array>
+    <string-array name="food_info_types_greens">
+        <item>Рукола</item>
+        <item>Бурякове бадилля</item>
+        <item>Листова капуста</item>
+        <item>Капуста Кейл (темна, зелена, червона)</item>
+        <item>Месклун (суміш молодих салатів)</item>
+        <item>Листова гірчиця</item>
+        <item>Щавель</item>
+        <item>Шпинат</item>
+        <item>Мангольд</item>
+        <item>Зелень ріпи</item>
+    </string-array>
+    <string-array name="food_info_types_other_vegetables">
+        <item>Артишок</item>
+        <item>Спаржа</item>
+        <item>Буряк</item>
+        <item>Солодкий перець</item>
+        <item>Морква</item>
+        <item>Кукурдза</item>
+        <item>Часник</item>
+        <item>Гриби (печериці, гливи, портобелло та шиітаке)</item>
+        <item>Бамія</item>
+        <item>Цибуля</item>
+        <item>Фіолетова картопля</item>
+        <item>Гарбуз</item>
+        <item>Водорості (араме, дульсе та норі)</item>
+        <item>Горошок</item>
+        <item>Сквош</item>
+        <item>Солодка картопля/батат</item>
+        <item>Помідори</item>
+        <item>Цукіні</item>
+    </string-array>
+    <string-array name="food_info_types_flaxseeds">
+        <item>Льон коричневий</item>
+        <item>Льон золотий (білий)</item>
+    </string-array>
+    <string-array name="food_info_types_nuts">
+        <item>Мигдаль</item>
+        <item>Бразильські горіхи</item>
+        <item>Кеш\'ю</item>
+        <item>Насіння Чіа</item>
+        <item>Ліщина</item>
+        <item>Насіння конопель</item>
+        <item>Горіхи макадамії</item>
+        <item>Арахіс</item>
+        <item>Горіхи пекан</item>
+        <item>Фісташки</item>
+        <item>Гарбузове насіння</item>
+        <item>Насіння кунжуту</item>
+        <item>Соняшникове насіння</item>
+        <item>Волоські горіхи</item>
+    </string-array>
+    <string-array name="food_info_types_spices">
+        <item>Духмяний перець</item>
+        <item>Барбарис</item>
+        <item>Базилік</item>
+        <item>Лавровий лист</item>
+        <item>Кардамон</item>
+        <item>Перець чилі мелений</item>
+        <item>Кінза</item>
+        <item>Кориця</item>
+        <item>Гвоздика</item>
+        <item>Коріандр</item>
+        <item>Кмин</item>
+        <item>Карі мелений</item>
+        <item>Кріп</item>
+        <item>Пажитник</item>
+        <item>Часник</item>
+        <item>Імбир</item>
+        <item>Хрін</item>
+        <item>Лемонграс</item>
+        <item>Майоран</item>
+        <item>Гірчичний порошок</item>
+        <item>Мускатний горіх</item>
+        <item>Орегано</item>
+        <item>Копчена паприка</item>
+        <item>Петрушка</item>
+        <item>Перець</item>
+        <item>М\'ята перцева</item>
+        <item>Розмарин</item>
+        <item>Шафран</item>
+        <item>Шавлія</item>
+        <item>Чебрець</item>
+        <item>Куркума</item>
+        <item>Ваніль</item>
+    </string-array>
+    <string-array name="food_info_types_whole_grains">
+        <item>Ячмінь</item>
+        <item>Гречка</item>
+        <item>Пшоно</item>
+        <item>Овес</item>
+        <item>Попкорн</item>
+        <item>Кіноа</item>
+        <item>Жито</item>
+        <item>Теф</item>
+        <item>Цільнозернові макарони</item>
+    </string-array>
+    <string-array name="food_info_types_beverages">
+        <item>Чорний чай</item>
+        <item>Чай масала</item>
+        <item>Ванільний ромашковий чай</item>
+        <item>Кава</item>
+        <item>Чай Ерл Грей</item>
+        <item>Зелений чай</item>
+        <item>Гібіскусовий чай</item>
+        <item>Гарячий шоколад</item>
+        <item>Жасминовий чай</item>
+        <item>Чай з меліси</item>
+        <item>Чай матча</item>
+        <item>Чай улун з мигдалем</item>
+        <item>М\'ятний чай</item>
+        <item>Чай Ройбуш</item>
+        <item>Вода</item>
+        <item>Білий чай</item>
+    </string-array>
+    <string-array name="food_info_types_exercise">
+        <item>Їзда на велосипеді</item>
+        <item>Веслування на каное</item>
+        <item>Танці</item>
+        <item>Доджбол</item>
+        <item>Гірськолижний спорт</item>
+        <item>Фехтування</item>
+        <item>Хайкінг</item>
+        <item>Робота по дому (прибирання)</item>
+        <item>Катання на ковзанах</item>
+        <item>Катання на роликах</item>
+        <item>Жонглювання</item>
+        <item>Стрибання на батуті</item>
+        <item>Катання на катамарані</item>
+        <item>Гра у фрізбі</item>
+        <item>Катання на роликах</item>
+        <item>Закидання м\'яча в корзину</item>
+        <item>Згрібання снігу</item>
+        <item>Катання на скейтборді</item>
+        <item>Снорклінг</item>
+        <item>Серфінг</item>
+        <item>Плавання вільним стилем</item>
+        <item>Теніс (парний)</item>
+        <item>Вертикальне утримання на плаву</item>
+        <item>Швидка ходьба (6-7 км/год)</item>
+        <item>Водна аеробіка</item>
+        <item>Катання на водних лижах</item>
+        <item>Робота в саду</item>
+        <item>Йога</item>
+        <item>Бекпекінг</item>
+        <item>Баскетбол</item>
+        <item>Маунтенбайк</item>
+        <item>Кругове тренування з обтяженнями</item>
+        <item>Лижні перегони</item>
+        <item>Американський футбол</item>
+        <item>Хокей</item>
+        <item>Біг підтюпцем</item>
+        <item>Стрибки домкратів</item>
+        <item>Стрибки через скакалку</item>
+        <item>Лакрос</item>
+        <item>Віджимання</item>
+        <item>Підтягування</item>
+        <item>Ракетбол</item>
+        <item>Скелелазіння</item>
+        <item>Регбі</item>
+        <item>Біг</item>
+        <item>Дайвінг</item>
+        <item>Теніс (одиночний)</item>
+        <item>Футбол</item>
+        <item>Ковзанярський спорт</item>
+        <item>Сквош</item>
+        <item>Степ аеробіка</item>
+        <item>Спортивне плавання</item>
+        <item>Швидка ходьба вгору</item>
+        <item>Водний джогінг</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ чашки хумусу або пюре з квасолі</item>
+        <item>½ чашки вареної квасолі, колотого гороху або сочевиці</item>
+        <item>½ чашки тофу або темпе</item>
+        <item>1 чашка гороху</item>
+        <item>1 чашка свіжих пророщених бобів (сочевиця, маш)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>60 г хумусу або пюре з квасолі</item>
+        <item>90 г вареної квасолі, колотого гороху або сочевиці</item>
+        <item>100 г тофу або темпе</item>
+        <item>130 г гороху</item>
+        <item>100 g свіжих пророщених бобів (сочевиця, маш)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ чашки свіжих чи заморожених</item>
+        <item>¼ чашки у сухому вигляді</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>60 г свіжого чи замороженого</item>
+        <item>40 г сушеного</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item>1 фрукт середнього розміру</item>
+        <item>1 чашка нарізаних фруктів</item>
+        <item>¼ чашка сухофруктів</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item>1 фрукт середнього розміру</item>
+        <item>120 г нарізаних фруктів</item>
+        <item>40 г сухофруктів</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ чашки нарізаних</item>
+        <item>½ чашки брюссельської капусти</item>
+        <item>¼ чашки брюссельської капусти</item>
+        <item>1 столова ложка хрону</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>30-80 г нарізаних</item>
+        <item>80 г брюссельської капусти</item>
+        <item>15 г брюссельської капусти</item>
+        <item>1 столова ложка хрону</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 чашка в сирому вигляді</item>
+        <item>½ чашки в приготованому вигляді</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 г сирої</item>
+        <item>90 г приготованої</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 чашка сирих листових овочів</item>
+        <item>½ чашки сирих або приготованих нелисткових овочів</item>
+        <item>½ чашки овочевого соку</item>
+        <item>¼ чашки сирих грибів</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 г сирих листкових овочів</item>
+        <item>50 г сирих або приготованих нелисткових овочів</item>
+        <item>125 мл овочевого соку</item>
+        <item>7 г сухих грибів</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item>1 ч.л. меленого</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item>1 ч.л. меленого</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ чашки горіхів чи насіння</item>
+        <item>2 ст.л. горіхової пасти чи пасти з насіння</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 г горіхів чи насіння</item>
+        <item>2 ст.л. горіхової пасти чи пасти з насіння</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item>¼ ч.л. куркуми</item>
+        <item>Будь-які інші трави та спеції (за винятком солі), що тобі до вподоби</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item>¼ ч.л. куркуми</item>
+        <item>Будь-які інші трави та спеції (за винятком солі), що тобі до вподоби</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ чашки приготованих злаків, макаронних виробів або кукурудзяних зерен</item>
+        <item>1 чашка хлоп\'їв</item>
+        <item>1 тортилья або скибка хліба</item>
+        <item>½ багеля або англійського мафіна</item>
+        <item>3 чашки приготованого попкорну</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 г приготованих злаків, макаронних виробів або кукурудзяних зерен</item>
+        <item>50 г хлоп\'їв</item>
+        <item>1 тортилья або скибка хліба</item>
+        <item>½ багеля або англійського мафіна</item>
+        <item>30 г приготованого попкорну</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>Одна склянка (12 унцій)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>Одна склянка (350 мл)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item>90 хвилин навантаження середньої інтенсивності</item>
+        <item>40 хвилин навантаження високої інтенсивності</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item>90 хвилин навантаження середньої інтенсивності</item>
+        <item>40 хвилин навантаження високої інтенсивності</item>
+    </string-array>
+</resources>

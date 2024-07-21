@@ -20,8 +20,6 @@ configurations {
 }
 
 android {
-    compileSdkVersion 33
-
     buildFeatures.viewBinding = true
 
     compileOptions {
@@ -30,12 +28,13 @@ android {
     }
     defaultConfig {
         applicationId "org.nutritionfacts.dailydozen"
-        minSdkVersion 19
+        minSdkVersion 21
         multiDexEnabled true
-        targetSdkVersion 33
+        compileSdk 34
+        targetSdkVersion 34
         vectorDrawables.useSupportLibrary = true
-        versionCode 89
-        versionName "25"
+        versionCode 90
+        versionName "26"
     }
     buildTypes {
         debug {
@@ -58,21 +57,22 @@ android {
             dimension "store"
         }
     }
+    namespace 'org.nutritionfacts.dailydozen'
 }
 
 dependencies {
-    implementation 'com.google.firebase:firebase-analytics:21.2.0'
-    implementation 'com.google.firebase:firebase-crashlytics:18.3.2'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.firebase:firebase-analytics:22.0.2'
+    implementation 'com.google.firebase:firebase-crashlytics:19.0.3'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
     implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
     implementation 'com.darwinsys:hirondelle-date4j:1.5.1'
     implementation 'com.github.prolificinteractive:material-calendarview:2.0.1'
     implementation('com.joanzapata.iconify:android-iconify-fontawesome:2.2.2') { exclude group: "com.android.support" }
     implementation('com.github.PhilJay:MPAndroidChart:v2.2.5') { exclude group: "com.android.support" }
     implementation('org.greenrobot:eventbus:3.3.1') { exclude group: "com.android.support" }
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'com.jakewharton.timber:timber:4.7.1'
     implementation "io.noties.markwon:core:4.6.2"
 }
