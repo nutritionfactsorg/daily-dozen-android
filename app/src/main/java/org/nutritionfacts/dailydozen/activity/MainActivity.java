@@ -176,7 +176,18 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         toggleTweaksMenuItemVisibility();
+        updateAppModeToggle();
         return super.onPrepareOptionsMenu(menu);
+    }
+
+    private void updateAppModeToggle() {
+        if (inDailyDozenMode) {
+            setTitle(R.string.app_name);
+            menuToggleModes.setTitle(R.string.twenty_one_tweaks);
+        } else {
+            setTitle(R.string.twenty_one_tweaks);
+            menuToggleModes.setTitle(R.string.app_name);
+        }
     }
 
     private void toggleTweaksMenuItemVisibility() {
@@ -191,13 +202,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         switch (itemId) {
             case R.id.menu_toggle_modes:
                 inDailyDozenMode = !inDailyDozenMode;
-                if (inDailyDozenMode) {
-                    setTitle(R.string.app_name);
-                    item.setTitle(R.string.twenty_one_tweaks);
-                } else {
-                    setTitle(R.string.twenty_one_tweaks);
-                    item.setTitle(R.string.app_name);
-                }
+                updateAppModeToggle();
                 initDatePager();
                 return true;
             case R.id.menu_latest_videos:
