@@ -5,7 +5,6 @@ import androidx.collection.ArrayMap;
 
 import com.google.gson.Gson;
 
-import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.DDServings;
@@ -49,7 +48,7 @@ public class BackupTask extends BaseTask<Boolean> {
 
         final int numDays = allDays.size();
 
-        final String lineSeparator = Common.getLineSeparator();
+        final String lineSeparator = System.lineSeparator();
 
         final StringBuilder jsonLines = new StringBuilder();
 

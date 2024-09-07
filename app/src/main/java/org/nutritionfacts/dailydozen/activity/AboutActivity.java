@@ -67,7 +67,7 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     private void initLinksInText() {
-        final String aboutText = TextUtils.join(Common.getLineSeparator(),
+        final String aboutText = TextUtils.join(System.lineSeparator(),
                 getResources().getStringArray(R.array.about_text_lines));
         final SpannableStringBuilder ssb = new SpannableStringBuilder(aboutText);
 
