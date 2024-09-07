@@ -29,7 +29,6 @@
             android:name=".activity.MainActivity"
             android:exported="true"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden">
 
             <intent-filter>
@@ -55,14 +54,12 @@
 
         <activity
             android:name=".activity.AboutActivity"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/about_this_app"/>
 
         <activity
             android:name=".activity.DailyReminderSettingsActivity"
             android:label="@string/daily_reminder_settings"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -72,12 +69,10 @@
 
         <activity
             android:name=".activity.DebugActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"/>
+            android:configChanges="orientation|keyboardHidden"/>
 
         <activity
             android:name=".activity.HistoryActivity"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -87,7 +82,6 @@
 
         <activity
             android:name=".activity.FoodInfoActivity"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -98,7 +92,6 @@
         <activity
             android:name=".activity.ServingsHistoryActivity"
             android:label="@string/daily_servings_history"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -108,7 +101,6 @@
 
         <activity
             android:name=".activity.TweakInfoActivity"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -119,7 +111,6 @@
         <activity
             android:name=".activity.TweakServingsHistoryActivity"
             android:label="@string/daily_tweaks_history"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -130,7 +121,6 @@
         <activity
             android:name=".activity.WeightHistoryActivity"
             android:label="@string/weight_history"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -140,7 +130,6 @@
 
         <activity android:name=".activity.FaqActivity"
             android:label="@string/faq_title"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
