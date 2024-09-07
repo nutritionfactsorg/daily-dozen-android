@@ -179,9 +179,7 @@ public class RestoreTask extends BaseTask<Boolean> {
             }
 
             ActiveAndroid.setTransactionSuccessful();
-        } catch (InvalidDateException e) {
-            Timber.e(e, "restoreLineJSON: ");
-        } catch (JsonSyntaxException e) {
+        } catch (InvalidDateException | JsonSyntaxException e) {
             Timber.e(e, "restoreLineJSON: ");
         } finally {
             ActiveAndroid.endTransaction();
