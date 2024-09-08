@@ -48,19 +48,16 @@ public class BackupTask extends BaseTask<Boolean> {
 
         final int numDays = allDays.size();
 
-        final String lineSeparator = System.lineSeparator();
-
-        final StringBuilder jsonLines = new StringBuilder();
-
-        for (int i = 0; i < numDays; i++) {
-            jsonLines.append(String.format("%s%s", lineSeparator, getDayJsonLine(allDays.get(i))));
-
-            progressListener.updateProgressBar(i + 1, numDays);
-        }
-
         try {
             final FileWriter fileWriter = new FileWriter(backupFile);
-            fileWriter.write(jsonLines.toString());
+
+            for (int i = 0; i < numDays; i++) {
+                fileWriter.write(getDayJsonLine(allDays.get(i)));
+                fileWriter.write(System.lineSeparator());
+
+                progressListener.updateProgressBar(i + 1, numDays);
+            }
+
             fileWriter.close();
 
             Timber.d("backup file successfully written");
