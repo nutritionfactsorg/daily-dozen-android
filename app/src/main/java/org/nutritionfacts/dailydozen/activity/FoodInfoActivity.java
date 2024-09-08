@@ -1,5 +1,6 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -69,7 +70,12 @@ public class FoodInfoActivity extends InfoActivity {
         if (food != null && !TextUtils.isEmpty(food.getName())) {
             final String foodName = food.getName();
 
-            initImage(foodName);
+            if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+                initImage(foodName);
+                binding.foodInfoImage.setVisibility(View.VISIBLE);
+            } else {
+                binding.foodInfoImage.setVisibility(View.GONE);
+            }
             initServingTypes(food);
             initFoodTypes(foodName);
         }
