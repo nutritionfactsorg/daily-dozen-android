@@ -59,6 +59,12 @@ public class Weights extends TruncatableModel {
         return null;
     }
 
+    public static boolean createWeights(final Day day, float morningWeight, float eveningWeight) {
+        Weights weights = new Weights(day, morningWeight, eveningWeight);
+        weights.save();
+        return true;
+    }
+
     public static boolean createWeightsIfDoesNotExist(final Day day, float morningWeight, float eveningWeight) {
         Weights weights = getWeightsOnDay(day);
 
