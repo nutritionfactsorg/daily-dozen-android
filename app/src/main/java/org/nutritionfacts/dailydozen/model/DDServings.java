@@ -209,7 +209,7 @@ public class DDServings extends TruncatableModel implements Servings {
                 }
             }
 
-            if (placeholderArray.size() == 0) {
+            if (placeholderArray.isEmpty()) {
                 return new ArrayMap<>();
             }
 
