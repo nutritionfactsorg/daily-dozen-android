@@ -172,14 +172,12 @@ public class RestoreTask extends BaseTask<Boolean> {
 
             for (Map.Entry<String, Integer> entry : dayEntries.getDailyDozen().entrySet()) {
                 if (entry.getValue() > 0) {
-                    Timber.d("DDServings: entry [%s] [%s]", entry.getKey(), entry.getValue());
                     DDServings.createServings(day, getFoodByIdName(entry.getKey()), entry.getValue());
                 }
             }
 
             for (Map.Entry<String, Integer> entry : dayEntries.getTweaks().entrySet()) {
                 if (entry.getValue() > 0) {
-                    Timber.d("TweakServings: entry [%s] [%s]", entry.getKey(), entry.getValue());
                     TweakServings.createServings(day, getTweakByIdName(entry.getKey()), entry.getValue());
                 }
             }
