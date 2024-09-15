@@ -99,7 +99,7 @@ public class GenerateDataTask extends BaseTask<Boolean> {
             final int numServings = taskParams.generateRandomData() ? random.nextInt(recommendedServings + 1) : recommendedServings;
 
             if (numServings > 0) {
-                DDServings.createServingsIfDoesNotExist(day, food, numServings);
+                DDServings.createServings(day, food, numServings);
             }
         }
     }
@@ -110,7 +110,7 @@ public class GenerateDataTask extends BaseTask<Boolean> {
             final int numServings = taskParams.generateRandomData() ? random.nextInt(recommendedServings + 1) : recommendedServings;
 
             if (numServings > 0) {
-                TweakServings.createServingsIfDoesNotExist(day, tweak, numServings);
+                TweakServings.createServings(day, tweak, numServings);
             }
         }
     }
@@ -128,7 +128,7 @@ public class GenerateDataTask extends BaseTask<Boolean> {
             eveningWeight = round(180 + 3 * random.nextFloat());
         }
 
-        Weights.createWeightsIfDoesNotExist(day, morningWeight, eveningWeight);
+        Weights.createWeights(day, morningWeight, eveningWeight);
     }
 
     private static float round(double value) {
