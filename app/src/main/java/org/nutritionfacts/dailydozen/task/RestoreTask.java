@@ -84,11 +84,11 @@ public class RestoreTask extends BaseTask<Boolean> {
                                 progressListener.updateProgressBar(++i, numLines);
                             } while (line != null);
                         } else {
-                            do {
-                                line = reader.readLine();
+                            while (line != null) {
                                 restoreLineJSON(line);
                                 progressListener.updateProgressBar(++i, numLines);
-                            } while (line != null);
+                                line = reader.readLine();
+                            }
                         }
                     }
 
