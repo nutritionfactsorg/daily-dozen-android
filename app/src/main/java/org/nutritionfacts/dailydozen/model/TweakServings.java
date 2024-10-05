@@ -97,6 +97,13 @@ public class TweakServings extends TruncatableModel implements Servings {
         return null;
     }
 
+    public static TweakServings createServings(final Day day, final Tweak tweak, final int numServings) {
+        TweakServings servings = new TweakServings(day, tweak);
+        servings.setServings(numServings);
+        servings.save();
+        return servings;
+    }
+
     public static TweakServings createServingsIfDoesNotExist(final Day day, final Tweak tweak) {
         return createServingsIfDoesNotExist(day, tweak, 0);
     }
@@ -183,7 +190,7 @@ public class TweakServings extends TruncatableModel implements Servings {
                 }
             }
 
-            if (placeholderArray.size() == 0) {
+            if (placeholderArray.isEmpty()) {
                 return new ArrayMap<>();
             }
 

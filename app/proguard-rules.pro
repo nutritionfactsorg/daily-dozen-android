@@ -24,6 +24,8 @@
 # ActiveAndroid
 -keep class com.activeandroid.** { *; }
 
+-keep class org.nutritionfacts.dailydozen.model.** { *; }
+
 # MPAndroidChart
 -keep class com.github.mikephil.charting.** { *; }
 -dontwarn io.realm.**

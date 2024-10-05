@@ -5,7 +5,6 @@ import androidx.collection.ArrayMap;
 
 import com.google.gson.Gson;
 
-import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.model.DDServings;
@@ -49,19 +48,16 @@ public class BackupTask extends BaseTask<Boolean> {
 
         final int numDays = allDays.size();
 
-        final String lineSeparator = Common.getLineSeparator();
-
-        final StringBuilder jsonLines = new StringBuilder();
-
-        for (int i = 0; i < numDays; i++) {
-            jsonLines.append(String.format("%s%s", lineSeparator, getDayJsonLine(allDays.get(i))));
-
-            progressListener.updateProgressBar(i + 1, numDays);
-        }
-
         try {
             final FileWriter fileWriter = new FileWriter(backupFile);
-            fileWriter.write(jsonLines.toString());
+
+            for (int i = 0; i < numDays; i++) {
+                fileWriter.write(getDayJsonLine(allDays.get(i)));
+                fileWriter.write(System.lineSeparator());
+
+                progressListener.updateProgressBar(i + 1, numDays);
+            }
+
             fileWriter.close();
 
             Timber.d("backup file successfully written");

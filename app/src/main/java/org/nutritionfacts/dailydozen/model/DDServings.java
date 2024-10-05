@@ -98,6 +98,13 @@ public class DDServings extends TruncatableModel implements Servings {
         return null;
     }
 
+    public static DDServings createServings(final Day day, final Food food, final int numServings) {
+        DDServings servings = new DDServings(day, food);
+        servings.setServings(numServings);
+        servings.save();
+        return servings;
+    }
+
     public static DDServings createServingsIfDoesNotExist(final Day day, final Food food) {
         return createServingsIfDoesNotExist(day, food, 0);
     }
@@ -202,7 +209,7 @@ public class DDServings extends TruncatableModel implements Servings {
                 }
             }
 
-            if (placeholderArray.size() == 0) {
+            if (placeholderArray.isEmpty()) {
                 return new ArrayMap<>();
             }
 

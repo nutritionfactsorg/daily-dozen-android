@@ -117,7 +117,7 @@ public class WeightHistoryActivity extends AppCompatActivity
                 CombinedChart.DrawOrder.BAR, CombinedChart.DrawOrder.LINE
         });
 
-        binding.dailyServingsChart.setVisibleXRange(5, 5);
+        binding.dailyServingsChart.setVisibleXRange(5, 10);
 
         binding.dailyServingsChart.getXAxis().setDrawLabels(true);
 

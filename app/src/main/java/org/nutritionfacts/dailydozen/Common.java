@@ -59,10 +59,6 @@ public class Common {
         showToast(context, context.getString(stringId));
     }
 
-    public static String getLineSeparator() {
-        return System.getProperty("line.separator");
-    }
-
     public static void openUrlInExternalBrowser(final Context context, final int urlId) {
         openUrlInExternalBrowser(context, context.getString(urlId));
     }

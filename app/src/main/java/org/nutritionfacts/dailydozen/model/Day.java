@@ -134,6 +134,10 @@ public class Day extends TruncatableModel {
         return day;
     }
 
+    public static Day createDay(final String dateString) {
+        return createDayIfDoesNotExist(new Day(fromDateString(dateString)));
+    }
+
     public static Day createDayIfDoesNotExist(final String dateString) throws InvalidDateException {
         return createDayIfDoesNotExist(getByDate(dateString));
     }

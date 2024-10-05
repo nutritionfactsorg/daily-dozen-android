@@ -84,11 +84,11 @@ public class RestoreTask extends BaseTask<Boolean> {
                                 progressListener.updateProgressBar(++i, numLines);
                             } while (line != null);
                         } else {
-                            do {
-                                line = reader.readLine();
+                            while (line != null) {
                                 restoreLineJSON(line);
                                 progressListener.updateProgressBar(++i, numLines);
-                            } while (line != null);
+                                line = reader.readLine();
+                            }
                         }
                     }
 
@@ -164,23 +164,25 @@ public class RestoreTask extends BaseTask<Boolean> {
         try {
             DayEntries dayEntries = new Gson().fromJson(line, DayEntries.class);
 
-            final Day day = Day.createDayIfDoesNotExist(dayEntries.getDate());
+            final Day day = Day.createDay(dayEntries.getDate());
 
-            Weights.createWeightsIfDoesNotExist(day,
-                    dayEntries.getMorningWeight(),
-                    dayEntries.getEveningWeight());
+            if (dayEntries.getMorningWeight() != 0 || dayEntries.getEveningWeight() != 0) {
+                Weights.createWeights(day, dayEntries.getMorningWeight(), dayEntries.getEveningWeight());
+            }
 
             for (Map.Entry<String, Integer> entry : dayEntries.getDailyDozen().entrySet()) {
-                DDServings.createServingsAndRecalculateStreak(day, getFoodByIdName(entry.getKey()), entry.getValue());
+                if (entry.getValue() > 0) {
+                    DDServings.createServings(day, getFoodByIdName(entry.getKey()), entry.getValue());
+                }
             }
 
             for (Map.Entry<String, Integer> entry : dayEntries.getTweaks().entrySet()) {
-                TweakServings.createServingsIfDoesNotExist(day, getTweakByIdName(entry.getKey()), entry.getValue());
+                if (entry.getValue() > 0) {
+                    TweakServings.createServings(day, getTweakByIdName(entry.getKey()), entry.getValue());
+                }
             }
 
             ActiveAndroid.setTransactionSuccessful();
-        } catch (InvalidDateException e) {
-            Timber.e(e, "restoreLineJSON: ");
         } catch (JsonSyntaxException e) {
             Timber.e(e, "restoreLineJSON: ");
         } finally {

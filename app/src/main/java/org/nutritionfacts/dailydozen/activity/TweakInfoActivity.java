@@ -1,7 +1,9 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
@@ -36,7 +38,12 @@ public class TweakInfoActivity extends InfoActivity {
         final Tweak tweak = getTweak();
 
         if (tweak != null && !TextUtils.isEmpty(tweak.getName())) {
-            initImage(tweak.getName());
+            if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+                initImage(tweak.getName());
+                binding.tweakInfoImage.setVisibility(View.VISIBLE);
+            } else {
+                binding.tweakInfoImage.setVisibility(View.GONE);
+            }
             initTweakShort(tweak.getName());
             initTweakText(tweak.getName());
         }
