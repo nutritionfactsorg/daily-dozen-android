@@ -30,7 +30,7 @@ android {
     }
     defaultConfig {
         applicationId "org.nutritionfacts.dailydozen"
-        minSdkVersion 21
+        minSdkVersion 26
         multiDexEnabled true
         compileSdk 34
         targetSdkVersion 34
