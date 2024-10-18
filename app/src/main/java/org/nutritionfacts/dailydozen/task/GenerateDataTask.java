@@ -12,11 +12,9 @@ import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.model.Weights;
 import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Random;
-import java.util.TimeZone;
-
-import hirondelle.date4j.DateTime;
 
 public class GenerateDataTask extends BaseTask<Boolean> {
     private final ProgressListener progressListener;
@@ -38,12 +36,12 @@ public class GenerateDataTask extends BaseTask<Boolean> {
 
         final int numDays = taskParams.getHistoryToGenerate();
 
-        final DateTime today = DateTime.today(TimeZone.getDefault());
-        DateTime current = today.minusDays(numDays);
+        LocalDateTime today = LocalDateTime.now();
+        LocalDateTime current = today.minusDays(numDays);
 
         int i = 0;
 
-        while (current.lteq(today)) {
+        while (current.isBefore(today)) {
             if (taskParams.generateRandomData()) {
                 // Give a 20% chance of not creating servings for the day
                 if (random.nextInt(5) >= 1) {
@@ -76,7 +74,7 @@ public class GenerateDataTask extends BaseTask<Boolean> {
         }
     }
 
-    private void createUserDataForDay(List<Food> allFoods, List<Tweak> allTweaks, DateTime current) {
+    private void createUserDataForDay(List<Food> allFoods, List<Tweak> allTweaks, LocalDateTime current) {
         ActiveAndroid.beginTransaction();
 
         try {

@@ -20,6 +20,7 @@ import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.util.CalendarHistoryDecorator;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
@@ -29,16 +30,14 @@ import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import hirondelle.date4j.DateTime;
-
 public class HistoryActivity extends InfoActivity {
     private ActivityHistoryBinding binding;
 
     private boolean isFoodHistory = false;
 
     private final Set<String> loadedMonths = new HashSet<>();
-    private List<DateTime> fullServingsDates;
-    private List<DateTime> partialServingsDates;
+    private List<LocalDateTime> fullServingsDates;
+    private List<LocalDateTime> partialServingsDates;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -50,8 +49,8 @@ public class HistoryActivity extends InfoActivity {
         fullServingsDates = new ArrayList<>();
         partialServingsDates = new ArrayList<>();
         if (savedInstanceState != null) {
-            fullServingsDates = (ArrayList<DateTime>) savedInstanceState.getSerializable(Args.DATES_WITH_FULL_SERVINGS);
-            partialServingsDates = (ArrayList<DateTime>) savedInstanceState.getSerializable(Args.DATES_WITH_PARTIAL_SERVINGS);
+            fullServingsDates = (ArrayList<LocalDateTime>) savedInstanceState.getSerializable(Args.DATES_WITH_FULL_SERVINGS);
+            partialServingsDates = (ArrayList<LocalDateTime>) savedInstanceState.getSerializable(Args.DATES_WITH_PARTIAL_SERVINGS);
         }
 
         displayHistory();

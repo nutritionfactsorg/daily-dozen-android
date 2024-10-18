@@ -1,15 +1,15 @@
 package org.nutritionfacts.dailydozen.event;
 
-import hirondelle.date4j.DateTime;
+import java.time.LocalDateTime;
 
 public class DisplayDateEvent extends BaseEvent {
-    private DateTime date;
+    private LocalDateTime date;
 
-    public DisplayDateEvent(DateTime date) {
+    public DisplayDateEvent(LocalDateTime date) {
         this.date = date;
     }
 
-    public DateTime getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 }

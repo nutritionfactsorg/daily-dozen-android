@@ -1,5 +1,7 @@
 package org.nutritionfacts.dailydozen.model;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
@@ -10,6 +12,12 @@ import com.activeandroid.query.Select;
 
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -19,7 +27,6 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
 
-import hirondelle.date4j.DateTime;
 import timber.log.Timber;
 
 @Table(name = "dates")
@@ -51,7 +58,7 @@ public class Day extends TruncatableModel {
     public Day() {
     }
 
-    public Day(DateTime date) {
+    public Day(LocalDateTime date) {
         setDate(date);
     }
 
@@ -59,8 +66,8 @@ public class Day extends TruncatableModel {
         return getDateString(getDateTime());
     }
 
-    private String getDateString(final DateTime dateTime) {
-        return dateTime.format("YYYYMMDD");
+    private String getDateString(final LocalDateTime dateTime) {
+        return dateTime.format(DateTimeFormatter.BASIC_ISO_DATE);
     }
 
     // Calculates the number of days between epoch == 0 (Jan 1, 1970) and now
@@ -69,53 +76,91 @@ public class Day extends TruncatableModel {
         return getNumDaysSinceEpoch(getToday().plusDays(1));
     }
 
-    public static int getNumDaysSinceEpoch(final DateTime date) {
-        return getEpoch().numDaysFrom(date);
+    public static int getNumDaysSinceEpoch(final LocalDateTime date) {
+        return (int) DAYS.between(getEpoch(), date) + 1;
     }
 
-    private static DateTime getEpoch() {
-        return DateTime.forInstant(0, TimeZone.getDefault());
+    private static LocalDateTime getEpoch() {
+        return LocalDateTime.ofInstant(Instant.EPOCH, TimeZone.getDefault().toZoneId());
     }
 
-    public static DateTime getToday() {
-        return DateTime.today(TimeZone.getDefault());
+    public static LocalDate getTodayDate() {
+        return LocalDate.now(TimeZone.getDefault().toZoneId());
+    }
+
+    public static LocalDateTime getToday() {
+        return LocalDateTime.now(TimeZone.getDefault().toZoneId());
     }
 
     // This method is used for scheduling the reinitialization of the DailyDozenPagerAdapter
     public static long getMillisUntilMidnight() {
-        final DateTime tomorrow = getToday().plusDays(1);
-        return DateTime.now(TimeZone.getDefault()).numSecondsFrom(tomorrow) * 1000;
+        final LocalDateTime tomorrow = getToday().plusDays(1);
+        return LocalDateTime.now(TimeZone.getDefault().toZoneId()).until(tomorrow, ChronoUnit.MILLIS);
     }
 
-    public DateTime getDateTime() {
+    public LocalDate getDate() {
+        return LocalDate.of(year, month, day);
+    }
+
+    public LocalDateTime getDateTime() {
         // NOTE: This method used to be the following line. However, because of a bug in Caldroid, I had to
         // change the implementation to return a DateTime with 0 in the time fields instead of null otherwise the
         // food servings history chart would not show events.
         // return DateTime.forDateOnly(year, month, day);
 
-        return new DateTime(year, month, day, 0, 0, 0, 0);
+        return LocalDateTime.of(year, month, day, 0, 0, 0, 0);
     }
 
-    private void setDate(DateTime dateTime) {
+    private void setDate(LocalDateTime dateTime) {
         this.date = Long.parseLong(getDateString(dateTime));
 
         this.year = dateTime.getYear();
-        this.month = dateTime.getMonth();
-        this.day = dateTime.getDay();
+        this.month = getMonthNum(dateTime.getMonth());
+        this.day = dateTime.getDayOfMonth();
     }
 
-    public long getDate() {
+    private static int getMonthNum(final Month month) {
+        switch (month) {
+            case JANUARY:
+                return 1;
+            case FEBRUARY:
+                return 2;
+            case MARCH:
+                return 3;
+            case APRIL:
+                return 4;
+            case MAY:
+                return 5;
+            case JUNE:
+                return 6;
+            case JULY:
+                return 7;
+            case AUGUST:
+                return 8;
+            case SEPTEMBER:
+                return 9;
+            case OCTOBER:
+                return 10;
+            case NOVEMBER:
+                return 11;
+            case DECEMBER:
+                return 12;
+        }
+        return 0;
+    }
+
+    public long getDateLong() {
         return date;
     }
 
     @NonNull
     @Override
     public String toString() {
-        return getDateTime().format("WWW, MMM D", Locale.getDefault());
+        return getDateTime().format(DateTimeFormatter.ofPattern("E, MMM d", Locale.getDefault()));
     }
 
     public String getDayOfWeek() {
-        return getDateTime().format("D (WWW)", Locale.getDefault());
+        return getDateTime().format(DateTimeFormatter.ofPattern("D (E)", Locale.getDefault()));
     }
 
     public static Day getByDate(String dateString) throws InvalidDateException {
@@ -128,14 +173,14 @@ public class Day extends TruncatableModel {
                 .executeSingle();
 
         if (day == null) {
-            day = new Day(fromDateString(dateString));
+            day = new Day(LocalDate.parse(dateString, DateTimeFormatter.ofPattern("uuuuMMdd")).atStartOfDay());
         }
 
         return day;
     }
 
     public static Day createDay(final String dateString) {
-        return createDayIfDoesNotExist(new Day(fromDateString(dateString)));
+        return createDayIfDoesNotExist(new Day(LocalDate.parse(dateString, DateTimeFormatter.ofPattern("uuuuMMdd")).atStartOfDay()));
     }
 
     public static Day createDayIfDoesNotExist(final String dateString) throws InvalidDateException {
@@ -190,19 +235,19 @@ public class Day extends TruncatableModel {
 
         final List<Day> daysInYearAndMonth = new ArrayList<>(32);
 
-        final DateTime today = getToday();
-        boolean isCurrentMonth = today.getYear() == year && today.getMonth() == monthOneBased;
+        final LocalDateTime today = getToday();
+        boolean isCurrentMonth = today.getYear() == year && getMonthNum(today.getMonth()) == monthOneBased;
 
         try {
             for (int i = 1; i < 32; i++) {
-                if (isCurrentMonth && i > today.getDay()) {
+                if (isCurrentMonth && i > today.getDayOfMonth()) {
                     break;
                 }
 
                 if (daysWithServingsLookup.containsKey(i)) {
                     daysInYearAndMonth.add(daysWithServingsLookup.get(i));
                 } else {
-                    daysInYearAndMonth.add(new Day(DateTime.forDateOnly(year, monthOneBased, i)));
+                    daysInYearAndMonth.add(new Day(LocalDateTime.of(year, monthOneBased, i, 0, 0, 0, 0)));
                 }
             }
         } catch (Exception e) {
@@ -236,17 +281,6 @@ public class Day extends TruncatableModel {
         return Day.getByDate(getDateString(getDateTime().minusDays(1)));
     }
 
-    private static DateTime fromDateString(String dateString) {
-        if (!TextUtils.isEmpty(dateString)) {
-            return DateTime.forDateOnly(
-                    Integer.valueOf(dateString.substring(0, 4)),  // year
-                    Integer.valueOf(dateString.substring(4, 6)),  // month
-                    Integer.valueOf(dateString.substring(6, 8))); // day
-        }
-
-        return null;
-    }
-
     public List<Day> getDaysAfter() {
         return new Select().from(Day.class)
                 .where("date >= ?", getDateString(getDateTime()))
@@ -259,7 +293,7 @@ public class Day extends TruncatableModel {
     }
 
     public static String getTabTitleForDay(int daysSinceEpoch) {
-        return getEpoch().plusDays(daysSinceEpoch).format("WWW, MMM D", Locale.getDefault());
+        return getEpoch().plusDays(daysSinceEpoch).format(DateTimeFormatter.ofPattern("E, MMM d", Locale.getDefault()));
     }
 
     public static boolean isToday(final Day day) {
@@ -268,12 +302,14 @@ public class Day extends TruncatableModel {
         // That broke the following comparison and now I have to manually check if year, month, and day are equal.
         // return day.getDateTime().compareTo(getToday()) == 0;
 
-        final DateTime dateInQuestion = day.getDateTime();
-        final DateTime today = getToday();
+        final LocalDate dateInQuestion = day.getDate();
+        final LocalDate today = getTodayDate();
 
-        return dateInQuestion.getYear().equals(today.getYear()) &&
-                dateInQuestion.getMonth().equals(today.getMonth()) &&
-                dateInQuestion.getDay().equals(today.getDay());
+//        return dateInQuestion.getYear() == today.getYear() &&
+//                dateInQuestion.getMonth().equals(today.getMonth()) &&
+//                dateInQuestion.getDayOfMonth() == today.getDayOfMonth();
+
+        return dateInQuestion.equals(today);
     }
 
     @Override
@@ -296,7 +332,7 @@ public class Day extends TruncatableModel {
     private static class DayComparator implements Comparator<Day> {
         @Override
         public int compare(Day o1, Day o2) {
-            return (int) (o1.getDate() - o2.getDate());
+            return (int) (o1.getDateLong() - o2.getDateLong());
         }
     }
 }

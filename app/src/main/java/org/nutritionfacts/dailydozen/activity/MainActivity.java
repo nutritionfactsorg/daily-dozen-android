@@ -42,9 +42,9 @@ import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import java.io.File;
+import java.time.LocalDateTime;
 import java.util.Date;
 
-import hirondelle.date4j.DateTime;
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity implements ProgressListener {
@@ -418,7 +418,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         setDatePagerDate(event.getDate());
     }
 
-    private void setDatePagerDate(final DateTime dateTime) {
+    private void setDatePagerDate(final LocalDateTime dateTime) {
         if (dateTime != null) {
             Timber.d("Changing displayed date to %s", dateTime.toString());
             binding.datePager.setCurrentItem(Day.getNumDaysSinceEpoch(dateTime));
