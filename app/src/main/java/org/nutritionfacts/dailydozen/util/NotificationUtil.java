@@ -118,13 +118,11 @@ public class NotificationUtil {
     }
 
     private static void initNotificationChannels(final Context context) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            getNotificationManager(context).createNotificationChannel(new NotificationChannel(
-                    CHANNEL_REMINDERS,
-                    context.getString(R.string.channel_reminders_name),
-                    NotificationManager.IMPORTANCE_DEFAULT
-            ));
-        }
+        getNotificationManager(context).createNotificationChannel(new NotificationChannel(
+                CHANNEL_REMINDERS,
+                context.getString(R.string.channel_reminders_name),
+                NotificationManager.IMPORTANCE_DEFAULT
+        ));
     }
 
     private static void initUpdateReminderNotificationAlarm(final Context context) {
