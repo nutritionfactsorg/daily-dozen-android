@@ -198,7 +198,7 @@ public class Day extends TruncatableModel {
         allDays.addAll(daysInPreviousMonth);
 
         // Sort the days in ascending order
-        Collections.sort(allDays, new DayComparator());
+        allDays.sort(new DayComparator());
 
         return allDays;
     }

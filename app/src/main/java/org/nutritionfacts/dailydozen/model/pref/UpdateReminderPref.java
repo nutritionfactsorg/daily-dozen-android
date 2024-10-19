@@ -55,7 +55,7 @@ public class UpdateReminderPref {
         reminderTimesSet.add(DateUtil.formatTime(context, hourOfDay, minute));
         reminderTimes = new ArrayList<>(reminderTimesSet);
 
-        Collections.sort(reminderTimes, new TimeStringComparator());
+        reminderTimes.sort(new TimeStringComparator());
     }
 
     public void deleteReminderTime(int position) {
