@@ -12,7 +12,7 @@ import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.model.Weights;
 import org.nutritionfacts.dailydozen.task.params.GenerateDataTaskParams;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Random;
 
@@ -36,8 +36,8 @@ public class GenerateDataTask extends BaseTask<Boolean> {
 
         final int numDays = taskParams.getHistoryToGenerate();
 
-        LocalDateTime today = LocalDateTime.now();
-        LocalDateTime current = today.minusDays(numDays);
+        LocalDate today = LocalDate.now();
+        LocalDate current = today.minusDays(numDays);
 
         int i = 0;
 
@@ -74,7 +74,7 @@ public class GenerateDataTask extends BaseTask<Boolean> {
         }
     }
 
-    private void createUserDataForDay(List<Food> allFoods, List<Tweak> allTweaks, LocalDateTime current) {
+    private void createUserDataForDay(List<Food> allFoods, List<Tweak> allTweaks, LocalDate current) {
         ActiveAndroid.beginTransaction();
 
         try {

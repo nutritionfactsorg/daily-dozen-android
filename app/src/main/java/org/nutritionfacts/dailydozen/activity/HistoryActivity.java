@@ -20,7 +20,7 @@ import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.util.CalendarHistoryDecorator;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
@@ -36,8 +36,8 @@ public class HistoryActivity extends InfoActivity {
     private boolean isFoodHistory = false;
 
     private final Set<String> loadedMonths = new HashSet<>();
-    private List<LocalDateTime> fullServingsDates;
-    private List<LocalDateTime> partialServingsDates;
+    private List<LocalDate> fullServingsDates;
+    private List<LocalDate> partialServingsDates;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -49,8 +49,8 @@ public class HistoryActivity extends InfoActivity {
         fullServingsDates = new ArrayList<>();
         partialServingsDates = new ArrayList<>();
         if (savedInstanceState != null) {
-            fullServingsDates = (ArrayList<LocalDateTime>) savedInstanceState.getSerializable(Args.DATES_WITH_FULL_SERVINGS);
-            partialServingsDates = (ArrayList<LocalDateTime>) savedInstanceState.getSerializable(Args.DATES_WITH_PARTIAL_SERVINGS);
+            fullServingsDates = (ArrayList<LocalDate>) savedInstanceState.getSerializable(Args.DATES_WITH_FULL_SERVINGS);
+            partialServingsDates = (ArrayList<LocalDate>) savedInstanceState.getSerializable(Args.DATES_WITH_PARTIAL_SERVINGS);
         }
 
         displayHistory();
@@ -115,9 +115,9 @@ public class HistoryActivity extends InfoActivity {
 
                     for (Map.Entry<Day, Boolean> serving : servings.entrySet()) {
                         if (serving.getValue()) {
-                            fullServingsDates.add(serving.getKey().getDateTime());
+                            fullServingsDates.add(serving.getKey().getDate());
                         } else {
-                            partialServingsDates.add(serving.getKey().getDateTime());
+                            partialServingsDates.add(serving.getKey().getDate());
                         }
                     }
                 }

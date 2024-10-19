@@ -1,15 +1,15 @@
 package org.nutritionfacts.dailydozen.event;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class DisplayDateEvent extends BaseEvent {
-    private LocalDateTime date;
+    private LocalDate date;
 
-    public DisplayDateEvent(LocalDateTime date) {
+    public DisplayDateEvent(LocalDate date) {
         this.date = date;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 }

@@ -42,7 +42,7 @@ import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import java.io.File;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Date;
 
 import timber.log.Timber;
@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
                 break;
             case Args.SELECTABLE_DATE_REQUEST:
                 if (data != null && data.hasExtra(Args.DATE)) {
-                    setDatePagerDate(DateUtil.convertDateToDateTime((Date) data.getSerializableExtra(Args.DATE)));
+                    setDatePagerDate(DateUtil.convertToLocalDate((Date) data.getSerializableExtra(Args.DATE)));
                 }
                 break;
         }
@@ -418,10 +418,10 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         setDatePagerDate(event.getDate());
     }
 
-    private void setDatePagerDate(final LocalDateTime dateTime) {
-        if (dateTime != null) {
-            Timber.d("Changing displayed date to %s", dateTime.toString());
-            binding.datePager.setCurrentItem(Day.getNumDaysSinceEpoch(dateTime));
+    private void setDatePagerDate(final LocalDate date) {
+        if (date != null) {
+            Timber.d("Changing displayed date to %s", date.toString());
+            binding.datePager.setCurrentItem(Day.getNumDaysSinceEpoch(date));
         }
     }
 

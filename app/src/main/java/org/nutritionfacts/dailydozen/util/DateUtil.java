@@ -6,7 +6,7 @@ import android.text.format.DateFormat;
 import org.nutritionfacts.dailydozen.model.Day;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -72,8 +72,8 @@ public class DateUtil {
                 .format(getCalendarForYearAndMonth(2016, monthNumberOneBased - 1).getTime());
     }
 
-    public static LocalDateTime convertDateToDateTime(final Date date) {
-        return date != null ? LocalDateTime.ofInstant(date.toInstant(), TimeZone.getDefault().toZoneId()) : null;
+    public static LocalDate convertToLocalDate(final Date date) {
+        return date != null ? date.toInstant().atZone(TimeZone.getDefault().toZoneId()).toLocalDate() : null;
     }
 
     public static Date convertDayToDate(final Day day) {
