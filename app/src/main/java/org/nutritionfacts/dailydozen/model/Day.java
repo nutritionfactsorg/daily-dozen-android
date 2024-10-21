@@ -23,7 +23,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.TimeZone;
 
 import timber.log.Timber;
 
@@ -79,13 +78,13 @@ public class Day extends TruncatableModel {
     }
 
     public static LocalDate getToday() {
-        return LocalDate.now(TimeZone.getDefault().toZoneId());
+        return LocalDate.now();
     }
 
     // This method is used for scheduling the reinitialization of the DailyDozenPagerAdapter
     public static long getMillisUntilMidnight() {
         final LocalDate tomorrow = getToday().plusDays(1);
-        return LocalDateTime.now(TimeZone.getDefault().toZoneId()).until(tomorrow.atStartOfDay(), ChronoUnit.MILLIS);
+        return LocalDateTime.now().until(tomorrow.atStartOfDay(), ChronoUnit.MILLIS);
     }
 
     public LocalDate getDate() {
