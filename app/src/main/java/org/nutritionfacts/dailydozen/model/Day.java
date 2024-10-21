@@ -21,13 +21,15 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 import timber.log.Timber;
 
 @Table(name = "dates")
 public class Day extends TruncatableModel {
+    public static final DateTimeFormatter formatYMD = DateTimeFormatter.ofPattern("uuuuMMdd");
+    public static final DateTimeFormatter formatTabTitle = DateTimeFormatter.ofPattern("E, MMM d");
+
     @Column(name = "date", unique = true, index = true)
     private long date;
 
@@ -136,11 +138,11 @@ public class Day extends TruncatableModel {
     @NonNull
     @Override
     public String toString() {
-        return getDate().format(DateTimeFormatter.ofPattern("E, MMM d", Locale.getDefault()));
+        return getDate().format(formatTabTitle);
     }
 
     public String getDayOfWeek() {
-        return getDate().format(DateTimeFormatter.ofPattern("D (E)", Locale.getDefault()));
+        return getDate().format(DateTimeFormatter.ofPattern("D (E)"));
     }
 
     public static Day getByDate(String dateString) throws InvalidDateException {
@@ -153,14 +155,14 @@ public class Day extends TruncatableModel {
                 .executeSingle();
 
         if (day == null) {
-            day = new Day(LocalDate.parse(dateString, DateTimeFormatter.ofPattern("uuuuMMdd")));
+            day = new Day(LocalDate.parse(dateString, formatYMD));
         }
 
         return day;
     }
 
     public static Day createDay(final String dateString) {
-        return createDayIfDoesNotExist(new Day(LocalDate.parse(dateString, DateTimeFormatter.ofPattern("uuuuMMdd"))));
+        return createDayIfDoesNotExist(new Day(LocalDate.parse(dateString, formatYMD)));
     }
 
     public static Day createDayIfDoesNotExist(final String dateString) throws InvalidDateException {
@@ -273,7 +275,7 @@ public class Day extends TruncatableModel {
     }
 
     public static String getTabTitleForDay(int daysSinceEpoch) {
-        return LocalDate.ofEpochDay(daysSinceEpoch).format(DateTimeFormatter.ofPattern("E, MMM d", Locale.getDefault()));
+        return LocalDate.ofEpochDay(daysSinceEpoch).format(formatTabTitle);
     }
 
     public static boolean isToday(final Day day) {
