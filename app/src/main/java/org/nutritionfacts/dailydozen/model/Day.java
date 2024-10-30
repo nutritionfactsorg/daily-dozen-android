@@ -142,7 +142,7 @@ public class Day extends TruncatableModel {
     }
 
     public String getDayOfWeek() {
-        return getDate().format(DateTimeFormatter.ofPattern("D (E)"));
+        return getDate().format(DateTimeFormatter.ofPattern("d (E)"));
     }
 
     public static Day getByDate(String dateString) throws InvalidDateException {
