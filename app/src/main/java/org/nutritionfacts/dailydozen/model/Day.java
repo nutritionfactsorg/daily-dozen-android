@@ -14,7 +14,6 @@ import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -97,38 +96,8 @@ public class Day extends TruncatableModel {
         this.date = Long.parseLong(getDateString(date));
 
         this.year = date.getYear();
-        this.month = getMonthNum(date.getMonth());
+        this.month = date.getMonthValue();
         this.day = date.getDayOfMonth();
-    }
-
-    private static int getMonthNum(final Month month) {
-        switch (month) {
-            case JANUARY:
-                return 1;
-            case FEBRUARY:
-                return 2;
-            case MARCH:
-                return 3;
-            case APRIL:
-                return 4;
-            case MAY:
-                return 5;
-            case JUNE:
-                return 6;
-            case JULY:
-                return 7;
-            case AUGUST:
-                return 8;
-            case SEPTEMBER:
-                return 9;
-            case OCTOBER:
-                return 10;
-            case NOVEMBER:
-                return 11;
-            case DECEMBER:
-                return 12;
-        }
-        return 0;
     }
 
     public long getDateLong() {
@@ -218,7 +187,7 @@ public class Day extends TruncatableModel {
         final List<Day> daysInYearAndMonth = new ArrayList<>(32);
 
         final LocalDate today = getToday();
-        boolean isCurrentMonth = today.getYear() == year && getMonthNum(today.getMonth()) == monthOneBased;
+        boolean isCurrentMonth = today.getYear() == year && today.getMonthValue() == monthOneBased;
 
         try {
             for (int i = 1; i < 32; i++) {
