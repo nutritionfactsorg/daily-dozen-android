@@ -53,7 +53,7 @@ android {
         }
     }
 
-    flavorDimensions "store"
+    flavorDimensions = ["store"]
     productFlavors {
         play {
             dimension "store"
