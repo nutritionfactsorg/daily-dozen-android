@@ -59,10 +59,10 @@ public class DDServings extends TruncatableModel implements Servings {
     }
 
     public void recalculateStreak() {
-        if (servings == food.getRecommendedAmount()) {
-            streak = getStreakFromDayBefore() + 1;
-        } else if (servings < food.getRecommendedAmount()) {
+        if (servings < food.getRecommendedAmount()) {
             streak = 0;
+        } else {
+            streak = getStreakFromDayBefore() + 1;
         }
     }
 

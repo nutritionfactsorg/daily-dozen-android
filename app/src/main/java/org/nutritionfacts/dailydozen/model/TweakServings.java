@@ -58,10 +58,10 @@ public class TweakServings extends TruncatableModel implements Servings {
     }
 
     public void recalculateStreak() {
-        if (servings == tweak.getRecommendedAmount()) {
-            streak = getStreakFromDayBefore() + 1;
-        } else if (servings < tweak.getRecommendedAmount()) {
+        if (servings < tweak.getRecommendedAmount()) {
             streak = 0;
+        } else {
+            streak = getStreakFromDayBefore() + 1;
         }
     }
 
