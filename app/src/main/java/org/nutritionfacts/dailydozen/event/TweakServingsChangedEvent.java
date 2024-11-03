@@ -1,16 +1,16 @@
 package org.nutritionfacts.dailydozen.event;
 
 public class TweakServingsChangedEvent extends BaseEvent {
-    private final String dateString;
+    private final long dateLong;
     private final String tweakName;
 
-    public TweakServingsChangedEvent(String dateString, String tweakName) {
-        this.dateString = dateString;
+    public TweakServingsChangedEvent(long dateLong, String tweakName) {
+        this.dateLong = dateLong;
         this.tweakName = tweakName;
     }
 
-    public String getDateString() {
-        return dateString;
+    public long getDateLong() {
+        return dateLong;
     }
 
     public String getTweakName() {
