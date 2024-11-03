@@ -234,7 +234,7 @@ public class Day extends TruncatableModel {
 
     public List<Day> getDaysAfter() {
         return new Select().from(Day.class)
-                .where("date >= ?", getDateString(getDate()))
+                .where("date >= ?", date)
                 .orderBy("date ASC")
                 .execute();
     }
