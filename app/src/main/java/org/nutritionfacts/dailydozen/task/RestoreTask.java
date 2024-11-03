@@ -40,12 +40,16 @@ public class RestoreTask extends BaseTask<Boolean> {
     private ArrayMap<String, Food> foodLookup;
     private ArrayMap<String, Tweak> tweakLookup;
 
+    private ArrayMap<String, Integer> streakLookup;
+    private Day previousDay = null;
+
     public RestoreTask(ProgressListener progressListener, Uri restoreFileUri, ContentResolver contentResolver) {
         this.progressListener = progressListener;
         this.restoreFileUri = restoreFileUri;
         this.contentResolver = contentResolver;
         foodLookup = new ArrayMap<>();
         tweakLookup = new ArrayMap<>();
+        streakLookup = new ArrayMap<>();
     }
 
     @Override
@@ -166,23 +170,50 @@ public class RestoreTask extends BaseTask<Boolean> {
 
             final Day day = Day.createDay(dayEntries.getDate());
 
+            // all streaks reset if days are not consecutive (indicative of skipped day)
+            boolean resetStreaks = previousDay != null && !day.isOneDayAfter(previousDay);
+
             if (dayEntries.getMorningWeight() != 0 || dayEntries.getEveningWeight() != 0) {
                 Weights.createWeights(day, dayEntries.getMorningWeight(), dayEntries.getEveningWeight());
             }
 
             for (Map.Entry<String, Integer> entry : dayEntries.getDailyDozen().entrySet()) {
-                if (entry.getValue() > 0) {
-                    DDServings.createServings(day, getFoodByIdName(entry.getKey()), entry.getValue());
+                final String name = entry.getKey();
+                final Integer servings = entry.getValue();
+
+                Food food = getFoodByIdName(name);
+
+                if (resetStreaks || servings < food.getRecommendedAmount()) {
+                    resetStreak(name);
+                } else {
+                    increaseStreak(name);
+                }
+
+                if (servings > 0) {
+                    DDServings.createServingsWithStreak(day, food, servings, getStreak(name));
                 }
             }
 
             for (Map.Entry<String, Integer> entry : dayEntries.getTweaks().entrySet()) {
-                if (entry.getValue() > 0) {
-                    TweakServings.createServings(day, getTweakByIdName(entry.getKey()), entry.getValue());
+                final String name = entry.getKey();
+                final Integer servings = entry.getValue();
+
+                Tweak tweak = getTweakByIdName(name);
+
+                if (resetStreaks || servings < tweak.getRecommendedAmount()) {
+                    resetStreak(name);
+                } else {
+                    increaseStreak(name);
+                }
+
+                if (servings > 0) {
+                    TweakServings.createServingsWithStreak(day, tweak, servings, getStreak(name));
                 }
             }
 
             ActiveAndroid.setTransactionSuccessful();
+
+            previousDay = day;
         } catch (JsonSyntaxException e) {
             Timber.e(e, "restoreLineJSON: ");
         } finally {
@@ -204,5 +235,20 @@ public class RestoreTask extends BaseTask<Boolean> {
         }
 
         return tweakLookup.get(tweakIdName);
+    }
+
+    private Integer getStreak(String name) {
+        if (!streakLookup.containsKey(name)) {
+            resetStreak(name);
+        }
+        return streakLookup.get(name);
+    }
+
+    private void increaseStreak(String name) {
+        streakLookup.put(name, getStreak(name) + 1);
+    }
+
+    private void resetStreak(String name) {
+        streakLookup.put(name, 0);
     }
 }

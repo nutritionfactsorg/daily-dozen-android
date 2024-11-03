@@ -251,6 +251,10 @@ public class Day extends TruncatableModel {
         return day.getDate().equals(getToday());
     }
 
+    public boolean isOneDayAfter(final Day olderDate) {
+        return getDate().equals(olderDate.getDate().plusDays(1));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

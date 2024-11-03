@@ -81,6 +81,10 @@ public class DDServings extends TruncatableModel implements Servings {
         return streak;
     }
 
+    public void setStreak(int streak) {
+        this.streak = streak;
+    }
+
     @NonNull
     @Override
     public String toString() {
@@ -99,8 +103,13 @@ public class DDServings extends TruncatableModel implements Servings {
     }
 
     public static DDServings createServings(final Day day, final Food food, final int numServings) {
+        return createServingsWithStreak(day, food, numServings, 0);
+    }
+
+    public static DDServings createServingsWithStreak(final Day day, final Food food, final int numServings, final int streak) {
         DDServings servings = new DDServings(day, food);
         servings.setServings(numServings);
+        servings.setStreak(streak);
         servings.save();
         return servings;
     }
