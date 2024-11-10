@@ -50,7 +50,7 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
         ViewHolder(ReminderTimeBinding binding) {
             super(binding.getRoot());
             reminderTime = binding.reminderTime;
-            binding.reminderDelete.setOnClickListener(v -> Bus.reminderRemovedEvent(getAdapterPosition()));
+            binding.reminderDelete.setOnClickListener(v -> Bus.reminderRemovedEvent(getBindingAdapterPosition()));
         }
     }
 }
