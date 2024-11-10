@@ -66,6 +66,7 @@ public class TweaksFragment extends Fragment {
 
                 initBackToTodayButton();
 
+                binding.headerTweaks.setDate(day);
                 binding.headerTweaks.setServings(TweakServings.getTotalTweakServingsOnDate(day));
 
                 binding.dateWeights.setDay(day);

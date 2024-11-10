@@ -70,6 +70,7 @@ public class DailyDozenFragment extends Fragment {
 
                 initBackToTodayButton();
 
+                binding.dateServings.setDate(day);
                 binding.dateServings.setServings(DDServings.getTotalServingsOnDate(day));
 
                 final Context context = getContext();

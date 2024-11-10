@@ -243,10 +243,6 @@ public class Day extends TruncatableModel {
         return new Day(LocalDate.ofEpochDay(daysSinceEpoch));
     }
 
-    public static String getTabTitleForDay(int daysSinceEpoch) {
-        return LocalDate.ofEpochDay(daysSinceEpoch).format(formatTabTitle);
-    }
-
     public static boolean isToday(final Day day) {
         return day.getDate().equals(getToday());
     }

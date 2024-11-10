@@ -13,9 +13,8 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
-import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
@@ -72,7 +71,6 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         setContentView(binding.getRoot());
 
         initDatePager();
-        initDatePagerIndicator();
 
         calculateStreaksAfterDatabaseUpgradeToV2();
 
@@ -268,22 +266,13 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         // Record user's current date selection (value is 0 when unset)
         int origDate = binding.datePager.getCurrentItem();
 
-        final FragmentStatePagerAdapter pagerAdapter;
-
-        pagerAdapter = new DatePagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, inDailyDozenMode);
+        final FragmentStateAdapter pagerAdapter = new DatePagerAdapter(getSupportFragmentManager(), getLifecycle(), inDailyDozenMode);
 
         binding.datePager.setAdapter(pagerAdapter);
-        daysSinceEpoch = pagerAdapter.getCount();
+        daysSinceEpoch = pagerAdapter.getItemCount();
 
         // Maintain user's selected date when switching adapters
         binding.datePager.setCurrentItem(origDate != 0 ? origDate : daysSinceEpoch, false);
-    }
-
-    private void initDatePagerIndicator() {
-        binding.datePagerIndicator.setTextColor(ContextCompat.getColor(this, android.R.color.white));
-        binding.datePagerIndicator.setBackgroundResource(R.color.colorPrimary);
-        binding.datePagerIndicator.setTabIndicatorColorResource(R.color.colorAccent);
-        binding.datePagerIndicator.setDrawFullUnderline(false);
     }
 
     @Override
