@@ -1,6 +1,5 @@
 package org.nutritionfacts.dailydozen.activity;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,8 +23,6 @@ import timber.log.Timber;
 
 public class DebugActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, ProgressListener {
     private ActivityDebugBinding binding;
-
-    private ProgressDialog progressDialog;
 
     private int historyToGenerate;
 
@@ -144,29 +141,19 @@ public class DebugActivity extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void showProgressBar(int titleId) {
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setIndeterminate(false);
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progressDialog.setTitle(titleId);
-        progressDialog.show();
+        binding.debugProgressBarContainer.setVisibility(View.VISIBLE);
+        binding.debugProgressText.setText(titleId);
+        binding.debugProgressBar.setProgress(0);
     }
 
     @Override
     public void updateProgressBar(int current, int total) {
-        progressDialog.setProgress(current);
-        progressDialog.setMax(total);
+        binding.debugProgressBar.setProgress(current);
+        binding.debugProgressBar.setMax(total);
     }
 
     @Override
     public void hideProgressBar() {
-        try {
-            if (progressDialog != null && progressDialog.isShowing()) {
-                progressDialog.dismiss();
-            }
-        } catch (Exception e) {
-            Timber.e("hideProgressBar: Exception while trying to dismiss progress dialog");
-        } finally {
-            progressDialog = null;
-        }
+        binding.debugProgressBarContainer.setVisibility(View.GONE);
     }
 }

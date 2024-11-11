@@ -1,6 +1,5 @@
 package org.nutritionfacts.dailydozen.activity;
 
-import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,6 +8,7 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     private ActivityMainBinding binding;
-
-    private ProgressDialog progressDialog;
 
     private MenuItem menuToggleModes;
 
@@ -416,29 +414,19 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
 
     @Override
     public void showProgressBar(int titleId) {
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setIndeterminate(false);
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progressDialog.setTitle(titleId);
-        progressDialog.show();
+        binding.progressBarContainer.setVisibility(View.VISIBLE);
+        binding.progressText.setText(titleId);
+        binding.progressBar.setProgress(0);
     }
 
     @Override
     public void updateProgressBar(int current, int total) {
-        progressDialog.setProgress(current);
-        progressDialog.setMax(total);
+        binding.progressBar.setProgress(current);
+        binding.progressBar.setMax(total);
     }
 
     @Override
     public void hideProgressBar() {
-        try {
-            if (progressDialog != null && progressDialog.isShowing()) {
-                progressDialog.dismiss();
-            }
-        } catch (Exception e) {
-            Timber.e("hideProgressBar: Exception while trying to dismiss progress dialog");
-        } finally {
-            progressDialog = null;
-        }
+        binding.progressBarContainer.setVisibility(View.GONE);
     }
 }
