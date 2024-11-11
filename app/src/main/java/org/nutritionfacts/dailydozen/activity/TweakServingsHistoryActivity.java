@@ -1,6 +1,5 @@
 package org.nutritionfacts.dailydozen.activity;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,17 +24,12 @@ import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadHistoryTask;
-import org.nutritionfacts.dailydozen.task.ProgressListener;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 
-import timber.log.Timber;
-
 public class TweakServingsHistoryActivity extends AppCompatActivity
-        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener, ProgressListener {
+        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener {
     private ActivityServingsHistoryBinding binding;
-
-    private ProgressDialog progressDialog;
 
     private boolean alreadyLoadingData;
 
@@ -85,7 +79,7 @@ public class TweakServingsHistoryActivity extends AppCompatActivity
                     binding.dailyServingsHistoryTimeScale.getSelectedTimeScale(),
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
                     binding.dailyServingsHistoryTimeRange.getSelectedMonth());
-            new TaskRunner().executeAsync(new LoadHistoryTask(this, this, loadHistoryTaskParams));
+            new TaskRunner().executeAsync(new LoadHistoryTask(this, loadHistoryTaskParams));
         }
     }
 
@@ -174,33 +168,5 @@ public class TweakServingsHistoryActivity extends AppCompatActivity
     @Override
     public void onNothingSelected() {
 
-    }
-
-    @Override
-    public void showProgressBar(int titleId) {
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setIndeterminate(false);
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progressDialog.setTitle(titleId);
-        progressDialog.show();
-    }
-
-    @Override
-    public void updateProgressBar(int current, int total) {
-        progressDialog.setProgress(current);
-        progressDialog.setMax(total);
-    }
-
-    @Override
-    public void hideProgressBar() {
-        try {
-            if (progressDialog != null && progressDialog.isShowing()) {
-                progressDialog.dismiss();
-            }
-        } catch (Exception e) {
-            Timber.e("hideProgressBar: Exception while trying to dismiss progress dialog");
-        } finally {
-            progressDialog = null;
-        }
     }
 }

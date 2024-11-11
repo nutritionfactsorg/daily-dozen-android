@@ -27,12 +27,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoadWeightsHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
-    private final ProgressListener progressListener;
     private final Context context;
     private final LoadHistoryTaskParams inputParams;
 
-    public LoadWeightsHistoryTask(ProgressListener progressListener, Context context, LoadHistoryTaskParams inputParams) {
-        this.progressListener = progressListener;
+    public LoadWeightsHistoryTask(Context context, LoadHistoryTaskParams inputParams) {
         this.context = context;
         this.inputParams = inputParams;
     }
@@ -44,13 +42,10 @@ public class LoadWeightsHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
 
     @Override
     public void setUiForLoading() {
-        progressListener.showProgressBar(R.string.task_loading_servings_history_title);
     }
 
     @Override
     public void setDataAfterLoading(LoadHistoryCompleteEvent event) {
-        progressListener.hideProgressBar();
-
         Bus.loadHistoryCompleteEvent(event);
     }
 
@@ -108,8 +103,6 @@ public class LoadWeightsHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
                 lineEntry.setData(DateUtil.convertDayToDate(day));
                 lineEntries.add(lineEntry);
             }
-
-            progressListener.updateProgressBar(i + 1, numDaysOfHistory);
         }
 
         final LoadHistoryCompleteEvent weightHistory = createCompleteEvent(createLineAndBarData(xLabels, lineEntries, barEntries));
