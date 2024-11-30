@@ -13,9 +13,7 @@ import com.activeandroid.query.Select;
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -80,12 +78,6 @@ public class Day extends TruncatableModel {
 
     public static LocalDate getToday() {
         return LocalDate.now();
-    }
-
-    // This method is used for scheduling the reinitialization of the DailyDozenPagerAdapter
-    public static long getMillisUntilMidnight() {
-        final LocalDate tomorrow = getToday().plusDays(1);
-        return LocalDateTime.now().until(tomorrow.atStartOfDay(), ChronoUnit.MILLIS);
     }
 
     public LocalDate getDate() {

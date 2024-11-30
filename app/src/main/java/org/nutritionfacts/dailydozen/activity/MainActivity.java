@@ -4,7 +4,6 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -52,9 +51,6 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     private ActivityMainBinding binding;
 
     private MenuItem menuToggleModes;
-
-    private Handler dayChangeHandler;
-    private Runnable dayChangeRunnable;
 
     private int daysSinceEpoch;
 
@@ -111,19 +107,12 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
 
         NotificationUtil.dismissUpdateReminderNotification(this);
 
-        // If the app is sent to the background and brought back to the foreground the next day, a crash results when
-        // the adapter is found to return a different value from getCount() without notifyDataSetChanged() having been
-        // called first. This is an attempt to fix that, but I am not sure that it works.
-        // This bug was found by entering some data before bed and then bringing the app back to the foreground in the
-        // morning to enter data. The app crashed immediately.
-        // Solutions tried: datePagerAdapter.notifyDataSetChanged() did not work
+        // If the app is sent to the background and brought back to the foreground the next day,
+        // this code will change to today's date.
         if (daysSinceEpoch < Day.getNumDaysSinceEpoch()) {
-            // Reset user selection so today's date is selected
-            binding.datePager.setCurrentItem(0);
             initDatePager();
+            Bus.displayLatestDate();
         }
-
-        startDayChangeHandler();
 
         checkIfOpenedForRestore(getIntent());
     }
@@ -132,8 +121,6 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     protected void onPause() {
         super.onPause();
         Bus.unregister(this);
-
-        stopDayChangeHandler();
     }
 
     @Override
@@ -376,27 +363,6 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         if (event.isSuccess()) {
             Prefs.getInstance(this).setStreaksHaveBeenCalculatedAfterDatabaseUpgradeToV2();
             initDatePager();
-        }
-    }
-
-    private void startDayChangeHandler() {
-        if (dayChangeRunnable == null) {
-            dayChangeRunnable = () -> {
-                initDatePager();
-                startDayChangeHandler();
-            };
-        }
-
-        stopDayChangeHandler();
-
-        dayChangeHandler = new Handler();
-        dayChangeHandler.postDelayed(dayChangeRunnable, Day.getMillisUntilMidnight());
-    }
-
-    private void stopDayChangeHandler() {
-        if (dayChangeHandler != null && dayChangeRunnable != null) {
-            dayChangeHandler.removeCallbacks(dayChangeRunnable);
-            dayChangeHandler = null;
         }
     }
 
