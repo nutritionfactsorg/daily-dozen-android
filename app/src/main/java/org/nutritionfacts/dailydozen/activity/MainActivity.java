@@ -394,5 +394,6 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     @Override
     public void hideProgressBar() {
         binding.progressBarContainer.setVisibility(View.GONE);
+        this.recreate();
     }
 }
