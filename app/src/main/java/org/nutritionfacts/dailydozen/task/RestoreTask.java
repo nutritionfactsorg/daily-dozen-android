@@ -37,10 +37,10 @@ public class RestoreTask extends BaseTask<Boolean> {
     private final ContentResolver contentResolver;
 
     private String[] headers;
-    private ArrayMap<String, Food> foodLookup;
-    private ArrayMap<String, Tweak> tweakLookup;
+    private final ArrayMap<String, Food> foodLookup;
+    private final ArrayMap<String, Tweak> tweakLookup;
 
-    private ArrayMap<String, Integer> streakLookup;
+    private final ArrayMap<String, Integer> streakLookup;
     private Day previousDay = null;
 
     public RestoreTask(ProgressListener progressListener, Uri restoreFileUri, ContentResolver contentResolver) {

@@ -5,9 +5,9 @@ import com.github.mikephil.charting.data.CombinedData;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 
 public class LoadHistoryCompleteEvent extends BaseEvent {
-    private CombinedData chartData;
+    private final CombinedData chartData;
     @TimeScale.Interface
-    private int timeScale;
+    private final int timeScale;
     private float minVal;
     private float maxVal;
 

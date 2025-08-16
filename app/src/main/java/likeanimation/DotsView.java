@@ -34,7 +34,7 @@ public class DotsView extends View {
     private float currentDotSize2 = 0;
     private float currentRadius2 = 0;
 
-    private ArgbEvaluator argbEvaluator = new ArgbEvaluator();
+    private final ArgbEvaluator argbEvaluator = new ArgbEvaluator();
 
     public DotsView(Context context) {
         super(context);

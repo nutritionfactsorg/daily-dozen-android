@@ -14,7 +14,7 @@ import org.nutritionfacts.dailydozen.Common;
 import java.util.List;
 
 public class FoodServingsAdapter extends RecyclerView.Adapter<FoodServingsAdapter.ViewHolder> {
-    private List<String> servingSizes;
+    private final List<String> servingSizes;
 
     public FoodServingsAdapter(List<String> servingSizes) {
         this.servingSizes = servingSizes;
@@ -51,7 +51,7 @@ public class FoodServingsAdapter extends RecyclerView.Adapter<FoodServingsAdapte
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView servingSize;
+        final TextView servingSize;
 
         ViewHolder(View itemView) {
             super(itemView);

@@ -1,8 +1,8 @@
 package org.nutritionfacts.dailydozen.task.params;
 
 public class GenerateDataTaskParams {
-    private int historyToGenerate;
-    private boolean generateRandomData;
+    private final int historyToGenerate;
+    private final boolean generateRandomData;
 
     public GenerateDataTaskParams(int historyToGenerate, boolean generateRandomData) {
         this.historyToGenerate = historyToGenerate;

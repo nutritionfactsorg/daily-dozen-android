@@ -1,7 +1,7 @@
 package org.nutritionfacts.dailydozen.event;
 
 public class ReminderRemovedEvent extends BaseEvent {
-    private int adapterPosition;
+    private final int adapterPosition;
 
     public ReminderRemovedEvent(int adapterPosition) {
         this.adapterPosition = adapterPosition;
