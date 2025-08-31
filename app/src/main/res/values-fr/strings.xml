@@ -24,7 +24,7 @@
     <string name="moving_average">Moyenne mobile</string>
     <string name="about">À propos</string>
     <string name="about_this_app">À propos de cette app</string>
-    <string name="about_translators">Remerciements particuliers à nos traducteurs bénévoles: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Remerciements particuliers à nos traducteurs bénévoles: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Dernières vidéos</string>
     <string name="donate">Faire un don</string>
     <string name="subscribe">Souscrire</string>
@@ -216,7 +216,6 @@
         <item>Haricots lingots</item>
         <item>Haricots rouges</item>
         <item>Lentilles (beluga, vertes, corail)</item>
-        <item>Miso</item>
         <item>Haricots blancs</item>
         <item>Haricots coco</item>
         <item>Petits haricots rouges</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Amandes</item>
-        <item>Noix du Brésil</item>
         <item>Noix de cajou</item>
         <item>Graines de chia</item>
         <item>Noisettes</item>
@@ -388,7 +386,6 @@
         <item>Thé Earl Grey</item>
         <item>Thé vert</item>
         <item>Infusion d\'hibiscus</item>
-        <item>Chocolat chaud</item>
         <item>Thé au jasmin</item>
         <item>Infusion de mélisse</item>
         <item>Thé Matcha</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ tasse de houmous ou autre crème de haricots</item>
         <item>½ tasse de haricots cuits, pois cassés ou lentilles</item>
-        <item>½ tasse de tofu ou tempeh</item>
-        <item>1 tasse de petits pois ou pois mangetout</item>
-        <item>1 tasse de lentilles ou fèves germées</item>
+        <item>⅓ tasse de tofu ou tempeh</item>
+        <item>1 tasse de petits pois ou lentilles germées</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g de houmous ou autre crème de haricots</item>
-        <item>90 g de haricots cuits, pois cassés ou lentilles</item>
-        <item>100 g de tofu ou tempeh</item>
-        <item>130 g de petits pois ou pois mangetout</item>
-        <item>100 g de lentilles ou fèves germées</item>
+        <item>70 g de houmous ou autre crème de haricots</item>
+        <item>100 g de haricots cuits, pois cassés ou lentilles</item>
+        <item>80 g de tofu ou tempeh</item>
+        <item>100 g de petits pois ou lentilles germées</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ tasse fraîches ou congelées</item>
         <item>¼ tasse séchées</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g fraîches ou congelées</item>
+        <item>70 g fraîches ou congelées</item>
         <item>40 g séchées</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 fruit de taille moyenne</item>
-        <item>120 g de fruits coupés</item>
+        <item>150 g de fruits coupés</item>
         <item>40 g de fruits secs</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ tasse hachés</item>
-        <item>½ tasse de choux de Bruxelles</item>
+        <item>½ tasse de légumes-feuilles cuits</item>
+        <item>½ tasse de légumes sans feuilles crus ou cuits</item>
+        <item>1 tasse de légumes-feuilles crus</item>
         <item>¼ tasse de pousses de brocoli</item>
         <item>1 cuillère à soupe de raifort</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g hachés</item>
-        <item>80 g de choux de Bruxelles</item>
-        <item>15 g de pousses de brocoli</item>
+        <item>90 g de légumes-feuilles cuits</item>
+        <item>60 g de légumes sans feuilles crus ou cuits</item>
+        <item>90 g de légumes-feuilles crus</item>
+        <item>20 g de pousses de brocoli</item>
         <item>1 cuillère à soupe de raifort</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -515,8 +512,8 @@
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g de légumes feuillus crus</item>
         <item>50 g de légumes non feuillus crus ou cuits</item>
-        <item>125 ml de jus de légumes</item>
-        <item>7 g de champignons séchés</item>
+        <item>120 ml de jus de légumes</item>
+        <item>10 g de champignons séchés</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 cuillère à soupe moulues</item>
@@ -541,16 +538,18 @@
         <item>Toutes autres épices et herbes aromatiques (sans sel) que vous aimez</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ tasse de céréales cuites ou pâtes</item>
-        <item>1 tasse de céréales froides</item>
-        <item>1 tortilla ou tranche de pain</item>
+        <item>½ tasse de céréales ou pâtes complètes cuites, ou de maïs en grain</item>
+        <item>1 tasse de céréales complètes froides</item>
+        <item>1 tortilla wrap de farine complète (ou 2 tortillas de maïs plus petites)</item>
+        <item>1 tranche de pain complet</item>
         <item>½ bagel ou muffin anglais</item>
         <item>3 tasses de pop-corn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g de céréales cuites ou pâtes</item>
-        <item>50 g de céréales froides</item>
-        <item>1 tortilla ou tranche de pain</item>
+        <item>100 g de céréales ou pâtes complètes cuites, ou de maïs en grain</item>
+        <item>50 g de céréales complètes froides</item>
+        <item>1 tortilla wrap de farine complète (ou 2 tortillas de maïs plus petites)</item>
+        <item>1 tranche de pain complet</item>
         <item>½ bagel ou muffin anglais</item>
         <item>30 g de pop-corn</item>
     </string-array>

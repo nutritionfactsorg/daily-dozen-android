@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<resources>
+    <string name="app_name">Napi tucat</string>
+    <string name="beans">Babfélék</string>
+    <string name="berries">Bogyós gyümölcsök</string>
+    <string name="other_fruits">Egyéb gyümölcsök</string>
+    <string name="cruciferous_vegetables">Keresztes virágú zöldségek</string>
+    <string name="greens">Zöldek</string>
+    <string name="other_vegetables">Egyéb zöldségek</string>
+    <string name="flaxseeds">Lenmag</string>
+    <string name="nuts">Diófélék és magvak</string>
+    <string name="spices">Gyógynövények és fűszerek</string>
+    <string name="whole_grains">Teljes kiőrlésű gabonák</string>
+    <string name="beverages">Italok</string>
+    <string name="exercise">Testmozgás</string>
+    <string name="vitamin_b12">B12 vitamin</string>
+    <string name="serving_sizes">Adagok mérete</string>
+    <string name="types">Típusok</string>
+    <string name="history">Előzmények</string>
+    <string name="servings_some">Néhány adag</string>
+    <string name="servings_all">Minden adag</string>
+    <string name="servings">Adagok</string>
+    <string name="out_of">Kívül</string>
+    <string name="moving_average">Mozgóátlag</string>
+    <string name="about">Az alkalmazásról</string>
+    <string name="about_this_app">Erről az alkalmazásról</string>
+    <string name="about_translators">Külön köszönet önkéntes fordítóinknak: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="latest_videos">Legújabb videók</string>
+    <string name="donate">Adományozz</string>
+    <string name="subscribe">Iratkozz fel</string>
+    <string name="open_source">Nyílt forráskód</string>
+    <string name="permission_needed_to_write_storage">Nem lehet biztonsági másolatot készíteni, ha a tárhelyre írás nincs engedélyezve</string>
+    <string name="backup_failed">A biztonsági mentés nem sikerült</string>
+    <string name="restore_failed">A visszaállítás nem sikerült</string>
+    <string name="backup_success">A biztonsági mentés sikeres</string>
+    <string name="restore_success">Sikeres visszaállítás</string>
+    <string name="restore_confirm_title">Biztonsági másolat visszaállítása</string>
+    <string name="restore_confirm_message">A biztonsági mentés visszaállítása előtt minden adat törlődik. Szeretné folytatni?</string>
+    <string name="yes">Igen</string>
+    <string name="no">Nem</string>
+    <string name="backup">Biztonsági mentés</string>
+    <string name="food_info">Élelmiszer Infó</string>
+    <string name="food_history">Élelmiszer előzmények</string>
+    <string name="daily_servings_history">Napi adagok előzményei</string>
+    <string name="no_servings_recorded">Még nem adtál meg egyetlen adagot sem!</string>
+    <string name="task_backup_title">Biztonsági mentés</string>
+    <string name="task_restore_title">Helyreállítás</string>
+    <string name="task_calculating_streaks_title">Szériák kiszámítása</string>
+    <string name="back_to_today">Vissza a mai naphoz</string>
+    <string name="debug">Hibakeresés</string>
+    <string name="debug_clear_data">Minden adat törlése</string>
+    <string name="debug_clear_data_message">Ezzel törli az összes megadott étkezést. Szeretné folytatni?</string>
+    <string name="OK">OK</string>
+    <string name="dialog_streaks_title">Új funkció: Szériák!</string>
+    <string name="dialog_streaks_message">Az adatbázisa most frissítésre kerül, hogy támogassa az új Strigulák funkciót.</string>
+    <string name="dialog_no_email_apps_title">Nem található e-mail alkalmazás</string>
+    <string name="dialog_no_email_apps_message">Az adatok biztonsági mentéséhez telepítenie kell egy e-mail alkalmazást, így elküldheti magának a biztonsági másolatot. Kérjük, telepítsen egy e-mail alkalmazást és próbálja újra.</string>
+    <string name="debug_generate_random_data">Véletlenszerű adatokat generál</string>
+    <string name="debug_generate_full_data">Minden adat generálása</string>
+    <string name="debug_generate_data_message">Minden meglévő adat felülírása. Szeretné folytatni?</string>
+    <string name="task_generating_random_data">Véletlenszerű adatok generálása</string>
+    <string name="task_loading_servings_history_title">Keresési előzmények betöltése</string>
+    <string name="time_scale">Időskála</string>
+    <string name="history_to_generate">Előzmények létrehozása</string>
+    <string name="welcome_to_my_daily_dozen">Üdvözöljük a személyes Napi Tucat oldalán!</string>
+    <string name="activity_welcome_text">Használja ezt az alkalmazást naponta! Így könnyedén követheti a tanácsaimat és fogyaszthatja az általam ajánlott élelmiszereket, amelyeket az optimális egészség és a hosszú élet eléréséhez ajánlok a Hogy ne halj meg és a Hogyan ne diétázz című könyveimben.</string>
+    <string name="dialog_ask_user_to_rate_app_title">Tetszik ez az alkalmazás?</string>
+    <string name="dialog_ask_user_to_rate_app_message">Kérjük, írjon visszajelzést a Play Áruházban.</string>
+    <string name="rate_now">Visszajelzés küldése</string>
+    <string name="not_now">Most nem</string>
+    <string name="format_version">%s verzió</string>
+    <string name="format_num_days">%d nap</string>
+    <string name="daily_reminder_title">Napi Tucat emlékeztető</string>
+    <string name="daily_reminder_text">Mai adagok megadása</string>
+    <string name="daily_reminder_settings">Napi emlékeztető beállításai</string>
+    <string name="enable_daily_reminder">Napi emlékeztető engedélyezése</string>
+    <string name="remind_me_at">Emlékeztessen ekkor:</string>
+    <string name="videos">Videók</string>
+    <string name="units">Mértékegységek</string>
+    <string name="imperial">Angolszász</string>
+    <string name="metric">Metrikus</string>
+    <string name="error_cannot_handle_url">Nem sikerült megnyitni az url-t. Kérjük, telepítsen egy böngészőt.</string>
+    <string name="channel_reminders_name">Emlékeztetők</string>
+    <string name="twenty_one_tweaks">21 Trükk</string>
+    <string name="tweaks">Trükkök</string>
+    <string name="daily_tweaks_history">Napi Trükkök előzményei</string>
+    <string name="weight_history">Súlytörténet</string>
+    <string name="no_weights_recorded">Még nem adtál meg egyetlen súlyadatot sem!</string>
+    <string name="task_loading_weights_history_title">Súly előzmények betöltése</string>
+    <string name="morning">Reggel</string>
+    <string name="evening">Este</string>
+    <string name="meal_water">Étkezés előtt igyon vizet</string>
+    <string name="meal_negcal">„Negatív kalóriatartalmú” ételek előtöltése</string>
+    <string name="meal_vinegar">Adjunk hozzá ecetet (2 tk minden étkezéshez)</string>
+    <string name="meal_undistracted">Élvezze zavartalanul az étkezést</string>
+    <string name="meal_twentyminutes">Kövesse a húszperces szabályt</string>
+    <string name="daily_blackcumin">Fekete kömény (¼ teáskanál)</string>
+    <string name="daily_garlic">Fokhagyma por (¼ teáskanál)</string>
+    <string name="daily_ginger">Őrölt gyömbér (1 teáskanál) vagy cayenne bors (½ teáskanál)</string>
+    <string name="daily_nutriyeast">Étkezési sörélesztőpehely (2 teáskanál)</string>
+    <string name="daily_cumin">Római kömény (½ teáskanál ebédhez és vacsorához)</string>
+    <string name="daily_greentea">Zöld tea (3 csésze)</string>
+    <string name="daily_hydrate">Hidratáljon</string>
+    <string name="daily_deflourdiet">Lisztmentesítse az étrendjét</string>
+    <string name="daily_frontload">Kalóriák előtöltése a nap korábbi szakaszában.</string>
+    <string name="daily_timerestrict">Időablakos étkezés</string>
+    <string name="exercise_timing">Eddzen optimális időben</string>
+    <string name="weigh_twice">Mérje meg a súlyát naponta kétszer</string>
+    <string name="complete_intentions">Megvalósítási tervek végrehajtása</string>
+    <string name="nightly_fast">Böjtöljön 19:00 után</string>
+    <string name="nightly_sleep">Aludjon eleget</string>
+    <string name="nightly_trendelenburg">Kísérletezzen Enyhe Trendelenburggal</string>
+    <string name="debug_generate_weight_data">Súlyadatokat generál</string>
+    <string name="average_weight_on_day">Átlagos napi súly</string>
+    <string name="meal_water_short">Étkezés előtt igyon vizet</string>
+    <string name="meal_negcal_short">„Negatív kalóriatartalmú” ételek előtöltése</string>
+    <string name="meal_vinegar_short">Adjunk hozzá ecetet (2 tk minden étkezéshez)</string>
+    <string name="meal_undistracted_short">Élvezze zavartalanul az étkezést</string>
+    <string name="meal_twentyminutes_short">Kövesse a húszperces szabályt</string>
+    <string name="daily_blackcumin_short">Fekete kömény (Nigella sativa) (¼ tk)</string>
+    <string name="daily_garlic_short">Fokhagyma por (¼ teáskanál)</string>
+    <string name="daily_ginger_short">Őrölt gyömbér (1 teáskanál) vagy cayenne bors (½ teáskanál)</string>
+    <string name="daily_nutriyeast_short">Étkezési sörélesztőpehely (2 teáskanál)</string>
+    <string name="daily_cumin_short">Római kömény (Cuminum cyminum) (½ teáskanál ebédhez és vacsorához)</string>
+    <string name="daily_greentea_short">Zöld tea (3 csésze)</string>
+    <string name="daily_hydrate_short">Hidratáljon</string>
+    <string name="daily_deflourdiet_short">Lisztmentesítse az étrendjét</string>
+    <string name="daily_frontload_short">Kalóriák előtöltése a nap korábbi szakaszában.</string>
+    <string name="daily_timerestrict_short">Időablakos étkezés</string>
+    <string name="exercise_timing_short">Eddzen optimális időben</string>
+    <string name="weigh_twice_short">Mérje meg a súlyát naponta kétszer</string>
+    <string name="complete_intentions_short">Megvalósítási tervek végrehajtása</string>
+    <string name="nightly_fast_short">Böjtöljön 19:00 után</string>
+    <string name="nightly_sleep_short">Aludjon eleget</string>
+    <string name="nightly_trendelenburg_short">Kísérletezzen Enyhe Trendelenburggal</string>
+    <string name="meal_water_text">Minden étkezés előtt ütemezzen be két csésze hideg vagy hűvös ízesítetlen vizet. Ezzel egyszerre serkenti az anyagcserét, és kihasználja az előtöltés előnyeit.</string>
+    <string name="meal_negcal_text">Minden étkezés első fogása egy alma legyen, vagy egy olyan Zöld Lámpás leves vagy saláta, amely csészénként száznál kevesebb kalóriát tartalmaz.</string>
+    <string name="meal_vinegar_text">Soha ne igyon ecetet közvetlenül. Használja az ételek ízesítésére, vagy fogyasszon köretként salátát és a különféle ecetek bármelyikével készítsen hozzá öntetet. Ha az ecetet italként fogyasztaná, akkor feltétlenül keverje el egy pohár vízben, és utána alaposan öblítse ki a száját, hogy megvédje a fogzománcot a károsodástól.</string>
+    <string name="meal_undistracted_text">Ne nézzen tévét, ne játsszon a telefonján evés közben. Adjon magának egy pipát minden étkezés után, amelyet zavartalanul tudott elfogyasztani.</string>
+    <string name="meal_twentyminutes_text">Akár sűrűbb, rágósabb ételek fogyasztásával, akár több rágással, akár kisebb harapásokkal és lassabb étkezéssel érjük el, tanulmányok tucatjai bizonyították, hogy ha növeljük az időt, amit az étel a szánkban tölt, az csökkentheti a kalóriabevitelt. Tehát tartson az étkezés legalább húsz percig, hogy a természetes jóllakottság érzése is érvényesüljön. Hogyan? Válasszon olyan ételeket, amelyeknek az elfogyasztása hosszabb ideig tart, és egyen úgy, hogy a falat hosszabb ideig legyen a szájában. Gondoljon darabosabb, keményebb, rágósabb ételekre, amiket kisebb, jól megrágott falatokban fogyaszt el.</string>
+    <string name="daily_blackcumin_text">Ahogy az Étvágycsökkentő szakaszban megjegyeztük, a randomizált, kontrollált súlycsökkentő kísérletek szisztematikus áttekintése és metaanalízise azt találta, hogy naponta körülbelül negyed teáskanál fekete kömény por néhány hónapon belül csökkenti a testtömeg-indexet. Vegye figyelembe, hogy a fekete kömény eltér a hagyományos köménytől, amelynek adagolása eltérő.</string>
+    <string name="daily_garlic_text">Randomizált, kettős-vak, placebóval kontrollált kísérletek arra jutottak, hogy csupán napi negyed teáskanálnyi fokhagymapor csökkenti a testzsírt, minimális költségek mellett.</string>
+    <string name="daily_ginger_text">Randomizált, kontrollált kísérletek arra jutottak, hogy napi negyed - másfél teáskanálnyi gyömbérpor jelentősen csökkenti a testsúlyt, minimális költségek mellett. Egyszerűen csak keverje a gyömbérport egy csészényi meleg vízbe. Megjegyzés: A gyömbér hatásosabb reggel, mint este. A chai teával ízletesen egyesítheti a zöld tea és a gyömbér előnyeit. Tovább fokozhatja a hatást - és egyben aktiválhatja a barna zsírszövetet is - ha egy nyers jalapeño paprikát vagy fél teáskanálnyi chilipaprika port - vagy ugyanennyi chilipelyhet - fogyaszt naponta. A csípősséget csökkenti, ha hajszál vékonyra szeleteli, vagy apróra vágja a jalapeñot, illetve ha levesbe vagy teljes értékű zöldségturmixba keveri a chilit, ahogyan ezt az egyik főzős videómban bemutattam a NutritionFacts.org oldalon.</string>
+    <string name="daily_nutriyeast_text">Két teáskanál sütő-élesztő vagy étkezési sörélesztőpehely nagyjából annyi béta 1,3/1,6-glükánt tartalmaz, amennyit randomizált, kettős vak, placebo-kontrollos klinikai vizsgálatok szerint elősegíti a fogyást.</string>
+    <string name="daily_cumin_text">A véletlenszerűen kiválasztott túlsúlyos nők egy fél teáskanálnyi köményt adtak az ebédjükhöz és a vacsorájukhoz és testsúlyban négy kilogrammal, derékbőségben egy centiméterrel nagyobb fogyást értek el, mint a kontrollcsoport. Bizonyított a fűszersáfrány hatásossága is, de abból egy csipetnyi ~400Ft-ba kerülne, míg egy teáskanál kömény kevesebb, mint 40Ft. (2025-ös árfolyam szerint)</string>
+    <string name="daily_greentea_text">Igyon három csészényi folyadékot az étkezések között (várjon legalább egy órát az étkezés után, hogy ne zavarja a vas felszívódását). Az étkezések alatt igyon vizet, feketekávét, vagy hibiszkusz teát, 6:1 arányban citromverbénával keverve, de soha ne igyon egy órán belül három csészénél többet (ez a víz előtöltési tanácsom miatt fontos). Használja ki a koffein megerősítő hatását, igyon zöld teát, amikor valami olyan egészséges ételt fogyaszt, amit szeretne jobban megkedvelni. Soha ne fogyasszon nagy mennyiségű koffeint a lefekvés előtti hat órában. A tea édesítés nélkül a legjobb, de ha mézzel, vagy cukorral szokta inni, akkor próbálja ki a yaconból (inkagumóból) készült szirupot.</string>
+    <string name="daily_hydrate_text">Jelölje be ezt a négyzetet, ha a vizelete soha nem sötétebb halványsárgánál.\n\nNe feledje, hogy ha riboflavinnal dúsított ételeket (például étkezési sörélesztőpelyhet) fogyaszt, akkor nők esetében napi kilenc csésze cukrozatlan italt legyen az alap (például zöld tea, vagy víz a folyadék előtöltési ajánlások szerint), férfiak esetében az ajánlott mennyiség tizenhárom csésze. Ha szív- vagy veseproblémái vannak, akkor egyáltalán ne növelje a folyadékbevitelt anélkül, hogy ezt az orvosával megbeszélné.\n\nNe feledje, hogy a diétás üdítőitalok lehetnek kalóriamentesek, de nem következménymentesek, ahogyan azt a Csökkentett Cukortartalom fejezetből megtudtuk.</string>
+    <string name="daily_deflourdiet_text">Jelölje be ezt a négyzetet azokon a napokon, amikor teljes kiőrlésű gabonát egész, sértetlen szemek formájában fogyaszt. Az egész gabonaszemek töretlen sejtfala keményítőt szállít a vastagbélbe. Ha porrá őrölt gabonát fogyaszt, akkor ettől a tápanyagtól megfosztja a vastagbelet, még 100%-os, teljes kiőrlésű gabonák esetében is.</string>
+    <string name="daily_frontload_text">Jót tesz az anyagcserének, ha több kalória jut a nap korai szakaszára, ezért legyen a reggeli (ideális esetben) vagy az ebéd a nap legbőségesebb étkezés a közmondásos király-polgár-koldus minta szerint.</string>
+    <string name="daily_timerestrict_text">Korlátozza az étkezését egy ön által kiválasztott napi időablakra, amely nem haladja meg a tizenkét órát, és amelyet folyamatosan, a hét minden napján be tud tartani. Tekintettel az esti étkezés csökkentésének cirkadián előnyeire, az ablaknak 19:00 előtt kell véget érnie.</string>
+    <string name="exercise_timing_text">A Daily Dozen ajánlása az optimális edzésidőre a hosszú élettartam érdekében napi kilencven perc közepesen intenzív tevékenység, ami egyben az optimális edzésidő a fogyáshoz is. Bármikor jó, és minél több, annál jobb, de előnye lehet annak, ha éhgyomorra mozog, legalább hat órával az utolsó étkezés után. Ez általában reggeli előtti időpontot jelenti, de ha jól időzítette, akkor délben is mozoghat egy késői ebéd előtt, vagy ha elég korán ebédel, akkor vacsora előtt. Az időzítés cukrobetegeknél és prediabétesz esetében eltérő. A cukorbetegeknek és a prediabéteszeseknek az étkezés megkezdése után harminc perccel kell elkezdeniük a testmozgást, és ideális esetben legalább egy órát kell mozogniuk, hogy teljesen átlépjék a vércukorszint csúcsát. Ha egyetlen étkezést kellene választania edzés után, az a vacsora legyen, a vércukorszint szabályozásának cirkadián ritmusa miatt, amely a nap folyamán csökken. Ideális esetben azonban a reggeli a nap legnagyobb étkezése, és utána jó edzeni – vagy ami még jobb, minden étkezés után.</string>
+    <string name="weigh_twice_text">A rendszeres súlymérés kulcsfontosságú a hosszú távú testsúlykontroll szempontjából, de nincs rá elegendő bizonyíték, hogy mi az optimális gyakoriság. Javaslatom azon az egyetlen tanulmányon alapul, amely megállapította, hogy a napi kétszeri mérés – ébredés után és lefekvés előtt – jobbnak tűnt, mint a napi egyszeri (az első esetben körülbelül hat, a második esetben kettő kiló fogyást értek el tizenkét hét alatt).</string>
+    <string name="complete_intentions_text">Kéthavonta hozzon létre három új megvalósítási tervet – „ha X, akkor Y” formában. Tervezze meg, hogy egy konkrét tevékenységet egy adott módon végre fog hajtani, és pipálja is ki minden nap, amikor végrehajtja őket.</string>
+    <string name="nightly_fast_text">A cirkadián ritmusunkból adódóan az éjszaka elfogyasztott ételek hizlalóbbak, mint a nap során korábban elfogyasztott ételek, ezért böjtöljünk minden éjjel legalább tizenkét órán keresztül, 19:00 óra előtt kezdve. Minél kevesebb kalóriát viszünk be naplemente után, annál jobb.</string>
+    <string name="nightly_sleep_text">Jelölje be ezt a négyzetet, ha legalább hét órát alszik, a szokásos ritmusa szerint.</string>
+    <string name="nightly_trendelenburg_text">Próbáljon meg éjszakánként legalább négy órát úgy feküdni, hogy a feje enyhén lejjebb van a lábánál. Emelje meg az ágy láb felőli végét kb. 20 centiméterrel (22 centiméterrel, ha extra nagyméretű, 2 méternél hosszabb ágya van). Figyelem! Rendkívül óvatosan keljen fel az ágyból, mivel ez a testhelyzet ortosztatikus intoleranciát okoz a többségnél, még a fiatal és egészséges embereknél is. Ez azt jelenti, hogy ha túl gyorsan kel fel, akkor elszédülhet, vagy el is ájulhat, ami balesetet és sérülést okozhat. Ha kipróbálja ezt a módszert, mindig lassan keljen fel. Ha 30 perccel a felkelés előtt iszik két csésze hideg vizet, az is segíthet megelőzni ezeket a potenciálisan veszélyes mellékhatást.\n\n*FONTOS: Egyáltalán ne próbálja ki ezt otthon, ha szív- vagy tüdőproblémája, savas refluxja vagy agyi problémái vannak (például fejsérülés)</string>
+    <string name="faq_adapt_question">A Napi Tucat túl sok/túl kevés nekem! Alakíthatok rajta?</string>
+    <string name="faq_adapt_response">Igen, a Napi Tucatot csak egy útmutatónak szántuk, ami megmutatja legegészségesebb ételeket, amiknek a napi fogyasztására törekednünk kell. Nem előírás és nem étkezési terv. Törekedjen változatos növényi étrendre és alakítsa a Napi Tucat mennyiségeit a saját igényeihez!</string>
+    <string name="faq_age_question">Alkalmazható gyermekek, serdülők és tinédzserek számára is? </string>
+    <string name="faq_age_response.0">A gyermekeknek, serdülőknek és tinédzsereknek életciklusonként eltérő a kalóriaigényük. Ezek a változó szükségletek biztosítják számukra minden szakaszban a megfelelő növekedést és fejlődést.</string>
+    <string name="faq_age_response.1">A Napi Tucatot útmutatónak szántuk, hogy segítsen beépíteni a legegészségesebb ételeket a napi étkezéseinkbe. Bár a rendszer a legtöbb ember számára az egész életciklus során használható, a szükséges ételmennyiséget számos tényező befolyásolhatja, például az életkor és az aktivitási szint. Mivel nem tudunk konkrét táplálkozási vagy orvosi tanácsot adni a növésben lévő gyermek számára, a szülőknek kell ezt az útmutatót a gyermekük igényeihez igazítaniuk és/vagy konzultálniuk egy regisztrált dietetikussal vagy más egészségügyi szakemberrel és az ő segítségével meghatározni a gyermek egyéni igényeit.</string>
+    <string name="faq_calories_question">Hány kalória van a Napi Tucatban?</string>
+    <string name="faq_calories_response.0">A Napi Tucat átlagosan körülbelül 1200 kalóriát tartalmaz, de mivel minden kategóriában széles a választható ételek köre, ez az érték 800 és 1800 kalória között mozoghat. Vegyük például az \"egyéb zöldségek\" kategóriát, egy csésze kaliforniai paprikának sokkal kisebb a kalóriasűrűsége, mint egy csésze főtt édesburgonyának, a kalóriamennyiség az Ön döntésétől függ. Ez a nagyszerű a Napi Tucat rendszerben, hogy nem egyetlen univerzális megoldást akar mindenkire ráerőltetni, hanem mindenki a saját igényeihez alakíthatja.</string>
+    <string name="faq_calories_response.1">Ha fogyni szeretne, további információkat talál a „Hogyan ne diétázz” című könyvemben és a benne foglalt „Huszonegy Trükk” fejezetben. A „Hogyan ne diétázz” című könyvben megjegyeztem: „A sikeres fogyókúrás stratégiák szisztematikus áttekintése arra az eredményre jutott, hogy a fogyással járó anyagcsere-lassulás és megnövekedett étvágy miatt jelentős fogyás eléréséhez a napi kalóriabevitelt akár napi 1200 kalóriára is le kell csökkenteni a nők, illetve 1500 kalóriára a férfiak esetében.”</string>
+    <string name="faq_calories_response.2">Másrészt, ha a súlygyarapodás a cél, akkor érdemes lehet gyakrabban, kalóriadúsabb ételeket, például édesburgonyát, avokádót, dióféléket és szójatermékeket fogyasztani.</string>
+    <string name="faq_mother_question">Követhetem a Napi Tucatot terhesség vagy szoptatás idején is?</string>
+    <string name="faq_mother_response">A terhes vagy szoptató nők kalória- és tápanyagigénye eltér a többiekétől. Emlékeztetőül: a Napi Tucat nem étkezési terv, és nem szabad kizárólag erre alapozni a napi táplálkozást. A várandós vagy szoptató nők konzultáljanak egészségügyi szakemberrel vagy regisztrált dietetikussal, hogy megfelelően kielégíthessék az egyéni kalória- és táplálkozási igényeiket.</string>
+    <string name="faq_scaling_question">Egyszerűen képtelen vagyok ennyi babot, gabonát, stb. megenni!</string>
+    <string name="faq_scaling_response">Semmi baj! A Napi Tucat egy iránymutatás. Törekedjen arra, hogy a lehető legtöbb egészséges növényi ételt adja hozzá az étrendjéhez. Ha csak most kezdett el sok babot (vagy gabonát, zöldséget stb.) fogyasztani, akkor lehet, hogy kisebb adagokkal kell kezdenie, és lassan kell növelnie a mennyiséget. Így a  mikrobiomnak lesz lehetősége alkalmazkodni az új helyzethez. Legyen bátran kreatív: például adhat egy kis babot a reggeli zabkásájához. Ha telepakolja bogyós gyümölcsökkel, lenmaggal és diófélékkel, észre sem veszi a különbséget. Készíthet babpüréből szendvicskrémet, vagy elkészítheti a [BROL](https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils) receptemet – árpa, rozs, zab és lencse –, amit sok étkezés alapjául használok, és egy egyszerű módszer, hogy többféle teljes kiőrlésű gabonát és hüvelyest fogyasszon el egy étkezésen belül.</string>
+    <string name="faq_supplements_question">Azt hittem, Dr. Greger D-vitamin és DHA táplálék kiegészítők szedését javasolja. Miért nem látom őket?</string>
+    <string name="faq_supplements_response">Frissítettük a Napi Tucat alkalmazást, hogy csak a szükséges kiegészítőket jelenítse meg. Például a D-vitaminra csak azoknak van szükségük, akik nem töltenek elég időt napfényben. Célunk, hogy a megalapozott döntésekhez szükséges tudományos eredményeket megosszuk önökkel. Az összes ajánlásomat megtekinthetik az [Optimális Tápanyagbevitel](https://nutritionfacts.org/optimum-nutrient-recommendations) oldalon.</string>
+    <string name="faq_title">Gyakran Ismételt Kérdések</string>
+    <string name="weight">Súly</string>
+    <string name="tweak_group_meal">Minden étkezésnél</string>
+    <string name="tweak_group_daily">Minden nap</string>
+    <string name="tweak_group_dailydoses">Fogyassza el a napi adagot</string>
+    <string name="tweak_group_nightly">Minden este</string>
+    <string name="about_tweak">A Trükkökről</string>
+    <string-array name="about_text_lines">
+        <item>Ezt az alkalmazást John Slavick készítette.</item>
+        <item />
+        <item>A következő nyílt forráskódú könyvtárak használatosak: ActiveAndroid, android-iconify, EventBus, LikeAnimation és MPAndroidChart.</item>
+        <item />
+        <item>Külön köszönet az előző alkalmazás készítőinek önkéntes erőfeszítéseikért: Chan Kruse, Allan Portera és Sangeeta Kumar.</item>
+    </string-array>
+    <string-array name="backup_instructions_lines">
+        <item>Kövesse ezeket a lépéseket a biztonsági mentés visszaállításához a Napi Tucat alkalmazásban</item>
+        <item />
+        <item>1. A Napi Tucat alkalmazást telepíteni kell Android készülékére. Innen töltheti le: https://play.google.com/store/apps/details?id=org.nutritionfacts.dailydozen</item>
+        <item />
+        <item>2. Koppintson az ehhez az e-mail címhez tartozó biztonsági másolat fájlra.</item>
+        <item />
+        <item>3. Válassza a megnyitás Napi Tucattal lehetőséget</item>
+    </string-array>
+    <string-array name="servings_time_scale_choices">
+        <item>Nap</item>
+        <item>Hónap</item>
+        <item>Év</item>
+    </string-array>
+    <string-array name="history_to_generate_choices">
+        <item>1 hónap</item>
+        <item>3 hónap</item>
+        <item>6 hónap</item>
+        <item>1 év</item>
+        <item>2 év</item>
+        <item>5 év</item>
+    </string-array>
+    <string-array name="food_info_types_beans">
+        <item>Fekete bab</item>
+        <item>Fekete szemű bab</item>
+        <item>Vajbab</item>
+        <item>Cannellini bab</item>
+        <item>Csicseriborsó/Garbanzo bab</item>
+        <item>Edamame</item>
+        <item>Zöldborsó</item>
+        <item>Nagyszemű északi fehérbab</item>
+        <item>Vesebab</item>
+        <item>Lencsék (beluga, francialencse és vöröslencse fajták)</item>
+        <item>Apró fehérbab</item>
+        <item>Tarkabab</item>
+        <item>Kis vörösbab</item>
+        <item>Felesborsó (sárga vagy zöld)</item>
+        <item>Tempeh</item>
+    </string-array>
+    <string-array name="food_info_types_berries">
+        <item>Acai bogyó</item>
+        <item>Borbolya</item>
+        <item>Szeder</item>
+        <item>Áfonya</item>
+        <item>Cseresznye vagy meggy</item>
+        <item>Konkord (kék) szőlő</item>
+        <item>Vörösáfonya</item>
+        <item>Goji bogyó</item>
+        <item>Kumkvat</item>
+        <item>Faeper</item>
+        <item>Málna (fekete vagy piros)</item>
+        <item>Eper</item>
+    </string-array>
+    <string-array name="food_info_types_other_fruits">
+        <item>Alma</item>
+        <item>Sárgabarack</item>
+        <item>Avokádó</item>
+        <item>Banán</item>
+        <item>Sárgadinnye</item>
+        <item>Klementin</item>
+        <item>Datolya</item>
+        <item>Füge</item>
+        <item>Grapefruit</item>
+        <item>Mézdinnye</item>
+        <item>Kiwi</item>
+        <item>Citrom</item>
+        <item>Lime</item>
+        <item>Licsi</item>
+        <item>Mangó</item>
+        <item>Nektarin</item>
+        <item>Narancs</item>
+        <item>Papaya</item>
+        <item>Maracuja/passiógyümölcs</item>
+        <item>Őszibarack</item>
+        <item>Körte</item>
+        <item>Ananász</item>
+        <item>Szilva (főleg fekete szilva)</item>
+        <item>Pluot (kajszilva)</item>
+        <item>Gránátalma</item>
+        <item>Aszalt szilva</item>
+        <item>Mandarinfélék</item>
+        <item>Görögdinnye</item>
+    </string-array>
+    <string-array name="food_info_types_cruciferous_vegetables">
+        <item>Rukkola</item>
+        <item>Bordás kel</item>
+        <item>Brokkoli (beleértve a romanescót is)</item>
+        <item>Kelbimbó</item>
+        <item>Káposzta (zöld, vörös és kelkáposzta)</item>
+        <item>Karfiol (fehér, zöld, narancs és lila)</item>
+        <item>Káposztafélék</item>
+        <item>Torma</item>
+        <item>Fodros kel (fekete, zöld és piros)</item>
+        <item>Karalábé (zöld és lila)</item>
+        <item>Mustár levél (Szareptai mustár)</item>
+        <item>Retekfélék</item>
+        <item>Tarlórépa levele</item>
+        <item>Vízitorma</item>
+    </string-array>
+    <string-array name="food_info_types_greens">
+        <item>Rukkola</item>
+        <item>Cékla zöldje</item>
+        <item>Káposztafélék</item>
+        <item>Kelkáposzta (fekete, zöld és piros)</item>
+        <item>Saláta mix (zsenge zöldsaláta válogatás)</item>
+        <item>Mustár zöldek</item>
+        <item>Sóska</item>
+        <item>Spenót</item>
+        <item>Svájci (piros) mángold</item>
+        <item>Tarlórépa levele</item>
+    </string-array>
+    <string-array name="food_info_types_other_vegetables">
+        <item>Articsóka</item>
+        <item>Spárga</item>
+        <item>Cékla</item>
+        <item>Kaliforniai paprika</item>
+        <item>Sárgarépa</item>
+        <item>Kukorica</item>
+        <item>Fokhagyma</item>
+        <item>gomba (csiperke, laska, portobello és shiitake)</item>
+        <item>Okra</item>
+        <item>Hagymafélék</item>
+        <item>Lila burgonyák</item>
+        <item>Tök</item>
+        <item>Tengeri zöldségek (arame, dulse és nori)</item>
+        <item>Cukorborsó</item>
+        <item>Tökfélék (mogyorótök, zsenge tök, spárgatök-variációk)</item>
+        <item>Édesburgonya / jamgyökér</item>
+        <item>Paradicsom</item>
+        <item>Cukkini</item>
+    </string-array>
+    <string-array name="food_info_types_flaxseeds">
+        <item>Barna lenmag</item>
+        <item>Arany lenmag</item>
+    </string-array>
+    <string-array name="food_info_types_nuts">
+        <item>Mandula</item>
+        <item>Kesudió</item>
+        <item>Chiamag</item>
+        <item>Mogyoró</item>
+        <item>Kendermag</item>
+        <item>Makadámdió</item>
+        <item>mogyoró</item>
+        <item>Pekándió</item>
+        <item>Pisztácia</item>
+        <item>Tökmag</item>
+        <item>Szezámmag</item>
+        <item>Napraforgómag</item>
+        <item>Dió</item>
+    </string-array>
+    <string-array name="food_info_types_spices">
+        <item>Vegyesfűszer</item>
+        <item>Borbolya</item>
+        <item>Bazsalikom</item>
+        <item>Babérlevél</item>
+        <item>Kardamom</item>
+        <item>Chili por</item>
+        <item>Koriander (levél)</item>
+        <item>Fahéj</item>
+        <item>Szegfűszeg</item>
+        <item>Koriander (fűszer)</item>
+        <item>Kömény</item>
+        <item>Curry por</item>
+        <item>Kapor</item>
+        <item>Görögszéna</item>
+        <item>Fokhagyma</item>
+        <item>Gyömbér</item>
+        <item>Torma</item>
+        <item>Citromfű</item>
+        <item>Majoránna</item>
+        <item>Mustárpor</item>
+        <item>Szerecsendió</item>
+        <item>Oregano</item>
+        <item>Füstölt paprika</item>
+        <item>Petrezselyem</item>
+        <item>Bors</item>
+        <item>Borsmenta</item>
+        <item>Rozmaring</item>
+        <item>Sáfrány</item>
+        <item>Zsálya</item>
+        <item>Kakukkfű</item>
+        <item>Kurkuma</item>
+        <item>Vanília</item>
+    </string-array>
+    <string-array name="food_info_types_whole_grains">
+        <item>Árpa</item>
+        <item>Hajdina</item>
+        <item>Köles</item>
+        <item>Zab</item>
+        <item>Pattogatott kukorica</item>
+        <item>Quinoa</item>
+        <item>Rozs</item>
+        <item>Teff (törpe köles)</item>
+        <item>Teljes kiőrlésű tészta</item>
+    </string-array>
+    <string-array name="food_info_types_beverages">
+        <item>Fekete tea</item>
+        <item>Chai tea</item>
+        <item>Vaníliás kamilla tea</item>
+        <item>Kávé</item>
+        <item>Earl grey tea</item>
+        <item>Zöld tea</item>
+        <item>Hibiszkusz tea</item>
+        <item>Jázmintea</item>
+        <item>Citromfű tea</item>
+        <item>Matcha tea</item>
+        <item>Mandulavirágos oolong tea</item>
+        <item>Borsmenta tea</item>
+        <item>Rooibos tea</item>
+        <item>Víz</item>
+        <item>Fehér tea</item>
+    </string-array>
+    <string-array name="food_info_types_exercise">
+        <item>Biciklizés</item>
+        <item>Kenuzás</item>
+        <item>Táncolás</item>
+        <item>Kidobós</item>
+        <item>Síelés</item>
+        <item>Vívás</item>
+        <item>Túrázás</item>
+        <item>Házimunka</item>
+        <item>Jégkorcsolyázás</item>
+        <item>Görkorcsolyázás</item>
+        <item>Zsonglőrködés</item>
+        <item>Ugrálás trambulinon</item>
+        <item>Stand Up Paddle (SUP)</item>
+        <item>Frizbizés</item>
+        <item>Görkorcsolyázás</item>
+        <item>Kosárra dobás</item>
+        <item>Könnyed hólapátolás</item>
+        <item>Gördeszkázás</item>
+        <item>Sznorkelezés</item>
+        <item>Szörfözés</item>
+        <item>Rekreációs úszás</item>
+        <item>Teniszezés (páros)</item>
+        <item>Helyben úszás (taposás)</item>
+        <item>Gyors séta (6,5 km/h)</item>
+        <item>Vízi aerobikozás</item>
+        <item>Vízisíelés</item>
+        <item>Kerti munka</item>
+        <item>Jóga</item>
+        <item>Hátizsákkal túrázás</item>
+        <item>Kosárlabda</item>
+        <item>Kerékpározás hegyre fel</item>
+        <item>Súlyzós köredzés</item>
+        <item>Sífutás</item>
+        <item>Futball</item>
+        <item>Jégkorong</item>
+        <item>Kocogás</item>
+        <item>Terpeszugrás (Jumping jacks)</item>
+        <item>Ugrókötelezés</item>
+        <item>Lacrosse</item>
+        <item>Fekvőtámasz</item>
+        <item>Húzódzkodás</item>
+        <item>Raketball</item>
+        <item>Sziklamászás</item>
+        <item>Rögbi</item>
+        <item>Futás</item>
+        <item>Búvárkodás</item>
+        <item>Tenisz (egyes)</item>
+        <item>Futball</item>
+        <item>Gyorskorcsolya</item>
+        <item>Fallabda</item>
+        <item>Step aerobic</item>
+        <item>Úszodai úszás</item>
+        <item>Gyors séta hegyre fel</item>
+        <item>Aqua fitnesz</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_imperial">
+        <item>¼ csésze humusz vagy babkrém</item>
+        <item>½ csésze főtt bab, sárgaborsó vagy lencse</item>
+        <item>⅓ csésze tofu vagy tempeh</item>
+        <item>1 csésze friss borsó vagy csírázott lencse</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beans_metric">
+        <item>70 g humusz vagy babkrém</item>
+        <item>100 g főtt bab, sárgaborsó, vagy lencse</item>
+        <item>80 g tofu vagy tempeh</item>
+        <item>100 g friss borsó vagy csírázott lencse</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_imperial">
+        <item>½ csésze frissen vagy fagyasztva</item>
+        <item>¼ csésze szárított</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_berries_metric">
+        <item>70 g friss vagy fagyasztott</item>
+        <item>40 g szárított</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_imperial">
+        <item>1 közepes méretű gyümölcs</item>
+        <item>1 csésze darabolt gyümölcs</item>
+        <item>¼ csésze szárított gyümölcs</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_fruits_metric">
+        <item>1 közepes méretű gyümölcs</item>
+        <item>150 g darabolt gyümölcs</item>
+        <item>40 g szárított gyümölcs</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
+        <item>½ csésze főtt leveles zöldségek</item>
+        <item>½ csésze nyers vagy főtt nem leveles zöldségek</item>
+        <item>1 csésze nyers leveles zöldségek</item>
+        <item>¼ csésze brokkolicsíra</item>
+        <item>1 evőkanál torma</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
+        <item>90 g főtt leveles zöldségek</item>
+        <item>60 g nyers vagy főtt nem leveles zöldségek</item>
+        <item>90 g nyers leveles zöldségek</item>
+        <item>15 g brokkolicsíra</item>
+        <item>1 evőkanál torma</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_imperial">
+        <item>1 csésze nyersen</item>
+        <item>½ csésze főtt</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_greens_metric">
+        <item>60 g nyersen</item>
+        <item>90 g főzve</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_imperial">
+        <item>1 csésze nyers leveles zöldség</item>
+        <item>½ csésze nyers vagy főtt nem leveles zöldség</item>
+        <item>½ csésze zöldséglé</item>
+        <item>¼ csésze szárított gomba</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_other_vegetables_metric">
+        <item>60 g nyers leveles zöldség</item>
+        <item>90 g nyers vagy főtt (nem leveles) zöldség</item>
+        <item>120 ml zöldséglé</item>
+        <item>10 g szárított gomba</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_imperial">
+        <item>1 evőkanál őrölt</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_flaxseeds_metric">
+        <item>1 evőkanál őrölt</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_imperial">
+        <item>¼ csésze dióféle vagy olajos mag</item>
+        <item>2 evőkanál dió- vagy magvaj</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_nuts_metric">
+        <item>30 g dióféle vagy olajos mag</item>
+        <item>2 evőkanál dió- vagy magvaj</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_imperial">
+        <item>¼ teáskanál kurkuma</item>
+        <item>Bármilyen más (sómentes) gyógynövény és fűszer, amit szeret</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_spices_metric">
+        <item>¼ teáskanál kurkuma</item>
+        <item>Bármilyen más (sómentes) gyógynövény és fűszer, amit szeret</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_imperial">
+        <item>½ csésze főtt teljes kiőrlésű gabona, teljes kiőrlésű tészta vagy kukoricaszem</item>
+        <item>1 csésze 100% teljes kiőrlésű hideg gabonapehely</item>
+        <item>1 100% teljes kiőrlésű (búza)tortilla (vagy 2 kisebb kukoricatortilla)</item>
+        <item>1 szelet 100% teljes kiőrlésű kenyér</item>
+        <item>½ zsemle vagy angol muffin</item>
+        <item>3 csésze pattogatott kukorica</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_whole_grains_metric">
+        <item>100 g főtt gabonakása, főtt teljes gabonaszem, tészta vagy kukorica</item>
+        <item>50 g 100% teljes kiőrlésű hideg gabonapehely</item>
+        <item>1 100% teljes kiőrlésű (búza)tortilla (vagy 2 kisebb kukoricatortilla)</item>
+        <item>1 szelet 100% teljes kiőrlésű kenyér</item>
+        <item>½ zsemle vagy angol muffin</item>
+        <item>30 g pattogatott kukorica</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_imperial">
+        <item>Egy pohár (12 uncia)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_beverages_metric">
+        <item>Egy pohár (350 ml)</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_imperial">
+        <item>90 perc közepes intenzitású mozgás</item>
+        <item>40 perc intenzív mozgás</item>
+    </string-array>
+    <string-array name="food_info_serving_sizes_exercise_metric">
+        <item>90 perc közepes intenzitású mozgás</item>
+        <item>40 perc intenzív mozgás</item>
+    </string-array>
+</resources>

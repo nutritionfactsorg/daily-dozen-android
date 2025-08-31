@@ -24,7 +24,7 @@
     <string name="moving_average">Средна стойност</string>
     <string name="about">Относно</string>
     <string name="about_this_app">Информация за приложението</string>
-    <string name="about_translators">Специални благодарности на нашите преводачи доброволци: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Специални благодарности на нашите преводачи доброволци: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Най-новите видео клипове</string>
     <string name="donate">Направете дарение</string>
     <string name="subscribe">Абонирай се</string>
@@ -216,7 +216,6 @@
         <item>Едър боб</item>
         <item>Бъбрековиден боб</item>
         <item>Леща (белуга, френска и червени сортове)</item>
-        <item>Мисо</item>
         <item>Дребен боб</item>
         <item>Боб Пинто</item>
         <item>Дребен червен боб</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Бадеми</item>
-        <item>Бразилски орех</item>
         <item>Кашу</item>
         <item>Семена от чиа</item>
         <item>Лешници</item>
@@ -388,7 +386,6 @@
         <item>„Ърл Грей“ чай</item>
         <item>Зелен чай</item>
         <item>Чай от хибискус</item>
-        <item>Горещ шоколад</item>
         <item>Жасминов чай</item>
         <item>Чай от маточина</item>
         <item>Матча чай</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ чаша хумус или боб</item>
         <item>½ чаша сварен боб, грах или леща</item>
-        <item>½ чаша тофу или темпе</item>
-        <item>1 чаша пресен грах или снежен грах</item>
-        <item>1 чаша пресен покълнал боб (леща, боб мунг)</item>
+        <item>⅓ чаша тофу или темпе</item>
+        <item>1 чаша пресен грах или покълнали лещи</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 г хумус или дип от боб</item>
-        <item>90 г варен боб, грах или леща</item>
-        <item>100 г тофу или темпе</item>
-        <item>130 г пресен грах или снежен грах</item>
-        <item>100 г пресен покълнал боб (леща, боб мунг)</item>
+        <item>70 г хумус или бобена паста</item>
+        <item>100 г сварени бобени зърна, цепен грах или леща</item>
+        <item>80 г тофу или темпе</item>
+        <item>100 г пресен грах или покълнали лещи</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ чаша пресни или замразени боровинки</item>
         <item>¼ чаша изсушени боровинки</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 грам пресни или замразени боровинки</item>
+        <item>70 г пресни или замразени</item>
         <item>40 грам изсушени боровинки</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 средно голям плод</item>
-        <item>120 грам нарязани плодове</item>
+        <item>150 г нарязани плодове</item>
         <item>40 грам сушени плодове</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ чаша нарязани цветнолистни</item>
-        <item>½ чаша брюкселско зеле</item>
+        <item>½ чаша сварени листни зеленчуци</item>
+        <item>½ чаша сурови или сварени нелистни зеленчуци</item>
+        <item>1 чаша сурови листни зеленчуци</item>
         <item>¼ чаша кълнове от броколи</item>
         <item>1 супена лъжица хрян</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 грам нарязани цветнолистни</item>
-        <item>80 грам брюкселско зеле</item>
-        <item>15 грам кълнове от броколи</item>
+        <item>90 г сварени листни зеленчуци</item>
+        <item>60 г сурови или сварени нелистни зеленчуци</item>
+        <item>90 г сурови листни зеленчуци</item>
+        <item>20 г кълнове от броколи</item>
         <item>1 супена лъжица хрян</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 грам сурови листни зеленчуци</item>
-        <item>50 грам сурови или варени зеленчуци</item>
-        <item>125 мл. зеленчуков сок</item>
-        <item>7 грам сушени гъби</item>
+        <item>90 г сурови или сварени нелистни зеленчуци</item>
+        <item>120 мл зеленчуков сок</item>
+        <item>10 г сушени гъби</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 супена лъжица ленено семе</item>
@@ -541,18 +538,20 @@
         <item>Всякакви други безсолни билки и подправки, които обичате</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ чаша топла зърнена закуска или сварени зърна, паста или царевица</item>
-        <item>1 чаша студена зърнена закуска</item>
-        <item>1 тортила или филия хляб</item>
-        <item>½ поничка или английски мъфин</item>
+        <item>½ чаша сварени цели зърна, пълнозърнеста паста или царевични зърна</item>
+        <item>1 чаша 100% пълнозърнести студени зърнени храни</item>
+        <item>1 100% пълнозърнеста тортила (или 2 по-малки царевични тортили)</item>
+        <item>1 резен 100% пълнозърнест хляб</item>
+        <item>½ геврек или английски мъфин</item>
         <item>3 чаши пуканки</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 грам топла зърнена закуска или сварени зърна, паста или царевица</item>
-        <item>50 грам студена зърнена закуска</item>
-        <item>1 тортила или филия хляб</item>
-        <item>½ поничка или английски мъфин</item>
-        <item>30 грам пуканки</item>
+        <item>100 г сварени цели зърна, пълнозърнеста паста или царевични зърна</item>
+        <item>50 г 100% пълнозърнести студени зърнени храни</item>
+        <item>1 100% пълнозърнеста тортила (или 2 по-малки царевични тортили)</item>
+        <item>1 резен 100% пълнозърнест хляб</item>
+        <item>½ геврек или английски мъфин</item>
+        <item>30 г пуканки</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
         <item>Една чаша (12 унции)</item>

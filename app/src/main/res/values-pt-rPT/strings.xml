@@ -24,7 +24,7 @@
     <string name="moving_average">Média Móvel</string>
     <string name="about">Sobre Nós</string>
     <string name="about_this_app">Sobre este aplicativo</string>
-    <string name="about_translators">Agradecimentos especiais aos tradutores voluntários: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Agradecimentos especiais aos tradutores voluntários: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Últimos Vídeos</string>
     <string name="donate">Doar</string>
     <string name="subscribe">Subscreva</string>
@@ -90,7 +90,7 @@
     <string name="morning">Manhã</string>
     <string name="evening">Noite</string>
     <string name="meal_water">Pré-refeição de Água</string>
-    <string name="meal_negcal">Pré-refeição de Alimentos com \"Calorias Negativas\"</string>
+    <string name="meal_negcal">Pré-refeição de Alimentos com “Calorias Negativas”</string>
     <string name="meal_vinegar">Incorpore Vinagre (2 colheres de chá com cada refeição)</string>
     <string name="meal_undistracted">Desfrute de Refeições sem Distrações</string>
     <string name="meal_twentyminutes">Siga a Regra dos Vinte Minutos</string>
@@ -113,7 +113,7 @@
     <string name="debug_generate_weight_data">Gerar Informações de Peso</string>
     <string name="average_weight_on_day">Peso médio no dia</string>
     <string name="meal_water_short">Pré-refeição de Água</string>
-    <string name="meal_negcal_short">Pré-refeição de Alimentos com \"Calorias Negativas\"</string>
+    <string name="meal_negcal_short">Pré-refeição de Alimentos com “Calorias Negativas”</string>
     <string name="meal_vinegar_short">Incorpore Vinagre (2 colheres de chá com cada refeição)</string>
     <string name="meal_undistracted_short">Desfrute de Refeições sem Distrações</string>
     <string name="meal_twentyminutes_short">Siga a Regra dos Vinte Minutos</string>
@@ -134,26 +134,26 @@
     <string name="nightly_sleep_short">Durma o Suficiente</string>
     <string name="nightly_trendelenburg_short">Experimente a inclinação leve de Trendelenburg</string>
     <string name="meal_water_text">Planeje os seus 2 copos de água sem sabor, fria ou gelada, que aumenta o metabolismo, antes de cada refeição, para também aproveitar os seus benefícios de pré-refeição.</string>
-    <string name="meal_negcal_text">Como primeiro prato, comece cada refeição com uma maçã, ou uma sopa ou uma salada considerada \"Luz Verde\" contendo menos de cem calorias por xícara.</string>
+    <string name="meal_negcal_text">Como primeiro prato, comece cada refeição com uma maçã, ou uma sopa ou uma salada considerada “Luz Verde” contendo menos de cem calorias por xícara.</string>
     <string name="meal_vinegar_text">Nunca beba vinagre puro. Em vez disso, incorpore em refeições ou tempere uma salada, utilizando qualquer um dos vinagres doces e salgados. Se você quiser bebê-lo, misture-o num copo de água e depois enxague a boca com água para proteger o esmalte dos dentes.</string>
     <string name="meal_undistracted_text">Não coma enquanto assiste TV ou joga no seu telemóvel. Assinale cada refeição que puder comer sem distração.</string>
     <string name="meal_twentyminutes_text">Seja através do aumento da viscosidade ou do número de mastigações ou da diminuição do tamanho da mordida e da taxa de alimentação, dezenas de estudos demonstraram que, seja qual for a forma como aumentamos a quantidade de tempo que os alimentos permanecem na boca, isso pode resultar numa menor ingestão calórica. Portanto, estenda a duração das refeições para pelo menos 20 minutos para permitir que seus sinais naturais de saciedade entrem em ação. De que forma? Escolhendo alimentos que demoram mais para serem ingeridos e comendo-os de maneira a prolongar o tempo que ficam na boca. Pense em alimentos mais volumosos, mais duros, que exigem mais mastigação, em pequenas quantidades bem mastigadas.</string>
     <string name="daily_blackcumin_text">Como observado na secção Supressão de Apetite, uma revisão sistemática e metanálise de estudos clínicos randomizados e controlados para perda de peso descobriu que cerca de um quarto de colher de chá de pó de cominho-preto, todos os dias, parece reduzir o índice de massa corporal num período de alguns meses. Observe que o cominho preto é diferente do cominho comum, para o qual a dosagem é diferente.</string>
     <string name="daily_garlic_text">Estudos randomizados, duplamente ocultados, e controlados por placebo, descobriram que um quarto de colher de chá diária de alho em pó pode reduzir a gordura corporal a um custo de cerca de 0,02 dólares por dia.</string>
     <string name="daily_ginger_text">Estudos clínicos randomizados descobriram que entre ¼ de colher de chá a 1½ colheres de chá por dia de gengibre em pó reduzem significativamente o peso corporal por apenas alguns centavos por dia. Pode ser tão fácil quanto misturar o tempero moído num copo de água quente. Nota: o gengibre pode funcionar melhor de manhã do que à noite. O chá chai é uma maneira saborosa de combinar os benefícios do chá verde e do gengibre numa única bebida. Como alternativa, para a ativação do Tecido Adiposo Castanho, pode adicionar uma pimenta jalapenho crua ou meia colher de chá de pimenta vermelha em pó (ou, presumivelmente, flocos de pimenta vermelha amassados) na sua alimentação diária. Para ajudar a combater o sabor picante, você pode fatiar bem fino ou picar muito bem o jalapenho, ou misturar a pimenta vermelha numa sopa ou no smoothie de vegetais integrais que eu mostrei num dos meus vídeos de culinária do NutritionFacts.org.</string>
-    <string name="daily_nutriyeast_text">Duas colheres de chá de levedura de cerveja ou \"nutricional\" contêm aproximadamente a quantidade de beta 1,3/1,6 glucanos que facilita a perda de peso, conforme estudos clínicos randomizados, duplamente ocultados, e controlados por placebo.</string>
+    <string name="daily_nutriyeast_text">Duas colheres de chá de levedura de cerveja ou “nutricional” contêm aproximadamente a quantidade de beta 1,3/1,6 glucanos que facilita a perda de peso, conforme estudos clínicos randomizados, duplamente ocultados, e controlados por placebo.</string>
     <string name="daily_cumin_text">Mulheres com excesso de peso, randomizadas para adicionar meia colher de chá de cominho nos almoços e jantares, superaram o grupo de controle, reduzindo mais 1,8 kg e 2,5 cm na cintura. Também há evidências para apoiar o uso do açafrão, mas uma pitada por dia custaria 1 dólar, enquanto que uma colher de chá de cominho custa menos de 0,10 dólares.</string>
-    <string name="daily_greentea_text">Beba três xícaras por dia entre as refeições (aguarde pelo menos uma hora após a refeição para não interferir na absorção de ferro). Durante as refeições, beba água, café preto ou infusão de hibisco misturado 6:1 com lúcia-lima, mas nunca exceda três xícaras de líquido por hora (importante devido aos meus conselhos de fazer uma pré-refeição de água). Aproveite o efeito \"reforçador\" da cafeína bebendo o seu chá verde juntamente com algo saudável que você não gosta tanto, mas não consuma grandes quantidades de cafeína nas seis horas antes de dormir. Tomar chá sem adoçante é melhor, mas se você normalmente adoça o chá com mel ou açúcar, tente o xarope de yacon.</string>
+    <string name="daily_greentea_text">Beba três xícaras por dia entre as refeições (aguarde pelo menos uma hora após a refeição para não interferir na absorção de ferro). Durante as refeições, beba água, café preto ou infusão de hibisco misturado 6:1 com lúcia-lima, mas nunca exceda três xícaras de líquido por hora (importante devido aos meus conselhos de fazer uma pré-refeição de água). Aproveite o efeito “reforçador” da cafeína bebendo o seu chá verde juntamente com algo saudável que você não gosta tanto, mas não consuma grandes quantidades de cafeína nas seis horas antes de dormir. Tomar chá sem adoçante é melhor, mas se você normalmente adoça o chá com mel ou açúcar, tente o xarope de yacon.</string>
     <string name="daily_hydrate_text">Assinale esta opção se a sua urina nunca parecer mais escura que amarelo-pálido. Note que, se você estiver ingerindo alimentos enriquecidos com riboflavina (como levedura nutricional), baseie-se apenas no critério de ingerir 9 copos de bebidas sem açúcar por dia para as mulheres (que seriam cumpridas pelas recomendações de pré-refeição de água e chá verde) ou 13 copos por dia para homens. Se você tiver problemas cardíacos ou renais, não aumente a ingestão de líquidos sem antes conversar com seu médico. Lembre-se de que os refrigerantes diet podem estar isentos de calorias, mas não estão isentos de consequências, como aprendemos na secção Baixo Teor de Açúcar Adicionado.</string>
     <string name="daily_deflourdiet_text">Assinale esta opção todos os dias que as suas porções de grãos integrais forem na forma de grãos intactos. Moer cereais, incluindo cereais 100 % integrais, rouba ao nosso microbioma o amido que normalmente viajaria até ao cólon envolvido em paredes celulares não destruídas.</string>
-    <string name="daily_frontload_text">Existem benefícios metabólicos no consumo de mais calorias no início do dia, portanto, faça da refeição matinal (idealmente) ou do almoço a sua maior refeição do dia, seguindo o estilo \"rei / príncipe / indigente\".</string>
+    <string name="daily_frontload_text">Existem benefícios metabólicos no consumo de mais calorias no início do dia, portanto, faça da refeição matinal (idealmente) ou do almoço a sua maior refeição do dia, seguindo o estilo “rei / príncipe / indigente”.</string>
     <string name="daily_timerestrict_text">Limite a alimentação a um intervalo de tempo diário à sua escolha com menos de 12 horas de duração, que você possa manter consistentemente, sete dias por semana. Dados os benefícios circadianos de reduzir a ingestão noturna de alimentos, o intervalo deve terminar antes das 19:00h.</string>
     <string name="exercise_timing_text">A recomendação da Dúzia Diária para a duração ideal de exercícios para a longevidade é de 90 minutos de atividade de intensidade moderada por dia, que também é a duração ideal de exercícios para perda de peso. Qualquer momento é bom e, quanto mais, melhor, mas pode haver uma vantagem em se exercitar em jejum, pelo menos 6 horas após a sua última refeição. Normalmente, isso significa antes da refeição matinal, mas se você planejar corretamente, pode-se exercitar ao meio-dia antes de um almoço tardio ou, se você almoçar suficientemente cedo, antes do jantar. Estes são os períodos para os não diabéticos. Diabéticos e pré-diabéticos devem começar a exercitarem-se 30 minutos após o início de uma refeição e, idealmente, exercitarem-se por pelo menos 1 hora para passar completamente o pico de glicose no sangue. Se você tivesse que escolher uma única refeição para se exercitar a seguir, seria o jantar, devido ao ritmo circadiano de controle de glicose no sangue que diminui ao longo do dia. Idealmente, porém, a refeição matinal seria a maior refeição do dia e você deveria se exercitar depois disso — ou, melhor ainda, depois de cada refeição.</string>
     <string name="weigh_twice_text">A auto-pesagem regular é considerada crucial para o controle de peso a longo prazo, mas não há evidências suficientes para apoiar uma frequência específica de pesagem. A minha recomendação baseia-se no estudo que constatou que duas vezes por dia — ao acordar e logo antes de dormir — pareceu superior a uma vez por dia (cerca de 2,7 kg versus 0,9 kg de perda de peso em doze semanas).</string>
-    <string name="complete_intentions_text">A cada dois meses, crie três novas intenções de implementação — planos \"se X, então Y\" para executar um comportamento específico num contexto específico — e marque cada uma delas conforme você as conclui, todos os dias.</string>
+    <string name="complete_intentions_text">A cada dois meses, crie três novas intenções de implementação — planos “se X, então Y” para executar um comportamento específico num contexto específico — e marque cada uma delas conforme você as conclui, todos os dias.</string>
     <string name="nightly_fast_text">Devido aos nossos ritmos circadianos, os alimentos consumidos à noite engordam mais do que exatamente os mesmos alimentos ingeridos no início do dia, portanto jejue todas as noites por pelo menos 12 horas, começando antes das 19:00h. Quanto menos calorias após o pôr-do-sol, melhor.</string>
     <string name="nightly_sleep_text">Assinale esta opção se você dormir pelo menos 7 horas no seu horário de dormir usual.</string>
-    <string name="nightly_trendelenburg_text">Tente passar pelo menos 4 horas por noite deitado com o corpo inclinado a 6 graus com a cabeça para baixo, elevando os pés da cama em 20 cm (ou 23 cm se você tiver uma cama \"California King\"). Seja extremamente cuidadoso ao sair da cama, pois isso causa intolerância ortostática na maioria das pessoas, mesmo se você for jovem e saudável — ou seja, se você levantar rápido demais, pode sentir tontura, ter um desmaio, cair e magoar-se. Por isso, levante-se devagar. Beber dois copos de água fria trinta minutos antes de se levantar também pode ajudar a evitar esse efeito colateral potencialmente perigoso.\n\n*IMPORTANTE: Não tente fazer isso se você tiver problemas cardíacos ou pulmonares, refluxo ácido, problemas no cérebro (como traumatismo craniano) ou nos olhos (até um histórico familiar de glaucoma o desqualifica). Além disso, não tente fazer isso antes de perguntar ao/à médico/a se ele/a acha seguro dormir em Trendelenburg leve.*</string>
+    <string name="nightly_trendelenburg_text">Tente passar pelo menos 4 horas por noite deitado com o corpo inclinado a 6 graus com a cabeça para baixo, elevando os pés da cama em 20 cm (ou 23 cm se você tiver uma cama “California King”). Seja extremamente cuidadoso ao sair da cama, pois isso causa intolerância ortostática na maioria das pessoas, mesmo se você for jovem e saudável — ou seja, se você levantar rápido demais, pode sentir tontura, ter um desmaio, cair e magoar-se. Por isso, levante-se devagar. Beber dois copos de água fria trinta minutos antes de se levantar também pode ajudar a evitar esse efeito colateral potencialmente perigoso.\n\n*IMPORTANTE: Não tente fazer isso se você tiver problemas cardíacos ou pulmonares, refluxo ácido, problemas no cérebro (como traumatismo craniano) ou nos olhos (até um histórico familiar de glaucoma o desqualifica). Além disso, não tente fazer isso antes de perguntar ao/à médico/a se ele/a acha seguro dormir em Trendelenburg leve.*</string>
     <string name="faq_adapt_question">Preciso de mais / de menos do que a Dúzia Diária. Posso adaptá-la?</string>
     <string name="faq_adapt_response">Sim, a Dúzia Diária tenciona ser simplesmente um guia dos alimentos mais saudáveis que tentamos incluir todos os dias. Não é um plano de refeições e não tenciona ser uma receita fixa. Faça o melhor para comer uma gama diversa de alimentos vegetais integrais e adapte a Dúzia Diária às quantidades que funcionam para si.</string>
     <string name="faq_age_question">É adaptável a crianças e adolescentes?</string>
@@ -161,7 +161,7 @@
     <string name="faq_age_response.1">A Dúzia Diária foi desenhada como um guia para ajudar as pessoas a incluir alguns dos alimentos mais saudáveis na sua rotina diária. Embora a sua estrutura possa ser usada para a maioria das pessoas ao longo do seu ciclo de vida, a quantidade de alimentos que é necessário comer varia baseada em vários fatores como idade e nível de atividade. Visto que não podemos fornecer conselhos nutricionais ou médicos para a sua criança em crescimento, os pais devem usar este guia como acharem melhor para as necessidades da sua criança e/ou consultar um nutricionista ou outro profissional de saúde para os ajudar a determinar o que mais se adapta às suas necessidades individuais.</string>
     <string name="faq_calories_question">Quantas calorias estão na Dúzia Diária?</string>
     <string name="faq_calories_response.0">A Dúzia Diária tem em média 1200 kcal, mas dada a vasta gama de escolhas alimentares em cada categoria, pode variar entre 800 a 1800. Considere a categoria Outros Vegetais: um copo de pimentões tem uma densidade calórica muito menor do que um copo de batatas-doces cozidas, portanto a gama calórica irá depender das suas escolhas alimentares específicas. Isso é o que é tão bom sobre a Dúzia Diária — não é uma abordagem única para todos os casos, e pode ser adaptada às suas necessidades.</string>
-    <string name="faq_calories_response.1">Se o seu objectivo é perda de peso, pode encontrar mais informação em \"Como Não Fazer Dieta\" e os capítulos sobre os 21 Ajustes. Em \"Como Não Fazer Dieta\", notei: \"uma revisão sistemátia de estratégias bem sucedidas de perda de peso concluiu que dado o abrandamento metabólico e aumento do apetite que acontece na perda de peso, para se atingir perda de peso significativa, poderá ser necessário baixar  a contagem calórica até 1200 kcal por dia para mulheres e 1500 kcal por dia para homens.\"</string>
+    <string name="faq_calories_response.1">Se o seu objectivo é perda de peso, pode encontrar mais informação em “Como Não Fazer Dieta” e os capítulos sobre os 21 Ajustes. Em “Como Não Fazer Dieta”, notei: “uma revisão sistemátia de estratégias bem sucedidas de perda de peso concluiu que dado o abrandamento metabólico e aumento do apetite que acontece na perda de peso, para se atingir perda de peso significativa, poderá ser necessário baixar  a contagem calórica até 1200 kcal por dia para mulheres e 1500 kcal por dia para homens.”</string>
     <string name="faq_calories_response.2">Por outro lado, se o seu objetivo é ganho de peso, então pode querer focar-se em adicionar alimentos mais ricos em calorias, como batatas-doces, abacates, frutos secos, e produtos de soja.</string>
     <string name="faq_mother_question">Posso seguir a Dúzia Diária enquanto estiver grávida ou a amamentar?</string>
     <string name="faq_mother_response">Mulheres grávidas ou a amamentar têm diferentes necessidades calóricas e nutricionais do que as pessoas que não estão. Vale a pena lembrar que a Dúzia Diária não é um plano alimentar e não deverá ser o único conjunto de alimentos consumidos por dia. Mulheres grávidas ou a amamentar deverão consultar com o seu médico ou nutricionista para terem assistência em cumprir as suas necessidades calóricas e nutricionais específicas.</string>
@@ -216,7 +216,6 @@
         <item>Feijão branco (great northern)</item>
         <item>Feijão vermelho grande</item>
         <item>Lentilha (variedades beluga, francesa e vermelha)</item>
-        <item>Miso</item>
         <item>Feijão branco (navy)</item>
         <item>Feijão catarino</item>
         <item>Feijão vermelho pequeno</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Amêndoas</item>
-        <item>Castanhas do Pará</item>
         <item>Cajú</item>
         <item>Chia</item>
         <item>Avelã</item>
@@ -388,7 +386,6 @@
         <item>Chá Earl Grey</item>
         <item>Chá verde</item>
         <item>Infusão de hibisco</item>
-        <item>Chocolate quente</item>
         <item>Chá verde com aroma de jasmim</item>
         <item>Infusão de erva-cidreira</item>
         <item>Chá matcha</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ copo de hummus or pasta de leguminosas</item>
         <item>½ copo de feijões, ervilhas ou lentilhas cozidas</item>
-        <item>½ copo de tofu ou tempeh</item>
-        <item>1 copo de ervilhas frescas</item>
-        <item>1 copo de leguminosas frescas germinadas (lentilhas, feijão-mungo)</item>
+        <item>⅓ chávena de tofu ou tempeh</item>
+        <item>1 chávena de ervilha fresca ou lentilha germinada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g de hummus or pasta de leguminosas</item>
-        <item>90 g de feijões, ervilhas ou lentilhas cozidas</item>
-        <item>100 g de tofu ou tempeh</item>
-        <item>130 g de ervilhas frescas</item>
-        <item>100 g de leguminosas frescas germinadas (lentilhas, feijão-mungo)</item>
+        <item>70 g de hummus or pasta de leguminosas</item>
+        <item>100 g de feijões, ervilhas ou lentilhas cozidas</item>
+        <item>80 g de tofu ou tempeh</item>
+        <item>100 g de ervilhas frescas ou lentilhas cozidas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ xícara de bagas frescas ou congeladas</item>
         <item>¼ xícara de bagas secas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g de bagas frescas ou congeladas</item>
+        <item>70 g frescas ou congeladas</item>
         <item>40 g de bagas secas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 fruta de tamanho médio</item>
-        <item>120 g de fruta cortada</item>
+        <item>150 g de fruta cortada</item>
         <item>40 g de fruta seca</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ xícara de crucíferos picados</item>
-        <item>½ chávena de rebentos de Couves-de-Bruxelas</item>
-        <item>¼ chávena de rebentos de Brócolos</item>
+        <item>½ chávena de vegetais folhosos cozidos</item>
+        <item>½ chávena de vegetais não-folhosos crús ou cozidos</item>
+        <item>1 chávena de vegetais folhosos crús</item>
+        <item>¼ chávena de rebentos de brócolos</item>
         <item>1 colher de sopa de Rábano Silvestre</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g de crucíferos picados</item>
-        <item>80 g de rebentos de Couves-de-Bruxelas</item>
-        <item>15 g de rebentos de Brócolos</item>
+        <item>90 g de vegetais folhosos cozidos</item>
+        <item>60 g de vegetais não-folhosos crús ou cozidos</item>
+        <item>90 g de vegetais folhosos cozidos</item>
+        <item>20 g de rebentos de brócolos</item>
         <item>1 colher de sopa de Rábano Sivlestre</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g de vegetais folhosos crus</item>
-        <item>50 g de vegetais não-folhosos crus ou cozidos</item>
-        <item>125 ml de sumo de vegetais</item>
-        <item>7 g de cogumelos secos</item>
+        <item>90 g de vegetais não-folhosos crus ou cozidos</item>
+        <item>120 ml de sumo de vegetais</item>
+        <item>10 g de cogumelos secos</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 colher de sopa (moída)</item>
@@ -541,16 +538,18 @@
         <item>Qualquer outra erva (sem sal) e especiarias que goste</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ xícara de cereais ou grãos cozidos, massas ou grãos de milho</item>
-        <item>1 xícara de cereais matinais</item>
-        <item>1 tortilha ou fatia de pão</item>
+        <item>½ chávena de cereais integrais, massas integrais ou grãos de milho cozidos</item>
+        <item>1 chávena de cereais matinais 100% integrais</item>
+        <item>1 tortilha 100% integral (ou 2 tortilhas mais pequenas)</item>
+        <item>1 fatia de pão 100% de grãos integrais</item>
         <item>½ bagel ou muffin inglês</item>
         <item>3 xícaras de pipoca</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g de cereais ou grãos cozidos, massas ou grãos de milho</item>
-        <item>50 g de cereais matinais</item>
-        <item>1 tortilha ou fatia de pão</item>
+        <item>100 g de cereais integrais, massas integrais ou grãos de milho cozidos</item>
+        <item>50 g de cereais matinais 100% integrais</item>
+        <item>1 tortilha 100% integral (ou 2 tortilhas mais pequenas)</item>
+        <item>1 fatia de pão 100% de grãos integrais</item>
         <item>½ bagel ou muffin inglês</item>
         <item>30 g de pipoca</item>
     </string-array>

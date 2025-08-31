@@ -24,7 +24,7 @@
     <string name="moving_average">Gleitender Mittelwert</string>
     <string name="about">Über</string>
     <string name="about_this_app">Über diese Anwendung</string>
-    <string name="about_translators">Besonderer Dank an unsere ehrenamtlichen Übersetzer: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Besonderer Dank an unsere ehrenamtlichen Übersetzer: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Neueste Videos</string>
     <string name="donate">Spenden Sie</string>
     <string name="subscribe">Abonnieren</string>
@@ -216,7 +216,6 @@
         <item>Dicke Bohnen</item>
         <item>Kidneybohnen</item>
         <item>Linsen (Beluga, Puy, rote Sorten)</item>
-        <item>Miso</item>
         <item>Marinebohnen (Michigan Erbse)</item>
         <item>Pintobohnen</item>
         <item>Kleine rote Bohnen</item>
@@ -303,7 +302,7 @@
         <item>Karotten, Möhren</item>
         <item>Mais</item>
         <item>Knoblauch</item>
-        <item>Pilze (Champignons, Austern, Portobello und Shiitake)</item>
+        <item>Pilze (Champignons, Austernpilze, Steinpilze, Portobello und Shiitake)</item>
         <item>Okraschoten</item>
         <item>Zwiebeln</item>
         <item>Violette Kartoffeln</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Mandeln</item>
-        <item>Paranüsse</item>
         <item>Cashew Nüsse</item>
         <item>Chiasamen</item>
         <item>Haselnüsse</item>
@@ -388,7 +386,6 @@
         <item>Earl Grey Tee</item>
         <item>Grüner Tee</item>
         <item>Hibiskustee</item>
-        <item>Heiße Schokolade</item>
         <item>Jasmintee</item>
         <item>Zitronenmelisse-Tee</item>
         <item>Matcha Tee</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ Tasse Hummus oder Bohnendip</item>
         <item>½ Tasse gekochte Bohnen, Erbsen oder Linsen</item>
-        <item>½ Tasse Tofu oder Tempeh</item>
-        <item>1 Tasse frische Erbsen oder Zuckererbsen</item>
-        <item>1 Tasse frische Sojasprossen (Linsen, Mungbohnen)</item>
+        <item>⅓ Tasse Tofu oder Tempeh</item>
+        <item>1 Tasse frische Erbsen oder gekeimte Linsen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 Gramm Hummus oder Bohnendip</item>
-        <item>90 Gramm gekochte Bohnen, Erbsen oder Linsen</item>
-        <item>100 Gramm Tofu oder Tempeh</item>
-        <item>130 Gramm frische Erbsen oder Zuckererbsen</item>
-        <item>100 Gramm frische Sojasprossen (Linsen, Mungbohnen)</item>
+        <item>70 g Hummus oder Bohnendip</item>
+        <item>100 g gekochte Bohnen, Spalterbsen oder Linsen</item>
+        <item>80 g Tofu oder Tempeh</item>
+        <item>100 g frische Erbsen oder gekeimte Linsen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ Tasse frisch oder gefroren</item>
         <item>¼ Tasse getrocknet</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60g frisch oder gefroren</item>
+        <item>70 g frisch oder gefroren</item>
         <item>40g getrocknet</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 mittelgroße Frucht</item>
-        <item>120g geschnittene Früchte</item>
+        <item>150 g geschnittenes Obst</item>
         <item>60g getrocknete Früchte</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ Tasse gehackt</item>
-        <item>½ Tasse Rosenkohl</item>
-        <item>¼ Tasse Broccolisprossen</item>
+        <item>½ Tasse gekochtes Blattgemüse</item>
+        <item>½ Tasse rohes oder gekochtes Gemüse, ausgenommen Blattgemüse</item>
+        <item>1 Tasse rohes Blattgemüse</item>
+        <item>¼ Tasse Brokkolisprossen</item>
         <item>1 Eßlöffel Meerrettich</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g gehackt</item>
-        <item>80 g Rosenkohl</item>
-        <item>15 g Broccolisprossen</item>
+        <item>90 g gekochtes Blattgemüse</item>
+        <item>60 g rohes oder gekochtes Gemüse, ausgenommen Blattgemüse</item>
+        <item>90 g rohes Blattgemüse</item>
+        <item>20 g Brokkolisprossen</item>
         <item>1 Eßlöffel Meerrettich</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g rohes Blattgemüse</item>
-        <item>50 g rohes oder gekochtes nicht-blättriges Gemüse</item>
-        <item>125 ml Gemüsesaft</item>
-        <item>7 g getrocknete Pilze</item>
+        <item>90 g rohes oder gekochtes Gemüse, ausgenommen Blattgemüse</item>
+        <item>120 ml Gemüsesaft</item>
+        <item>10 g getrocknete Pilze</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 Esslöffel gemahlen</item>
@@ -541,16 +538,18 @@
         <item>Alle anderen (salzfreien) Kräuter und Gewürze, die Sie mögen</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ Tasse Getreideflockenbrei oder gekochte Körner, Nudeln oder Maiskörner</item>
-        <item>1 Tasse Getreideflocken</item>
-        <item>1 Tortilla oder 1 Scheibe Brot</item>
+        <item>½ Tasse gekochte Vollkornprodukte, Vollkornnudeln oder Maiskörner</item>
+        <item>1 Tasse Frühstücksflocken aus 100 % Vollkorn</item>
+        <item>1 Tortilla aus 100 % Vollkorn (oder 2 kleinere Maistortillas)</item>
+        <item>1 Scheibe Brot aus 100 % Vollkorn</item>
         <item>½ Bagel oder ½ Englischer Muffin</item>
         <item>3 Tassen Popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g Getreideflockenbrei oder gekochte Körner, Nudeln oder Maiskörner</item>
-        <item>50 g Getreideflocken</item>
-        <item>1 Tortilla oder 1 Scheibe Brot</item>
+        <item>100 g gekochte Vollkornprodukte, Vollkornnudeln oder Maiskörner</item>
+        <item>50 g Frühstücksflocken aus 100 % Vollkorn</item>
+        <item>1 Tortilla aus 100 % Vollkorn (oder 2 kleinere Maistortillas)</item>
+        <item>1 Scheibe Brot aus 100 % Vollkorn</item>
         <item>½ Bagel oder ½ Englischer Muffin</item>
         <item>30 g Popcorn</item>
     </string-array>

@@ -24,7 +24,7 @@
     <string name="moving_average">Media móvil</string>
     <string name="about">Conócenos</string>
     <string name="about_this_app">Sobre esta app</string>
-    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Videos más recientes</string>
     <string name="donate">Donación</string>
     <string name="subscribe">Suscríbete</string>
@@ -161,7 +161,7 @@
     <string name="faq_age_response.1">La Docena Diaria se diseñó para utilizarla como una guía de cómo incluir los alimentos más sanos en tu rutina diaria. Aunque se puede usar el mismo esquema para la mayoría de personas, la cantidad de comida cambia según un montón de factores, como la edad o el nivel de actividad física. Como no podemos proporcionar consejo médico o nutricional sobre niños en crecimiento, la Docena solo puede ser una guía para escoger cómo dar de comer a tu hijo. Aconsejamos hablar con un profesional de la nutrición para determinar necesidades concretas. </string>
     <string name="faq_calories_question">¿Cuántas calorías tiene la Docena Diaria?</string>
     <string name="faq_calories_response.0">La Docena Diaria aporta una media de 1200 calorías, pero, debido a la gran variedad de alimentos de cada categoría, puede estar entre 800 y 1800 calorías. Piensa en la categoría de Otras verduras: una taza de pimientos tiene una densidad calórica mucho menor que una taza de batata cocida, así que el rango de calorías depende de los alimentos que ingieras. Es lo bueno de la Docena Diaria, que no son reglas estrictas, sino que se puede adaptar a tus necesidades. </string>
-    <string name="faq_calories_response.1">Si quieres perder peso, puedes encontrar más información en \"Comer para no engordar\" y sus 21 potenciadores. En \"Comer para no engordar\", explico: \"Una revisión sistemática de las estrategias exitosas de pérdida de peso concluyó que, debido a que el metabolismo se ralentiza y tu apetito aumenta cuando pierdes peso, para poder perder bastante peso, quizá debas reducir tu consumo calórico a incluso 1200 calorías al día para las mujeres y 1500 calorías al día para los hombres\". </string>
+    <string name="faq_calories_response.1">Si quieres perder peso, puedes encontrar más información en “Comer para no engordar” y sus 21 potenciadores. En “Comer para no engordar”, explico: “Una revisión sistemática de las estrategias exitosas de pérdida de peso concluyó que, debido a que el metabolismo se ralentiza y tu apetito aumenta cuando pierdes peso, para poder perder bastante peso, quizá debas reducir tu consumo calórico a incluso 1200 calorías al día para las mujeres y 1500 calorías al día para los hombres”. </string>
     <string name="faq_calories_response.2">Al mismo tiempo, si quieres ganar peso, quizá te interese enfocarte en añadir más alimentos densos en calorías, como las batatas, los aguacates, los frutos secos y los productos de soja.</string>
     <string name="faq_mother_question">¿Puedo comer así si estoy embarazada o dando el pecho?</string>
     <string name="faq_mother_response">Las personas embarazadas o que están dando el pecho tienen unas necesidades calóricas y nutricionales diferentes. Como recordatorio, la Docena Diaria no es un plan de comidas y no debería ser lo único que comes en un día. Una persona embarazada o dando el pecho debe consultar con su profesional de la salud o nutricionista sobre cómo alcanzar sus necesidades calóricas y nutricionales. </string>
@@ -216,7 +216,6 @@
         <item>Frijoles Great Northern</item>
         <item>Frijoles rojos</item>
         <item>Lentejas (beluga, francesa, roja)</item>
-        <item>Miso</item>
         <item>Frijoles blancos</item>
         <item>Frijoles pintos</item>
         <item>Frijoles rojos pequeños</item>
@@ -303,7 +302,7 @@
         <item>Zanahoria</item>
         <item>Maíz</item>
         <item>Ajo</item>
-        <item>Champiñones</item>
+        <item>Hongos (champiñones, ostra, portobello, shiitake y boletus)</item>
         <item>Okra</item>
         <item>Cebolla</item>
         <item>Patatas moradas</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Almendras</item>
-        <item>Nueces de Brasil</item>
         <item>Anacardos</item>
         <item>Semillas de chia</item>
         <item>Avellanas</item>
@@ -388,7 +386,6 @@
         <item>Té Earl Grey</item>
         <item>Té verde</item>
         <item>Infusión de hibisco</item>
-        <item>Chocolate caliente</item>
         <item>Té de jazmín</item>
         <item>Té de limón</item>
         <item>Té matcha</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ taza de hummus o paté de otras legumbres</item>
         <item>½ taza de legumbres cocinadas</item>
-        <item>½ taza de tofu o tempeh</item>
-        <item>1 taza de arvejas o tirabeques</item>
-        <item>1 taza de brotes de legumbres </item>
+        <item>⅓ taza de tofu o tempeh</item>
+        <item>1 taza de arvejas o brotes de lentejas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g de hummus o paté de otras legumbres</item>
-        <item>90 g de legumbres cocinadas</item>
-        <item>100 g de tofu o tempeh</item>
-        <item>130 g de arvejas o tirabeques</item>
-        <item>100 g de brotes de legumbres</item>
+        <item>70 g de hummus o paté de otras legumbres</item>
+        <item>100 g de legumbres cocinadas</item>
+        <item>80 g de tofu o tempeh</item>
+        <item>100 g de arvejas o brotes de lentejas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ taza frescos o congelados</item>
         <item>¼ taza secos</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g frescos o congelados</item>
+        <item>70 g frescos o congelados</item>
         <item>40 g secos</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 fruta de tamaño medio</item>
-        <item>120 g de fruta picada</item>
+        <item>150 g de fruta picada</item>
         <item>40 g de fruta seca</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ taza picadas</item>
-        <item>½ taza de coles de Bruselas</item>
+        <item>½ taza de verduras de hoja cocinadas</item>
+        <item>½ taza de verduras crudas o cocinadas (no de hoja)</item>
+        <item>1 taza de verduras de hoja crudas</item>
         <item>¼ taza de brotes de brócoli</item>
         <item>1 cucharada de rábano picante</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g picadas</item>
-        <item>80 g de coles de Bruselas</item>
-        <item>15 g de brotes de brócoli</item>
+        <item>90 g de verduras de hoja cocinadas</item>
+        <item>60 g de verduras crudas o cocinadas (no de hoja)</item>
+        <item>90 g verduras de hoja crudas</item>
+        <item>20 g de brotes de brócoli</item>
         <item>1 cucharada de rábano picante</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g de verduras de hoja crudas</item>
-        <item>50 g de verduras sin hoja crudas o cocidas</item>
-        <item>125 ml de jugo de verduras</item>
-        <item>7 g de champiñones secos</item>
+        <item>90 g de verduras crudas o cocinadas (no de hoja)</item>
+        <item>120 ml de jugo de verduras</item>
+        <item>10 g de hongos secos</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 cucharada molida</item>
@@ -541,16 +538,18 @@
         <item>Cualquier otra especia (sin sal)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ taza de cereales cocidos, pasta o granos de maíz cocidos</item>
-        <item>1 taza de cereales fríos</item>
-        <item>1 tortilla o rodaja de pan</item>
+        <item>½ taza de cereales integrales cocidos, pasta de trigo integral o granos de maíz</item>
+        <item>1 taza de cereales integrales fríos </item>
+        <item>1 tortilla 100% integral (o 2 tortillas pequeñas de maíz)</item>
+        <item>1 rebanada de pan 100% integral</item>
         <item>½ bagel o English muffin</item>
         <item>3 tazas de palomitas de maíz</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g de cereales cocidos, pasta o granos de maíz cocidos</item>
-        <item>50 g de cereales fríos</item>
-        <item>1 tortilla o rodaja de pan</item>
+        <item>100 g de cereales integrales cocidos, pasta integral o granos de maíz</item>
+        <item>50 g de cereales integrales fríos</item>
+        <item>1 tortilla 100% integral (o 2 tortillas pequeñas de maíz)</item>
+        <item>1 rebanada de pan 100% integral</item>
         <item>½ bagel o English muffin</item>
         <item>30 g de palomitas de maíz</item>
     </string-array>

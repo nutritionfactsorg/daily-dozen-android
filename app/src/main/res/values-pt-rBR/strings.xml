@@ -24,7 +24,7 @@
     <string name="moving_average">Média Móvel</string>
     <string name="about">Sobre Nós</string>
     <string name="about_this_app">Sobre este aplicativo</string>
-    <string name="about_translators">Agradecimentos especiais aos nossos tradutores voluntários: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Agradecimentos especiais aos nossos tradutores voluntários: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Últimos Vídeos</string>
     <string name="donate">Doar</string>
     <string name="subscribe">Inscreva-se</string>
@@ -216,7 +216,6 @@
         <item>Feijão branco (great northern)</item>
         <item>Feijão vermelho grande</item>
         <item>Lentilha (variedades beluga, francesa e vermelha)</item>
-        <item>Missô</item>
         <item>Feijão branco (navy)</item>
         <item>Feijão carioquinha</item>
         <item>Feijão vermelho pequeno</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Amêndoas</item>
-        <item>Castanhas do Pará</item>
         <item>Castanhas de cajú</item>
         <item>Sementes de chia</item>
         <item>Avelãs</item>
@@ -388,7 +386,6 @@
         <item>Chá Earl Grey</item>
         <item>Chá verde</item>
         <item>Chá de hibisco</item>
-        <item>Chocolate quente</item>
         <item>Chá verde com aroma de jasmim</item>
         <item>Chá de erva-cidreira</item>
         <item>Chá matcha</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ xícara de homus ou patê de feijão</item>
         <item>½ xícara de feijão, ervilha ou lentilha cozidos</item>
-        <item>½ xícara de tofu ou tempê</item>
-        <item>1 xícara de ervilha fresca</item>
-        <item>1 xícara de feijão fresco germinado (lentilha, feijão mungo)</item>
+        <item>⅓ xícara de tofu ou tempeh</item>
+        <item>1 xícara de ervilha fresca ou lentilha germinada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g de homus ou patê de feijão</item>
-        <item>90 g de feijão, ervilha ou lentilha cozidos</item>
-        <item>100 g de tofu ou tempê</item>
-        <item>130 g de ervilha fresca</item>
-        <item>100 g de feijão fresco germinado (lentilha, feijão mungo)</item>
+        <item>70 g de homus ou patê de feijão</item>
+        <item>100 g de feijão, ervilha ou lentilha cozidos</item>
+        <item>80 g de tofu ou tempê</item>
+        <item>100 g de ervilha fresca ou lentilha germinada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ xícara de frutas silvestres frescas ou congeladas</item>
         <item>¼ xícara de frutas silvestres secas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g de frutas silvestres frescas ou congeladas</item>
+        <item>70 g frescos ou congelados</item>
         <item>40 g de frutas silvestres secas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 fruta de tamanho médio</item>
-        <item>120 g de frutas picadas</item>
+        <item>150 g de frutas picadas</item>
         <item>40 g de frutas secas</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ xícara de crucíferos picados</item>
-        <item>½ copo de couve de Bruxelas</item>
-        <item>¼ copo de brotos de brócolis</item>
+        <item>½ xícara de vegetais folhosos cozidos</item>
+        <item>½ xícara de vegetais não-folhosos crús ou cozidos</item>
+        <item>1 xícara de vegetais folhosos crús</item>
+        <item>¼ xícara de brotos de brócolis</item>
         <item>1 colher de sopa de rábano-silvestre</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g de crucíferos picados</item>
-        <item>80 g de couve de Bruxelas</item>
-        <item>15 g brotos de brócolis</item>
+        <item>90 g de vegetais folhosos cozidos</item>
+        <item>60 g de vegetais não-folhosos crús ou cozidos</item>
+        <item>90 g de vegetais folhosos crús</item>
+        <item>20 g brotos de brócolis</item>
         <item>1 colher de sopa de rábano-silvestre</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g de vegetais folhosos crus</item>
-        <item>50 g de vegetais não-folhosos crus ou cozidos</item>
-        <item>125 ml de suco de vegetais</item>
-        <item>7 g de cogumelos secos</item>
+        <item>90 g de vegetais não-folhosos crús ou cozidos</item>
+        <item>120 ml de suco de vegetais</item>
+        <item>10 g de cogumelos secos</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 colher de sopa (moída/triturada)</item>
@@ -541,16 +538,18 @@
         <item>Qualquer outra erva (sem sal) e especiarias que goste</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ xícara de cereais, grãos cozidos, massas ou grãos de milho</item>
-        <item>1 xícara de cereais matinais</item>
-        <item>1 tortilha ou fatia de pão</item>
+        <item>½ xícara de cereais integrais, macarrão integral ou grãos de milho cozidos</item>
+        <item>1 xícara de cereais matinais 100% integrais</item>
+        <item>1 tortilha 100% integral (ou 2 tortilhas mais pequenas)</item>
+        <item>1 fatia de pão 100% de grãos integrais</item>
         <item>½ bagel ou muffin inglês</item>
         <item>3 xícaras de pipoca</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g de cereais, grãos cozidos, massas ou grãos de milho</item>
-        <item>50 g de cereais matinais</item>
-        <item>1 tortilha ou fatia de pão</item>
+        <item>100 g de cereais integrais, macarrão integral ou grãos de milho cozidos</item>
+        <item>50 g de cereais matinais 100% integrais</item>
+        <item>1 tortilha 100% integral (ou 2 tortilhas mais pequenas)</item>
+        <item>1 fatia de pão 100% de grãos integrais</item>
         <item>½ bagel ou muffin inglês</item>
         <item>30 g de pipoca</item>
     </string-array>
