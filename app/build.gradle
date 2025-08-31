@@ -35,8 +35,8 @@ android {
         applicationId "org.nutritionfacts.dailydozen"
         minSdkVersion 26
         multiDexEnabled true
-        compileSdk 34
-        targetSdkVersion 34
+        compileSdk 35
+        targetSdkVersion 35
         vectorDrawables.useSupportLibrary = true
         versionCode 92
         versionName "28"
