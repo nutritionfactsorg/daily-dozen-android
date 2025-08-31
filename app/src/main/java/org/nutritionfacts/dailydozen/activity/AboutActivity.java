@@ -10,14 +10,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 
 import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.databinding.ActivityAboutBinding;
 
-public class AboutActivity extends AppCompatActivity {
+public class AboutActivity extends DailyDozenActivity {
     private ActivityAboutBinding binding;
 
     @Override

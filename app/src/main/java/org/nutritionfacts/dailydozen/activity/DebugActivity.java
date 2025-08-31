@@ -7,7 +7,6 @@ import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
@@ -21,7 +20,7 @@ import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import timber.log.Timber;
 
-public class DebugActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, ProgressListener {
+public class DebugActivity extends DailyDozenActivity implements AdapterView.OnItemSelectedListener, ProgressListener {
     private ActivityDebugBinding binding;
 
     private int historyToGenerate;

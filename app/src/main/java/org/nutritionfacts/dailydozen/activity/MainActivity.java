@@ -11,7 +11,6 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
@@ -45,7 +44,7 @@ import java.util.Date;
 
 import timber.log.Timber;
 
-public class MainActivity extends AppCompatActivity implements ProgressListener {
+public class MainActivity extends DailyDozenActivity implements ProgressListener {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     private ActivityMainBinding binding;

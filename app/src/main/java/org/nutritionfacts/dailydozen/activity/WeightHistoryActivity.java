@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.data.Entry;
@@ -27,7 +25,7 @@ import org.nutritionfacts.dailydozen.task.LoadWeightsHistoryTask;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 
-public class WeightHistoryActivity extends AppCompatActivity
+public class WeightHistoryActivity extends DailyDozenActivity
         implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener {
     private ActivityServingsHistoryBinding binding;
 

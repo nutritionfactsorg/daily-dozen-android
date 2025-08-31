@@ -5,13 +5,12 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.Tweak;
 
-public abstract class InfoActivity extends AppCompatActivity {
+public abstract class InfoActivity extends DailyDozenActivity {
     private Food food;
     private Tweak tweak;
 

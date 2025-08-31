@@ -3,14 +3,13 @@ package org.nutritionfacts.dailydozen.activity;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.databinding.ActivityFaqBinding;
 
 import io.noties.markwon.Markwon;
 
-public class FaqActivity extends AppCompatActivity {
+public class FaqActivity extends DailyDozenActivity {
     private ActivityFaqBinding binding;
 
     @Override
