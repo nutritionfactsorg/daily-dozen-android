@@ -455,13 +455,13 @@
         <item>¼ csésze humusz vagy babkrém</item>
         <item>½ csésze főtt bab, sárgaborsó vagy lencse</item>
         <item>⅓ csésze tofu vagy tempeh</item>
-        <item>1 csésze friss borsó vagy csírázott lencse</item>
+        <item>1 csésze friss borsó vagy csíráztatott lencse</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
         <item>70 g humusz vagy babkrém</item>
         <item>100 g főtt bab, sárgaborsó, vagy lencse</item>
         <item>80 g tofu vagy tempeh</item>
-        <item>100 g friss borsó vagy csírázott lencse</item>
+        <item>100 g friss borsó vagy csíráztatott lencse</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ csésze frissen vagy fagyasztva</item>
@@ -482,16 +482,16 @@
         <item>40 g szárított gyümölcs</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ csésze főtt leveles zöldségek</item>
-        <item>½ csésze nyers vagy főtt nem leveles zöldségek</item>
-        <item>1 csésze nyers leveles zöldségek</item>
+        <item>½ csésze főtt leveles zöldség</item>
+        <item>½ csésze nyers vagy főtt nem leveles zöldség</item>
+        <item>1 csésze nyers leveles zöldség</item>
         <item>¼ csésze brokkolicsíra</item>
         <item>1 evőkanál torma</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>90 g főtt leveles zöldségek</item>
-        <item>60 g nyers vagy főtt nem leveles zöldségek</item>
-        <item>90 g nyers leveles zöldségek</item>
+        <item>90 g főtt leveles zöldség</item>
+        <item>60 g nyers vagy főtt nem leveles zöldség</item>
+        <item>90 g nyers leveles zöldség</item>
         <item>15 g brokkolicsíra</item>
         <item>1 evőkanál torma</item>
     </string-array>
@@ -538,7 +538,7 @@
         <item>Bármilyen más (sómentes) gyógynövény és fűszer, amit szeret</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ csésze főtt teljes kiőrlésű gabona, teljes kiőrlésű tészta vagy kukoricaszem</item>
+        <item>½ csésze főtt teljes kiőrlésű gabona, teljes kiőrlésű tészta vagy kukorica</item>
         <item>1 csésze 100% teljes kiőrlésű hideg gabonapehely</item>
         <item>1 100% teljes kiőrlésű (búza)tortilla (vagy 2 kisebb kukoricatortilla)</item>
         <item>1 szelet 100% teljes kiőrlésű kenyér</item>
