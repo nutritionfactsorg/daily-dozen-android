@@ -24,7 +24,7 @@
     <string name="moving_average">Mesura mòbil</string>
     <string name="about">Informació</string>
     <string name="about_this_app">Sobre aquesta app</string>
-    <string name="about_translators">Agraïment especial als nostres traductors voluntaris: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Agraïment especial als nostres traductors voluntaris: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Últims vídeos</string>
     <string name="donate">Donacions</string>
     <string name="subscribe">Subscriu-te</string>
@@ -216,7 +216,6 @@
         <item>Mongetes confit</item>
         <item>Mongetes sastre</item>
         <item>Llenties (rossa, pardina i altres varietats)</item>
-        <item>Miso</item>
         <item>Mongetes</item>
         <item>Mongetes pintes</item>
         <item>Mongetes vermelles</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Ametlles</item>
-        <item>Nous del Brasil</item>
         <item>Anacards</item>
         <item>Llavors de xia</item>
         <item>Avellanes</item>
@@ -388,7 +386,6 @@
         <item>Te Earl Grey</item>
         <item>Te verd</item>
         <item>Infusió d\'hibisc</item>
-        <item>Xocolata calenta (sense sucre)</item>
         <item>Te de gessamí</item>
         <item>Infusió de melissa</item>
         <item>Te matcha</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ tassa d\'hummus o salsa de fesols</item>
         <item>½ tassa de mongetes cuites, pèsols o llenties</item>
-        <item>½ tassa de tofu o tempeh</item>
-        <item>1 tassa de pèsols frescos o pèsols de neu</item>
-        <item>1 tassa de mongetes germinades fresques (llenties, mongetes mung)</item>
+        <item>⅓ tassa de tofu o tempeh</item>
+        <item>1 tassa de pèsols frescos o brots de llegums germinats</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g d\'hummus o salsa de mongetes</item>
-        <item>90 g de mongetes cuites, pèsols o llenties</item>
-        <item>100 g de tofu o tempeh</item>
-        <item>130 g de pèsols frescos o pèsols de neu</item>
-        <item>100 g de mongetes fresques germinades (llenties, mongetes mung)</item>
+        <item>70 g d\'hummus o salsa de mongetes</item>
+        <item>100 g de mongetes cuites, pèsols o llenties</item>
+        <item>80 g de tofu o tempeh</item>
+        <item>100 g de pèsols frescos o llegums germinats</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ tassa frescos o congelats</item>
         <item>¼ tassa dessecats</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g frescos o congelats</item>
+        <item>70 g frescos o congelats</item>
         <item>40 g dessecats</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 fruita de mida mitjana</item>
-        <item>120 g de fruita tallada</item>
+        <item>150 g de fruita tallada</item>
         <item>40 g de fruita dessecada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ tassa tallat</item>
-        <item>½ tassa de cols de Brussel·les</item>
-        <item>¼ tassa brots de bròquil</item>
+        <item>½ tassa de verdures de fulla cuites</item>
+        <item>½ tassa de verdures sense fulla cuites o crues</item>
+        <item>1 tassa de verdures de fulla crues</item>
+        <item>¼ tassa de brots germinats de bròquil</item>
         <item>1 cullerada de rave picant</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30-80 g tallat</item>
-        <item>80 g de cols de Brussel·les</item>
-        <item>15 g brots de bròquil</item>
+        <item>90 g de verdures de fulla cuites</item>
+        <item>60 g de verdures sense fulla cuites o crues</item>
+        <item>90 g de verdures de fulla crues</item>
+        <item>20 g de brots germinats de bròquil</item>
         <item>1 cullerada de rave picant</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g de verdures de fulla crues</item>
-        <item>50 g de verdures sense fulla crues o cuites</item>
-        <item>125 ml de suc de verdures</item>
-        <item>7 g de bolets dessecats</item>
+        <item>90 g de verdures sense fulla cuites o crues </item>
+        <item>120 ml de suc de verdures</item>
+        <item>10 g de bolets dessecats</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 cullerada (mòlt)</item>
@@ -541,16 +538,18 @@
         <item>Qualsevol altra espècie (sense sal)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ tassa de cereals cuits, pasta integral o grans de blat cuits</item>
-        <item>1 tassa de cereals freds</item>
-        <item>1 tortilla o llesca de pa</item>
+        <item>½ tassa de cereals integrals, pasta integral o grans de blat cuits</item>
+        <item>1 tassa de cereals 100% integrals freds</item>
+        <item>1 tortilla 100% integral (o 2 tortilles més petites de blat de moro)</item>
+        <item>1 tortilla o llesca de pa 100% integral</item>
         <item>½ bagel o muffin anglès</item>
         <item>3 tasses de crispetes de blat de moro</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g de cereals cuits, pasta integral o grans de blat cuits</item>
-        <item>50 g de cereals freds</item>
-        <item>1 tortilla o llesca de pa</item>
+        <item>100 g de cereals integrals, pasta integral o grans de blat cuits</item>
+        <item>50 g de cereals 100% integrals freds</item>
+        <item>1 tortilla 100% integral (o 2 tortilles més petites de blat de moro)</item>
+        <item>1 tortilla o llesca de pa 100% integral</item>
         <item>½ bagel o muffin anglès</item>
         <item>30 g de crispetes de blat de moro</item>
     </string-array>

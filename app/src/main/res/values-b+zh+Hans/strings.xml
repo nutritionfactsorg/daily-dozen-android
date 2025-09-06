@@ -24,7 +24,7 @@
     <string name="moving_average">活动平均数</string>
     <string name="about">关于我们</string>
     <string name="about_this_app">关于本应用程序</string>
-    <string name="about_translators">特别鸣谢翻译志愿者：Petar Enchev（bg）、Tsveti Enchev（bg）、Ricard Soler Roger（ca）、Luděk Bouška（cs,sk）、Lenka Lukacová（cs）、Anke Schliessmann（de）、Ángela Graña(es)、Saeed Salamian (fa)、Audray Harkins（fr）、Doron Barak（he）、Ruth Levy（he）、Annalisa Guerrini-Körner（it）、Ilaria Zanini（it）、Hanna Gurzeda（pl）、Joanna Klopotek（pl）、Tania Bassi（pt-BR）、João Madureira（pt-PT）、Cristina Lauby（ro）、Evgeniya Lyakh（ru）、Katarína Mocáková（sk）、Sabina Aliieva（uk)。</string>
+    <string name="about_translators">特别鸣谢翻译志愿者：Petar Enchev（bg）、Tsveti Enchev（bg）、Ricard Soler Roger（ca）、Luděk Bouška（cs,sk）、Lenka Lukacová（cs）、Anke Schliessmann（de）、Ángela Graña(es)、Saeed Salamian (fa)、Audray Harkins（fr）、Doron Barak（he）、Ruth Levy（he）、dr. Stern Borbála (hu)、Kertész Tibor (hu)、Annalisa Guerrini-Körner（it）、Ilaria Zanini（it）、Hanna Gurzeda（pl）、Joanna Klopotek（pl）、Tania Bassi（pt-BR）、João Madureira（pt-PT）、Cristina Lauby（ro）、Evgeniya Lyakh（ru）、Katarína Mocáková（sk）、Sabina Aliieva（uk)。</string>
     <string name="latest_videos">最新视频</string>
     <string name="donate">捐款</string>
     <string name="subscribe">订阅</string>
@@ -216,7 +216,6 @@
         <item>白芸豆</item>
         <item>芸豆</item>
         <item>小扁豆（包括黑扁豆、法国扁豆与红扁豆等品种）</item>
-        <item>味噌</item>
         <item>白豆</item>
         <item>花豆</item>
         <item>小红豆</item>
@@ -303,7 +302,7 @@
         <item>胡萝卜</item>
         <item>玉米</item>
         <item>大蒜</item>
-        <item>菇类（洋菇、平菇、波特菇与香菇）</item>
+        <item>菇类（洋菇、平菇、牛肝菌菇、波特菇与香菇）</item>
         <item>秋葵</item>
         <item>洋葱</item>
         <item>紫薯</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>杏仁</item>
-        <item>巴西坚果</item>
         <item>腰果</item>
         <item>奇亚籽</item>
         <item>榛子</item>
@@ -388,7 +386,6 @@
         <item>伯爵茶</item>
         <item>绿茶</item>
         <item>洛神花茶</item>
-        <item>热巧克力</item>
         <item>茉莉花茶</item>
         <item>柠檬香精茶</item>
         <item>抹茶</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼杯鹰嘴豆泥或其他豆泥</item>
         <item>½杯煮熟的豆子、豌豆或小扁豆</item>
-        <item>½杯豆腐或天贝</item>
-        <item>1杯新鲜豌豆或荷兰豆</item>
-        <item>1杯新鲜发芽豆（扁豆、绿豆）</item>
+        <item>⅓杯豆腐或天贝</item>
+        <item>1杯新鲜豌豆或萌芽扁豆</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60克鹰嘴豆或其他豆泥</item>
-        <item>90克煮熟的豆子、豌豆或小扁豆</item>
-        <item>100克豆腐或天贝</item>
-        <item>130克新鲜豌豆或荷兰豆</item>
-        <item>100克新鲜发芽豆（扁豆、绿豆）</item>
+        <item>70克鹰嘴豆或其他豆泥</item>
+        <item>100克煮熟的豆子、去皮豌豆或扁豆</item>
+        <item>80克豆腐或天贝</item>
+        <item>100克新鲜豌豆或萌芽扁豆</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½杯新鲜或冷冻浆果</item>
         <item>¼杯浆果干</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60克新鲜或冷冻浆果</item>
+        <item>70克新鲜或冷冻</item>
         <item>40克浆果干</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1颗中型水果</item>
-        <item>120克水果丁</item>
+        <item>150克水果丁</item>
         <item>40克果干</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½杯切碎的十字花科蔬菜</item>
-        <item>½杯孢子甘蓝苗</item>
+        <item>½杯熟绿叶菜</item>
+        <item>½杯生或熟非绿叶菜</item>
+        <item>1杯生绿叶菜</item>
         <item>¼杯西蓝花苗</item>
         <item>一大匙辣根</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30至80克切碎的十字花科蔬菜</item>
-        <item>80克孢子甘蓝苗</item>
-        <item>15克西蓝花苗</item>
+        <item>90克熟绿叶菜</item>
+        <item>60克生或熟非绿叶菜</item>
+        <item>90克生绿叶菜</item>
+        <item>20克西蓝花苗</item>
         <item>一大匙辣根</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60克生叶菜</item>
-        <item>50克生或熟的非叶菜</item>
-        <item>125毫升蔬菜汁</item>
-        <item>7克干菇类</item>
+        <item>90克生或熟非绿叶菜</item>
+        <item>120毫升蔬菜汁</item>
+        <item>10克干菇类</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1大匙亚麻籽粉</item>
@@ -541,16 +538,18 @@
         <item>任何其他您所喜欢的（无盐）香草和香料</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½杯热麦片或煮熟的谷物、意大利面或玉米粒</item>
-        <item>1杯冷麦片</item>
-        <item>1份墨西哥薄饼或1片面包</item>
+        <item>½杯熟全谷物、全麦意大利面或玉米粒</item>
+        <item>1杯100%冷全谷物麦片</item>
+        <item>1块100%全谷物墨西哥饼（或2块小玉米饼）</item>
+        <item>1片100%全谷物面包</item>
         <item>½个贝果或英式松饼</item>
         <item>3杯爆米花</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100克热麦片或煮熟的谷物、意大利面或玉米粒</item>
-        <item>50克冷麦片</item>
-        <item>1份墨西哥薄饼或1片面包</item>
+        <item>100克熟全谷物、全麦意大利面或玉米粒</item>
+        <item>50克100%冷全谷物麦片</item>
+        <item>1块100%全谷物墨西哥饼（或2块小玉米饼）</item>
+        <item>1片100%全谷物面包</item>
         <item>½个贝果或英式松饼</item>
         <item>30克爆米花</item>
     </string-array>

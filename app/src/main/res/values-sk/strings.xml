@@ -24,7 +24,7 @@
     <string name="moving_average">Pohyblivý priemer</string>
     <string name="about">O aplikácii</string>
     <string name="about_this_app">O tejto aplikácii</string>
-    <string name="about_translators">Osobitné poďakovanie patrí našim dobrovoľným prekladateľom: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Osobitné poďakovanie patrí našim dobrovoľným prekladateľom: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Najnovšie videá</string>
     <string name="donate">Darovať</string>
     <string name="subscribe">Predplatiť si</string>
@@ -153,7 +153,7 @@
     <string name="complete_intentions_text">Každé dva mesiace vytvorte tri nové implementačné zámery – plány „keď X, potom Y“ na vykonanie konkrétneho správania v konkrétnom kontexte – a každý z nich zaškrtnite, keď ich každý deň dokončíte.</string>
     <string name="nightly_fast_text">Kvôli našim cirkadiánnym rytmom sa z jedla konzumovaného večer a v noci uloží viac tuku, než z úplne rovnakého jedla, konzumovaného v skoršiu dennú dobu. Preto sa každú noc, počnúc 19:00, aspoň dvanásť hodín postite. Čím menej kalórií po západe slnka, tým lepšie.</string>
     <string name="nightly_sleep_text">Toto políčko zaškrtnite, ak pri dodržaní svojho pravidelného času ľahnutia spíte aspoň sedem hodín.</string>
-    <string name="nightly_trendelenburg_text">Skúste stráviť aspoň štyri hodiny za noc ležaním s telom nakloneným hlavou dole pod uhlom šesť stupňov. Tento náklon je možné dosiahnuť podložením/zdvihnutím stĺpikov v nohách postele o 20cm (22,5cm pokiaľ je vaša posteľ dlhšia ako štandardná). Buďte extrémne opatrní pri vstávaní z tejto polohy, pretože u väčšiny ľudí spôsobuje ortostatickú intoleranciu, dokonca aj keď ste mladí a zdraví. Pokiaľ teda vstanete príliš rýchlo, môžete pocítiť závrat, mdloby alebo točenie hlavy a mohli by ste spadnúť a zraniť sa. Takže vstávajte pomaly. Vypitie dvoch šálok studenej vody tridsať minút pred vstávaním (zdvihnutím sa z postele) môže pomôcť predísť tomuto potenciálne nebezpečnému vedľajšiemu efektu. \n\n*DÔLEŽITÉ: Toto doma v žiadnom prípade neskúšajte, ak trpíte problémami so srdcom alebo pľúcami, pálením záhy, alebo problémami s mozgom (traumatické zranenie hlavy) alebo očami (dokonca aj rodinná anamnéza glaukómu vás diskvalifikuje). Tiež toto neskúšajte, kým sa svojho lekára nespýtate, či si myslia, že je pre vás bezpečné spať v polohe \"mierny Trendelenburg\". *</string>
+    <string name="nightly_trendelenburg_text">Skúste stráviť aspoň štyri hodiny za noc ležaním s telom nakloneným hlavou dole pod uhlom šesť stupňov. Tento náklon je možné dosiahnuť podložením/zdvihnutím stĺpikov v nohách postele o 20cm (22,5cm pokiaľ je vaša posteľ dlhšia ako štandardná). Buďte extrémne opatrní pri vstávaní z tejto polohy, pretože u väčšiny ľudí spôsobuje ortostatickú intoleranciu, dokonca aj keď ste mladí a zdraví. Pokiaľ teda vstanete príliš rýchlo, môžete pocítiť závrat, mdloby alebo točenie hlavy a mohli by ste spadnúť a zraniť sa. Takže vstávajte pomaly. Vypitie dvoch šálok studenej vody tridsať minút pred vstávaním (zdvihnutím sa z postele) môže pomôcť predísť tomuto potenciálne nebezpečnému vedľajšiemu efektu. \n\n*DÔLEŽITÉ: Toto doma v žiadnom prípade neskúšajte, ak trpíte problémami so srdcom alebo pľúcami, pálením záhy, alebo problémami s mozgom (traumatické zranenie hlavy) alebo očami (dokonca aj rodinná anamnéza glaukómu vás diskvalifikuje). Tiež toto neskúšajte, kým sa svojho lekára nespýtate, či si myslia, že je pre vás bezpečné spať v polohe “mierny Trendelenburg”. *</string>
     <string name="faq_adapt_question">Denná Dvanástka je pre mňa príliš veľa/príliš málo jedla! Môžem si to prispôsobiť?</string>
     <string name="faq_adapt_response">Áno, Daily Dozen má byť jednoducho sprievodcom tých najzdravších potravín, ktoré sa snažíme každý deň zaradiť. Nie je to plán stravovania a nie je určený na predpis. Snažte sa jesť rozmanitú škálu celých rastlinných potravín a prispôsobte denný tucet množstvu, ktoré vám vyhovuje.</string>
     <string name="faq_age_question">Je to prispôsobiteľné pre deti, dospievajúcich a mládež?</string>
@@ -216,7 +216,6 @@
         <item>Veľká severská fazuľa</item>
         <item>Fazuľa (v tvare obličky)</item>
         <item>Šošovica (beluga, francúzske a červené odrody)</item>
-        <item>Miso pasta</item>
         <item>Fazuľa Navy</item>
         <item>Fazuľa Pinto</item>
         <item>Malá červená fazuľa</item>
@@ -303,7 +302,7 @@
         <item>Mrkva</item>
         <item>Kukurica</item>
         <item>Cesnak</item>
-        <item>Huby (pečiarka - biela, hnedá, hliva ustricová a shiitake)</item>
+        <item>Huby (žampióny, ustricové, porcini, portobello a shiitake)</item>
         <item>Ibištekovec jedlý</item>
         <item>Cibuľa</item>
         <item>Fialové zemiaky</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Mandle</item>
-        <item>Brazílske orechy</item>
         <item>Kešu orechy</item>
         <item>Chia semienka</item>
         <item>Lieskové oriešky</item>
@@ -388,7 +386,6 @@
         <item>Earl grey čaj</item>
         <item>Zelený čaj</item>
         <item>Ibištekový čaj</item>
-        <item>Horúca čokoláda</item>
         <item>Jazmínový čaj</item>
         <item>Medovkový čaj</item>
         <item>Matcha čaj</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ šálky hummusu alebo fazuľového dipu</item>
         <item>½ šálky varenej fazule, hrachu alebo šošovice</item>
-        <item>½ šálky tofu alebo tempehu</item>
-        <item>1 šálka čerstvého hrášku alebo cukrového hrášku</item>
-        <item>1½ šálky čerstvej naklíčenej fazule (šošovica, fazuľa mungo)</item>
+        <item>⅓ šálky tofu alebo tempehu</item>
+        <item>1 šálka čerstvého hrášku alebo naklíčenej šošovice</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g hummusu alebo fazuľového dipu</item>
-        <item>90 g varenej fazule, hrachu alebo šošovice</item>
-        <item>100 g tofu alebo tempehu</item>
-        <item>130 g čerstvého hrášku alebo cukrového hrášku</item>
-        <item>100 g čerstvej naklíčenej fazule (šošovica, fazuľa mungo)</item>
+        <item>70 g hummusu alebo fazuľového dipu</item>
+        <item>100 g varenej fazule, hrachu alebo šošovice</item>
+        <item>80 g tofu alebo tempehu</item>
+        <item>100 g čerstvého hrášku alebo naklíčenej šošovice</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ šálky čerstvého alebo mrazeného</item>
         <item>¼ šálky sušené</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g čerstvé alebo mrazené</item>
+        <item>70 g čerstvé alebo mrazené</item>
         <item>40 g sušené</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 stredne veľké ovocie</item>
-        <item>120 g nakrájaného ovocia</item>
+        <item>150 g nakrájaného ovocia</item>
         <item>40 g sušeného ovocia</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ šálky nakrájané</item>
-        <item>½ šálky ružičkového kelu</item>
+        <item>½ šálky varenej listovej zeleniny</item>
+        <item>½ šálky surová alebo varená nelistová zelenina</item>
+        <item>1 šálka surovej listovej zeleniny</item>
         <item>¼ šálky brokolicových klíčkov</item>
         <item>1 lyžica chrenu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g nakrájané</item>
-        <item>80 g ružičkového kelu</item>
-        <item>15 g brokolicových klíčkov</item>
+        <item>90 g varenej listovej zeleniny</item>
+        <item>60 g surovej alebo varenej nelistovej zeleniny</item>
+        <item>90 g surovej listovej zeleniny</item>
+        <item>20 g brokolicových klíčkov</item>
         <item>1 lyžica chrenu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g surovej listovej zeleniny</item>
-        <item>50 g surovej alebo varenej nelistovej zeleniny</item>
-        <item>125 ml zeleninovej šťavy</item>
-        <item>7 g sušených húb</item>
+        <item>90 g surovej alebo varenej nelistovej zeleniny</item>
+        <item>120 ml zeleninovej šťavy</item>
+        <item>10 g sušených húb</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 polievková lyžica mletej</item>
@@ -542,15 +539,17 @@
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ šálky obilnej kaše alebo varených zŕn, cestovín alebo kukurice</item>
-        <item>1 šálka studených cereálií</item>
-        <item>1 tortilla alebo krajec chleba</item>
+        <item>1 šálka 100 % celozrnné studené cereálie</item>
+        <item>1 100 % celozrnná tortilla (alebo 2 menšie kukuričné tortily)</item>
+        <item>1 plátok 100 % celozrnného chleba</item>
         <item>½ žemle/bágelu alebo anglického mafinu</item>
         <item>3 šálky popcornu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
         <item>100 g obilnej kaše alebo varených zŕn, cestovín alebo kukurice</item>
-        <item>50 g studených cereálií</item>
-        <item>1 tortilla alebo krajec chleba</item>
+        <item>50 g 100 % celozrnné studené cereálie</item>
+        <item>1 100 % celozrnná tortilla (alebo 2 menšie kukuričné tortily)</item>
+        <item>1 plátok 100 % celozrnného chleba</item>
         <item>½ žemle/bágelu alebo anglického mafinu</item>
         <item>30 g popcornu (popraskaného)</item>
     </string-array>

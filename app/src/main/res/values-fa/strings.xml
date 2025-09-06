@@ -216,7 +216,6 @@
         <item>سویا</item>
         <item>لوبیاقرمز</item>
         <item>عدس (سیاه، سبز، زرد، قهوه‌ای و قرمز)</item>
-        <item>میسو (خمیرِ سویا)</item>
         <item>لوبیاسفید</item>
         <item>لوبیاچیتی</item>
         <item>لوبیاقرمزِ ریز</item>
@@ -303,7 +302,7 @@
         <item>هویج</item>
         <item>بلال</item>
         <item>سیر</item>
-        <item>قارچ (دکمه‌ای، صدفی، پُرتابِلّا، و شیتاکه)</item>
+        <item>قارچ (دکمه‌ای، صدفی، پورچینی، پُرتابِلّا، و شیتاکه)</item>
         <item>بامیه</item>
         <item>پیاز</item>
         <item>سیب‌زمینیِ بنفش</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>بادام</item>
-        <item>بادامِ برزیلی</item>
         <item>بادامِ هندی</item>
         <item>دانۀ چیا</item>
         <item>فندق</item>
@@ -388,7 +386,6 @@
         <item>چایِ اِرل گرِی</item>
         <item>چایِ سبز</item>
         <item>چایِ ترش</item>
-        <item>شکلاتِ داغ/هات‌چاکلت</item>
         <item>چایِ گلِ یاس</item>
         <item>چایِ بادرَنجبویه</item>
         <item>چایِ ماچا</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>یک‌چهارمِ پیمانه حُمُص یا دیپِ لوبیا</item>
         <item>یک‌دومِ پیمانه لوبیا، نخود، لپه، یا عدسِ پخته</item>
-        <item>یک‌دومِ پیمانه توفو یا تِمپه</item>
+        <item>یک‌سومِ پیمانه توفو یا تِمپه</item>
         <item>۱ پیمانه نخودسبز یا نخودفرنگی</item>
-        <item>۱ پیمانه حبوباتِ جوانه‌زدۀ تازه (عدس، ماش)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>۶۰ گرم حُمُص یا دیپِ لوبیا</item>
-        <item>۹۰ گرم لوبیا، نخود، لپه، یا عدسِ پخته</item>
-        <item>۱۰۰ گرم توفو یا تِمپه</item>
-        <item>۱۳۰ گرم نخودسبز یا نخودفرنگی</item>
-        <item>۱۰۰ گرم حبوباتِ جوانه‌زدۀ تازه (عدس، ماش)</item>
+        <item>۷۰ گرم حُمُص یا دیپِ لوبیا</item>
+        <item>۱۰۰ گرم لوبیا، نخود، لپه، یا عدسِ پخته</item>
+        <item>۸۰ گرم توفو یا تِمپه</item>
+        <item>۱۰۰ گرم نخودسبز یا نخودفرنگی</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>یک‌دومِ پیمانه تازه یا منجمد</item>
         <item>یک‌چهارمِ پیمانه خشک‌شده</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>۶۰ گرم تازه یا منجمد</item>
+        <item>۷۰ گرم تازه یا منجمد</item>
         <item>۴۰ گرم خشک‌شده</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>۱ میوه با اندازۀ متوسط</item>
-        <item>۱۲۰ گرم میوۀ خردشده</item>
+        <item>۱۵۰ گرم میوۀ خردشده</item>
         <item>۴۰ گرم میوۀ خشک‌شده</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>یک‌دومِ پیمانه خردشده</item>
-        <item>یک‌دومِ پیمانه کلم‌بروکسل/کلم‌فندقی</item>
-        <item>یک‌چهارمِ پیمانه کلم‌بروکلی</item>
+        <item>یک‌دومِ پیمانه سبزیجاتِ برگدارِ پخته</item>
+        <item>یک‌دومِ پیمانه سبزیجاتِ بی‌برگِ خام یا پخته</item>
+        <item>۱ پیمانه سبزیجاتِ برگدارِ خام</item>
+        <item>یک‌چهارمِ پیمانه جوانۀ کلم‌بروکلی</item>
         <item>۱ قاشقِ غذاخوری تربِ کوهی</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>۳۰-۸۰ گرم خردشده</item>
-        <item>۸۰ گرم کلم‌بروکسل/کلم‌فندقی</item>
-        <item>۱۵ گرم کلم‌بروکلی</item>
+        <item>۹۰ گرم سبزیجاتِ برگدارِ پخته</item>
+        <item>۶۰ گرم سبزیجاتِ بی‌برگِ خام یا پخته</item>
+        <item>۹۰ گرم سبزیجاتِ برگدارِ خام</item>
+        <item>۲۰ گرم جوانۀ کلم‌بروکلی</item>
         <item>۱ قاشقِ غذاخوری تربِ کوهی</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>۶۰ گرم سبزیجاتِ برگدارِ خام</item>
-        <item>۵۰ گرم سبزیجاتِ بی‌برگِ خام یا پخته</item>
-        <item>۱۲۵ میلی‌لیتر آبِ سبزیجات</item>
-        <item>۷ گرم قارچِ خشک‌شده</item>
+        <item>۹۰ گرم سبزیجاتِ بی‌برگِ خام یا پخته</item>
+        <item>۱۲۰ میلی‌لیتر آبِ سبزیجات</item>
+        <item>۱۰ گرم قارچِ خشک‌شده</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>۱ قاشقِ غذاخوری آسیاب‌شده</item>
@@ -541,16 +538,18 @@
         <item>هر سبزیِ معطر و ادویۀ (بدون نمکِ) دیگری که از آن لذت می‌برید</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>یک‌دومِ پیمانه غلاتِ گرم یا غلاتِ پخته، پاستا یا دانۀ ذرت</item>
-        <item>۱ پیمانه غلاتِ سرد</item>
-        <item>۱ تُرتیلا یا ۱ برش نان</item>
+        <item>یک‌دومِ پیمانه غلاتِ کامل، پاستای غلاتِ کامل یا دانه‌های ذرتِ پخته</item>
+        <item>۱ پیمانه غلاتِ صبحانۀ سرد از ۱۰۰% غلاتِ کامل</item>
+        <item>۱ تُرتیلا از ۱۰۰% غلاتِ کامل (یا ۲ ترتیلای ذرتِ کوچکتر)</item>
+        <item>۱ برش نان از ۱۰۰% غلاتِ کامل</item>
         <item>یک‌دومِ نان‌شیرینیِ حلقوی یا مافینِ انگلیسی</item>
         <item>۳ پیمانه ذرتِ بوداده</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>۱۰۰ گرم غلاتِ گرم یا غلاتِ پخته، پاستا یا دانۀ ذرت</item>
-        <item>۵۰ گرم غلاتِ سرد</item>
-        <item>۱ تُرتیلا یا ۱ برش نان</item>
+        <item>۱۰۰ گرم غلاتِ کامل، پاستای غلاتِ کامل یا دانه‌های ذرتِ پخته</item>
+        <item>۵۰ گرم غلاتِ صبحانۀ سرد از ۱۰۰% غلاتِ کامل</item>
+        <item>۱ تُرتیلا از ۱۰۰% غلاتِ کامل (یا ۲ ترتیلای ذرتِ کوچکتر)</item>
+        <item>۱ برش نان از ۱۰۰% غلاتِ کامل</item>
         <item>یک‌دومِ نان‌شیرینیِ حلقوی یا مافینِ انگلیسی</item>
         <item>۳۰ گرم ذرتِ بوداده</item>
     </string-array>
