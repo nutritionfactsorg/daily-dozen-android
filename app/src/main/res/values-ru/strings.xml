@@ -24,7 +24,7 @@
     <string name="moving_average">Средняя подвижность</string>
     <string name="about">О нас</string>
     <string name="about_this_app">Об этом приложении</string>
-    <string name="about_translators">Особая благодарность нашим переводчикам-волонтерам: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Особая благодарность нашим переводчикам-волонтерам: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Последние видео</string>
     <string name="donate">Сделайте пожертвование</string>
     <string name="subscribe">Подпишитесь</string>
@@ -216,7 +216,6 @@
         <item>Белая фасоль (великая северная)</item>
         <item>Красная фасоль (кидни)</item>
         <item>Чечевица (чёрная “белуга”, зеленая “французская” и разновидности красной)</item>
-        <item>Мисо</item>
         <item>Белая фасоль (флотская)</item>
         <item>Фасоль пинто</item>
         <item>Мелкая красная фасоль</item>
@@ -303,7 +302,7 @@
         <item>Морковь</item>
         <item>Кукуруза</item>
         <item>Чеснок</item>
-        <item>Грибы (шампиньоны, вёшенки, портобелло и шиитаке)</item>
+        <item>Грибы (шампиньоны, вешенки, белые грибы, портобелло и шиитаке)</item>
         <item>Бамия (окра)</item>
         <item>Лук</item>
         <item>Фиолетовый картофель</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Миндаль</item>
-        <item>Бразильские орехи</item>
         <item>Кешью</item>
         <item>Семена чиа</item>
         <item>Фундук</item>
@@ -388,7 +386,6 @@
         <item>Чай Эрл Грей</item>
         <item>Зелёный чай</item>
         <item>Каркаде</item>
-        <item>Горячий шоколад</item>
         <item>Чай с жасмином</item>
         <item>Чай из мелиссы</item>
         <item>Чай матча</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ стакана хумуса или соуса из фасоли</item>
         <item>½ стакана вареной фасоли, гороха или чечевицы</item>
-        <item>½ стакана тофу или темпе</item>
-        <item>1 чашка свежего гороха или стручкового горошка</item>
-        <item>1 стакан свежей пророщенной фасоли (чечевицы, бобов мунг)</item>
+        <item>⅓ стакана тофу или темпе</item>
+        <item>1 стакан свежего горошка или пророщенной чечевицы</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 г хумуса или соуса из фасоли</item>
-        <item>90 г вареной фасоли, гороха или чечевицы</item>
-        <item>100 г тофу или темпе</item>
-        <item>130 г свежего или стручкового горошка</item>
-        <item>100 г свежей пророщенной фасоли (чечевицы, бобов мунг)</item>
+        <item>70 г хумуса или фасолевого соуса</item>
+        <item>100 г вареной фасоли, гороха или чечевицы</item>
+        <item>80 г тофу или темпе</item>
+        <item>100 г свежего горошка или пророщенной чечевицы</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ чашки свежих или замороженных</item>
         <item>¼ чашки сушёных</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 г свежих или замороженных</item>
+        <item>70 г свежих или замороженных</item>
         <item>40 г сушёных</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 фрукт среднего размера</item>
-        <item>120 г нарезанного фрукта</item>
+        <item>150 г нарезанных фруктов</item>
         <item>40 г сушёного фрукта</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ чашки нарезанных</item>
-        <item>½ чашки брюссельской капусты</item>
-        <item>¼ чашки проростков брокколи</item>
+        <item>½ стакана приготовленных листовых овощей</item>
+        <item>½ стакана сырых или приготовленных нелистовых овощей</item>
+        <item>1 чашка сырых листовых овощей</item>
+        <item>¼ стакана ростков брокколи</item>
         <item>1 столовая ложка хрена</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 г нарезанных</item>
-        <item>80 г брюссельской капусты</item>
-        <item>15 г проростков брокколи</item>
+        <item>90 г приготовленных листовых овощей</item>
+        <item>60 г сырых или приготовленных нелистовых овощей</item>
+        <item>90 г сырых листовых овощей</item>
+        <item>20 г ростков брокколи</item>
         <item>1 столовая ложка хрена</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 г сырых листовых овощей</item>
-        <item>50 г сырых или приготовленных нелистовых овощей</item>
-        <item>125 мл овощного сока</item>
-        <item>7 г сушёных грибов</item>
+        <item>90 г сырых или приготовленных нелистовых овощей</item>
+        <item>120 мл овощного сока</item>
+        <item>10 г сушеных грибов</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 столовая ложка измельчённых</item>
@@ -541,16 +538,18 @@
         <item>Другие любимые пряности (без соли)</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ чашки приготовленных злаков/зерновых, пасты или кукурузных зёрен</item>
-        <item>1 чашка цельнозерновых хлопьев</item>
-        <item>1 тортилья или ломтик хлеба</item>
+        <item>½ стакана вареных цельнозерновых макарон из цельной пшеницы или кукурузных зерен</item>
+        <item>1 стакан 100% цельнозерновых хлопьев</item>
+        <item>1 100% цельнозерновая тортилья (или 2 кукурузные тортильи меньшего размера)</item>
+        <item>1 ломтик 100% цельнозернового хлеба</item>
         <item>½ бублика или английского маффина</item>
         <item>3 чашки приготовленного попкорна</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 г приготовленных злаков/зерновых, пасты или кукурузных зёрен</item>
-        <item>50 г цельнозерновых хлопьев</item>
-        <item>1 тортилья или ломтик хлеба</item>
+        <item>100 г вареных цельнозерновых макарон из цельной пшеницы, или кукурузных зерен</item>
+        <item>50 г 100% цельнозерновых хлопьев</item>
+        <item>1 100% цельнозерновая тортилья (или 2 кукурузные тортильи меньшего размера)</item>
+        <item>1 ломтик 100% цельнозернового хлеба</item>
         <item>½ бублика или английской булочки</item>
         <item>30 г приготовленного попкорна</item>
     </string-array>

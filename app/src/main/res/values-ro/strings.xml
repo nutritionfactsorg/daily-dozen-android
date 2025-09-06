@@ -24,7 +24,7 @@
     <string name="moving_average">Medie exerciții fizice</string>
     <string name="about">Despre</string>
     <string name="about_this_app">Despre această aplicație</string>
-    <string name="about_translators">Special thanks to our volunteer translators: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk).</string>
+    <string name="about_translators">Special thanks to our volunteer translators: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Ultimele videoclipuri</string>
     <string name="donate">Donați</string>
     <string name="subscribe">Abonați-vă</string>
@@ -216,7 +216,6 @@
         <item>Fasole albă mare</item>
         <item>Fasole roșie</item>
         <item>Linte (beluga, franceză și roșie)</item>
-        <item>Miso</item>
         <item>Fasole albă cu bob mic</item>
         <item>Fasole Pinto</item>
         <item>Fasole roșie cu bobul mic</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Migdale</item>
-        <item>Nuci braziliene</item>
         <item>Caju</item>
         <item>Semințe de chia</item>
         <item>Alune de pădure</item>
@@ -388,7 +386,6 @@
         <item>Ceai Earl Grey</item>
         <item>Ceai verde</item>
         <item>Ceai de hibiscus</item>
-        <item>Ciocolată caldă</item>
         <item>Ceai de iasomie</item>
         <item>Ceai de roiniță</item>
         <item>Ceai matcha</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ cană humus sau de fasole frecată</item>
         <item>½ cană fasole gătită, mazăre uscată (galbenă sau verde) sau linte</item>
-        <item>½ cană tofu sau tempeh</item>
-        <item>1 cană mazăre de grădină sau mazăre de zăpadă</item>
-        <item>1 cană leguminoase încolțite (linte, fasole mung)</item>
+        <item>⅓ cană tofu sau tempeh</item>
+        <item>1 cană mazăre proaspătă sau linte încolțită</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g humus sau de fasole frecată</item>
-        <item>90 g fasole gătită, mazăre uscată (galbenă sau verde) sau linte</item>
-        <item>100 g tofu sau tempeh</item>
-        <item>100 g mazăre de grădină sau mazăre de zăpadă</item>
-        <item>100 g leguminoase încolțite (linte, fasole mung)</item>
+        <item>70 g humus sau pastă de fasole</item>
+        <item>100 g fasole gătită, mazăre despicată sau linte</item>
+        <item>80 g tofu sau tempeh</item>
+        <item>100 g mazăre proaspătă sau linte încolțită</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ cană proaspete sau congelate</item>
         <item>¼ cană uscate</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g proaspete sau congelate</item>
+        <item>70 g proaspete sau congelate</item>
         <item>40 g uscate</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,20 +478,22 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 fruct de mărime medie</item>
-        <item>120 g fructe tăiate</item>
+        <item>150 g fructe tăiate</item>
         <item>40 g fructe uscate</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ cană tocate</item>
-        <item>½ cană varză de Bruxelles</item>
+        <item>½ cană legume cu frunze gătite</item>
+        <item>½ cană legume non-frunze crude sau gătite</item>
+        <item>1 cană legume cu frunze crude</item>
         <item>¼ cană germeni de broccoli</item>
-        <item>1 lingură de hrean</item>
+        <item>1 lingură hrean</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g tocate</item>
-        <item>80 g varză de Bruxelles</item>
-        <item>15 g cană germeni de broccoli</item>
-        <item>1 lingură de hrean</item>
+        <item>90 g legume cu frunze gătite</item>
+        <item>60 g legume non-frunze crude sau gătite</item>
+        <item>90 g legume cu frunze crude</item>
+        <item>20 g germeni de broccoli</item>
+        <item>1 lingură hrean</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
         <item>1 cană crude</item>
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g legume frunzoase, crude</item>
-        <item>50 g legume fară frunze, crude sau gătite</item>
-        <item>125 ml suc de legume</item>
-        <item>7 g ciuperci uscate</item>
+        <item>90 g legume non-frunze crude sau gătite</item>
+        <item>120 ml suc de legume</item>
+        <item>10 g ciuperci uscate</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 lingură măcinate</item>
@@ -541,18 +538,20 @@
         <item>Orice alte plante aromatice și condimente (fără sare) care vă plac</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ cană terci de cereale sau cereale gătite, paste, sau boabe de porumb</item>
-        <item>1 cană de cereale reci</item>
-        <item>1 tortilla sau felie de pâine</item>
-        <item>½ dintr-o baghetă sau brioșă englezească</item>
-        <item>3 căni de floricele de porumb (pop-corn)</item>
+        <item>½ cană cereale integrale gătite, paste din grâu integral sau boabe de porumb</item>
+        <item>1 cană cereale reci 100% integrale</item>
+        <item>1 tortilla 100% integrală (sau 2 tortilla mai mici din porumb)</item>
+        <item>1 felie de pâine 100% integrală</item>
+        <item>½ covrig sau brioșă englezească</item>
+        <item>3 căni popcorn expandat</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g terci de cereale sau cereale gătite, paste, sau boabe de porumb</item>
-        <item>50 g cereale reci</item>
-        <item>1 tortilla sau felie de pâine</item>
-        <item>½ baghetă sau brioșă englezească</item>
-        <item>30 g floricele de porumb (pop-corn)</item>
+        <item>100 g cereale integrale gătite, paste din grâu integral sau boabe de porumb</item>
+        <item>50 g cereale reci 100% integrale</item>
+        <item>1 tortilla 100% integrală (sau 2 tortilla mai mici din porumb)</item>
+        <item>1 felie de pâine 100% integrală</item>
+        <item>½ covrig sau brioșă englezească</item>
+        <item>30 g popcorn expandat</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
         <item>Un pahar (12 uncii)</item>
