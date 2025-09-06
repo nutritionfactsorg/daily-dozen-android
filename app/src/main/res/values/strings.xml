@@ -767,7 +767,6 @@
         <item />
         <item>kidney-beans</item>
         <item>lentils</item>
-        <item>miso</item>
         <item>navy-beans</item>
         <item>pinto-beans</item>
         <item />
@@ -868,7 +867,6 @@
     </string-array>
     <string-array name="food_videos_nuts" translatable="false">
         <item>almonds</item>
-        <item>brazil-nuts</item>
         <item>cashews</item>
         <item>chia-seeds</item>
         <item>hazelnuts</item>
@@ -935,7 +933,6 @@
         <item>earl-grey-tea</item>
         <item>green-tea</item>
         <item>hibiscus-tea</item>
-        <item />
         <item />
         <item>lemon-balm</item>
         <item>matcha</item>
