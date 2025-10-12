@@ -12,6 +12,7 @@ import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.databinding.HeaderDateBinding;
 import org.nutritionfacts.dailydozen.model.DDServings;
+import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.TweakServings;
 
 public class DateHeader extends LinearLayout {
@@ -57,11 +58,13 @@ public class DateHeader extends LinearLayout {
 
     private void handleCustomAttrs(final Context context, final AttributeSet attrs) {
         final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.DateHeader);
-        if (array != null) {
-            setTitle(array.getString(R.styleable.DateHeader_title));
-            setMax(String.valueOf(array.getInt(R.styleable.DateHeader_max, 24)));
-            array.recycle();
-        }
+        setTitle(array.getString(R.styleable.DateHeader_title));
+        setMax(String.valueOf(array.getInt(R.styleable.DateHeader_max, 24)));
+        array.recycle();
+    }
+
+    public void setDate(final Day day) {
+        binding.dateHeaderTitle.setText(day.toString());
     }
 
     @SuppressLint("SetTextI18n")

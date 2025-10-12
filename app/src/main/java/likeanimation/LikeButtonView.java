@@ -53,9 +53,9 @@ public class LikeButtonView extends FrameLayout implements View.OnClickListener 
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.view_like_button, this, true);
 
-        ivStar = (TextView) findViewById(R.id.ivStar);
-        vDotsView = (DotsView) findViewById(R.id.vDotsView);
-        vCircle = (CircleView) findViewById(R.id.vCircle);
+        ivStar = findViewById(R.id.ivStar);
+        vDotsView = findViewById(R.id.vDotsView);
+        vCircle = findViewById(R.id.vCircle);
 
         setOnClickListener(this);
     }

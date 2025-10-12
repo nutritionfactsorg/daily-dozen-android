@@ -1,21 +1,18 @@
 package org.nutritionfacts.dailydozen.activity;
 
-import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
-import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
@@ -42,22 +39,17 @@ import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import java.io.File;
+import java.time.LocalDate;
 import java.util.Date;
 
-import hirondelle.date4j.DateTime;
 import timber.log.Timber;
 
-public class MainActivity extends AppCompatActivity implements ProgressListener {
+public class MainActivity extends DailyDozenActivity implements ProgressListener {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
 
     private ActivityMainBinding binding;
 
-    private ProgressDialog progressDialog;
-
     private MenuItem menuToggleModes;
-
-    private Handler dayChangeHandler;
-    private Runnable dayChangeRunnable;
 
     private int daysSinceEpoch;
 
@@ -72,7 +64,6 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         setContentView(binding.getRoot());
 
         initDatePager();
-        initDatePagerIndicator();
 
         calculateStreaksAfterDatabaseUpgradeToV2();
 
@@ -115,19 +106,12 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
 
         NotificationUtil.dismissUpdateReminderNotification(this);
 
-        // If the app is sent to the background and brought back to the foreground the next day, a crash results when
-        // the adapter is found to return a different value from getCount() without notifyDataSetChanged() having been
-        // called first. This is an attempt to fix that, but I am not sure that it works.
-        // This bug was found by entering some data before bed and then bringing the app back to the foreground in the
-        // morning to enter data. The app crashed immediately.
-        // Solutions tried: datePagerAdapter.notifyDataSetChanged() did not work
+        // If the app is sent to the background and brought back to the foreground the next day,
+        // this code will change to today's date.
         if (daysSinceEpoch < Day.getNumDaysSinceEpoch()) {
-            // Reset user selection so today's date is selected
-            binding.datePager.setCurrentItem(0);
             initDatePager();
+            Bus.displayLatestDate();
         }
-
-        startDayChangeHandler();
 
         checkIfOpenedForRestore(getIntent());
     }
@@ -136,8 +120,6 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
     protected void onPause() {
         super.onPause();
         Bus.unregister(this);
-
-        stopDayChangeHandler();
     }
 
     @Override
@@ -258,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
                 break;
             case Args.SELECTABLE_DATE_REQUEST:
                 if (data != null && data.hasExtra(Args.DATE)) {
-                    setDatePagerDate(DateUtil.convertDateToDateTime((Date) data.getSerializableExtra(Args.DATE)));
+                    setDatePagerDate(DateUtil.convertToLocalDate((Date) data.getSerializableExtra(Args.DATE)));
                 }
                 break;
         }
@@ -268,22 +250,13 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         // Record user's current date selection (value is 0 when unset)
         int origDate = binding.datePager.getCurrentItem();
 
-        final FragmentStatePagerAdapter pagerAdapter;
-
-        pagerAdapter = new DatePagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, inDailyDozenMode);
+        final FragmentStateAdapter pagerAdapter = new DatePagerAdapter(getSupportFragmentManager(), getLifecycle(), inDailyDozenMode);
 
         binding.datePager.setAdapter(pagerAdapter);
-        daysSinceEpoch = pagerAdapter.getCount();
+        daysSinceEpoch = pagerAdapter.getItemCount();
 
         // Maintain user's selected date when switching adapters
         binding.datePager.setCurrentItem(origDate != 0 ? origDate : daysSinceEpoch, false);
-    }
-
-    private void initDatePagerIndicator() {
-        binding.datePagerIndicator.setTextColor(ContextCompat.getColor(this, android.R.color.white));
-        binding.datePagerIndicator.setBackgroundResource(R.color.colorPrimary);
-        binding.datePagerIndicator.setTabIndicatorColorResource(R.color.colorAccent);
-        binding.datePagerIndicator.setDrawFullUnderline(false);
     }
 
     @Override
@@ -392,64 +365,34 @@ public class MainActivity extends AppCompatActivity implements ProgressListener 
         }
     }
 
-    private void startDayChangeHandler() {
-        if (dayChangeRunnable == null) {
-            dayChangeRunnable = () -> {
-                initDatePager();
-                startDayChangeHandler();
-            };
-        }
-
-        stopDayChangeHandler();
-
-        dayChangeHandler = new Handler();
-        dayChangeHandler.postDelayed(dayChangeRunnable, Day.getMillisUntilMidnight());
-    }
-
-    private void stopDayChangeHandler() {
-        if (dayChangeHandler != null && dayChangeRunnable != null) {
-            dayChangeHandler.removeCallbacks(dayChangeRunnable);
-            dayChangeHandler = null;
-        }
-    }
-
     @Subscribe
     public void onEvent(DisplayDateEvent event) {
         setDatePagerDate(event.getDate());
     }
 
-    private void setDatePagerDate(final DateTime dateTime) {
-        if (dateTime != null) {
-            Timber.d("Changing displayed date to %s", dateTime.toString());
-            binding.datePager.setCurrentItem(Day.getNumDaysSinceEpoch(dateTime));
+    private void setDatePagerDate(final LocalDate date) {
+        if (date != null) {
+            Timber.d("Changing displayed date to %s", date.toString());
+            binding.datePager.setCurrentItem(Day.getNumDaysSinceEpoch(date));
         }
     }
 
     @Override
     public void showProgressBar(int titleId) {
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setIndeterminate(false);
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progressDialog.setTitle(titleId);
-        progressDialog.show();
+        binding.progressBarContainer.setVisibility(View.VISIBLE);
+        binding.progressText.setText(titleId);
+        binding.progressBar.setProgress(0);
     }
 
     @Override
     public void updateProgressBar(int current, int total) {
-        progressDialog.setProgress(current);
-        progressDialog.setMax(total);
+        binding.progressBar.setProgress(current);
+        binding.progressBar.setMax(total);
     }
 
     @Override
     public void hideProgressBar() {
-        try {
-            if (progressDialog != null && progressDialog.isShowing()) {
-                progressDialog.dismiss();
-            }
-        } catch (Exception e) {
-            Timber.e("hideProgressBar: Exception while trying to dismiss progress dialog");
-        } finally {
-            progressDialog = null;
-        }
+        binding.progressBarContainer.setVisibility(View.GONE);
+        this.recreate();
     }
 }

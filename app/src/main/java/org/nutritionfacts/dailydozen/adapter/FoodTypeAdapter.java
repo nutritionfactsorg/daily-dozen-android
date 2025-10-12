@@ -68,8 +68,8 @@ public class FoodTypeAdapter extends RecyclerView.Adapter<FoodTypeAdapter.ViewHo
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView foodName;
-        TextView foodVideos;
+        final TextView foodName;
+        final TextView foodVideos;
 
         ViewHolder(FoodTypeItemBinding binding) {
             super(binding.getRoot());

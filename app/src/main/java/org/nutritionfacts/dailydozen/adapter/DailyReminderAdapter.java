@@ -45,12 +45,12 @@ public class DailyReminderAdapter extends RecyclerView.Adapter<DailyReminderAdap
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView reminderTime;
+        final TextView reminderTime;
 
         ViewHolder(ReminderTimeBinding binding) {
             super(binding.getRoot());
             reminderTime = binding.reminderTime;
-            binding.reminderDelete.setOnClickListener(v -> Bus.reminderRemovedEvent(getAdapterPosition()));
+            binding.reminderDelete.setOnClickListener(v -> Bus.reminderRemovedEvent(getBindingAdapterPosition()));
         }
     }
 }

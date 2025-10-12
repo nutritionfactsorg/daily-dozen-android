@@ -1,11 +1,8 @@
 package org.nutritionfacts.dailydozen.activity;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
@@ -25,17 +22,12 @@ import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadHistoryTask;
-import org.nutritionfacts.dailydozen.task.ProgressListener;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 
-import timber.log.Timber;
-
-public class TweakServingsHistoryActivity extends AppCompatActivity
-        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener, ProgressListener {
+public class TweakServingsHistoryActivity extends DailyDozenActivity
+        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener {
     private ActivityServingsHistoryBinding binding;
-
-    private ProgressDialog progressDialog;
 
     private boolean alreadyLoadingData;
 
@@ -80,12 +72,16 @@ public class TweakServingsHistoryActivity extends AppCompatActivity
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
 
+            binding.dailyServingsChart.setVisibility(View.GONE);
+            binding.dailyServingsLoadingLabel.setVisibility(View.VISIBLE);
+            binding.dailyServingsLoading.setVisibility(View.VISIBLE);
+
             LoadHistoryTaskParams loadHistoryTaskParams = new LoadHistoryTaskParams(
                     HistoryType.Tweaks,
                     binding.dailyServingsHistoryTimeScale.getSelectedTimeScale(),
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
                     binding.dailyServingsHistoryTimeRange.getSelectedMonth());
-            new TaskRunner().executeAsync(new LoadHistoryTask(this, this, loadHistoryTaskParams));
+            new TaskRunner().executeAsync(new LoadHistoryTask(this, loadHistoryTaskParams));
         }
     }
 
@@ -107,6 +103,8 @@ public class TweakServingsHistoryActivity extends AppCompatActivity
             return;
         }
 
+        binding.dailyServingsLoadingLabel.setVisibility(View.GONE);
+        binding.dailyServingsLoading.setVisibility(View.GONE);
         binding.dailyServingsChart.setVisibility(View.VISIBLE);
 
         binding.dailyServingsChart.setData(chartData);
@@ -174,33 +172,5 @@ public class TweakServingsHistoryActivity extends AppCompatActivity
     @Override
     public void onNothingSelected() {
 
-    }
-
-    @Override
-    public void showProgressBar(int titleId) {
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setIndeterminate(false);
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progressDialog.setTitle(titleId);
-        progressDialog.show();
-    }
-
-    @Override
-    public void updateProgressBar(int current, int total) {
-        progressDialog.setProgress(current);
-        progressDialog.setMax(total);
-    }
-
-    @Override
-    public void hideProgressBar() {
-        try {
-            if (progressDialog != null && progressDialog.isShowing()) {
-                progressDialog.dismiss();
-            }
-        } catch (Exception e) {
-            Timber.e("hideProgressBar: Exception while trying to dismiss progress dialog");
-        } finally {
-            progressDialog = null;
-        }
     }
 }

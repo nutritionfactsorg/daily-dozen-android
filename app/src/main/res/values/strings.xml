@@ -24,7 +24,7 @@
     <string name="moving_average">Moving Average</string>
     <string name="about">About</string>
     <string name="about_this_app">About this app</string>
-    <string name="about_translators">Special thanks to our volunteer translators: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Special thanks to our volunteer translators: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Latest Videos</string>
     <string name="url_latest_videos" translatable="false">http://nutritionfacts.org/videos/</string>
     <string name="title_how_not_to_die" translatable="false">How Not to Die</string>
@@ -399,7 +399,6 @@
         <item>Great northern beans</item>
         <item>Kidney beans</item>
         <item>Lentils (beluga, french, and red varieties)</item>
-        <item>Miso</item>
         <item>Navy beans</item>
         <item>Pinto beans</item>
         <item>Small red beans</item>
@@ -486,7 +485,7 @@
         <item>Carrots</item>
         <item>Corn</item>
         <item>Garlic</item>
-        <item>Mushrooms (button, oyster, portobello, and shiitake)</item>
+        <item>Mushrooms (button, oyster, porcini, portobello, and shiitake)</item>
         <item>Okra</item>
         <item>Onions</item>
         <item>Purple potatoes</item>
@@ -504,7 +503,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Almonds</item>
-        <item>Brazil nuts</item>
         <item>Cashews</item>
         <item>Chia seeds</item>
         <item>Hazelnuts</item>
@@ -571,7 +569,6 @@
         <item>Earl grey tea</item>
         <item>Green tea</item>
         <item>Hibiscus tea</item>
-        <item>Hot chocolate</item>
         <item>Jasmine tea</item>
         <item>Lemon balm tea</item>
         <item>Matcha tea</item>
@@ -640,23 +637,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ cup hummus or bean dip</item>
         <item>½ cup cooked beans, split peas, or lentils</item>
-        <item>½ cup tofu or tempeh</item>
-        <item>1 cup fresh peas or snow peas</item>
-        <item>1 cup fresh sprouted beans (lentils, mung beans)</item>
+        <item>⅓ cup tofu or tempeh</item>
+        <item>1 cup fresh peas or sprouted lentils</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g hummus or bean dip</item>
-        <item>90 g cooked beans, split peas, or lentils</item>
-        <item>100 g tofu or tempeh</item>
-        <item>130 g fresh peas or snow peas</item>
-        <item>100 g fresh sprouted beans (lentils, mung beans)</item>
+        <item>70 g hummus or bean dip</item>
+        <item>100 g cooked beans, split peas, or lentils</item>
+        <item>80 g tofu or tempeh</item>
+        <item>100 g fresh peas or sprouted lentils</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ cup fresh or frozen</item>
         <item>¼ cup dried</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g fresh or frozen</item>
+        <item>70 g fresh or frozen</item>
         <item>40 g dried</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -666,19 +661,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 medium-sized fruit</item>
-        <item>120 g cut-up fruit</item>
+        <item>150 g cut-up fruit</item>
         <item>40 g dried fruit</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ cup chopped</item>
-        <item>½ cup Brussels sprouts</item>
-        <item>¼ cup Broccoli sprouts</item>
+        <item>½ cup cooked leafy vegetables</item>
+        <item>½ cup raw or cooked non-leafy vegetables</item>
+        <item>1 cup raw leafy vegetables</item>
+        <item>¼ cup broccoli sprouts</item>
         <item>1 tablespoon horseradish</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g chopped</item>
-        <item>80 g Brussels sprouts</item>
-        <item>15 g Broccoli sprouts</item>
+        <item>90 g cooked leafy vegetables</item>
+        <item>60 g raw or cooked non-leafy vegetables</item>
+        <item>90 g raw leafy vegetables</item>
+        <item>20 g broccoli sprouts</item>
         <item>1 tablespoon horseradish</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -697,9 +694,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g raw leafy vegetables</item>
-        <item>50 g raw or cooked nonleafy vegetables</item>
-        <item>125 ml vegetable juice</item>
-        <item>7 g dried mushrooms</item>
+        <item>90 g raw or cooked nonleafy vegetables</item>
+        <item>120 ml vegetable juice</item>
+        <item>10 g dried mushrooms</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 tablespoon ground</item>
@@ -724,16 +721,18 @@
         <item>Any other (salt-free) herbs and spices you enjoy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ cup hot cereal or cooked grains, pasta, or corn kernels</item>
-        <item>1 cup cold cereal</item>
-        <item>1 tortilla or slice of bread</item>
+        <item>½ cup cooked whole grains, whole-wheat pasta, or corn kernels</item>
+        <item>1 cup 100% whole grain cold cereal</item>
+        <item>1 100% whole grain tortilla (or 2 smaller corn tortillas)</item>
+        <item>1 slice of 100% whole grain bread</item>
         <item>½ bagel or English muffin</item>
         <item>3 cups popped popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g hot cereal or cooked grains, pasta, or corn kernels</item>
-        <item>50 g cold cereal</item>
-        <item>1 tortilla or slice of bread</item>
+        <item>100 g cooked whole grains, whole-wheat pasta, or corn kernels</item>
+        <item>50 g 100% whole grain cold cereal</item>
+        <item>1 100% whole grain tortilla (or 2 smaller corn tortillas)</item>
+        <item>1 slice of 100% whole grain bread</item>
         <item>½ bagel or English muffin</item>
         <item>30 g popped popcorn</item>
     </string-array>
@@ -768,7 +767,6 @@
         <item />
         <item>kidney-beans</item>
         <item>lentils</item>
-        <item>miso</item>
         <item>navy-beans</item>
         <item>pinto-beans</item>
         <item />
@@ -803,7 +801,7 @@
         <item>kiwifruit</item>
         <item>lemons</item>
         <item>limes</item>
-        <item />
+        <item>lychees</item>
         <item>mango</item>
         <item />
         <item>oranges</item>
@@ -869,7 +867,6 @@
     </string-array>
     <string-array name="food_videos_nuts" translatable="false">
         <item>almonds</item>
-        <item>brazil-nuts</item>
         <item>cashews</item>
         <item>chia-seeds</item>
         <item>hazelnuts</item>
@@ -936,7 +933,6 @@
         <item>earl-grey-tea</item>
         <item>green-tea</item>
         <item>hibiscus-tea</item>
-        <item />
         <item />
         <item>lemon-balm</item>
         <item>matcha</item>

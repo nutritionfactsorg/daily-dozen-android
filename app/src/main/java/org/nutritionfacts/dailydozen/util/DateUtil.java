@@ -6,12 +6,11 @@ import android.text.format.DateFormat;
 import org.nutritionfacts.dailydozen.model.Day;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
-
-import hirondelle.date4j.DateTime;
 
 public class DateUtil {
     public static Calendar getCalendarForYearMonthAndDay(final int year,
@@ -73,8 +72,8 @@ public class DateUtil {
                 .format(getCalendarForYearAndMonth(2016, monthNumberOneBased - 1).getTime());
     }
 
-    public static DateTime convertDateToDateTime(final Date date) {
-        return date != null ? DateTime.forInstant(date.getTime(), TimeZone.getDefault()) : null;
+    public static LocalDate convertToLocalDate(final Date date) {
+        return date != null ? date.toInstant().atZone(TimeZone.getDefault().toZoneId()).toLocalDate() : null;
     }
 
     public static Date convertDayToDate(final Day day) {

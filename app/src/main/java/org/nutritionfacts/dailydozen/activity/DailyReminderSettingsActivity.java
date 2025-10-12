@@ -7,7 +7,6 @@ import android.widget.TimePicker;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -21,7 +20,7 @@ import org.nutritionfacts.dailydozen.model.pref.UpdateReminderPref;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
-public class DailyReminderSettingsActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
+public class DailyReminderSettingsActivity extends DailyDozenActivity implements TimePickerDialog.OnTimeSetListener {
     private ActivityNotificationSettingsBinding binding;
 
     protected DailyReminderAdapter reminderAdapter;

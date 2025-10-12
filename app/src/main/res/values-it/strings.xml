@@ -24,7 +24,7 @@
     <string name="moving_average">Media dei movimenti</string>
     <string name="about">Informazioni</string>
     <string name="about_this_app">Informazioni sull\'app</string>
-    <string name="about_translators">Un ringraziamento speciale ai nostri traduttori volontari: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Un ringraziamento speciale ai nostri traduttori volontari: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Ultimi video</string>
     <string name="donate">Dona</string>
     <string name="subscribe">Iscriviti</string>
@@ -90,7 +90,7 @@
     <string name="morning">Mattina</string>
     <string name="evening">Sera</string>
     <string name="meal_water">Bevi prima dei pasti</string>
-    <string name="meal_negcal">Inizia i tuoi pasti con cibi \"a calorie negative\"</string>
+    <string name="meal_negcal">Inizia i tuoi pasti con cibi “a calorie negative”</string>
     <string name="meal_vinegar">Integra l\'aceto (2 cucchiaini per ogni pasto)</string>
     <string name="meal_undistracted">Goditi i pasti senza distrazioni</string>
     <string name="meal_twentyminutes">Segui la regola dei venti minuti</string>
@@ -113,7 +113,7 @@
     <string name="debug_generate_weight_data">Genera dati del peso</string>
     <string name="average_weight_on_day">Peso medio del giorno</string>
     <string name="meal_water_short">Bevi prima dei pasti</string>
-    <string name="meal_negcal_short">Inizia i tuoi pasti con cibi \"a calorie negative\"</string>
+    <string name="meal_negcal_short">Inizia i tuoi pasti con cibi “a calorie negative”</string>
     <string name="meal_vinegar_short">Integra l\'aceto (2 cucchiaini per ogni pasto)</string>
     <string name="meal_undistracted_short">Goditi i pasti senza distrazioni</string>
     <string name="meal_twentyminutes_short">Segui la regola dei venti minuti</string>
@@ -146,11 +146,11 @@
     <string name="daily_greentea_text">Bevi tre tazze al giorno tra i pasti (attendi almeno un\'ora dopo i pasti in modo da non interferire con l\'assorbimento di ferro). Durante i pasti, bevi acqua, caffè nero o tè all\'ibisco mescolato in proporzione 6:1 con verbena odorosa, ma non superare mai tre tazze di liquidi in un\'ora (importante dato il mio consiglio sul bere prima dei pasti). Sfrutta l\'effetto rinforzante della caffeina bevendo un tè verde insieme a qualcosa di sano che vorresti ti piacesse di più, ma non consumare grandi quantità di caffeina nelle sei ore prima di coricarti. Prendere il tè senza dolcificante è la cosa migliore, ma se sei abituato ad addolcirlo con miele o zucchero, prova invece lo sciroppo di yacon.</string>
     <string name="daily_hydrate_text">Spunta questa casella se la tua urina non appare mai più scura di un giallo pallido.\n\nRicordiamo che se stai assumendo alimenti fortificati con riboflavina (come il lievito alimentare), devi invece basarti sull\'assunzione di nove tazze di bevande non zuccherate al giorno per le donne (di cui si occupano le raccomandazioni sul bere tè verde e acqua prima dei pasti) o tredici tazze al giorno per gli uomini.\n\nSe hai problemi cardiaci o renali, non aumentare l\'assunzione di liquidi senza prima consultare il tuo medico.\n\nRicorda, le bevande gassate light potranno anche essere prive di calorie, ma non sono prive di conseguenze, come abbiamo appreso nella sezione A basso contenuto di zuccheri aggiunti.</string>
     <string name="daily_deflourdiet_text">Spunta questa casella ogni volta che consumi cereali integrali in chicco. La polverizzazione anche di cereali integrali al 100% priva il nostro microbioma di quell\'amido che verrebbe altrimenti trasportato fino al colon racchiuso in pareti cellulari intatte.</string>
-    <string name="daily_frontload_text">Esistono benefici metabolici nel distribuire più calorie all\'inizio della giornata, quindi fa sì che il pasto più importante della giornata sia la colazione (idealmente) o il pranzo, seguendo il detto \"Una colazione da re, un pranzo da principe, una cena da contadino\".</string>
+    <string name="daily_frontload_text">Esistono benefici metabolici nel distribuire più calorie all\'inizio della giornata, quindi fa sì che il pasto più importante della giornata sia la colazione (idealmente) o il pranzo, seguendo il detto “Una colazione da re, un pranzo da principe, una cena da contadino”.</string>
     <string name="daily_timerestrict_text">Limita i tuoi pasti in un intervallo di tempo quotidiano a tua scelta, della durata di meno di dodici ore, e che riesci a rispettare sempre, sette giorni su sette. Dati i benefici circadiani della riduzione dell\'assunzione di cibo la sera, la finestra dovrebbe terminare prima delle 19:00.</string>
     <string name="exercise_timing_text">La raccomandazione di Daily Dozen sulla durata ottimale dell\'esercizio fisico per la longevità è novanta minuti di attività giornaliera moderatamente intensa, che è anche la durata ottimale dell\'esercizio fisico per la perdita di peso. Ogni momento è buono e più è, meglio è, ma potrebbero esserci dei vantaggi nel fare esercizio a digiuno, ad almeno sei ore all\'ultimo pasto. In genere, ciò significa prima di colazione, ma se ci si organizza bene, ci si può allenare a mezzogiorno prima di un pranzo tardivo oppure, se si pranza abbastanza presto, prima di cena. Queste sono le tempistiche per i soggetti non diabetici. I soggetti diabetici e prediabetici devono invece iniziare a compiere esercizio fisico trenta minuti dopo l\'inizio di un pasto e idealmente continuare per almeno un\'ora per superare completamente il picco glicemico. Se si deve scegliere un solo pasto dopo il quale fare attività fisica, è meglio scegliere la cena, a causa del ritmo circadiano del controllo degli zuccheri nel sangue che si attenua nel corso della giornata. Idealmente, però, la colazione dovrebbe essere il pasto più importante della giornata e l\'esercizio fisico andrebbe svolto dopo di essa, o ancor meglio, dopo ogni pasto.</string>
     <string name="weigh_twice_text">Pesarsi regolarmente è considerato cruciale per il controllo del peso a lungo termine, ma non ci sono prove sufficienti per supportare una specifica frequenza nel pesarsi. La mia raccomandazione si basa sullo studio che ha scoperto che pesarsi due volte al giorno, al risveglio e subito prima di coricarsi, sembra più efficace rispetto a una volta al giorno (circa tre kg contro 1 kg persi in dodici settimane).</string>
-    <string name="complete_intentions_text">Ogni due mesi, crea tre nuove ambizioni di miglioramento (\"se X, allora Y\" per adottare un certo comportamento in un contesto specifico) e spuntale giornalmente una volta completate.</string>
+    <string name="complete_intentions_text">Ogni due mesi, crea tre nuove ambizioni di miglioramento (“se X, allora Y” per adottare un certo comportamento in un contesto specifico) e spuntale giornalmente una volta completate.</string>
     <string name="nightly_fast_text">A causa dei nostri ritmi circadiani, il cibo ingerito durante la notte fa ingrassare di più rispetto allo stesso cibo ingerito all\'inizio della giornata. Per questo motivo, digiuna ogni notte per almeno dodici ore a partire dalle 19:00. Meno calorie assumi dopo il tramonto, meglio è.</string>
     <string name="nightly_sleep_text">Spunta questa casella se dormi almeno sette ore a notte rispettando un orario regolare.</string>
     <string name="nightly_trendelenburg_text">Prova a passare almeno quattro ore a notte sdraiato con il corpo inclinato a testa in giù di sei gradi sollevando i piedi inferiori del letto di 20 cm (o di qualche centimetro in più se hai un California king). Fai molta attenzione quando ti alzi dal letto, poiché ciò causa intolleranza ortostatica nella maggior parte delle persone, anche se sei giovane e in buona salute. Ciò significa che se ti alzi troppo in fretta puoi avere vertigini, senso di svenimento o stordimento e potresti cadere e farti male, quindi alzati lentamente. Bere due tazze di acqua fredda trenta minuti prima di alzarsi può essere di aiuto per prevenire questo effetto collaterale potenzialmente pericoloso.\n\n*IMPORTANTE: non provare a farlo a casa se hai problemi cardiaci o polmonari, reflusso acido o problemi al cervello (come il trauma cranico) o agli occhi (evita anche se hai una storia familiare di glaucoma). Inoltre, non provare questa posizione prima di aver chiesto al tuo medico se pensa che sia sicuro per te dormire nella posizione di Trendelenburg leggera.*</string>
@@ -161,7 +161,7 @@
     <string name="faq_age_response.1">Daily Dozen è stata ideata come una guida per aiutare le persone ad includere alcuni dei cibi più sani nella loro routine quotidiana. Anche se per la maggior parte delle persone lo stesso quadro di riferimento può essere usato per tutta la vita, la quantità di cibo di cui si ha bisogno può variare in base a diversi fattori, come l\'età e il livello di attività. Dato che non possiamo fornire consigli medici e nutrizionali specifici per i bambini in crescita, i genitori devono usare questa guida come meglio ritengono per le esigenze del proprio figlio e/o consultare un dietista o un\'altra figura medica per individuare la soluzione migliore per le loro esigenze individuali. </string>
     <string name="faq_calories_question">Quante calorie ci sono in Daily Dozen?</string>
     <string name="faq_calories_response.0">Daily Dozen si aggira in media intorno alle 1200 calorie, ma data l\'ampia gamma di alimenti tra cui scegliere in ogni categoria, può variare da un minimo di 800 ad un massimo di 1800. Consideriamo la categoria Altre verdure: una porzione di peperoni ha una densità calorica molto inferiore di una porzione di patate dolci cotte, perciò il range calorico dipenderà da quali cibi nello specifico sceglierai. È questo il bello della lista di Daily Dozen: non è un approccio unico e universale e può essere adattato alle tue esigenze.</string>
-    <string name="faq_calories_response.1">Se il tuo obiettivo è perdere peso, puoi trovare maggiori informazioni in \"Contro le diete\" e nell\'allegato \"Ventuno modifiche\". In \"Contro le diete\" ho scritto:\"Una revisione sistematica delle strategie per perdere peso che hanno avuto successo ha concluso che, dati il rallentamento del metabolismo e l\'aumento dell\'appetito che accompagnano la perdita di peso, per ottenere una perdita di peso significativa l\'apporto calorico deve scendere il più vicino possibile a 1200 calorie giornaliere per le donne e 1500 per gli uomini.\"</string>
+    <string name="faq_calories_response.1">Se il tuo obiettivo è perdere peso, puoi trovare maggiori informazioni in “Contro le diete” e nell\'allegato “Ventuno modifiche”. In “Contro le diete” ho scritto:“Una revisione sistematica delle strategie per perdere peso che hanno avuto successo ha concluso che, dati il rallentamento del metabolismo e l\'aumento dell\'appetito che accompagnano la perdita di peso, per ottenere una perdita di peso significativa l\'apporto calorico deve scendere il più vicino possibile a 1200 calorie giornaliere per le donne e 1500 per gli uomini.”</string>
     <string name="faq_calories_response.2">Al contrario, se il tuo obiettivo è aumentare di peso, allora dovresti focalizzarti sull\'aggiungere più alimenti ad alta intensità calorica, come patate dolci, avocado, frutta a guscio e prodotti a base di soia. </string>
     <string name="faq_mother_question">Posso farlo se sono incinta o se sto allattando?</string>
     <string name="faq_mother_response">In gravidanza e in allattamento le esigenze caloriche e nutrizionali cambiano molto. Ricordiamo che Daily Dozen non è un piano alimentare e non contiene tutti gli alimenti che vanno consumati nell\'arco della giornata. Se sei in gravidanza o stai allattando, dovresti consultare il tuo medico o un dietista che ti aiuti a soddisfare il tuo specifico fabbisogno calorico e le tue esigenze nutrizionali. </string>
@@ -216,7 +216,6 @@
         <item>Fagioli bianchi</item>
         <item>Fagioli rossi</item>
         <item>Lenticchie (beluga, francesi e varietà rosse)</item>
-        <item>Miso</item>
         <item>Fagioli tondini</item>
         <item>Fagioli pinto</item>
         <item>Fagioli borlotti</item>
@@ -303,7 +302,7 @@
         <item>Carote</item>
         <item>Mais</item>
         <item>Aglio</item>
-        <item>Funghi (champignon, orecchioni, portobello e shiitake)</item>
+        <item>Funghi (champignon, cardoncelli, porcini, portobello e shiitake)</item>
         <item>Ocra</item>
         <item>Cipolle</item>
         <item>Patate viola</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Mandorle</item>
-        <item>Noci brasiliane</item>
         <item>Anacardi</item>
         <item>Semi di chia</item>
         <item>Nocciole</item>
@@ -388,7 +386,6 @@
         <item>Tè Earl Grey</item>
         <item>Tè verde</item>
         <item>Carcadè</item>
-        <item>Cioccolata calda</item>
         <item>Tè al gelsomino</item>
         <item>Infuso di melissa</item>
         <item>Tè Matcha</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>60 g di hummus o crema di fagioli</item>
         <item>90 g di fagioli cotti, piselli decorticati o lenticchie</item>
-        <item>100 g di tofu o tempeh</item>
-        <item>130 g di piselli freschi o taccole</item>
-        <item>100 g di fagioli germogliati freschi (lenticchie, fagioli mungo)</item>
+        <item>⅓ tazza di tofu o tempeh</item>
+        <item>1 tazza di piselli freschi o lenticchie germinate</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g di hummus o crema di fagioli</item>
-        <item>90 g di fagioli cotti, piselli decorticati o lenticchie</item>
-        <item>100 g di tofu o tempeh</item>
-        <item>130 g di piselli freschi o taccole</item>
-        <item>100 g di fagioli germogliati freschi (lenticchie, fagioli mungo)</item>
+        <item>70 g di hummus o crema di fagioli</item>
+        <item>100 g di fagioli cotti, piselli decorticati o lenticchie</item>
+        <item>80 g di tofu o tempeh</item>
+        <item>100 g di piselli freschi o lenticchie germinate</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>60 g freschi o congelati</item>
         <item>40 g disidratati</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g freschi o congelati</item>
+        <item>70 g freschi o congelati</item>
         <item>40 g disidratati</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 frutto medio</item>
-        <item>120 g di frutta tagliata</item>
+        <item>150 g di frutta tagliata a pezzi</item>
         <item>40 g di frutta secca</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>30–80 g tagliate</item>
-        <item>80 g di cavolini di Bruxelles</item>
-        <item>15 g di germogli di broccoli</item>
+        <item>½ tazza di verdura a foglia larga cotta</item>
+        <item>½ tazza di verdura non a foglia larga, cotta o cruda</item>
+        <item>1 tazza di verdura a foglia larga cruda</item>
+        <item>¼ tazza di germogli di broccoli</item>
         <item>1 cucchiaio di rafano</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g tagliate</item>
-        <item>80 g di cavolini di Bruxelles</item>
-        <item>15 g di germogli di broccoli</item>
+        <item>90 g di verdura a foglia larga cotta</item>
+        <item>60 g di verdura a foglia larga, cotta o cruda</item>
+        <item>90 g di verdura a foglia larga cruda</item>
+        <item>20 g di germogli di broccoli</item>
         <item>1 cucchiaio di rafano</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g di verdure a foglia crude</item>
-        <item>50 g di verdure non a foglia crude o cotte</item>
-        <item>125 ml di centrifugato di verdure</item>
-        <item>7 g di funghi secchi</item>
+        <item>90 g di verdura non a foglia larga, cotta o cruda</item>
+        <item>120 ml di centrifugato di verdure</item>
+        <item>10 g di funghi secchi</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 cucchiaio di semi macinati</item>
@@ -541,16 +538,18 @@
         <item>Altre erbe e spezie (senza sale) a scelta</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>100 g di cereali cotti, pasta o chicchi di mais</item>
-        <item>50 g di cereali freddi</item>
-        <item>1 piadina o 1 fetta di pane</item>
+        <item>½ tazza di cereali integrali cotti, pasta integrale o chicchi di mais</item>
+        <item>1 tazza di cereali integrali freddi</item>
+        <item>1 tortilla integrale (o 2 più piccole di mais)</item>
+        <item>1 fetta di pane integrale</item>
         <item>½ bagel o tigella</item>
         <item>30 g di popcorn</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g di cereali cotti, pasta o chicchi di mais</item>
-        <item>50 g di cereali freddi</item>
-        <item>1 piadina o 1 fetta di pane</item>
+        <item>100 g di cereali integrali cotti, pasta integrale o chicchi di mais</item>
+        <item>50 g di cereali integrali freddi</item>
+        <item>1 tortilla integrale (o 2 più piccole di mais)</item>
+        <item>1 fetta di pane integrale</item>
         <item>½ bagel o tigella</item>
         <item>30 g di popcorn</item>
     </string-array>

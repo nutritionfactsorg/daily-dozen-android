@@ -70,6 +70,7 @@ public class DailyDozenFragment extends Fragment {
 
                 initBackToTodayButton();
 
+                binding.dateServings.setDate(day);
                 binding.dateServings.setServings(DDServings.getTotalServingsOnDate(day));
 
                 final Context context = getContext();
@@ -116,10 +117,10 @@ public class DailyDozenFragment extends Fragment {
     @Subscribe
     public void onEvent(FoodServingsChangedEvent event) {
         // Vitamins do not count towards the daily servings total, so we ignore when they are checked/unchecked
-        if (!event.getIsVitamin() && event.getDateString().equals(day.getDateString())) {
+        if (!event.getIsVitamin() && event.getDateLong() == day.getDateLong()) {
             final int servingsOnDate = DDServings.getTotalServingsOnDate(day);
 
-            Timber.d("onEvent(FoodServingsChangedEvent): dateString [%s] foodName [%s]", event.getDateString(), event.getFoodName());
+            Timber.d("onEvent(FoodServingsChangedEvent): date [%s] foodName [%s]", event.getDateLong(), event.getFoodName());
             binding.dateServings.setServings(servingsOnDate);
 
             if (servingsOnDate == Common.MAX_SERVINGS) {

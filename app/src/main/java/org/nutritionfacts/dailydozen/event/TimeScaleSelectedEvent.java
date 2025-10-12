@@ -3,7 +3,7 @@ package org.nutritionfacts.dailydozen.event;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 
 public class TimeScaleSelectedEvent extends BaseEvent {
-    private int selectedTimeScale;
+    private final int selectedTimeScale;
 
     public TimeScaleSelectedEvent(@TimeScale.Interface int selectedTimeScale) {
         this.selectedTimeScale = selectedTimeScale;

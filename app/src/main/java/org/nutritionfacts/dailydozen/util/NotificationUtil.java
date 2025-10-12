@@ -6,7 +6,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.text.TextUtils;
 
 import androidx.core.app.NotificationCompat;
@@ -118,13 +117,11 @@ public class NotificationUtil {
     }
 
     private static void initNotificationChannels(final Context context) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            getNotificationManager(context).createNotificationChannel(new NotificationChannel(
-                    CHANNEL_REMINDERS,
-                    context.getString(R.string.channel_reminders_name),
-                    NotificationManager.IMPORTANCE_DEFAULT
-            ));
-        }
+        getNotificationManager(context).createNotificationChannel(new NotificationChannel(
+                CHANNEL_REMINDERS,
+                context.getString(R.string.channel_reminders_name),
+                NotificationManager.IMPORTANCE_DEFAULT
+        ));
     }
 
     private static void initUpdateReminderNotificationAlarm(final Context context) {

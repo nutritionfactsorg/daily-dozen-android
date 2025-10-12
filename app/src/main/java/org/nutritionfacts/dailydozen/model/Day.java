@@ -1,5 +1,7 @@
 package org.nutritionfacts.dailydozen.model;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
@@ -10,20 +12,21 @@ import com.activeandroid.query.Select;
 
 import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
-import java.util.TimeZone;
 
-import hirondelle.date4j.DateTime;
 import timber.log.Timber;
 
 @Table(name = "dates")
 public class Day extends TruncatableModel {
+    public static final DateTimeFormatter formatYMD = DateTimeFormatter.ofPattern("uuuuMMdd");
+    public static final DateTimeFormatter formatTabTitle = DateTimeFormatter.ofPattern("E, MMM d");
+
     @Column(name = "date", unique = true, index = true)
     private long date;
 
@@ -51,16 +54,16 @@ public class Day extends TruncatableModel {
     public Day() {
     }
 
-    public Day(DateTime date) {
+    public Day(LocalDate date) {
         setDate(date);
     }
 
     public String getDateString() {
-        return getDateString(getDateTime());
+        return getDateString(getDate());
     }
 
-    private String getDateString(final DateTime dateTime) {
-        return dateTime.format("YYYYMMDD");
+    private String getDateString(final LocalDate date) {
+        return date.format(DateTimeFormatter.BASIC_ISO_DATE);
     }
 
     // Calculates the number of days between epoch == 0 (Jan 1, 1970) and now
@@ -69,53 +72,38 @@ public class Day extends TruncatableModel {
         return getNumDaysSinceEpoch(getToday().plusDays(1));
     }
 
-    public static int getNumDaysSinceEpoch(final DateTime date) {
-        return getEpoch().numDaysFrom(date);
+    public static int getNumDaysSinceEpoch(final LocalDate date) {
+        return (int) DAYS.between(LocalDate.of(1970, 1, 1), date);
     }
 
-    private static DateTime getEpoch() {
-        return DateTime.forInstant(0, TimeZone.getDefault());
+    public static LocalDate getToday() {
+        return LocalDate.now();
     }
 
-    public static DateTime getToday() {
-        return DateTime.today(TimeZone.getDefault());
+    public LocalDate getDate() {
+        return LocalDate.of(year, month, day);
     }
 
-    // This method is used for scheduling the reinitialization of the DailyDozenPagerAdapter
-    public static long getMillisUntilMidnight() {
-        final DateTime tomorrow = getToday().plusDays(1);
-        return DateTime.now(TimeZone.getDefault()).numSecondsFrom(tomorrow) * 1000;
+    private void setDate(LocalDate date) {
+        this.date = Long.parseLong(getDateString(date));
+
+        this.year = date.getYear();
+        this.month = date.getMonthValue();
+        this.day = date.getDayOfMonth();
     }
 
-    public DateTime getDateTime() {
-        // NOTE: This method used to be the following line. However, because of a bug in Caldroid, I had to
-        // change the implementation to return a DateTime with 0 in the time fields instead of null otherwise the
-        // food servings history chart would not show events.
-        // return DateTime.forDateOnly(year, month, day);
-
-        return new DateTime(year, month, day, 0, 0, 0, 0);
-    }
-
-    private void setDate(DateTime dateTime) {
-        this.date = Long.parseLong(getDateString(dateTime));
-
-        this.year = dateTime.getYear();
-        this.month = dateTime.getMonth();
-        this.day = dateTime.getDay();
-    }
-
-    public long getDate() {
+    public long getDateLong() {
         return date;
     }
 
     @NonNull
     @Override
     public String toString() {
-        return getDateTime().format("WWW, MMM D", Locale.getDefault());
+        return getDate().format(formatTabTitle);
     }
 
     public String getDayOfWeek() {
-        return getDateTime().format("D (WWW)", Locale.getDefault());
+        return getDate().format(DateTimeFormatter.ofPattern("d (E)"));
     }
 
     public static Day getByDate(String dateString) throws InvalidDateException {
@@ -128,14 +116,14 @@ public class Day extends TruncatableModel {
                 .executeSingle();
 
         if (day == null) {
-            day = new Day(fromDateString(dateString));
+            day = new Day(LocalDate.parse(dateString, formatYMD));
         }
 
         return day;
     }
 
     public static Day createDay(final String dateString) {
-        return createDayIfDoesNotExist(new Day(fromDateString(dateString)));
+        return createDayIfDoesNotExist(new Day(LocalDate.parse(dateString, formatYMD)));
     }
 
     public static Day createDayIfDoesNotExist(final String dateString) throws InvalidDateException {
@@ -171,7 +159,7 @@ public class Day extends TruncatableModel {
         allDays.addAll(daysInPreviousMonth);
 
         // Sort the days in ascending order
-        Collections.sort(allDays, new DayComparator());
+        allDays.sort(new DayComparator());
 
         return allDays;
     }
@@ -190,19 +178,19 @@ public class Day extends TruncatableModel {
 
         final List<Day> daysInYearAndMonth = new ArrayList<>(32);
 
-        final DateTime today = getToday();
-        boolean isCurrentMonth = today.getYear() == year && today.getMonth() == monthOneBased;
+        final LocalDate today = getToday();
+        boolean isCurrentMonth = today.getYear() == year && today.getMonthValue() == monthOneBased;
 
         try {
             for (int i = 1; i < 32; i++) {
-                if (isCurrentMonth && i > today.getDay()) {
+                if (isCurrentMonth && i > today.getDayOfMonth()) {
                     break;
                 }
 
                 if (daysWithServingsLookup.containsKey(i)) {
                     daysInYearAndMonth.add(daysWithServingsLookup.get(i));
                 } else {
-                    daysInYearAndMonth.add(new Day(DateTime.forDateOnly(year, monthOneBased, i)));
+                    daysInYearAndMonth.add(new Day(LocalDate.of(year, monthOneBased, i)));
                 }
             }
         } catch (Exception e) {
@@ -233,47 +221,26 @@ public class Day extends TruncatableModel {
     }
 
     Day getDayBefore() throws InvalidDateException {
-        return Day.getByDate(getDateString(getDateTime().minusDays(1)));
-    }
-
-    private static DateTime fromDateString(String dateString) {
-        if (!TextUtils.isEmpty(dateString)) {
-            return DateTime.forDateOnly(
-                    Integer.valueOf(dateString.substring(0, 4)),  // year
-                    Integer.valueOf(dateString.substring(4, 6)),  // month
-                    Integer.valueOf(dateString.substring(6, 8))); // day
-        }
-
-        return null;
+        return Day.getByDate(getDateString(getDate().minusDays(1)));
     }
 
     public List<Day> getDaysAfter() {
         return new Select().from(Day.class)
-                .where("date >= ?", getDateString(getDateTime()))
+                .where("date >= ?", date)
                 .orderBy("date ASC")
                 .execute();
     }
 
     public static Day getByOffsetFromEpoch(int daysSinceEpoch) {
-        return new Day(getEpoch().plusDays(daysSinceEpoch));
-    }
-
-    public static String getTabTitleForDay(int daysSinceEpoch) {
-        return getEpoch().plusDays(daysSinceEpoch).format("WWW, MMM D", Locale.getDefault());
+        return new Day(LocalDate.ofEpochDay(daysSinceEpoch));
     }
 
     public static boolean isToday(final Day day) {
-        // NOTE: This method used to be the following single line. However, because of a bug in Caldroid, I had to
-        // change the implementation of getDateTime() to return a DateTime with 0 in the time fields instead of null.
-        // That broke the following comparison and now I have to manually check if year, month, and day are equal.
-        // return day.getDateTime().compareTo(getToday()) == 0;
+        return day.getDate().equals(getToday());
+    }
 
-        final DateTime dateInQuestion = day.getDateTime();
-        final DateTime today = getToday();
-
-        return dateInQuestion.getYear().equals(today.getYear()) &&
-                dateInQuestion.getMonth().equals(today.getMonth()) &&
-                dateInQuestion.getDay().equals(today.getDay());
+    public boolean isOneDayAfter(final Day olderDate) {
+        return getDate().equals(olderDate.getDate().plusDays(1));
     }
 
     @Override
@@ -296,7 +263,7 @@ public class Day extends TruncatableModel {
     private static class DayComparator implements Comparator<Day> {
         @Override
         public int compare(Day o1, Day o2) {
-            return (int) (o1.getDate() - o2.getDate());
+            return (int) (o1.getDateLong() - o2.getDateLong());
         }
     }
 }

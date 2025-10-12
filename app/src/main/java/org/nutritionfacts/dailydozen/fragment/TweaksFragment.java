@@ -66,6 +66,7 @@ public class TweaksFragment extends Fragment {
 
                 initBackToTodayButton();
 
+                binding.headerTweaks.setDate(day);
                 binding.headerTweaks.setServings(TweakServings.getTotalTweakServingsOnDate(day));
 
                 binding.dateWeights.setDay(day);
@@ -131,8 +132,8 @@ public class TweaksFragment extends Fragment {
 
     @Subscribe
     public void onEvent(TweakServingsChangedEvent event) {
-        if (event.getDateString().equals(day.getDateString())) {
-            Timber.d("onEvent(TweakServingsChangedEvent): dateString [%s] tweakName [%s]", event.getDateString(), event.getTweakName());
+        if (event.getDateLong() == day.getDateLong()) {
+            Timber.d("onEvent(TweakServingsChangedEvent): date [%s] tweakName [%s]", event.getDateLong(), event.getTweakName());
             binding.headerTweaks.setServings(TweakServings.getTotalTweakServingsOnDate(day));
         }
     }

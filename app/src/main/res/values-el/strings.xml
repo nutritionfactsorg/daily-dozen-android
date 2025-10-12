@@ -24,7 +24,7 @@
     <string name="moving_average">Κινητός Μέσος Όρος</string>
     <string name="about">Σχετικά</string>
     <string name="about_this_app">Σχετικά με την εφαρμογή</string>
-    <string name="about_translators">Ιδιαίτερες ευχαριστίες στους εθελοντές μεταφραστές μας: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Ιδιαίτερες ευχαριστίες στους εθελοντές μεταφραστές μας: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Τελευταία Βίντεο</string>
     <string name="donate">Δωρεά</string>
     <string name="subscribe">Εγγραφή</string>
@@ -216,7 +216,6 @@
         <item>Μεγάλα βόρεια</item>
         <item>Κόκκινα</item>
         <item>Φακές (μαύρες beluga, γαλλικές, και κόκκινες ποικιλίες)</item>
-        <item>Μίσο</item>
         <item>Νέιβι</item>
         <item>Πίντο</item>
         <item>Μικρά κόκκινα</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Αμύγδαλα</item>
-        <item>Καρυδιά Βραζιλίας</item>
         <item>Κάσιους</item>
         <item>Σπόροι τσία</item>
         <item>Φουντούκια</item>
@@ -388,7 +386,6 @@
         <item>Τσάι Earl Grey</item>
         <item>Πράσινο τσάι</item>
         <item>Τσάι υβίσκου</item>
-        <item>Ζεστή σοκολάτα</item>
         <item>Τσάι γιασεμί</item>
         <item>Τσάι με λεμόνι βάλσαμο</item>
         <item>Τσάι μάτσα</item>
@@ -457,23 +454,21 @@
     <string-array name="food_info_serving_sizes_beans_imperial">
         <item>¼ φλιτζάνι ντιπ χούμους ή φασολιών</item>
         <item>½ φλιτζάνι μαγειρεμένα φασόλια, μπιζέλια ή φακές</item>
-        <item>½ φλιτζάνι τόφου ή τέμπε</item>
-        <item>1 φλιτζάνι φρέσκο αρακά ή αρακά χιονιού</item>
-        <item>1 φλιτζάνι φύτρα φρέσκων φασολιών (φακές, mung)</item>
+        <item>⅓ φλιτζάνι τόφου ή τέμπε</item>
+        <item>1 φλιτζάνι φρέσκα μπιζέλια ή φυτρωμένες φακές</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 γραμμάρια χούμους ή ντιπ φασολιών</item>
-        <item>90 γραμμάρια μαγειρεμένα φασόλια, σπαστά μπιζέλια ή φακές</item>
-        <item>100 g τόφου ή τέμπε</item>
-        <item>130 γραμμάρια φρέσκου αρακά ή αρακά χιονιού</item>
-        <item>100 g φύτρα φρέσκων φασολιών (φακές, mung)</item>
+        <item>70 γρ χούμους ή ντιπ φασολιών</item>
+        <item>100 γρ μαγειρεμένα φασόλια, σπασμένα μπιζέλια ή φακές</item>
+        <item>80 γρ τόφου ή τέμπε</item>
+        <item>100 γρ φρέσκα μπιζέλια ή φυτρωμένες φακές</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ φλιτζάνι φρέσκα ή κατεψυγμένα</item>
         <item>¼ φλιτζανιού αποξηραμένα</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 γραμμάρια φρέσκα ή κατεψυγμένα</item>
+        <item>70 γρ φρέσκα ή κατεψυγμένα</item>
         <item>40 γραμμάρια αποξηραμένα</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 μεσαίου μεγέθους φρούτο</item>
-        <item>120 γραμμάρια κομμένο φρούτο</item>
+        <item>150 γρ κομμένα φρούτα</item>
         <item>40 γραμμάρια αποξηραμένο φρούτο</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ φλιτζάνι ψιλοκομμένα</item>
-        <item>½ φλιτζάνι λαχανάκια Βρυξελλών</item>
-        <item>¼ φλιτζάνι φύτρα μπρόκολου</item>
+        <item>½ φλιτζάνι μαγειρεμένα φυλλώδη λαχανικά</item>
+        <item>½ φλιτζάνι ωμά ή μαγειρεμένα μη φυλλώδη λαχανικά</item>
+        <item>1 φλιτζάνι ωμά φυλλώδη λαχανικά</item>
+        <item>¼ φλιτζάνι βλαστοί μπρόκολου</item>
         <item>1 κουταλιά της σούπας χρένο</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 γραμμάρια ψιλοκομμένα</item>
-        <item>80 γραμμάρια λαχανάκια Βρυξελλών</item>
-        <item>15 γραμμάρια φύτρα μπρόκολου</item>
+        <item>90 γρ μαγειρεμένα φυλλώδη λαχανικά</item>
+        <item>60 γρ ωμά ή μαγειρεμένα μη φυλλώδη λαχανικά</item>
+        <item>90 γρ ωμά φυλλώδη λαχανικά</item>
+        <item>20 γρ βλαστοί μπρόκολου</item>
         <item>1 κουταλιά της σούπας χρένο</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 γραμμάρια ωμά φυλλώδη λαχανικά</item>
-        <item>50 γραμμάρια ωμά ή μαγειρεμένα μη φυλλώδη λαχανικά</item>
-        <item>125 ml χυμό λαχανικών</item>
-        <item>7 γραμμάρια αποξηραμένα μανιτάρια</item>
+        <item>90 γρ ωμά ή μαγειρεμένα μη φυλλώδη λαχανικά</item>
+        <item>120 ml χυμός λαχανικών</item>
+        <item>10 γρ αποξηραμένα μανιτάρια</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 κουταλιά της σούπας αλεσμένο</item>
@@ -541,18 +538,20 @@
         <item>Ότι άλλο (χωρίς αλάτι) βότανο και μπαχαρικό σας αρέσει</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ φλιτζάνι ζεστά δημητριακά ή μαγειρεμένα, ζυμαρικά, ή πυρήνες καλαμποκιού</item>
-        <item>1 φλιτζάνι κρύα δημητριακά</item>
-        <item>1 τορτίγια ή φέτα ψωμί</item>
-        <item>½ κουλούρι ή αγγλικό μάφιν</item>
+        <item>½ φλιτζάνι μαγειρεμένοι ολόκληροι σπόροι, ζυμαρικά ολικής αλέσεως ή κόκκοι καλαμποκιού</item>
+        <item>1 φλιτζάνι 100% δημητριακά ολικής αλέσεως κρύα</item>
+        <item>1 100% τορτίγια ολικής αλέσεως (ή 2 μικρότερες τορτίγιες καλαμποκιού)</item>
+        <item>1 φέτα 100% ψωμί ολικής αλέσεως</item>
+        <item>½ μπέιγκελ ή αγγλικό μάφιν</item>
         <item>3 φλιτζάνια ποπ κορν</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 γραμμάρια ζεστά δημητριακά ή μαγειρεμένα, ζυμαρικά, ή πυρήνες καλαμποκιού</item>
-        <item>50 γραμμάρια κρύα δημητριακά</item>
-        <item>1 τορτίγια ή φέτα ψωμί</item>
-        <item>½ κουλούρι ή αγγλικό μάφιν</item>
-        <item>30 γραμμάρια ποπ κορν</item>
+        <item>100 γρ μαγειρεμένοι ολόκληροι σπόροι, ζυμαρικά ολικής αλέσεως ή κόκκοι καλαμποκιού</item>
+        <item>50 γρ 100% δημητριακά ολικής αλέσεως κρύα</item>
+        <item>1 100% τορτίγια ολικής αλέσεως (ή 2 μικρότερες τορτίγιες καλαμποκιού)</item>
+        <item>1 φέτα 100% ψωμί ολικής αλέσεως</item>
+        <item>½ μπέιγκελ ή αγγλικό μάφιν</item>
+        <item>30 γρ ποπ κορν</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beverages_imperial">
         <item>Ένα ποτήρι (12 Ουγγιές)</item>

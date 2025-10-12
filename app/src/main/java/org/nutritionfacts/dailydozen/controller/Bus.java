@@ -39,11 +39,11 @@ public class Bus {
     }
 
     public static void foodServingsChangedEvent(Day day, Food food) {
-        post(new FoodServingsChangedEvent(day.getDateString(), food.getName(), Common.isSupplement(food)));
+        post(new FoodServingsChangedEvent(day.getDateLong(), food.getName(), Common.isSupplement(food)));
     }
 
     public static void tweakServingsChangedEvent(Day day, Tweak tweak) {
-        post(new TweakServingsChangedEvent(day.getDateString(), tweak.getName()));
+        post(new TweakServingsChangedEvent(day.getDateLong(), tweak.getName()));
     }
 
     public static void displayLatestDate() {

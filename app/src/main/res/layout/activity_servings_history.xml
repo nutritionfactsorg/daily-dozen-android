@@ -22,6 +22,7 @@
     <LinearLayout
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -30,6 +31,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/daily_servings_loading_label"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/task_loading_servings_history_title"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/daily_servings_loading"
+            android:visibility="gone"
+            android:layout_margin="8dp"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 

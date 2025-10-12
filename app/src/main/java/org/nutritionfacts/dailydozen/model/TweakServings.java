@@ -58,10 +58,10 @@ public class TweakServings extends TruncatableModel implements Servings {
     }
 
     public void recalculateStreak() {
-        if (servings == tweak.getRecommendedAmount()) {
-            streak = getStreakFromDayBefore() + 1;
-        } else if (servings < tweak.getRecommendedAmount()) {
+        if (servings < tweak.getRecommendedAmount()) {
             streak = 0;
+        } else {
+            streak = getStreakFromDayBefore() + 1;
         }
     }
 
@@ -78,6 +78,10 @@ public class TweakServings extends TruncatableModel implements Servings {
 
     public int getStreak() {
         return streak;
+    }
+
+    public void setStreak(int streak) {
+        this.streak = streak;
     }
 
     @NonNull
@@ -98,8 +102,13 @@ public class TweakServings extends TruncatableModel implements Servings {
     }
 
     public static TweakServings createServings(final Day day, final Tweak tweak, final int numServings) {
+        return createServingsWithStreak(day, tweak, numServings, 0);
+    }
+
+    public static TweakServings createServingsWithStreak(final Day day, final Tweak tweak, final int numServings, final int streak) {
         TweakServings servings = new TweakServings(day, tweak);
         servings.setServings(numServings);
+        servings.setStreak(streak);
         servings.save();
         return servings;
     }

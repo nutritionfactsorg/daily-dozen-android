@@ -24,7 +24,7 @@
     <string name="moving_average">Średnia ruchoma</string>
     <string name="about">O aplikacji</string>
     <string name="about_this_app">O aplikacji</string>
-    <string name="about_translators">Specjalne podziękowania dla naszych tłumaczy-wolontariuszy: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Specjalne podziękowania dla naszych tłumaczy-wolontariuszy: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
     <string name="latest_videos">Najnowsze filmy</string>
     <string name="donate">Donacja</string>
     <string name="subscribe">Subskrybuj</string>
@@ -160,8 +160,8 @@
     <string name="faq_age_response.0">Dzieci i młodzież mają różne zapotrzebowanie kaloryczne w okresie dorastania. Zmienia się ono, aby wspierać wzrost i rozwój na każdym etapie.</string>
     <string name="faq_age_response.1">Codzienny Tuzin został stworzony jako przewodnik mający pomóc ludziom włączyć niektóre z najzdrowszych pokarmów do ich codziennej diety. Chociaż te same wytyczne mogą być stosowane przez większość ludzi przez cały ich cykl życia, ilość żywności, którą należy zjeść, będzie się różnić w zależności od wielu czynników, takich jak wiek i poziom aktywności fizycznej. Ponieważ nie możemy zapewnić konkretnych porad żywieniowych ani medycznych dla twojego rosnącego dziecka, rodzice powinni korzystać z tego przewodnika tak, jak uznają to za najlepsze dla potrzeb ich dziecka i/lub skonsultować się z dietetykiem lub innym pracownikiem służby zdrowia, który pomoże określić, co jest najlepsze dla ich indywidualnych potrzeb.</string>
     <string name="faq_calories_question">Ile kalorii pokrywa Codzienny Tuzin?</string>
-    <string name="faq_calories_response.0">Codzienny Tuzin średnio pokrywa około 1200 kalorii, ale biorąc pod uwagę szeroki wybór żywności w każdej kategorii, ten zakres może wahać się od 800 do 1800 kalorii. Weź pod uwagę kategorię \"Inne Warzywa\": szklanka papryki ma znacznie niższą gęstość kaloryczną niż szklanka gotowanych słodkich ziemniaków, dlatego zakres kaloryczny będzie zależał od twoich konkretnych wyborów żywieniowych. To właśnie jest wspaniałe w Liście kontrolnej Codziennego Tuzina — można je dostosować do własnych potrzeb.</string>
-    <string name="faq_calories_response.1">Jeśli twoim celem jest utrata masy ciała, więcej informacji znajdziesz w linku do książki „How Not to Diet” i w zakładce \"21 Adaptacji\". W „How Not to Diet” wspomniałem: „Systematyczny przegląd skutecznych strategii odchudzania wykazał, że biorąc pod uwagę spowolnienie metabolizmu i zwiększony apetyt, który towarzyszy utracie wagi, aby osiągnąć znaczną utratę wagi, liczba kalorii może wymagać spadku nawet do 1200 kalorii dziennie dla kobiet i 1500 kalorii dziennie dla mężczyzn.\"</string>
+    <string name="faq_calories_response.0">Codzienny Tuzin średnio pokrywa około 1200 kalorii, ale biorąc pod uwagę szeroki wybór żywności w każdej kategorii, ten zakres może wahać się od 800 do 1800 kalorii. Weź pod uwagę kategorię “Inne Warzywa”: szklanka papryki ma znacznie niższą gęstość kaloryczną niż szklanka gotowanych słodkich ziemniaków, dlatego zakres kaloryczny będzie zależał od twoich konkretnych wyborów żywieniowych. To właśnie jest wspaniałe w Liście kontrolnej Codziennego Tuzina — można je dostosować do własnych potrzeb.</string>
+    <string name="faq_calories_response.1">Jeśli twoim celem jest utrata masy ciała, więcej informacji znajdziesz w linku do książki „How Not to Diet” i w zakładce “21 Adaptacji”. W „How Not to Diet” wspomniałem: „Systematyczny przegląd skutecznych strategii odchudzania wykazał, że biorąc pod uwagę spowolnienie metabolizmu i zwiększony apetyt, który towarzyszy utracie wagi, aby osiągnąć znaczną utratę wagi, liczba kalorii może wymagać spadku nawet do 1200 kalorii dziennie dla kobiet i 1500 kalorii dziennie dla mężczyzn.”</string>
     <string name="faq_calories_response.2">Z kolei, jeśli twoim celem jest przybranie na wadze, możesz skupić się na dodawaniu pokarmów o większej zawartości kalorii, takich jak słodkie ziemniaki, awokado, orzechy i produkty sojowe.</string>
     <string name="faq_mother_question">Czy mogę stosować się do Codziennego Tuzina w czasie ciąży lub karmienia piersią?</string>
     <string name="faq_mother_response">Osoby w ciąży lub karmiące piersią mają inne potrzeby kaloryczne i żywieniowe niż osoby niebędące w ciąży. Przypominamy, że Codzienny Tuzin nie jest planem posiłków i produkty z Listy kontrolnej nie powinny być jedynymi produktami spożywanymi w ciągu dnia. Osoby w ciąży lub karmiące piersią powinny skonsultować się ze swoim lekarzem lub dietetykiem w celu uzyskania pomocy w spełnieniu ich określonych wymagań kalorycznych i potrzeb żywieniowych.</string>
@@ -216,7 +216,6 @@
         <item>Fasola Great northern</item>
         <item>Fasola czerwona kidney</item>
         <item>Soczewica (beluga, francuska du Puy i czerwone odmiany)</item>
-        <item>Miso</item>
         <item>Fasola garbanzo</item>
         <item>Fasola Pinto</item>
         <item>Fasola (mała czerwona)</item>
@@ -321,7 +320,6 @@
     </string-array>
     <string-array name="food_info_types_nuts">
         <item>Migdały</item>
-        <item>Orzechy brazylijskie</item>
         <item>Orzechy nerkowca</item>
         <item>Nasiona Chia</item>
         <item>Orzechy laskowe</item>
@@ -388,7 +386,6 @@
         <item>Czarna herbata Earl Grey</item>
         <item>Zielona herbata</item>
         <item>Herbata z hibiskusa</item>
-        <item>Gorąca czekolada</item>
         <item>Herbata jaśminowa</item>
         <item>Herbata z melisy</item>
         <item>Herbata matcha</item>
@@ -458,22 +455,20 @@
         <item>¼ szklanki hummusu lub dipu z fasoli</item>
         <item>½ szklanki ugotowanej fasoli, grochu łuskanego, lub soczewicy</item>
         <item>½ szklanki tofu lub tempehu</item>
-        <item>1 szklanka świeżego groszku lub groszku młodego cukrowego</item>
-        <item>1 szklanka świeżych kiełków strączków (soczewica, fasola mung)</item>
+        <item>1 szklanka świeżego groszku lub kiełków soczewicy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_beans_metric">
-        <item>60 g hummusu lub dipu z fasoli</item>
-        <item>90 g ugotowanej fasoli, grochu łuskanego, lub soczewicy</item>
-        <item>100 g tofu lub tempehu</item>
-        <item>130 g świeżego groszku lub groszku młodego cukrowego</item>
-        <item>100 g świeżych kiełków strączków (soczewica, fasola mung)</item>
+        <item>70 g hummusu lub dipu z fasoli</item>
+        <item>100 g ugotowanej fasoli, grochu łuskanego, lub soczewicy</item>
+        <item>80 g tofu lub tempehu</item>
+        <item>100 g świeżego groszku lub kiełków soczewicy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ szklanki świeżych lub mrożonych</item>
         <item>¼ szklanki susznych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
-        <item>60 g świeżych lub mrożonych</item>
+        <item>70 g świeżych lub mrożonych</item>
         <item>40 g susznych</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
@@ -483,19 +478,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 owoc  średniej wielkości</item>
-        <item>120 g pokrojonych owoców</item>
+        <item>150 g pokrojonych owoców</item>
         <item>40 g suszonych owoców</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
-        <item>½ szklanki posiekanych</item>
-        <item>½ szklanki brukselki</item>
+        <item>½ szklanki ugotowanych warzyw liściastych</item>
+        <item>½ szklanki surowych lub ugotowanych warzyw nieliściastych</item>
+        <item>1 szklanka surowych warzyw liściastych</item>
         <item>¼ szklanki kiełków brokułu</item>
         <item>1 łyżka chrzanu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
-        <item>30–80 g posiekanych</item>
-        <item>80 g brukselki</item>
-        <item>15 g  kiełków brokułu</item>
+        <item>90 g ugotowanych warzyw liściastych</item>
+        <item>60 g surowych lub ugotowanych warzyw nieliściastych</item>
+        <item>90 g surowych warzyw liściastych</item>
+        <item>20 g  kiełków brokułu</item>
         <item>1 łyżka chrzanu</item>
     </string-array>
     <string-array name="food_info_serving_sizes_greens_imperial">
@@ -514,9 +511,9 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g surowych warzyw liściastych</item>
-        <item>50 g surowych lub gotowanych warzyw nieliściastych</item>
-        <item>125 ml soku warzywnego</item>
-        <item>7 g suszonych grzybów</item>
+        <item>90 g surowych lub ugotowanych warzyw nieliściastych</item>
+        <item>120 ml soku warzywnego</item>
+        <item>10 g suszonych grzybów</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 łyżka mielonych</item>
@@ -541,16 +538,18 @@
         <item>Wszelkie inne (pozbawione soli) zioła i przyprawy, które lubisz</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
-        <item>½ szklanki gorących płatków zbożowych lub gotowanych ziaren zbóż, makaronu lub ziaren kukurydzy</item>
-        <item>1 szklanka płatków śniadaniowych na zimno</item>
-        <item>1 tortilla lub kromka chleba</item>
+        <item>½ szklanki ugotowanych ziaren zbóż, pszennego makaronu razowego lub ziaren kukurydzy</item>
+        <item>1 szklanka pełnoziarnistych płatków śniadaniowych na zimno</item>
+        <item>1 pełnoziarnista tortilla (lub 2 mniejsze tortille kukurydziane)</item>
+        <item>1 kromka pełnoziarnistego chleba</item>
         <item>½ bajgla lub angielskiego muffina</item>
         <item>3 szklanki prażonej kukurydzy</item>
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_metric">
-        <item>100 g gorących płatków zbożowych lub gotowanych ziaren zbóż, makaronu lub ziaren kukurydzy</item>
-        <item>50 g płatków śniadaniowych na zimno</item>
-        <item>1 tortilla lub kromka chleba</item>
+        <item>100 g ugotowanych ziaren zbóż, pszennego makaronu razowego lub ziaren kukurydzy</item>
+        <item>50 g pełnoziarnistych płatków śniadaniowych na zimno</item>
+        <item>1 pełnoziarnista tortilla (lub 2 mniejsze tortille kukurydziane)</item>
+        <item>1 kromka pełnoziarnistego chleba</item>
         <item>½ bajgla lub angielskiego muffina</item>
         <item>30 g prażonej kukurydzy</item>
     </string-array>

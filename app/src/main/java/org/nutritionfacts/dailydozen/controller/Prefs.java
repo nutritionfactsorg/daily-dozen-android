@@ -21,7 +21,7 @@ public class Prefs {
 
     private static Prefs instance;
 
-    private SharedPreferences sharedPrefs;
+    private final SharedPreferences sharedPrefs;
 
     private Prefs(final Context context) {
         this.sharedPrefs = context.getSharedPreferences(Common.PREFERENCES_FILE, Context.MODE_PRIVATE);

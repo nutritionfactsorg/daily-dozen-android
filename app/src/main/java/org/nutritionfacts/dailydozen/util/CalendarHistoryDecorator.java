@@ -6,25 +6,23 @@ import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;
 import com.prolificinteractive.materialcalendarview.DayViewFacade;
 
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import hirondelle.date4j.DateTime;
-
 public class CalendarHistoryDecorator implements DayViewDecorator {
-    private final Set<DateTime> days;
+    private final Set<LocalDate> days;
     private final ColorDrawable background;
 
-    public CalendarHistoryDecorator(List<DateTime> days, ColorDrawable background) {
+    public CalendarHistoryDecorator(List<LocalDate> days, ColorDrawable background) {
         this.days = new HashSet<>(days);
         this.background = background;
     }
 
     @Override
     public boolean shouldDecorate(CalendarDay day) {
-        // The DateTime object must be created with the time specified as zeros
-        return days.contains(new DateTime(day.getYear(), day.getMonth(), day.getDay(), 0, 0, 0, 0));
+        return days.contains(LocalDate.of(day.getYear(), day.getMonth(), day.getDay()));
     }
 
     @Override

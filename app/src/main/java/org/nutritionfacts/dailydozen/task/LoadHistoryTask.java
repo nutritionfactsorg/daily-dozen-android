@@ -33,12 +33,10 @@ import timber.log.Timber;
 
 public class LoadHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
     private static final int MONTHS_IN_YEAR = 12;
-    private final ProgressListener progressListener;
     private final Context context;
     private final LoadHistoryTaskParams inputParams;
 
-    public LoadHistoryTask(ProgressListener progressListener, Context context, LoadHistoryTaskParams inputParams) {
-        this.progressListener = progressListener;
+    public LoadHistoryTask(Context context, LoadHistoryTaskParams inputParams) {
         this.context = context;
         this.inputParams = inputParams;
     }
@@ -58,13 +56,10 @@ public class LoadHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
 
     @Override
     public void setUiForLoading() {
-        progressListener.showProgressBar(R.string.task_loading_servings_history_title);
     }
 
     @Override
     public void setDataAfterLoading(LoadHistoryCompleteEvent event) {
-        progressListener.hideProgressBar();
-
         Bus.loadHistoryCompleteEvent(event);
     }
 
@@ -103,8 +98,6 @@ public class LoadHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
                 lineEntry.setData(DateUtil.convertDayToDate(day));
                 lineEntries.add(lineEntry);
             }
-
-            progressListener.updateProgressBar(i + 1, numDaysOfHistory);
         }
 
         return createCompleteEvent(createLineAndBarData(xLabels, lineEntries, barEntries));
@@ -134,8 +127,6 @@ public class LoadHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
             }
 
             monthOneBased++;
-
-            progressListener.updateProgressBar(i++, MONTHS_IN_YEAR);
         }
 
         return createCompleteEvent(createLineData(xLabels, lineEntries));
@@ -170,8 +161,6 @@ public class LoadHistoryTask extends BaseTask<LoadHistoryCompleteEvent> {
             lineEntries.add(new Entry(averageForYear, xIndex));
 
             year++;
-
-            progressListener.updateProgressBar(i++, numYears);
         }
 
         return createCompleteEvent(createLineData(xLabels, lineEntries));
