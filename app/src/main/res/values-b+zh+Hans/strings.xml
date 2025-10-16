@@ -157,14 +157,14 @@
     <string name="faq_adapt_question">每日12清单建议我吃太多／太少！我可以调整吗？</string>
     <string name="faq_adapt_response">是的，每日12清单只是为了指导我们每天努力摄取的最健康的食物。这不是膳食计划，也不是规定性的。尽最大努力吃各种各样的全食物蔬食食品，并根据适合您的数量调整每日12清单。</string>
     <string name="faq_age_question">这是否适用于儿童和青少年？</string>
-    <string name="faq_age_response.0">儿童和青少年在整个生命周期中有不同的热量需求。 这些需求在每个阶段发生改变，是为了支持每个阶段的增长和发展。</string>
+    <string name="faq_age_response.0">儿童和青少年在整个生命周期中有不同的热量需求。这些需求在每个阶段发生改变，是为了支持每个阶段的增长和发展。</string>
     <string name="faq_age_response.1">每日12清单旨在作为指南，帮助人们将一些最健康的食物纳入日常生活。虽然同一框架可用于大多数人的整个生命周期，但一个人需要吃的食物量会因年龄和活动水平等多种因素而异。由于我们无法为您成长中的孩子提供具体的营养或医疗建议，因此父母应该根据他们认为最适合孩子需求的方式使用本指南和/或咨询注册营养师或其他医疗保健提供者，以帮助确定最适合他们个人的内容需要。</string>
     <string name="faq_calories_question">每日12清单中含有多少卡路里？</string>
     <string name="faq_calories_response.0">每日12清单平均约1,200卡路里，但考虑到每个类别的食物选择范围广泛，这个数字可以落在800-1800之间的任何地方。想想“其他蔬菜”类别：一杯甜椒的热量密度比一杯煮熟的红薯低得多，因此热量范围将取决于您的具体食物选择。这就是每日12清单的伟大之处——它不是一种放之四海而皆准的方法，可以根据您的需要进行调整。</string>
     <string name="faq_calories_response.1">如果您的目标是减重，您可以在《吃饱瘦身》和随附的21妙方中找到更多信息。 在《吃饱瘦身》一书中，我指出：“一项对成功减重策略的系统回顾得出的结论是，考虑到伴随减重而来的新陈代谢减慢和食欲增加，要实现显著减重，卡路里计数可能需要降低至女性每天1,200卡路里，男性每天1,500卡路里。”</string>
     <string name="faq_calories_response.2">另一方面，如果您的目标是增加体重，那么您可能需要专注于添加更多高热量食物，例如红薯、牛油果、坚果和豆制品。</string>
     <string name="faq_mother_question">我可以在怀孕或哺乳期间这样做吗？</string>
-    <string name="faq_mother_response">怀孕或哺乳的人与未怀孕或哺乳的人有不同的热量和营养需求。 提醒一下，每日12清单不是膳食计划，也不应该是一天内食用的唯一食物。 怀孕或哺乳的人应该咨询她们的保健医生或注册营养师，以获得满足其特定热量需求和营养需求的帮助。</string>
+    <string name="faq_mother_response">怀孕或哺乳的人与未怀孕或哺乳的人有不同的热量和营养需求。提醒一下，每日12清单不是膳食计划，也不应该是一天内食用的唯一食物。怀孕或哺乳的人应该咨询她们的保健医生或注册营养师，以获得满足其特定热量需求和营养需求的帮助。</string>
     <string name="faq_scaling_question">我不可能吃那么多豆子／谷物／其他食物！</string>
     <string name="faq_scaling_response">根据个人需求变化是可以的。每日12清单是一个励志指南。尽可能多地摄入这些健康的植物性食物。 如果您刚开始大量食用豆类（或谷物、蔬菜等），您可能需要从少量开始，然后慢慢增加数量，以便让您的微生物组有机会进行调整。您也可以发挥创意：例如，在早餐燕麦片中加入一些豆类。如果您装了满满的浆果、亚麻籽和坚果，您甚至不会注意到豆子的存在。您也可以将豆子捣碎成三明治涂抹酱，或制作我的BROL（https://nutritionfacts.org/recipe/basic-brol-barley-rye-oats-and-lentils）——大麦、黑麦、去壳燕麦和小扁豆——我用它作为许多餐食的基础，是一种简单的方法来获取各种全谷物和豆类。</string>
     <string name="faq_supplements_question">我以为格雷格医生建议服用维生素D和DHA补充剂，为什么清单里不包括这些呢？</string>
@@ -397,7 +397,7 @@
     </string-array>
     <string-array name="food_info_types_exercise">
         <item>骑自行车</item>
-        <item>滑独木舟</item>
+        <item>划独木舟</item>
         <item>跳舞</item>
         <item>躲避球</item>
         <item>下坡滑雪</item>
