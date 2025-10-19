@@ -24,7 +24,7 @@
     <string name="moving_average">Media móvil</string>
     <string name="about">Conócenos</string>
     <string name="about_this_app">Sobre esta app</string>
-    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lenka Lukacová (cs), Anke Schliessmann (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Katarína Mocáková (sk), Sabina Aliieva (uk).</string>
+    <string name="about_translators">Le damos las gracias a nuestros traductores voluntarios: Adelina Chernaeva (bg), Petar Enchev (bg), Tsveti Enchev (bg), Ricard Soler Roger (ca), Luděk Bouška (cs,sk), Lucie Doleželová (cs), Lenka Lukacová (cs), Anke Schliessmann (de), Sofia Schuessler (de), Ángela Graña (es), Saeed Salamian (fa), Audray Harkins (fr), Doron Barak (he), Ruth Levy (he), dr. Stern Borbála (hu), Kertész Tibor (hu), Adriana Centrone (it), Annalisa Guerrini-Körner (it), Ilaria Zanini (it), Andrijeski (mk), Hangur (pl), Hanna Gurzeda (pl), Joanna Klopotek (pl), Tania Bassi (pt-BR), João Madureira (pt-PT), Cristina Lauby (ro), Evgeniya Lyakh (ru), Anna Miliutina (ru), Katarína Mocáková (sk), Sabina Aliieva (uk), Hailey Chang (zh).</string>
     <string name="latest_videos">Videos más recientes</string>
     <string name="donate">Donación</string>
     <string name="subscribe">Suscríbete</string>
@@ -91,14 +91,14 @@
     <string name="evening">Noche</string>
     <string name="meal_water">Empezar con agua</string>
     <string name="meal_negcal">Empezar con alimentos de “calorías negativas”</string>
-    <string name="meal_vinegar">Vinagre (2 ctda. cada comida)</string>
+    <string name="meal_vinegar">Vinagre (2 cdtas. cada comida)</string>
     <string name="meal_undistracted">Comidas sin distracciones</string>
     <string name="meal_twentyminutes">La regla de los veinte minutos</string>
-    <string name="daily_blackcumin">Comino negro (¼ ctda.)</string>
-    <string name="daily_garlic">Ajo en polvo (¼ ctda.)</string>
-    <string name="daily_ginger">Jengibre molido (1 ctda.) o cayena (½ ctda.)</string>
-    <string name="daily_nutriyeast">Levadura nutricional (2 ctda.)</string>
-    <string name="daily_cumin">Comino (½ ctda. almuerzo y cena)</string>
+    <string name="daily_blackcumin">Comino negro (¼ cdta.)</string>
+    <string name="daily_garlic">Ajo en polvo (¼ cdta.)</string>
+    <string name="daily_ginger">Jengibre molido (1 cdta.) o cayena (½ cdta.)</string>
+    <string name="daily_nutriyeast">Levadura nutricional (2 cdtas.)</string>
+    <string name="daily_cumin">Comino (½ cdta. almuerzo y cena)</string>
     <string name="daily_greentea">Té verde (3 tazas)</string>
     <string name="daily_hydrate">Hidratación</string>
     <string name="daily_deflourdiet">Adiós a la harina</string>
@@ -114,14 +114,14 @@
     <string name="average_weight_on_day">Peso promedio en el día</string>
     <string name="meal_water_short">Empezar con agua</string>
     <string name="meal_negcal_short">Empezar con alimentos de calorías negativas</string>
-    <string name="meal_vinegar_short">Vinagre (2 ctda. cada comida)</string>
+    <string name="meal_vinegar_short">Vinagre (2 cdtas. cada comida)</string>
     <string name="meal_undistracted_short">Comidas sin distracciones</string>
     <string name="meal_twentyminutes_short">La regla de los veinte minutos</string>
-    <string name="daily_blackcumin_short">Comino negro (Nigella sativa) (¼ ctda.)</string>
-    <string name="daily_garlic_short">Ajo en polvo (¼ ctda.)</string>
-    <string name="daily_ginger_short">Jengibre (1 ctda.) o cayena (½ ctda.)</string>
-    <string name="daily_nutriyeast_short">Levadura nutricional (2 ctda.)</string>
-    <string name="daily_cumin_short">Comino (Cuminum cyminum) (½ ctda. almuerzo y cena)</string>
+    <string name="daily_blackcumin_short">Comino negro (Nigella sativa) (¼ cdta.)</string>
+    <string name="daily_garlic_short">Ajo en polvo (¼ cdta.)</string>
+    <string name="daily_ginger_short">Jengibre (1 cdta.) o cayena (½ cdta.)</string>
+    <string name="daily_nutriyeast_short">Levadura nutricional (2 cdtas.)</string>
+    <string name="daily_cumin_short">Comino (Cuminum cyminum) (½ cdta. almuerzo y cena)</string>
     <string name="daily_greentea_short">Té verde (3 tazas)</string>
     <string name="daily_hydrate_short">Hidratación</string>
     <string name="daily_deflourdiet_short">Adiós a la harina</string>
@@ -136,19 +136,19 @@
     <string name="meal_water_text">Toma dos tazas de agua sin sabor, fría o del tiempo, antes de cada comida para acelerar tu metabolismo y aprovechar sus beneficios.</string>
     <string name="meal_negcal_text">Como entrante, puedes comerte una manzana, una sopa o una ensalada con alimentos de luz verde que contenga menos de cien calorías por taza.</string>
     <string name="meal_vinegar_text">Nunca bebas vinagre solo. Puedes usarlo para condimentar las comidas o aderezar una ensalada. Puedes usar cualquier tipo de vinagre, dulce o salado. Si quieres beberlo, debes mezclarlo con un vaso de agua y enjuagarte la boca justo después para proteger el esmalte dental.</string>
-    <string name="meal_undistracted_text">No comas mientras ves la televisión o juegas en tu smartphone. Puedes marcar una casilla por cada comida que pases sin distracciones.</string>
+    <string name="meal_undistracted_text">No comas mientras ves la televisión o utilizas tu smartphone. Puedes marcar una casilla por cada comida que pases sin distracciones.</string>
     <string name="meal_twentyminutes_text">Ya sea con el aumento de la viscosidad y el tiempo de masticado o con la disminución del tamaño de los bocados, existen docenas de estudios que han demostrado que aumentar la cantidad de tiempo que los alimentos se pasan en la boca puede resultar en una menor ingesta calórica. Por lo tanto, aumenta la duración de las comidas en al menos veinte minutos para que tus señales de saciedad naturales puedan surtir efecto. ¿Cómo puedes hacer esto? Podrías elegir alimentos que sean más difíciles de comer y comerlos de tal manera que se prolongue el tiempo que permanecen en la boca. Piensa en alimentos más voluminosos, más duros y que puedas masticar en bocados más pequeños.</string>
-    <string name="daily_blackcumin_text">Como se indica en la sección del libro que habla de la supresión del apetito, una revisión sistemática y un metanálisis de ensayos aleatorizados con grupo de control sobre la pérdida de peso concluyó que aproximadamente un cuarto de cucharadita de comino negro en polvo al día parece reducir el índice de masa corporal en un lapso de un par de meses. No olvides que el comino negro es diferente al comino normal, cuya ingesta recomendada es diferente.</string>
-    <string name="daily_garlic_text">Unos estudios aleatorizados, doble ciegos y controlados con placebo han encontrado que, con simplemente un cuarto de cucharadita diaria de ajo en polvo, se puede reducir la grasa corporal, a un costo de quizás dos centavos por día.</string>
-    <string name="daily_ginger_text">Unos ensayos aleatorizados y con grupo de control han descubierto que el consumo de ¼ a 1½ cucharadita al día de jengibre en polvo disminuye significativamente el peso corporal por solo unos centavos al día. Puede ser tan fácil como echar el jengibre en una taza de agua caliente. Nota: el jengibre podría funcionar mejor por la mañana que por la tarde. El chai es una forma estupenda de combinar los trucos del té verde y el jengibre en una sola bebida. Además, para activar el tejido adiposo pardo, también puedes añadir un jalapeño crudo o media cucharadita de chile en polvo a tu dieta diaria. Para ayudarte con el picante, puedes cortar el jalapeño en rodajas muy finas o picarlo muy bien. El chile en polvo lo podrías echar en las sopas y guisos o en el batido de verduras que hice en uno de mis videos de cocina en NutritionFacts.org.</string>
-    <string name="daily_nutriyeast_text">Dos cucharaditas de levadura de panadería, de cerveza o nutricional contienen aproximadamente la cantidad de glucanos beta 1,3 / 1,6 correcta que, en ensayos clínicos aleatorizados, doble ciegos y con grupo de control, ha demostrado facilitar la pérdida de peso.</string>
-    <string name="daily_cumin_text">Las mujeres con sobrepeso aleatorizadas a echarle media cucharadita de comino a sus almuerzos y cenas superaron al grupo de control, ya que perdieron casi 2 kg más y 2.5 cm extra en la cintura. También existe evidencia para apoyar el uso del azafrán, pero una pizca al día costaría un dólar, mientras que una cucharadita de comino cuesta menos de diez centavos.</string>
-    <string name="daily_greentea_text">Bebe tres tazas al día entre comidas, esperando al menos una hora después de comer, para no interferir con la absorción de hierro. Durante las comidas, bebe agua, café solo o infusión de hibisco (mezclado 6:1 con hierba luisa), pero nunca excedas tres tazas de líquido por hora (tenlo en cuenta para mi sección sobra empezar con agua). Aprovecha los efectos de la cafeína y bebe el té verde mientras comes algo saludable que querrías que te gustase más, para crear una asociación positiva, pero ten ojo y no consumas mucha cafeína en las 6 horas antes de irte a dormir. Lo mejor es tomar el té sin ningún tipo de edulcorante, pero, si le sueles echar miel o azúcar, prueba el jarabe de yacón.</string>
-    <string name="daily_hydrate_text">Puedes marcar esta casilla si tu orina nunca pasa del amarillo pálido.\n\nTen en cuenta que, si consumes alimentos fortificados con riboflavina (como la levadura nutricional), no deberías seguir esta premisa del color y debes centrarte en obtener nueve tazas de líquido sin edulcorar al día para las mujeres (que podrían cubrir el consumo de té verde y agua) o trece tazas al día para hombres.\n\nSi tienes problemas cardiacos o renales, no aumentes la ingesta de líquidos sin antes hablar con tu médico.\n\nNo olvides que, aunque los refrescos light no tengan calorías, no son inocuos, como explico en la sección del libro sobre los azúcares añadidos.</string>
+    <string name="daily_blackcumin_text">Como se indica en la sección de Comer para no engordar que habla de la supresión del apetito, una revisión sistemática y un metanálisis de ensayos aleatorizados con grupo de control sobre la pérdida de peso concluyó que aproximadamente un cuarto de cucharadita de comino negro en polvo al día parece reducir el índice de masa corporal en un lapso de un par de meses. No olvides que el comino negro es diferente al comino normal, cuya ingesta recomendada es diferente.</string>
+    <string name="daily_garlic_text">Unos estudios aleatorizados, doble ciegos y controlados con placebo han descubierto que, con simplemente un cuarto de cucharadita diaria de ajo en polvo, se puede reducir la grasa corporal, a un costo de quizás dos centavos por día.</string>
+    <string name="daily_ginger_text">Unos ensayos aleatorizados con grupo de control han descubierto que el consumo de ¼ a 1 y ½ cucharadita al día de jengibre en polvo disminuye significativamente el peso corporal por solo unos centavos al día. Puede ser tan fácil como echar el jengibre en una taza de agua caliente. Nota: el jengibre podría funcionar mejor por la mañana que por la tarde. El chai es una forma estupenda de combinar los trucos del té verde y el jengibre en una sola bebida. Además, para activar el tejido adiposo pardo, también puedes añadir un jalapeño crudo o media cucharadita de chile en polvo a tu dieta diaria. Para ayudarte con el picante, puedes cortar el jalapeño en rodajas muy finas o picarlo muy bien. El chile en polvo lo podrías echar en las sopas y guisos o en el batido de verduras que hice en uno de mis videos de cocina en NutritionFacts.org.</string>
+    <string name="daily_nutriyeast_text">Dos cucharaditas de levadura de panadería, de cerveza o nutricional contienen aproximadamente la cantidad de glucanos beta 1,3/1,6 correcta que, en ensayos clínicos aleatorizados, doble ciegos y con grupo de control, ha demostrado facilitar la pérdida de peso.</string>
+    <string name="daily_cumin_text">Las mujeres con sobrepeso aleatorizadas a echarle media cucharadita de comino a sus almuerzos y cenas superaron al grupo de control, ya que perdieron casi 2 kg más y 2,5 cm extra en la cintura. También existe evidencia para apoyar el uso del azafrán, pero una pizca al día costaría un dólar, mientras que una cucharadita de comino cuesta menos de diez centavos.</string>
+    <string name="daily_greentea_text">Bebe tres tazas al día entre comidas, esperando al menos una hora después de comer, para no interferir con la absorción del hierro. Durante las comidas, bebe agua, café solo o infusión de hibisco (mezclado 6:1 con hierba luisa), pero nunca excedas tres tazas de líquido por hora (tenlo en cuenta para mi sección sobre empezar con agua). Aprovecha los efectos de la cafeína y bebe el té verde mientras comes algo saludable que querrías que te gustase más, para crear una asociación positiva, pero ten ojo y no consumas mucha cafeína en las 6 horas antes de irte a dormir. Lo mejor es tomar el té sin ningún tipo de edulcorante, pero, si le sueles echar miel o azúcar, prueba el jarabe de yacón.</string>
+    <string name="daily_hydrate_text">Puedes marcar esta casilla si tu orina nunca pasa del amarillo pálido.\n\nTen en cuenta que, si consumes alimentos fortificados con riboflavina (como la levadura nutricional), no deberías seguir esta premisa del color y debes centrarte en obtener nueve tazas de líquido sin edulcorar al día para las mujeres o trece tazas al día para hombres (esas 9 tazas podrían cubrirse con el consumo de té verde y agua).\n\nSi tienes problemas cardiacos o renales, no aumentes la ingesta de líquidos sin antes hablar con tu médico.\n\nNo olvides que, aunque los refrescos light no tengan calorías, no son inocuos, como explico en la sección del libro sobre los azúcares añadidos.</string>
     <string name="daily_deflourdiet_text">Puedes marcar esta casilla en los días en los que tus raciones de cereales integrales sean en forma de cereales intactos. La pulverización de los cereales, aunque sean cereales 100% integrales, priva a nuestro microbioma del almidón que, de otro modo, llegaría a nuestro colon rodeado de paredes celulares intactas.</string>
     <string name="daily_frontload_text">Consumir más calorías al principio del día es mejor para el metabolismo, así que haz que tu desayuno (idealmente) o tu almuerzo sean la comida más grande del día.</string>
     <string name="daily_timerestrict_text">Limita tu horario de comidas a un periodo diario de tu elección que no supere las doce horas y que puedas cumplir de manera habitual, es decir, los siete días de la semana. Dados los beneficios para el reloj circadiano de la reducción en la ingesta de alimentos por la noche, deberías dejar de comer antes de las 7 P.M.</string>
-    <string name="exercise_timing_text">La recomendación de la Docena Diaria para una mayor longevidad son 90 minutos de actividad física moderada, que también resulta ser la duración óptima para perder peso. Cualquier momento es bueno y, cuanto más, mejor, pero podría ser mejor hacer ejercicio en ayunas, al menos seis horas después de tu última comida. En general, esto se traduce en antes del desayuno, pero, si lo planeas bien, podrías hacer ejercicio al mediodía antes de un almuerzo tardío o, si comes temprano, pues antes de la cena. Esto sería para los no diabéticos. Los diabéticos y prediabéticos deberían empezar a hacer ejercicio treinta minutos después del comienzo de una comida e idealmente durante por lo menos una hora, para alcanzar el pico de azúcar en sangre. Si tuvieras que elegir una sola comida para hacer ejercicio después esta, lo mejor sería la cena, debido a que el ritmo circadiano del control del azúcar en sangre va disminuyendo durante el día. Sin embargo, como lo mejor es que el desayuno sea la comida más grande del día, deberías hacer ejercicio después de desayunar; o, mejor aún, después de cada comida.</string>
+    <string name="exercise_timing_text">La recomendación de la Docena Diaria para obtener una mayor longevidad son 90 minutos de actividad física moderada, que también resulta ser la duración óptima para perder peso. Cualquier momento es bueno y, cuanto más, mejor, pero podría ser mejor hacer ejercicio en ayunas, al menos seis horas después de tu última comida. En general, esto se traduce en antes del desayuno, pero, si lo planeas bien, podrías hacer ejercicio al mediodía antes de un almuerzo tardío o, si comes temprano, pues antes de la cena. Esto sería para los no diabéticos. Los diabéticos y prediabéticos deberían empezar a hacer ejercicio treinta minutos después del comienzo de una comida e idealmente durante por lo menos una hora, para alcanzar el pico de azúcar en sangre. Si tuvieras que elegir una sola comida para hacer ejercicio después esta, lo mejor sería la cena, debido a que el ritmo circadiano del control del azúcar en sangre va disminuyendo durante el día. Sin embargo, como lo mejor es que el desayuno sea la comida más grande del día, deberías hacer ejercicio después de desayunar; o, mejor aún, después de cada comida.</string>
     <string name="weigh_twice_text">Se suele pensar que pesarse de manera habitual es un método crucial para el control del peso a largo plazo, pero no existen suficientes pruebas para respaldar esta frecuencia. Mi recomendación se basa en un estudio que encontró que dos veces al día, al despertarte y justo antes de acostarte, parece ser mejor que una vez al día (con una diferencia de entre 1 y 3 kg en doce semanas).</string>
     <string name="complete_intentions_text">Cada dos meses, crea tres metas nuevas, al estilo de “si X, entonces Y”, para comportarte de cierta manera en situaciones específicas. Intenta marcar las tres casillas todos los días.</string>
     <string name="nightly_fast_text">Debido a la influencia de los ritmos circadianos, lo que comes por la noche engorda más que si comieras eso mismo pero más temprano en el día, así que intenta ayunar todas las noches durante al menos doce horas a partir de las 7 P.M. Cuantas menos calorías consumas después de que se ponga el sol, mejor.</string>
@@ -156,17 +156,17 @@
     <string name="nightly_trendelenburg_text">Prueba a estar al menos cuatro horas cada noche con el cuerpo inclinado seis grados. Para conseguirlo, debes elevar los postes del pie de la cama unos 20 centímetros. Ten mucho cuidado al levantarte, ya que esta postura causa intolerancia ortostática para casi todo el mundo, aunque seas joven y estés saludable, así que, si te levantas demasiado rápido, puedes marearte, desmayarte o incluso caerte y hacerte daño. Por lo tanto, levántate lentamente. Beber dos tazas de agua fría treinta minutos antes de levantarte también podría ayudar a prevenir este efecto secundario potencialmente peligroso.\n\n* IMPORTANTE: no intentes esto en casa si tienes problemas cardiacos o pulmonares, reflujo ácido, problemas cerebrales (como traumatismo craneal) u oculares (incluso un historial familiar de glaucoma lo descalifica). Si tienes cualquier duda, no lo intentes sin preguntarle a tu médico antes.*</string>
     <string name="faq_adapt_question">La Docena Diaria es mucha comida/muy poca comida para mí. ¿Puedo adaptarla?</string>
     <string name="faq_adapt_response">Claro, la Docena Diaria es una guía de los alimentos que deberíamos intentar consumir a diario, pero no es un plan de comidas y no es prescriptiva. Intenta comer una variedad de alimentos vegetales integrales y adapta las cantidades de la Docena a las que funcionen para ti.</string>
-    <string name="faq_age_question">¿Se puede adaptar para niños y adolescentes? </string>
+    <string name="faq_age_question">¿Se puede adaptar para niños y adolescentes?</string>
     <string name="faq_age_response.0">Los niños y los adolescentes tienen necesidades calóricas que van cambiando según crecen. Esto ocurre para ayudarles a crecer y desarrollarse correctamente en cada etapa de su vida.</string>
-    <string name="faq_age_response.1">La Docena Diaria se diseñó para utilizarla como una guía de cómo incluir los alimentos más sanos en tu rutina diaria. Aunque se puede usar el mismo esquema para la mayoría de personas, la cantidad de comida cambia según un montón de factores, como la edad o el nivel de actividad física. Como no podemos proporcionar consejo médico o nutricional sobre niños en crecimiento, la Docena solo puede ser una guía para escoger cómo dar de comer a tu hijo. Aconsejamos hablar con un profesional de la nutrición para determinar necesidades concretas. </string>
+    <string name="faq_age_response.1">La Docena Diaria se diseñó para utilizarla como una guía de cómo incluir los alimentos más sanos en tu rutina diaria. Aunque se puede usar el mismo esquema para la mayoría de personas, la cantidad de comida cambia según un montón de factores, como la edad o el nivel de actividad física. Como no podemos proporcionar consejo médico o nutricional sobre niños en crecimiento, la Docena solo puede ser una guía para escoger cómo dar de comer a tu hijo. Aconsejamos hablar con un profesional de la nutrición para determinar necesidades concretas.</string>
     <string name="faq_calories_question">¿Cuántas calorías tiene la Docena Diaria?</string>
-    <string name="faq_calories_response.0">La Docena Diaria aporta una media de 1200 calorías, pero, debido a la gran variedad de alimentos de cada categoría, puede estar entre 800 y 1800 calorías. Piensa en la categoría de Otras verduras: una taza de pimientos tiene una densidad calórica mucho menor que una taza de batata cocida, así que el rango de calorías depende de los alimentos que ingieras. Es lo bueno de la Docena Diaria, que no son reglas estrictas, sino que se puede adaptar a tus necesidades. </string>
-    <string name="faq_calories_response.1">Si quieres perder peso, puedes encontrar más información en “Comer para no engordar” y sus 21 potenciadores. En “Comer para no engordar”, explico: “Una revisión sistemática de las estrategias exitosas de pérdida de peso concluyó que, debido a que el metabolismo se ralentiza y tu apetito aumenta cuando pierdes peso, para poder perder bastante peso, quizá debas reducir tu consumo calórico a incluso 1200 calorías al día para las mujeres y 1500 calorías al día para los hombres”. </string>
+    <string name="faq_calories_response.0">La Docena Diaria aporta una media de 1200 calorías, pero, debido a la gran variedad de alimentos de cada categoría, puede estar entre 800 y 1800 calorías. Piensa en la categoría de Otras verduras: una taza de pimientos tiene una densidad calórica mucho menor que una taza de batata cocida, así que el rango de calorías depende de los alimentos que ingieras. Es lo bueno de la Docena Diaria, que no son reglas estrictas, sino que se puede adaptar a tus necesidades.</string>
+    <string name="faq_calories_response.1">Si quieres perder peso, puedes encontrar más información en Comer para no engordar y sus 21 potenciadores. En Comer para no engordar, explico: “Una revisión sistemática de las estrategias exitosas de pérdida de peso concluyó que, debido a que el metabolismo se ralentiza y tu apetito aumenta cuando pierdes peso, para poder perder bastante peso, quizá debas reducir tu consumo calórico a incluso 1200 calorías al día para las mujeres y 1500 calorías al día para los hombres”.</string>
     <string name="faq_calories_response.2">Al mismo tiempo, si quieres ganar peso, quizá te interese enfocarte en añadir más alimentos densos en calorías, como las batatas, los aguacates, los frutos secos y los productos de soja.</string>
     <string name="faq_mother_question">¿Puedo comer así si estoy embarazada o dando el pecho?</string>
-    <string name="faq_mother_response">Las personas embarazadas o que están dando el pecho tienen unas necesidades calóricas y nutricionales diferentes. Como recordatorio, la Docena Diaria no es un plan de comidas y no debería ser lo único que comes en un día. Una persona embarazada o dando el pecho debe consultar con su profesional de la salud o nutricionista sobre cómo alcanzar sus necesidades calóricas y nutricionales. </string>
+    <string name="faq_mother_response">Las personas embarazadas o que están dando el pecho tienen unas necesidades calóricas y nutricionales diferentes. Como recordatorio, la Docena Diaria no es un plan de comidas y no debería ser lo único que comes en un día. Una persona embarazada o dando el pecho debe consultar con su profesional de la salud o nutricionista sobre cómo alcanzar sus necesidades calóricas y nutricionales.</string>
     <string name="faq_scaling_question">¡Me resulta imposible comer tantas legumbres/cereales/etc.!</string>
-    <string name="faq_scaling_response">¡No pasa nada! La Docena Diaria es una guía, una meta a la que aspirar. Haz tu mejor esfuerzo para incorporar todos los alimentos sanos que puedas. Si no sueles comer muchas legumbres (o cereales, u hojas verdes), quizá necesites empezar a incrementar la ingesta poco a poco para que tu microbioma se acostumbre. También te animo a tener creatividad: por ejemplo, puedes poner unos frijoles en tu avena de desayuno. Si la llenas de frutos rojos, linaza y frutos secos, no te darás cuenta. También puedes aplastarlos para añadirlos a un sándwich, hacer hummus, o hacer la mezcla [CALC](https://nutritionfacts.org/es/recipe/calc-basico) (centeno, avena en grano, lentejas negras y cebada) que uso como base en muchas comidas, ya que es una manera sencilla de añadir una variedad de cereales a tu dieta, y ya incluye una legumbre también. </string>
+    <string name="faq_scaling_response">¡No pasa nada! La Docena Diaria es una guía, una meta a la que aspirar. Haz tu mejor esfuerzo para incorporar todos los alimentos sanos que puedas. Si no sueles comer muchas legumbres (o cereales, u hojas verdes), quizá necesites empezar a incrementar la ingesta poco a poco para que tu microbioma se acostumbre. También te animo a tener creatividad: por ejemplo, puedes poner unos frijoles en tu avena de desayuno. Si la llenas de frutos rojos, linaza y frutos secos, no te darás cuenta. También puedes aplastarlos para añadirlos a un sándwich, hacer hummus, o hacer la mezcla [CALC](https://nutritionfacts.org/es/recipe/calc-basico) (centeno, avena en grano, lentejas negras y cebada) que uso como base en muchas comidas, ya que es una manera sencilla de añadir una variedad de cereales a tu dieta, y ya incluye una legumbre también.</string>
     <string name="faq_supplements_question">Creía que el Dr. Greger recomendaba tomar suplementos de vitamina D y DHA. ¿Por qué no aparecen?</string>
     <string name="faq_supplements_response">Hemos actualizado la aplicación de la Docena Diaria para que solo incluya los suplementos obligatorios. Por ejemplo, la suplementación con vitamina D solo es necesaria para quienes no reciben suficiente exposición al sol. Nuestra meta es compartir la ciencia contigo para que tomes tus propias decisiones informadas. Puedes ver todas mis recomendaciones en la página de [Recomendaciones para una nutrición óptima](https://nutritionfacts.org/es/recomendaciones-para-una-nutricion-optima/).</string>
     <string name="faq_title">Preguntas frecuentes</string>
@@ -465,21 +465,21 @@
     </string-array>
     <string-array name="food_info_serving_sizes_berries_imperial">
         <item>½ taza frescos o congelados</item>
-        <item>¼ taza secos</item>
+        <item>¼ taza deshidratados</item>
     </string-array>
     <string-array name="food_info_serving_sizes_berries_metric">
         <item>70 g frescos o congelados</item>
-        <item>40 g secos</item>
+        <item>40 g deshidratados</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_imperial">
         <item>1 fruta de tamaño medio</item>
         <item>1 taza de fruta picada</item>
-        <item>¼ taza de fruta seca</item>
+        <item>¼ taza de fruta deshidratada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_fruits_metric">
         <item>1 fruta de tamaño medio</item>
         <item>150 g de fruta picada</item>
-        <item>40 g de fruta seca</item>
+        <item>40 g de fruta deshidratada</item>
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_imperial">
         <item>½ taza de verduras de hoja cocinadas</item>
@@ -490,8 +490,8 @@
     </string-array>
     <string-array name="food_info_serving_sizes_cruciferous_vegetables_metric">
         <item>90 g de verduras de hoja cocinadas</item>
-        <item>60 g de verduras crudas o cocinadas (no de hoja)</item>
-        <item>90 g verduras de hoja crudas</item>
+        <item>90 g de verduras crudas o cocinadas (no de hoja)</item>
+        <item>60 g verduras de hoja crudas</item>
         <item>20 g de brotes de brócoli</item>
         <item>1 cucharada de rábano picante</item>
     </string-array>
@@ -505,15 +505,15 @@
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_imperial">
         <item>1 taza de verduras de hoja crudas</item>
-        <item>½ taza de verduras sin hoja crudas o cocidas</item>
+        <item>½ taza de verduras crudas o cocidas (no de hoja)</item>
         <item>½ taza de jugo de verduras</item>
-        <item>¼ taza de champiñones secos</item>
+        <item>¼ taza de champiñones deshidratados</item>
     </string-array>
     <string-array name="food_info_serving_sizes_other_vegetables_metric">
         <item>60 g de verduras de hoja crudas</item>
         <item>90 g de verduras crudas o cocinadas (no de hoja)</item>
         <item>120 ml de jugo de verduras</item>
-        <item>10 g de hongos secos</item>
+        <item>10 g de champiñones deshidratados</item>
     </string-array>
     <string-array name="food_info_serving_sizes_flaxseeds_imperial">
         <item>1 cucharada molida</item>
@@ -539,7 +539,7 @@
     </string-array>
     <string-array name="food_info_serving_sizes_whole_grains_imperial">
         <item>½ taza de cereales integrales cocidos, pasta de trigo integral o granos de maíz</item>
-        <item>1 taza de cereales integrales fríos </item>
+        <item>1 taza de cereales integrales fríos</item>
         <item>1 tortilla 100% integral (o 2 tortillas pequeñas de maíz)</item>
         <item>1 rebanada de pan 100% integral</item>
         <item>½ bagel o English muffin</item>
