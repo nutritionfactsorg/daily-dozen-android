@@ -73,8 +73,12 @@ public class TweakServingsHistoryActivity extends DailyDozenActivity
             alreadyLoadingData = true;
 
             binding.dailyServingsChart.setVisibility(View.GONE);
-            binding.dailyServingsLoadingLabel.setVisibility(View.VISIBLE);
-            binding.dailyServingsLoading.setVisibility(View.VISIBLE);
+            if (binding.dailyServingsLoadingLabel != null) {
+                binding.dailyServingsLoadingLabel.setVisibility(View.VISIBLE);
+            }
+            if (binding.dailyServingsLoading != null) {
+                binding.dailyServingsLoading.setVisibility(View.VISIBLE);
+            }
 
             LoadHistoryTaskParams loadHistoryTaskParams = new LoadHistoryTaskParams(
                     HistoryType.Tweaks,
@@ -103,8 +107,12 @@ public class TweakServingsHistoryActivity extends DailyDozenActivity
             return;
         }
 
-        binding.dailyServingsLoadingLabel.setVisibility(View.GONE);
-        binding.dailyServingsLoading.setVisibility(View.GONE);
+        if (binding.dailyServingsLoadingLabel != null) {
+            binding.dailyServingsLoadingLabel.setVisibility(View.GONE);
+        }
+        if (binding.dailyServingsLoading != null) {
+            binding.dailyServingsLoading.setVisibility(View.GONE);
+        }
         binding.dailyServingsChart.setVisibility(View.VISIBLE);
 
         binding.dailyServingsChart.setData(chartData);
