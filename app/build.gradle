@@ -38,7 +38,7 @@ android {
         compileSdk 35
         targetSdkVersion 35
         vectorDrawables.useSupportLibrary = true
-        versionCode 92
+        versionCode 93
         versionName "28"
     }
     buildTypes {
