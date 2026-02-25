@@ -39,8 +39,10 @@ import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Locale;
 
 import timber.log.Timber;
 
@@ -56,6 +58,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     private boolean alreadyHandledRestoreIntent;
 
     private boolean inDailyDozenMode = true;
+    private File backupFile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -273,7 +276,8 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     private void backup() {
         if (!DDServings.isEmpty()) {
             if (PermissionController.canWriteExternalStorage(this)) {
-                new TaskRunner().executeAsync(new BackupTask(this, getBackupFile()));
+                backupFile = createBackupFile();
+                new TaskRunner().executeAsync(new BackupTask(this, backupFile));
             } else {
                 PermissionController.askForWriteExternalStorage(this);
             }
@@ -315,7 +319,16 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     }
 
     public File getBackupFile() {
-        return new File(getFilesDir(), "dailydozen_backup.json");
+        if (backupFile == null) {
+            backupFile = createBackupFile();
+        }
+        return backupFile;
+    }
+
+    private File createBackupFile() {
+        final String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US)
+                .format(new Date());
+        return new File(getFilesDir(), "dailydozen_backup_" + timestamp + ".json");
     }
 
     private void shareBackupFile() {

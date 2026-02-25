@@ -45,10 +45,10 @@
 
                 <data
                     android:mimeType="text/csv"
-                    android:pathPattern="dailydozen_backup_\\.csv"/>
+                    android:pathPattern=".*dailydozen_backup.*\\.csv"/>
                 <data
                     android:mimeType="application/json"
-                    android:pathPattern="dailydozen_backup_\\.json"/>
+                    android:pathPattern=".*dailydozen_backup.*\\.json"/>
             </intent-filter>
         </activity>
 
