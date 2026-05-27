@@ -118,7 +118,13 @@ public class DailyReminderSettingsActivity extends DailyDozenActivity implements
     public void onDailyReminderSwitchToggled() {
         binding.dailyReminderSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                initUpdateReminderPrefConfig();
+                if (PermissionController.canPostNotifications(this)) {
+                    initUpdateReminderPrefConfig();
+                } else if (PermissionController.isPostNotificationsPermissionRequired()) {
+                    postNotificationsLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+                } else {
+                    disableUpdateReminderPref();
+                }
             } else {
                 disableUpdateReminderPref();
             }
