@@ -1,13 +1,33 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.Material3.Light">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Compact checkboxes for horizontal serving rows (M3 defaults add 48dp touch targets). -->
+    <style name="ThemeOverlay.ServingCheckBox" parent="">
+        <item name="checkboxStyle">@style/Widget.ServingCheckBox</item>
+    </style>
+
+    <style name="Widget.ServingCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:background">@null</item>
     </style>
 
     <style name="Widget.CardContent" parent="android:Widget">
@@ -31,12 +51,12 @@
 
     <style name="PrimaryText">
         <item name="android:textColor">@color/colorPrimaryText</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
     </style>
 
     <style name="SecondaryText">
         <item name="android:textColor">@color/colorSecondaryText</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
     </style>
 
     <style name="TimeRangeSelector">
@@ -55,7 +75,7 @@
     </style>
 
     <style name="TimeRangeSelector.Selected">
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
     </style>
 
 </resources>

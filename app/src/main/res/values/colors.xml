@@ -3,6 +3,11 @@
     <color name="colorPrimaryDark">#388E3C</color>
     <color name="colorPrimary">#4CAF50</color>
     <color name="colorAccent">#FF5252</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimaryContainer">#388E3C</color>
+    <color name="colorOnPrimaryContainer">#FFFFFF</color>
+    <color name="colorSecondary">#FF5252</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#727272</color>
     <color name="colorDividerColor">#B6B6B6</color>

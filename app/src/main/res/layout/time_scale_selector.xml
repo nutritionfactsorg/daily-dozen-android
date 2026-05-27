@@ -5,7 +5,7 @@
     android:orientation="horizontal">
 
     <TextView
-        style="@style/TextAppearance.AppCompat.Title"
+        style="@style/TextAppearance.Material3.TitleMedium"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
