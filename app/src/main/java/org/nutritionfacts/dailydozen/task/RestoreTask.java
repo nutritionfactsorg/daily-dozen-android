@@ -116,9 +116,8 @@ public class RestoreTask extends BaseTask<Boolean> {
 
     @Override
     public void setDataAfterLoading(Boolean success) {
-        progressListener.hideProgressBar();
-
         Bus.restoreCompleteEvent(success);
+        progressListener.hideProgressBar();
     }
 
     private void deleteAllExistingData() {

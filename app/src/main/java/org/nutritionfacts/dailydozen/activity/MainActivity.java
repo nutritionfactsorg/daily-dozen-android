@@ -21,7 +21,6 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.adapter.DatePagerAdapter;
 import org.nutritionfacts.dailydozen.controller.Bus;
-import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.databinding.ActivityMainBinding;
 import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
@@ -46,6 +45,8 @@ import timber.log.Timber;
 
 public class MainActivity extends DailyDozenActivity implements ProgressListener {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
+    private static final String RESTORE_IN_PROGRESS = "restore_in_progress";
+    private static final String RESTORE_CONFIRM_DIALOG_SHOWN = "restore_confirm_dialog_shown";
 
     private ActivityMainBinding binding;
 
@@ -54,6 +55,8 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     private int daysSinceEpoch;
 
     private boolean alreadyHandledRestoreIntent;
+    private boolean restoreInProgress;
+    private boolean restoreConfirmDialogShown;
 
     private boolean inDailyDozenMode = true;
 
@@ -62,6 +65,12 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        if (savedInstanceState != null) {
+            alreadyHandledRestoreIntent = savedInstanceState.getBoolean(ALREADY_HANDLED_RESTORE_INTENT);
+            restoreInProgress = savedInstanceState.getBoolean(RESTORE_IN_PROGRESS);
+            restoreConfirmDialogShown = savedInstanceState.getBoolean(RESTORE_CONFIRM_DIALOG_SHOWN);
+        }
 
         initDatePager();
 
@@ -126,21 +135,29 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putBoolean(ALREADY_HANDLED_RESTORE_INTENT, alreadyHandledRestoreIntent);
+        outState.putBoolean(RESTORE_IN_PROGRESS, restoreInProgress);
+        outState.putBoolean(RESTORE_CONFIRM_DIALOG_SHOWN, restoreConfirmDialogShown);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         alreadyHandledRestoreIntent = savedInstanceState.getBoolean(ALREADY_HANDLED_RESTORE_INTENT);
+        restoreInProgress = savedInstanceState.getBoolean(RESTORE_IN_PROGRESS);
+        restoreConfirmDialogShown = savedInstanceState.getBoolean(RESTORE_CONFIRM_DIALOG_SHOWN);
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        setIntent(intent);
 
-        alreadyHandledRestoreIntent = false;
-
-        checkIfOpenedForRestore(intent);
+        if (isRestoreIntent(intent)) {
+            alreadyHandledRestoreIntent = false;
+            restoreInProgress = false;
+            restoreConfirmDialogShown = false;
+            checkIfOpenedForRestore(intent);
+        }
     }
 
     @Override
@@ -259,58 +276,62 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         binding.datePager.setCurrentItem(origDate != 0 ? origDate : daysSinceEpoch, false);
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (PermissionController.grantedWriteExternalStorage(requestCode, grantResults)) {
-            backup();
-        } else {
-            Common.showToast(this, R.string.permission_needed_to_write_storage);
-        }
-    }
-
     private void backup() {
         if (!DDServings.isEmpty()) {
-            if (PermissionController.canWriteExternalStorage(this)) {
-                new TaskRunner().executeAsync(new BackupTask(this, getBackupFile()));
-            } else {
-                PermissionController.askForWriteExternalStorage(this);
-            }
+            new TaskRunner().executeAsync(new BackupTask(this, getBackupFile()));
         } else {
             Common.showToast(this, R.string.no_servings_recorded);
         }
     }
 
     private void checkIfOpenedForRestore(final Intent intent) {
-        if (intent == null || alreadyHandledRestoreIntent) {
+        if (intent == null || !isRestoreIntent(intent) || alreadyHandledRestoreIntent || restoreInProgress) {
             return;
         }
 
         final Uri restoreFileUri = intent.getData();
 
-        if (restoreFileUri != null) {
-            // FIXME: 2/20/16 this should only be set to true if the RestoreTask returns true (did not fail and was not cancelled)
-            alreadyHandledRestoreIntent = true;
-
-            if (!DDServings.isEmpty()) {
-                new AlertDialog.Builder(this)
-                        .setTitle(R.string.restore_confirm_title)
-                        .setMessage(R.string.restore_confirm_message)
-                        .setPositiveButton(R.string.yes, (dialog, which) -> {
-                            restore(restoreFileUri);
-                            dialog.dismiss();
-                        })
-                        .setNegativeButton(R.string.no, (dialog, which) -> dialog.dismiss())
-                        .create()
-                        .show();
-            } else {
-                restore(restoreFileUri);
+        if (!DDServings.isEmpty()) {
+            if (restoreConfirmDialogShown) {
+                return;
             }
+
+            restoreConfirmDialogShown = true;
+
+            new AlertDialog.Builder(this)
+                    .setTitle(R.string.restore_confirm_title)
+                    .setMessage(R.string.restore_confirm_message)
+                    .setPositiveButton(R.string.yes, (dialog, which) -> {
+                        restore(restoreFileUri);
+                        dialog.dismiss();
+                    })
+                    .setNegativeButton(R.string.no, (dialog, which) -> {
+                        alreadyHandledRestoreIntent = true;
+                        clearRestoreIntent();
+                        dialog.dismiss();
+                    })
+                    .create()
+                    .show();
+        } else {
+            restore(restoreFileUri);
+        }
+    }
+
+    private static boolean isRestoreIntent(final Intent intent) {
+        return Intent.ACTION_VIEW.equals(intent.getAction()) && intent.getData() != null;
+    }
+
+    private void clearRestoreIntent() {
+        final Intent intent = getIntent();
+        if (intent != null && intent.getData() != null) {
+            intent.setData(null);
+            intent.setAction(Intent.ACTION_MAIN);
+            setIntent(intent);
         }
     }
 
     private void restore(final Uri restoreFileUri) {
+        restoreInProgress = true;
         new TaskRunner().executeAsync(new RestoreTask(this, restoreFileUri, getContentResolver()));
     }
 
@@ -350,11 +371,19 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
     @Subscribe
     public void onEvent(RestoreCompleteEvent event) {
-        Common.showToast(this, event.isSuccess() ? R.string.restore_success : R.string.restore_failed);
+        restoreInProgress = false;
 
         if (event.isSuccess()) {
+            alreadyHandledRestoreIntent = true;
+            restoreConfirmDialogShown = false;
+            clearRestoreIntent();
             initDatePager();
+        } else {
+            alreadyHandledRestoreIntent = false;
+            restoreConfirmDialogShown = false;
         }
+
+        Common.showToast(this, event.isSuccess() ? R.string.restore_success : R.string.restore_failed);
     }
 
     @Subscribe
