@@ -21,6 +21,7 @@ import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.TweakInfoActivity;
 import org.nutritionfacts.dailydozen.activity.TweakServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.WeightHistoryActivity;
+import org.nutritionfacts.dailydozen.activity.DateSelectionHost;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -174,8 +175,10 @@ public class Common {
     }
 
     private static void startSelectableDateActivity(final Context context, final Intent intent) {
-        if (context instanceof Activity) {
-            ((Activity) context).startActivityForResult(intent, Args.SELECTABLE_DATE_REQUEST);
+        if (context instanceof DateSelectionHost) {
+            ((DateSelectionHost) context).launchForDateSelection(intent);
+        } else if (context instanceof Activity) {
+            context.startActivity(intent);
         }
     }
 

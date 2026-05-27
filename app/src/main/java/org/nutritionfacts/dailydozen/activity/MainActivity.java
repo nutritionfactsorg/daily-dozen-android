@@ -9,9 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.FileProvider;
+import androidx.core.content.IntentCompat;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -43,7 +46,7 @@ import java.util.Date;
 
 import timber.log.Timber;
 
-public class MainActivity extends DailyDozenActivity implements ProgressListener {
+public class MainActivity extends DailyDozenActivity implements ProgressListener, DateSelectionHost {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
     private static final String RESTORE_IN_PROGRESS = "restore_in_progress";
     private static final String RESTORE_CONFIRM_DIALOG_SHOWN = "restore_confirm_dialog_shown";
@@ -60,11 +63,28 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
     private boolean inDailyDozenMode = true;
 
+    private ActivityResultLauncher<Intent> dateSelectionLauncher;
+    private ActivityResultLauncher<Intent> debugSettingsLauncher;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        dateSelectionLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    final Intent data = result.getData();
+                    if (data != null && data.hasExtra(Args.DATE)) {
+                        final Date date = IntentCompat.getSerializableExtra(data, Args.DATE, Date.class);
+                        setDatePagerDate(DateUtil.convertToLocalDate(date));
+                    }
+                });
+
+        debugSettingsLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> initDatePager());
 
         if (savedInstanceState != null) {
             alreadyHandledRestoreIntent = savedInstanceState.getBoolean(ALREADY_HANDLED_RESTORE_INTENT);
@@ -240,27 +260,15 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
             startActivity(new Intent(this, AboutActivity.class));
             return true;
         } else if (itemId == R.id.menu_debug) {
-            startActivityForResult(new Intent(this, DebugActivity.class), Args.DEBUG_SETTINGS_REQUEST);
+            debugSettingsLauncher.launch(new Intent(this, DebugActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        switch (requestCode) {
-            case Args.DEBUG_SETTINGS_REQUEST:
-                // Always refresh the data shown when returning from the Debug Activity
-                initDatePager();
-                break;
-            case Args.SELECTABLE_DATE_REQUEST:
-                if (data != null && data.hasExtra(Args.DATE)) {
-                    setDatePagerDate(DateUtil.convertToLocalDate((Date) data.getSerializableExtra(Args.DATE)));
-                }
-                break;
-        }
+    public void launchForDateSelection(Intent intent) {
+        dateSelectionLauncher.launch(intent);
     }
 
     private void initDatePager() {
