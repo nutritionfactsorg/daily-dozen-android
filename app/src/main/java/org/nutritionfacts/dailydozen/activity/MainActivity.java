@@ -2,6 +2,7 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,9 +14,12 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.core.content.FileProvider;
 import androidx.core.content.IntentCompat;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.google.android.material.color.MaterialColors;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
@@ -54,6 +58,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     private ActivityMainBinding binding;
 
     private MenuItem menuToggleModes;
+    private MenuItem menuToggleNightMode;
 
     private int daysSinceEpoch;
 
@@ -184,10 +189,15 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
 
+        if (menu instanceof MenuBuilder) {
+            ((MenuBuilder) menu).setOptionalIconsVisible(true);
+        }
+
         // Only show the debug menu option if the apk is a debug build
         menu.findItem(R.id.menu_debug).setVisible(BuildConfig.DEBUG);
 
         menuToggleModes = menu.findItem(R.id.menu_toggle_modes);
+        menuToggleNightMode = menu.findItem(R.id.menu_toggle_night_mode);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -196,6 +206,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     public boolean onPrepareOptionsMenu(Menu menu) {
         toggleTweaksMenuItemVisibility();
         updateAppModeToggle();
+        updateNightModeToggleIcon();
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -215,6 +226,17 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         }
     }
 
+    private void updateNightModeToggleIcon() {
+        if (menuToggleNightMode == null) {
+            return;
+        }
+
+        final boolean dark = Prefs.getInstance(this).isDarkMode();
+        menuToggleNightMode.setIcon(dark ? R.drawable.ic_light_mode : R.drawable.ic_dark_mode);
+        menuToggleNightMode.setIconTintList(ColorStateList.valueOf(MaterialColors.getColor(
+                this, com.google.android.material.R.attr.colorOnSurface, 0)));
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
@@ -222,6 +244,10 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
             inDailyDozenMode = !inDailyDozenMode;
             updateAppModeToggle();
             initDatePager();
+            return true;
+        } else if (itemId == R.id.menu_toggle_night_mode) {
+            Prefs.getInstance(this).toggleDarkMode(this);
+            recreate();
             return true;
         } else if (itemId == R.id.menu_latest_videos) {
             Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);

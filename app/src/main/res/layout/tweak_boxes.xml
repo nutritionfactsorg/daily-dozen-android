@@ -32,7 +32,7 @@
 
         <com.joanzapata.iconify.widget.IconTextView
             android:id="@+id/tweak_name"
-            android:textColor="@color/colorPrimaryText"
+            android:textColor="?attr/colorOnSurface"
             android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
             android:gravity="start|center_vertical"
             android:layout_width="wrap_content"

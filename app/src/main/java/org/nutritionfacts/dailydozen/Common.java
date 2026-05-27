@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.material.color.MaterialColors;
+
 import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
 import org.nutritionfacts.dailydozen.activity.HistoryActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
@@ -117,7 +119,10 @@ public class Common {
 
     @ColorInt
     public static int getListItemColorForPosition(final Context context, final int position) {
-        return ContextCompat.getColor(context, position % 2 == 0 ? android.R.color.white : R.color.gray_light);
+        final int colorAttr = position % 2 == 0
+                ? com.google.android.material.R.attr.colorSurface
+                : com.google.android.material.R.attr.colorSurfaceContainerLow;
+        return MaterialColors.getColor(context, colorAttr, 0);
     }
 
     private static Intent createFoodIntent(final Context context, final Class<? extends AppCompatActivity> klass, final Food food) {

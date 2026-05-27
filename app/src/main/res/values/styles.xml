@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.Material3.Light">
+    <style name="AppTheme.Impl" parent="Theme.Material3.DayNight">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
@@ -9,9 +9,36 @@
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorOnSecondary">@color/colorOnSecondary</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
         <item name="android:navigationBarColor">@android:color/black</item>
         <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="actionBarStyle">@style/Widget.AppTheme.ActionBar</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.AppTheme.ActionBar</item>
+        <item name="toolbarStyle">@style/Widget.AppTheme.Toolbar</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Impl" />
+
+    <style name="Widget.AppTheme.ActionBar" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="background">@color/colorPrimary</item>
+        <item name="titleTextStyle">@style/TextAppearance.AppTheme.ActionBar.Title</item>
+    </style>
+
+    <style name="Widget.AppTheme.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="titleTextColor">@color/colorOnPrimary</item>
+        <item name="subtitleTextColor">@color/colorOnPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.AppTheme.ActionBar</item>
+    </style>
+
+    <style name="ThemeOverlay.AppTheme.ActionBar" parent="ThemeOverlay.Material3.Dark.ActionBar">
+        <item name="colorControlNormal">@color/colorOnPrimary</item>
+        <item name="android:textColorPrimary">@color/colorOnPrimary</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.ActionBar.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/colorOnPrimary</item>
     </style>
 
     <!-- Compact checkboxes for horizontal serving rows (M3 defaults add 48dp touch targets). -->
@@ -50,12 +77,12 @@
     </style>
 
     <style name="PrimaryText">
-        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
     </style>
 
     <style name="SecondaryText">
-        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
     </style>
 
