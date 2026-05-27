@@ -5,8 +5,12 @@ buildscript {
     }
 }
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
+
+def isPlayBuild = gradle.startParameter.taskNames.any { it.toLowerCase().contains('play') }
+if (isPlayBuild) {
+    apply plugin: 'com.google.gms.google-services'
+    apply plugin: 'com.google.firebase.crashlytics'
+}
 
 repositories {
     mavenCentral()
@@ -65,8 +69,8 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.firebase:firebase-analytics:23.0.0'
-    implementation 'com.google.firebase:firebase-crashlytics:20.0.3'
+    playStoreImplementation 'com.google.firebase:firebase-analytics:23.0.0'
+    playStoreImplementation 'com.google.firebase:firebase-crashlytics:20.0.3'
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.viewpager2:viewpager2:1.1.0'
