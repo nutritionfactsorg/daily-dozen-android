@@ -19,7 +19,6 @@ repositories {
 
 configurations {
     playStoreImplementation
-    fdroidStoreImplementation
 }
 
 android {
