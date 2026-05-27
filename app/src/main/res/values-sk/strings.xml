@@ -29,7 +29,6 @@
     <string name="donate">Darovať</string>
     <string name="subscribe">Predplatiť si</string>
     <string name="open_source">Open Source</string>
-    <string name="permission_needed_to_write_storage">Nie je možné vykonať zálohu bez oprávnenia na zápis do pamäte</string>
     <string name="backup_failed">Zálohovanie zlyhalo</string>
     <string name="restore_failed">Obnova zlyhala</string>
     <string name="backup_success">Zálohovanie bolo úspešné</string>

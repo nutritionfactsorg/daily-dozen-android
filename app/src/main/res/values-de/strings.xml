@@ -29,7 +29,6 @@
     <string name="donate">Spenden Sie</string>
     <string name="subscribe">Abonnieren</string>
     <string name="open_source">Open Source</string>
-    <string name="permission_needed_to_write_storage">Sicherung nicht möglich, da keine Schreibberechtigung für den Speicher vorliegt</string>
     <string name="backup_failed">Sicherung fehlgeschlagen</string>
     <string name="restore_failed">Wiederherstellen fehlgeschlagen</string>
     <string name="backup_success">Sicherung erfolgreich</string>

@@ -29,7 +29,6 @@
     <string name="donate">حمایتِ مالی</string>
     <string name="subscribe">مشترک شدن</string>
     <string name="open_source">منبع‌باز</string>
-    <string name="permission_needed_to_write_storage">بدون اجازۀ ذخیرۀ اطلاعات بر روی حافظه، نمی‌توان از داده‌هایتان پشتیبان‌گیری کرد</string>
     <string name="backup_failed">عملیاتِ پشتیبان‌گیری با شکست مواجه شد.</string>
     <string name="restore_failed">بازیابی با شکست مواجه شد</string>
     <string name="backup_success">پشتیبان‌گیری با موفقیت انجام شد</string>

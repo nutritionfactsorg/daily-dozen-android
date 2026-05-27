@@ -29,7 +29,6 @@
     <string name="donate">תירמו</string>
     <string name="subscribe">הירשמו</string>
     <string name="open_source">מקור פתוח</string>
-    <string name="permission_needed_to_write_storage">לא ניתן לגבות ללא הרשאה לכתיבה לאחסון</string>
     <string name="backup_failed">הגיבוי נכשל</string>
     <string name="restore_failed">שחזור נכשל</string>
     <string name="backup_success">הגיבוי הצליח</string>

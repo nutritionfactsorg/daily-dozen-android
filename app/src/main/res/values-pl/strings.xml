@@ -29,7 +29,6 @@
     <string name="donate">Donacja</string>
     <string name="subscribe">Subskrybuj</string>
     <string name="open_source">Open Source</string>
-    <string name="permission_needed_to_write_storage">Nie można wykonać kopii zapasowej bez zgody na zapis w pamięci urządzenia.</string>
     <string name="backup_failed">Kopia zapasowa nie utworzona</string>
     <string name="restore_failed">Przywracanie kopii nieudane</string>
     <string name="backup_success">Kopia zapasowa utworzona</string>

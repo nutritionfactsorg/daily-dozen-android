@@ -29,7 +29,6 @@
     <string name="donate">捐款</string>
     <string name="subscribe">订阅</string>
     <string name="open_source">开放资源</string>
-    <string name="permission_needed_to_write_storage">不具权限，无法备份至记忆体</string>
     <string name="backup_failed">备份失败</string>
     <string name="restore_failed">还原失败</string>
     <string name="backup_success">备份成功</string>

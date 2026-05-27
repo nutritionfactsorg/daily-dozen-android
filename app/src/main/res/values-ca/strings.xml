@@ -29,7 +29,6 @@
     <string name="donate">Donacions</string>
     <string name="subscribe">Subscriu-te</string>
     <string name="open_source">Codi Obert</string>
-    <string name="permission_needed_to_write_storage">No podem fer una còpia de seguretat sense permís per accedir a l\'emmagatzematge</string>
     <string name="backup_failed">La còpia de seguretat ha fallat</string>
     <string name="restore_failed">La recuperació ha fallat</string>
     <string name="backup_success">Còpia de seguretat feta amb èxit</string>

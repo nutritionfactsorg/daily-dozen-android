@@ -29,7 +29,6 @@
     <string name="donate">Зробити пожертву</string>
     <string name="subscribe">Підписатись</string>
     <string name="open_source">Відкрите програмне забезпечення</string>
-    <string name="permission_needed_to_write_storage">Неможливо створити резервну копію без дозволу на запис у сховище</string>
     <string name="backup_failed">Помилка резервного копіювання</string>
     <string name="restore_failed">Збій відновлення з резервної копії</string>
     <string name="backup_success">Резервна копія була створена успішно</string>

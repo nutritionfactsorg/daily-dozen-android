@@ -29,7 +29,6 @@
     <string name="donate">Doar</string>
     <string name="subscribe">Subscreva</string>
     <string name="open_source">Código Aberto</string>
-    <string name="permission_needed_to_write_storage">Não é possível criar uma cópia de segurança sem permissão de escrita no armazenamento</string>
     <string name="backup_failed">Falha na cópia de segurança</string>
     <string name="restore_failed">Falha na restauração</string>
     <string name="backup_success">Cópia de segurança realizada com sucesso</string>
