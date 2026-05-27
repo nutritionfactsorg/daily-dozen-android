@@ -138,8 +138,7 @@
         </activity>
 
         <receiver
-            android:name=".receiver.AlarmReceiver"
-            android:process=":remote"/>
+            android:name=".receiver.AlarmReceiver"/>
 
         <receiver android:name=".receiver.DeviceBootReceiver" android:exported="true">
             <intent-filter>
