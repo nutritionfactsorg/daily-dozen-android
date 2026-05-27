@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.text.TextUtils;
 
 import androidx.core.app.NotificationCompat;
@@ -85,6 +86,11 @@ public class NotificationUtil {
         if (pref != null) {
             final AlarmManager alarmManager = getAlarmManager(context);
 
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && !alarmManager.canScheduleExactAlarms()) {
+                Timber.w("Cannot schedule exact alarms; permission not granted");
+                return;
+            }
+
             final PendingIntent alarmPendingIntent = getAlarmPendingIntent(context, pref);
 
             alarmManager.cancel(alarmPendingIntent);
@@ -92,7 +98,23 @@ public class NotificationUtil {
             final long alarmTimeInMillis = pref.getNextAlarmTimeInMillis(context);
             Timber.d("setAlarmForUpdateReminderNotification: %s", alarmTimeInMillis);
 
-            alarmManager.set(AlarmManager.RTC_WAKEUP, alarmTimeInMillis, alarmPendingIntent);
+            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, alarmTimeInMillis, alarmPendingIntent);
+        }
+    }
+
+    public static boolean canScheduleExactAlarms(final Context context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            return getAlarmManager(context).canScheduleExactAlarms();
+        }
+        return true;
+    }
+
+    public static void openExactAlarmSettings(final Context context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            final Intent intent = new Intent(android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+            intent.setData(android.net.Uri.parse("package:" + context.getPackageName()));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
         }
     }
 

@@ -93,6 +93,10 @@ public class DailyReminderSettingsActivity extends DailyDozenActivity implements
     private void setUpdateReminder() {
         Prefs.getInstance(this).setUpdateReminderPref(updateReminderPref);
 
+        if (!NotificationUtil.canScheduleExactAlarms(this)) {
+            NotificationUtil.openExactAlarmSettings(this);
+        }
+
         NotificationUtil.setAlarmForUpdateReminderNotification(this, updateReminderPref);
     }
 
