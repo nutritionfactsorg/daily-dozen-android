@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.SystemBarStyle;
@@ -13,9 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -45,7 +42,6 @@ public class DailyDozenActivity extends AppCompatActivity {
     private void setupToolbar(MaterialToolbar toolbar, boolean showUpNavigation) {
         setSupportActionBar(toolbar);
         applyStatusBarInsets(toolbar);
-        configureLightModeWindow();
 
         final ActionBar actionBar = getSupportActionBar();
         if (actionBar != null && getTitle() != null) {
@@ -130,23 +126,6 @@ public class DailyDozenActivity extends AppCompatActivity {
                 this,
                 SystemBarStyle.dark(statusBarScrim),
                 SystemBarStyle.light(lightScrim, darkScrim));
-    }
-
-    private void configureLightModeWindow() {
-        if (Prefs.getInstance(this).isDarkMode()) {
-            return;
-        }
-
-        final int primary = ContextCompat.getColor(this, R.color.colorPrimary);
-        final Window window = getWindow();
-        window.setStatusBarColor(primary);
-
-        final WindowInsetsControllerCompat controller =
-                WindowCompat.getInsetsController(window, window.getDecorView());
-        if (controller != null) {
-            controller.setAppearanceLightStatusBars(false);
-            controller.setAppearanceLightNavigationBars(true);
-        }
     }
 
     private void applyWindowInsetsToContentRoot(View root) {
