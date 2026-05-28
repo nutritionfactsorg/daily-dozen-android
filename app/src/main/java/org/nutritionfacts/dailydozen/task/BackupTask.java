@@ -55,7 +55,7 @@ public class BackupTask extends BaseTask<Boolean> {
                 fileWriter.write(getDayJsonLine(allDays.get(i)));
                 fileWriter.write(System.lineSeparator());
 
-                progressListener.updateProgressBar(i + 1, numDays);
+                TaskRunner.updateProgress(progressListener, i + 1, numDays);
             }
 
             fileWriter.close();

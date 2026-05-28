@@ -52,7 +52,7 @@ public class GenerateDataTask extends BaseTask<Boolean> {
                 createUserDataForDay(allFoods, allTweaks, current);
             }
 
-            progressListener.updateProgressBar(++i, numDays);
+            TaskRunner.updateProgress(progressListener, ++i, numDays);
 
             current = current.plusDays(1);
         }

@@ -449,10 +449,8 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
     @Override
     public void updateProgressBar(int current, int total) {
-        runOnUiThread(() -> {
-            binding.progressBar.setProgress(current);
-            binding.progressBar.setMax(total);
-        });
+        binding.progressBar.setProgress(current);
+        binding.progressBar.setMax(total);
     }
 
     @Override

@@ -85,12 +85,12 @@ public class RestoreTask extends BaseTask<Boolean> {
                             do {
                                 line = reader.readLine();
                                 restoreLineCSV(headers, line);
-                                progressListener.updateProgressBar(++i, numLines);
+                                TaskRunner.updateProgress(progressListener, ++i, numLines);
                             } while (line != null);
                         } else {
                             while (line != null) {
                                 restoreLineJSON(line);
-                                progressListener.updateProgressBar(++i, numLines);
+                                TaskRunner.updateProgress(progressListener, ++i, numLines);
                                 line = reader.readLine();
                             }
                         }

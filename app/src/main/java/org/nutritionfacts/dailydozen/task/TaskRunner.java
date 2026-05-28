@@ -21,6 +21,10 @@ public class TaskRunner {
         return INSTANCE;
     }
 
+    public static void updateProgress(ProgressListener listener, int current, int total) {
+        getInstance().handler.post(() -> listener.updateProgressBar(current, total));
+    }
+
     public <R> void executeAsync(CustomCallable<R> callable) {
         try {
             callable.setUiForLoading();

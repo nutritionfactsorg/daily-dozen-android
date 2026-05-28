@@ -65,7 +65,7 @@ public class CalculateStreaksTask extends BaseTask<Boolean> {
                 ActiveAndroid.endTransaction();
             }
 
-            progressListener.updateProgressBar(i + 1, numFoods);
+            TaskRunner.updateProgress(progressListener, i + 1, numFoods);
         }
 
         return true;
@@ -95,7 +95,7 @@ public class CalculateStreaksTask extends BaseTask<Boolean> {
                 ActiveAndroid.endTransaction();
             }
 
-            progressListener.updateProgressBar(i + 1, numTweaks);
+            TaskRunner.updateProgress(progressListener, i + 1, numTweaks);
         }
 
         return true;

@@ -69,6 +69,10 @@ public class WeightHistoryActivity extends DailyDozenActivity implements OnChart
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
 
+            binding.dailyServingsChart.setVisibility(View.GONE);
+            binding.dailyServingsLoadingLabel.setVisibility(View.VISIBLE);
+            binding.dailyServingsLoading.setVisibility(View.VISIBLE);
+
             LoadHistoryTaskParams loadHistoryTaskParams = new LoadHistoryTaskParams(
                     HistoryType.Weights,
                     TimeScale.DAYS,
@@ -91,6 +95,8 @@ public class WeightHistoryActivity extends DailyDozenActivity implements OnChart
             return;
         }
 
+        binding.dailyServingsLoadingLabel.setVisibility(View.GONE);
+        binding.dailyServingsLoading.setVisibility(View.GONE);
         binding.dailyServingsChart.setVisibility(View.VISIBLE);
 
         binding.dailyServingsChart.setData(chartData);

@@ -6,11 +6,6 @@ if (isPlayBuild) {
     apply plugin: 'com.google.firebase.crashlytics'
 }
 
-repositories {
-    mavenCentral()
-    maven { url "https://jitpack.io" }
-}
-
 android {
     androidResources {
         generateLocaleConfig = true
@@ -28,8 +23,7 @@ android {
         minSdkVersion 26
         multiDexEnabled true
         compileSdk 35
-        targetSdkVersion 35
-        vectorDrawables.useSupportLibrary = true
+        targetSdk 35
         versionCode 93
         versionName "28"
     }
