@@ -1,9 +1,3 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        google()
-    }
-}
 apply plugin: 'com.android.application'
 
 def isPlayBuild = gradle.startParameter.taskNames.any { it.toLowerCase().contains('play') }
