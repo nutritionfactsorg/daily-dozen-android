@@ -2,9 +2,6 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
-
-import androidx.appcompat.app.ActionBar;
 
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -26,29 +23,11 @@ public abstract class InfoActivity extends DailyDozenActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initActionBar();
-
         loadFoodOrTweakFromIntent();
 
         if (food == null && tweak == null) {
             finish();
         }
-    }
-
-    private void initActionBar() {
-        final ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setHomeButtonEnabled(true);
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     private void loadFoodOrTweakFromIntent() {

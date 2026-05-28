@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <org.nutritionfacts.dailydozen.widget.DateHeader
@@ -24,7 +24,8 @@
         <androidx.core.widget.NestedScrollView
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            android:clipToPadding="false">
 
             <LinearLayout
                 android:id="@+id/date_food_servings"

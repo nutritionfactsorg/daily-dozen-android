@@ -16,10 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.core.content.FileProvider;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.IntentCompat;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-
-import com.google.android.material.color.MaterialColors;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.nutritionfacts.dailydozen.Args;
@@ -233,8 +232,8 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
         final boolean dark = Prefs.getInstance(this).isDarkMode();
         menuToggleNightMode.setIcon(dark ? R.drawable.ic_light_mode : R.drawable.ic_dark_mode);
-        menuToggleNightMode.setIconTintList(ColorStateList.valueOf(MaterialColors.getColor(
-                this, com.google.android.material.R.attr.colorOnSurface, 0)));
+        menuToggleNightMode.setIconTintList(ColorStateList.valueOf(
+                ContextCompat.getColor(this, R.color.colorOnPrimary)));
     }
 
     @Override

@@ -17,6 +17,7 @@ public class FaqActivity extends DailyDozenActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityFaqBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         init();
     }
 

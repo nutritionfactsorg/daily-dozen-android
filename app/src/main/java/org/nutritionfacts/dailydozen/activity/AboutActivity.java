@@ -5,11 +5,8 @@ import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-
-import androidx.appcompat.app.ActionBar;
 
 import org.nutritionfacts.dailydozen.BuildConfig;
 import org.nutritionfacts.dailydozen.Common;
@@ -25,28 +22,10 @@ public class AboutActivity extends DailyDozenActivity {
         binding = ActivityAboutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        initActionBar();
-
         initHeader();
 
         initLinksInWelcome();
         initLinksInText();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void initActionBar() {
-        final ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
     }
 
     private void initHeader() {

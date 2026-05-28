@@ -34,6 +34,7 @@ public class DebugActivity extends DailyDozenActivity implements AdapterView.OnI
         super.onCreate(savedInstanceState);
         binding = ActivityDebugBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        setTitle(R.string.debug);
 
         postNotificationsLauncher = registerForActivityResult(
                 new ActivityResultContracts.RequestPermission(),
