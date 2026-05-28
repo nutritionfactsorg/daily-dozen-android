@@ -62,7 +62,7 @@ public class BackupTask extends BaseTask<Boolean> {
 
             Timber.d("backup file successfully written");
         } catch (IOException e) {
-            e.printStackTrace();
+            Timber.e(e, "backup failed");
             return false;
         }
 

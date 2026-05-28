@@ -6,6 +6,8 @@ import android.os.Looper;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
+import timber.log.Timber;
+
 public class TaskRunner {
     private final Handler handler = new Handler(Looper.getMainLooper());
     private final Executor executor = Executors.newCachedThreadPool();
@@ -15,7 +17,7 @@ public class TaskRunner {
             callable.setUiForLoading();
             executor.execute(new RunnableTask<>(handler, callable));
         } catch (Exception e) {
-            e.printStackTrace();
+            Timber.e(e, "executeAsync failed");
         }
     }
 
@@ -34,7 +36,7 @@ public class TaskRunner {
                 final R result = callable.call();
                 handler.post(new RunnableTaskForHandler<>(callable, result));
             } catch (Exception e) {
-                e.printStackTrace();
+                Timber.e(e, "background task failed");
             }
         }
     }

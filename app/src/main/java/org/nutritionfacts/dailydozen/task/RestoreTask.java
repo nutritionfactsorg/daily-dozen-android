@@ -103,7 +103,7 @@ public class RestoreTask extends BaseTask<Boolean> {
                 return true;
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Timber.e(e, "restore failed");
         }
 
         return false;
