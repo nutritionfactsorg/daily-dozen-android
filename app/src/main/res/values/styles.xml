@@ -22,7 +22,7 @@
         <item name="android:minHeight">?attr/actionBarSize</item>
         <item name="titleTextColor">@color/colorOnPrimary</item>
         <item name="subtitleTextColor">@color/colorOnPrimary</item>
-        <item name="titleTextAppearance">@style/TextAppearance.AppTheme.ActionBar.Title</item>
+        <item name="titleTextAppearance">@style/TextAppearance.AppTheme.ToolbarTitle</item>
         <item name="android:theme">@style/ThemeOverlay.AppTheme.ActionBar</item>
         <item name="popupTheme">@style/ThemeOverlay.AppTheme.ToolbarPopup</item>
     </style>
@@ -36,7 +36,7 @@
         <item name="android:textColorPrimary">@color/colorOnPrimary</item>
     </style>
 
-    <style name="TextAppearance.AppTheme.ActionBar.Title" parent="TextAppearance.Material3.TitleLarge">
+    <style name="TextAppearance.AppTheme.ToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:textColor">@color/colorOnPrimary</item>
     </style>
 
