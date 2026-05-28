@@ -2,8 +2,6 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.data.Entry;
@@ -25,8 +23,7 @@ import org.nutritionfacts.dailydozen.task.LoadHistoryTask;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 
-public class TweakServingsHistoryActivity extends DailyDozenActivity
-        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener {
+public class TweakServingsHistoryActivity extends DailyDozenActivity implements OnChartValueSelectedListener {
     private ActivityServingsHistoryBinding binding;
 
     private boolean alreadyLoadingData;
@@ -73,12 +70,8 @@ public class TweakServingsHistoryActivity extends DailyDozenActivity
             alreadyLoadingData = true;
 
             binding.dailyServingsChart.setVisibility(View.GONE);
-            if (binding.dailyServingsLoadingLabel != null) {
-                binding.dailyServingsLoadingLabel.setVisibility(View.VISIBLE);
-            }
-            if (binding.dailyServingsLoading != null) {
-                binding.dailyServingsLoading.setVisibility(View.VISIBLE);
-            }
+            binding.dailyServingsLoadingLabel.setVisibility(View.VISIBLE);
+            binding.dailyServingsLoading.setVisibility(View.VISIBLE);
 
             LoadHistoryTaskParams loadHistoryTaskParams = new LoadHistoryTaskParams(
                     HistoryType.Tweaks,
@@ -107,12 +100,8 @@ public class TweakServingsHistoryActivity extends DailyDozenActivity
             return;
         }
 
-        if (binding.dailyServingsLoadingLabel != null) {
-            binding.dailyServingsLoadingLabel.setVisibility(View.GONE);
-        }
-        if (binding.dailyServingsLoading != null) {
-            binding.dailyServingsLoading.setVisibility(View.GONE);
-        }
+        binding.dailyServingsLoadingLabel.setVisibility(View.GONE);
+        binding.dailyServingsLoading.setVisibility(View.GONE);
         binding.dailyServingsChart.setVisibility(View.VISIBLE);
 
         binding.dailyServingsChart.setData(chartData);
@@ -156,16 +145,6 @@ public class TweakServingsHistoryActivity extends DailyDozenActivity
         binding.dailyServingsChart.setHighlightPerTapEnabled(event.getTimeScale() == TimeScale.DAYS);
 
         alreadyLoadingData = false;
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        loadData();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
     }
 
     @Override

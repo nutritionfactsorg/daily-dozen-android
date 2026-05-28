@@ -60,7 +60,6 @@
                             android:layout_weight="1"
                             android:drawablePadding="5dp"
                             android:text="@string/servings_some"
-                            app:drawableLeftCompat="@drawable/legend_icon_less_than_recommended_servings"
                             app:drawableStartCompat="@drawable/legend_icon_less_than_recommended_servings" />
 
                         <TextView
@@ -69,7 +68,6 @@
                             android:layout_weight="1"
                             android:drawablePadding="5dp"
                             android:text="@string/servings_all"
-                            app:drawableLeftCompat="@drawable/legend_icon_recommended_servings"
                             app:drawableStartCompat="@drawable/legend_icon_recommended_servings" />
 
                     </LinearLayout>

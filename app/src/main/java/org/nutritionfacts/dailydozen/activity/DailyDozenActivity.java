@@ -38,7 +38,7 @@ public class DailyDozenActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    protected boolean shouldShowUpNavigation() {
+    private boolean shouldShowUpNavigation() {
         return !(this instanceof MainActivity);
     }
 
@@ -132,7 +132,7 @@ public class DailyDozenActivity extends AppCompatActivity {
                 SystemBarStyle.light(lightScrim, darkScrim));
     }
 
-    protected void configureLightModeWindow() {
+    private void configureLightModeWindow() {
         if (Prefs.getInstance(this).isDarkMode()) {
             return;
         }

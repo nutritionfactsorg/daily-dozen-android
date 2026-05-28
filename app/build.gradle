@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 
-def isPlayBuild = gradle.startParameter.taskNames.any { it.toLowerCase().contains('play') }
+def isPlayBuild = gradle.startParameter.taskNames.any { it.toLowerCase(Locale.ROOT).contains('play') }
 if (isPlayBuild) {
     apply plugin: 'com.google.gms.google-services'
     apply plugin: 'com.google.firebase.crashlytics'

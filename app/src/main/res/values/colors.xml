@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimaryDark">#388E3C</color>
     <color name="colorPrimary">#4CAF50</color>
     <color name="colorAccent">#FF5252</color>
     <color name="colorOnPrimary">#FFFFFF</color>
@@ -8,8 +7,6 @@
     <color name="colorOnPrimaryContainer">#FFFFFF</color>
     <color name="colorSecondary">#FF5252</color>
     <color name="colorOnSecondary">#FFFFFF</color>
-    <color name="colorPrimaryText">#212121</color>
-    <color name="colorSecondaryText">#727272</color>
     <color name="colorDividerColor">#B6B6B6</color>
     <color name="gray">#AAAAAA</color>
     <color name="gray_CCCCCC">#CCCCCC</color>

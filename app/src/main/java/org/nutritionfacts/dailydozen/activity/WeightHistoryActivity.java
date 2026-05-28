@@ -2,8 +2,6 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.data.Entry;
@@ -17,7 +15,6 @@ import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.databinding.ActivityServingsHistoryBinding;
 import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
-import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
@@ -25,8 +22,7 @@ import org.nutritionfacts.dailydozen.task.LoadWeightsHistoryTask;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
 
-public class WeightHistoryActivity extends DailyDozenActivity
-        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener {
+public class WeightHistoryActivity extends DailyDozenActivity implements OnChartValueSelectedListener {
     private ActivityServingsHistoryBinding binding;
 
     private boolean alreadyLoadingData;
@@ -88,11 +84,6 @@ public class WeightHistoryActivity extends DailyDozenActivity
     }
 
     @Subscribe
-    public void onEvent(TimeScaleSelectedEvent event) {
-        loadData();
-    }
-
-    @Subscribe
     public void onEvent(LoadHistoryCompleteEvent event) {
         final CombinedData chartData = event.getChartData();
         if (chartData == null) {
@@ -141,16 +132,6 @@ public class WeightHistoryActivity extends DailyDozenActivity
         binding.dailyServingsChart.setHighlightPerTapEnabled(event.getTimeScale() == TimeScale.DAYS);
 
         alreadyLoadingData = false;
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        loadData();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
     }
 
     @Override
