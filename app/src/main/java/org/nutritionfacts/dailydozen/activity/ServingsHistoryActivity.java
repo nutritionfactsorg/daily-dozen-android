@@ -78,7 +78,7 @@ public class ServingsHistoryActivity extends DailyDozenActivity implements OnCha
                     binding.dailyServingsHistoryTimeScale.getSelectedTimeScale(),
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
                     binding.dailyServingsHistoryTimeRange.getSelectedMonth());
-            new TaskRunner().executeAsync(new LoadHistoryTask(this, loadHistoryTaskParams));
+            TaskRunner.getInstance().executeAsync(new LoadHistoryTask(this, loadHistoryTaskParams));
         }
     }
 

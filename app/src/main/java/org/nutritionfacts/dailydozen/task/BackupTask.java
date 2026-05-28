@@ -76,9 +76,8 @@ public class BackupTask extends BaseTask<Boolean> {
 
     @Override
     public void setDataAfterLoading(Boolean success) {
-        progressListener.hideProgressBar();
-
         Bus.backupCompleteEvent(success);
+        progressListener.hideProgressBar();
     }
 
     private String getDayJsonLine(Day day) {

@@ -119,7 +119,7 @@
             android:grantUriPermissions="true"
             android:exported="false">
             <meta-data
-                android:name="androidx.core.FILE_PROVIDER_PATHS"
+                android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
 

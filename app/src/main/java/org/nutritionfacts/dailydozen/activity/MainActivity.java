@@ -126,7 +126,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
                         .setCancelable(false)
                         .setTitle(R.string.dialog_streaks_title)
                         .setMessage(R.string.dialog_streaks_message)
-                        .setPositiveButton(R.string.OK, (dialog, which) -> new TaskRunner().executeAsync(new CalculateStreaksTask(this)))
+                        .setPositiveButton(R.string.OK, (dialog, which) -> TaskRunner.getInstance().executeAsync(new CalculateStreaksTask(this)))
                         .create().show();
             }
         }
@@ -311,7 +311,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
     private void backup() {
         if (!DDServings.isEmpty()) {
-            new TaskRunner().executeAsync(new BackupTask(this, getBackupFile()));
+            TaskRunner.getInstance().executeAsync(new BackupTask(this, getBackupFile()));
         } else {
             Common.showToast(this, R.string.no_servings_recorded);
         }
@@ -365,7 +365,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
     private void restore(final Uri restoreFileUri) {
         restoreInProgress = true;
-        new TaskRunner().executeAsync(new RestoreTask(this, restoreFileUri, getContentResolver()));
+        TaskRunner.getInstance().executeAsync(new RestoreTask(this, restoreFileUri, getContentResolver()));
     }
 
     public File getBackupFile() {
@@ -380,6 +380,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
         try {
             final Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, backupFile.getName());
             shareIntent.putExtra(Intent.EXTRA_TEXT, backupInstructions);
             shareIntent.putExtra(Intent.EXTRA_STREAM, backupFileUri);
@@ -448,13 +449,14 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
     @Override
     public void updateProgressBar(int current, int total) {
-        binding.progressBar.setProgress(current);
-        binding.progressBar.setMax(total);
+        runOnUiThread(() -> {
+            binding.progressBar.setProgress(current);
+            binding.progressBar.setMax(total);
+        });
     }
 
     @Override
     public void hideProgressBar() {
         binding.progressBarContainer.setVisibility(View.GONE);
-        this.recreate();
     }
 }

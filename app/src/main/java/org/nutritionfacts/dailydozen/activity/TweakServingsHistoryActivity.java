@@ -78,7 +78,7 @@ public class TweakServingsHistoryActivity extends DailyDozenActivity implements 
                     binding.dailyServingsHistoryTimeScale.getSelectedTimeScale(),
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
                     binding.dailyServingsHistoryTimeRange.getSelectedMonth());
-            new TaskRunner().executeAsync(new LoadHistoryTask(this, loadHistoryTaskParams));
+            TaskRunner.getInstance().executeAsync(new LoadHistoryTask(this, loadHistoryTaskParams));
         }
     }
 

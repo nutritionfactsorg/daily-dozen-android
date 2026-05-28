@@ -74,7 +74,7 @@ public class WeightHistoryActivity extends DailyDozenActivity implements OnChart
                     TimeScale.DAYS,
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
                     binding.dailyServingsHistoryTimeRange.getSelectedMonth());
-            new TaskRunner().executeAsync(new LoadWeightsHistoryTask(this, loadHistoryTaskParams));
+            TaskRunner.getInstance().executeAsync(new LoadWeightsHistoryTask(this, loadHistoryTaskParams));
         }
     }
 

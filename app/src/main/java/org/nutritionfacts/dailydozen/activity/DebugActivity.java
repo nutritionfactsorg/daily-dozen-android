@@ -93,7 +93,7 @@ public class DebugActivity extends DailyDozenActivity implements AdapterView.OnI
                 .setPositiveButton(R.string.yes, (dialog, which) -> {
                     final GenerateDataTaskParams taskParams = new GenerateDataTaskParams(historyToGenerate, generateRandomData);
 
-                    new TaskRunner().executeAsync(new GenerateDataTask(this, taskParams));
+                    TaskRunner.getInstance().executeAsync(new GenerateDataTask(this, taskParams));
 
                     dialog.dismiss();
                 })

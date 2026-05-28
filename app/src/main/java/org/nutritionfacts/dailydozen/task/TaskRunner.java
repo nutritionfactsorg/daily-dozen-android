@@ -9,8 +9,17 @@ import java.util.concurrent.Executors;
 import timber.log.Timber;
 
 public class TaskRunner {
+    private static final TaskRunner INSTANCE = new TaskRunner();
+
     private final Handler handler = new Handler(Looper.getMainLooper());
     private final Executor executor = Executors.newCachedThreadPool();
+
+    private TaskRunner() {
+    }
+
+    public static TaskRunner getInstance() {
+        return INSTANCE;
+    }
 
     public <R> void executeAsync(CustomCallable<R> callable) {
         try {
