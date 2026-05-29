@@ -2,7 +2,6 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -16,7 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.core.content.FileProvider;
-import androidx.core.content.ContextCompat;
 import androidx.core.content.IntentCompat;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
@@ -42,6 +40,7 @@ import org.nutritionfacts.dailydozen.task.RestoreTask;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
+import com.google.android.material.appbar.MaterialToolbar;
 
 import java.io.File;
 import java.time.LocalDate;
@@ -57,7 +56,8 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     private ActivityMainBinding binding;
 
     private MenuItem menuToggleModes;
-    private MenuItem menuToggleNightMode;
+    private final MainOverflowMenu mainOverflowMenu = new MainOverflowMenu();
+    private boolean overflowMenuHooked;
 
     private int daysSinceEpoch;
 
@@ -101,6 +101,12 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         calculateStreaksAfterDatabaseUpgradeToV2();
 
         handleIntentIfNecessary();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mainOverflowMenu.dismiss();
+        super.onDestroy();
     }
 
     private void handleIntentIfNecessary() {
@@ -196,7 +202,6 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         menu.findItem(R.id.menu_debug).setVisible(BuildConfig.DEBUG);
 
         menuToggleModes = menu.findItem(R.id.menu_toggle_modes);
-        menuToggleNightMode = menu.findItem(R.id.menu_toggle_night_mode);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -205,7 +210,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     public boolean onPrepareOptionsMenu(Menu menu) {
         toggleTweaksMenuItemVisibility();
         updateAppModeToggle();
-        updateNightModeToggleIcon();
+        hookOverflowMenu();
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -225,15 +230,21 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         }
     }
 
-    private void updateNightModeToggleIcon() {
-        if (menuToggleNightMode == null) {
+    private void hookOverflowMenu() {
+        if (overflowMenuHooked) {
             return;
         }
 
-        final boolean dark = Prefs.getInstance(this).isDarkMode();
-        menuToggleNightMode.setIcon(dark ? R.drawable.ic_light_mode : R.drawable.ic_dark_mode);
-        menuToggleNightMode.setIconTintList(ColorStateList.valueOf(
-                ContextCompat.getColor(this, R.color.colorOnPrimary)));
+        final MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        if (toolbar == null) {
+            return;
+        }
+
+        mainOverflowMenu.hookOverflowButton(toolbar, itemId -> {
+            final MenuItem item = toolbar.getMenu().findItem(itemId);
+            return item != null && onOptionsItemSelected(item);
+        });
+        overflowMenuHooked = true;
     }
 
     @Override
@@ -243,10 +254,6 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
             inDailyDozenMode = !inDailyDozenMode;
             updateAppModeToggle();
             initDatePager();
-            return true;
-        } else if (itemId == R.id.menu_toggle_night_mode) {
-            Prefs.getInstance(this).toggleDarkMode(this);
-            recreate();
             return true;
         } else if (itemId == R.id.menu_latest_videos) {
             Common.openUrlInExternalBrowser(this, R.string.url_latest_videos);

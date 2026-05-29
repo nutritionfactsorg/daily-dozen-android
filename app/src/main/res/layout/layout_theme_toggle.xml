@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/theme_toggle_track"
+    android:layout_width="56dp"
+    android:layout_height="32dp"
+    android:background="@drawable/bg_theme_toggle_track"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/theme_toggle_moon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical|start"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_dark_mode"
+        app:tint="?attr/colorOnSurface" />
+
+    <ImageView
+        android:id="@+id/theme_toggle_sun"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical|end"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_light_mode"
+        app:tint="?attr/colorOnSurface" />
+
+    <ImageView
+        android:id="@+id/theme_toggle_thumb"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical|start"
+        android:background="@drawable/bg_theme_toggle_thumb"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no" />
+
+</FrameLayout>
