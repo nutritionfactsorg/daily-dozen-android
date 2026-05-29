@@ -69,7 +69,7 @@ public class DailyDozenActivity extends AppCompatActivity {
                 (v, windowInsets) -> {
                     Insets statusBars = windowInsets.getInsets(WindowInsetsCompat.Type.statusBars());
                     v.setPadding(v.getPaddingLeft(), statusBars.top, v.getPaddingRight(), v.getPaddingBottom());
-                    return windowInsets;
+                    return WindowInsetsCompat.CONSUMED;
                 });
         ViewCompat.requestApplyInsets(view);
     }

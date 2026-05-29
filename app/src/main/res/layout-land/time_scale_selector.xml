@@ -8,14 +8,19 @@
         style="@style/TextAppearance.Material3.TitleMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="16dp"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="@dimen/history_control_padding"
+        android:paddingTop="@dimen/history_control_padding"
+        android:paddingEnd="@dimen/history_control_padding"
+        android:paddingBottom="@dimen/history_control_padding"
         android:text="@string/time_scale"
         android:textColor="?attr/colorOnSurface" />
 
     <Spinner
         android:id="@+id/time_scale_spinner"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingEnd="@dimen/history_control_padding" />
 
 </LinearLayout>
