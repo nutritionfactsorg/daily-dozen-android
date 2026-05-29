@@ -14,6 +14,7 @@ import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
+import org.nutritionfacts.dailydozen.util.HistoryIconHelper;
 
 public class FoodServings extends LinearLayout {
     private Day day;
@@ -38,6 +39,7 @@ public class FoodServings extends LinearLayout {
 
     private void init(final Context context) {
         binding = FoodServingsBinding.inflate(LayoutInflater.from(context), this, true);
+        HistoryIconHelper.applyCalendarIcon(binding.foodHistory);
         onFoodNameClicked();
         onFoodHistoryClicked();
     }

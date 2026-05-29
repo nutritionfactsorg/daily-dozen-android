@@ -34,14 +34,20 @@
                         android:layout_height="wrap_content"
                         android:paddingBottom="5dp"
                         android:text="@string/history"
-                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textColor="?attr/colorOnSurface" />
 
                     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
                         android:id="@+id/calendarView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        app:mcv_dateTextAppearance="@style/TextAppearance.AppTheme.CalendarDate"
+                        app:mcv_headerTextAppearance="@style/TextAppearance.AppTheme.CalendarHeader"
+                        app:mcv_leftArrow="@drawable/ic_calendar_nav_previous"
+                        app:mcv_rightArrow="@drawable/ic_calendar_nav_next"
                         app:mcv_selectionColor="@color/green"
-                        app:mcv_showOtherDates="all" />
+                        app:mcv_showOtherDates="all"
+                        app:mcv_weekDayTextAppearance="@style/TextAppearance.AppTheme.CalendarWeekDay" />
 
                     <LinearLayout
                         android:id="@+id/calendar_legend"
@@ -60,6 +66,7 @@
                             android:layout_weight="1"
                             android:drawablePadding="5dp"
                             android:text="@string/servings_some"
+                            android:textColor="?attr/colorOnSurface"
                             app:drawableStartCompat="@drawable/legend_icon_less_than_recommended_servings" />
 
                         <TextView
@@ -68,6 +75,7 @@
                             android:layout_weight="1"
                             android:drawablePadding="5dp"
                             android:text="@string/servings_all"
+                            android:textColor="?attr/colorOnSurface"
                             app:drawableStartCompat="@drawable/legend_icon_recommended_servings" />
 
                     </LinearLayout>

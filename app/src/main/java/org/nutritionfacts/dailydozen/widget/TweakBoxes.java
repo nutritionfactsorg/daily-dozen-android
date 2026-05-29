@@ -14,6 +14,7 @@ import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.model.TweakServings;
+import org.nutritionfacts.dailydozen.util.HistoryIconHelper;
 
 public class TweakBoxes extends LinearLayout {
     private TweakBoxesBinding binding;
@@ -37,6 +38,7 @@ public class TweakBoxes extends LinearLayout {
 
     private void init(final Context context) {
         binding = TweakBoxesBinding.inflate(LayoutInflater.from(context), this, true);
+        HistoryIconHelper.applyCalendarIcon(binding.tweakHistory);
         onTweakNameClicked();
         onTweakHistoryClicked();
     }

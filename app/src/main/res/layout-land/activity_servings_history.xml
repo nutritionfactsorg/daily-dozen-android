@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/task_loading_servings_history_title"
+            android:textColor="?attr/colorOnSurface"
             android:visibility="gone" />
 
         <ProgressBar

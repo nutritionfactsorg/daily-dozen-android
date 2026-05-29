@@ -14,6 +14,7 @@ import org.nutritionfacts.dailydozen.databinding.HeaderDateBinding;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.TweakServings;
+import org.nutritionfacts.dailydozen.util.HistoryIconHelper;
 
 public class DateHeader extends LinearLayout {
     private HeaderDateBinding binding;
@@ -32,6 +33,7 @@ public class DateHeader extends LinearLayout {
 
     private void init(final Context context, AttributeSet attrs) {
         binding = HeaderDateBinding.inflate(LayoutInflater.from(context), this, true);
+        HistoryIconHelper.applyChartIcon(binding.dateHeaderChartIcon);
 
         onSubHeaderClicked();
         onStarLongClicked();

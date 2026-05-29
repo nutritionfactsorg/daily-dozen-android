@@ -21,6 +21,7 @@ import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadWeightsHistoryTask;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
+import org.nutritionfacts.dailydozen.util.HistoryChartHelper;
 
 public class WeightHistoryActivity extends DailyDozenActivity implements OnChartValueSelectedListener {
     private ActivityServingsHistoryBinding binding;
@@ -100,6 +101,7 @@ public class WeightHistoryActivity extends DailyDozenActivity implements OnChart
         binding.dailyServingsChart.setVisibility(View.VISIBLE);
 
         binding.dailyServingsChart.setData(chartData);
+        HistoryChartHelper.applyTheme(binding.dailyServingsChart, this);
 
         // Draw bars behind lines
         binding.dailyServingsChart.setDrawOrder(new CombinedChart.DrawOrder[]{

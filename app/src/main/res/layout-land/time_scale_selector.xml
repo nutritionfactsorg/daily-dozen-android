@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="16dp"
-        android:text="@string/time_scale" />
+        android:text="@string/time_scale"
+        android:textColor="?attr/colorOnSurface" />
 
     <Spinner
         android:id="@+id/time_scale_spinner"
