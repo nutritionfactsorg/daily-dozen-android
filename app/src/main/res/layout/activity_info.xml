@@ -56,20 +56,28 @@
                             android:id="@+id/change_units_container"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/units" />
+                                android:layout_marginEnd="@dimen/units_toggle_spacing"
+                                android:text="@string/units"
+                                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                                android:textColor="?attr/colorOnSurface" />
 
-                            <Button
+                            <com.google.android.material.button.MaterialButton
                                 android:id="@+id/change_units_button"
+                                style="@style/Widget.Material3.Button"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:minHeight="0dp"
-                                android:minWidth="0dp"
-                                android:text="@string/imperial" />
+                                android:minHeight="48dp"
+                                android:text="@string/imperial"
+                                android:textColor="@color/colorOnPrimary"
+                                app:backgroundTint="@color/colorPrimary" />
 
                         </LinearLayout>
 
