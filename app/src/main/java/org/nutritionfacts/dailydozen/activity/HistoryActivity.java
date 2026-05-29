@@ -1,22 +1,36 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewTreeObserver;
 
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;
 
 import org.nutritionfacts.dailydozen.Args;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
+import org.nutritionfacts.dailydozen.adapter.FoodServingsAdapter;
+import org.nutritionfacts.dailydozen.adapter.FoodTypeAdapter;
+import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.databinding.ActivityHistoryBinding;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
+import org.nutritionfacts.dailydozen.model.Food;
+import org.nutritionfacts.dailydozen.model.FoodInfo;
+import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.model.TweakServings;
+import org.nutritionfacts.dailydozen.model.enums.Units;
 import org.nutritionfacts.dailydozen.util.CalendarHistoryDecorator;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
@@ -53,7 +67,133 @@ public class HistoryActivity extends InfoActivity {
             partialServingsDates = (ArrayList<LocalDate>) savedInstanceState.getSerializable(Args.DATES_WITH_PARTIAL_SERVINGS);
         }
 
-        displayHistory();
+        if (getFood() != null) {
+            displayFoodInfo();
+            displayHistory();
+        } else if (getTweak() != null) {
+            displayTweakInfo();
+            displayHistory();
+        }
+
+        if (shouldScrollToHistory()) {
+            scrollToHistorySection();
+        }
+    }
+
+    private boolean shouldScrollToHistory() {
+        final Intent intent = getIntent();
+        return intent != null && intent.getBooleanExtra(Args.SCROLL_TO_HISTORY, false);
+    }
+
+    private void scrollToHistorySection() {
+        binding.historyScroll.getViewTreeObserver().addOnGlobalLayoutListener(
+                new ViewTreeObserver.OnGlobalLayoutListener() {
+                    private int layoutPasses;
+
+                    @Override
+                    public void onGlobalLayout() {
+                        binding.historyScroll.smoothScrollTo(0, binding.historySection.getTop());
+                        if (++layoutPasses >= 2) {
+                            binding.historyScroll.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                        }
+                    }
+                });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        if (getFood() != null) {
+            getMenuInflater().inflate(R.menu.food_info_menu, menu);
+        }
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.food_info_videos) {
+            openFoodVideosInBrowser();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void displayFoodInfo() {
+        binding.foodInfoSection.setVisibility(View.VISIBLE);
+        binding.tweakInfoSection.setVisibility(View.GONE);
+
+        final Food food = getFood();
+        if (food == null || TextUtils.isEmpty(food.getName())) {
+            return;
+        }
+
+        final String foodName = food.getName();
+
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Common.loadImage(this, binding.foodInfoImage, FoodInfo.getFoodImage(foodName));
+            binding.foodInfoImage.setVisibility(View.VISIBLE);
+        } else {
+            binding.foodInfoImage.setVisibility(View.GONE);
+        }
+
+        binding.changeUnitsButton.setOnClickListener(v -> {
+            Prefs.getInstance(v.getContext()).toggleUnitType();
+            initServingTypes(food);
+        });
+        initServingTypes(food);
+        initFoodTypes(foodName);
+
+        if (Common.EXERCISE.equalsIgnoreCase(food.getIdName())) {
+            binding.changeUnitsContainer.setVisibility(View.GONE);
+        }
+    }
+
+    private void initServingTypes(final Food food) {
+        final List<String> servingSizes = FoodInfo.getServingSizes(food.getIdName(),
+                Prefs.getInstance(this).getUnitTypePref());
+
+        binding.changeUnitsButton.setText(Prefs.getInstance(this).getUnitTypePref() == Units.IMPERIAL ?
+                R.string.imperial : R.string.metric);
+        binding.foodServingSizes.setAdapter(new FoodServingsAdapter(servingSizes));
+        binding.foodServingSizes.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+    }
+
+    private void initFoodTypes(String foodName) {
+        final List<String> foods = FoodInfo.getTypesOfFood(foodName);
+        final List<String> videos = FoodInfo.getFoodVideosLink(foodName);
+
+        binding.foodTypes.setAdapter(new FoodTypeAdapter(foods, videos));
+        binding.foodTypes.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+    }
+
+    private void openFoodVideosInBrowser() {
+        final Food food = getFood();
+        if (food != null && !TextUtils.isEmpty(food.getName())) {
+            Common.openUrlInExternalBrowser(this, FoodInfo.getFoodTypeVideosLink(food.getName()));
+        }
+    }
+
+    private void displayTweakInfo() {
+        binding.tweakInfoSection.setVisibility(View.VISIBLE);
+        binding.foodInfoSection.setVisibility(View.GONE);
+
+        setTitle(R.string.about_tweak);
+
+        final Tweak tweak = getTweak();
+        if (tweak == null || TextUtils.isEmpty(tweak.getName())) {
+            return;
+        }
+
+        final String tweakName = tweak.getName();
+
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Common.loadImage(this, binding.tweakInfoImage, FoodInfo.getTweakImage(tweakName));
+            binding.tweakInfoImage.setVisibility(View.VISIBLE);
+        } else {
+            binding.tweakInfoImage.setVisibility(View.GONE);
+        }
+
+        binding.tweakShort.setText(FoodInfo.getTweakShort(tweakName));
+        binding.tweakText.setText(FoodInfo.getTweakText(tweakName));
     }
 
     private void displayHistory() {

@@ -72,18 +72,8 @@
             android:parentActivityName=".activity.MainActivity"/>
 
         <activity
-            android:name=".activity.FoodInfoActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity"/>
-
-        <activity
             android:name=".activity.ServingsHistoryActivity"
             android:label="@string/daily_servings_history"
-            android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity"/>
-
-        <activity
-            android:name=".activity.TweakInfoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity"/>
 
