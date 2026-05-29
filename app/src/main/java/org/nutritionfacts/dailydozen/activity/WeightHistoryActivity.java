@@ -2,7 +2,6 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.highlight.Highlight;
@@ -100,44 +99,13 @@ public class WeightHistoryActivity extends DailyDozenActivity implements OnChart
         binding.dailyServingsLoading.setVisibility(View.GONE);
         binding.dailyServingsChart.setVisibility(View.VISIBLE);
 
-        binding.dailyServingsChart.setData(chartData);
-        HistoryChartHelper.applyTheme(binding.dailyServingsChart, this);
-
-        // Draw bars behind lines
-        binding.dailyServingsChart.setDrawOrder(new CombinedChart.DrawOrder[]{
-                CombinedChart.DrawOrder.BAR, CombinedChart.DrawOrder.LINE
-        });
-
-        binding.dailyServingsChart.setVisibleXRange(5, 10);
-
-        binding.dailyServingsChart.getXAxis().setDrawLabels(true);
-
-        // Without this line, MPAndroidChart v2.1.6 cuts off the tops of the X-axis date labels
-        binding.dailyServingsChart.setExtraTopOffset(4f);
-
-        // Start the chart with the latest day in view
-        binding.dailyServingsChart.moveViewToX(binding.dailyServingsChart.getXChartMax());
-
-        binding.dailyServingsChart.setDescription("");
-
-        // Prevents the value for each bar from drawing over the labels at the top
-        binding.dailyServingsChart.setDrawValueAboveBar(false);
-
-        binding.dailyServingsChart.getAxisRight().setEnabled(false);
-
-        binding.dailyServingsChart.getAxisLeft().setAxisMaxValue(event.getMaxVal() + 5);
-        binding.dailyServingsChart.getAxisLeft().setAxisMinValue(event.getMinVal() - 5);
-
-        // Disable all zooming and interacting with the chart
-        binding.dailyServingsChart.setScaleEnabled(false);
-        binding.dailyServingsChart.setPinchZoom(false);
-        binding.dailyServingsChart.setDoubleTapToZoomEnabled(false);
-        binding.dailyServingsChart.setHighlightPerDragEnabled(false);
-
-        binding.dailyServingsChart.setOnChartValueSelectedListener(this);
-
-        // Only enable jumping to dates if the user is viewing daily data
-        binding.dailyServingsChart.setHighlightPerTapEnabled(event.getTimeScale() == TimeScale.DAYS);
+        HistoryChartHelper.presentChartData(
+                binding.dailyServingsChart,
+                this,
+                chartData,
+                event.getTimeScale(),
+                HistoryChartHelper.dynamicWeightAxis(event.getMinVal(), event.getMaxVal()),
+                this);
 
         alreadyLoadingData = false;
     }

@@ -73,13 +73,6 @@
 
         <activity
             android:name=".activity.ServingsHistoryActivity"
-            android:label="@string/daily_servings_history"
-            android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity"/>
-
-        <activity
-            android:name=".activity.TweakServingsHistoryActivity"
-            android:label="@string/daily_tweaks_history"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity"/>
 

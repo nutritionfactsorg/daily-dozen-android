@@ -85,13 +85,13 @@ public class FoodServings extends LinearLayout {
     }
 
     public void onFoodNameClicked() {
-        binding.foodIcon.setOnClickListener(v -> Common.openFoodInfo(getContext(), food));
-        binding.foodName.setOnClickListener(v -> Common.openFoodInfo(getContext(), food));
+        binding.foodIcon.setOnClickListener(v -> Common.openFood(getContext(), food, false));
+        binding.foodName.setOnClickListener(v -> Common.openFood(getContext(), food, false));
     }
 
     public void onFoodHistoryClicked() {
-        binding.foodHistory.setOnClickListener(v -> Common.openFoodHistory(getContext(), food));
-        binding.foodStreak.setOnClickListener(v -> Common.openFoodHistory(getContext(), food));
+        binding.foodHistory.setOnClickListener(v -> Common.openFood(getContext(), food, true));
+        binding.foodStreak.setOnClickListener(v -> Common.openFood(getContext(), food, true));
     }
 
     private void initCheckboxes(DDServings servings) {

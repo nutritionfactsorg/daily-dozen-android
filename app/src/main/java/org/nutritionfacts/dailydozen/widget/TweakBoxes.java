@@ -102,13 +102,13 @@ public class TweakBoxes extends LinearLayout {
     }
 
     public void onTweakNameClicked() {
-        binding.tweakName.setOnClickListener(v -> Common.openTweakInfo(getContext(), tweak));
-        binding.tweakIcon.setOnClickListener(v -> Common.openTweakInfo(getContext(), tweak));
+        binding.tweakName.setOnClickListener(v -> Common.openTweak(getContext(), tweak, false));
+        binding.tweakIcon.setOnClickListener(v -> Common.openTweak(getContext(), tweak, false));
     }
 
     public void onTweakHistoryClicked() {
-        binding.tweakHistory.setOnClickListener(v -> Common.openTweakHistory(getContext(), tweak));
-        binding.tweakStreak.setOnClickListener(v -> Common.openTweakHistory(getContext(), tweak));
+        binding.tweakHistory.setOnClickListener(v -> Common.openTweak(getContext(), tweak, true));
+        binding.tweakStreak.setOnClickListener(v -> Common.openTweak(getContext(), tweak, true));
     }
 
     private void initCheckboxes(TweakServings servings) {
