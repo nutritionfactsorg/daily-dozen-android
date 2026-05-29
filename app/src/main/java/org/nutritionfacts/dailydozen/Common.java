@@ -17,7 +17,7 @@ import androidx.core.content.ContextCompat;
 
 import com.google.android.material.color.MaterialColors;
 
-import org.nutritionfacts.dailydozen.activity.HistoryActivity;
+import org.nutritionfacts.dailydozen.activity.InfoActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.TweakServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.WeightHistoryActivity;
@@ -145,12 +145,12 @@ public class Common {
         if (isSupplement(food)) {
             openUrlInExternalBrowser(context, FoodInfo.getFoodTypeVideosLink(food.getName()));
         } else {
-            startSelectableDateActivity(context, createFoodIntent(context, HistoryActivity.class, food));
+            startSelectableDateActivity(context, createFoodIntent(context, InfoActivity.class, food));
         }
     }
 
     public static void openTweakInfo(final Context context, final Tweak tweak) {
-        startSelectableDateActivity(context, createTweakIntent(context, HistoryActivity.class, tweak));
+        startSelectableDateActivity(context, createTweakIntent(context, InfoActivity.class, tweak));
     }
 
     public static boolean isSupplement(final Food food) {
@@ -158,13 +158,13 @@ public class Common {
     }
 
     public static void openFoodHistory(final Context context, final Food food) {
-        final Intent intent = createFoodIntent(context, HistoryActivity.class, food);
+        final Intent intent = createFoodIntent(context, InfoActivity.class, food);
         intent.putExtra(Args.SCROLL_TO_HISTORY, true);
         startSelectableDateActivity(context, intent);
     }
 
     public static void openTweakHistory(final Context context, final Tweak tweak) {
-        final Intent intent = createTweakIntent(context, HistoryActivity.class, tweak);
+        final Intent intent = createTweakIntent(context, InfoActivity.class, tweak);
         intent.putExtra(Args.SCROLL_TO_HISTORY, true);
         startSelectableDateActivity(context, intent);
     }

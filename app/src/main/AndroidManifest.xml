@@ -67,7 +67,7 @@
             android:parentActivityName=".activity.MainActivity"/>
 
         <activity
-            android:name=".activity.HistoryActivity"
+            android:name=".activity.InfoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activity.MainActivity"/>
 
