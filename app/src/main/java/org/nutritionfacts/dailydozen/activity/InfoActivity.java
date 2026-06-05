@@ -120,6 +120,10 @@ public class InfoActivity extends DailyDozenActivity {
     }
 
     private void scrollToHistorySection() {
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            return;
+        }
+
         binding.historyScroll.getViewTreeObserver().addOnGlobalLayoutListener(
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     private int layoutPasses;
