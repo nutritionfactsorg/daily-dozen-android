@@ -52,6 +52,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
     private static final String RESTORE_IN_PROGRESS = "restore_in_progress";
     private static final String RESTORE_CONFIRM_DIALOG_SHOWN = "restore_confirm_dialog_shown";
+    private static final String IN_DAILY_DOZEN_MODE = "in_daily_dozen_mode";
 
     private ActivityMainBinding binding;
 
@@ -94,6 +95,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
             alreadyHandledRestoreIntent = savedInstanceState.getBoolean(ALREADY_HANDLED_RESTORE_INTENT);
             restoreInProgress = savedInstanceState.getBoolean(RESTORE_IN_PROGRESS);
             restoreConfirmDialogShown = savedInstanceState.getBoolean(RESTORE_CONFIRM_DIALOG_SHOWN);
+            inDailyDozenMode = savedInstanceState.getBoolean(IN_DAILY_DOZEN_MODE, true);
         }
 
         initDatePager();
@@ -167,6 +169,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         outState.putBoolean(ALREADY_HANDLED_RESTORE_INTENT, alreadyHandledRestoreIntent);
         outState.putBoolean(RESTORE_IN_PROGRESS, restoreInProgress);
         outState.putBoolean(RESTORE_CONFIRM_DIALOG_SHOWN, restoreConfirmDialogShown);
+        outState.putBoolean(IN_DAILY_DOZEN_MODE, inDailyDozenMode);
     }
 
     @Override
@@ -215,6 +218,10 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     }
 
     private void updateAppModeToggle() {
+        if (menuToggleModes == null) {
+            return;
+        }
+
         if (inDailyDozenMode) {
             setTitle(R.string.app_name);
             menuToggleModes.setTitle(R.string.twenty_one_tweaks);
