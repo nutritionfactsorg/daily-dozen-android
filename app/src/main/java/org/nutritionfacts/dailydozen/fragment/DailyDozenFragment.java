@@ -24,8 +24,12 @@ import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
+import org.nutritionfacts.dailydozen.util.WideScreenLayout;
 import org.nutritionfacts.dailydozen.widget.FoodServings;
 import org.nutritionfacts.dailydozen.widget.SupplementDivider;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import timber.log.Timber;
 
@@ -74,6 +78,7 @@ public class DailyDozenFragment extends Fragment {
                 binding.dateServings.setServings(DDServings.getTotalServingsOnDate(day));
 
                 final Context context = getContext();
+                final List<View> foodRows = new ArrayList<>();
                 boolean addedSupplementDivider = false;
 
                 for (Food food : Food.getAllFoods()) {
@@ -81,14 +86,19 @@ public class DailyDozenFragment extends Fragment {
                     final boolean success = foodServings.setDateAndFood(day, food);
                     if (success) {
                         if (Common.isSupplement(food) && !addedSupplementDivider) {
-                            binding.dateFoodServings.addView(new SupplementDivider(context));
+                            foodRows.add(new SupplementDivider(context));
                             addedSupplementDivider = true;
                         }
-
-                        binding.dateFoodServings.addView(foodServings);
+                        foodRows.add(foodServings);
                         Bus.register(foodServings);
                     }
                 }
+
+                WideScreenLayout.distributeViews(
+                        binding.dateFoodServingsLeft,
+                        binding.dateFoodServingsRight,
+                        getResources(),
+                        foodRows);
             } catch (InvalidDateException e) {
                 Timber.e(e, "displayFormForDate: ");
             }
@@ -109,9 +119,8 @@ public class DailyDozenFragment extends Fragment {
 
         Bus.unregister(this);
 
-        for (int i = 0; i < binding.dateFoodServings.getChildCount(); i++) {
-            Bus.unregister(binding.dateFoodServings.getChildAt(i));
-        }
+        WideScreenLayout.unregisterBusInTree(binding.dateFoodServingsLeft);
+        WideScreenLayout.unregisterBusInTree(binding.dateFoodServingsRight);
     }
 
     @Subscribe
