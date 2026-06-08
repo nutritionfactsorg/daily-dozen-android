@@ -111,7 +111,6 @@ final class MainOverflowMenu {
         final ThemeToggleView toggle = content.findViewById(R.id.theme_toggle);
         final boolean dark = Prefs.getInstance(context).isDarkMode();
         toggle.setDarkMode(dark, false);
-        toggle.updateContentDescription(dark);
         toggle.setOnThemeToggleListener(() -> {
             dismiss();
             Prefs.getInstance(context).toggleDarkMode(context);

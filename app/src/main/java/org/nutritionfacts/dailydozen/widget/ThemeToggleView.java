@@ -92,11 +92,6 @@ public class ThemeToggleView extends FrameLayout {
         }
     }
 
-    public void updateContentDescription(final boolean darkMode) {
-        setContentDescription(getContext().getString(
-                darkMode ? R.string.use_light_mode : R.string.use_dark_mode));
-    }
-
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
