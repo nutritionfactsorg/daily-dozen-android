@@ -19,14 +19,25 @@
         android:paddingBottom="8dp" />
 
     <View
+        android:id="@+id/overflow_menu_divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="?attr/colorOutlineVariant" />
 
-    <LinearLayout
-        android:id="@+id/overflow_menu_items"
+    <ScrollView
+        android:id="@+id/overflow_menu_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" />
+        android:fillViewport="false"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/overflow_menu_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
 
 </LinearLayout>

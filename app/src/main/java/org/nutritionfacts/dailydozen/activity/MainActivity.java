@@ -2,7 +2,9 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
+import android.provider.OpenableColumns;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -53,6 +55,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     private static final String RESTORE_IN_PROGRESS = "restore_in_progress";
     private static final String RESTORE_CONFIRM_DIALOG_SHOWN = "restore_confirm_dialog_shown";
     private static final String IN_DAILY_DOZEN_MODE = "in_daily_dozen_mode";
+    private static final String[] RESTORE_FILE_MIME_TYPES = {"application/json"};
 
     private ActivityMainBinding binding;
 
@@ -70,6 +73,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
     private ActivityResultLauncher<Intent> dateSelectionLauncher;
     private ActivityResultLauncher<Intent> debugSettingsLauncher;
+    private ActivityResultLauncher<String[]> restoreFileLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +94,19 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         debugSettingsLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> initDatePager());
+
+        restoreFileLauncher = registerForActivityResult(
+                new ActivityResultContracts.OpenDocument(),
+                uri -> {
+                    if (uri == null) {
+                        return;
+                    }
+                    if (!isDailyDozenBackupFile(uri)) {
+                        Common.showToast(this, R.string.restore_failed);
+                        return;
+                    }
+                    promptRestoreFromBackup(uri, false);
+                });
 
         if (savedInstanceState != null) {
             alreadyHandledRestoreIntent = savedInstanceState.getBoolean(ALREADY_HANDLED_RESTORE_INTENT);
@@ -295,6 +312,9 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         } else if (itemId == R.id.menu_backup) {
             backup();
             return true;
+        } else if (itemId == R.id.menu_restore) {
+            pickRestoreFile();
+            return true;
         } else if (itemId == R.id.menu_about) {
             startActivity(new Intent(this, AboutActivity.class));
             return true;
@@ -336,7 +356,43 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
             return;
         }
 
-        final Uri restoreFileUri = intent.getData();
+        promptRestoreFromBackup(intent.getData(), true);
+    }
+
+    private void pickRestoreFile() {
+        if (restoreInProgress) {
+            return;
+        }
+
+        restoreFileLauncher.launch(RESTORE_FILE_MIME_TYPES);
+    }
+
+    private boolean isDailyDozenBackupFile(final Uri uri) {
+        final String displayName = getDisplayName(uri);
+        return displayName != null
+                && getBackupFile().getName().equalsIgnoreCase(displayName);
+    }
+
+    private String getDisplayName(final Uri uri) {
+        try (Cursor cursor = getContentResolver().query(
+                uri, new String[]{OpenableColumns.DISPLAY_NAME}, null, null, null)) {
+            if (cursor != null && cursor.moveToFirst()) {
+                final int nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
+                if (nameIndex >= 0) {
+                    return cursor.getString(nameIndex);
+                }
+            }
+        } catch (RuntimeException e) {
+            Timber.e(e, "getDisplayName failed");
+        }
+
+        return null;
+    }
+
+    private void promptRestoreFromBackup(final Uri restoreFileUri, final boolean fromExternalIntent) {
+        if (restoreFileUri == null || restoreInProgress) {
+            return;
+        }
 
         if (!DDServings.isEmpty()) {
             if (restoreConfirmDialogShown) {
@@ -353,8 +409,11 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
                         dialog.dismiss();
                     })
                     .setNegativeButton(R.string.no, (dialog, which) -> {
-                        alreadyHandledRestoreIntent = true;
-                        clearRestoreIntent();
+                        if (fromExternalIntent) {
+                            alreadyHandledRestoreIntent = true;
+                            clearRestoreIntent();
+                        }
+                        restoreConfirmDialogShown = false;
                         dialog.dismiss();
                     })
                     .create()

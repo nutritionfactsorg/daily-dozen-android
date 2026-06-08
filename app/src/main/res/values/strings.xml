@@ -65,6 +65,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="backup">Backup</string>
+    <string name="restore">Restore</string>
     <string name="food_info">Food Info</string>
     <string name="food_history">Food History</string>
     <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
@@ -374,7 +375,11 @@
         <item />
         <item>2. Tap on the backup file attached to this email.</item>
         <item />
-        <item>3. Select Open with Daily Dozen</item>
+        <item>3. Select Open with Daily Dozen.</item>
+        <item />
+        <item>Alternatively, to restore from Google Drive or another location:</item>
+        <item>2. Save the attachment as dailydozen_backup.json to Google Drive or a directory on your phone.</item>
+        <item>3. In the app menu, tap Restore and select dailydozen_backup.json.</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
         <item>Day</item>

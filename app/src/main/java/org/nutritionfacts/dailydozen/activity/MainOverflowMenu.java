@@ -8,14 +8,18 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.view.menu.ActionMenuItemView;
 import androidx.appcompat.widget.ActionMenuView;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -40,6 +44,7 @@ final class MainOverflowMenu {
             R.id.menu_open_source,
             R.id.menu_daily_reminder_settings,
             R.id.menu_backup,
+            R.id.menu_restore,
             R.id.menu_about,
             R.id.menu_debug,
     };
@@ -82,15 +87,20 @@ final class MainOverflowMenu {
         bindThemeToggle(content, popupContext);
 
         final List<MenuItem> overflowItems = collectOverflowItems(toolbar);
+        final int popupWidth = anchor.getWidth() > 0
+                ? Math.max(anchor.getWidth(), dp(popupContext, 220))
+                : dp(popupContext, 220);
+
         populateMenuRows(
                 content.findViewById(R.id.overflow_menu_items),
                 inflater,
                 overflowItems,
                 callback);
+        applyScrollMaxHeight(content, anchor, popupContext, popupWidth);
 
         popupWindow = new PopupWindow(
                 content,
-                anchor.getWidth() > 0 ? Math.max(anchor.getWidth(), dp(popupContext, 220)) : dp(popupContext, 220),
+                popupWidth,
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 true);
         popupWindow.setElevation(dp(popupContext, 8));
@@ -109,6 +119,72 @@ final class MainOverflowMenu {
                 activity.recreate();
             }
         });
+    }
+
+    private void applyScrollMaxHeight(
+            @NonNull final View content,
+            @NonNull final View anchor,
+            @NonNull final Context context,
+            final int popupWidth) {
+        final ScrollView scrollView = content.findViewById(R.id.overflow_menu_scroll);
+        final int widthSpec = View.MeasureSpec.makeMeasureSpec(popupWidth, View.MeasureSpec.EXACTLY);
+        final int unspecifiedHeight = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+
+        scrollView.measure(widthSpec, unspecifiedHeight);
+        final int desiredScrollHeight = scrollView.getMeasuredHeight();
+
+        final int headerHeight = measureHeaderHeight(content, popupWidth);
+        final int maxAvailableHeight = getMaxAvailablePopupHeight(anchor);
+        final int maxScrollHeight = Math.max(0, maxAvailableHeight - headerHeight);
+
+        if (maxScrollHeight > 0 && desiredScrollHeight > maxScrollHeight) {
+            final ViewGroup.LayoutParams scrollParams = scrollView.getLayoutParams();
+            scrollParams.height = maxScrollHeight;
+            scrollView.setLayoutParams(scrollParams);
+        }
+    }
+
+    private int measureHeaderHeight(@NonNull final View content, final int popupWidth) {
+        final int widthSpec = View.MeasureSpec.makeMeasureSpec(popupWidth, View.MeasureSpec.EXACTLY);
+        final int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+        int headerHeight = 0;
+
+        final View themeToggle = content.findViewById(R.id.theme_toggle);
+        if (themeToggle != null) {
+            themeToggle.measure(widthSpec, heightSpec);
+            headerHeight += themeToggle.getMeasuredHeight();
+        }
+
+        final View divider = content.findViewById(R.id.overflow_menu_divider);
+        if (divider != null) {
+            divider.measure(widthSpec, heightSpec);
+            headerHeight += divider.getMeasuredHeight();
+        }
+
+        return headerHeight;
+    }
+
+    private int getMaxAvailablePopupHeight(@NonNull final View anchor) {
+        final int[] anchorLocation = new int[2];
+        anchor.getLocationOnScreen(anchorLocation);
+        final int anchorBottom = anchorLocation[1] + anchor.getHeight();
+
+        final View rootView = anchor.getRootView();
+        final int[] rootLocation = new int[2];
+        rootView.getLocationOnScreen(rootLocation);
+
+        int bottomInset = rootView.getPaddingBottom();
+        if (bottomInset == 0) {
+            final WindowInsetsCompat windowInsets = ViewCompat.getRootWindowInsets(rootView);
+            if (windowInsets != null) {
+                bottomInset = windowInsets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom;
+            }
+        }
+
+        final int usableContentBottom = rootLocation[1] + rootView.getHeight() - bottomInset;
+        final int bottomMargin = dp(anchor.getContext(), 8);
+
+        return Math.max(0, usableContentBottom - anchorBottom - bottomMargin);
     }
 
     private void populateMenuRows(

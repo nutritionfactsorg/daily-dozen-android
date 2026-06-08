@@ -42,11 +42,8 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
 
                 <data
-                    android:mimeType="text/csv"
-                    android:pathPattern="dailydozen_backup_\\.csv"/>
-                <data
                     android:mimeType="application/json"
-                    android:pathPattern="dailydozen_backup_\\.json"/>
+                    android:pathPattern=".*dailydozen_backup\\.json"/>
             </intent-filter>
         </activity>
 
