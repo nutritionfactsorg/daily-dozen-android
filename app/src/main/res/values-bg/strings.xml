@@ -38,6 +38,7 @@
     <string name="yes">Да</string>
     <string name="no">Не</string>
     <string name="backup">Архивиране</string>
+    <string name="restore">Възстановяване</string>
     <string name="food_info">Информация за храните</string>
     <string name="food_history">История на храните</string>
     <string name="daily_servings_history">История на отбелязаните дневни порции</string>

@@ -38,6 +38,7 @@
     <string name="yes">Так</string>
     <string name="no">Ні</string>
     <string name="backup">Резервна копія</string>
+    <string name="restore">Відновити</string>
     <string name="food_info">Інформація про їжу</string>
     <string name="food_history">Історія їжі</string>
     <string name="daily_servings_history">Щоденна історія порцій</string>

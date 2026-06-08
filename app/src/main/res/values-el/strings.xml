@@ -38,6 +38,7 @@
     <string name="yes">Ναι</string>
     <string name="no">Όχι</string>
     <string name="backup">Αντίγραφο Ασφαλείας</string>
+    <string name="restore">Επαναφορά</string>
     <string name="food_info">Πληροφορίες Τροφίμων</string>
     <string name="food_history">Ιστορικό Τροφίμων</string>
     <string name="daily_servings_history">Ιστορικό Ημερήσιων Μερίδων</string>

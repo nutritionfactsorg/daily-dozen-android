@@ -38,6 +38,7 @@
     <string name="yes">Sí</string>
     <string name="no">No</string>
     <string name="backup">Còpia de seguretat</string>
+    <string name="restore">Recuperar</string>
     <string name="food_info">Informació de menjar</string>
     <string name="food_history">Historial de menjar</string>
     <string name="daily_servings_history">Historial de la Dotzena Diària</string>

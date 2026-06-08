@@ -38,6 +38,7 @@
     <string name="yes">Áno</string>
     <string name="no">Nie</string>
     <string name="backup">Záloha</string>
+    <string name="restore">Obnoviť</string>
     <string name="food_info">Informácie o jedlách</string>
     <string name="food_history">História jedál</string>
     <string name="daily_servings_history">História Dennej Dvanástky</string>

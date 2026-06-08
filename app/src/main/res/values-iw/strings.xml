@@ -38,6 +38,7 @@
     <string name="yes">כן</string>
     <string name="no">לא</string>
     <string name="backup">גיבוי</string>
+    <string name="restore">שחזור</string>
     <string name="food_info">מידע על מזון</string>
     <string name="food_history">הסטוריית המזון</string>
     <string name="daily_servings_history">היסטוריית מנות יומית</string>

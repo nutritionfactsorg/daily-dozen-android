@@ -38,6 +38,7 @@
     <string name="yes">بله</string>
     <string name="no">نه</string>
     <string name="backup">پشتیبان</string>
+    <string name="restore">بازیابی</string>
     <string name="food_info">اطلاعاتِ غذا</string>
     <string name="food_history">سابقۀ غذا</string>
     <string name="daily_servings_history">سابقۀ روزانۀ سهم‌ها</string>

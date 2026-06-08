@@ -38,6 +38,7 @@
     <string name="yes">Da</string>
     <string name="no">Nu</string>
     <string name="backup">Copie de rezervă</string>
+    <string name="restore">Restaurare</string>
     <string name="food_info">Informații Alimentare</string>
     <string name="food_history">Istoric al Alimentelor</string>
     <string name="daily_servings_history">Istoricul porțiilor zilnice</string>

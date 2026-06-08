@@ -38,6 +38,7 @@
     <string name="yes">Sí</string>
     <string name="no">No</string>
     <string name="backup">Copia de seguridad</string>
+    <string name="restore">Restaurar</string>
     <string name="food_info">Información alimenticia</string>
     <string name="food_history">Historial alimenticio</string>
     <string name="daily_servings_history">Historial de porciones diarias</string>

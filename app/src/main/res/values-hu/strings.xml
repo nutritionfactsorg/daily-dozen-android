@@ -38,6 +38,7 @@
     <string name="yes">Igen</string>
     <string name="no">Nem</string>
     <string name="backup">Biztonsági mentés</string>
+    <string name="restore">Visszaállítás</string>
     <string name="food_info">Élelmiszer Infó</string>
     <string name="food_history">Élelmiszer előzmények</string>
     <string name="daily_servings_history">Napi adagok előzményei</string>
