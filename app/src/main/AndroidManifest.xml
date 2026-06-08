@@ -43,7 +43,7 @@
 
                 <data
                     android:mimeType="application/json"
-                    android:pathPattern=".*dailydozen_backup\\.json"/>
+                    android:pathPattern=".*dailydozen_backup.*\\.json"/>
             </intent-filter>
         </activity>
 

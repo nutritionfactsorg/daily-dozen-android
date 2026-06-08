@@ -31,9 +31,18 @@ import org.nutritionfacts.dailydozen.model.Weights;
 import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 
+import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
 public class Common {
     public static final String FILE_PROVIDER_AUTHORITY = "org.nutritionfacts.dailydozen.fileprovider";
     public static final String PREFERENCES_FILE = "org.nutritionfacts.dailydozen.preferences";
+    public static final String BACKUP_FILE_PREFIX = "dailydozen_backup";
+    public static final String BACKUP_FILE_SUFFIX = ".json";
+    private static final DateTimeFormatter BACKUP_TIMESTAMP_FORMAT =
+            DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
 
     public static final int MAX_SERVINGS = 24;
     public static final int MAX_TWEAKS_SERVINGS = 37;
@@ -187,5 +196,18 @@ public class Common {
         TweakServings.truncate(TweakServings.class);
         Weights.truncate(Weights.class);
         Day.truncate(Day.class);
+    }
+
+    public static File createBackupFile(final File filesDir) {
+        final String timestamp = BACKUP_TIMESTAMP_FORMAT.format(LocalDateTime.now());
+        return new File(filesDir, BACKUP_FILE_PREFIX + "_" + timestamp + BACKUP_FILE_SUFFIX);
+    }
+
+    public static boolean isDailyDozenBackupFileName(final String name) {
+        if (name == null) {
+            return false;
+        }
+        final String lower = name.toLowerCase(Locale.ROOT);
+        return lower.startsWith(BACKUP_FILE_PREFIX) && lower.endsWith(BACKUP_FILE_SUFFIX);
     }
 }

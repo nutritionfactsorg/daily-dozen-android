@@ -55,7 +55,9 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     private static final String RESTORE_IN_PROGRESS = "restore_in_progress";
     private static final String RESTORE_CONFIRM_DIALOG_SHOWN = "restore_confirm_dialog_shown";
     private static final String IN_DAILY_DOZEN_MODE = "in_daily_dozen_mode";
-    private static final String[] RESTORE_FILE_MIME_TYPES = {"application/json"};
+    // Providers such as Google Drive often mislabel .json files, so the picker shows all
+    // files and isDailyDozenBackupFile() enforces the dailydozen_backup*.json naming rule.
+    private static final String[] RESTORE_FILE_MIME_TYPES = {"*/*"};
 
     private ActivityMainBinding binding;
 
@@ -345,7 +347,8 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
     private void backup() {
         if (!DDServings.isEmpty()) {
-            TaskRunner.getInstance().executeAsync(new BackupTask(this, getBackupFile()));
+            TaskRunner.getInstance().executeAsync(
+                    new BackupTask(this, Common.createBackupFile(getFilesDir())));
         } else {
             Common.showToast(this, R.string.no_servings_recorded);
         }
@@ -368,9 +371,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     }
 
     private boolean isDailyDozenBackupFile(final Uri uri) {
-        final String displayName = getDisplayName(uri);
-        return displayName != null
-                && getBackupFile().getName().equalsIgnoreCase(displayName);
+        return Common.isDailyDozenBackupFileName(getDisplayName(uri));
     }
 
     private String getDisplayName(final Uri uri) {
@@ -379,11 +380,20 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
             if (cursor != null && cursor.moveToFirst()) {
                 final int nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
                 if (nameIndex >= 0) {
-                    return cursor.getString(nameIndex);
+                    final String displayName = cursor.getString(nameIndex);
+                    if (!TextUtils.isEmpty(displayName)) {
+                        return displayName;
+                    }
                 }
             }
         } catch (RuntimeException e) {
             Timber.e(e, "getDisplayName failed");
+        }
+
+        final String lastPathSegment = uri.getLastPathSegment();
+        if (!TextUtils.isEmpty(lastPathSegment)) {
+            final int nameStart = lastPathSegment.lastIndexOf('/');
+            return nameStart >= 0 ? lastPathSegment.substring(nameStart + 1) : lastPathSegment;
         }
 
         return null;
@@ -441,12 +451,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         TaskRunner.getInstance().executeAsync(new RestoreTask(this, restoreFileUri, getContentResolver()));
     }
 
-    public File getBackupFile() {
-        return new File(getFilesDir(), "dailydozen_backup.json");
-    }
-
-    private void shareBackupFile() {
-        final File backupFile = getBackupFile();
+    private void shareBackupFile(final File backupFile) {
         final String backupInstructions = TextUtils.join(System.lineSeparator(),
                 getResources().getStringArray(R.array.backup_instructions_lines));
         final Uri backupFileUri = FileProvider.getUriForFile(this, Common.FILE_PROVIDER_AUTHORITY, backupFile);
@@ -471,8 +476,8 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
     @Subscribe
     public void onEvent(BackupCompleteEvent event) {
-        if (event.isSuccess()) {
-            shareBackupFile();
+        if (event.isSuccess() && event.getBackupFile() != null) {
+            shareBackupFile(event.getBackupFile());
         }
     }
 

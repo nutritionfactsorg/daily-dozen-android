@@ -57,6 +57,7 @@ Contributors
 * [notmypassword][notmypassword]
 * [qyearsley][qyearsley]
 * [tabasco-flame][tabasco-flame]
+* [LarytheLord][LarytheLord]
 
 [nutritionfacts.org]: http://nutritionfacts.org "NutritionFacts.org - The Latest in Nutrition Research"
 [contribute]: https://github.com/nutritionfactsorg/daily-dozen-android/blob/master/CONTRIBUTING.md "Contribute to the Daily Dozen Android App"
@@ -78,3 +79,4 @@ Contributors
 [josephkelemen97]: https://github.com/josephkelemen97 "josephkelemen97 on GitHub"
 [marc-medley]: https://github.com/marc-medley "marc-medley on GitHub"
 [tabasco-flame]: https://github.com/tabasco-flame "tabasco-flame on GitHub"
+[LarytheLord]: https://github.com/LarytheLord "LarytheLord on GitHub"
