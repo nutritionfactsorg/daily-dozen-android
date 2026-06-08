@@ -12,6 +12,7 @@ import org.nutritionfacts.dailydozen.model.enums.Units;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -291,7 +292,8 @@ public class FoodInfo {
     }
 
     public static List<String> getTypesOfFood(final String foodName) {
-        return typesOfFood.get(foodName);
+        final List<String> types = typesOfFood.get(foodName);
+        return types != null ? types : Collections.emptyList();
     }
 
     private static void putTypeOfFood(Resources res, String food, int foodInfoTypeId) {
@@ -317,14 +319,17 @@ public class FoodInfo {
 
     public static List<String> getServingSizes(final String foodName,
                                                @Units.Interface final int unitType) {
+        final List<String> servingSizes;
         switch (unitType) {
             case Units.METRIC:
-                return servingSizesMetric.get(foodName);
+                servingSizes = servingSizesMetric.get(foodName);
+                break;
             default:
             case Units.IMPERIAL:
-                return servingSizesImperial.get(foodName);
+                servingSizes = servingSizesImperial.get(foodName);
+                break;
         }
-
+        return servingSizes != null ? servingSizes : Collections.emptyList();
     }
 
     private static int getServingSizesResourceId(final Context context,

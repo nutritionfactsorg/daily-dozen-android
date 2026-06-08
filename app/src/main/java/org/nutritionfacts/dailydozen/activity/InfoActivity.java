@@ -173,6 +173,12 @@ public class InfoActivity extends DailyDozenActivity {
             binding.foodInfoImage.setVisibility(View.GONE);
         }
 
+        if (Common.isSupplement(food)) {
+            binding.servingSizesCard.setVisibility(View.GONE);
+            binding.foodTypesCard.setVisibility(View.GONE);
+            return;
+        }
+
         binding.changeUnitsButton.setOnClickListener(v -> {
             Prefs.getInstance(v.getContext()).toggleUnitType();
             initServingTypes(food);

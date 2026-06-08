@@ -35,6 +35,7 @@
                     android:scaleType="fitCenter" />
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/serving_sizes_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -93,6 +94,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/food_types_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
