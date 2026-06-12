@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 
+import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.RDA;
 import org.nutritionfacts.dailydozen.Servings;
 import org.nutritionfacts.dailydozen.databinding.FoodCheckBoxesBinding;
@@ -64,8 +65,15 @@ public class RDACheckBoxes extends LinearLayout {
 
         binding.foodCheckBoxesContainer.removeAllViews();
 
-        for (ServingCheckBox checkBox : checkBoxes) {
-            binding.foodCheckBoxesContainer.addView(checkBox);
+        for (int i = 0; i < checkBoxes.size(); i++) {
+            final ServingCheckBox checkBox = checkBoxes.get(i);
+            final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT);
+            if (i > 0) {
+                params.setMarginStart(getResources().getDimensionPixelSize(R.dimen.serving_checkbox_overlap));
+            }
+            binding.foodCheckBoxesContainer.addView(checkBox, params);
         }
     }
 
@@ -178,10 +186,10 @@ public class RDACheckBoxes extends LinearLayout {
     }
 
     private void onServingsChanged() {
-        new TaskRunner().executeAsync(new CalculateStreakTask(new StreakTaskInput(day, rda)));
+        TaskRunner.getInstance().executeAsync(new CalculateStreakTask(new StreakTaskInput(day, rda)));
     }
 
     private void onTweakServingsChanged() {
-        new TaskRunner().executeAsync(new CalculateStreakTask(new StreakTaskInput(day, rda)));
+        TaskRunner.getInstance().executeAsync(new CalculateStreakTask(new StreakTaskInput(day, rda)));
     }
 }

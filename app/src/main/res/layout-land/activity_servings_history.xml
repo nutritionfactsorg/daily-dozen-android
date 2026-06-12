@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,34 +13,54 @@
 
         <org.nutritionfacts.dailydozen.view.TimeScaleSelector
             android:id="@+id/daily_servings_history_time_scale"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
 
         <org.nutritionfacts.dailydozen.view.TimeRangeSelector
             android:id="@+id/daily_servings_history_time_range"
-            android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
 
     </LinearLayout>
 
     <View
-        android:background="@color/colorDividerColor"
         android:layout_width="match_parent"
-        android:layout_height="1dp"/>
+        android:layout_height="1dp"
+        android:background="@color/colorDividerColor" />
 
     <LinearLayout
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <com.github.mikephil.charting.charts.CombinedChart
             android:id="@+id/daily_servings_chart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"/>
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/daily_servings_loading_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/task_loading_servings_history_title"
+            android:textColor="?attr/colorOnSurface"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/daily_servings_loading"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:indeterminate="true"
+            android:visibility="gone" />
 
     </LinearLayout>
 

@@ -4,6 +4,8 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <include layout="@layout/include_toolbar" />
+
     <org.nutritionfacts.dailydozen.view.TimeScaleSelector
         android:id="@+id/daily_servings_history_time_scale"
         android:layout_width="match_parent"
@@ -38,7 +40,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/task_loading_servings_history_title"/>
+            android:text="@string/task_loading_servings_history_title"
+            android:textColor="?attr/colorOnSurface"/>
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"

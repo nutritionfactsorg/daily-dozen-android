@@ -29,7 +29,6 @@
     <string name="donate">حمایتِ مالی</string>
     <string name="subscribe">مشترک شدن</string>
     <string name="open_source">منبع‌باز</string>
-    <string name="permission_needed_to_write_storage">بدون اجازۀ ذخیرۀ اطلاعات بر روی حافظه، نمی‌توان از داده‌هایتان پشتیبان‌گیری کرد</string>
     <string name="backup_failed">عملیاتِ پشتیبان‌گیری با شکست مواجه شد.</string>
     <string name="restore_failed">بازیابی با شکست مواجه شد</string>
     <string name="backup_success">پشتیبان‌گیری با موفقیت انجام شد</string>
@@ -39,6 +38,7 @@
     <string name="yes">بله</string>
     <string name="no">نه</string>
     <string name="backup">پشتیبان</string>
+    <string name="restore">بازیابی</string>
     <string name="food_info">اطلاعاتِ غذا</string>
     <string name="food_history">سابقۀ غذا</string>
     <string name="daily_servings_history">سابقۀ روزانۀ سهم‌ها</string>

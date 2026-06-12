@@ -14,6 +14,7 @@ import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
 import org.nutritionfacts.dailydozen.model.FoodInfo;
+import org.nutritionfacts.dailydozen.util.HistoryIconHelper;
 
 public class FoodServings extends LinearLayout {
     private Day day;
@@ -38,6 +39,7 @@ public class FoodServings extends LinearLayout {
 
     private void init(final Context context) {
         binding = FoodServingsBinding.inflate(LayoutInflater.from(context), this, true);
+        HistoryIconHelper.applyCalendarIcon(binding.foodHistory);
         onFoodNameClicked();
         onFoodHistoryClicked();
     }
@@ -83,13 +85,13 @@ public class FoodServings extends LinearLayout {
     }
 
     public void onFoodNameClicked() {
-        binding.foodIcon.setOnClickListener(v -> Common.openFoodInfo(getContext(), food));
-        binding.foodName.setOnClickListener(v -> Common.openFoodInfo(getContext(), food));
+        binding.foodIcon.setOnClickListener(v -> Common.openFood(getContext(), food, false));
+        binding.foodName.setOnClickListener(v -> Common.openFood(getContext(), food, false));
     }
 
     public void onFoodHistoryClicked() {
-        binding.foodHistory.setOnClickListener(v -> Common.openFoodHistory(getContext(), food));
-        binding.foodStreak.setOnClickListener(v -> Common.openFoodHistory(getContext(), food));
+        binding.foodHistory.setOnClickListener(v -> Common.openFood(getContext(), food, true));
+        binding.foodStreak.setOnClickListener(v -> Common.openFood(getContext(), food, true));
     }
 
     private void initCheckboxes(DDServings servings) {

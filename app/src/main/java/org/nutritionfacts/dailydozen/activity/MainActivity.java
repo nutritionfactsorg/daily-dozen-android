@@ -2,16 +2,22 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
+import android.provider.OpenableColumns;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.core.content.FileProvider;
+import androidx.core.content.IntentCompat;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -21,7 +27,6 @@ import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.adapter.DatePagerAdapter;
 import org.nutritionfacts.dailydozen.controller.Bus;
-import org.nutritionfacts.dailydozen.controller.PermissionController;
 import org.nutritionfacts.dailydozen.controller.Prefs;
 import org.nutritionfacts.dailydozen.databinding.ActivityMainBinding;
 import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
@@ -37,6 +42,7 @@ import org.nutritionfacts.dailydozen.task.RestoreTask;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.util.DateUtil;
 import org.nutritionfacts.dailydozen.util.NotificationUtil;
+import com.google.android.material.appbar.MaterialToolbar;
 
 import java.io.File;
 import java.time.LocalDate;
@@ -44,18 +50,32 @@ import java.util.Date;
 
 import timber.log.Timber;
 
-public class MainActivity extends DailyDozenActivity implements ProgressListener {
+public class MainActivity extends DailyDozenActivity implements ProgressListener, DateSelectionHost {
     private static final String ALREADY_HANDLED_RESTORE_INTENT = "already_handled_restore_intent";
+    private static final String RESTORE_IN_PROGRESS = "restore_in_progress";
+    private static final String RESTORE_CONFIRM_DIALOG_SHOWN = "restore_confirm_dialog_shown";
+    private static final String IN_DAILY_DOZEN_MODE = "in_daily_dozen_mode";
+    // Providers such as Google Drive often mislabel .json files, so the picker shows all
+    // files and isDailyDozenBackupFile() enforces the dailydozen_backup*.json naming rule.
+    private static final String[] RESTORE_FILE_MIME_TYPES = {"*/*"};
 
     private ActivityMainBinding binding;
 
     private MenuItem menuToggleModes;
+    private final MainOverflowMenu mainOverflowMenu = new MainOverflowMenu();
+    private boolean overflowMenuHooked;
 
     private int daysSinceEpoch;
 
     private boolean alreadyHandledRestoreIntent;
+    private boolean restoreInProgress;
+    private boolean restoreConfirmDialogShown;
 
     private boolean inDailyDozenMode = true;
+
+    private ActivityResultLauncher<Intent> dateSelectionLauncher;
+    private ActivityResultLauncher<Intent> debugSettingsLauncher;
+    private ActivityResultLauncher<String[]> restoreFileLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,11 +83,51 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        dateSelectionLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    final Intent data = result.getData();
+                    if (data != null && data.hasExtra(Args.DATE)) {
+                        final Date date = IntentCompat.getSerializableExtra(data, Args.DATE, Date.class);
+                        setDatePagerDate(DateUtil.convertToLocalDate(date));
+                    }
+                });
+
+        debugSettingsLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> initDatePager());
+
+        restoreFileLauncher = registerForActivityResult(
+                new ActivityResultContracts.OpenDocument(),
+                uri -> {
+                    if (uri == null) {
+                        return;
+                    }
+                    if (!isDailyDozenBackupFile(uri)) {
+                        Common.showToast(this, R.string.restore_failed);
+                        return;
+                    }
+                    promptRestoreFromBackup(uri, false);
+                });
+
+        if (savedInstanceState != null) {
+            alreadyHandledRestoreIntent = savedInstanceState.getBoolean(ALREADY_HANDLED_RESTORE_INTENT);
+            restoreInProgress = savedInstanceState.getBoolean(RESTORE_IN_PROGRESS);
+            restoreConfirmDialogShown = savedInstanceState.getBoolean(RESTORE_CONFIRM_DIALOG_SHOWN);
+            inDailyDozenMode = savedInstanceState.getBoolean(IN_DAILY_DOZEN_MODE, true);
+        }
+
         initDatePager();
 
         calculateStreaksAfterDatabaseUpgradeToV2();
 
         handleIntentIfNecessary();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mainOverflowMenu.dismiss();
+        super.onDestroy();
     }
 
     private void handleIntentIfNecessary() {
@@ -93,7 +153,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
                         .setCancelable(false)
                         .setTitle(R.string.dialog_streaks_title)
                         .setMessage(R.string.dialog_streaks_message)
-                        .setPositiveButton(R.string.OK, (dialog, which) -> new TaskRunner().executeAsync(new CalculateStreaksTask(this)))
+                        .setPositiveButton(R.string.OK, (dialog, which) -> TaskRunner.getInstance().executeAsync(new CalculateStreaksTask(this)))
                         .create().show();
             }
         }
@@ -126,26 +186,39 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putBoolean(ALREADY_HANDLED_RESTORE_INTENT, alreadyHandledRestoreIntent);
+        outState.putBoolean(RESTORE_IN_PROGRESS, restoreInProgress);
+        outState.putBoolean(RESTORE_CONFIRM_DIALOG_SHOWN, restoreConfirmDialogShown);
+        outState.putBoolean(IN_DAILY_DOZEN_MODE, inDailyDozenMode);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         alreadyHandledRestoreIntent = savedInstanceState.getBoolean(ALREADY_HANDLED_RESTORE_INTENT);
+        restoreInProgress = savedInstanceState.getBoolean(RESTORE_IN_PROGRESS);
+        restoreConfirmDialogShown = savedInstanceState.getBoolean(RESTORE_CONFIRM_DIALOG_SHOWN);
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        setIntent(intent);
 
-        alreadyHandledRestoreIntent = false;
-
-        checkIfOpenedForRestore(intent);
+        if (isRestoreIntent(intent)) {
+            alreadyHandledRestoreIntent = false;
+            restoreInProgress = false;
+            restoreConfirmDialogShown = false;
+            checkIfOpenedForRestore(intent);
+        }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
+
+        if (menu instanceof MenuBuilder) {
+            ((MenuBuilder) menu).setOptionalIconsVisible(true);
+        }
 
         // Only show the debug menu option if the apk is a debug build
         menu.findItem(R.id.menu_debug).setVisible(BuildConfig.DEBUG);
@@ -159,10 +232,15 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     public boolean onPrepareOptionsMenu(Menu menu) {
         toggleTweaksMenuItemVisibility();
         updateAppModeToggle();
+        hookOverflowMenu();
         return super.onPrepareOptionsMenu(menu);
     }
 
     private void updateAppModeToggle() {
+        if (menuToggleModes == null) {
+            return;
+        }
+
         if (inDailyDozenMode) {
             setTitle(R.string.app_name);
             menuToggleModes.setTitle(R.string.twenty_one_tweaks);
@@ -176,6 +254,23 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         if (menuToggleModes != null) {
             menuToggleModes.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         }
+    }
+
+    private void hookOverflowMenu() {
+        if (overflowMenuHooked) {
+            return;
+        }
+
+        final MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        if (toolbar == null) {
+            return;
+        }
+
+        mainOverflowMenu.hookOverflowButton(toolbar, itemId -> {
+            final MenuItem item = toolbar.getMenu().findItem(itemId);
+            return item != null && onOptionsItemSelected(item);
+        });
+        overflowMenuHooked = true;
     }
 
     @Override
@@ -219,31 +314,22 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         } else if (itemId == R.id.menu_backup) {
             backup();
             return true;
+        } else if (itemId == R.id.menu_restore) {
+            pickRestoreFile();
+            return true;
         } else if (itemId == R.id.menu_about) {
             startActivity(new Intent(this, AboutActivity.class));
             return true;
         } else if (itemId == R.id.menu_debug) {
-            startActivityForResult(new Intent(this, DebugActivity.class), Args.DEBUG_SETTINGS_REQUEST);
+            debugSettingsLauncher.launch(new Intent(this, DebugActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        switch (requestCode) {
-            case Args.DEBUG_SETTINGS_REQUEST:
-                // Always refresh the data shown when returning from the Debug Activity
-                initDatePager();
-                break;
-            case Args.SELECTABLE_DATE_REQUEST:
-                if (data != null && data.hasExtra(Args.DATE)) {
-                    setDatePagerDate(DateUtil.convertToLocalDate((Date) data.getSerializableExtra(Args.DATE)));
-                }
-                break;
-        }
+    public void launchForDateSelection(Intent intent) {
+        dateSelectionLauncher.launch(intent);
     }
 
     private void initDatePager() {
@@ -259,73 +345,120 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
         binding.datePager.setCurrentItem(origDate != 0 ? origDate : daysSinceEpoch, false);
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (PermissionController.grantedWriteExternalStorage(requestCode, grantResults)) {
-            backup();
-        } else {
-            Common.showToast(this, R.string.permission_needed_to_write_storage);
-        }
-    }
-
     private void backup() {
         if (!DDServings.isEmpty()) {
-            if (PermissionController.canWriteExternalStorage(this)) {
-                new TaskRunner().executeAsync(new BackupTask(this, getBackupFile()));
-            } else {
-                PermissionController.askForWriteExternalStorage(this);
-            }
+            TaskRunner.getInstance().executeAsync(
+                    new BackupTask(this, Common.createBackupFile(getFilesDir())));
         } else {
             Common.showToast(this, R.string.no_servings_recorded);
         }
     }
 
     private void checkIfOpenedForRestore(final Intent intent) {
-        if (intent == null || alreadyHandledRestoreIntent) {
+        if (intent == null || !isRestoreIntent(intent) || alreadyHandledRestoreIntent || restoreInProgress) {
             return;
         }
 
-        final Uri restoreFileUri = intent.getData();
+        promptRestoreFromBackup(intent.getData(), true);
+    }
 
-        if (restoreFileUri != null) {
-            // FIXME: 2/20/16 this should only be set to true if the RestoreTask returns true (did not fail and was not cancelled)
-            alreadyHandledRestoreIntent = true;
+    private void pickRestoreFile() {
+        if (restoreInProgress) {
+            return;
+        }
 
-            if (!DDServings.isEmpty()) {
-                new AlertDialog.Builder(this)
-                        .setTitle(R.string.restore_confirm_title)
-                        .setMessage(R.string.restore_confirm_message)
-                        .setPositiveButton(R.string.yes, (dialog, which) -> {
-                            restore(restoreFileUri);
-                            dialog.dismiss();
-                        })
-                        .setNegativeButton(R.string.no, (dialog, which) -> dialog.dismiss())
-                        .create()
-                        .show();
-            } else {
-                restore(restoreFileUri);
+        restoreFileLauncher.launch(RESTORE_FILE_MIME_TYPES);
+    }
+
+    private boolean isDailyDozenBackupFile(final Uri uri) {
+        return Common.isDailyDozenBackupFileName(getDisplayName(uri));
+    }
+
+    private String getDisplayName(final Uri uri) {
+        try (Cursor cursor = getContentResolver().query(
+                uri, new String[]{OpenableColumns.DISPLAY_NAME}, null, null, null)) {
+            if (cursor != null && cursor.moveToFirst()) {
+                final int nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
+                if (nameIndex >= 0) {
+                    final String displayName = cursor.getString(nameIndex);
+                    if (!TextUtils.isEmpty(displayName)) {
+                        return displayName;
+                    }
+                }
             }
+        } catch (RuntimeException e) {
+            Timber.e(e, "getDisplayName failed");
+        }
+
+        final String lastPathSegment = uri.getLastPathSegment();
+        if (!TextUtils.isEmpty(lastPathSegment)) {
+            final int nameStart = lastPathSegment.lastIndexOf('/');
+            return nameStart >= 0 ? lastPathSegment.substring(nameStart + 1) : lastPathSegment;
+        }
+
+        return null;
+    }
+
+    private void promptRestoreFromBackup(final Uri restoreFileUri, final boolean fromExternalIntent) {
+        if (restoreFileUri == null || restoreInProgress) {
+            return;
+        }
+
+        if (!DDServings.isEmpty()) {
+            if (restoreConfirmDialogShown) {
+                return;
+            }
+
+            restoreConfirmDialogShown = true;
+
+            new AlertDialog.Builder(this)
+                    .setTitle(R.string.restore_confirm_title)
+                    .setMessage(R.string.restore_confirm_message)
+                    .setPositiveButton(R.string.yes, (dialog, which) -> {
+                        restore(restoreFileUri);
+                        dialog.dismiss();
+                    })
+                    .setNegativeButton(R.string.no, (dialog, which) -> {
+                        if (fromExternalIntent) {
+                            alreadyHandledRestoreIntent = true;
+                            clearRestoreIntent();
+                        }
+                        restoreConfirmDialogShown = false;
+                        dialog.dismiss();
+                    })
+                    .create()
+                    .show();
+        } else {
+            restore(restoreFileUri);
+        }
+    }
+
+    private static boolean isRestoreIntent(final Intent intent) {
+        return Intent.ACTION_VIEW.equals(intent.getAction()) && intent.getData() != null;
+    }
+
+    private void clearRestoreIntent() {
+        final Intent intent = getIntent();
+        if (intent != null && intent.getData() != null) {
+            intent.setData(null);
+            intent.setAction(Intent.ACTION_MAIN);
+            setIntent(intent);
         }
     }
 
     private void restore(final Uri restoreFileUri) {
-        new TaskRunner().executeAsync(new RestoreTask(this, restoreFileUri, getContentResolver()));
+        restoreInProgress = true;
+        TaskRunner.getInstance().executeAsync(new RestoreTask(this, restoreFileUri, getContentResolver()));
     }
 
-    public File getBackupFile() {
-        return new File(getFilesDir(), "dailydozen_backup.json");
-    }
-
-    private void shareBackupFile() {
-        final File backupFile = getBackupFile();
+    private void shareBackupFile(final File backupFile) {
         final String backupInstructions = TextUtils.join(System.lineSeparator(),
                 getResources().getStringArray(R.array.backup_instructions_lines));
         final Uri backupFileUri = FileProvider.getUriForFile(this, Common.FILE_PROVIDER_AUTHORITY, backupFile);
 
         try {
             final Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, backupFile.getName());
             shareIntent.putExtra(Intent.EXTRA_TEXT, backupInstructions);
             shareIntent.putExtra(Intent.EXTRA_STREAM, backupFileUri);
@@ -343,18 +476,26 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
 
     @Subscribe
     public void onEvent(BackupCompleteEvent event) {
-        if (event.isSuccess()) {
-            shareBackupFile();
+        if (event.isSuccess() && event.getBackupFile() != null) {
+            shareBackupFile(event.getBackupFile());
         }
     }
 
     @Subscribe
     public void onEvent(RestoreCompleteEvent event) {
-        Common.showToast(this, event.isSuccess() ? R.string.restore_success : R.string.restore_failed);
+        restoreInProgress = false;
 
         if (event.isSuccess()) {
+            alreadyHandledRestoreIntent = true;
+            restoreConfirmDialogShown = false;
+            clearRestoreIntent();
             initDatePager();
+        } else {
+            alreadyHandledRestoreIntent = false;
+            restoreConfirmDialogShown = false;
         }
+
+        Common.showToast(this, event.isSuccess() ? R.string.restore_success : R.string.restore_failed);
     }
 
     @Subscribe
@@ -393,6 +534,5 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
     @Override
     public void hideProgressBar() {
         binding.progressBarContainer.setVisibility(View.GONE);
-        this.recreate();
     }
 }

@@ -1,18 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          android:installLocation="auto">
+          xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" tools:ignore="ScopedStorage"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
 
     <application
         android:name=".DailyDozenApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <meta-data
@@ -44,11 +42,8 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
 
                 <data
-                    android:mimeType="text/csv"
-                    android:pathPattern="dailydozen_backup_\\.csv"/>
-                <data
                     android:mimeType="application/json"
-                    android:pathPattern="dailydozen_backup_\\.json"/>
+                    android:pathPattern=".*dailydozen_backup.*\\.json"/>
             </intent-filter>
         </activity>
 
@@ -61,85 +56,36 @@
             android:name=".activity.DailyReminderSettingsActivity"
             android:label="@string/daily_reminder_settings"
             android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity"/>
-        </activity>
+            android:parentActivityName=".activity.MainActivity"/>
 
         <activity
             android:name=".activity.DebugActivity"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".activity.MainActivity"/>
 
         <activity
-            android:name=".activity.HistoryActivity"
+            android:name=".activity.InfoActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity"/>
-        </activity>
-
-        <activity
-            android:name=".activity.FoodInfoActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity"/>
-        </activity>
+            android:parentActivityName=".activity.MainActivity"/>
 
         <activity
             android:name=".activity.ServingsHistoryActivity"
-            android:label="@string/daily_servings_history"
             android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity"/>
-        </activity>
-
-        <activity
-            android:name=".activity.TweakInfoActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity"/>
-        </activity>
-
-        <activity
-            android:name=".activity.TweakServingsHistoryActivity"
-            android:label="@string/daily_tweaks_history"
-            android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity"/>
-        </activity>
+            android:parentActivityName=".activity.MainActivity"/>
 
         <activity
             android:name=".activity.WeightHistoryActivity"
             android:label="@string/weight_history"
             android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity"/>
-        </activity>
+            android:parentActivityName=".activity.MainActivity"/>
 
         <activity android:name=".activity.FaqActivity"
             android:label="@string/faq_title"
             android:configChanges="orientation|keyboardHidden"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity"/>
-        </activity>
+            android:parentActivityName=".activity.MainActivity"/>
 
         <receiver
-            android:name=".receiver.AlarmReceiver"
-            android:process=":remote"/>
+            android:name=".receiver.AlarmReceiver"/>
 
         <receiver android:name=".receiver.DeviceBootReceiver" android:exported="true">
             <intent-filter>

@@ -81,6 +81,21 @@ If you don't have a feature in mind, but would like to contribute back to the pr
 
 If you have a feature in mind that hasn't been asked for in [Github Issues][issues], please [open an issue][issue] so that we can discuss how it should work so that it will benefit the entire community.
 
+Building the App
+----------------
+
+The project has two product flavors:
+
+* **fdroid** — does not include Firebase; builds without `google-services.json`
+* **play** — includes Firebase Analytics and Crashlytics; requires `app/google-services.json` (not checked into git)
+
+Example commands:
+
+```bash
+./gradlew assembleFdroidDebug
+./gradlew assemblePlayDebug   # requires google-services.json
+```
+
 <a name="commit"></a> Git Commit Guidelines
 -------------------------------------------
 

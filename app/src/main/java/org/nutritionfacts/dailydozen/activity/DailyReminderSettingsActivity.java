@@ -1,11 +1,13 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.Manifest;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TimePicker;
 
-import androidx.annotation.NonNull;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -27,11 +29,24 @@ public class DailyReminderSettingsActivity extends DailyDozenActivity implements
 
     private UpdateReminderPref updateReminderPref;
 
+    private ActivityResultLauncher<String> postNotificationsLauncher;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityNotificationSettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        postNotificationsLauncher = registerForActivityResult(
+                new ActivityResultContracts.RequestPermission(),
+                isGranted -> {
+                    if (isGranted) {
+                        initUpdateReminderPrefConfig();
+                    } else {
+                        disableUpdateReminderPref();
+                    }
+                });
+
         init();
     }
 
@@ -59,17 +74,8 @@ public class DailyReminderSettingsActivity extends DailyDozenActivity implements
             } else {
                 disableUpdateReminderPref();
             }
-        } else {
-            PermissionController.askForPostNotifications(this);
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (PermissionController.grantedPostNotifications(requestCode, grantResults)) {
-            initUpdateReminderPrefConfig();
+        } else if (PermissionController.isPostNotificationsPermissionRequired()) {
+            postNotificationsLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
         } else {
             disableUpdateReminderPref();
         }
@@ -93,6 +99,10 @@ public class DailyReminderSettingsActivity extends DailyDozenActivity implements
     private void setUpdateReminder() {
         Prefs.getInstance(this).setUpdateReminderPref(updateReminderPref);
 
+        if (!NotificationUtil.canScheduleExactAlarms(this)) {
+            NotificationUtil.openExactAlarmSettings(this);
+        }
+
         NotificationUtil.setAlarmForUpdateReminderNotification(this, updateReminderPref);
     }
 
@@ -108,7 +118,13 @@ public class DailyReminderSettingsActivity extends DailyDozenActivity implements
     public void onDailyReminderSwitchToggled() {
         binding.dailyReminderSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                initUpdateReminderPrefConfig();
+                if (PermissionController.canPostNotifications(this)) {
+                    initUpdateReminderPrefConfig();
+                } else if (PermissionController.isPostNotificationsPermissionRequired()) {
+                    postNotificationsLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+                } else {
+                    disableUpdateReminderPref();
+                }
             } else {
                 disableUpdateReminderPref();
             }

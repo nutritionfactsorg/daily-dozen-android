@@ -55,7 +55,6 @@
     <string name="url_eventbus" translatable="false">https://github.com/greenrobot/EventBus</string>
     <string name="url_likeanimation" translatable="false">https://github.com/frogermcs/LikeAnimation/</string>
     <string name="url_mpandroidchart" translatable="false">https://github.com/PhilJay/MPAndroidChart</string>
-    <string name="permission_needed_to_write_storage">Can’t backup without permission to write to storage</string>
     <string name="backup_failed">Backup failed</string>
     <string name="restore_failed">Restore failed</string>
     <string name="backup_success">Backup successful</string>
@@ -66,12 +65,13 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="backup">Backup</string>
+    <string name="restore">Restore</string>
     <string name="food_info">Food Info</string>
     <string name="food_history">Food History</string>
     <string name="icon_info" translatable="false">{fa-info-circle 12dp @color/gray}</string>
-    <string name="icon_calendar" translatable="false">{fa-calendar 16dp @color/gray_dark}</string>
+    <string name="icon_calendar" translatable="false">{fa-calendar 16dp}</string>
     <string name="num_servings_max" translatable="false">24</string>
-    <string name="icon_chart" translatable="false">{fa-bar-chart 20dp @color/gray_dark}</string>
+    <string name="icon_chart" translatable="false">{fa-bar-chart 20dp}</string>
     <string name="daily_servings_history">Daily Servings History</string>
     <string name="no_servings_recorded">You have not recorded any servings yet!</string>
     <string name="task_backup_title">Backing up</string>
@@ -373,7 +373,11 @@
         <item />
         <item>2. Tap on the backup file attached to this email.</item>
         <item />
-        <item>3. Select Open with Daily Dozen</item>
+        <item>3. Select Open with Daily Dozen.</item>
+        <item />
+        <item>Alternatively, to restore from Google Drive or another location:</item>
+        <item>2. Save the attachment to Google Drive or a directory on your phone.</item>
+        <item>3. In the app menu, tap Restore and select the backup file.</item>
     </string-array>
     <string-array name="servings_time_scale_choices">
         <item>Day</item>

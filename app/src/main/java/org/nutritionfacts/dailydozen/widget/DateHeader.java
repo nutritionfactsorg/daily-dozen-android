@@ -14,6 +14,8 @@ import org.nutritionfacts.dailydozen.databinding.HeaderDateBinding;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.TweakServings;
+import org.nutritionfacts.dailydozen.model.enums.HistoryType;
+import org.nutritionfacts.dailydozen.util.HistoryIconHelper;
 
 public class DateHeader extends LinearLayout {
     private HeaderDateBinding binding;
@@ -32,6 +34,7 @@ public class DateHeader extends LinearLayout {
 
     private void init(final Context context, AttributeSet attrs) {
         binding = HeaderDateBinding.inflate(LayoutInflater.from(context), this, true);
+        HistoryIconHelper.applyChartIcon(binding.dateHeaderChartIcon);
 
         onSubHeaderClicked();
         onStarLongClicked();
@@ -87,13 +90,13 @@ public class DateHeader extends LinearLayout {
 
             if (inDailyDozenMode()) {
                 if (!DDServings.isEmpty()) {
-                    Common.openServingsHistory(context);
+                    Common.openChartHistory(context, HistoryType.FoodServings);
                 } else {
                     Common.showToast(context, R.string.no_servings_recorded);
                 }
             } else {
                 if (!TweakServings.isEmpty()) {
-                    Common.openTweakServingsHistory(context);
+                    Common.openChartHistory(context, HistoryType.Tweaks);
                 } else {
                     Common.showToast(context, R.string.no_servings_recorded);
                 }

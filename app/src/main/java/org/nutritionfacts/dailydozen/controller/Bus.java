@@ -3,6 +3,8 @@ package org.nutritionfacts.dailydozen.controller;
 import org.greenrobot.eventbus.EventBus;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.event.BackupCompleteEvent;
+
+import java.io.File;
 import org.nutritionfacts.dailydozen.event.BaseEvent;
 import org.nutritionfacts.dailydozen.event.CalculateStreaksTaskCompleteEvent;
 import org.nutritionfacts.dailydozen.event.DisplayDateEvent;
@@ -58,8 +60,8 @@ public class Bus {
         post(new RestoreCompleteEvent(success));
     }
 
-    public static void backupCompleteEvent(final boolean success) {
-        post(new BackupCompleteEvent(success));
+    public static void backupCompleteEvent(final boolean success, final File backupFile) {
+        post(new BackupCompleteEvent(success, backupFile));
     }
 
     public static void calculateStreaksComplete(final boolean success) {

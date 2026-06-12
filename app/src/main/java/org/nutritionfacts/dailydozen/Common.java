@@ -15,12 +15,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
 
-import org.nutritionfacts.dailydozen.activity.FoodInfoActivity;
-import org.nutritionfacts.dailydozen.activity.HistoryActivity;
+import com.google.android.material.color.MaterialColors;
+
+import org.nutritionfacts.dailydozen.activity.InfoActivity;
 import org.nutritionfacts.dailydozen.activity.ServingsHistoryActivity;
-import org.nutritionfacts.dailydozen.activity.TweakInfoActivity;
-import org.nutritionfacts.dailydozen.activity.TweakServingsHistoryActivity;
 import org.nutritionfacts.dailydozen.activity.WeightHistoryActivity;
+import org.nutritionfacts.dailydozen.activity.DateSelectionHost;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Food;
@@ -28,11 +28,21 @@ import org.nutritionfacts.dailydozen.model.FoodInfo;
 import org.nutritionfacts.dailydozen.model.Tweak;
 import org.nutritionfacts.dailydozen.model.TweakServings;
 import org.nutritionfacts.dailydozen.model.Weights;
+import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.util.DateUtil;
+
+import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class Common {
     public static final String FILE_PROVIDER_AUTHORITY = "org.nutritionfacts.dailydozen.fileprovider";
     public static final String PREFERENCES_FILE = "org.nutritionfacts.dailydozen.preferences";
+    public static final String BACKUP_FILE_PREFIX = "dailydozen_backup";
+    public static final String BACKUP_FILE_SUFFIX = ".json";
+    private static final DateTimeFormatter BACKUP_TIMESTAMP_FORMAT =
+            DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
 
     public static final int MAX_SERVINGS = 24;
     public static final int MAX_TWEAKS_SERVINGS = 37;
@@ -116,18 +126,19 @@ public class Common {
 
     @ColorInt
     public static int getListItemColorForPosition(final Context context, final int position) {
-        return ContextCompat.getColor(context, position % 2 == 0 ? android.R.color.white : R.color.gray_light);
+        final int colorAttr = position % 2 == 0
+                ? com.google.android.material.R.attr.colorSurface
+                : com.google.android.material.R.attr.colorSurfaceContainerLow;
+        return MaterialColors.getColor(context, colorAttr, 0);
     }
 
-    private static Intent createFoodIntent(final Context context, final Class<? extends AppCompatActivity> klass, final Food food) {
+    private static Intent createItemIntent(
+            final Context context,
+            final Class<? extends AppCompatActivity> klass,
+            final String idExtraKey,
+            final long id) {
         final Intent intent = new Intent(context, klass);
-        intent.putExtra(Args.FOOD_ID, food.getId());
-        return intent;
-    }
-
-    private static Intent createTweakIntent(final Context context, final Class<? extends AppCompatActivity> klass, final Tweak tweak) {
-        final Intent intent = new Intent(context, klass);
-        intent.putExtra(Args.TWEAK_ID, tweak.getId());
+        intent.putExtra(idExtraKey, id);
         return intent;
     }
 
@@ -137,36 +148,35 @@ public class Common {
         return showDateIntent;
     }
 
-    public static void openFoodInfo(final Context context, final Food food) {
-        if (isSupplement(food)) {
+    public static void openFood(final Context context, final Food food, final boolean scrollToHistory) {
+        if (isSupplement(food) && !scrollToHistory) {
             openUrlInExternalBrowser(context, FoodInfo.getFoodTypeVideosLink(food.getName()));
-        } else {
-            context.startActivity(createFoodIntent(context, FoodInfoActivity.class, food));
+            return;
         }
+
+        final Intent intent = createItemIntent(context, InfoActivity.class, Args.FOOD_ID, food.getId());
+        if (scrollToHistory) {
+            intent.putExtra(Args.SCROLL_TO_HISTORY, true);
+        }
+        startSelectableDateActivity(context, intent);
     }
 
-    public static void openTweakInfo(final Context context, final Tweak tweak) {
-        context.startActivity(createTweakIntent(context, TweakInfoActivity.class, tweak));
+    public static void openTweak(final Context context, final Tweak tweak, final boolean scrollToHistory) {
+        final Intent intent = createItemIntent(context, InfoActivity.class, Args.TWEAK_ID, tweak.getId());
+        if (scrollToHistory) {
+            intent.putExtra(Args.SCROLL_TO_HISTORY, true);
+        }
+        startSelectableDateActivity(context, intent);
     }
 
     public static boolean isSupplement(final Food food) {
         return food != null && VITAMIN_B12.equalsIgnoreCase(food.getIdName());
     }
 
-    public static void openFoodHistory(final Context context, final Food food) {
-        startSelectableDateActivity(context, createFoodIntent(context, HistoryActivity.class, food));
-    }
-
-    public static void openTweakHistory(final Context context, final Tweak tweak) {
-        startSelectableDateActivity(context, createTweakIntent(context, HistoryActivity.class, tweak));
-    }
-
-    public static void openServingsHistory(final Context context) {
-        startSelectableDateActivity(context, new Intent(context, ServingsHistoryActivity.class));
-    }
-
-    public static void openTweakServingsHistory(final Context context) {
-        startSelectableDateActivity(context, new Intent(context, TweakServingsHistoryActivity.class));
+    public static void openChartHistory(final Context context, @HistoryType.Interface final int historyType) {
+        final Intent intent = new Intent(context, ServingsHistoryActivity.class);
+        intent.putExtra(Args.HISTORY_TYPE, historyType);
+        startSelectableDateActivity(context, intent);
     }
 
     public static void openWeightHistory(final Context context) {
@@ -174,8 +184,10 @@ public class Common {
     }
 
     private static void startSelectableDateActivity(final Context context, final Intent intent) {
-        if (context instanceof Activity) {
-            ((Activity) context).startActivityForResult(intent, Args.SELECTABLE_DATE_REQUEST);
+        if (context instanceof DateSelectionHost) {
+            ((DateSelectionHost) context).launchForDateSelection(intent);
+        } else if (context instanceof Activity) {
+            context.startActivity(intent);
         }
     }
 
@@ -184,5 +196,18 @@ public class Common {
         TweakServings.truncate(TweakServings.class);
         Weights.truncate(Weights.class);
         Day.truncate(Day.class);
+    }
+
+    public static File createBackupFile(final File filesDir) {
+        final String timestamp = BACKUP_TIMESTAMP_FORMAT.format(LocalDateTime.now());
+        return new File(filesDir, BACKUP_FILE_PREFIX + "_" + timestamp + BACKUP_FILE_SUFFIX);
+    }
+
+    public static boolean isDailyDozenBackupFileName(final String name) {
+        if (name == null) {
+            return false;
+        }
+        final String lower = name.toLowerCase(Locale.ROOT);
+        return lower.startsWith(BACKUP_FILE_PREFIX) && lower.endsWith(BACKUP_FILE_SUFFIX);
     }
 }

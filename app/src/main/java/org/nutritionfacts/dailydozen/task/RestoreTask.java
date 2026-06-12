@@ -13,7 +13,6 @@ import com.google.gson.JsonSyntaxException;
 import org.nutritionfacts.dailydozen.Common;
 import org.nutritionfacts.dailydozen.R;
 import org.nutritionfacts.dailydozen.controller.Bus;
-import org.nutritionfacts.dailydozen.exception.InvalidDateException;
 import org.nutritionfacts.dailydozen.model.DDServings;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.DayEntries;
@@ -36,7 +35,6 @@ public class RestoreTask extends BaseTask<Boolean> {
     private final Uri restoreFileUri;
     private final ContentResolver contentResolver;
 
-    private String[] headers;
     private final ArrayMap<String, Food> foodLookup;
     private final ArrayMap<String, Tweak> tweakLookup;
 
@@ -55,7 +53,6 @@ public class RestoreTask extends BaseTask<Boolean> {
     @Override
     public Boolean call() {
         try {
-            final String restoreFileType = contentResolver.getType(restoreFileUri);
             InputStream restoreInputStream = contentResolver.openInputStream(restoreFileUri);
 
             if (restoreInputStream != null) {
@@ -76,24 +73,11 @@ public class RestoreTask extends BaseTask<Boolean> {
                     reader = new BufferedReader(new InputStreamReader(inputStream));
 
                     String line = reader.readLine();
-                    if (line != null) {
-                        int i = 0;
-
-                        if ("text/csv".equals(restoreFileType)) {
-                            headers = line.split(",");
-
-                            do {
-                                line = reader.readLine();
-                                restoreLineCSV(headers, line);
-                                progressListener.updateProgressBar(++i, numLines);
-                            } while (line != null);
-                        } else {
-                            while (line != null) {
-                                restoreLineJSON(line);
-                                progressListener.updateProgressBar(++i, numLines);
-                                line = reader.readLine();
-                            }
-                        }
+                    int i = 0;
+                    while (line != null) {
+                        restoreLineJSON(line);
+                        TaskRunner.updateProgress(progressListener, ++i, numLines);
+                        line = reader.readLine();
                     }
 
                     reader.close();
@@ -103,7 +87,7 @@ public class RestoreTask extends BaseTask<Boolean> {
                 return true;
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Timber.e(e, "restore failed");
         }
 
         return false;
@@ -116,46 +100,12 @@ public class RestoreTask extends BaseTask<Boolean> {
 
     @Override
     public void setDataAfterLoading(Boolean success) {
-        progressListener.hideProgressBar();
-
         Bus.restoreCompleteEvent(success);
+        progressListener.hideProgressBar();
     }
 
     private void deleteAllExistingData() {
         Common.truncateAllDatabaseTables();
-    }
-
-    private void restoreLineCSV(final String[] headers, final String line) {
-        if (TextUtils.isEmpty(line)) {
-            return;
-        }
-
-        ActiveAndroid.beginTransaction();
-
-        try {
-            final String[] values = line.split(",");
-
-            if (values.length > 0) {
-                final Day day = Day.createDayIfDoesNotExist(values[0]);
-
-                // Start at 1 to skip the first header column which is "Date" and not a food
-                for (int j = 1; j < headers.length; j++) {
-                    final int numServings = Integer.parseInt(values[j]);
-                    if (numServings > 0) {
-                        final Food food = getFoodByIdName(headers[j]);
-                        if (food != null) {
-                            DDServings.createServingsAndRecalculateStreak(day, food, numServings);
-                        }
-                    }
-                }
-
-                ActiveAndroid.setTransactionSuccessful();
-            }
-        } catch (InvalidDateException e) {
-            Timber.e(e, "restoreLineCSV: ");
-        } finally {
-            ActiveAndroid.endTransaction();
-        }
     }
 
     private void restoreLineJSON(final String line) {

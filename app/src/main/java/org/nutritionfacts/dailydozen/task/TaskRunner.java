@@ -6,16 +6,31 @@ import android.os.Looper;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
+import timber.log.Timber;
+
 public class TaskRunner {
+    private static final TaskRunner INSTANCE = new TaskRunner();
+
     private final Handler handler = new Handler(Looper.getMainLooper());
     private final Executor executor = Executors.newCachedThreadPool();
+
+    private TaskRunner() {
+    }
+
+    public static TaskRunner getInstance() {
+        return INSTANCE;
+    }
+
+    public static void updateProgress(ProgressListener listener, int current, int total) {
+        getInstance().handler.post(() -> listener.updateProgressBar(current, total));
+    }
 
     public <R> void executeAsync(CustomCallable<R> callable) {
         try {
             callable.setUiForLoading();
             executor.execute(new RunnableTask<>(handler, callable));
         } catch (Exception e) {
-            e.printStackTrace();
+            Timber.e(e, "executeAsync failed");
         }
     }
 
@@ -34,7 +49,7 @@ public class TaskRunner {
                 final R result = callable.call();
                 handler.post(new RunnableTaskForHandler<>(callable, result));
             } catch (Exception e) {
-                e.printStackTrace();
+                Timber.e(e, "background task failed");
             }
         }
     }

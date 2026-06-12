@@ -29,7 +29,6 @@
     <string name="donate">Направете дарение</string>
     <string name="subscribe">Абонирай се</string>
     <string name="open_source">Отворен код</string>
-    <string name="permission_needed_to_write_storage">Не може да направите резервно копие без да имате права за писане върху паметта</string>
     <string name="backup_failed">Задачата за създаване на архив е неуспешна</string>
     <string name="restore_failed">Процесът по възстановяване на информация от архив е неуспешен</string>
     <string name="backup_success">Архивът е успешно създаден</string>
@@ -39,6 +38,7 @@
     <string name="yes">Да</string>
     <string name="no">Не</string>
     <string name="backup">Архивиране</string>
+    <string name="restore">Възстановяване</string>
     <string name="food_info">Информация за храните</string>
     <string name="food_history">История на храните</string>
     <string name="daily_servings_history">История на отбелязаните дневни порции</string>

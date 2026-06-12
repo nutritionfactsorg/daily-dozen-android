@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Pull adjacent serving checkboxes together (M3/AppCompat reserve space for touch targets). -->
+    <dimen name="serving_checkbox_overlap">0dp</dimen>
+    <dimen name="serving_checkbox_row_padding">2dp</dimen>
+    <dimen name="history_control_padding">16dp</dimen>
+    <dimen name="units_toggle_spacing">12dp</dimen>
+</resources>

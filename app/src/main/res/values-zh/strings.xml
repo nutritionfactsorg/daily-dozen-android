@@ -29,7 +29,6 @@
     <string name="donate">捐款</string>
     <string name="subscribe">訂閱</string>
     <string name="open_source">開放資源</string>
-    <string name="permission_needed_to_write_storage">不具權限，無法備份至記憶體</string>
     <string name="backup_failed">備份失敗</string>
     <string name="restore_failed">還原失敗</string>
     <string name="backup_success">備份成功</string>
@@ -39,6 +38,7 @@
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="backup">備份</string>
+    <string name="restore">還原</string>
     <string name="food_info">食物資訊</string>
     <string name="food_history">食物歷史紀錄</string>
     <string name="daily_servings_history">每日份量歷史紀錄</string>

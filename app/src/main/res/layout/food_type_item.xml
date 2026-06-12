@@ -19,7 +19,7 @@
         android:id="@+id/food_videos"
         android:text="@string/videos"
         android:textAllCaps="true"
-        android:textColor="@color/colorSecondaryText"
+        android:textColor="?attr/colorOnSurfaceVariant"
         android:textSize="12sp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

@@ -29,7 +29,6 @@
     <string name="donate">Δωρεά</string>
     <string name="subscribe">Εγγραφή</string>
     <string name="open_source">Ανοιχτός Κώδικας</string>
-    <string name="permission_needed_to_write_storage">Αδύνατη η δημιουργία αντιγράφου ασφαλείας χωρίς δικαιώματα εγγραφής στον αποθηκευτικό χώρο</string>
     <string name="backup_failed">Απέτυχε το αντίγραφο ασφαλείας</string>
     <string name="restore_failed">Απέτυχε η επαναφορά αντιγράφου ασφαλείας</string>
     <string name="backup_success">Επιτυχία αντιγράφου ασφαλείας</string>
@@ -39,6 +38,7 @@
     <string name="yes">Ναι</string>
     <string name="no">Όχι</string>
     <string name="backup">Αντίγραφο Ασφαλείας</string>
+    <string name="restore">Επαναφορά</string>
     <string name="food_info">Πληροφορίες Τροφίμων</string>
     <string name="food_history">Ιστορικό Τροφίμων</string>
     <string name="daily_servings_history">Ιστορικό Ημερήσιων Μερίδων</string>

@@ -50,6 +50,10 @@
         android:title="@string/backup"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/menu_restore"
+        android:title="@string/restore"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/menu_about"
         android:title="@string/about"
         app:showAsAction="never"/>

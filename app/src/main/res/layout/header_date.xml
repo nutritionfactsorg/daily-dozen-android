@@ -67,6 +67,7 @@
                 android:text="@string/num_servings_max" />
 
             <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/date_header_chart_icon"
                 style="@style/SecondaryText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

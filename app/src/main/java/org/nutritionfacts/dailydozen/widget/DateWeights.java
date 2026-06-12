@@ -20,6 +20,7 @@ import org.nutritionfacts.dailydozen.databinding.DateWeightsBinding;
 import org.nutritionfacts.dailydozen.event.WeightVisibilityChangedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.Weights;
+import org.nutritionfacts.dailydozen.util.HistoryIconHelper;
 
 import timber.log.Timber;
 
@@ -43,7 +44,12 @@ public class DateWeights extends LinearLayout {
         binding = DateWeightsBinding.inflate(LayoutInflater.from(context), this, true);
 
         binding.header.setText(R.string.weight);
-        
+
+        HistoryIconHelper.applyThemedIcon(binding.morningWeightIcon, "fa-sun-o", 22);
+        HistoryIconHelper.applyThemedIcon(binding.eveningWeightIcon, "fa-moon-o", 22);
+        HistoryIconHelper.applyChartIcon(binding.weightHistory);
+        applyEyeIcon(true);
+
         onEyeClicked();
         onWeightHistoryClicked();
         onWeightEditorAction();
@@ -92,7 +98,7 @@ public class DateWeights extends LinearLayout {
     }
 
     private void setWeightsVisible() {
-        binding.eye.setText(R.string.date_weights_eye_open);
+        applyEyeIcon(true);
 
         binding.morningWeight.setVisibility(VISIBLE);
         binding.morningWeightHiddenIcon.setVisibility(GONE);
@@ -102,23 +108,27 @@ public class DateWeights extends LinearLayout {
     }
 
     private void setWeightsInvisible() {
-        binding.eye.setText(R.string.date_weights_eye_closed);
+        applyEyeIcon(false);
 
         binding.morningWeight.setVisibility(GONE);
         binding.morningWeightHiddenIcon.setVisibility(VISIBLE);
         if (TextUtils.isEmpty(binding.morningWeight.getText())) {
-            binding.morningWeightHiddenIcon.setText(R.string.unchecked);
+            HistoryIconHelper.applyThemedIcon(binding.morningWeightHiddenIcon, "fa-square", 24);
         } else {
-            binding.morningWeightHiddenIcon.setText(R.string.checked);
+            HistoryIconHelper.applyThemedIcon(binding.morningWeightHiddenIcon, "fa-check-square", 24);
         }
 
         binding.eveningWeight.setVisibility(GONE);
         binding.eveningWeightHiddenIcon.setVisibility(VISIBLE);
         if (TextUtils.isEmpty(binding.eveningWeight.getText())) {
-            binding.eveningWeightHiddenIcon.setText(R.string.unchecked);
+            HistoryIconHelper.applyThemedIcon(binding.eveningWeightHiddenIcon, "fa-square", 24);
         } else {
-            binding.eveningWeightHiddenIcon.setText(R.string.checked);
+            HistoryIconHelper.applyThemedIcon(binding.eveningWeightHiddenIcon, "fa-check-square", 24);
         }
+    }
+
+    private void applyEyeIcon(final boolean open) {
+        HistoryIconHelper.applyThemedIcon(binding.eye, open ? "fa-eye" : "fa-eye-slash", 24);
     }
 
     public void onWeightChanged() {

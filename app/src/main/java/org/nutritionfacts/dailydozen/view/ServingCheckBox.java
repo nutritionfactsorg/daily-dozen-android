@@ -1,15 +1,22 @@
 package org.nutritionfacts.dailydozen.view;
 
 import android.content.Context;
+import android.view.ContextThemeWrapper;
 
 import androidx.appcompat.widget.AppCompatCheckBox;
+
+import org.nutritionfacts.dailydozen.R;
 
 public class ServingCheckBox extends AppCompatCheckBox {
     private ServingCheckBox scbNextServing;
     private ServingCheckBox scvPrevServing;
 
     public ServingCheckBox(Context context) {
-        super(context);
+        super(new ContextThemeWrapper(context, R.style.ThemeOverlay_ServingCheckBox), null, androidx.appcompat.R.attr.checkboxStyle);
+        setMinHeight(0);
+        setMinWidth(0);
+        setPaddingRelative(0, 0, 0, 0);
+        setBackground(null);
     }
 
     public void setNextServing(ServingCheckBox nextServing) {

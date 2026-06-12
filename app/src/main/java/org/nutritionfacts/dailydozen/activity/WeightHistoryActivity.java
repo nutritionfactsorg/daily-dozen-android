@@ -2,9 +2,6 @@ package org.nutritionfacts.dailydozen.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-
-import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.highlight.Highlight;
@@ -17,16 +14,15 @@ import org.nutritionfacts.dailydozen.controller.Bus;
 import org.nutritionfacts.dailydozen.databinding.ActivityServingsHistoryBinding;
 import org.nutritionfacts.dailydozen.event.LoadHistoryCompleteEvent;
 import org.nutritionfacts.dailydozen.event.TimeRangeSelectedEvent;
-import org.nutritionfacts.dailydozen.event.TimeScaleSelectedEvent;
 import org.nutritionfacts.dailydozen.model.Day;
 import org.nutritionfacts.dailydozen.model.enums.HistoryType;
 import org.nutritionfacts.dailydozen.model.enums.TimeScale;
 import org.nutritionfacts.dailydozen.task.LoadWeightsHistoryTask;
 import org.nutritionfacts.dailydozen.task.TaskRunner;
 import org.nutritionfacts.dailydozen.task.params.LoadHistoryTaskParams;
+import org.nutritionfacts.dailydozen.util.HistoryChartHelper;
 
-public class WeightHistoryActivity extends DailyDozenActivity
-        implements AdapterView.OnItemSelectedListener, OnChartValueSelectedListener {
+public class WeightHistoryActivity extends DailyDozenActivity implements OnChartValueSelectedListener {
     private ActivityServingsHistoryBinding binding;
 
     private boolean alreadyLoadingData;
@@ -73,22 +69,21 @@ public class WeightHistoryActivity extends DailyDozenActivity
         if (!alreadyLoadingData) {
             alreadyLoadingData = true;
 
+            binding.dailyServingsChart.setVisibility(View.GONE);
+            binding.dailyServingsLoadingLabel.setVisibility(View.VISIBLE);
+            binding.dailyServingsLoading.setVisibility(View.VISIBLE);
+
             LoadHistoryTaskParams loadHistoryTaskParams = new LoadHistoryTaskParams(
                     HistoryType.Weights,
                     TimeScale.DAYS,
                     binding.dailyServingsHistoryTimeRange.getSelectedYear(),
                     binding.dailyServingsHistoryTimeRange.getSelectedMonth());
-            new TaskRunner().executeAsync(new LoadWeightsHistoryTask(this, loadHistoryTaskParams));
+            TaskRunner.getInstance().executeAsync(new LoadWeightsHistoryTask(this, loadHistoryTaskParams));
         }
     }
 
     @Subscribe
     public void onEvent(TimeRangeSelectedEvent event) {
-        loadData();
-    }
-
-    @Subscribe
-    public void onEvent(TimeScaleSelectedEvent event) {
         loadData();
     }
 
@@ -100,57 +95,19 @@ public class WeightHistoryActivity extends DailyDozenActivity
             return;
         }
 
+        binding.dailyServingsLoadingLabel.setVisibility(View.GONE);
+        binding.dailyServingsLoading.setVisibility(View.GONE);
         binding.dailyServingsChart.setVisibility(View.VISIBLE);
 
-        binding.dailyServingsChart.setData(chartData);
-
-        // Draw bars behind lines
-        binding.dailyServingsChart.setDrawOrder(new CombinedChart.DrawOrder[]{
-                CombinedChart.DrawOrder.BAR, CombinedChart.DrawOrder.LINE
-        });
-
-        binding.dailyServingsChart.setVisibleXRange(5, 10);
-
-        binding.dailyServingsChart.getXAxis().setDrawLabels(true);
-
-        // Without this line, MPAndroidChart v2.1.6 cuts off the tops of the X-axis date labels
-        binding.dailyServingsChart.setExtraTopOffset(4f);
-
-        // Start the chart with the latest day in view
-        binding.dailyServingsChart.moveViewToX(binding.dailyServingsChart.getXChartMax());
-
-        binding.dailyServingsChart.setDescription("");
-
-        // Prevents the value for each bar from drawing over the labels at the top
-        binding.dailyServingsChart.setDrawValueAboveBar(false);
-
-        binding.dailyServingsChart.getAxisRight().setEnabled(false);
-
-        binding.dailyServingsChart.getAxisLeft().setAxisMaxValue(event.getMaxVal() + 5);
-        binding.dailyServingsChart.getAxisLeft().setAxisMinValue(event.getMinVal() - 5);
-
-        // Disable all zooming and interacting with the chart
-        binding.dailyServingsChart.setScaleEnabled(false);
-        binding.dailyServingsChart.setPinchZoom(false);
-        binding.dailyServingsChart.setDoubleTapToZoomEnabled(false);
-        binding.dailyServingsChart.setHighlightPerDragEnabled(false);
-
-        binding.dailyServingsChart.setOnChartValueSelectedListener(this);
-
-        // Only enable jumping to dates if the user is viewing daily data
-        binding.dailyServingsChart.setHighlightPerTapEnabled(event.getTimeScale() == TimeScale.DAYS);
+        HistoryChartHelper.presentChartData(
+                binding.dailyServingsChart,
+                this,
+                chartData,
+                event.getTimeScale(),
+                HistoryChartHelper.dynamicWeightAxis(event.getMinVal(), event.getMaxVal()),
+                this);
 
         alreadyLoadingData = false;
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        loadData();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
     }
 
     @Override

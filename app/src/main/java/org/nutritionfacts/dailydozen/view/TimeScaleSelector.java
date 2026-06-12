@@ -50,8 +50,8 @@ public class TimeScaleSelector extends LinearLayout implements AdapterView.OnIte
     private void initTimeScaleSpinner() {
         final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
                 R.array.servings_time_scale_choices,
-                android.R.layout.simple_expandable_list_item_1);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                R.layout.spinner_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
         binding.timeScaleSpinner.setOnItemSelectedListener(this);
         binding.timeScaleSpinner.setAdapter(adapter);

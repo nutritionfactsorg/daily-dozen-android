@@ -29,7 +29,6 @@
     <string name="donate">Поддержать</string>
     <string name="subscribe">Подписаться</string>
     <string name="open_source">Открытое ПО</string>
-    <string name="permission_needed_to_write_storage">Невозможно создать резервную копию без разрешения на запись данных в хранилище</string>
     <string name="backup_failed">Сбой создания резервной копии</string>
     <string name="restore_failed">Сбой восстановления из резервной копии</string>
     <string name="backup_success">Резервная копия успешно создана</string>
@@ -39,6 +38,7 @@
     <string name="yes">Да</string>
     <string name="no">Нет</string>
     <string name="backup">Резервная копия</string>
+    <string name="restore">Восстановить</string>
     <string name="food_info">Информация о продуктах</string>
     <string name="food_history">Данные о питании</string>
     <string name="daily_servings_history">Данные о порциях</string>

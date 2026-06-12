@@ -29,7 +29,6 @@
     <string name="donate">Donación</string>
     <string name="subscribe">Suscríbete</string>
     <string name="open_source">Código abierto</string>
-    <string name="permission_needed_to_write_storage">No puedes hacer copias de seguridad si no tienes permiso para guardarlas en el disco duro.</string>
     <string name="backup_failed">Copia de seguridad fallida</string>
     <string name="restore_failed">Restauración fallida</string>
     <string name="backup_success">Copia de seguridad efectuada</string>
@@ -39,6 +38,7 @@
     <string name="yes">Sí</string>
     <string name="no">No</string>
     <string name="backup">Copia de seguridad</string>
+    <string name="restore">Restaurar</string>
     <string name="food_info">Información alimenticia</string>
     <string name="food_history">Historial alimenticio</string>
     <string name="daily_servings_history">Historial de porciones diarias</string>

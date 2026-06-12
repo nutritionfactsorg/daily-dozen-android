@@ -29,7 +29,6 @@
     <string name="donate">Adományozz</string>
     <string name="subscribe">Iratkozz fel</string>
     <string name="open_source">Nyílt forráskód</string>
-    <string name="permission_needed_to_write_storage">Nem lehet biztonsági másolatot készíteni, ha a tárhelyre írás nincs engedélyezve</string>
     <string name="backup_failed">A biztonsági mentés nem sikerült</string>
     <string name="restore_failed">A visszaállítás nem sikerült</string>
     <string name="backup_success">A biztonsági mentés sikeres</string>
@@ -39,6 +38,7 @@
     <string name="yes">Igen</string>
     <string name="no">Nem</string>
     <string name="backup">Biztonsági mentés</string>
+    <string name="restore">Visszaállítás</string>
     <string name="food_info">Élelmiszer Infó</string>
     <string name="food_history">Élelmiszer előzmények</string>
     <string name="daily_servings_history">Napi adagok előzményei</string>

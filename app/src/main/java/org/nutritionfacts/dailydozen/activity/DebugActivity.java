@@ -1,11 +1,13 @@
 package org.nutritionfacts.dailydozen.activity;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
-import androidx.annotation.NonNull;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 
 import org.nutritionfacts.dailydozen.Common;
@@ -25,11 +27,25 @@ public class DebugActivity extends DailyDozenActivity implements AdapterView.OnI
 
     private int historyToGenerate;
 
+    private ActivityResultLauncher<String> postNotificationsLauncher;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityDebugBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        setTitle(R.string.debug);
+
+        postNotificationsLauncher = registerForActivityResult(
+                new ActivityResultContracts.RequestPermission(),
+                isGranted -> {
+                    if (isGranted) {
+                        Timber.d("postNotificationsLauncher = [true]");
+                        NotificationUtil.showUpdateReminderNotification(this, null);
+                    } else {
+                        Timber.d("postNotificationsLauncher = [false]");
+                    }
+                });
 
         initHistoryToGenerateSpinner();
 
@@ -77,7 +93,7 @@ public class DebugActivity extends DailyDozenActivity implements AdapterView.OnI
                 .setPositiveButton(R.string.yes, (dialog, which) -> {
                     final GenerateDataTaskParams taskParams = new GenerateDataTaskParams(historyToGenerate, generateRandomData);
 
-                    new TaskRunner().executeAsync(new GenerateDataTask(this, taskParams));
+                    TaskRunner.getInstance().executeAsync(new GenerateDataTask(this, taskParams));
 
                     dialog.dismiss();
                 })
@@ -119,23 +135,11 @@ public class DebugActivity extends DailyDozenActivity implements AdapterView.OnI
             if (PermissionController.canPostNotifications(this)) {
                 Timber.d("canPostNotifications = [true]");
                 NotificationUtil.showUpdateReminderNotification(this, null);
-            } else {
+            } else if (PermissionController.isPostNotificationsPermissionRequired()) {
                 Timber.d("canPostNotifications = [false]");
-                PermissionController.askForPostNotifications(this);
+                postNotificationsLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
             }
         });
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (PermissionController.grantedPostNotifications(requestCode, grantResults)) {
-            Timber.d("onRequestPermissionsResult = [true]");
-            NotificationUtil.showUpdateReminderNotification(this, null);
-        } else {
-            Timber.d("onRequestPermissionsResult = [false]");
-        }
     }
 
     @Override

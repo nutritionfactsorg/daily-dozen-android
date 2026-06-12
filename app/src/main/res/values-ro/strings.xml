@@ -29,7 +29,6 @@
     <string name="donate">Donați</string>
     <string name="subscribe">Abonați-vă</string>
     <string name="open_source">Open Source</string>
-    <string name="permission_needed_to_write_storage">Nu se poate face copie de rezervă a datelor fără permisiunea de a scrie în spațiul de stocare</string>
     <string name="backup_failed">Efectuarea copiei de rezervă a datelor a eşuat.</string>
     <string name="restore_failed">Restaurarea copiei de rezervă a datelor a eşuat</string>
     <string name="backup_success">Copia de rezervă a datelor a fost efectuată cu succes</string>
@@ -39,6 +38,7 @@
     <string name="yes">Da</string>
     <string name="no">Nu</string>
     <string name="backup">Copie de rezervă</string>
+    <string name="restore">Restaurare</string>
     <string name="food_info">Informații Alimentare</string>
     <string name="food_history">Istoric al Alimentelor</string>
     <string name="daily_servings_history">Istoricul porțiilor zilnice</string>

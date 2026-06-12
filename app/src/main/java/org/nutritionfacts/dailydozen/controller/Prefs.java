@@ -3,6 +3,8 @@ package org.nutritionfacts.dailydozen.controller;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import androidx.appcompat.app.AppCompatDelegate;
+
 import com.google.gson.Gson;
 
 import org.nutritionfacts.dailydozen.Common;
@@ -18,6 +20,7 @@ public class Prefs {
     private static final String PREF_UPDATE_REMINDER = "pref_update_reminder";
     private static final String DEFAULT_UPDATE_REMINDER_CREATED = "default_update_reminder_created";
     private static final String UNIT_TYPE = "unit_type";
+    private static final String DARK_MODE = "dark_mode";
 
     private static Prefs instance;
 
@@ -121,5 +124,21 @@ public class Prefs {
 
     public boolean getWeightVisible() {
         return sharedPrefs.getBoolean(PREF_SHOW_WEIGHT, true);
+    }
+
+    public boolean isDarkMode() {
+        return getBooleanPref(DARK_MODE);
+    }
+
+    public void toggleDarkMode(final Context context) {
+        setBooleanPref(DARK_MODE, !isDarkMode());
+        applyTheme(context);
+    }
+
+    public static void applyTheme(final Context context) {
+        AppCompatDelegate.setDefaultNightMode(
+                getInstance(context).isDarkMode()
+                        ? AppCompatDelegate.MODE_NIGHT_YES
+                        : AppCompatDelegate.MODE_NIGHT_NO);
     }
 }

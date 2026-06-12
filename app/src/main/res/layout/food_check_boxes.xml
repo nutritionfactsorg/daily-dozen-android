@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/food_check_boxes_container"
               android:orientation="horizontal"
+              android:clipChildren="false"
+              android:clipToPadding="false"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content">
 

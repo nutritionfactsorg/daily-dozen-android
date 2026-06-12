@@ -55,14 +55,14 @@ public class BackupTask extends BaseTask<Boolean> {
                 fileWriter.write(getDayJsonLine(allDays.get(i)));
                 fileWriter.write(System.lineSeparator());
 
-                progressListener.updateProgressBar(i + 1, numDays);
+                TaskRunner.updateProgress(progressListener, i + 1, numDays);
             }
 
             fileWriter.close();
 
             Timber.d("backup file successfully written");
         } catch (IOException e) {
-            e.printStackTrace();
+            Timber.e(e, "backup failed");
             return false;
         }
 
@@ -76,9 +76,8 @@ public class BackupTask extends BaseTask<Boolean> {
 
     @Override
     public void setDataAfterLoading(Boolean success) {
+        Bus.backupCompleteEvent(success, success ? backupFile : null);
         progressListener.hideProgressBar();
-
-        Bus.backupCompleteEvent(success);
     }
 
     private String getDayJsonLine(Day day) {
