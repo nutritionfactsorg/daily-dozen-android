@@ -22,8 +22,8 @@ android {
         applicationId "org.nutritionfacts.dailydozen"
         minSdkVersion 26
         multiDexEnabled true
-        compileSdk 35
-        targetSdk 35
+        compileSdk 36
+        targetSdk 36
         versionCode 94
         versionName "29"
     }
