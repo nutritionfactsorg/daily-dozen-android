@@ -61,7 +61,7 @@
     <string name="restore_success">Restore successful</string>
     <string name="restore_confirm_title">Restore Backup</string>
     <string name="restore_confirm_message">Any existing data will be deleted before restoring from backup. Do you wish to continue?</string>
-    <string name="backup_mimetype" translatable="false">message/rfc822</string>
+    <string name="backup_mimetype" translatable="false">application/json</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="backup">Backup</string>

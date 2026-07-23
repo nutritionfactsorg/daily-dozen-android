@@ -463,7 +463,7 @@ public class MainActivity extends DailyDozenActivity implements ProgressListener
             shareIntent.putExtra(Intent.EXTRA_TEXT, backupInstructions);
             shareIntent.putExtra(Intent.EXTRA_STREAM, backupFileUri);
             shareIntent.setType(getString(R.string.backup_mimetype));
-            startActivity(shareIntent);
+            startActivity(Intent.createChooser(shareIntent, getString(R.string.backup)));
         } catch (ActivityNotFoundException e) {
             new AlertDialog.Builder(this)
                     .setCancelable(false)
