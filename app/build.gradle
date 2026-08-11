@@ -22,10 +22,10 @@ android {
         applicationId "org.nutritionfacts.dailydozen"
         minSdkVersion 26
         multiDexEnabled true
-        compileSdk 35
-        targetSdk 35
-        versionCode 94
-        versionName "29"
+        compileSdk 36
+        targetSdk 36
+        versionCode 95
+        versionName "30"
     }
     buildTypes {
         debug {
@@ -53,7 +53,7 @@ android {
 
 dependencies {
     playImplementation 'com.google.firebase:firebase-analytics:23.2.0'
-    playImplementation 'com.google.firebase:firebase-crashlytics:20.0.6'
+    playImplementation 'com.google.firebase:firebase-crashlytics:20.1.0'
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'androidx.viewpager2:viewpager2:1.1.0'
     implementation 'com.google.android.material:material:1.14.0'
