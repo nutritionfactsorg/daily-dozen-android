@@ -24,8 +24,8 @@ android {
         multiDexEnabled true
         compileSdk 36
         targetSdk 36
-        versionCode 94
-        versionName "29"
+        versionCode 95
+        versionName "30"
     }
     buildTypes {
         debug {
