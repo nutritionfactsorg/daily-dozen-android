@@ -1,7 +1,7 @@
 Daily Dozen Android App
 ========================
 
-<p align="center"><img src="http://nutritionfactsorg.s3.amazonaws.com/wp-content/uploads/2016/03/21232747/github.jpg" style="width: 600px"></p>
+<p align="center"><img src="https://nutritionfactsorg.s3.amazonaws.com/wp-content/uploads/2016/03/21232747/github.jpg" style="width: 600px"></p>
 
 About
 -----------
@@ -59,13 +59,13 @@ Contributors
 * [tabasco-flame][tabasco-flame]
 * [LarytheLord][LarytheLord]
 
-[nutritionfacts.org]: http://nutritionfacts.org "NutritionFacts.org - The Latest in Nutrition Research"
+[nutritionfacts.org]: https://nutritionfacts.org "NutritionFacts.org - The Latest in Nutrition Research"
 [contribute]: https://github.com/nutritionfactsorg/daily-dozen-android/blob/master/CONTRIBUTING.md "Contribute to the Daily Dozen Android App"
 [donate]: https://nutritionfacts.org/donate "Donate to NutritionFacts.org"
-[book]: http://nutritionfacts.org/book "How Not to Die"
-[slavick]: http://github.com/slavick "John Slavick on GitHub"
-[christirichards]: http://github.com/christirichards "Christi Richards on GitHub"
-[laurenhacker]: http://github.com/lahacker "Lauren Hacker on GitHub"
+[book]: https://nutritionfacts.org/book "How Not to Die"
+[slavick]: https://github.com/slavick "John Slavick on GitHub"
+[christirichards]: https://github.com/christirichards "Christi Richards on GitHub"
+[laurenhacker]: https://github.com/lahacker "Lauren Hacker on GitHub"
 [Armfoot]: https://github.com/Armfoot "Armfoot on GitHub"
 [MovGP0]: https://github.com/MovGP0 "MovGP0 on GitHub"
 [notmypassword]: https://github.com/notmypassword "notmypassword on GitHub"
